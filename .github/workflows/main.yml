@@ -4,7 +4,7 @@ name: Build and deploy GH Pages
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/master'
     steps:
       - name: checkout
         uses: actions/checkout@v2
@@ -14,6 +14,9 @@ jobs:
           # Target branch
           PAGES_BRANCH: gh-pages
           # Provide personal access token
+          # Generated then add it to this repo (name)
           # TOKEN: ${{ secrets.TOKEN }}
+          TOKEN: ${{ secrets.ZOLA }}
           # Or if publishing to the same repo, use the automatic token
-          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # It turns out this Github Action failed..
+          # TOKEN: ${{ secrets.GITHUB_TOKEN }}
