@@ -14,3 +14,7 @@ highlight_code = true
 
 [extra]
 # Put all your custom variables here
+
+# Theme
+# Lightspeed https://www.getzola.org/themes/lightspeed/
+theme = "lightspeed"
