@@ -1,0 +1,17 @@
+{
+  // https://github.com/DavidAnson/markdownlint/blob/main/schema/.markdownlint.jsonc
+  // https://www.npmjs.com/package/markdownlint-cli
+  "first-line-h1": false,
+  "hr-style": {
+    "style": "-----"
+  },
+  "no-inline-html": {
+    "allowed_elements": ["small", "del", "u", "img"]
+  },
+  "heading-style": {
+    "style": "atx"
+  },
+  "line-length": false,
+  "heading-increment": false,
+  "single-h1": false
+}
