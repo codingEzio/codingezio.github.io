@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://codingezio.github.io/</loc>
+    </url>
+    <url>
+        <loc>https://codingezio.github.io/001-neuroenhancer/</loc>
+        <lastmod>2018-09-01</lastmod>
+    </url>
+    <url>
+        <loc>https://codingezio.github.io/about/</loc>
+    </url>
+    <url>
+        <loc>https://codingezio.github.io/code-snippets/</loc>
+        <lastmod>2019-03-25</lastmod>
+    </url>
+    <url>
+        <loc>https://codingezio.github.io/example-of-all-elements/</loc>
+        <lastmod>2019-03-29</lastmod>
+    </url>
+    <url>
+        <loc>https://codingezio.github.io/hello-world/</loc>
+        <lastmod>2019-02-18</lastmod>
+    </url>
+</urlset>
