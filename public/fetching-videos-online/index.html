@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Fetch Videos Online &middot; </title>
+    <meta name="description" content="How You Gonna Grab Those Videos to Your Machine" />
+    <link rel="shortcut icon"  href="https://codingezio.github.io/favicon.ico" />
+    <link rel="alternate" type="application/atom+xml" title="RSS" href="https://codingezio.github.io/atom.xml">
+
+    <style>html,body{background:#fffaf7;color:#2d2d2d;font:16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"}a,a:visited{color:darkred;text-decoration:none}a:hover{text-decoration:underline}main{margin:auto;max-width:38rem;padding:0.8rem}pre{background:white;overflow:scroll;padding:1rem}td{border:1px solid #2d2d2d;padding:10px}img{height:auto;max-width:100%}.homepage-list{list-style:none;padding:1rem 0}.homepage-list li{align-items:center;display:flex;flex-wrap:wrap;justify-content:space-between;margin-bottom:10px}@media (max-width: 38rem){.homepage-list li a{width:100%}}
+</style>
+
+    <meta property="og:site_name" content="">
+      
+      <meta property="og:title" content="Fetch Videos Online">
+      <meta property="og:description" content="How You Gonna Grab Those Videos to Your Machine">
+      <meta property="og:url" content="https://codingezio.github.io/fetching-videos-online/">
+      <meta property="og:image" content="">
+
+      <meta property="og:type" content="article" />
+        <meta property="article:published_time" content="2022-07-01T00:00:00+00:00" />
+
+      
+      
+    
+
+  </head>
+  
+
+  <body>
+    <main id="main" role="main">
+
+      
+      <header role="banner">
+        <h3 style="margin-top:0;">
+          <a href="https://codingezio.github.io" title="Home"></a>
+          <br /><small></small>
+        </h3>
+      </header>
+      <hr />
+      
+
+      
+<article>
+  <h1>Fetch Videos Online</h1>
+
+  
+    <p style="font-size:90%;">Posted on <time datetime="2022-07-01T00:00:00+00:00">July 01, 2022</time></p>
+  
+
+  <h3 id="for-acfun">For AcFun</h3>
+<ul>
+<li>Go to <a href="https://acfun.iiilab.com/">acfun.iiilab.com/</a></li>
+</ul>
+<h3 id="for-bilibili">For Bilibili</h3>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">brew</span><span> install lux
+</span><span>
+</span><span style="color:#65737e;"># Get the cookie (if you have the VIP (大会员))
+</span><span style="color:#65737e;"># 1. Download extension named &#39;EditThisCookie&#39;
+</span><span style="color:#65737e;"># 2. Tweak its &#39;options&#39; to &quot;Semicolon separated ..&quot;
+</span><span style="color:#65737e;"># 3. Go to bilibili.com, click &#39;Export&#39; button (extension)
+</span><span style="color:#65737e;"># 4. Save the string as a text file (e.g. COOKIE.txt)
+</span><span style="color:#bf616a;">lux -c ~</span><span>/COOKIE.txt</span><span style="color:#bf616a;"> -F ~</span><span>/LINKS.txt
+</span></code></pre>
+<h3 id="for-youtube">For Youtube</h3>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">brew</span><span> install youtube-dl
+</span><span>
+</span><span style="color:#bf616a;">youtube-dl </span><span>\
+</span><span style="color:#bf616a;">    --format </span><span>&#39;</span><span style="color:#a3be8c;">bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio</span><span>&#39; \
+</span><span style="color:#bf616a;">    --merge-output-format</span><span> mp4 \
+</span><span style="color:#bf616a;">    --add-metadata --embed-thumbnail </span><span>\
+</span><span style="color:#bf616a;">    -a ~</span><span>/LINKS.txt
+</span></code></pre>
+
+</article>
+
+
+      
+      <footer role="contentinfo">
+        <hr />
+        
+        
+        <small>Built with <a href="https://www.getzola.org/">Zola</a>.<br />
+          Maintained with &hearts; for the web.<br />
+          
+        </small>
+        
+      </footer>
+      
+
+    </main>
+    
+    
+  </body>
+</html>
+
