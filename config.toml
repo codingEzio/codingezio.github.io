@@ -15,7 +15,14 @@ highlight_code = true
 [link_checker]
 # Skip link checking for external URLs that start with these prefixes
 skip_prefixes = [
+    "https://codingEzio.github.io",
     "https://github.com/codingEzio",
+    "https://github.com",
+    "https://dev.mysql.com",
+    "https://simplicable.com",
+    "https://www.amazon.com",
+    "https://www.rfcreader.com",
+    "https://www.bcryptcalculator.com"
 ]
 
 [extra]
