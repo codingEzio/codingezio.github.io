@@ -1,104 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-  
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Algorithm Patterns &middot; </title>
-    <meta name="description" content="Notes on Algorithm Patterns" />
-    <link rel="shortcut icon"  href="https://codingezio.github.io/favicon.ico" />
-    <link rel="alternate" type="application/atom+xml" title="RSS" href="https://codingezio.github.io/atom.xml">
-
-    <style>html,body{background:#fffaf7;color:#2d2d2d;font:16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"}a,a:visited{color:darkred;text-decoration:none}a:hover{text-decoration:underline}main{margin:auto;max-width:38rem;padding:0.8rem}pre{background:white;overflow:scroll;padding:1rem}td{border:1px solid #2d2d2d;padding:10px}img{height:auto;max-width:100%}.homepage-list{list-style:none;padding:1rem 0}.homepage-list li{align-items:center;display:flex;flex-wrap:wrap;justify-content:space-between;margin-bottom:10px}@media (max-width: 38rem){.homepage-list li a{width:100%}}
-</style>
-
-    <meta property="og:site_name" content="">
-      
-      <meta property="og:title" content="Algorithm Patterns">
-      <meta property="og:description" content="Notes on Algorithm Patterns">
-      <meta property="og:url" content="https://codingezio.github.io/algorithm-pattern/">
-      <meta property="og:image" content="">
-
-      <meta property="og:type" content="article" />
-        <meta property="article:published_time" content="2022-07-22T00:00:00+00:00" />
-
-      
-      
-    
-
-  </head>
-  
-
-  <body>
-    <main id="main" role="main">
-
-      
-      <header role="banner">
-        <h3 style="margin-top:0;">
-          <a href="https://codingezio.github.io" title="Home"></a>
-          <br /><small></small>
-        </h3>
-      </header>
-      <hr />
-      
-
-      
-<article>
-  <h1>Algorithm Patterns</h1>
-
-  
-    <p style="font-size:90%;">Posted on <time datetime="2022-07-22T00:00:00+00:00">July 22, 2022</time></p>
-  
-
-  <h1 id="math">Math</h1>
-<h3 id="bit-wise-operator">Bit-wise Operator</h3>
-<h5 id="number">Number</h5>
-<blockquote>
-<p>本质上都是二进制操作，不进位</p>
-</blockquote>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>```bash
-</span><span># ~ Bitwise NOT    -&gt; -(0bN + 0b1)
-</span><span># | Bitwise OR     -&gt; (0, 0) leads to 0, otherwise 1
-</span><span># &amp; Bitwise AND    -&gt; (1, 1) leads to 1, otherwise 0
-</span><span># ^ Bitwise XOR    -&gt; (1, 0)(0, 1) leads to 1, otherwise 0
+<!doctype html><html lang=en><head><meta charset=UTF-8><meta content="width=device-width,initial-scale=1.0" name=viewport><title>Algorithm Patterns · A simple blog</title><meta content="Notes on Algorithm Patterns" name=description><link rel="shortcut icon" href=https://codingezio.github.io/favicon.ico><link href=https://codingezio.github.io/atom.xml rel=alternate title=RSS type=application/atom+xml><style>html,body{background:#fffaf7;color:#2d2d2d;font:16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"}a,a:visited{color:darkred;text-decoration:none}a:hover{text-decoration:underline}main{margin:auto;max-width:38rem;padding:0.8rem}pre{background:white;overflow:scroll;padding:1rem}td{border:1px solid #2d2d2d;padding:10px}img{height:auto;max-width:100%}.homepage-list{list-style:none;padding:1rem 0}.homepage-list li{align-items:center;display:flex;flex-wrap:wrap;justify-content:space-between;margin-bottom:10px}@media (max-width: 38rem){.homepage-list li a{width:100%}}</style><meta content="A simple blog" property=og:site_name><meta content="Algorithm Patterns" property=og:title><meta content="Notes on Algorithm Patterns" property=og:description><meta content=https://codingezio.github.io/algorithm-pattern/ property=og:url><meta property=og:image><meta content=article property=og:type><meta content=2022-07-22T00:00:00+00:00 property=article:published_time><body><main id=main role=main><header role=banner><h3 style=margin-top:0;><a href=https://codingezio.github.io title=Home>A simple blog</a> <br><small>Rants and thoughts</small></h3></header><hr><article><h1>Algorithm Patterns</h1><p style=font-size:90%;>Posted on <time datetime=2022-07-22T00:00:00+00:00>July 22, 2022</time><h1 id=math>Math</h1><h3 id=bit-wise-operator>Bit-wise Operator</h3><h5 id=number>Number</h5><blockquote><p>本质上都是二进制操作，不进位</blockquote><pre style=background-color:#2b303b;color:#c0c5ce;><code><span>```bash
+</span><span># ~ Bitwise NOT    -> -(0bN + 0b1)
+</span><span># | Bitwise OR     -> (0, 0) leads to 0, otherwise 1
+</span><span># & Bitwise AND    -> (1, 1) leads to 1, otherwise 0
+</span><span># ^ Bitwise XOR    -> (1, 0)(0, 1) leads to 1, otherwise 0
 </span><span>```
-</span></code></pre>
-<h5 id="letter">Letter</h5>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>```java
+</span></code></pre><h5 id=letter>Letter</h5><pre style=background-color:#2b303b;color:#c0c5ce;><code><span>```java
 </span><span>// To lowercase
-</span><span>(&#39;a&#39; | &#39; &#39;) == &#39;a&#39;
-</span><span>(&#39;A&#39; | &#39; &#39;) == &#39;a&#39;
+</span><span>('a' | ' ') == 'a'
+</span><span>('A' | ' ') == 'a'
 </span><span>
 </span><span>// To uppercase
-</span><span>(&#39;b&#39; &amp; &#39;_&#39;) == &#39;B&#39;
-</span><span>(&#39;B&#39; &amp; &#39;_&#39;) == &#39;B&#39;
+</span><span>('b' & '_') == 'B'
+</span><span>('B' & '_') == 'B'
 </span><span>
 </span><span>// Switch cases
-</span><span>(&#39;c&#39; ^ &#39; &#39;) == &#39;C&#39;
-</span><span>(&#39;C&#39; ^ &#39; &#39;) == &#39;C&#39;
+</span><span>('c' ^ ' ') == 'C'
+</span><span>('C' ^ ' ') == 'C'
 </span><span>```
-</span></code></pre>
-
-</article>
-
-
-      
-      <footer role="contentinfo">
-        <hr />
-        
-        
-        <small>Built with <a href="https://www.getzola.org/">Zola</a>.<br />
-          Maintained with &hearts; for the web.<br />
-          
-        </small>
-        
-      </footer>
-      
-
-    </main>
-    
-    
-  </body>
-</html>
-
+</span></code></pre></article><footer role=contentinfo><hr><small>Built with <a href=https://www.getzola.org/>Zola</a>.<br> Maintained with ♥ for the web.<br> </small></footer></main>
