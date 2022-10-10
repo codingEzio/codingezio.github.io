@@ -28,7 +28,17 @@ skip_prefixes = [
     "https://simplicable.com",
     "https://www.amazon.com",
     "https://www.rfcreader.com",
-    "https://www.bcryptcalculator.com"
+    "https://www.bcryptcalculator.com",
+    "https://jwt.io",
+    "https://docs.microsoft.com",
+    "https://ankiweb.net",
+    "https://stackoverflow.com",
+    "https://mariadb.org",
+    "https://iherb.com",
+    "https://auth0.com",
+    "https://askubuntu.com",
+    "https://stackexchange.com",
+    "https://postman.com",
 ]
 
 [extra]
