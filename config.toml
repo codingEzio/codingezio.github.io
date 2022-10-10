@@ -1,6 +1,12 @@
 # The URL the site will be built for
 base_url = "https://codingezio.github.io"
 
+# My essentials
+title = "A simple blog"
+description = "Rants and thoughts"
+default_language = "en"
+minify_html = true
+
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
 
