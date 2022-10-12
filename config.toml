@@ -39,6 +39,10 @@ skip_prefixes = [
     "https://askubuntu.com",
     "https://stackexchange.com",
     "https://postman.com",
+    "sdkman.io",
+    "get.sdkman.io",
+    "reddit.com",
+    "old.reddit.com"
 ]
 
 [extra]
