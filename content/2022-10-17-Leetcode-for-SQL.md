@@ -186,3 +186,8 @@ On        P.PersonId = A.PersonId 			# left intersection
 
 
 #### [1795. 每个产品在不同商店的价格](https://leetcode.cn/problems/rearrange-products-table/)
+
+```sql
+# placeholder
+
+```
