@@ -23,7 +23,7 @@ highlight_code = true
 skip_prefixes = [
     "https://codingEzio.github.io",
     "https://github.com/codingEzio",
-    "https://github.com",
+    "https://github.com/",
     "https://dev.mysql.com",
     "https://simplicable.com",
     "https://www.amazon.com",
@@ -33,16 +33,20 @@ skip_prefixes = [
     "https://docs.microsoft.com",
     "https://ankiweb.net",
     "https://stackoverflow.com",
+    "https://askubuntu.com",
+    "https://stackexchange.com",
+    "https://superuser.com",
     "https://mariadb.org",
     "https://iherb.com",
     "https://auth0.com",
-    "https://askubuntu.com",
-    "https://stackexchange.com",
     "https://postman.com",
-    "sdkman.io",
-    "get.sdkman.io",
-    "reddit.com",
-    "old.reddit.com"
+    "https://sdkman.io",
+    "https://get.sdkman.io",
+    "https://reddit.com",
+    "https://old.reddit.com",
+    "https://leetcode.cn",
+    "https://gohugo.io",
+    "https://acfun.iiilab.com/"
 ]
 
 [extra]
