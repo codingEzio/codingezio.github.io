@@ -9,27 +9,36 @@ description = "Practing by solving SQL problems on LeetCode"
 
 - Review what I've learnt from solving these SQL problems
 - A short gist of what this problem is *for*
-- Save other people's time
+- Save time
 
 #### What
 
 1. Sorted by problem ID
 2. The prefix of the link would start with `https://leetcode.cn`
+3. It would contain both the free and the paid-only questions
+4. Back then I just do them randomly; Now I follow this one [精选数据库 70 题](https://leetcode.cn/problem-list/qgq7m9e/?status=NOT_STARTED&page=1).
 
 ## Thoughts and Code
 
 #### [175. 组合两个表](https://leetcode.cn/problems/combine-two-tables/)
 
 ```sql
-SELECT FirstName, LastName, City, State		# required fields
-FROM      Person  AS P 						# P has a higher prio
-LEFT JOIN Address AS A  					# subordinate to P
-On        P.PersonId = A.PersonId 			# left intersection
+# INNER JOIN is to find the intersection. Any other JOINs
+# would have potential nulls as they aren't 100% match
+
+# ON serves similar task as WHERE, you could consider it
+# as a WHERE in special case, designed for table joins.
+
+SELECT P.FirstName, P.LastName, A.City, A.State
+FROM      Person  AS P
+LEFT JOIN Address AS A
+ON        P.PersonId = A.PersonId 			
 ```
 
 #### [176. 第二高的薪水](https://leetcode.cn/problems/second-highest-salary/)
 
 ```sql
+# placeholder
 
 ``` 
 
