@@ -1,1 +1,58 @@
-<!doctype html><html lang=en><head><meta charset=UTF-8><meta content="width=device-width,initial-scale=1.0" name=viewport><title>LeetCode for Algorithm · A simple blog</title><meta content="Practing by solving Algorithm questions on LeetCode" name=description><link rel="shortcut icon" href=https://codingezio.github.io/favicon.ico><link href=https://codingezio.github.io/atom.xml rel=alternate title=RSS type=application/atom+xml><style>html,body{background:#fffaf7;color:#2d2d2d;font:16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"}a,a:visited{color:darkred;text-decoration:none}a:hover{text-decoration:underline}main{margin:auto;max-width:38rem;padding:0.8rem}pre{background:white;overflow:scroll;padding:1rem}td{border:1px solid #2d2d2d;padding:10px}img{height:auto;max-width:100%}.homepage-list{list-style:none;padding:1rem 0}.homepage-list li{align-items:center;display:flex;flex-wrap:wrap;justify-content:space-between;margin-bottom:10px}@media (max-width: 38rem){.homepage-list li a{width:100%}}</style><meta content="A simple blog" property=og:site_name><meta content="LeetCode for Algorithm" property=og:title><meta content="Practing by solving Algorithm questions on LeetCode" property=og:description><meta content=https://codingezio.github.io/leetcode-for-algorithm/ property=og:url><meta property=og:image><meta content=article property=og:type><meta content=2022-10-18T00:00:00+00:00 property=article:published_time><body><main id=main role=main><header role=banner><h3 style=margin-top:0;><a href=https://codingezio.github.io title=Home>A simple blog</a> <br><small>Rants and thoughts</small></h3></header><hr><article><h1>LeetCode for Algorithm</h1><p style=font-size:90%;>Posted on <time datetime=2022-10-18T00:00:00+00:00>October 18, 2022</time><h2 id=foreword>Foreword</h2><h4 id=why>Why</h4><ul><li>Review what I've learnt from solving these algorithms<li>A short gist of what this problem is <em>for</em><li>Save time</ul><h4 id=what>What</h4><ol><li>Sorted.. by my will<li>The prefix of the link would start with <code>https://leetcode.cn</code><li>Back then I just do them randomly; Now I mostly reference to <a href=https://raymondjiang.net/2022/02/18/about-leetcode-blind-75/>Blind 75</a></ol><h2 id=thoughts-and-code>Thoughts and Code</h2></article><footer role=contentinfo><hr><small>Built with <a href=https://www.getzola.org/>Zola</a>.<br> </small></footer></main>
+<!doctype html><html lang=en><head><meta charset=UTF-8><meta content="width=device-width,initial-scale=1.0" name=viewport><title>LeetCode for Algorithm · A simple blog</title><meta content="Practing by solving Algorithm questions on LeetCode" name=description><link rel="shortcut icon" href=https://codingezio.github.io/favicon.ico><link href=https://codingezio.github.io/atom.xml rel=alternate title=RSS type=application/atom+xml><style>html,body{background:#fffaf7;color:#2d2d2d;font:16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"}a,a:visited{color:darkred;text-decoration:none}a:hover{text-decoration:underline}main{margin:auto;max-width:38rem;padding:0.8rem}pre{background:white;overflow:scroll;padding:1rem}td{border:1px solid #2d2d2d;padding:10px}img{height:auto;max-width:100%}.homepage-list{list-style:none;padding:1rem 0}.homepage-list li{align-items:center;display:flex;flex-wrap:wrap;justify-content:space-between;margin-bottom:10px}@media (max-width: 38rem){.homepage-list li a{width:100%}}</style><meta content="A simple blog" property=og:site_name><meta content="LeetCode for Algorithm" property=og:title><meta content="Practing by solving Algorithm questions on LeetCode" property=og:description><meta content=https://codingezio.github.io/leetcode-for-algorithm/ property=og:url><meta property=og:image><meta content=article property=og:type><meta content=2022-10-18T00:00:00+00:00 property=article:published_time><body><main id=main role=main><header role=banner><h3 style=margin-top:0;><a href=https://codingezio.github.io title=Home>A simple blog</a> <br><small>Rants and thoughts</small></h3></header><hr><article><h1>LeetCode for Algorithm</h1><p style=font-size:90%;>Posted on <time datetime=2022-10-18T00:00:00+00:00>October 18, 2022</time><h2 id=foreword>Foreword</h2><h4 id=why>Why</h4><ul><li>Review what I've learnt from solving these algorithms<li>A short gist of what this problem is <em>for</em><li>Save time</ul><h4 id=what>What</h4><ol><li>Sorted.. by my will<li>The prefix of the link would start with <code>https://leetcode.cn</code><li>Back then I just do them randomly; Now I mostly reference to <a href=https://raymondjiang.net/2022/02/18/about-leetcode-blind-75/>Blind 75</a></ol><h2 id=thoughts-and-code>Thoughts and Code</h2><h3 id=0023-merge-k-sorted-linked-list>0023: Merge K Sorted Linked List</h3><pre class=language-java data-lang=java style=background-color:#2b303b;color:#c0c5ce;><code class=language-java data-lang=java><span style=color:#65737e;>/**
+</span><span style=color:#65737e;> * Definition for singly-linked list.
+</span><span style=color:#65737e;> * public class ListNode {
+</span><span style=color:#65737e;> *     int val;
+</span><span style=color:#65737e;> *     ListNode next;
+</span><span style=color:#65737e;> *     ListNode() {}
+</span><span style=color:#65737e;> *     ListNode(int val) { this.val = val; }
+</span><span style=color:#65737e;> *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+</span><span style=color:#65737e;> * }
+</span><span style=color:#65737e;> */
+</span><span style=color:#65737e;>class Solution {
+</span><span style=color:#65737e;>    public ListNode mergeKLists(ListNode[] lists) {
+</span><span style=color:#65737e;>    	// No more checking when there's no elements at all
+</span><span style=color:#65737e;>        int ln = lists.length;
+</span><span style=color:#65737e;>        if (ln == 0) {
+</span><span style=color:#65737e;>        	return null;
+</span><span style=color:#65737e;>        }
+</span><span style=color:#65737e;>
+</span><span style=color:#65737e;>        // Temporary variables for comparison and be as pointers
+</span><span style=color:#65737e;>        ListNode dummy = new ListNode(-1);
+</span><span style=color:#65737e;>        ListNode p     = dummy;
+</span><span style=color:#65737e;>
+</span><span style=color:#65737e;>        // Make the comparsion (non-order -> sorted by ASC)
+</span><span style=color:#65737e;>        // 	Do notice that PriorityQueue now is also a Linked List,
+</span><span style=color:#65737e;>        // 	therefore it would have methods like `.next` and needs
+</span><span style=color:#65737e;>        //	it to traverse them.	
+</span><span style=color:#65737e;>        PriorityQueue<</span><span style=color:#bf616a;>ListNode</span><span style=color:#65737e;>> pq = new PriorityQueue</span><span style=background-color:#bf616a;color:#2b303b;><></span><span style=color:#65737e;>(
+</span><span style=color:#65737e;>            ln,
+</span><span style=color:#65737e;>            (a, b) -> (a.val - b.val)
+</span><span style=color:#65737e;>        );
+</span><span style=color:#65737e;>
+</span><span style=color:#65737e;>        // Combine the elements while ordering them in an allocated heap
+</span><span style=color:#65737e;>        for (ListNode item : lists) {
+</span><span style=color:#65737e;>            if (item != null) {
+</span><span style=color:#65737e;>                pq.add(item);
+</span><span style=color:#65737e;>            }
+</span><span style=color:#65737e;>        }
+</span><span style=color:#65737e;>
+</span><span style=color:#65737e;>        while (!pq.isEmpty()) {
+</span><span style=color:#65737e;>        	// Get the smallest while removing itself
+</span><span style=color:#65737e;>            ListNode n = pq.poll();
+</span><span style=color:#65737e;>            p.next     = n;
+</span><span style=color:#65737e;>
+</span><span style=color:#65737e;>            // Check if there's still items left in the heap (smallest
+</span><span style=color:#65737e;>            // to biggest). If there is, move the pointer of the
+</span><span style=color:#65737e;>            // PriorityQueue via the variale `n`.
+</span><span style=color:#65737e;>            if (n.next != null) {
+</span><span style=color:#65737e;>                pq.add(n.next);
+</span><span style=color:#65737e;>            }
+</span><span style=color:#65737e;>
+</span><span style=color:#65737e;>            // Move to the next pointer for storing the element
+</span><span style=color:#65737e;>            p = p.next;
+</span><span style=color:#65737e;>        }
+</span><span style=color:#65737e;>
+</span><span style=color:#65737e;>        return dummy.next;
+</span><span style=color:#65737e;>    }
+</span><span style=color:#65737e;>}
+</span></code></pre></article><footer role=contentinfo><hr><small>Built with <a href=https://www.getzola.org/>Zola</a>.<br> </small></footer></main>
