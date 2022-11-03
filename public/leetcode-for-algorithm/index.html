@@ -1,4 +1,42 @@
-<!doctype html><html lang=en><head><meta charset=UTF-8><meta content="width=device-width,initial-scale=1.0" name=viewport><title>LeetCode for Algorithm · A simple blog</title><meta content="Practing by solving Algorithm questions on LeetCode" name=description><link rel="shortcut icon" href=https://codingezio.github.io/favicon.ico><link href=https://codingezio.github.io/atom.xml rel=alternate title=RSS type=application/atom+xml><style>html,body{background:#fffaf7;color:#2d2d2d;font:16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"}a,a:visited{color:darkred;text-decoration:none}a:hover{text-decoration:underline}main{margin:auto;max-width:38rem;padding:0.8rem}pre{background:white;overflow:scroll;padding:1rem}td{border:1px solid #2d2d2d;padding:10px}img{height:auto;max-width:100%}.homepage-list{list-style:none;padding:1rem 0}.homepage-list li{align-items:center;display:flex;flex-wrap:wrap;justify-content:space-between;margin-bottom:10px}@media (max-width: 38rem){.homepage-list li a{width:100%}}</style><meta content="A simple blog" property=og:site_name><meta content="LeetCode for Algorithm" property=og:title><meta content="Practing by solving Algorithm questions on LeetCode" property=og:description><meta content=https://codingezio.github.io/leetcode-for-algorithm/ property=og:url><meta property=og:image><meta content=article property=og:type><meta content=2022-10-18T00:00:00+00:00 property=article:published_time><body><main id=main role=main><header role=banner><h3 style=margin-top:0;><a href=https://codingezio.github.io title=Home>A simple blog</a> <br><small>Rants and thoughts</small></h3></header><hr><article><h1>LeetCode for Algorithm</h1><p style=font-size:90%;>Posted on <time datetime=2022-10-18T00:00:00+00:00>October 18, 2022</time><h2 id=foreword>Foreword</h2><h4 id=why>Why</h4><ul><li>Review what I've learnt from solving these algorithms<li>A short gist of what this problem is <em>for</em><li>Save time</ul><h4 id=what>What</h4><ol><li>Sorted.. by my will<li>The prefix of the link would start with <code>https://leetcode.cn</code><li>Back then I just do them randomly; Now I mostly reference to <a href=https://raymondjiang.net/2022/02/18/about-leetcode-blind-75/>Blind 75</a></ol><h2 id=thoughts-and-code>Thoughts and Code</h2><h3 id=0023-merge-k-sorted-linked-list>0023: Merge K Sorted Linked List</h3><pre class=language-java data-lang=java style=background-color:#2b303b;color:#c0c5ce;><code class=language-java data-lang=java><span style=color:#65737e;>/**
+<!doctype html><html lang=en><head><meta charset=UTF-8><meta content="width=device-width,initial-scale=1.0" name=viewport><title>LeetCode for Algorithm · A simple blog</title><meta content="Practing by solving Algorithm questions on LeetCode" name=description><link rel="shortcut icon" href=https://codingezio.github.io/favicon.ico><link href=https://codingezio.github.io/atom.xml rel=alternate title=RSS type=application/atom+xml><style>html,body{background:#fffaf7;color:#2d2d2d;font:16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"}a,a:visited{color:darkred;text-decoration:none}a:hover{text-decoration:underline}main{margin:auto;max-width:38rem;padding:0.8rem}pre{background:white;overflow:scroll;padding:1rem}td{border:1px solid #2d2d2d;padding:10px}img{height:auto;max-width:100%}.homepage-list{list-style:none;padding:1rem 0}.homepage-list li{align-items:center;display:flex;flex-wrap:wrap;justify-content:space-between;margin-bottom:10px}@media (max-width: 38rem){.homepage-list li a{width:100%}}</style><meta content="A simple blog" property=og:site_name><meta content="LeetCode for Algorithm" property=og:title><meta content="Practing by solving Algorithm questions on LeetCode" property=og:description><meta content=https://codingezio.github.io/leetcode-for-algorithm/ property=og:url><meta property=og:image><meta content=article property=og:type><meta content=2022-10-18T00:00:00+00:00 property=article:published_time><body><main id=main role=main><header role=banner><h3 style=margin-top:0;><a href=https://codingezio.github.io title=Home>A simple blog</a> <br><small>Rants and thoughts</small></h3></header><hr><article><h1>LeetCode for Algorithm</h1><p style=font-size:90%;>Posted on <time datetime=2022-10-18T00:00:00+00:00>October 18, 2022</time><h2 id=foreword>Foreword</h2><h4 id=why>Why</h4><ul><li>Review what I've learnt from solving these algorithms<li>A short gist of what this problem is <em>for</em><li>Save time</ul><h4 id=what>What</h4><ol><li>Sorted.. by my will<li>The prefix of the link would start with <code>https://leetcode.cn</code><li>Back then I just do them randomly; Now I mostly reference to <a href=https://raymondjiang.net/2022/02/18/about-leetcode-blind-75/>Blind 75</a></ol><h2 id=thoughts-and-code>Thoughts and Code</h2><h3 id=0001-two-sum>0001: Two Sum</h3><pre class=language-java data-lang=java style=background-color:#2b303b;color:#c0c5ce;><code class=language-java data-lang=java><span style=color:#b48ead;>class </span><span style=color:#ebcb8b;>Solution </span><span style=color:#eff1f5;>{
+</span><span style=color:#eff1f5;>    </span><span style=color:#b48ead;>public int[] </span><span style=color:#8fa1b3;>twoSum</span><span style=color:#eff1f5;>(</span><span style=color:#b48ead;>int[] </span><span style=color:#bf616a;>nums</span><span style=color:#eff1f5;>, </span><span style=color:#b48ead;>int </span><span style=color:#bf616a;>target</span><span style=color:#eff1f5;>) {
+</span><span style=color:#eff1f5;>        </span><span style=color:#ebcb8b;>HashMap</span><span style=color:#eff1f5;><</span><span style=color:#ebcb8b;>Integer</span><span style=color:#eff1f5;>, </span><span style=color:#ebcb8b;>Integer</span><span style=color:#eff1f5;>> remainders </span><span>= </span><span style=color:#b48ead;>new </span><span style=color:#ebcb8b;>HashMap</span><span style=color:#eff1f5;>();
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>        </span><span style=color:#b48ead;>for </span><span style=color:#eff1f5;>(</span><span style=color:#b48ead;>int</span><span style=color:#eff1f5;> idx </span><span>= </span><span style=color:#d08770;>0</span><span style=color:#eff1f5;>; idx </span><span><</span><span style=color:#eff1f5;> nums.length; idx</span><span>++</span><span style=color:#eff1f5;>) {
+</span><span style=color:#eff1f5;>            </span><span style=color:#65737e;>// Put every substracted result into a big bucket, once
+</span><span style=color:#eff1f5;>            </span><span style=color:#65737e;>// there's a match (.containsKey), return the index of the
+</span><span style=color:#eff1f5;>            </span><span style=color:#65737e;>// number (.get). Also, treat the `remainder` hashmap like
+</span><span style=color:#eff1f5;>            </span><span style=color:#65737e;>// 'find remainders for 'this_half' in the hashmap'.
+</span><span style=color:#eff1f5;>            </span><span style=color:#b48ead;>int</span><span style=color:#eff1f5;> this_half </span><span>=</span><span style=color:#eff1f5;> nums[idx];
+</span><span style=color:#eff1f5;>            </span><span style=color:#b48ead;>int</span><span style=color:#eff1f5;> that_half </span><span>=</span><span style=color:#eff1f5;> target </span><span>-</span><span style=color:#eff1f5;> this_half;
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>            </span><span style=color:#b48ead;>if </span><span style=color:#eff1f5;>(remainders.</span><span style=color:#bf616a;>containsKey</span><span style=color:#eff1f5;>(this_half)) {
+</span><span style=color:#eff1f5;>                </span><span style=color:#b48ead;>return new int</span><span style=color:#eff1f5;>[] { remainders.</span><span style=color:#bf616a;>get</span><span style=color:#eff1f5;>(this_half), idx };
+</span><span style=color:#eff1f5;>            }
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>            </span><span style=color:#65737e;>// Put the remainder candidate in
+</span><span style=color:#eff1f5;>            remainders.</span><span style=color:#bf616a;>put</span><span style=color:#eff1f5;>(that_half, idx);
+</span><span style=color:#eff1f5;>        }
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>        </span><span style=color:#b48ead;>return new int</span><span style=color:#eff1f5;>[] {};
+</span><span style=color:#eff1f5;>    }
+</span><span style=color:#eff1f5;>}
+</span></code></pre><h3 id=0021-merge-two-sorted-lists>0021: Merge Two Sorted Lists</h3><pre class=language-java data-lang=java style=background-color:#2b303b;color:#c0c5ce;><code class=language-java data-lang=java><span style=color:#65737e;>/**
+</span><span style=color:#65737e;> * Definition for singly-linked list.
+</span><span style=color:#65737e;> * public class ListNode {
+</span><span style=color:#65737e;> *     int val;
+</span><span style=color:#65737e;> *     ListNode next;
+</span><span style=color:#65737e;> *     ListNode() {}
+</span><span style=color:#65737e;> *     ListNode(int val) { this.val = val; }
+</span><span style=color:#65737e;> *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+</span><span style=color:#65737e;> * }
+</span><span style=color:#65737e;> */
+</span><span style=color:#65737e;>class Solution {
+</span><span style=color:#65737e;>    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+</span><span style=color:#65737e;>
+</span><span style=color:#65737e;>    }
+</span><span style=color:#65737e;>}
+</span></code></pre><h3 id=0023-merge-k-sorted-linked-list>0023: Merge K Sorted Linked List</h3><pre class=language-java data-lang=java style=background-color:#2b303b;color:#c0c5ce;><code class=language-java data-lang=java><span style=color:#65737e;>/**
 </span><span style=color:#65737e;> * Definition for singly-linked list.
 </span><span style=color:#65737e;> * public class ListNode {
 </span><span style=color:#65737e;> *     int val;
@@ -55,4 +93,111 @@
 </span><span style=color:#65737e;>        return dummy.next;
 </span><span style=color:#65737e;>    }
 </span><span style=color:#65737e;>}
+</span></code></pre><h3 id=0049-group-anagrams>0049: Group Anagrams</h3><pre class=language-python data-lang=python style=background-color:#2b303b;color:#c0c5ce;><code class=language-python data-lang=python><span style=color:#b48ead;>from </span><span>collections </span><span style=color:#b48ead;>import </span><span>defaultdict
+</span><span>
+</span><span style=color:#b48ead;>class </span><span style=color:#ebcb8b;>Solution</span><span style=color:#eff1f5;>:
+</span><span>    </span><span style=color:#b48ead;>def </span><span style=color:#8fa1b3;>groupAnagrams</span><span>(</span><span style=color:#bf616a;>self</span><span>, </span><span style=color:#bf616a;>strs</span><span>: List[str]) -> List[List[str]]:
+</span><span>        </span><span style=color:#65737e;># Behaves like a normal dict, though when you access the key
+</span><span>        </span><span style=color:#65737e;># which is not in it, it would return a default value which
+</span><span>        </span><span style=color:#65737e;># is of the same type the parameter you passed in (i.e. []).
+</span><span>        ans = </span><span style=color:#bf616a;>defaultdict</span><span>(list)
+</span><span>
+</span><span>        </span><span style=color:#b48ead;>for </span><span>word </span><span style=color:#b48ead;>in </span><span>strs:
+</span><span>            count = [</span><span style=color:#d08770;>0</span><span>] * </span><span style=color:#d08770;>26
+</span><span>
+</span><span>            </span><span style=color:#b48ead;>for </span><span>letter </span><span style=color:#b48ead;>in </span><span>word:
+</span><span>
+</span><span>                letter_indices = </span><span style=color:#96b5b4;>ord</span><span>(letter) - </span><span style=color:#96b5b4;>ord</span><span>('</span><span style=color:#a3be8c;>a</span><span>')
+</span><span>                count[letter_indices] += </span><span style=color:#d08770;>1
+</span><span>
+</span><span>            ans[</span><span style=color:#bf616a;>tuple</span><span>(count)].</span><span style=color:#bf616a;>append</span><span>(word)
+</span><span>    
+</span><span>        </span><span style=color:#b48ead;>return </span><span style=color:#bf616a;>list</span><span>(ans.</span><span style=color:#bf616a;>values</span><span>())        
+</span></code></pre><h3 id=0141-linked-list-cycle>0141: Linked List Cycle</h3><pre class=language-java data-lang=java style=background-color:#2b303b;color:#c0c5ce;><code class=language-java data-lang=java><span style=color:#65737e;>/**
+</span><span style=color:#65737e;> * Definition for singly-linked list.
+</span><span style=color:#65737e;> * class ListNode {
+</span><span style=color:#65737e;> *     int val;
+</span><span style=color:#65737e;> *     ListNode next;
+</span><span style=color:#65737e;> *     ListNode(int x) {
+</span><span style=color:#65737e;> *         val = x;
+</span><span style=color:#65737e;> *         next = null;
+</span><span style=color:#65737e;> *     }
+</span><span style=color:#65737e;> * }
+</span><span style=color:#65737e;> */
+</span><span style=color:#65737e;>public class Solution {
+</span><span style=color:#65737e;>    public boolean hasCycle(ListNode head) {
+</span><span style=color:#65737e;>        ListNode slow = head;
+</span><span style=color:#65737e;>        ListNode fast = head;
+</span><span style=color:#65737e;>
+</span><span style=color:#65737e;>        // Take 3, 7, 8, 6 for example (6 cycle back to 7)
+</span><span style=color:#65737e;>        // [SLOW]  3       7       8       6
+</span><span style=color:#65737e;>        // [FAST]  3       8       7       6
+</span><span style=color:#65737e;>        // [LOOP]  T[7,8]  T[8,7]  T[6,6]  F
+</span><span style=color:#65737e;>
+</span><span style=color:#65737e;>        while (fast != null && fast.next != null) {
+</span><span style=color:#65737e;>            slow = slow.next;
+</span><span style=color:#65737e;>            fast = fast.next.next;
+</span><span style=color:#65737e;>
+</span><span style=color:#65737e;>            if (slow == fast) {
+</span><span style=color:#65737e;>                return true;
+</span><span style=color:#65737e;>            }
+</span><span style=color:#65737e;>        }
+</span><span style=color:#65737e;>
+</span><span style=color:#65737e;>        return false;
+</span><span style=color:#65737e;>    }
+</span><span style=color:#65737e;>}
+</span></code></pre><h3 id=217-contains-duplicates>217: Contains Duplicates</h3><pre class=language-java data-lang=java style=background-color:#2b303b;color:#c0c5ce;><code class=language-java data-lang=java><span style=color:#b48ead;>class </span><span style=color:#ebcb8b;>Solution </span><span style=color:#eff1f5;>{
+</span><span style=color:#eff1f5;>    </span><span style=color:#b48ead;>public boolean </span><span style=color:#8fa1b3;>containsDuplicate</span><span style=color:#eff1f5;>(</span><span style=color:#b48ead;>int[] </span><span style=color:#bf616a;>nums</span><span style=color:#eff1f5;>) {
+</span><span style=color:#eff1f5;>        </span><span style=color:#65737e;>// Just like the set() you use in Python. 'Set()' is just the
+</span><span style=color:#eff1f5;>        </span><span style=color:#65737e;>// name of the interface.
+</span><span style=color:#eff1f5;>        </span><span style=color:#ebcb8b;>Set</span><span style=color:#eff1f5;><</span><span style=color:#ebcb8b;>Integer</span><span style=color:#eff1f5;>> uniq </span><span>= </span><span style=color:#b48ead;>new </span><span style=color:#ebcb8b;>HashSet</span><span style=color:#eff1f5;><>();
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>        </span><span style=color:#b48ead;>for </span><span style=color:#eff1f5;>(</span><span style=color:#b48ead;>int</span><span style=color:#eff1f5;> idx </span><span>= </span><span style=color:#d08770;>0</span><span style=color:#eff1f5;>; idx </span><span><</span><span style=color:#eff1f5;> nums.length; idx</span><span>++</span><span style=color:#eff1f5;>) {
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>            </span><span style=color:#65737e;>// Ah, I've seen this element before, it's duplicate then!
+</span><span style=color:#eff1f5;>            </span><span style=color:#b48ead;>if </span><span style=color:#eff1f5;>(uniq.</span><span style=color:#bf616a;>contains</span><span style=color:#eff1f5;>(nums[idx])) {
+</span><span style=color:#eff1f5;>                </span><span style=color:#b48ead;>return </span><span style=color:#d08770;>true</span><span style=color:#eff1f5;>;
+</span><span style=color:#eff1f5;>            }
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>            </span><span style=color:#65737e;>// Put every elements into a non-repeating box
+</span><span style=color:#eff1f5;>            uniq.</span><span style=color:#bf616a;>add</span><span style=color:#eff1f5;>(nums[idx]);
+</span><span style=color:#eff1f5;>        }
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>        </span><span style=color:#b48ead;>return </span><span style=color:#d08770;>false</span><span style=color:#eff1f5;>;
+</span><span style=color:#eff1f5;>    }
+</span><span style=color:#eff1f5;>}
+</span></code></pre><h3 id=242-valid-anagrams>242. Valid Anagrams</h3><pre class=language-java data-lang=java style=background-color:#2b303b;color:#c0c5ce;><code class=language-java data-lang=java><span style=color:#b48ead;>class </span><span style=color:#ebcb8b;>Solution </span><span style=color:#eff1f5;>{
+</span><span style=color:#eff1f5;>    </span><span style=color:#b48ead;>public boolean </span><span style=color:#8fa1b3;>isAnagram</span><span style=color:#eff1f5;>(</span><span style=color:#ebcb8b;>String </span><span style=color:#bf616a;>s</span><span style=color:#eff1f5;>, </span><span style=color:#ebcb8b;>String </span><span style=color:#bf616a;>t</span><span style=color:#eff1f5;>) {
+</span><span style=color:#eff1f5;>        </span><span style=color:#b48ead;>if </span><span style=color:#eff1f5;>(s.</span><span style=color:#bf616a;>length</span><span style=color:#eff1f5;>() </span><span>!=</span><span style=color:#eff1f5;> t.</span><span style=color:#bf616a;>length</span><span style=color:#eff1f5;>()) {
+</span><span style=color:#eff1f5;>            </span><span style=color:#b48ead;>return </span><span style=color:#d08770;>false</span><span style=color:#eff1f5;>;
+</span><span style=color:#eff1f5;>        }
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>        </span><span style=color:#b48ead;>int[]</span><span style=color:#eff1f5;> cmp_by_compute </span><span>= </span><span style=color:#b48ead;>new int</span><span style=color:#eff1f5;>[</span><span style=color:#d08770;>26</span><span style=color:#eff1f5;>];
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>        </span><span style=color:#b48ead;>for </span><span style=color:#eff1f5;>(</span><span style=color:#b48ead;>int</span><span style=color:#eff1f5;> idx </span><span>= </span><span style=color:#d08770;>0</span><span style=color:#eff1f5;>; idx </span><span><</span><span style=color:#eff1f5;> s.</span><span style=color:#bf616a;>length</span><span style=color:#eff1f5;>(); idx</span><span>++</span><span style=color:#eff1f5;>) {
+</span><span style=color:#eff1f5;>            </span><span style=color:#65737e;>// To minus lowercase 'a' is to get the ranking of the
+</span><span style=color:#eff1f5;>            </span><span style=color:#65737e;>// letters. For example, you would get 0 for character
+</span><span style=color:#eff1f5;>            </span><span style=color:#65737e;>// 'a' and 25 for character 'z' which is exactly what
+</span><span style=color:#eff1f5;>            </span><span style=color:#65737e;>// we want. 
+</span><span style=color:#eff1f5;>            </span><span style=color:#b48ead;>int</span><span style=color:#eff1f5;> s_substract </span><span>=</span><span style=color:#eff1f5;> s.</span><span style=color:#bf616a;>charAt</span><span style=color:#eff1f5;>(idx) </span><span>- '</span><span style=color:#a3be8c;>a</span><span>'</span><span style=color:#eff1f5;>;
+</span><span style=color:#eff1f5;>            </span><span style=color:#b48ead;>int</span><span style=color:#eff1f5;> t_substract </span><span>=</span><span style=color:#eff1f5;> t.</span><span style=color:#bf616a;>charAt</span><span style=color:#eff1f5;>(idx) </span><span>- '</span><span style=color:#a3be8c;>a</span><span>'</span><span style=color:#eff1f5;>;
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>            </span><span style=color:#65737e;>// Suppose they are of the same character, the process
+</span><span style=color:#eff1f5;>            </span><span style=color:#65737e;>// should be like default_val+1 then default_val-1, and
+</span><span style=color:#eff1f5;>            </span><span style=color:#65737e;>// since the default value is 0, the end result we would
+</span><span style=color:#eff1f5;>            </span><span style=color:#65737e;>// get for each idx shall be 0 as well.
+</span><span style=color:#eff1f5;>            cmp_by_compute[s_substract]</span><span>++</span><span style=color:#eff1f5;>;
+</span><span style=color:#eff1f5;>            cmp_by_compute[t_substract]</span><span>--</span><span style=color:#eff1f5;>;
+</span><span style=color:#eff1f5;>        }
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>        </span><span style=color:#65737e;>// To check if all the end result were 0
+</span><span style=color:#eff1f5;>        </span><span style=color:#b48ead;>for </span><span style=color:#eff1f5;>(</span><span style=color:#b48ead;>int</span><span style=color:#eff1f5;> computed_res </span><span>:</span><span style=color:#eff1f5;> cmp_by_compute) {
+</span><span style=color:#eff1f5;>            </span><span style=color:#b48ead;>if </span><span style=color:#eff1f5;>(computed_res </span><span>!= </span><span style=color:#d08770;>0</span><span style=color:#eff1f5;>) {
+</span><span style=color:#eff1f5;>                </span><span style=color:#b48ead;>return </span><span style=color:#d08770;>false</span><span style=color:#eff1f5;>;
+</span><span style=color:#eff1f5;>            }
+</span><span style=color:#eff1f5;>        }
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>        </span><span style=color:#b48ead;>return </span><span style=color:#d08770;>true</span><span style=color:#eff1f5;>;
+</span><span style=color:#eff1f5;>    }
+</span><span style=color:#eff1f5;>}
 </span></code></pre></article><footer role=contentinfo><hr><small>Built with <a href=https://www.getzola.org/>Zola</a>.<br> </small></footer></main>

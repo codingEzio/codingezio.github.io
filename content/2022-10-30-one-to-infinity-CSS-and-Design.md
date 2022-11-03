@@ -45,58 +45,30 @@ BootStrap is still amazing (so I heard) though.
  }
  ```
 
+4. Layout Model
+
+  - Three types of them
+    1. Dumb built-in methods like `position` and such
+    2. Newly introduced *CSS Flexbox* and *CSS Grid*
+      > More methods dedicated to the layout are available to you
+
+      ```css
+      .stuff {
+        display: flex;
+
+        /*
+          Now all the layout methods of CSS Flex would be avaialble to this
+          parent and all of its children elements and selectors!
+        */
+      }
+      ```
+
+    3. Frameworks like *Bootstrap* because back then we do not have things like *Flexbox*
+
 ## Practice
 
-#### Product Card
+> On [*CodePen*](https://codepen.io/)
 
-1. HTML
-
- ```html
- <html>
- <head>
- </head>
- <body>
-  <div class="movie">
-   <h1> The SuperMan </h1>
-   <p class="movie_description">
-    An alien orphan is sent from his dying planet
-    to Earth, where he grows up to become his
-    adoptive home's first and greatest superhero.
-     <button class="movie_button">Add to Cart</button>
-   </p>
-  </div>
- </body>
- </html>
- ```
-
-2. CSS
-
- ```css
- .movie {
-   box-sizing: border-box;
-   width: 100%;
-
-   /* Giving spaces for the content to show */
-   padding: 20px 20px 20px 190px;
-
-   color: #fff;
-   background: url("http://i.imgur.com/lcm5byq.png") 20px 20px / 130px 210px no-repeat,
-               url("http://i.imgur.com/2tiJEnP.png") 0% 0%     / cover                ;
- }
-
- .movie_description p {
-   font-size: 1.3em;
- }
-
- button {
-   font-size: 1.3em;
-
-   padding: 10px;
-   margin-top: 20px;
-   border: none;
-   display: block;
-
-   background-color: red;
-   color: white;
- }
- ```
+1. [Sup Card](https://codepen.io/techmale/pen/RwJWVjr)
+2. [Signup Page](https://codepen.io/techmale/pen/KKedoeL)
+3. [Fake Phone](https://codepen.io/techmale/pen/yLEegLx)
