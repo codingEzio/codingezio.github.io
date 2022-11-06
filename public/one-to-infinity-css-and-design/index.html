@@ -7,12 +7,60 @@
 </span><span style=color:#8fa1b3;>.</span><span style=color:#d08770;>for-macos </span><span>{
 </span><span> font-family: </span><span style=color:#a3be8c;>Helvetica</span><span>, </span><span style=color:#a3be8c;>Futura</span><span>, </span><span style=color:#a3be8c;>Bodoni</span><span>, </span><span style=color:#a3be8c;>Times</span><span>, </span><span style=color:#a3be8c;>Palatino</span><span>, </span><span style=color:#a3be8c;>Courier</span><span>, </span><span style=color:#a3be8c;>Gill Sans</span><span>, </span><span style=color:#a3be8c;>Geneva</span><span>, </span><span style=color:#a3be8c;>Baskerville</span><span>, </span><span style=color:#a3be8c;>Andale Mono</span><span>;
 </span><span>}
-</span></code></pre><ol start=4><li>Layout Model</ol><ul><li><p>Three types of them</p> <ol><li>Dumb built-in methods like <code>position</code> and such<li>Newly introduced <em>CSS Flexbox</em> and <em>CSS Grid</em></ol> <blockquote><p>More methods dedicated to the layout are available to you</blockquote> <pre class=language-css data-lang=css style=background-color:#2b303b;color:#c0c5ce;><code class=language-css data-lang=css><span style=color:#8fa1b3;>.</span><span style=color:#d08770;>stuff </span><span>{
+</span></code></pre><ol start=4><li>Layout Model</ol><ul><li><p>Three types of them</p> <ol><li>Dumb built-in methods like <code>position</code> and such<li>Newly introduced <em>CSS Flexbox</em> and <em>CSS Grid</em> > More methods dedicated to the layout are available to you</ol> <pre style=background-color:#2b303b;color:#c0c5ce;><code><span>```css
+</span><span>.stuff {
 </span><span>  display: flex;
 </span><span>
-</span><span>  </span><span style=color:#65737e;>/*
-</span><span style=color:#65737e;>    Now all the layout methods of CSS Flex would be avaialble to this
-</span><span style=color:#65737e;>    parent and all of its children elements and selectors!
-</span><span style=color:#65737e;>  */
+</span><span>  /*
+</span><span>    Now all the layout methods of CSS Flex would be avaialble to this
+</span><span>    parent and all of its children elements and selectors!
+</span><span>  */
 </span><span>}
-</span></code></pre> <ol start=3><li>Frameworks like <em>Bootstrap</em> because back then we do not have things like <em>Flexbox</em></ol></ul><h2 id=practice>Practice</h2><blockquote><p>On <a href=https://codepen.io/><em>CodePen</em></a></blockquote><ol><li><a href=https://codepen.io/techmale/pen/RwJWVjr>Sup Card</a><li><a href=https://codepen.io/techmale/pen/KKedoeL>Signup Page</a><li><a href=https://codepen.io/techmale/pen/yLEegLx>Fake Phone</a></ol></article><footer role=contentinfo><hr><small>Built with <a href=https://www.getzola.org/>Zola</a>.<br> </small></footer></main>
+</span><span>```
+</span></code></pre> <ol start=3><li>Frameworks like <em>Bootstrap</em> because back then we do not have things like <em>Flexbox</em></ol></ul><ol start=4><li>Variable</ol><pre class=language-css data-lang=css style=background-color:#2b303b;color:#c0c5ce;><code class=language-css data-lang=css><span style=color:#65737e;>/* Global and Local Variable */
+</span><span style=color:#8fa1b3;>:</span><span style=color:#b48ead;>root </span><span>{
+</span><span>  --global-variable-color: red;
+</span><span>}
+</span><span>
+</span><span style=color:#8fa1b3;>.</span><span style=color:#d08770;>whatever </span><span>{
+</span><span>  --non-global-color: white;
+</span><span>
+</span><span>  color:            </span><span style=color:#96b5b4;>var</span><span>(--global-variable-color);
+</span><span>  background-color: </span><span style=color:#96b5b4;>var</span><span>(--non-global-color);
+</span><span>}
+</span><span>
+</span><span>
+</span><span style=color:#65737e;>/* Inline Declaration */
+</span><span style=color:#8fa1b3;>.</span><span style=color:#d08770;>btn </span><span>{
+</span><span>  padding: </span><span style=color:#d08770;>2rem 4rem</span><span>;
+</span><span>
+</span><span>  font-size: </span><span style=color:#96b5b4;>var</span><span>(--button-size, 0.6em);
+</span><span>
+</span><span>  background: transparent;
+</span><span>  border: </span><span style=color:#d08770;>2px </span><span>solid </span><span style=color:#96b5b4;>var</span><span>(--color, black);
+</span><span>  border-radius: </span><span style=color:#d08770;>2px</span><span>;
+</span><span>}
+</span><span>
+</span><span style=color:#8fa1b3;>.</span><span style=color:#d08770;>btn</span><span style=color:#8fa1b3;>.</span><span style=color:#d08770;>special-button </span><span>{
+</span><span>  --color: red;
+</span><span>  --button-size: </span><span style=color:#d08770;>1.2em</span><span>;
+</span><span>}
+</span><span>
+</span><span>
+</span><span style=color:#65737e;>/* Calculation */
+</span><span style=color:#8fa1b3;>.</span><span style=color:#d08770;>header </span><span>{
+</span><span>  --space: </span><span style=color:#96b5b4;>calc</span><span>(</span><span style=color:#d08770;>16px </span><span>* </span><span style=color:#d08770;>2</span><span>);
+</span><span>
+</span><span>  font-size: </span><span style=color:#96b5b4;>var</span><span>(--space);
+</span><span>}
+</span><span>
+</span><span>
+</span><span style=color:#65737e;>/* Inheritence */
+</span><span style=color:#bf616a;>div </span><span>{
+</span><span>  --ft-size: </span><span style=color:#d08770;>17px</span><span>;
+</span><span>}
+</span><span>
+</span><span style=color:#bf616a;>div</span><span style=color:#8fa1b3;>.</span><span style=color:#d08770;>footer </span><span>{
+</span><span>  font-size: </span><span style=color:#96b5b4;>var</span><span>(--ft-size);
+</span><span>}
+</span></code></pre><h2 id=practice>Practice</h2><blockquote><p>On <a href=https://codepen.io/><em>CodePen</em></a></blockquote><ol><li><a href=https://codepen.io/techmale/pen/RwJWVjr>Sup Card</a><li><a href=https://codepen.io/techmale/pen/KKedoeL>Signup Page</a><li><a href=https://codepen.io/techmale/pen/yLEegLx>Fake Phone</a><li><a href=https://codepen.io/techmale/pen/GRGZGqL>CSS Variable > Hover</a><li><a href=https://codepen.io/techmale/pen/rNKeKdp>CSS Variable > Theme Switch</a><li><a href=https://codepen.io/techmale/pen/OJENwBO>CSS Variable > Color Preview</a><li><a href=https://codepen.io/techmale/pen/eYKzGPG>CSS Layout > Music Player</a></ol></article><footer role=contentinfo><hr><small>Built with <a href=https://www.getzola.org/>Zola</a>.<br> </small></footer></main>

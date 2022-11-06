@@ -47,7 +47,7 @@ BootStrap is still amazing (so I heard) though.
 
 4. Layout Model
 
-  - Three types of them
+- Three types of them
     1. Dumb built-in methods like `position` and such
     2. Newly introduced *CSS Flexbox* and *CSS Grid*
       > More methods dedicated to the layout are available to you
@@ -65,6 +65,57 @@ BootStrap is still amazing (so I heard) though.
 
     3. Frameworks like *Bootstrap* because back then we do not have things like *Flexbox*
 
+4. Variable
+
+  ```css
+  /* Global and Local Variable */
+  :root {
+    --global-variable-color: red;
+  }
+
+  .whatever {
+    --non-global-color: white;
+
+    color:            var(--global-variable-color);
+    background-color: var(--non-global-color);
+  }
+
+
+  /* Inline Declaration */
+  .btn {
+    padding: 2rem 4rem;
+
+    font-size: var(--button-size, 0.6em);
+
+    background: transparent;
+    border: 2px solid var(--color, black);
+    border-radius: 2px;
+  }
+
+  .btn.special-button {
+    --color: red;
+    --button-size: 1.2em;
+  }
+
+
+  /* Calculation */
+  .header {
+    --space: calc(16px * 2);
+
+    font-size: var(--space);
+  }
+
+
+  /* Inheritence */
+  div {
+    --ft-size: 17px;
+  }
+
+  div.footer {
+    font-size: var(--ft-size);
+  }
+  ```
+
 ## Practice
 
 > On [*CodePen*](https://codepen.io/)
@@ -72,3 +123,7 @@ BootStrap is still amazing (so I heard) though.
 1. [Sup Card](https://codepen.io/techmale/pen/RwJWVjr)
 2. [Signup Page](https://codepen.io/techmale/pen/KKedoeL)
 3. [Fake Phone](https://codepen.io/techmale/pen/yLEegLx)
+4. [CSS Variable > Hover](https://codepen.io/techmale/pen/GRGZGqL)
+5. [CSS Variable > Theme Switch](https://codepen.io/techmale/pen/rNKeKdp)
+6. [CSS Variable > Color Preview](https://codepen.io/techmale/pen/OJENwBO)
+7. [CSS Layout > Music Player](https://codepen.io/techmale/pen/eYKzGPG)
