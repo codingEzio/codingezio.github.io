@@ -21,21 +21,62 @@
 </span><span style=color:#eff1f5;>        </span><span style=color:#b48ead;>return new int</span><span style=color:#eff1f5;>[] {};
 </span><span style=color:#eff1f5;>    }
 </span><span style=color:#eff1f5;>}
-</span></code></pre><h3 id=0021-merge-two-sorted-lists>0021: Merge Two Sorted Lists</h3><pre class=language-java data-lang=java style=background-color:#2b303b;color:#c0c5ce;><code class=language-java data-lang=java><span style=color:#65737e;>/**
-</span><span style=color:#65737e;> * Definition for singly-linked list.
-</span><span style=color:#65737e;> * public class ListNode {
-</span><span style=color:#65737e;> *     int val;
-</span><span style=color:#65737e;> *     ListNode next;
-</span><span style=color:#65737e;> *     ListNode() {}
-</span><span style=color:#65737e;> *     ListNode(int val) { this.val = val; }
-</span><span style=color:#65737e;> *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-</span><span style=color:#65737e;> * }
-</span><span style=color:#65737e;> */
-</span><span style=color:#65737e;>class Solution {
-</span><span style=color:#65737e;>    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
-</span><span style=color:#65737e;>
-</span><span style=color:#65737e;>    }
-</span><span style=color:#65737e;>}
+</span></code></pre><h3 id=0019-remove-nth-node-from-end-of-list>0019: Remove Nth Node From End of List</h3><pre class=language-python data-lang=python style=background-color:#2b303b;color:#c0c5ce;><code class=language-python data-lang=python><span style=color:#65737e;># Definition for singly-linked list.
+</span><span style=color:#65737e;># class ListNode:
+</span><span style=color:#65737e;>#     def __init__(self, val=0, next=None):
+</span><span style=color:#65737e;>#         self.val = val
+</span><span style=color:#65737e;>#         self.next = next
+</span><span style=color:#b48ead;>class </span><span style=color:#ebcb8b;>Solution</span><span style=color:#eff1f5;>:
+</span><span>    </span><span style=color:#b48ead;>def </span><span style=color:#8fa1b3;>removeNthFromEnd</span><span>(</span><span style=color:#bf616a;>self</span><span>, </span><span style=color:#bf616a;>head</span><span>: Optional[ListNode], </span><span style=color:#bf616a;>n</span><span>: int) -> Optional[ListNode]:
+</span><span>        </span><span style=color:#65737e;>"""
+</span><span style=color:#65737e;>        The main thing are these two
+</span><span style=color:#65737e;>        - Caculate the actual steps need to be taken (reversed n)
+</span><span style=color:#65737e;>        - Link the one before the nth with the one preceed it (=> deleted)
+</span><span style=color:#65737e;>        """
+</span><span>
+</span><span>        dummy = </span><span style=color:#bf616a;>ListNode</span><span>(</span><span style=color:#d08770;>0</span><span>, head)
+</span><span>        L = dummy
+</span><span>        R = head
+</span><span>
+</span><span>        </span><span style=color:#b48ead;>while </span><span>n > </span><span style=color:#d08770;>0</span><span>:
+</span><span>            L = L.next
+</span><span>            n -= </span><span style=color:#d08770;>1
+</span><span>
+</span><span>        </span><span style=color:#b48ead;>while </span><span>R is not </span><span style=color:#d08770;>None</span><span>:
+</span><span>            L = L.next
+</span><span>            R = R.next
+</span><span>
+</span><span>        L.next = L.next.next
+</span><span>
+</span><span>        </span><span style=color:#b48ead;>return </span><span>dummy.next
+</span></code></pre><h3 id=0021-merge-two-sorted-lists>0021: Merge Two Sorted Lists</h3><pre class=language-python data-lang=python style=background-color:#2b303b;color:#c0c5ce;><code class=language-python data-lang=python><span style=color:#65737e;># Definition for singly-linked list.
+</span><span style=color:#65737e;># class ListNode:
+</span><span style=color:#65737e;>#     def __init__(self, val=0, next=None):
+</span><span style=color:#65737e;>#         self.val = val
+</span><span style=color:#65737e;>#         self.next = next
+</span><span style=color:#b48ead;>class </span><span style=color:#ebcb8b;>Solution</span><span style=color:#eff1f5;>:
+</span><span>    </span><span style=color:#b48ead;>def </span><span style=color:#8fa1b3;>mergeTwoLists</span><span>(</span><span style=color:#bf616a;>self</span><span>, </span><span style=color:#bf616a;>list1</span><span>: Optional[ListNode], </span><span style=color:#bf616a;>list2</span><span>: Optional[ListNode]) -> Optional[ListNode]:
+</span><span>        dummy = </span><span style=color:#bf616a;>ListNode</span><span>()
+</span><span>        p = dummy
+</span><span>        p1 = list1
+</span><span>        p2 = list2
+</span><span>
+</span><span>        </span><span style=color:#b48ead;>while </span><span>p1 is not </span><span style=color:#d08770;>None </span><span>and p2 is not </span><span style=color:#d08770;>None</span><span>:
+</span><span>            </span><span style=color:#b48ead;>if </span><span>p1.val < p2.val:
+</span><span>                p.next = p1
+</span><span>                p1 = p1.next
+</span><span>            </span><span style=color:#b48ead;>elif </span><span>p1.val > p2.val:
+</span><span>                p.next = p2
+</span><span>                p2 = p2.next
+</span><span>
+</span><span>            p = p.next
+</span><span>
+</span><span>        </span><span style=color:#b48ead;>if </span><span>p1 is not </span><span style=color:#d08770;>None</span><span>:
+</span><span>            p.next = p1
+</span><span>        </span><span style=color:#b48ead;>elif </span><span>p2 is not </span><span style=color:#d08770;>None</span><span>:
+</span><span>            p.next = p2
+</span><span>
+</span><span>        </span><span style=color:#b48ead;>return </span><span>dummy.next
 </span></code></pre><h3 id=0023-merge-k-sorted-linked-list>0023: Merge K Sorted Linked List</h3><pre class=language-java data-lang=java style=background-color:#2b303b;color:#c0c5ce;><code class=language-java data-lang=java><span style=color:#65737e;>/**
 </span><span style=color:#65737e;> * Definition for singly-linked list.
 </span><span style=color:#65737e;> * public class ListNode {
@@ -48,10 +89,10 @@
 </span><span style=color:#65737e;> */
 </span><span style=color:#65737e;>class Solution {
 </span><span style=color:#65737e;>    public ListNode mergeKLists(ListNode[] lists) {
-</span><span style=color:#65737e;>    	// No more checking when there's no elements at all
+</span><span style=color:#65737e;>     // No more checking when there's no elements at all
 </span><span style=color:#65737e;>        int ln = lists.length;
 </span><span style=color:#65737e;>        if (ln == 0) {
-</span><span style=color:#65737e;>        	return null;
+</span><span style=color:#65737e;>         return null;
 </span><span style=color:#65737e;>        }
 </span><span style=color:#65737e;>
 </span><span style=color:#65737e;>        // Temporary variables for comparison and be as pointers
@@ -59,9 +100,9 @@
 </span><span style=color:#65737e;>        ListNode p     = dummy;
 </span><span style=color:#65737e;>
 </span><span style=color:#65737e;>        // Make the comparsion (non-order -> sorted by ASC)
-</span><span style=color:#65737e;>        // 	Do notice that PriorityQueue now is also a Linked List,
-</span><span style=color:#65737e;>        // 	therefore it would have methods like `.next` and needs
-</span><span style=color:#65737e;>        //	it to traverse them.	
+</span><span style=color:#65737e;>        //  Do notice that PriorityQueue now is also a Linked List,
+</span><span style=color:#65737e;>        //  therefore it would have methods like `.next` and needs
+</span><span style=color:#65737e;>        // it to traverse them.
 </span><span style=color:#65737e;>        PriorityQueue<</span><span style=color:#bf616a;>ListNode</span><span style=color:#65737e;>> pq = new PriorityQueue</span><span style=background-color:#bf616a;color:#2b303b;><></span><span style=color:#65737e;>(
 </span><span style=color:#65737e;>            ln,
 </span><span style=color:#65737e;>            (a, b) -> (a.val - b.val)
@@ -75,7 +116,7 @@
 </span><span style=color:#65737e;>        }
 </span><span style=color:#65737e;>
 </span><span style=color:#65737e;>        while (!pq.isEmpty()) {
-</span><span style=color:#65737e;>        	// Get the smallest while removing itself
+</span><span style=color:#65737e;>         // Get the smallest while removing itself
 </span><span style=color:#65737e;>            ListNode n = pq.poll();
 </span><span style=color:#65737e;>            p.next     = n;
 </span><span style=color:#65737e;>
@@ -111,8 +152,69 @@
 </span><span>                count[letter_indices] += </span><span style=color:#d08770;>1
 </span><span>
 </span><span>            ans[</span><span style=color:#bf616a;>tuple</span><span>(count)].</span><span style=color:#bf616a;>append</span><span>(word)
-</span><span>    
-</span><span>        </span><span style=color:#b48ead;>return </span><span style=color:#bf616a;>list</span><span>(ans.</span><span style=color:#bf616a;>values</span><span>())        
+</span><span>
+</span><span>        </span><span style=color:#b48ead;>return </span><span style=color:#bf616a;>list</span><span>(ans.</span><span style=color:#bf616a;>values</span><span>())
+</span></code></pre><h3 id=0070-climbing-stairs>0070: Climbing Stairs</h3><pre class=language-python data-lang=python style=background-color:#2b303b;color:#c0c5ce;><code class=language-python data-lang=python><span style=color:#b48ead;>class </span><span style=color:#ebcb8b;>Solution</span><span style=color:#eff1f5;>:
+</span><span>    </span><span style=color:#b48ead;>def </span><span style=color:#8fa1b3;>climbStairs</span><span>(</span><span style=color:#bf616a;>self</span><span>, </span><span style=color:#bf616a;>n</span><span>: int) -> int:
+</span><span>        </span><span style=color:#b48ead;>if </span><span>n <= </span><span style=color:#d08770;>3</span><span>:
+</span><span>            </span><span style=color:#b48ead;>return </span><span>n
+</span><span>
+</span><span>        first, second = </span><span style=color:#d08770;>2</span><span>, </span><span style=color:#d08770;>3
+</span><span>
+</span><span>        </span><span style=color:#b48ead;>for </span><span>i </span><span style=color:#b48ead;>in </span><span style=color:#96b5b4;>range</span><span>(</span><span style=color:#d08770;>4</span><span>, n+</span><span style=color:#d08770;>1</span><span>):
+</span><span>            _sum = first + second
+</span><span>
+</span><span>            first = second
+</span><span>            second = _sum
+</span><span>
+</span><span>        </span><span style=color:#b48ead;>return </span><span>second
+</span></code></pre><h3 id=0125-valid-palindrome>0125: Valid Palindrome</h3><pre class=language-java data-lang=java style=background-color:#2b303b;color:#c0c5ce;><code class=language-java data-lang=java><span style=color:#b48ead;>class </span><span style=color:#ebcb8b;>Solution </span><span style=color:#eff1f5;>{
+</span><span style=color:#eff1f5;>    </span><span style=color:#b48ead;>public boolean </span><span style=color:#8fa1b3;>isPalindrome</span><span style=color:#eff1f5;>(</span><span style=color:#ebcb8b;>String </span><span style=color:#bf616a;>s</span><span style=color:#eff1f5;>) {
+</span><span style=color:#eff1f5;>        </span><span style=color:#b48ead;>int</span><span style=color:#eff1f5;> i </span><span>= </span><span style=color:#d08770;>0</span><span style=color:#eff1f5;>;
+</span><span style=color:#eff1f5;>        </span><span style=color:#b48ead;>int</span><span style=color:#eff1f5;> j </span><span>=</span><span style=color:#eff1f5;> s.</span><span style=color:#bf616a;>length</span><span style=color:#eff1f5;>() </span><span>- </span><span style=color:#d08770;>1</span><span style=color:#eff1f5;>;
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>        </span><span style=color:#b48ead;>while </span><span style=color:#eff1f5;>(i </span><span><</span><span style=color:#eff1f5;> j) {
+</span><span style=color:#eff1f5;>            </span><span style=color:#ebcb8b;>Character</span><span style=color:#eff1f5;> start </span><span>=</span><span style=color:#eff1f5;> s.</span><span style=color:#bf616a;>charAt</span><span style=color:#eff1f5;>(i);
+</span><span style=color:#eff1f5;>            </span><span style=color:#ebcb8b;>Character</span><span style=color:#eff1f5;> end   </span><span>=</span><span style=color:#eff1f5;> s.</span><span style=color:#bf616a;>charAt</span><span style=color:#eff1f5;>(j);
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>            </span><span style=color:#b48ead;>if </span><span style=color:#eff1f5;>(</span><span>!</span><span style=color:#ebcb8b;>Character</span><span style=color:#eff1f5;>.</span><span style=color:#bf616a;>isLetterOrDigit</span><span style=color:#eff1f5;>(start)) {
+</span><span style=color:#eff1f5;>                i</span><span>++</span><span style=color:#eff1f5;>;
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>                </span><span style=color:#b48ead;>continue</span><span style=color:#eff1f5;>;
+</span><span style=color:#eff1f5;>            }
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>            </span><span style=color:#b48ead;>if </span><span style=color:#eff1f5;>(</span><span>!</span><span style=color:#ebcb8b;>Character</span><span style=color:#eff1f5;>.</span><span style=color:#bf616a;>isLetterOrDigit</span><span style=color:#eff1f5;>(start)) {
+</span><span style=color:#eff1f5;>                j</span><span>--</span><span style=color:#eff1f5;>;
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>                </span><span style=color:#b48ead;>continue</span><span style=color:#eff1f5;>;
+</span><span style=color:#eff1f5;>            }
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>            </span><span style=color:#b48ead;>if </span><span style=color:#eff1f5;>(</span><span style=color:#ebcb8b;>Character</span><span style=color:#eff1f5;>.</span><span style=color:#bf616a;>toLowerCase</span><span style=color:#eff1f5;>(start) </span><span>!= </span><span style=color:#ebcb8b;>Character</span><span style=color:#eff1f5;>.</span><span style=color:#bf616a;>toLowerCase</span><span style=color:#eff1f5;>(end)) {
+</span><span style=color:#eff1f5;>                </span><span style=color:#b48ead;>return </span><span style=color:#d08770;>false</span><span style=color:#eff1f5;>;
+</span><span style=color:#eff1f5;>            }
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>            i</span><span>++</span><span style=color:#eff1f5;>;
+</span><span style=color:#eff1f5;>            j</span><span>--</span><span style=color:#eff1f5;>;
+</span><span style=color:#eff1f5;>        }
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>        </span><span style=color:#b48ead;>return </span><span style=color:#d08770;>false</span><span style=color:#eff1f5;>;
+</span><span style=color:#eff1f5;>    }
+</span><span style=color:#eff1f5;>}
+</span></code></pre><h3 id=0128-longest-consecutive-sequence>0128: Longest Consecutive Sequence</h3><pre class=language-python data-lang=python style=background-color:#2b303b;color:#c0c5ce;><code class=language-python data-lang=python><span style=color:#b48ead;>class </span><span style=color:#ebcb8b;>Solution</span><span style=color:#eff1f5;>:
+</span><span>    </span><span style=color:#b48ead;>def </span><span style=color:#8fa1b3;>longestConsecutive</span><span>(</span><span style=color:#bf616a;>self</span><span>, </span><span style=color:#bf616a;>nums</span><span>: List[int]) -> int:
+</span><span>        seq_no_dups = </span><span style=color:#bf616a;>set</span><span>(nums)
+</span><span>        len_longest = </span><span style=color:#d08770;>0
+</span><span>
+</span><span>        </span><span style=color:#b48ead;>for </span><span>elem </span><span style=color:#b48ead;>in </span><span>seq_no_dups:
+</span><span>
+</span><span>            </span><span style=color:#65737e;># Find the start for a sequence then go (incr) from there
+</span><span>            </span><span style=color:#b48ead;>if </span><span>(elem + </span><span style=color:#d08770;>1</span><span>) not in seq_no_dups:
+</span><span>                len_sub_seq = </span><span style=color:#d08770;>1
+</span><span>
+</span><span>                </span><span style=color:#b48ead;>while </span><span>(elem + len_sub_seq) in seq_no_dups:
+</span><span>                    len_sub_seq += </span><span style=color:#d08770;>1
+</span><span>
+</span><span>        </span><span style=color:#b48ead;>return </span><span>len_longest
 </span></code></pre><h3 id=0141-linked-list-cycle>0141: Linked List Cycle</h3><pre class=language-java data-lang=java style=background-color:#2b303b;color:#c0c5ce;><code class=language-java data-lang=java><span style=color:#65737e;>/**
 </span><span style=color:#65737e;> * Definition for singly-linked list.
 </span><span style=color:#65737e;> * class ListNode {
@@ -146,7 +248,7 @@
 </span><span style=color:#65737e;>        return false;
 </span><span style=color:#65737e;>    }
 </span><span style=color:#65737e;>}
-</span></code></pre><h3 id=217-contains-duplicates>217: Contains Duplicates</h3><pre class=language-java data-lang=java style=background-color:#2b303b;color:#c0c5ce;><code class=language-java data-lang=java><span style=color:#b48ead;>class </span><span style=color:#ebcb8b;>Solution </span><span style=color:#eff1f5;>{
+</span></code></pre><h3 id=0217-contains-duplicate>0217: Contains Duplicate</h3><pre class=language-java data-lang=java style=background-color:#2b303b;color:#c0c5ce;><code class=language-java data-lang=java><span style=color:#b48ead;>class </span><span style=color:#ebcb8b;>Solution </span><span style=color:#eff1f5;>{
 </span><span style=color:#eff1f5;>    </span><span style=color:#b48ead;>public boolean </span><span style=color:#8fa1b3;>containsDuplicate</span><span style=color:#eff1f5;>(</span><span style=color:#b48ead;>int[] </span><span style=color:#bf616a;>nums</span><span style=color:#eff1f5;>) {
 </span><span style=color:#eff1f5;>        </span><span style=color:#65737e;>// Just like the set() you use in Python. 'Set()' is just the
 </span><span style=color:#eff1f5;>        </span><span style=color:#65737e;>// name of the interface.
@@ -166,7 +268,30 @@
 </span><span style=color:#eff1f5;>        </span><span style=color:#b48ead;>return </span><span style=color:#d08770;>false</span><span style=color:#eff1f5;>;
 </span><span style=color:#eff1f5;>    }
 </span><span style=color:#eff1f5;>}
-</span></code></pre><h3 id=242-valid-anagrams>242. Valid Anagrams</h3><pre class=language-java data-lang=java style=background-color:#2b303b;color:#c0c5ce;><code class=language-java data-lang=java><span style=color:#b48ead;>class </span><span style=color:#ebcb8b;>Solution </span><span style=color:#eff1f5;>{
+</span></code></pre><h3 id=0238-product-of-array-except-self>0238. Product of Array Except Self</h3><pre class=language-python data-lang=python style=background-color:#2b303b;color:#c0c5ce;><code class=language-python data-lang=python><span style=color:#b48ead;>class </span><span style=color:#ebcb8b;>Solution</span><span style=color:#eff1f5;>:
+</span><span>    </span><span style=color:#b48ead;>def </span><span style=color:#8fa1b3;>productExceptSelf</span><span>(</span><span style=color:#bf616a;>self</span><span>, </span><span style=color:#bf616a;>nums</span><span>: List[int]) -> List[int]:
+</span><span>        </span><span style=color:#65737e;>"""
+</span><span style=color:#65737e;>        Though I was able to solve (more like remembering the solution) this
+</span><span style=color:#65737e;>        problem, the whole logic is still not straightforward enough for me
+</span><span style=color:#65737e;>        even though I did a few walk-through using pen and paper. More clearer
+</span><span style=color:#65737e;>        procedures for this problem would be added later (for myself).
+</span><span style=color:#65737e;>        """
+</span><span>
+</span><span>        seq_len = </span><span style=color:#96b5b4;>len</span><span>(nums)
+</span><span>        res = [</span><span style=color:#d08770;>1</span><span>] * (seq_len)
+</span><span>
+</span><span>        prefix = </span><span style=color:#d08770;>1
+</span><span>        </span><span style=color:#b48ead;>for </span><span>i </span><span style=color:#b48ead;>in </span><span style=color:#96b5b4;>range</span><span>(</span><span style=color:#d08770;>0</span><span>, seq_len, </span><span style=color:#d08770;>1</span><span>):
+</span><span>            res[i] = prefix
+</span><span>            prefix *= nums[i]
+</span><span>
+</span><span>        postfix = </span><span style=color:#d08770;>1
+</span><span>        </span><span style=color:#b48ead;>for </span><span>i </span><span style=color:#b48ead;>in </span><span style=color:#96b5b4;>range</span><span>(seq_len - </span><span style=color:#d08770;>1</span><span>, -</span><span style=color:#d08770;>1</span><span>, -</span><span style=color:#d08770;>1</span><span>):
+</span><span>            res[i] *= postfix
+</span><span>            postfix *= nums[i]
+</span><span>
+</span><span>        </span><span style=color:#b48ead;>return </span><span>res
+</span></code></pre><h3 id=0242-valid-anagrams>0242. Valid Anagrams</h3><pre class=language-java data-lang=java style=background-color:#2b303b;color:#c0c5ce;><code class=language-java data-lang=java><span style=color:#b48ead;>class </span><span style=color:#ebcb8b;>Solution </span><span style=color:#eff1f5;>{
 </span><span style=color:#eff1f5;>    </span><span style=color:#b48ead;>public boolean </span><span style=color:#8fa1b3;>isAnagram</span><span style=color:#eff1f5;>(</span><span style=color:#ebcb8b;>String </span><span style=color:#bf616a;>s</span><span style=color:#eff1f5;>, </span><span style=color:#ebcb8b;>String </span><span style=color:#bf616a;>t</span><span style=color:#eff1f5;>) {
 </span><span style=color:#eff1f5;>        </span><span style=color:#b48ead;>if </span><span style=color:#eff1f5;>(s.</span><span style=color:#bf616a;>length</span><span style=color:#eff1f5;>() </span><span>!=</span><span style=color:#eff1f5;> t.</span><span style=color:#bf616a;>length</span><span style=color:#eff1f5;>()) {
 </span><span style=color:#eff1f5;>            </span><span style=color:#b48ead;>return </span><span style=color:#d08770;>false</span><span style=color:#eff1f5;>;
@@ -178,7 +303,7 @@
 </span><span style=color:#eff1f5;>            </span><span style=color:#65737e;>// To minus lowercase 'a' is to get the ranking of the
 </span><span style=color:#eff1f5;>            </span><span style=color:#65737e;>// letters. For example, you would get 0 for character
 </span><span style=color:#eff1f5;>            </span><span style=color:#65737e;>// 'a' and 25 for character 'z' which is exactly what
-</span><span style=color:#eff1f5;>            </span><span style=color:#65737e;>// we want. 
+</span><span style=color:#eff1f5;>            </span><span style=color:#65737e;>// we want.
 </span><span style=color:#eff1f5;>            </span><span style=color:#b48ead;>int</span><span style=color:#eff1f5;> s_substract </span><span>=</span><span style=color:#eff1f5;> s.</span><span style=color:#bf616a;>charAt</span><span style=color:#eff1f5;>(idx) </span><span>- '</span><span style=color:#a3be8c;>a</span><span>'</span><span style=color:#eff1f5;>;
 </span><span style=color:#eff1f5;>            </span><span style=color:#b48ead;>int</span><span style=color:#eff1f5;> t_substract </span><span>=</span><span style=color:#eff1f5;> t.</span><span style=color:#bf616a;>charAt</span><span style=color:#eff1f5;>(idx) </span><span>- '</span><span style=color:#a3be8c;>a</span><span>'</span><span style=color:#eff1f5;>;
 </span><span style=color:#eff1f5;>
