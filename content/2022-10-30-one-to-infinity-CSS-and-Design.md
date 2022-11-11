@@ -127,3 +127,25 @@ BootStrap is still amazing (so I heard) though.
 5. [CSS Variable > Theme Switch](https://codepen.io/techmale/pen/rNKeKdp)
 6. [CSS Variable > Color Preview](https://codepen.io/techmale/pen/OJENwBO)
 7. [CSS Layout > Music Player](https://codepen.io/techmale/pen/eYKzGPG)
+8. Random snippet from my React project <small>(with *TailwindCSS*)</small>
+
+    > Display all the images in the same size ()
+
+    ```css
+    <motion.div
+        whileHover={{ scale: 1.2 }}
+        className="w-40 h-40 -mt-8 drop-shadow-2xl"
+      >
+      <img
+        whileHover={{ scale: 1.07 }}
+        src={item?.imageURL}
+        alt="Random"
+
+        /**
+          object-contain    crop while retain all the details
+          object-cover      crop while might crop out details (pleasing to me)
+        */
+        className="w-full h-full object-contain"
+      />
+    </motion.div>
+    ```
