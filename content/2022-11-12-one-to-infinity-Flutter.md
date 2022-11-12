@@ -34,6 +34,7 @@ description = "Notes for my learning journey to Flutter"
 
 - You need the `google_sign_in: ^5.4.1` to help you with the sign-in
 - You need create different OAuth thing for iOS and Android
+- The configurations down below were based on [this](https://youtu.be/W6vAQdzLcu4) and [that](https://pub.dev/packages/google_sign_in)
 
 #### Configure Android
 
@@ -61,6 +62,54 @@ description = "Notes for my learning journey to Flutter"
         ..
         multiDexEnabled true
     }
+    ```
+
+#### Configure iOS
+
+> Google Cloud -> Your Project -> Credentials -> OAuth Client ID
+
+1. Choose iOS
+2. Add *Flutter GoogleDoc iOS*
+3. Add *com.example.projectFlutterCloneGoogledoc* via `cat Runner.xcodeproj/project.pbxproj | grep -i com.example.project`
+4. Click *DOWNLOAD PLIST*
+5. Add the JSON file to our project
+
+    ```bash
+    cp -fv YOUR_DOWNLOADED_PLIST.plist ios/Runner/GoogleService-Info.plist
+    ```
+
+6. Use XCode to do further configuration
+
+    - Import
+        1. Right-click *Runner* then click *Add Files to "Runner"*
+        2. Choose the `.plist` file you just downloaded then click *Add*
+    - Edit
+        1. Open `ios/Runner/Info.plist`
+        2. Add this right before the closing tag `</dict> </plist>`
+
+            ```plist
+            <!-- Put me in the [my_project]/ios/Runner/Info.plist file -->
+            <!-- Google Sign-in Section -->
+            <key>CFBundleURLTypes</key>
+            <array>
+                <dict>
+                    <key>CFBundleTypeRole</key>
+                    <string>Editor</string>
+                    <key>CFBundleURLSchemes</key>
+                    <array>
+                        <!-- Copied from GoogleService-Info.plist key REVERSED_CLIENT_ID -->
+                        <string>com.googleusercontent.apps.1059384709185-uh00t0bn6389fc6fh2ejec30oeh8kqc2</string>
+                    </array>
+                </dict>
+            </array>
+            <!-- End of the Google Sign-in Section -->
+            ```
+
+7. Edit `Podfile`
+
+    ```ruby
+    # Uncomment and edit
+    platform :ios, '11.0'
     ```
 
 ## Note to Self
