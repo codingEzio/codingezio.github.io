@@ -1,0 +1,18 @@
+<!doctype html><html lang=en><head><meta charset=UTF-8><meta content="width=device-width,initial-scale=1.0" name=viewport><title>Issue : Unable to Downgrade Flutter Properly · A simple blog</title><meta content="As of November 2022, it's really hard to downgrade from 3 to 2" name=description><link rel="shortcut icon" href=https://codingezio.github.io/favicon.ico><link href=https://codingezio.github.io/atom.xml rel=alternate title=RSS type=application/atom+xml><style>html,body{background:#fffaf7;color:#2d2d2d;font:16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"}a,a:visited{color:darkred;text-decoration:none}a:hover{text-decoration:underline}main{margin:auto;max-width:38rem;padding:0.8rem}pre{background:white;overflow:scroll;padding:1rem}td{border:1px solid #2d2d2d;padding:10px}img{height:auto;max-width:100%}.homepage-list{list-style:none;padding:1rem 0}.homepage-list li{align-items:center;display:flex;flex-wrap:wrap;justify-content:space-between;margin-bottom:10px}@media (max-width: 38rem){.homepage-list li a{width:100%}}</style><meta content="A simple blog" property=og:site_name><meta content="Issue : Unable to Downgrade Flutter Properly" property=og:title><meta content="As of November 2022, it's really hard to downgrade from 3 to 2" property=og:description><meta content=https://codingezio.github.io/issue-downgrade-flutter/ property=og:url><meta property=og:image><meta content=article property=og:type><meta content=2022-11-12T00:00:00+00:00 property=article:published_time><body><main id=main role=main><header role=banner><h3 style=margin-top:0;><a href=https://codingezio.github.io title=Home>A simple blog</a> <br><small>Rants and thoughts</small></h3></header><hr><article><h1>Issue : Unable to Downgrade Flutter Properly</h1><p style=font-size:90%;>Posted on <time datetime=2022-11-12T00:00:00+00:00>November 12, 2022</time><blockquote><p>Of course, this essay assumes you already have a Flutter 3 installed on your machine</blockquote><h3 id=steps>Steps</h3><blockquote><p>Reference to <a href="https://www.youtube.com/watch?v=icY9x4qsFeY">Downgrade Flutter 3.0 to 2.10</a></blockquote><pre class=language-bash data-lang=bash style=background-color:#2b303b;color:#c0c5ce;><code class=language-bash data-lang=bash><span style=color:#65737e;># The printed result were all based on my own machine (not universal!)
+</span><span>
+</span><span>
+</span><span style=color:#bf616a;>ls -Al </span><span>$(</span><span style=color:#bf616a;>which</span><span> flutter)
+</span><span style=color:#65737e;># /usr/local/bin/flutter -> /usr/local/Caskroom/flutter/3.0.1/flutter/bin/flutter
+</span><span>
+</span><span style=color:#96b5b4;>cd</span><span> /usr/local/Caskroom/flutter/3.0.1/flutter/
+</span><span>
+</span><span style=color:#65737e;># Latest Flutter 2
+</span><span style=color:#65737e;># https://github.com/flutter/flutter/releases/tag/2.10.5
+</span><span>
+</span><span style=color:#bf616a;>git</span><span> checkout 2.10.5
+</span><span>
+</span><span style=color:#65737e;># Rebuild
+</span><span>
+</span><span style=color:#bf616a;>flutter</span><span> doctor
+</span><span style=color:#bf616a;>flutter --version
+</span></code></pre></article><footer role=contentinfo><hr><small>Built with <a href=https://www.getzola.org/>Zola</a>.<br> </small></footer></main>
