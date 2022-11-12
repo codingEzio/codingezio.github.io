@@ -19,6 +19,8 @@ description = "Notes for my learning journey to Flutter"
 1. Click *Credentials*
 2. Click *CREATE CREDENTIALS* then *OAuth client ID*
 
+### Configuration
+
 #### Configure OAuth consent screen
 
 1. Choose *External*
@@ -139,6 +141,17 @@ description = "Notes for my learning journey to Flutter"
 
     > Copy the OAuth ID from your Google Cloud then replace the value in the `content="XXXX"`
 
+### Integration
+
+> Run the project using `flutter run -d chrome --web-port 3000` from [here](https://pub.dev/packages/google_sign_in_web)
+
 ## Note to Self
 
 1. Re-run after making changes to `pubspec.yaml`, hot-reload has limitations
+2. Quite difficult to upgrade the *Dart* installed with *Flutter*
+
+    > Firstly, I gotta use the older Flutter 2 in the way of the `git checkout 2.10.5` hack. All the tutorials online to upgrade *Dart* would require doing something like `flutter upgrade` which defeats the purpose of retaining an older version of Flutter.
+    >
+    > At the moment, it wasn't easy (you could edit system path to let the editor/IDE know that you have a newer version of *Dart* installed, but it is a **hack** still).
+    >
+    > Eventually, I chose a *safe and elegant* way to get the dependency that is compatible with the current version of *Dart*, which is simply using the *Dart* command in VS Code `Dart: Add Dependency`.
