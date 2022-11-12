@@ -112,6 +112,33 @@ description = "Notes for my learning journey to Flutter"
     platform :ios, '11.0'
     ```
 
+#### Configure Web
+
+> Google Cloud -> Your Project -> Credentials -> OAuth Client ID
+
+1. Choose Web application
+2. Add *Flutter GoogleDoc Web*
+3. Click *Authorized JavaScript origins*
+4. Click *ADD URI* then add `http://localhost:3000`
+5. Click *DOWNLOAD JSON*
+6. Open documentation for [google_sign_in_web 0.10.2](https://pub.dev/packages/google_sign_in_web)
+7. Copy the code under *Web integration* to your `web/index.html`
+
+    ```html
+    ..
+
+    <meta
+      name="google-signin-client_id"
+      content="YOUR_GOOGLE_SIGN_IN_OAUTH_CLIENT_ID.apps.googleusercontent.com"
+    />
+
+    ..
+    ```
+
+8. Edit the `web/index.html` again
+
+    > Copy the OAuth ID from your Google Cloud then replace the value in the `content="XXXX"`
+
 ## Note to Self
 
 1. Re-run after making changes to `pubspec.yaml`, hot-reload has limitations

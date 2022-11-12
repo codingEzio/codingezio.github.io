@@ -25,4 +25,12 @@
 </span><span>&LT!-- End of the Google Sign-in Section -->
 </span></code></pre></ol></ul><li><p>Edit <code>Podfile</code></p> <pre class=language-ruby data-lang=ruby style=background-color:#2b303b;color:#c0c5ce;><code class=language-ruby data-lang=ruby><span style=color:#65737e;># Uncomment and edit
 </span><span>platform </span><span style=color:#a3be8c;>:ios</span><span>, '</span><span style=color:#a3be8c;>11.0</span><span>'
-</span></code></pre></ol><h2 id=note-to-self>Note to Self</h2><ol><li>Re-run after making changes to <code>pubspec.yaml</code>, hot-reload has limitations</ol></article><footer role=contentinfo><hr><small>Built with <a href=https://www.getzola.org/>Zola</a>.<br> </small></footer></main>
+</span></code></pre></ol><h4 id=configure-web>Configure Web</h4><blockquote><p>Google Cloud -> Your Project -> Credentials -> OAuth Client ID</blockquote><ol><li><p>Choose Web application</p><li><p>Add <em>Flutter GoogleDoc Web</em></p><li><p>Click <em>Authorized JavaScript origins</em></p><li><p>Click <em>ADD URI</em> then add <code>http://localhost:3000</code></p><li><p>Click <em>DOWNLOAD JSON</em></p><li><p>Open documentation for <a href=https://pub.dev/packages/google_sign_in_web>google_sign_in_web 0.10.2</a></p><li><p>Copy the code under <em>Web integration</em> to your <code>web/index.html</code></p> <pre class=language-html data-lang=html style=background-color:#2b303b;color:#c0c5ce;><code class=language-html data-lang=html><span>..
+</span><span>
+</span><span><</span><span style=color:#bf616a;>meta
+</span><span>  </span><span style=color:#d08770;>name</span><span>="</span><span style=color:#a3be8c;>google-signin-client_id</span><span>"
+</span><span>  </span><span style=color:#d08770;>content</span><span>="</span><span style=color:#a3be8c;>YOUR_GOOGLE_SIGN_IN_OAUTH_CLIENT_ID.apps.googleusercontent.com</span><span>"
+</span><span>/>
+</span><span>
+</span><span>..
+</span></code></pre><li><p>Edit the <code>web/index.html</code> again</p> <blockquote><p>Copy the OAuth ID from your Google Cloud then replace the value in the <code>content="XXXX"</code></blockquote></ol><h2 id=note-to-self>Note to Self</h2><ol><li>Re-run after making changes to <code>pubspec.yaml</code>, hot-reload has limitations</ol></article><footer role=contentinfo><hr><small>Built with <a href=https://www.getzola.org/>Zola</a>.<br> </small></footer></main>
