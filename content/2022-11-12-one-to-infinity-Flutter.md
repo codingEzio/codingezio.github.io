@@ -145,6 +145,57 @@ description = "Notes for my learning journey to Flutter"
 
 > Run the project using `flutter run -d chrome --web-port 3000` from [here](https://pub.dev/packages/google_sign_in_web)
 
+- Code to invoke the authentication API (#TODO detailed note needed)
+
+## Database Backend
+
+### MongoDB
+
+#### Create
+
+> We'll use the one on the [cloud](https://account.mongodb.com/account/login)
+
+1. Click top-left *New Project*
+2. Edit name *Project Flutter GoogleDoc Clone*
+3. Click *Build a Database* -> *Shared*
+4. Choose *Cloud Provider & Region*
+    > For me, it's `Taiwan (asia-east1)`
+5. Setup
+    - *How would you like to authenticate your connection?*
+        > *Username and Password*
+
+    - *Where would you like to connect from?*
+        > *My Local Environment* -> *Add entries to your IP Access List* -> `0.0.0.0`
+
+#### Connect
+
+> Choose the one that suits your need of course
+
+1. Click *Connect*
+2. Click *Connect your application*
+3. Select *Node.js* and *4.1 or later*
+4. Copy the connection string down below (started with `mongodb+srv://`)
+5. Now it just depends on what clients you are using
+
+    ```javascript
+    // If you are using Mongoose
+
+    // Run `yarn add dotenv`
+    require('dotenv').config();
+
+    // Add the password to a local file named .env
+    // e.g. DB_MONGODB_PASSWORD="YOUR_PASSWORD"
+
+    mongoose
+        .connect(`mongodb+srv:// .. ${process.env.DB_MONGODB_PASSWORD} .. `)
+        .then(() => {
+            console.log('Connected to MongoDB on the cloud');
+        })
+        .catch(err => {
+            console.warn(err);
+        });
+    ```
+
 ## Note to Self
 
 1. Re-run after making changes to `pubspec.yaml`, hot-reload has limitations
