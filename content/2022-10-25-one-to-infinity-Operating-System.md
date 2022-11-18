@@ -134,8 +134,6 @@ description = "Understanding the Underlying Mechanism"
 
 > References: [\#1](https://www.youtube.com/watch?v=Z7iHodl1jsM), [\#2](https://www.scaler.com/topics/operating-system/deadlock-prevention-in-operating-system/)
 >
-> ![](https://s1.ax1x.com/2022/11/18/zui02Q.jpg)
->
 > <img src="https://s1.ax1x.com/2022/11/18/zui02Q.jpg" alt="Illustration of Deadlock" width="370px" height="auto" />
 
 - 条件
