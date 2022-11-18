@@ -3,6 +3,20 @@ title = "On CSS, Layout and Design"
 description = "Notes on learning CSS to build amazing things"
 +++
 
+## Resources
+
+> Read, practice and write blog about it!
+
+- Book
+  - [CSS Mine: Dig into Web UI Development](https://cssmine.com/ebook/intro)
+- Reference
+  - [Dribble](https://dribbble.com/shots/popular)
+  - [CSS Reference](https://tympanus.net/codrops/css_reference/)
+- Tutorial
+  - [A Complete Guide to CSS Grid | CSS-Tricks - CSS-Tricks](https://css-tricks.com/snippets/css/complete-guide-grid/)
+  - [A Complete Guide to Flexbox | CSS-Tricks - CSS-Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+  - [A Complete Guide to CSS Concepts and Fundamentals](https://www.taniarascia.com/overview-of-css-concepts/)
+
 ## Thoughts
 
 #### Foreword
