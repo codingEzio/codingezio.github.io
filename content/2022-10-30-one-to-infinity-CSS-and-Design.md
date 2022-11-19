@@ -16,6 +16,13 @@ description = "Notes on learning CSS to build amazing things"
   - [A Complete Guide to CSS Grid | CSS-Tricks - CSS-Tricks](https://css-tricks.com/snippets/css/complete-guide-grid/)
   - [A Complete Guide to Flexbox | CSS-Tricks - CSS-Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
   - [A Complete Guide to CSS Concepts and Fundamentals](https://www.taniarascia.com/overview-of-css-concepts/)
+- Examples to learn from
+  - [Flexbox Patterns - Intro](https://flexboxpatterns.com/)
+  - [CSS Code Examples](https://freefrontend.com/css-code-examples/#sitemap-layouts)
+  - [JavaScript Code Examples](https://freefrontend.com/javascript-code-examples/)
+- Snippets to use
+  - [A collection of popular layouts and patterns made with CSS - CSS Layout](https://csslayout.io/)
+  - [Free Open Source Tailwind CSS Components | HyperUI](https://www.hyperui.dev/)
 
 ## Thoughts
 
