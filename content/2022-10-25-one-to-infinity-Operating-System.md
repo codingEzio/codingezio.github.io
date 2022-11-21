@@ -26,7 +26,7 @@ description = "Understanding the Underlying Mechanism"
 
 ## Content
 
-> 祖参考资源: [操作系统面试题八股文](https://tobebetterjavaer.com/sidebar/sanfene/os.html)
+> 祖参考资源: [操作系统 必看](https://tobebetterjavaer.com/sidebar/sanfene/os.html)
 >
 > 参考资料中的井字数序确有意义，若有兴趣可按顺序读下来
 
@@ -192,7 +192,7 @@ description = "Understanding the Underlying Mechanism"
 
 #### I/O 零拷贝 (ZeroCopy)
 
-> References: [\#1](https://old.reddit.com/r/learnprogramming/comments/3t1znc/eli5_why_mmap_is_faster_than_read/), [\#2](https://old.reddit.com/r/programming/comments/je3av8/why_mmap_is_faster_than_system_calls/), [\#3](https://stocktonsols.com/article/sendfile-system-call) || [\#99 <small>(未采用)</small>](https://blog.devgenius.io/linux-zero-copy-d61d712813fe)
+> References: [\#1](https://old.reddit.com/r/learnprogramming/comments/3t1znc/eli5_why_mmap_is_faster_than_read/), [\#2](https://old.reddit.com/r/programming/comments/je3av8/why_mmap_is_faster_than_system_calls/), [\#3](https://stocktonsols.com/article/sendfile-system-call) || <small>(后列皆未采)</small> [\#4](https://blog.devgenius.io/linux-zero-copy-d61d712813fe)
 
 - 提高性能 需减异态切和内存拷贝次
 - MmAp 文于内存 将其内址映至进程 少写
