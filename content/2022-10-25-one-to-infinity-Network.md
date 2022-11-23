@@ -30,7 +30,7 @@ description = "On Network in Computer Science"
 
 ### 抽象与实现 Model and Implementation
 
-> References [\#1](https://stackoverflow.com/a/9329173/6273859), [\#2](https://stackoverflow.com/a/49233604/6273859), [\#3](https://networkengineering.stackexchange.com/a/68467/86378), [\#4](https://networkengineering.stackexchange.com/a/67557/86378), [\#5](https://serverfault.com/a/10248/978709), [\#6](http://www.geeknxt.com/network-layers/), [\#7](https://en.wikipedia.org/wiki/Fiber_Distributed_Data_Interface) || <small>(后列皆未采)</small> [\#8](https://security.stackexchange.com/a/258825), [\#9](https://networkengineering.stackexchange.com/a/76220/86378), [\#10](https://stackoverflow.com/a/32294152/6273859), [\#11](https://www.ibm.com/docs/en/zos-basic-skills?topic=layer-address-resolution-protocol-arp), [\#12](https://learningnetwork.cisco.com/s/article/osi-model-reference-chart)
+> References [\#1](https://stackoverflow.com/a/9329173/6273859), [\#2](https://stackoverflow.com/a/49233604/6273859), [\#3](https://networkengineering.stackexchange.com/a/68467/86378), [\#4](https://networkengineering.stackexchange.com/a/67557/86378), [\#5](https://serverfault.com/a/10248/978709), [\#6](http://www.geeknxt.com/network-layers/), [\#7](https://en.wikipedia.org/wiki/Fiber_Distributed_Data_Interface) || <small>(ref for ref)</small> [\#8](https://security.stackexchange.com/a/258825), [\#9](https://networkengineering.stackexchange.com/a/76220/86378), [\#10](https://stackoverflow.com/a/32294152/6273859), [\#11](https://www.ibm.com/docs/en/zos-basic-skills?topic=layer-address-resolution-protocol-arp), [\#12](https://learningnetwork.cisco.com/s/article/osi-model-reference-chart)
 
 - TCP/IP 层分{络接-网际-传输-应用}
 - TCP/IP 较OSI折中, 其纯理论且晚
@@ -118,8 +118,17 @@ WebSocket 似且基TCP/UDP, 定传式-丢-安全
 - 论头置 HTTP1.1后默皆长, 可配询隔持时等
 - 论相关 服主推有 WebSockets 与 Server-Sent Events
 
-### 握手流程 Process of HandShake
+### 对称与非对称加密 Symmetric and Asymmetric Encryption
+
+> References: [\#1](https://old.reddit.com/r/explainlikeimfive/comments/1lyau9/eli5_differences_between_symmetric_and_public_key/cc40eq8/), [\#2](https://old.reddit.com/r/explainlikeimfive/comments/5ctx4o/eli5_symmetric_vs_asymmetric_encryption/), [\#3](https://stackoverflow.com/a/5479398/6273859), [\#4](https://old.reddit.com/r/explainlikeimfive/comments/3jg9q5/eli5aes_256_encryption/), [\#5](https://www.trentonsystems.com/blog/aes-encryption-your-faqs-answered), [\#6](https://old.reddit.com/r/explainlikeimfive/comments/4q9lb1/eli5_how_does_rsa_encryption_work/) || <small>(ref for ref)</small> [\#7](https://security.stackexchange.com/a/242499)
+
+- 论机制 对称: 预定同钥护传之为加解; 非对称: 任钥加,收者由配私解
+- 论用实 非对称较作更多计算, 两者协作平衡速度
+- 论常协
+  - AES: 定钥由随机函或它法-切件定块-由定钥对每块周循算, 解由逆运得
+  - RSA: 定二素由之算定公私钥-由任钥定块计算加密, 解由另钥运得
 
 -----
 
-> References: [\#](\), [\#](\), [\#](\)
+> References: [\#](\), [\#](\), [\#](\), [\#](\), [\#](\),
+> References: [\#](\), [\#](\) || <small>(ref for ref)</small>
