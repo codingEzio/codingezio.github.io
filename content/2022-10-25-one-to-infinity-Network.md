@@ -118,6 +118,35 @@ WebSocket 似且基TCP/UDP, 定传式-丢-安全
 - 论头置 HTTP1.1后默皆长, 可配询隔持时等
 - 论相关 服主推有 WebSockets 与 Server-Sent Events
 
+### 握手流程 Process of HandShake
+
+### 跨站脚本攻击 Cross-Site Scripting <small>(*X*SS)</small>
+
+> References: [\#1](https://old.reddit.com/r/explainlikeimfive/comments/1mpyeb/eli5_xss_cross_site_scripting_attacks_what_makes/), [\#2](https://stackoverflow.com/a/15940275/6273859), [\#3](https://brightsec.com/blog/xss-attack#ebay), [\#4](https://www.netgate.com/blog/xss-get-and-post) || <small>(ref for ref)</small> [\#5](https://security.stackexchange.com/a/175687),
+
+- 逻辑: 污染输入框提交内容, 原仅提交, 污后附任意恶码盗或更严果
+- 隐辑: 污码 were executed while you're authenticated!
+- 实辑: 攻者码由 `GET` 作参附带, 若避免须验输容并或切 `POST`
+- 实例: 小至作之 `alert()` 弹窗, 大可大至 *恶码传你密-吾可登*
+
+### 跨站请求伪造 Cross-Site Request Forgery
+
+> References: [\#1](https://stackoverflow.com/a/48535903/6273859), [\#2](https://stackoverflow.com/a/33829607/6273859)
+
+- 论流程 登站如银行-保态技不限, 另站伪任恶意请求-你访即运行之
+- 论御防 服你cookie生成相应唯一码-你发求时附之, 他运无份可验
+- 论御语 应该为 *Anti*-CSRF Token (~= 反伪造跨站请求令牌)
+- 论脑洞 你拿刀防卫预刺向, 攻击者在己肚开启传门, 传门另端通向你肚
+
+### 分布式拒绝服务 Distributed Denial of Service <small>(*D*DoS)</small>
+
+> References: [\#1](https://web.archive.org/web/20221123111908/https://www.huaweicloud.com/zhishi/dyl90.html), [\#2](https://www.cloudflare.com/learning/ddos/what-is-a-ddos-attack/), [\#3](https://github.com/Leeon123/CC-attack) || <small>(ref for ref)</small> [\#4](https://old.reddit.com/r/explainlikeimfive/comments/63eetq/eli5_what_is_a_ddos_attack_and_why_would_anyon/), [\#5](https://github.com/thesc1entist/j0lt), [\#6](https://web.archive.org/web/20211204144051/https://help.aliyun.com/document_detail/28401.html)
+
+- 知: 不同视角分类不同, 可从协议、攻击方式，亦可结合之探讨
+- 合类应用层 如 *Challenge Collapsar* 协众合法入店不离, 耗尽服硬资
+- 合类协漏洞 如 *SYN Flood* 叫人执务不完握手整程, Left Me Hanging
+- 合类数量级 如 *DNS Amplification* 冒客身份求query-返巨容至受害者
+
 ### 对称与非对称加密 Symmetric and Asymmetric Encryption
 
 > References: [\#1](https://old.reddit.com/r/explainlikeimfive/comments/1lyau9/eli5_differences_between_symmetric_and_public_key/cc40eq8/), [\#2](https://old.reddit.com/r/explainlikeimfive/comments/5ctx4o/eli5_symmetric_vs_asymmetric_encryption/), [\#3](https://stackoverflow.com/a/5479398/6273859), [\#4](https://old.reddit.com/r/explainlikeimfive/comments/3jg9q5/eli5aes_256_encryption/), [\#5](https://www.trentonsystems.com/blog/aes-encryption-your-faqs-answered), [\#6](https://old.reddit.com/r/explainlikeimfive/comments/4q9lb1/eli5_how_does_rsa_encryption_work/) || <small>(ref for ref)</small> [\#7](https://security.stackexchange.com/a/242499)
@@ -130,5 +159,4 @@ WebSocket 似且基TCP/UDP, 定传式-丢-安全
 
 -----
 
-> References: [\#](\), [\#](\), [\#](\), [\#](\), [\#](\),
-> References: [\#](\), [\#](\) || <small>(ref for ref)</small>
+> References: [\#](\), [\#](\), [\#](\), [\#](\) || <small>(ref for ref)</small> [\#](\), [\#](\),
