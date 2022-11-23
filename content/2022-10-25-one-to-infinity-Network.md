@@ -7,7 +7,7 @@ description = "On Network in Computer Science"
 
 ### Why
 
-> 知其本，易解惑
+> 知其本，惑消烬
 
 ### What
 
@@ -97,6 +97,28 @@ WebSocket 似且基TCP/UDP, 定传式-丢-安全
 - 详请求 何处-何式-缓否-压缩等
 - 求返共 如 `Connection: keep-alive`
 - 实体容 即 Body 待渲染的内容
+
+### 超文传输之史 History of HTTP
+
+> References: [\#1](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP), [\#2](https://stackoverflow.com/a/247026/6273859), [\#3](https://en.wikipedia.org/wiki/HTTP_pipelining), [\#4](https://blog.cloudflare.com/the-road-to-quic/), [\#5](https://www.fastly.com/blog/quic-handshake-tls-compression-certificates-extension-study), [\#6](https://old.reddit.com/r/explainlikeimfive/comments/q8n40j/eli5_why_is_http3_using_udp_is_more_reliable_than/hgqcrp4/)
+
+- HTTP 0.9: `GET /page.html` 无HTTP头, 自ML报误
+- HTTP 1.0: 可加头部, 返态码, 修头传ML之外文件
+- HTTP 1.1: 可重用链, 定传物式, 客直发多求不待返, 缓制, 须加 `Host`
+- HTTP 2.0: 可服主推, 二制头且压缩, 端服多求返同步进
+- HTTP 3.0
+  - MAC+IP, UDP-QUIC+HTTP (Q-以往TLS或无)
+  - 多信单握密身验, 有制保塞输可依; TCP袱重于始设
+
+### 长短连接 TCP Polling vs Long Polling
+
+> References: [\#1](https://stackoverflow.com/a/28197906/6273859), [\#2](https://stackoverflow.com/a/18099987/6273859), [\#3](https://codeburst.io/polling-vs-sse-vs-websocket-how-to-choose-the-right-one-1859e4e13bd9)
+
+- 论机制 短:频询无容返空, 长:亦询但服可待事主动通客户
+- 论头置 HTTP1.1后默皆长, 可配询隔持时等
+- 论相关 服主推有 WebSockets 与 Server-Sent Events
+
+### 握手流程 Process of HandShake
 
 -----
 

@@ -77,7 +77,7 @@
 </span><span>            p.next = p2
 </span><span>
 </span><span>        </span><span style=color:#b48ead;>return </span><span>dummy.next
-</span></code></pre><h3 id=0023-merge-k-sorted-linked-list>0023: Merge K Sorted Linked List</h3><pre class=language-java data-lang=java style=background-color:#2b303b;color:#c0c5ce;><code class=language-java data-lang=java><span style=color:#65737e;>/**
+</span></code></pre><h3 id=0023-merge-k-sorted-linked-list>0023: Merge K Sorted Linked List</h3><pre class=language-java data-lang=java style=background-color:#2b303b;color:#c0c5ce;><code class=language-java data-lang=java><span style=color:#65737e;>/*
 </span><span style=color:#65737e;> * Definition for singly-linked list.
 </span><span style=color:#65737e;> * public class ListNode {
 </span><span style=color:#65737e;> *     int val;
@@ -87,53 +87,53 @@
 </span><span style=color:#65737e;> *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
 </span><span style=color:#65737e;> * }
 </span><span style=color:#65737e;> */
-</span><span style=color:#65737e;>class Solution {
-</span><span style=color:#65737e;>    public ListNode mergeKLists(ListNode[] lists) {
-</span><span style=color:#65737e;>     // No more checking when there's no elements at all
-</span><span style=color:#65737e;>        int ln = lists.length;
-</span><span style=color:#65737e;>        if (ln == 0) {
-</span><span style=color:#65737e;>         return null;
-</span><span style=color:#65737e;>        }
-</span><span style=color:#65737e;>
-</span><span style=color:#65737e;>        // Temporary variables for comparison and be as pointers
-</span><span style=color:#65737e;>        ListNode dummy = new ListNode(-1);
-</span><span style=color:#65737e;>        ListNode p     = dummy;
-</span><span style=color:#65737e;>
-</span><span style=color:#65737e;>        // Make the comparsion (non-order -> sorted by ASC)
-</span><span style=color:#65737e;>        //  Do notice that PriorityQueue now is also a Linked List,
-</span><span style=color:#65737e;>        //  therefore it would have methods like `.next` and needs
-</span><span style=color:#65737e;>        // it to traverse them.
-</span><span style=color:#65737e;>        PriorityQueue<</span><span style=color:#bf616a;>ListNode</span><span style=color:#65737e;>> pq = new PriorityQueue</span><span style=background-color:#bf616a;color:#2b303b;><></span><span style=color:#65737e;>(
-</span><span style=color:#65737e;>            ln,
-</span><span style=color:#65737e;>            (a, b) -> (a.val - b.val)
-</span><span style=color:#65737e;>        );
-</span><span style=color:#65737e;>
-</span><span style=color:#65737e;>        // Combine the elements while ordering them in an allocated heap
-</span><span style=color:#65737e;>        for (ListNode item : lists) {
-</span><span style=color:#65737e;>            if (item != null) {
-</span><span style=color:#65737e;>                pq.add(item);
-</span><span style=color:#65737e;>            }
-</span><span style=color:#65737e;>        }
-</span><span style=color:#65737e;>
-</span><span style=color:#65737e;>        while (!pq.isEmpty()) {
-</span><span style=color:#65737e;>         // Get the smallest while removing itself
-</span><span style=color:#65737e;>            ListNode n = pq.poll();
-</span><span style=color:#65737e;>            p.next     = n;
-</span><span style=color:#65737e;>
-</span><span style=color:#65737e;>            // Check if there's still items left in the heap (smallest
-</span><span style=color:#65737e;>            // to biggest). If there is, move the pointer of the
-</span><span style=color:#65737e;>            // PriorityQueue via the variale `n`.
-</span><span style=color:#65737e;>            if (n.next != null) {
-</span><span style=color:#65737e;>                pq.add(n.next);
-</span><span style=color:#65737e;>            }
-</span><span style=color:#65737e;>
-</span><span style=color:#65737e;>            // Move to the next pointer for storing the element
-</span><span style=color:#65737e;>            p = p.next;
-</span><span style=color:#65737e;>        }
-</span><span style=color:#65737e;>
-</span><span style=color:#65737e;>        return dummy.next;
-</span><span style=color:#65737e;>    }
-</span><span style=color:#65737e;>}
+</span><span style=color:#b48ead;>class </span><span style=color:#ebcb8b;>Solution </span><span style=color:#eff1f5;>{
+</span><span style=color:#eff1f5;>    </span><span style=color:#b48ead;>public </span><span style=color:#ebcb8b;>ListNode </span><span style=color:#8fa1b3;>mergeKLists</span><span style=color:#eff1f5;>(</span><span style=color:#ebcb8b;>ListNode</span><span style=color:#b48ead;>[] </span><span style=color:#bf616a;>lists</span><span style=color:#eff1f5;>) {
+</span><span style=color:#eff1f5;>     </span><span style=color:#65737e;>// No more checking when there's no elements at all
+</span><span style=color:#eff1f5;>        </span><span style=color:#b48ead;>int</span><span style=color:#eff1f5;> ln </span><span>=</span><span style=color:#eff1f5;> lists.length;
+</span><span style=color:#eff1f5;>        </span><span style=color:#b48ead;>if </span><span style=color:#eff1f5;>(ln </span><span>== </span><span style=color:#d08770;>0</span><span style=color:#eff1f5;>) {
+</span><span style=color:#eff1f5;>         </span><span style=color:#b48ead;>return </span><span style=color:#d08770;>null</span><span style=color:#eff1f5;>;
+</span><span style=color:#eff1f5;>        }
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>        </span><span style=color:#65737e;>// Temporary variables for comparison and be as pointers
+</span><span style=color:#eff1f5;>        </span><span style=color:#ebcb8b;>ListNode</span><span style=color:#eff1f5;> dummy </span><span>= </span><span style=color:#b48ead;>new </span><span style=color:#ebcb8b;>ListNode</span><span style=color:#eff1f5;>(</span><span>-</span><span style=color:#d08770;>1</span><span style=color:#eff1f5;>);
+</span><span style=color:#eff1f5;>        </span><span style=color:#ebcb8b;>ListNode</span><span style=color:#eff1f5;> p     </span><span>=</span><span style=color:#eff1f5;> dummy;
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>        </span><span style=color:#65737e;>// Make the comparsion (non-order -> sorted by ASC)
+</span><span style=color:#eff1f5;>        </span><span style=color:#65737e;>//  Do notice that PriorityQueue now is also a Linked List,
+</span><span style=color:#eff1f5;>        </span><span style=color:#65737e;>//  therefore it would have methods like `.next` and needs
+</span><span style=color:#eff1f5;>        </span><span style=color:#65737e;>// it to traverse them.
+</span><span style=color:#eff1f5;>        </span><span style=color:#ebcb8b;>PriorityQueue</span><span style=color:#eff1f5;><</span><span style=color:#ebcb8b;>ListNode</span><span style=color:#eff1f5;>> pq </span><span>= </span><span style=color:#b48ead;>new </span><span style=color:#ebcb8b;>PriorityQueue</span><span style=color:#eff1f5;><>(
+</span><span style=color:#eff1f5;>            ln,
+</span><span style=color:#eff1f5;>            (</span><span style=color:#bf616a;>a</span><span style=color:#eff1f5;>, </span><span style=color:#bf616a;>b</span><span style=color:#eff1f5;>) </span><span style=color:#b48ead;>-> </span><span style=color:#eff1f5;>(a.val </span><span>-</span><span style=color:#eff1f5;> b.val)
+</span><span style=color:#eff1f5;>        );
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>        </span><span style=color:#65737e;>// Combine the elements while ordering them in an allocated heap
+</span><span style=color:#eff1f5;>        </span><span style=color:#b48ead;>for </span><span style=color:#eff1f5;>(</span><span style=color:#ebcb8b;>ListNode</span><span style=color:#eff1f5;> item </span><span>:</span><span style=color:#eff1f5;> lists) {
+</span><span style=color:#eff1f5;>            </span><span style=color:#b48ead;>if </span><span style=color:#eff1f5;>(item </span><span>!= </span><span style=color:#d08770;>null</span><span style=color:#eff1f5;>) {
+</span><span style=color:#eff1f5;>                pq.</span><span style=color:#bf616a;>add</span><span style=color:#eff1f5;>(item);
+</span><span style=color:#eff1f5;>            }
+</span><span style=color:#eff1f5;>        }
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>        </span><span style=color:#b48ead;>while </span><span style=color:#eff1f5;>(</span><span>!</span><span style=color:#eff1f5;>pq.</span><span style=color:#bf616a;>isEmpty</span><span style=color:#eff1f5;>()) {
+</span><span style=color:#eff1f5;>         </span><span style=color:#65737e;>// Get the smallest while removing itself
+</span><span style=color:#eff1f5;>            </span><span style=color:#ebcb8b;>ListNode</span><span style=color:#eff1f5;> n </span><span>=</span><span style=color:#eff1f5;> pq.</span><span style=color:#bf616a;>poll</span><span style=color:#eff1f5;>();
+</span><span style=color:#eff1f5;>            p.next     </span><span>=</span><span style=color:#eff1f5;> n;
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>            </span><span style=color:#65737e;>// Check if there's still items left in the heap (smallest
+</span><span style=color:#eff1f5;>            </span><span style=color:#65737e;>// to biggest). If there is, move the pointer of the
+</span><span style=color:#eff1f5;>            </span><span style=color:#65737e;>// PriorityQueue via the variale `n`.
+</span><span style=color:#eff1f5;>            </span><span style=color:#b48ead;>if </span><span style=color:#eff1f5;>(n.next </span><span>!= </span><span style=color:#d08770;>null</span><span style=color:#eff1f5;>) {
+</span><span style=color:#eff1f5;>                pq.</span><span style=color:#bf616a;>add</span><span style=color:#eff1f5;>(n.next);
+</span><span style=color:#eff1f5;>            }
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>            </span><span style=color:#65737e;>// Move to the next pointer for storing the element
+</span><span style=color:#eff1f5;>            p </span><span>=</span><span style=color:#eff1f5;> p.next;
+</span><span style=color:#eff1f5;>        }
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>        </span><span style=color:#b48ead;>return</span><span style=color:#eff1f5;> dummy.next;
+</span><span style=color:#eff1f5;>    }
+</span><span style=color:#eff1f5;>}
 </span></code></pre><h3 id=0049-group-anagrams>0049: Group Anagrams</h3><pre class=language-python data-lang=python style=background-color:#2b303b;color:#c0c5ce;><code class=language-python data-lang=python><span style=color:#b48ead;>from </span><span>collections </span><span style=color:#b48ead;>import </span><span>defaultdict
 </span><span>
 </span><span style=color:#b48ead;>class </span><span style=color:#ebcb8b;>Solution</span><span style=color:#eff1f5;>:
@@ -215,7 +215,7 @@
 </span><span>                    len_sub_seq += </span><span style=color:#d08770;>1
 </span><span>
 </span><span>        </span><span style=color:#b48ead;>return </span><span>len_longest
-</span></code></pre><h3 id=0141-linked-list-cycle>0141: Linked List Cycle</h3><pre class=language-java data-lang=java style=background-color:#2b303b;color:#c0c5ce;><code class=language-java data-lang=java><span style=color:#65737e;>/**
+</span></code></pre><h3 id=0141-linked-list-cycle>0141: Linked List Cycle</h3><pre class=language-java data-lang=java style=background-color:#2b303b;color:#c0c5ce;><code class=language-java data-lang=java><span style=color:#65737e;>/*
 </span><span style=color:#65737e;> * Definition for singly-linked list.
 </span><span style=color:#65737e;> * class ListNode {
 </span><span style=color:#65737e;> *     int val;
@@ -226,28 +226,28 @@
 </span><span style=color:#65737e;> *     }
 </span><span style=color:#65737e;> * }
 </span><span style=color:#65737e;> */
-</span><span style=color:#65737e;>public class Solution {
-</span><span style=color:#65737e;>    public boolean hasCycle(ListNode head) {
-</span><span style=color:#65737e;>        ListNode slow = head;
-</span><span style=color:#65737e;>        ListNode fast = head;
-</span><span style=color:#65737e;>
-</span><span style=color:#65737e;>        // Take 3, 7, 8, 6 for example (6 cycle back to 7)
-</span><span style=color:#65737e;>        // [SLOW]  3       7       8       6
-</span><span style=color:#65737e;>        // [FAST]  3       8       7       6
-</span><span style=color:#65737e;>        // [LOOP]  T[7,8]  T[8,7]  T[6,6]  F
-</span><span style=color:#65737e;>
-</span><span style=color:#65737e;>        while (fast != null && fast.next != null) {
-</span><span style=color:#65737e;>            slow = slow.next;
-</span><span style=color:#65737e;>            fast = fast.next.next;
-</span><span style=color:#65737e;>
-</span><span style=color:#65737e;>            if (slow == fast) {
-</span><span style=color:#65737e;>                return true;
-</span><span style=color:#65737e;>            }
-</span><span style=color:#65737e;>        }
-</span><span style=color:#65737e;>
-</span><span style=color:#65737e;>        return false;
-</span><span style=color:#65737e;>    }
-</span><span style=color:#65737e;>}
+</span><span style=color:#b48ead;>public class </span><span style=color:#ebcb8b;>Solution </span><span style=color:#eff1f5;>{
+</span><span style=color:#eff1f5;>    </span><span style=color:#b48ead;>public boolean </span><span style=color:#8fa1b3;>hasCycle</span><span style=color:#eff1f5;>(</span><span style=color:#ebcb8b;>ListNode </span><span style=color:#bf616a;>head</span><span style=color:#eff1f5;>) {
+</span><span style=color:#eff1f5;>        </span><span style=color:#ebcb8b;>ListNode</span><span style=color:#eff1f5;> slow </span><span>=</span><span style=color:#eff1f5;> head;
+</span><span style=color:#eff1f5;>        </span><span style=color:#ebcb8b;>ListNode</span><span style=color:#eff1f5;> fast </span><span>=</span><span style=color:#eff1f5;> head;
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>        </span><span style=color:#65737e;>// Take 3, 7, 8, 6 for example (6 cycle back to 7)
+</span><span style=color:#eff1f5;>        </span><span style=color:#65737e;>// [SLOW]  3       7       8       6
+</span><span style=color:#eff1f5;>        </span><span style=color:#65737e;>// [FAST]  3       8       7       6
+</span><span style=color:#eff1f5;>        </span><span style=color:#65737e;>// [LOOP]  T[7,8]  T[8,7]  T[6,6]  F
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>        </span><span style=color:#b48ead;>while </span><span style=color:#eff1f5;>(fast </span><span>!= </span><span style=color:#d08770;>null </span><span>&&</span><span style=color:#eff1f5;> fast.next </span><span>!= </span><span style=color:#d08770;>null</span><span style=color:#eff1f5;>) {
+</span><span style=color:#eff1f5;>            slow </span><span>=</span><span style=color:#eff1f5;> slow.next;
+</span><span style=color:#eff1f5;>            fast </span><span>=</span><span style=color:#eff1f5;> fast.next.next;
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>            </span><span style=color:#b48ead;>if </span><span style=color:#eff1f5;>(slow </span><span>==</span><span style=color:#eff1f5;> fast) {
+</span><span style=color:#eff1f5;>                </span><span style=color:#b48ead;>return </span><span style=color:#d08770;>true</span><span style=color:#eff1f5;>;
+</span><span style=color:#eff1f5;>            }
+</span><span style=color:#eff1f5;>        }
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>        </span><span style=color:#b48ead;>return </span><span style=color:#d08770;>false</span><span style=color:#eff1f5;>;
+</span><span style=color:#eff1f5;>    }
+</span><span style=color:#eff1f5;>}
 </span></code></pre><h3 id=0217-contains-duplicate>0217: Contains Duplicate</h3><pre class=language-java data-lang=java style=background-color:#2b303b;color:#c0c5ce;><code class=language-java data-lang=java><span style=color:#b48ead;>class </span><span style=color:#ebcb8b;>Solution </span><span style=color:#eff1f5;>{
 </span><span style=color:#eff1f5;>    </span><span style=color:#b48ead;>public boolean </span><span style=color:#8fa1b3;>containsDuplicate</span><span style=color:#eff1f5;>(</span><span style=color:#b48ead;>int[] </span><span style=color:#bf616a;>nums</span><span style=color:#eff1f5;>) {
 </span><span style=color:#eff1f5;>        </span><span style=color:#65737e;>// Just like the set() you use in Python. 'Set()' is just the

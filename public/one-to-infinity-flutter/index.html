@@ -8,21 +8,21 @@
 </span><span>    multiDexEnabled </span><span style=color:#d08770;>true
 </span><span>}
 </span></code></pre></ol><h4 id=configure-ios>Configure iOS</h4><blockquote><p>Google Cloud -> Your Project -> Credentials -> OAuth Client ID</blockquote><ol><li><p>Choose iOS</p><li><p>Add <em>Flutter GoogleDoc iOS</em></p><li><p>Add <em>com.example.projectFlutterCloneGoogledoc</em> via <code>cat Runner.xcodeproj/project.pbxproj | grep -i com.example.project</code></p><li><p>Click <em>DOWNLOAD PLIST</em></p><li><p>Add the JSON file to our project</p> <pre class=language-bash data-lang=bash style=background-color:#2b303b;color:#c0c5ce;><code class=language-bash data-lang=bash><span style=color:#bf616a;>cp -fv</span><span> YOUR_DOWNLOADED_PLIST.plist ios/Runner/GoogleService-Info.plist
-</span></code></pre><li><p>Use XCode to do further configuration</p> <ul><li>Import <ol><li>Right-click <em>Runner</em> then click <em>Add Files to "Runner"</em><li>Choose the <code>.plist</code> file you just downloaded then click <em>Add</em></ol><li>Edit <ol><li><p>Open <code>ios/Runner/Info.plist</code></p><li><p>Add this right before the closing tag <code>&LT/dict> &LT/plist></code></p> <pre class=language-plist data-lang=plist style=background-color:#2b303b;color:#c0c5ce;><code class=language-plist data-lang=plist><span>&LT!-- Put me in the [my_project]/ios/Runner/Info.plist file -->
-</span><span>&LT!-- Google Sign-in Section -->
-</span><span>&LTkey>CFBundleURLTypes&LT/key>
-</span><span>&LTarray>
-</span><span>    &LTdict>
-</span><span>        &LTkey>CFBundleTypeRole&LT/key>
-</span><span>        &LTstring>Editor&LT/string>
-</span><span>        &LTkey>CFBundleURLSchemes&LT/key>
-</span><span>        &LTarray>
-</span><span>            &LT!-- Copied from GoogleService-Info.plist key REVERSED_CLIENT_ID -->
-</span><span>            &LTstring>com.googleusercontent.apps.1059384709185-uh00t0bn6389fc6fh2ejec30oeh8kqc2&LT/string>
-</span><span>        &LT/array>
-</span><span>    &LT/dict>
-</span><span>&LT/array>
-</span><span>&LT!-- End of the Google Sign-in Section -->
+</span></code></pre><li><p>Use XCode to do further configuration</p> <ul><li>Import <ol><li>Right-click <em>Runner</em> then click <em>Add Files to "Runner"</em><li>Choose the <code>.plist</code> file you just downloaded then click <em>Add</em></ol><li>Edit <ol><li><p>Open <code>ios/Runner/Info.plist</code></p><li><p>Add this right before the closing tag <code>&LT/dict> &LT/plist></code></p> <pre class=language-xml data-lang=xml style=background-color:#2b303b;color:#c0c5ce;><code class=language-xml data-lang=xml><span style=color:#65737e;>&LT!-- Put me in the [my_project]/ios/Runner/Info.plist file -->
+</span><span style=color:#65737e;>&LT!-- Google Sign-in Section -->
+</span><span><</span><span style=color:#bf616a;>key</span><span>>CFBundleURLTypes&LT/</span><span style=color:#bf616a;>key</span><span>>
+</span><span><</span><span style=color:#bf616a;>array</span><span>>
+</span><span>    <</span><span style=color:#bf616a;>dict</span><span>>
+</span><span>        <</span><span style=color:#bf616a;>key</span><span>>CFBundleTypeRole&LT/</span><span style=color:#bf616a;>key</span><span>>
+</span><span>        <</span><span style=color:#bf616a;>string</span><span>>Editor&LT/</span><span style=color:#bf616a;>string</span><span>>
+</span><span>        <</span><span style=color:#bf616a;>key</span><span>>CFBundleURLSchemes&LT/</span><span style=color:#bf616a;>key</span><span>>
+</span><span>        <</span><span style=color:#bf616a;>array</span><span>>
+</span><span>            </span><span style=color:#65737e;>&LT!-- Copied from GoogleService-Info.plist key REVERSED_CLIENT_ID -->
+</span><span>            <</span><span style=color:#bf616a;>string</span><span>>com.googleusercontent.apps.1059384709185-uh00t0bn6389fc6fh2ejec30oeh8kqc2&LT/</span><span style=color:#bf616a;>string</span><span>>
+</span><span>        &LT/</span><span style=color:#bf616a;>array</span><span>>
+</span><span>    &LT/</span><span style=color:#bf616a;>dict</span><span>>
+</span><span>&LT/</span><span style=color:#bf616a;>array</span><span>>
+</span><span style=color:#65737e;>&LT!-- End of the Google Sign-in Section -->
 </span></code></pre></ol></ul><li><p>Edit <code>Podfile</code></p> <pre class=language-ruby data-lang=ruby style=background-color:#2b303b;color:#c0c5ce;><code class=language-ruby data-lang=ruby><span style=color:#65737e;># Uncomment and edit
 </span><span>platform </span><span style=color:#a3be8c;>:ios</span><span>, '</span><span style=color:#a3be8c;>11.0</span><span>'
 </span></code></pre></ol><h4 id=configure-web>Configure Web</h4><blockquote><p>Google Cloud -> Your Project -> Credentials -> OAuth Client ID</blockquote><ol><li><p>Choose Web application</p><li><p>Add <em>Flutter GoogleDoc Web</em></p><li><p>Click <em>Authorized JavaScript origins</em></p><li><p>Click <em>ADD URI</em> then add <code>http://localhost:3000</code></p><li><p>Click <em>DOWNLOAD JSON</em></p><li><p>Open documentation for <a href=https://pub.dev/packages/google_sign_in_web>google_sign_in_web 0.10.2</a></p><li><p>Copy the code under <em>Web integration</em> to your <code>web/index.html</code></p> <pre class=language-html data-lang=html style=background-color:#2b303b;color:#c0c5ce;><code class=language-html data-lang=html><span>..

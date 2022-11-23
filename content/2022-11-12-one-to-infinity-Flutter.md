@@ -89,7 +89,7 @@ description = "Notes for my learning journey to Flutter"
         1. Open `ios/Runner/Info.plist`
         2. Add this right before the closing tag `</dict> </plist>`
 
-            ```plist
+            ```xml
             <!-- Put me in the [my_project]/ios/Runner/Info.plist file -->
             <!-- Google Sign-in Section -->
             <key>CFBundleURLTypes</key>

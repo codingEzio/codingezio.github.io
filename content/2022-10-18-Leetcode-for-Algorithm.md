@@ -116,7 +116,7 @@ class Solution:
 ### 0023: Merge K Sorted Linked List
 
 ```java
-/**
+/*
  * Definition for singly-linked list.
  * public class ListNode {
  *     int val;
@@ -279,7 +279,7 @@ class Solution:
 ### 0141: Linked List Cycle
 
 ```java
-/**
+/*
  * Definition for singly-linked list.
  * class ListNode {
  *     int val;
