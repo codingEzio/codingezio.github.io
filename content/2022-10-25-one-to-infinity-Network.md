@@ -118,7 +118,16 @@ WebSocket 似且基TCP/UDP, 定传式-丢-安全
 - 论头置 HTTP1.1后默皆长, 可配询隔持时等
 - 论相关 服主推有 WebSockets 与 Server-Sent Events
 
-### 握手流程 Process of HandShake
+### 传协可靠大PK TCP vs UDP
+
+> References: [\#1](https://stackoverflow.com/a/5978352/6273859), [\#2](https://stackoverflow.com/a/11944994/6273859), [\#3](https://www.scaler.com/topics/computer-network/tcp-flow-control/), [\#4](https://testbook.com/question-answer/generally-tcp-is-reliable-and-udp-is-not-reliable--5aa3d539249fec39f1b75fa0), [\#5](https://networkengineering.stackexchange.com/a/60099/86378), [\#6](https://networkengineering.stackexchange.com/a/39904/86378) || <small>(ref for ref)</small> [\#](https://stackoverflow.com/a/26902428/6273859)
+
+- 论建链 TCP通三握确连再传 UDP封包无连直开传
+- 论机制 TCP除握-配机制避塞保吞吐匹配等, UDP无
+- 扩论之 TCP本身含机保可靠, UDP可应用层实现补保之
+- 论实活 妥协之如确保信达与速, 求不同保选它如QUIC
+
+### 域名解析 Domain Name System <small>(*D*NS)</small>
 
 ### 跨站脚本攻击 Cross-Site Scripting <small>(*X*SS)</small>
 
