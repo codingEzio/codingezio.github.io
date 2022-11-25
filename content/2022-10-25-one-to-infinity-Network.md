@@ -127,8 +127,6 @@ WebSocket 似且基TCP/UDP, 定传式-丢-安全
 - 扩论之 TCP本身含机保可靠, UDP可应用层实现补保之
 - 论实活 妥协之如确保信达与速, 求不同保选它如QUIC
 
-### 域名解析 Domain Name System <small>(*D*NS)</small>
-
 ### 互联网控制消息协议 Internet Control Message Protocol <small>(I*CM*P)</small>
 
 > References: [\#1](https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol), [\#2](https://old.reddit.com/r/explainlikeimfive/comments/29mp4y/eli5_what_is_ping/), [\#3](https://en.wikipedia.org/wiki/Address_Resolution_Protocol#Inverse_ARP_and_Reverse_ARP) || <small>(ref for ref)</small> [\#4](https://old.reddit.com/r/explainlikeimfive/comments/jgnhn/eli5_the_fuck_is_ping_thanks/)
@@ -200,6 +198,41 @@ WebSocket 似且基TCP/UDP, 定传式-丢-安全
   - 读 *RFC*, 读 *源码*，否则的技术理解不过关的以讹传讹很恐怖的
   - 如 *session_key* 在 HTTPS 中不会被传输, 但它在技术论坛中 *遍地开花*
   - 读 [7.4. Handshake protocol](https://www.rfc-editor.org/rfc/rfc2246#section-7.4) 不管是文字描述还是相关 `struct` 都没有 *session_key*
+
+### Session 与 Cookie
+
+> References: [\#](\), [\#](\), [\#](\), [\#](\) || <small>(ref for ref)</small> [\#](\), [\#](\),
+
+- A
+- A
+
+### 域名解析 Domain Name System <small>(*D*NS)</small>
+
+> References: [\#](\), [\#](\), [\#](\), [\#](\) || <small>(ref for ref)</small> [\#](\), [\#](\),
+
+- A
+- A
+
+### TCP 握手 🤝🤝🤝
+
+> References: [\#](\), [\#](\), [\#](\), [\#](\) || <small>(ref for ref)</small> [\#](\), [\#](\),
+
+- A
+- A
+
+### TCP 挥手 🙋🙋🙋🙋
+
+> References: [\#](\), [\#](\), [\#](\), [\#](\) || <small>(ref for ref)</small> [\#](\), [\#](\),
+
+- A
+- A
+
+### TCP 可靠
+
+> References: [\#](\), [\#](\), [\#](\), [\#](\) || <small>(ref for ref)</small> [\#](\), [\#](\),
+
+- A
+- A
 
 -----
 
