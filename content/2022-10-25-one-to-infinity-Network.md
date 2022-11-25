@@ -129,6 +129,21 @@ WebSocket 似且基TCP/UDP, 定传式-丢-安全
 
 ### 域名解析 Domain Name System <small>(*D*NS)</small>
 
+### 互联网控制消息协议 Internet Control Message Protocol <small>(I*CM*P)</small>
+
+> References: [\#1](https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol), [\#2](https://old.reddit.com/r/explainlikeimfive/comments/29mp4y/eli5_what_is_ping/), [\#3](https://en.wikipedia.org/wiki/Address_Resolution_Protocol#Inverse_ARP_and_Reverse_ARP) || <small>(ref for ref)</small> [\#4](https://old.reddit.com/r/explainlikeimfive/comments/jgnhn/eli5_the_fuck_is_ping_thanks/)
+
+- 其介 信息格式-硬件设备由其发送失成信息
+- 其用 邮块据至另IP设-时否回 via Packet Internet Groper <small>(P*IN*G)</small>
+- 用程
+  1. 发送者 `ping` 告系建ICMP包(参为标IP) -> ICMP协打包之-并转于网络层IP协
+  2. 发送者 网络层 *IP* 协 构自己IP包-本址-标址
+  3. 发送者 网络层 *ARP* 相关协 获取到目标的网卡物理地址 *MAC*
+  4. 发送者 `ping` 由-构建的ICMP包-和-由ARP得出物理地址的IP包-作功 即发包
+  5. 接收者 网络层 *ARP* 相关协 收IP包-先看是否是给自己的-是返回-不是丢弃
+  6. 接收者 回发了 无特殊意义的*ICMP*包 (理解为:发POST的JSON, 回普通JSON)
+  7. 发送者 得到了 接收者返回的包 由其中附带信息-计算得出-多久到-多久回-即往返
+
 ### 跨站脚本攻击 Cross-Site Scripting <small>(*X*SS)</small>
 
 > References: [\#1](https://old.reddit.com/r/explainlikeimfive/comments/1mpyeb/eli5_xss_cross_site_scripting_attacks_what_makes/), [\#2](https://stackoverflow.com/a/15940275/6273859), [\#3](https://brightsec.com/blog/xss-attack#ebay), [\#4](https://www.netgate.com/blog/xss-get-and-post) || <small>(ref for ref)</small> [\#5](https://security.stackexchange.com/a/175687),
@@ -165,6 +180,26 @@ WebSocket 似且基TCP/UDP, 定传式-丢-安全
 - 论常协
   - AES: 定钥由随机函或它法-切件定块-由定钥对每块周循算, 解由逆运得
   - RSA: 定二素由之算定公私钥-由任钥定块计算加密, 解由另钥运得
+
+### HTTPS 如何运作
+
+> References: [\#1](https://stackoverflow.com/a/39183636/6273859), [\#2](https://stackoverflow.com/a/34735420/6273859), [\#3](https://stackoverflow.com/questions/6241991/how-exactly-https-ssl-works#:~:text=never%20transmitted), [\#4](https://www.rfc-editor.org/rfc/rfc2246#section-7.4) || <small>(ref for ref)</small> [\#5](https://www.cloudflare.com/learning/ssl/what-happens-in-a-tls-handshake/)
+
+- 流程
+  > 沟通的公私钥、加密数据的共有钥-客由证书产之
+  1. 客访站-站返证书其含公钥-浏览器处返物
+  2. 浏览器验证书-由本地已有证列-证为真否
+  3. 含公钥的证书通过 由中公钥再生成密钥(为加密数据) 发至服务器
+  4. 服务器 由头次沟通所产的己私钥 解之得加密据钥
+  5. 服务器 返回数据-由客产钥
+  6. 客户端 得到数据-由已产钥解密
+  7. 现建安全通道 客产钥-客户发数据-加解密, 客产钥-服务器加密返据
+
+- 感想
+  > 我仍然可能是错的, 比如[这份研究](https://www.researchgate.net/figure/TLS-handshake-protocol_fig1_298065605)
+  - 读 *RFC*, 读 *源码*，否则的技术理解不过关的以讹传讹很恐怖的
+  - 如 *session_key* 在 HTTPS 中不会被传输, 但它在技术论坛中 *遍地开花*
+  - 读 [7.4. Handshake protocol](https://www.rfc-editor.org/rfc/rfc2246#section-7.4) 不管是文字描述还是相关 `struct` 都没有 *session_key*
 
 -----
 

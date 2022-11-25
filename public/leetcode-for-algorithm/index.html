@@ -21,6 +21,41 @@
 </span><span style=color:#eff1f5;>        </span><span style=color:#b48ead;>return new int</span><span style=color:#eff1f5;>[] {};
 </span><span style=color:#eff1f5;>    }
 </span><span style=color:#eff1f5;>}
+</span></code></pre><h3 id=0013-3sum>0013: 3Sum</h3><pre class=language-python data-lang=python style=background-color:#2b303b;color:#c0c5ce;><code class=language-python data-lang=python><span style=color:#b48ead;>class </span><span style=color:#ebcb8b;>Solution</span><span style=color:#eff1f5;>:
+</span><span>    </span><span style=color:#b48ead;>def </span><span style=color:#8fa1b3;>threeSum</span><span>(</span><span style=color:#bf616a;>self</span><span>, </span><span style=color:#bf616a;>nums</span><span>: List[int]) -> List[List[int]]:
+</span><span>        </span><span style=color:#65737e;>"""
+</span><span style=color:#65737e;>        Problem description simplified
+</span><span style=color:#65737e;>        - three sum to 0 and return the values
+</span><span style=color:#65737e;>        - no complete dup for indice
+</span><span style=color:#65737e;>        - no complete dup for values 
+</span><span style=color:#65737e;>        """
+</span><span>
+</span><span>        candidateCombined = []
+</span><span>        nums.</span><span style=color:#bf616a;>sort</span><span>()
+</span><span>
+</span><span>        </span><span style=color:#b48ead;>for </span><span>idx, elem </span><span style=color:#b48ead;>in </span><span style=color:#96b5b4;>enumerate</span><span>(nums):
+</span><span>
+</span><span>            </span><span style=color:#b48ead;>if </span><span>idx > </span><span style=color:#d08770;>0 </span><span>and nums[idx] == nums[idx-</span><span style=color:#d08770;>1</span><span>]:
+</span><span>                </span><span style=color:#b48ead;>continue
+</span><span>
+</span><span>            L, R = idx + </span><span style=color:#d08770;>1</span><span>, </span><span style=color:#96b5b4;>len</span><span>(nums) - </span><span style=color:#d08770;>1
+</span><span>
+</span><span>            </span><span style=color:#b48ead;>while </span><span>L < R:
+</span><span>                sumToZero = elem + nums[L] + nums[R]
+</span><span>
+</span><span>                </span><span style=color:#b48ead;>if </span><span>sumToZero == </span><span style=color:#d08770;>0</span><span>:
+</span><span>                    candidateCombined.</span><span style=color:#bf616a;>append</span><span>( [ elem, nums[L], nums[R] ] )
+</span><span>
+</span><span>                    L += </span><span style=color:#d08770;>1
+</span><span>                    </span><span style=color:#b48ead;>while </span><span>L < R and nums[L] == nums[L-</span><span style=color:#d08770;>1</span><span>]:
+</span><span>                        L += </span><span style=color:#d08770;>1
+</span><span>
+</span><span>                </span><span style=color:#b48ead;>elif </span><span>sumToZero < </span><span style=color:#d08770;>0</span><span>:
+</span><span>                    L += </span><span style=color:#d08770;>1
+</span><span>                </span><span style=color:#b48ead;>elif </span><span>sumToZero > </span><span style=color:#d08770;>0</span><span>:
+</span><span>                    R -= </span><span style=color:#d08770;>1
+</span><span>
+</span><span>        </span><span style=color:#b48ead;>return </span><span>candidateCombined
 </span></code></pre><h3 id=0019-remove-nth-node-from-end-of-list>0019: Remove Nth Node From End of List</h3><pre class=language-python data-lang=python style=background-color:#2b303b;color:#c0c5ce;><code class=language-python data-lang=python><span style=color:#65737e;># Definition for singly-linked list.
 </span><span style=color:#65737e;># class ListNode:
 </span><span style=color:#65737e;>#     def __init__(self, val=0, next=None):
@@ -168,6 +203,16 @@
 </span><span>            second = _sum
 </span><span>
 </span><span>        </span><span style=color:#b48ead;>return </span><span>second
+</span></code></pre><h3 id=0124-binary-tree-maximum-path-sum>0124 Binary Tree Maximum Path Sum</h3><pre class=language-python data-lang=python style=background-color:#2b303b;color:#c0c5ce;><code class=language-python data-lang=python><span style=color:#65737e;># Definition for a binary tree node.
+</span><span style=color:#65737e;># class TreeNode:
+</span><span style=color:#65737e;>#     def __init__(self, val=0, left=None, right=None):
+</span><span style=color:#65737e;>#         self.val = val
+</span><span style=color:#65737e;>#         self.left = left
+</span><span style=color:#65737e;>#         self.right = right
+</span><span style=color:#b48ead;>class </span><span style=color:#ebcb8b;>Solution</span><span style=color:#eff1f5;>:
+</span><span>    </span><span style=color:#b48ead;>def </span><span style=color:#8fa1b3;>maxPathSum</span><span>(</span><span style=color:#bf616a;>self</span><span>, </span><span style=color:#bf616a;>root</span><span>: TreeNode) -> int:
+</span><span>
+</span><span>        </span><span style=color:#b48ead;>pass
 </span></code></pre><h3 id=0125-valid-palindrome>0125: Valid Palindrome</h3><pre class=language-java data-lang=java style=background-color:#2b303b;color:#c0c5ce;><code class=language-java data-lang=java><span style=color:#b48ead;>class </span><span style=color:#ebcb8b;>Solution </span><span style=color:#eff1f5;>{
 </span><span style=color:#eff1f5;>    </span><span style=color:#b48ead;>public boolean </span><span style=color:#8fa1b3;>isPalindrome</span><span style=color:#eff1f5;>(</span><span style=color:#ebcb8b;>String </span><span style=color:#bf616a;>s</span><span style=color:#eff1f5;>) {
 </span><span style=color:#eff1f5;>        </span><span style=color:#b48ead;>int</span><span style=color:#eff1f5;> i </span><span>= </span><span style=color:#d08770;>0</span><span style=color:#eff1f5;>;

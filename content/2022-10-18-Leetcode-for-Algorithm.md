@@ -47,6 +47,47 @@ class Solution {
 }
 ```
 
+
+### 0013: 3Sum
+
+```python
+class Solution:
+    def threeSum(self, nums: List[int]) -> List[List[int]]:
+        """
+        Problem description simplified
+        - three sum to 0 and return the values
+        - no complete dup for indice
+        - no complete dup for values 
+        """
+
+        candidateCombined = []
+        nums.sort()
+
+        for idx, elem in enumerate(nums):
+
+            if idx > 0 and nums[idx] == nums[idx-1]:
+                continue
+
+            L, R = idx + 1, len(nums) - 1
+
+            while L < R:
+                sumToZero = elem + nums[L] + nums[R]
+
+                if sumToZero == 0:
+                    candidateCombined.append( [ elem, nums[L], nums[R] ] )
+
+                    L += 1
+                    while L < R and nums[L] == nums[L-1]:
+                        L += 1
+
+                elif sumToZero < 0:
+                    L += 1
+                elif sumToZero > 0:
+                    R -= 1
+
+        return candidateCombined
+```
+
 ### 0019: Remove Nth Node From End of List
 
 ```python
@@ -217,6 +258,21 @@ class Solution:
             second = _sum
 
         return second
+```
+
+### 0124 Binary Tree Maximum Path Sum
+
+```python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def maxPathSum(self, root: TreeNode) -> int:
+
+        pass
 ```
 
 ### 0125: Valid Palindrome
