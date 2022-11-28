@@ -1,5 +1,5 @@
 +++
-title = "Anki"
+title = "Toolset - Anki"
 description = "Anki usage"
 +++
 

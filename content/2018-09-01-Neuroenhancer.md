@@ -1,5 +1,5 @@
 +++
-title = "Neuroenhancer"
+title = "Thoughts on Neuroenhancer"
 description = "Thoughts on neuroenhancing pill"
 +++
 

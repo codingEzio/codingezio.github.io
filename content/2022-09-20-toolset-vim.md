@@ -1,5 +1,5 @@
 +++
-title = "Vim"
+title = "Toolset - Vim"
 description = "Vim usage"
 +++
 

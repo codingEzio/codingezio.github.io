@@ -1,5 +1,5 @@
 +++
-title = "jq"
+title = "Toolset - jq"
 description = "jq usage"
 +++
 

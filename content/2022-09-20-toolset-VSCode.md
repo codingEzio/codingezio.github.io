@@ -1,5 +1,5 @@
 +++
-title = "VS Code"
+title = "Toolset - VS Code"
 description = "VS Code usage"
 +++
 

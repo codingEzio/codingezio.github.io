@@ -1,9 +1,11 @@
 +++
-title = "Resource Hub for Toolset"
+title = "Toolset - Resource Hub"
 description = "The resource hub for the toolset I've been using"
 +++
 
 ### TUI
+
+#### Database Utility
 
 > All with syntax highlighting, auto-completion etc.
 

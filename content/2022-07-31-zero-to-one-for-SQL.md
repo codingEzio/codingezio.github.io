@@ -3,7 +3,56 @@ title = "Zero to One: on SQL"
 description = "Zero to One: on SQL"
 +++
 
-> [*MariaDB*](https://mariadb.org/) with [*mycli*](https://github.com/dbcli/mycli)
+### Setup
+
+> Back then I was using [*MariaDB*](https://mariadb.org/) with [*mycli*](https://github.com/dbcli/mycli) on *macOS*
+
+#### MySQL
+
+> Normally I would choose the `brew install` approach, but it appears that there were unexpected permission issues relating to *sockets*. Also tried the *GUI* approach, well, let's just say I'm not a fan of using the GUI. Eventually I chose the *Docker Installation*.
+
+##### The *GUI* way
+
+- Go to the official MySQL [download page](https://dev.mysql.com/downloads/mysql/)
+- Choose whatever options that suits you along the way (~= up to you)
+- Restart your dock by `killall Dock`
+- Go to the *MySQL* at the bottom in *System Preferences* to set stuff up
+
+##### The *Docker* way
+
+```bash
+# Local directories for volume mapping (persistence)
+mkdir -p ~/Config/mysql80/mysql80_{conf,data}
+
+# Easier identification for the images downloaded
+image_name="mysql80-dev"
+
+# Initiation for MySQL
+ms_host_conf="~/Config/mysql80/mysql80_conf"
+ms_host_data="~/Config/mysql80/mysql80_data"
+ms_pswd="password"
+
+# Run at background and expose the export for host to connect
+# AND mapping the directories inside to the host for persistence
+# AND setting the password to prepare for us to connect
+# AND choosing the mysql version explicitly which is 8.0.25
+docker run --detach \
+    --name=$image_name \
+    --publish 6603:3306 \
+    --volume=${mt_host_conf}/:/etc/mysql/conf.d \
+    --volume=${mt_host_data}/:/var/lib/mysql \
+    --env="MYSQL_ROOT_PASSWORD=${ms_pswd}" mysql:8.0.25
+
+
+
+docker inspect $image_name | jq -C | less
+docker inspect $image_name | jq -C '.[0].Created'                   | less
+docker inspect $image_name | jq -C '.[0].State.Status'              | less
+docker inspect $image_name | jq -C '.[0].Config.Env'                | less
+docker inspect $image_name | jq -C '.[0].Config.Env[]'              | less
+docker inspect $image_name | jq -C '.[0].Config.Env[1]'             | less
+docker inspect $image_name | jq -C '.[0].NetworkSettings.IPAddress' | less
+```
 
 -----
 
@@ -22,19 +71,26 @@ SET PASSWORD = PASSWORD('YOUR-NEW-CONN-PASSWORD');
 1. Create
 
     ```sql
-    -- The database below was created under the user 'root'
+    -- Administrator-level privilege with all tools available
+    CREATE USER 'joe'@'localhost' IDENTIFIED BY 'jeopassword';
+    GRANT ALL PRIVILEDGES ON *.* TO 'joe'@'localhost';
 
+    -- The `testdb` was created by the user 'root' (or whoever else)
+    -- Granting privileges with limited scope (only tables under `testdb`)
     CREATE USER 'testuser'@'localhost' IDENTIFIED BY 'testpasswd';
     GRANT ALL ON testdb.* TO 'testuser'@'localhost';
 
+    -- Kinda like reloading the config to make it work
     FLUSH PRIVILEGES;
     ```
 
 2. Connect
 
     ```bash
-    # Depending which one do you use
+    # Available to you by default
     mysql --user testuser --password testdb
+
+    # CLI with syntax highlighting and ushc (installation needed)
     mycli --user testuser --host localhost testdb
     ```
 
@@ -154,6 +210,31 @@ INSERT INTO Person ( .. ) { .. }
 1. There are three types of `JOIN`s: `INNER`, `OUTER`, `CROSS`
 2. If you said `JOIN`, it's **`INNER`**`JOIN`
 3. If you said either `LEFT`, `RIGHT` or `FULL`, it's **`OUTER`** `_` `JOIN`
+
+-----
+
+### Concept
+
+#### ELI5 of *connect FROM host TO the server lives in Docker*
+
+> This note was written at the time I'm having trouble understanding *Docker* and the relationship between *MySQL Server* and *MySQL Client*
+
+##### conceptual reasoning
+
+1. the only core thing you need is a mysql-server
+2. anything else is "trying to connect to the server"
+   - it can be mysql-client (provided by MySQL)
+   - it can be a Python driver, or a JDBC(Java) driver
+   - it can be a GUI DBMS like DBeaver or DataGrip (they dl drives for you)
+3. connecting to the MySQL lives in the docker
+   - it's actually not much different from the real world
+   - previously it's localhost (server and client lives together)
+   - now it's DOCKER_IMAGE_IP:EXPOSED_PORT (just like the real world)
+4. persistent storage (data isn't lost after the image was deleted)
+   - what we want mostly is the (custom) config (for our purpose) and the data
+   - both could be achieved by creating volumes (real-world:virtual-world)
+   - think of it like the 'Shared Folder' in VMs (but for more specific goals)
+   - by creating vols, you expose specific folders to the outside (persistent)
 
 -----
 

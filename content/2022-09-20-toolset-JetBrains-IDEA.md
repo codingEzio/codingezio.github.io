@@ -1,5 +1,5 @@
 +++
-title = "JetBrains IDEA"
+title = "Toolset - JetBrains IDEA"
 description = "JetBrains IDEA usage"
 +++
 
