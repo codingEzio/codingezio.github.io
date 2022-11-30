@@ -53,16 +53,39 @@ description = "On Network in Computer Science"
 - 服客HTTP之意图CRUD信
 - 览器之解析三剑HCJ-建构画容,软硬皆参画
 
-### 域名解析 DNS
+### 域名解析 Domain Name System <small>(*D*NS)</small>
 
-找缓, 找本地, 找已定, 访根域-筛顶域
+> References: [\#1](https://web.archive.org/web/20220708235547/http://www.tcpipguide.com/free/t_DNSNameResolutionProcess-2.htm), [\#2](https://superuser.com/a/1326011/1749176), [\#3](https://www.cloudns.net/blog/dns-cache-explained/) || <small>(more on DNS)</small> [\#4](https://serverfault.com/questions/422288/what-is-the-difference-between-authoritative-nameserver-and-recursive-resolver/434196#434196), [\#5](https://old.reddit.com/r/explainlikeimfive/comments/1s48e4/eli5_what_each_record_in_a_dns_means_and_how_the/), [\#6](https://old.reddit.com/r/explainlikeimfive/comments/2uhw70/eli5_dns_record_types_and_their_correct_input/), [\#7](https://old.reddit.com/r/explainlikeimfive/comments/6veazz/eli5what_is_dns_and_dns_records/)
+
+- DNS by itself
+  - 为 非实体系统(含resolver等等 以实现 IP <> Domain)
+  - 为 不存在, 只存在 Name Server that does the translation (IP <> Domain)
+- 寻 找缓, 找本地, 找已定, 访根域-筛顶域
+- 寻 如 `archive.images.google.com`
+  1. 浏览器将域名转至本地 recursive *resolver* to query DNS
+  2. 查本地缓存 (in-memory records || cache in browsers)
+  3. 查本地映射 (records in hosts file)
+  4. 查局网映射 *Name Server*
+  5. 查外根映射 *Name Server* (recursively) (once found then return)
+
+    > 极度简化; 看百科 for more
+
+    ```bash
+                         .com
+                  .google.com
+            images.google.com
+    archive.images.google.com
+    ```
+
+- 其他比如 `CNAME`, `NS`, `A` etc.
+  > #TODO 待实需-再深解析为短记
 
 ### Socket 与 WebSocket
 
 > References: [\#1](https://stackoverflow.com/a/67826460/6273859), [\#2](https://stackoverflow.com/a/7600789/6273859)
 
-Socket 建链于设备传物
-WebSocket 似且基TCP/UDP, 定传式-丢-安全
+- Socket 建链于设备传物
+- WebSocket 似且基TCP/UDP, 定传式-丢-安全
 
 ### 状态码含义 HTTP Status Code
 
@@ -194,24 +217,32 @@ WebSocket 似且基TCP/UDP, 定传式-丢-安全
   7. 现建安全通道 客产钥-客户发数据-加解密, 客产钥-服务器加密返据
 
 - 感想
-  > 我仍然可能是错的, 比如[这份研究](https://www.researchgate.net/figure/TLS-handshake-protocol_fig1_298065605)
-  - 读 *RFC*, 读 *源码*，否则的技术理解不过关的以讹传讹很恐怖的
+  > 我仍然可能是错的, 比如[这份研究](https://www.researchgate.net/figure/TLS-handshake-protocol_fig1_298065605) 可能会 nullify 如下陈述
+  - 读 *RFC*, 读 *源码*，否则以讹传讹不过关的技术理解是很恐怖的
   - 如 *session_key* 在 HTTPS 中不会被传输, 但它在技术论坛中 *遍地开花*
   - 读 [7.4. Handshake protocol](https://www.rfc-editor.org/rfc/rfc2246#section-7.4) 不管是文字描述还是相关 `struct` 都没有 *session_key*
 
-### Session 与 Cookie
+### Cookie 与 Session
 
-> References: [\#](\), [\#](\), [\#](\), [\#](\) || <small>(ref for ref)</small> [\#](\), [\#](\),
+> References: [\#1](https://www.itsratedby.com/cookie-policy), [\#2](https://old.reddit.com/r/explainlikeimfive/comments/4514c4/eli5_web_sessions_what_is_a_session_where_does/), [\#3](https://old.reddit.com/r/webdev/comments/3c9mtg/eli5_how_are_cookies_and_sessions_used_for_logged/), [\#4](https://stackoverflow.com/a/32564053/6273859), [\#5](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage) || <small>(ref for ref)</small> [\#6](https://softwareengineering.stackexchange.com/a/356756), [\#7](https://old.reddit.com/r/PHP/comments/ocn2bv/what_is_the_difference_between_sessioncookie_and/), [\#8](https://stackoverflow.com/a/67945863/6273859), [\#9](https://stackoverflow.com/a/11143263/6273859)
 
-- A
-- A
+#### Cookie
 
-### 域名解析 Domain Name System <small>(*D*NS)</small>
+- 何 个站存于你览器, 键值合起刻画你
+- 类 各站, 它站, 久储, 临储
+- 安 储本改可-交于服器需验
+- 限 文4K于端
+- 用 与session协作-本地键值为吾样-服器键值类为老客特照
 
-> References: [\#](\), [\#](\), [\#](\), [\#](\) || <small>(ref for ref)</small> [\#](\), [\#](\),
+#### Session
 
-- A
-- A
+- 用 赋客一头目-据客服有异
+- 制 服客通-览器闭即销-参活可调-改默
+- 以 cookie 存储头目ID 可用-读之; 但若
+  - cookie不可 置于 求头+返头
+  - cookie不可 附于 返URL后参
+  - cookie不可 切于 技临储sessionStorage (类localStorage但不持久)
+  - 分布式-非同机无session 另库Redis存之-划众机访库-处可循
 
 ### TCP 握手 🤝🤝🤝
 
