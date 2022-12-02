@@ -27,7 +27,7 @@
 </span><span style=color:#65737e;>        Problem description simplified
 </span><span style=color:#65737e;>        - three sum to 0 and return the values
 </span><span style=color:#65737e;>        - no complete dup for indice
-</span><span style=color:#65737e;>        - no complete dup for values 
+</span><span style=color:#65737e;>        - no complete dup for values
 </span><span style=color:#65737e;>        """
 </span><span>
 </span><span>        candidateCombined = []
@@ -293,6 +293,77 @@
 </span><span style=color:#eff1f5;>        </span><span style=color:#b48ead;>return </span><span style=color:#d08770;>false</span><span style=color:#eff1f5;>;
 </span><span style=color:#eff1f5;>    }
 </span><span style=color:#eff1f5;>}
+</span></code></pre><h3 id=0146-lru-cache>0146: LRU Cache</h3><pre class=language-java data-lang=java style=background-color:#2b303b;color:#c0c5ce;><code class=language-java data-lang=java><span style=color:#b48ead;>class </span><span style=color:#ebcb8b;>LRUCache </span><span style=color:#eff1f5;>{
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>    </span><span style=color:#b48ead;>public </span><span style=color:#8fa1b3;>LRUCache</span><span style=color:#eff1f5;>(</span><span style=color:#b48ead;>int </span><span style=color:#bf616a;>capacity</span><span style=color:#eff1f5;>) {
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>    }
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>    </span><span style=color:#b48ead;>public int </span><span style=color:#8fa1b3;>get</span><span style=color:#eff1f5;>(</span><span style=color:#b48ead;>int </span><span style=color:#bf616a;>key</span><span style=color:#eff1f5;>) {
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>    }
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>    </span><span style=color:#b48ead;>public void </span><span style=color:#8fa1b3;>put</span><span style=color:#eff1f5;>(</span><span style=color:#b48ead;>int </span><span style=color:#bf616a;>key</span><span style=color:#eff1f5;>, </span><span style=color:#b48ead;>int </span><span style=color:#bf616a;>value</span><span style=color:#eff1f5;>) {
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>    }
+</span><span style=color:#eff1f5;>}
+</span><span>
+</span><span style=color:#65737e;>/*
+</span><span style=color:#65737e;> * Your LRUCache object will be instantiated and called as such:
+</span><span style=color:#65737e;> * LRUCache obj = new LRUCache(capacity);
+</span><span style=color:#65737e;> * int param_1 = obj.get(key);
+</span><span style=color:#65737e;> * obj.put(key,value);
+</span><span style=color:#65737e;> */
+</span></code></pre><h3 id=0155-min-stack>0155: Min Stack</h3><pre class=language-java data-lang=java style=background-color:#2b303b;color:#c0c5ce;><code class=language-java data-lang=java><span style=color:#b48ead;>class </span><span style=color:#ebcb8b;>MinStack </span><span style=color:#eff1f5;>{
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>    </span><span style=color:#65737e;>// A stack holding all the items
+</span><span style=color:#eff1f5;>    </span><span style=color:#ebcb8b;>Stack</span><span style=color:#eff1f5;><</span><span style=color:#ebcb8b;>Integer</span><span style=color:#eff1f5;>> wholeStack </span><span>= </span><span style=color:#b48ead;>new </span><span style=color:#ebcb8b;>Stack</span><span style=color:#eff1f5;><>();
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>    </span><span style=color:#65737e;>// A stack holding the minium items (the amount might >= 1)
+</span><span style=color:#eff1f5;>    </span><span style=color:#ebcb8b;>Stack</span><span style=color:#eff1f5;><</span><span style=color:#ebcb8b;>Integer</span><span style=color:#eff1f5;>> minStack   </span><span>= </span><span style=color:#b48ead;>new </span><span style=color:#ebcb8b;>Stack</span><span style=color:#eff1f5;><>();
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>    </span><span style=color:#b48ead;>public </span><span style=color:#8fa1b3;>MinStack</span><span style=color:#eff1f5;>() {
+</span><span style=color:#eff1f5;>    }
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>    </span><span style=color:#65737e;>// Save one on the whole stack
+</span><span style=color:#eff1f5;>    </span><span style=color:#65737e;>// - if there is no element in the min, add it (= the minimum)
+</span><span style=color:#eff1f5;>    </span><span style=color:#65737e;>// - compare the one to be inserted with exisiting, remain or STACK on it
+</span><span style=color:#eff1f5;>    </span><span style=color:#b48ead;>public void </span><span style=color:#8fa1b3;>push</span><span style=color:#eff1f5;>(</span><span style=color:#b48ead;>int </span><span style=color:#bf616a;>val</span><span style=color:#eff1f5;>) {
+</span><span style=color:#eff1f5;>        wholeStack.</span><span style=color:#bf616a;>push</span><span style=color:#eff1f5;>(val);
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>        </span><span style=color:#b48ead;>if </span><span style=color:#eff1f5;>(minStack.</span><span style=color:#bf616a;>isEmpty</span><span style=color:#eff1f5;>() </span><span>||</span><span style=color:#eff1f5;> val </span><span><=</span><span style=color:#eff1f5;> minStack.</span><span style=color:#bf616a;>peek</span><span style=color:#eff1f5;>()) {
+</span><span style=color:#eff1f5;>            minStack.</span><span style=color:#bf616a;>push</span><span style=color:#eff1f5;>(val);
+</span><span style=color:#eff1f5;>        }
+</span><span style=color:#eff1f5;>    }
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>    </span><span style=color:#65737e;>// #TODO document needed
+</span><span style=color:#eff1f5;>    </span><span style=color:#b48ead;>public void </span><span style=color:#8fa1b3;>pop</span><span style=color:#eff1f5;>() {
+</span><span style=color:#eff1f5;>        </span><span style=color:#b48ead;>if </span><span style=color:#eff1f5;>(minStack.</span><span style=color:#bf616a;>peek</span><span style=color:#eff1f5;>().</span><span style=color:#bf616a;>equals</span><span style=color:#eff1f5;>(wholeStack.</span><span style=color:#bf616a;>peek</span><span style=color:#eff1f5;>())) {
+</span><span style=color:#eff1f5;>            minStack.</span><span style=color:#bf616a;>pop</span><span style=color:#eff1f5;>();
+</span><span style=color:#eff1f5;>        }
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>        wholeStack.</span><span style=color:#bf616a;>pop</span><span style=color:#eff1f5;>();
+</span><span style=color:#eff1f5;>    }
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>    </span><span style=color:#65737e;>// No restraint, simply return the top element (also the newest)
+</span><span style=color:#eff1f5;>    </span><span style=color:#b48ead;>public int </span><span style=color:#8fa1b3;>top</span><span style=color:#eff1f5;>() {
+</span><span style=color:#eff1f5;>        </span><span style=color:#b48ead;>return</span><span style=color:#eff1f5;> wholeStack.</span><span style=color:#bf616a;>peek</span><span style=color:#eff1f5;>();
+</span><span style=color:#eff1f5;>    }
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>    </span><span style=color:#65737e;>// As it's a min stack, the top of it must be the minimum
+</span><span style=color:#eff1f5;>    </span><span style=color:#b48ead;>public int </span><span style=color:#8fa1b3;>getMin</span><span style=color:#eff1f5;>() {
+</span><span style=color:#eff1f5;>        </span><span style=color:#b48ead;>return</span><span style=color:#eff1f5;> minStack.</span><span style=color:#bf616a;>peek</span><span style=color:#eff1f5;>();
+</span><span style=color:#eff1f5;>    }
+</span><span style=color:#eff1f5;>}
+</span><span>
+</span><span style=color:#65737e;>/*
+</span><span style=color:#65737e;> * Your MinStack object will be instantiated and called as such:
+</span><span style=color:#65737e;> * MinStack obj = new MinStack();
+</span><span style=color:#65737e;> * obj.push(val);
+</span><span style=color:#65737e;> * obj.pop();
+</span><span style=color:#65737e;> * int param_3 = obj.top();
+</span><span style=color:#65737e;> * int param_4 = obj.getMin();
+</span><span style=color:#65737e;> */
 </span></code></pre><h3 id=0217-contains-duplicate>0217: Contains Duplicate</h3><pre class=language-java data-lang=java style=background-color:#2b303b;color:#c0c5ce;><code class=language-java data-lang=java><span style=color:#b48ead;>class </span><span style=color:#ebcb8b;>Solution </span><span style=color:#eff1f5;>{
 </span><span style=color:#eff1f5;>    </span><span style=color:#b48ead;>public boolean </span><span style=color:#8fa1b3;>containsDuplicate</span><span style=color:#eff1f5;>(</span><span style=color:#b48ead;>int[] </span><span style=color:#bf616a;>nums</span><span style=color:#eff1f5;>) {
 </span><span style=color:#eff1f5;>        </span><span style=color:#65737e;>// Just like the set() you use in Python. 'Set()' is just the

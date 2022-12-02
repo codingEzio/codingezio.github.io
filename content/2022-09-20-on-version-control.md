@@ -69,3 +69,14 @@ git reset --soft HEAD~N    # Undo N then add all as one
 git reset --hard HEAD~1    # Remove last commit
 git reset --hard HEAD~N    # Remove all N commits
 ```
+
+-----
+
+### Commit Message
+
+#### Guideline
+
+> <img src="/202209/20220920-version-control-commit-message-convention.png" alt="An illustration that shows the convensions of the commit messsage which is written in Chinese" width="40%" height="40%" />
+
+- [Semantic Commit Messages](https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716)
+- [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)

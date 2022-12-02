@@ -47,7 +47,6 @@ class Solution {
 }
 ```
 
-
 ### 0013: 3Sum
 
 ```python
@@ -57,7 +56,7 @@ class Solution:
         Problem description simplified
         - three sum to 0 and return the values
         - no complete dup for indice
-        - no complete dup for values 
+        - no complete dup for values
         """
 
         candidateCombined = []
@@ -368,6 +367,87 @@ public class Solution {
         return false;
     }
 }
+```
+
+### 0146: LRU Cache
+
+```java
+class LRUCache {
+
+    public LRUCache(int capacity) {
+
+    }
+
+    public int get(int key) {
+
+    }
+
+    public void put(int key, int value) {
+
+    }
+}
+
+/*
+ * Your LRUCache object will be instantiated and called as such:
+ * LRUCache obj = new LRUCache(capacity);
+ * int param_1 = obj.get(key);
+ * obj.put(key,value);
+ */
+```
+
+### 0155: Min Stack
+
+```java
+class MinStack {
+
+    // A stack holding all the items
+    Stack<Integer> wholeStack = new Stack<>();
+
+    // A stack holding the minium items (the amount might >= 1)
+    Stack<Integer> minStack   = new Stack<>();
+
+    public MinStack() {
+    }
+
+    // Save one on the whole stack
+    // - if there is no element in the min, add it (= the minimum)
+    // - compare the one to be inserted with exisiting, remain or STACK on it
+    public void push(int val) {
+        wholeStack.push(val);
+
+        if (minStack.isEmpty() || val <= minStack.peek()) {
+            minStack.push(val);
+        }
+    }
+
+    // #TODO document needed
+    public void pop() {
+        if (minStack.peek().equals(wholeStack.peek())) {
+            minStack.pop();
+        }
+
+        wholeStack.pop();
+    }
+
+    // No restraint, simply return the top element (also the newest)
+    public int top() {
+        return wholeStack.peek();
+    }
+
+    // As it's a min stack, the top of it must be the minimum
+    public int getMin() {
+        return minStack.peek();
+    }
+}
+
+/*
+ * Your MinStack object will be instantiated and called as such:
+ * MinStack obj = new MinStack();
+ * obj.push(val);
+ * obj.pop();
+ * int param_3 = obj.top();
+ * int param_4 = obj.getMin();
+ */
 ```
 
 ### 0217: Contains Duplicate

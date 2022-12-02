@@ -6,6 +6,8 @@ description = "Lessons from a Year Among the Oldest Old"
 ### Resources
 
 - [John Leland (约翰·利兰)](https://www.goodreads.com/author/show/9828556)
+  > 我会中英交替阅读 (sometimes the original version, sometimes the translated version)
+
   - [Happiness Is a Choice You Make: Lessons from a Year Among the Oldest Old](https://www.goodreads.com/book/show/35259558)
   - [长寿的代价：我和六位老人共处的一年](https://www.goodreads.com/book/show/57556028) (中文版)
 
@@ -38,3 +40,19 @@ description = "Lessons from a Year Among the Oldest Old"
 > It was not a role I performed with much distinction. I did my best to have dinner with her every couple of weeks and accompanied her on the occasional night in the ER. I pretended not to notice that she might want more than that—best to honor her independence, I told myself—and so did she.
 >
 > Neither of us was well equipped for the stage of life we had stumbled into together: she, at eighty-six, without an idea of where to find meaning, and me without an idea of how to help.
+
+#### 积极认知
+
+> 对俄亥俄州居民展开的长期调查表明，如果根据是否赞同“你越老就越没用”之类的说法来衡量，那么对老龄有积极认知的人平均能多活7.5年，远比只是锻炼或者不吸烟的人活得更长。
+
+#### 视角
+
+> 快乐不在于极力征服，而在于与他人的关系。
+
+#### 境
+
+##### 一面
+
+> 明天预示着思维和身体的进一步衰退，对生活的掌控更弱，朋友和爱人更少，或是缓慢或是快速地走向死亡。无论他们有什么健康问题——糖尿病、关节炎、健忘、心脏病、老眼昏花或者听力不佳，都只会不断恶化。伤口愈合缓慢，咳嗽没完没了。他们从未在电视上看到过像自己这样的人；陌生人在街头或商店里无视他们，不想与老先生或者老太太的生活有任何瓜葛。如果他们抱怨，呃，孩子可能会拒他们于千里之外。
+
+##### 另一面
