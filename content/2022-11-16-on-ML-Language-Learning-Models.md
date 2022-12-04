@@ -1,10 +1,14 @@
 +++
-title = "On Language Learning Models"
+title = "On Machine Learning Language Models"
 description = "Will we run out of dataset to train for AI?"
 +++
 
-- Source: <https://www.lesswrong.com/posts/Couhhp4pPHbbhJ2Mg/will-we-run-out-of-ml-data-evidence-from-projecting-dataset>
+- Source: [https://www.lesswrong.com/posts/Couhhp4pPHbbhJ2Mg/will-we-run-out-of-ml-data-evidence-from-projecting-dataset](https://www.lesswrong.com/posts/Couhhp4pPHbbhJ2Mg/will-we-run-out-of-ml-data-evidence-from-projecting-dataset)
 - Will we run out of ML data? Evidence from projecting dataset size trends
+
+> It's also quite relevant when people wonders things like *will we be able to train an AI with data that were produced by another AI*, will the results be any better? Unexpected, or worse?
+>
+> 本文亦探讨了「以此 AI (的数据) 训练另一个 AI，结(效)果会更好，还是会有惊奇的事情发生？」
 
 > As people with least machine learning knowledge would know, training data might be the biggest things for the whole process. Though we do have some interesting innovations which could require less data yet getting better results, it wouldn't be sure or desirable (pure speculation, I have no data to back up this claim) for most other machine learning projects.
 
