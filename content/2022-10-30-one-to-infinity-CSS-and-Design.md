@@ -42,15 +42,15 @@ BootStrap is still amazing (so I heard) though.
 
 #### Concept
 
-1. The HTML will always have some types of styling attached to them
+- The HTML will always have some types of styling attached to them
 
  > It's called *User Agent Styles*. Why? Because *HTML* is just like *Markdown*, they are markup languages. It means it was merely texts, and the actual styling must be done by the software (whether it's renderer for the *Markdown* or the *Browser* for rendering HTML code).
 
-2. Specificity
+- Specificity
 
  > Based my experience, more clearer path wins. Or you could just debug them using the developer console.
 
-3. Font
+- Font
 
  > Keywords: `monospace`, `sans` and `sans-serif`
 
@@ -66,27 +66,28 @@ BootStrap is still amazing (so I heard) though.
  }
  ```
 
-4. Layout Model
+- Layout Model
 
 - Three types of them
     1. Dumb built-in methods like `position` and such
     2. Newly introduced *CSS Flexbox* and *CSS Grid*
-      > More methods dedicated to the layout are available to you
 
-      ```css
-      .stuff {
-        display: flex;
+    > More methods dedicated to the layout are available to you
 
-        /*
-          Now all the layout methods of CSS Flex would be avaialble to this
-          parent and all of its children elements and selectors!
-        */
-      }
-      ```
+    ```css
+    .stuff {
+      display: flex;
+
+      /*
+        Now all the layout methods of CSS Flex would be avaialble to this
+        parent and all of its children elements and selectors!
+      */
+    }
+    ```
 
     3. Frameworks like *Bootstrap* because back then we do not have things like *Flexbox*
 
-4. Variable
+- Variable
 
   ```css
   /* Global and Local Variable */
