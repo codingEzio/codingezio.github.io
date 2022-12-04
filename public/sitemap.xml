@@ -4,6 +4,10 @@
         <loc>https://codingezio.github.io/</loc>
     </url>
     <url>
+        <loc>https://codingezio.github.io/about-this-blog/</loc>
+        <lastmod>2022-12-04</lastmod>
+    </url>
+    <url>
         <loc>https://codingezio.github.io/about/</loc>
     </url>
     <url>
@@ -327,8 +331,16 @@
         <lastmod>2022-11-16</lastmod>
     </url>
     <url>
+        <loc>https://codingezio.github.io/on-network-stack/</loc>
+        <lastmod>2022-12-04</lastmod>
+    </url>
+    <url>
         <loc>https://codingezio.github.io/on-presentation/</loc>
         <lastmod>2022-12-02</lastmod>
+    </url>
+    <url>
+        <loc>https://codingezio.github.io/on-system-design/</loc>
+        <lastmod>2022-12-04</lastmod>
     </url>
     <url>
         <loc>https://codingezio.github.io/on-time/</loc>
