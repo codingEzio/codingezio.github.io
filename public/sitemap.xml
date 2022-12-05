@@ -275,6 +275,14 @@
         <lastmod>2022-10-12</lastmod>
     </url>
     <url>
+        <loc>https://codingezio.github.io/microservice-01-concepts/</loc>
+        <lastmod>2022-12-05</lastmod>
+    </url>
+    <url>
+        <loc>https://codingezio.github.io/microservice-02-in-practice/</loc>
+        <lastmod>2022-12-05</lastmod>
+    </url>
+    <url>
         <loc>https://codingezio.github.io/motivation-for-leetcode/</loc>
         <lastmod>2022-09-12</lastmod>
     </url>
@@ -341,10 +349,6 @@
     <url>
         <loc>https://codingezio.github.io/on-longevity/</loc>
         <lastmod>2022-12-01</lastmod>
-    </url>
-    <url>
-        <loc>https://codingezio.github.io/on-microservice/</loc>
-        <lastmod>2022-10-05</lastmod>
     </url>
     <url>
         <loc>https://codingezio.github.io/on-ml-language-learning-models/</loc>

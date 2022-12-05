@@ -1,22 +1,38 @@
 +++
-title = "On Microservice"
-description = "Microservice and Spring Cloud"
+title = "Microservice 01 - Concepts (微服务概念)"
+description = "Concepts around Microservices"
 +++
 
 
-## Microservice
+## Simple Introduction
+
+### Before We Begin
+
+> Whether it's *Distributed System* or *Microservices*, it's all basically the same thing. They were just abstractions to describe certain things.
+>> Microservices: were often need to run on different machines, therefore *distributed*
 
 ### Conceptually
 
-- Divide and conquer
-- Three parts when developing an application
+#### What It Is
+
+- It's basically *divide and conquer*
+- Almost all applications were built by these parts
   - Frontend
   - Database
   - Backend
     1. this is the part we call *Monolithic*
-    2. this is the part we wanna divided into smaller parts
+    2. this is the part we wanna *divide* into smaller **managable** parts
 
-### Terminology
+### Practically
+
+#### How It Was Done
+
+1. Divide the application into different **parts**
+2. Use different software to solve different **problems**
+
+## Academic-ish Explanations
+
+### Terminology Would Be Used
 
 #### Component
 
@@ -31,9 +47,7 @@ description = "Microservice and Spring Cloud"
 
 - Out of process components who communicate in the form of a HTTP <small>(Web Service Request)</small> call or a RPC <small>(Remote Procedure Call)</small> call
 
-### Definition
-
-> Divided into sections in order to make this as easy as possible
+### Why Do Microservices
 
 #### Developing an application (your big or small projects)
 
