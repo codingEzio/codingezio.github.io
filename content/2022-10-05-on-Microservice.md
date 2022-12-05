@@ -18,14 +18,14 @@ description = "Microservice and Spring Cloud"
 
 ### Terminology
 
-##### Component
+#### Component
 
 > **Part** of your system or application, like the database technology, cache, or the messaging queue
 
 - An unit of software that can be independently replaced and upgraded
 - Like the ***database*** you are using (you shall be able to switch from *MySQL* to *Oracle* pretty easily because of the **architecture** you've built)
 
-##### Service
+#### Service
 
 > [An **unit** of **functionality**](https://simplicable.com/new/services-vs-components) that can be independently **deployed** separately, like the P*roduct Recommendation* for your E-Commerce project
 
@@ -35,7 +35,7 @@ description = "Microservice and Spring Cloud"
 
 > Divided into sections in order to make this as easy as possible
 
-##### Developing an application (your big or small projects)
+#### Developing an application (your big or small projects)
 
 > How low the coupling you want it to be?
 >
@@ -46,12 +46,12 @@ description = "Microservice and Spring Cloud"
 - communicate with lightweight mechanisms (locally the REST is fine, but since the components are in different processes(could also be considered as on different machines, aka. distributed system), not you need more sophisticated way to let them be able to find and talk to each other)
 - and often an HTTP resource API (which might be RESTful HTTP or RPC styled)
 
-##### They were often
+#### They were often
 
 - built around business capabilities (that means your project has divided into different parts based on your business)
 - independently deployable and automatically deployed
 
-##### Scaling
+#### Scaling
 
 [Horizontal vs Vertical Scaling](https://old.reddit.com/r/algorithms/comments/rldfxv/horizontal_vs_vertical_scaling/hpfbmyu/)
 
