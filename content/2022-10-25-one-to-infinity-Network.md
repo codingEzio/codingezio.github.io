@@ -30,7 +30,7 @@ description = "On Network in Computer Science"
 
 ### 抽象与实现 Model and Implementation
 
-> References [\#1](https://stackoverflow.com/a/9329173/6273859), [\#2](https://stackoverflow.com/a/49233604/6273859), [\#3](https://networkengineering.stackexchange.com/a/68467/86378), [\#4](https://networkengineering.stackexchange.com/a/67557/86378), [\#5](https://serverfault.com/a/10248/978709), [\#6](http://www.geeknxt.com/network-layers/), [\#7](https://en.wikipedia.org/wiki/Fiber_Distributed_Data_Interface) || <small>(ref for ref)</small> [\#8](https://security.stackexchange.com/a/258825), [\#9](https://networkengineering.stackexchange.com/a/76220/86378), [\#10](https://stackoverflow.com/a/32294152/6273859), [\#11](https://www.ibm.com/docs/en/zos-basic-skills?topic=layer-address-resolution-protocol-arp), [\#12](https://learningnetwork.cisco.com/s/article/osi-model-reference-chart)
+> References [\#1](https://stackoverflow.com/a/9329173/6273859), [\#2](https://stackoverflow.com/a/49233604/6273859), [\#3](https://networkengineering.stackexchange.com/a/68467/86378), [\#4](https://networkengineering.stackexchange.com/a/67557/86378), [\#5](https://serverfault.com/a/10248/978709), [\#6](http://www.geeknxt.com/network-layers/), [\#7](https://en.wikipedia.org/wiki/Fiber_Distributed_Data_Interface) || <small>(ref for ref)</small> [\#8](https://security.stackexchange.com/a/258825), [\#9](https://networkengineering.stackexchange.com/a/76220/86378), [\#10](https://stackoverflow.com/a/32294152/6273859), [\#11](https://www.ibm.com/docs/en/zos-basic-skills?topic=layer-address-resolution-protocol-arp), [\#12](https://learningnetwork.cisco.com/s/article/osi-model-reference-chart), [\#13](https://old.reddit.com/r/explainlikeimfive/comments/bzfrx5/eli5_what_is_tcpip_and_why_is_it_so_prevalent_in/)
 
 - TCP/IP 层分{络接-网际-传输-应用}
 - TCP/IP 较OSI折中, 其纯理论且晚
@@ -244,19 +244,49 @@ description = "On Network in Computer Science"
   - cookie不可 切于 技临储sessionStorage (类localStorage但不持久)
   - 分布式-非同机无session 另库Redis存之-划众机访库-处可循
 
-### TCP 握手 🤝🤝🤝
+### TCP 从相识到离别
 
-> References: [\#](\), [\#](\), [\#](\), [\#](\) || <small>(ref for ref)</small> [\#](\), [\#](\),
+> References: [\#1](https://afteracademy.com/blog/what-is-a-tcp-3-way-handshake-process/), [\#2](https://aurumme.com/atech/tcp-3-way-handshake-process/), [\#3](https://old.reddit.com/r/explainlikeimfive/comments/pawjz9/eli5_tcp_3_way_handshake/), [\#4](https://wiki.wireshark.org/TCP-4-times-close.md)
 
-- A
-- A
+#### 握手 🤝🤝🤝
 
-### TCP 挥手 🙋🙋🙋🙋
+> `SYN` 为己包配随机序列号
 
-> References: [\#](\), [\#](\), [\#](\), [\#](\) || <small>(ref for ref)</small> [\#](\), [\#](\),
+##### 技术流程 🚴
 
-- A
-- A
+  > 😜 *`CLOSE`*
+
+- 客 发 `SYN`
+- 服 返 `ACK` 即上`SYN`增壹 + `SYN`
+- 客 返 `ACK` 即上`SYN`增壹
+- 😁 *`ESTABLISHED`*
+
+##### 白话流程 🏄
+
+- 服务器你在吗😊
+- 我在的😊😊 + 嗯嗯😁
+- 嗯嗯😁😁
+
+#### 挥手 🖐🖐🖐🖐
+
+> `FIN` 为己包配随机序列号
+
+##### 技术流程 🚴
+
+  > 🗣 *`ESTABLISHED`*
+
+- 客 发 `FIN`
+- 服 返 `ACK` 即上`FIN`增壹 + 己首序 (处全务再`FIN`)
+- 服 返 `ACK` 即上`FIN`增壹 + 己另序 `FIN`
+- 客 返 `ACK` 即上`FIN`增壹
+- ✋ *`CLOSE`*
+
+##### 白话流程 🏄
+
+- 服务器我走了啊🥺
+- 行吧🥺🥺 + 唉 (酝酿好情绪)
+- 行吧🥺🥺 + 走吧😔
+- 拜拜😔😔
 
 ### TCP 可靠
 
@@ -264,7 +294,3 @@ description = "On Network in Computer Science"
 
 - A
 - A
-
------
-
-> References: [\#](\), [\#](\), [\#](\), [\#](\) || <small>(ref for ref)</small> [\#](\), [\#](\),
