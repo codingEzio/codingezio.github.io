@@ -119,19 +119,19 @@ description = "Problems to solve, stacks to choose etc."
 
 #### Examples when [*Kafka* was used with *ZooKeeper*](https://tobebetterjavaer.com/mq/kafka.html#%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84)
 
-- users call stuff, services process and return stuff
-  - consumer / producer
+- users call stuff, the stuff generates requests, services process and return stuff
+  - produce / rconsumer
 - too many users or users many too many calls (=> too many messages)
   - multiple brokers to handle (like multiple attendants to take orders)
   - combined them, we call it *cluster*, i.e. *Kafka Cluster*
 - multiple brokers needs to be managed
-  - because the multiple requests might be sent by one consumers
+  - because the multiple requests might be sent by one publishers
     - yet it's on different brokers
       - therefore the order, the speed could *not* be guaranteed
       - but we need to make that happen
     - therefore you need put the config (and/with metadata) somewhere
     - ZooKeeper does stuff like service registration, config management and so on
-      - we want the *config management*
+      - we want the *config management* (hold, replicate, publish)
 
 -----
 
