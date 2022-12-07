@@ -1,5 +1,5 @@
 +++
-title = "LeetCode for SQL"
+title = "Algorithm - LeetCode for SQL Problems"
 description = "Practing by solving SQL problems on LeetCode"
 +++
 
@@ -32,7 +32,7 @@ description = "Practing by solving SQL problems on LeetCode"
 SELECT P.FirstName, P.LastName, A.City, A.State
 FROM      Person  AS P
 LEFT JOIN Address AS A
-ON        P.PersonId = A.PersonId 			
+ON        P.PersonId = A.PersonId
 ```
 
 #### [176. 第二高的薪水](https://leetcode.cn/problems/second-highest-salary/)
@@ -40,7 +40,7 @@ ON        P.PersonId = A.PersonId
 ```sql
 # placeholder
 
-``` 
+```
 
 #### [177. 第N高的薪水](https://leetcode.cn/problems/nth-highest-salary/)
 
@@ -49,14 +49,12 @@ ON        P.PersonId = A.PersonId
 
 ```
 
-
 #### [178. 分数排名](https://leetcode.cn/problems/rank-scores/)
 
 ```sql
 # placeholder
 
 ```
-
 
 #### [180. 连续出现的数字](https://leetcode.cn/problems/consecutive-numbers/)
 
@@ -65,14 +63,12 @@ ON        P.PersonId = A.PersonId
 
 ```
 
-
 #### [181. 超过经理收入的员工](https://leetcode.cn/problems/employees-earning-more-than-their-managers/)
 
 ```sql
 # placeholder
 
 ```
-
 
 #### [182. 查找重复的电子邮箱](https://leetcode.cn/problems/duplicate-emails/)
 
@@ -81,14 +77,12 @@ ON        P.PersonId = A.PersonId
 
 ```
 
-
 #### [183. 从不订购的客户](https://leetcode.cn/problems/customers-who-never-order/)
 
 ```sql
 # placeholder
 
 ```
-
 
 #### [184. 部门工资最高的员工](https://leetcode.cn/problems/department-highest-salary/)
 
@@ -97,14 +91,12 @@ ON        P.PersonId = A.PersonId
 
 ```
 
-
 #### [185. 部门工资前三高的所有员工](https://leetcode.cn/problems/department-top-three-salaries/)
 
 ```sql
 # placeholder
 
 ```
-
 
 #### [196. 删除重复的电子邮箱](https://leetcode.cn/problems/delete-duplicate-emails/)
 
@@ -113,14 +105,12 @@ ON        P.PersonId = A.PersonId
 
 ```
 
-
 #### [197. 上升的温度](https://leetcode.cn/problems/rising-temperature/)
 
 ```sql
 # placeholder
 
 ```
-
 
 #### [511. 游戏玩法分析 I](https://leetcode.cn/problems/game-play-analysis-i/)
 
@@ -129,14 +119,12 @@ ON        P.PersonId = A.PersonId
 
 ```
 
-
 #### [584. 寻找用户推荐人](https://leetcode.cn/problems/find-customer-referee/)
 
 ```sql
 # placeholder
 
 ```
-
 
 #### [595. 大的国家](https://leetcode.cn/problems/big-countries/)
 
@@ -145,14 +133,12 @@ ON        P.PersonId = A.PersonId
 
 ```
 
-
 #### [596. 超过5名学生的课](https://leetcode.cn/problems/classes-more-than-5-students/)
 
 ```sql
 # placeholder
 
 ```
-
 
 #### [626. 换座位](https://leetcode.cn/problems/exchange-seats/)
 
@@ -161,14 +147,12 @@ ON        P.PersonId = A.PersonId
 
 ```
 
-
 #### [627. 变更性别](https://leetcode.cn/problems/swap-salary/)
 
 ```sql
 # placeholder
 
 ```
-
 
 #### [1141. 查询近30天活跃用户数](https://leetcode.cn/problems/user-activity-for-the-past-30-days-i/)
 
@@ -177,14 +161,12 @@ ON        P.PersonId = A.PersonId
 
 ```
 
-
 #### [1179. 重新格式化部门表](https://leetcode.cn/problems/reformat-department-table/)
 
 ```sql
 # placeholder
 
 ```
-
 
 #### [1484. 按日期分组销售产品](https://leetcode.cn/problems/group-sold-products-by-the-date/)
 
@@ -193,10 +175,13 @@ ON        P.PersonId = A.PersonId
 
 ```
 
-
 #### [1795. 每个产品在不同商店的价格](https://leetcode.cn/problems/rearrange-products-table/)
 
 ```sql
 # placeholder
 
 ```
+
+-----
+
+> This post was originally written on October 17, 2022. Was rewritten on December 7, 2022 with the help of *ChatGPT* developed by *OpenAI*.

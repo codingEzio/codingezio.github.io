@@ -1,5 +1,5 @@
 +++
-title = "LeetCode for Algorithm"
+title = "Algorithm - LeetCode for General Problems"
 description = "Practing by solving Algorithm questions on LeetCode"
 +++
 
@@ -47,6 +47,24 @@ class Solution {
 }
 ```
 
+### 0009. Palindrome Number
+
+```python
+class Solution:
+    def isPalindrome(self, x: int) -> bool:
+        if x < 0: return False
+        if x == 0: return True
+
+        xcp = x # a copy of the original number for us to compare to rev result
+        rev = 0 # reverse computation; trying to cal one that equals to x
+
+        while x > 0:
+            rev = (rev * 10) + (x % 10)
+            x = x // 10
+
+        return xcp = rev
+```
+
 ### 0013: 3Sum
 
 ```python
@@ -85,6 +103,14 @@ class Solution:
                     R -= 1
 
         return candidateCombined
+```
+
+### 0014. Longest Common Prefix
+
+```python
+class Solution:
+    def longestCommonPrefix(self, strs: List[str]) -> str:
+        pass
 ```
 
 ### 0019: Remove Nth Node From End of List
@@ -541,3 +567,7 @@ class Solution {
     }
 }
 ```
+
+-----
+
+> This post was originally written on October 18, 2022. Was rewritten on December 7, 2022 with the help of *ChatGPT* developed by *OpenAI*.
