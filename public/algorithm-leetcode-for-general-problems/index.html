@@ -1,4 +1,4 @@
-<!doctype html><html lang=en><head><meta charset=UTF-8><meta content="width=device-width,initial-scale=1.0" name=viewport><title>Algorithm - LeetCode for General Problems · A simple blog</title><meta content="Practing by solving Algorithm questions on LeetCode" name=description><link rel="shortcut icon" href=https://codingezio.github.io/favicon.ico><link href=https://codingezio.github.io/atom.xml rel=alternate title=RSS type=application/atom+xml><style>html,body{background:#fffaf7;color:#2d2d2d;font:16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"}a,a:visited{color:darkred;text-decoration:none}a:hover{text-decoration:underline}main{margin:auto;max-width:38rem;padding:0.8rem}pre{background:white;overflow:scroll;padding:1rem}td{border:1px solid #2d2d2d;padding:10px}img{height:auto;max-width:100%}.homepage-list{list-style:none;padding:1rem 0}.homepage-list li{align-items:center;display:flex;flex-wrap:wrap;justify-content:space-between;margin-bottom:10px}@media (max-width: 38rem){.homepage-list li a{width:100%}}</style><meta content="A simple blog" property=og:site_name><meta content="Algorithm - LeetCode for General Problems" property=og:title><meta content="Practing by solving Algorithm questions on LeetCode" property=og:description><meta content=https://codingezio.github.io/algorithm-leetcode-for-general-problems/ property=og:url><meta property=og:image><meta content=article property=og:type><meta content=2022-12-07T00:00:00+00:00 property=article:published_time><body><main id=main role=main><header role=banner><h3 style=margin-top:0;><a href=https://codingezio.github.io title=Home>A simple blog</a> <br><small>Rants and thoughts</small></h3></header><hr><article><h1>Algorithm - LeetCode for General Problems</h1><p style=font-size:90%;>Posted on <time datetime=2022-12-07T00:00:00+00:00>December 07, 2022</time><h2 id=foreword>Foreword</h2><h4 id=why>Why</h4><ul><li>Review what I've learnt from solving these algorithms<li>A short gist of what this problem is <em>for</em><li>Save time</ul><h4 id=what>What</h4><ol><li>Sorted.. by my will<li>The prefix of the link would start with <code>https://leetcode.cn</code><li>Back then I just do them randomly; Now I mostly reference to <a href=https://raymondjiang.net/2022/02/18/about-leetcode-blind-75/>Blind 75</a></ol><h2 id=thoughts-and-code>Thoughts and Code</h2><h3 id=0001-two-sum>0001: Two Sum</h3><pre class=language-java data-lang=java style=background-color:#2b303b;color:#c0c5ce;><code class=language-java data-lang=java><span style=color:#b48ead;>class </span><span style=color:#ebcb8b;>Solution </span><span style=color:#eff1f5;>{
+<!doctype html><html lang=en><head><meta charset=UTF-8><meta content="width=device-width,initial-scale=1.0" name=viewport><title>Algorithm - LeetCode for General Problems · A simple blog</title><meta content="Practing by solving Algorithm questions on LeetCode" name=description><link rel="shortcut icon" href=https://codingezio.github.io/favicon.ico><link href=https://codingezio.github.io/atom.xml rel=alternate title=RSS type=application/atom+xml><style>html,body{background:#fffaf7;color:#2d2d2d;font:16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"}a,a:visited{color:darkred;text-decoration:none}a:hover{text-decoration:underline}main{margin:auto;max-width:38rem;padding:0.8rem}pre{background:white;overflow:scroll;padding:1rem}td{border:1px solid #2d2d2d;padding:10px}img{height:auto;max-width:100%}.homepage-list{list-style:none;padding:1rem 0}.homepage-list li{align-items:center;display:flex;flex-wrap:wrap;justify-content:space-between;margin-bottom:10px}@media (max-width: 38rem){.homepage-list li a{width:100%}}</style><meta content="A simple blog" property=og:site_name><meta content="Algorithm - LeetCode for General Problems" property=og:title><meta content="Practing by solving Algorithm questions on LeetCode" property=og:description><meta content=https://codingezio.github.io/algorithm-leetcode-for-general-problems/ property=og:url><meta property=og:image><meta content=article property=og:type><meta content=2022-12-07T00:00:00+00:00 property=article:published_time><body><main id=main role=main><header role=banner><h3 style=margin-top:0;><a href=https://codingezio.github.io title=Home>A simple blog</a> <br><small>Rants and thoughts</small></h3></header><hr><article><h1>Algorithm - LeetCode for General Problems</h1><p style=font-size:90%;>Posted on <time datetime=2022-12-07T00:00:00+00:00>December 07, 2022</time><h2 id=foreword>Foreword</h2><h4 id=why>Why</h4><ul><li>Review what I've learnt from solving these algorithms<li>A short gist of what this problem is <em>for</em><li>Save time</ul><h4 id=what>What</h4><ol><li>Sorted.. by my will<li>The prefix of the link would start with <code>https://leetcode.cn</code><li>Back then I just do them randomly; Now I mostly reference to <a href=https://raymondjiang.net/2022/02/18/about-leetcode-blind-75/>Blind 75</a></ol><h2 id=thoughts-and-code>Thoughts and Code</h2><h3 id=0001-two-sum>0001. Two Sum</h3><pre class=language-java data-lang=java style=background-color:#2b303b;color:#c0c5ce;><code class=language-java data-lang=java><span style=color:#b48ead;>class </span><span style=color:#ebcb8b;>Solution </span><span style=color:#eff1f5;>{
 </span><span style=color:#eff1f5;>    </span><span style=color:#b48ead;>public int[] </span><span style=color:#8fa1b3;>twoSum</span><span style=color:#eff1f5;>(</span><span style=color:#b48ead;>int[] </span><span style=color:#bf616a;>nums</span><span style=color:#eff1f5;>, </span><span style=color:#b48ead;>int </span><span style=color:#bf616a;>target</span><span style=color:#eff1f5;>) {
 </span><span style=color:#eff1f5;>        </span><span style=color:#ebcb8b;>HashMap</span><span style=color:#eff1f5;><</span><span style=color:#ebcb8b;>Integer</span><span style=color:#eff1f5;>, </span><span style=color:#ebcb8b;>Integer</span><span style=color:#eff1f5;>> remainders </span><span>= </span><span style=color:#b48ead;>new </span><span style=color:#ebcb8b;>HashMap</span><span style=color:#eff1f5;>();
 </span><span style=color:#eff1f5;>
@@ -34,7 +34,24 @@
 </span><span>            x = x // </span><span style=color:#d08770;>10
 </span><span>
 </span><span>        </span><span style=color:#b48ead;>return </span><span>xcp = rev
-</span></code></pre><h3 id=0013-3sum>0013: 3Sum</h3><pre class=language-python data-lang=python style=background-color:#2b303b;color:#c0c5ce;><code class=language-python data-lang=python><span style=color:#b48ead;>class </span><span style=color:#ebcb8b;>Solution</span><span style=color:#eff1f5;>:
+</span></code></pre><h3 id=0011-container-with-most-water>0011. Container With Most Water</h3><pre class=language-python data-lang=python style=background-color:#2b303b;color:#c0c5ce;><code class=language-python data-lang=python><span style=color:#b48ead;>class </span><span style=color:#ebcb8b;>Solution</span><span style=color:#eff1f5;>:
+</span><span>    </span><span style=color:#b48ead;>def </span><span style=color:#8fa1b3;>maxArea</span><span>(</span><span style=color:#bf616a;>self</span><span>, </span><span style=color:#bf616a;>height</span><span>: List[int]) -> int:
+</span><span>        areaMax = </span><span style=color:#d08770;>0
+</span><span>        L, R = </span><span style=color:#d08770;>0</span><span>, </span><span style=color:#96b5b4;>len</span><span>(height) - </span><span style=color:#d08770;>1
+</span><span>
+</span><span>        </span><span style=color:#b48ead;>while </span><span>L < R:
+</span><span>            area = (R - L) * </span><span style=color:#96b5b4;>min</span><span>(height[L], height[R])
+</span><span>
+</span><span>            </span><span style=color:#b48ead;>if </span><span>areaMax < area:
+</span><span>                areaMax = area
+</span><span>
+</span><span>            </span><span style=color:#b48ead;>if </span><span>height[L] < height[R]:
+</span><span>                L += </span><span style=color:#d08770;>1
+</span><span>            </span><span style=color:#b48ead;>elif </span><span>height[L] >= height[R]:
+</span><span>                R -= </span><span style=color:#d08770;>1
+</span><span>
+</span><span>        </span><span style=color:#b48ead;>return </span><span>areaMax
+</span></code></pre><h3 id=0013-3sum>0013. 3Sum</h3><pre class=language-python data-lang=python style=background-color:#2b303b;color:#c0c5ce;><code class=language-python data-lang=python><span style=color:#b48ead;>class </span><span style=color:#ebcb8b;>Solution</span><span style=color:#eff1f5;>:
 </span><span>    </span><span style=color:#b48ead;>def </span><span style=color:#8fa1b3;>threeSum</span><span>(</span><span style=color:#bf616a;>self</span><span>, </span><span style=color:#bf616a;>nums</span><span>: List[int]) -> List[List[int]]:
 </span><span>        </span><span style=color:#65737e;>"""
 </span><span style=color:#65737e;>        Problem description simplified
@@ -69,10 +86,52 @@
 </span><span>                    R -= </span><span style=color:#d08770;>1
 </span><span>
 </span><span>        </span><span style=color:#b48ead;>return </span><span>candidateCombined
-</span></code></pre><h3 id=0014-longest-common-prefix>0014. Longest Common Prefix</h3><pre class=language-python data-lang=python style=background-color:#2b303b;color:#c0c5ce;><code class=language-python data-lang=python><span style=color:#b48ead;>class </span><span style=color:#ebcb8b;>Solution</span><span style=color:#eff1f5;>:
-</span><span>    </span><span style=color:#b48ead;>def </span><span style=color:#8fa1b3;>longestCommonPrefix</span><span>(</span><span style=color:#bf616a;>self</span><span>, </span><span style=color:#bf616a;>strs</span><span>: List[str]) -> str:
-</span><span>        </span><span style=color:#b48ead;>pass
-</span></code></pre><h3 id=0019-remove-nth-node-from-end-of-list>0019: Remove Nth Node From End of List</h3><pre class=language-python data-lang=python style=background-color:#2b303b;color:#c0c5ce;><code class=language-python data-lang=python><span style=color:#65737e;># Definition for singly-linked list.
+</span></code></pre><h3 id=0014-longest-common-prefix>0014. Longest Common Prefix</h3><pre class=language-java data-lang=java style=background-color:#2b303b;color:#c0c5ce;><code class=language-java data-lang=java><span style=color:#b48ead;>class </span><span style=color:#ebcb8b;>Solution </span><span style=color:#eff1f5;>{
+</span><span style=color:#eff1f5;>    </span><span style=color:#b48ead;>public </span><span style=color:#ebcb8b;>String </span><span style=color:#8fa1b3;>longestCommonPrefix</span><span style=color:#eff1f5;>(</span><span style=color:#ebcb8b;>String</span><span style=color:#b48ead;>[] </span><span style=color:#bf616a;>strs</span><span style=color:#eff1f5;>) {
+</span><span style=color:#eff1f5;>        </span><span style=color:#b48ead;>if </span><span style=color:#eff1f5;>(strs </span><span>== </span><span style=color:#d08770;>null </span><span>||</span><span style=color:#eff1f5;> strs.length </span><span>== </span><span style=color:#d08770;>0</span><span style=color:#eff1f5;>) {
+</span><span style=color:#eff1f5;>            </span><span style=color:#b48ead;>return </span><span>""</span><span style=color:#eff1f5;>;
+</span><span style=color:#eff1f5;>        }
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>        </span><span style=color:#65737e;>// Take 'flow, flower, flight' for example
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>        </span><span style=color:#65737e;>// [1] 'flow'
+</span><span style=color:#eff1f5;>        </span><span style=color:#ebcb8b;>String</span><span style=color:#eff1f5;> prefix_lngst </span><span>=</span><span style=color:#eff1f5;> strs[</span><span style=color:#d08770;>0</span><span style=color:#eff1f5;>];
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>        </span><span style=color:#65737e;>// [2] index for 1, 2, i.e. 'flight' and 'flying'
+</span><span style=color:#eff1f5;>        </span><span style=color:#b48ead;>for </span><span style=color:#eff1f5;>(</span><span style=color:#b48ead;>int</span><span style=color:#eff1f5;> i </span><span>= </span><span style=color:#d08770;>1</span><span style=color:#eff1f5;>; i </span><span><</span><span style=color:#eff1f5;> strs.length; i</span><span>++</span><span style=color:#eff1f5;>) {
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>            </span><span style=color:#65737e;>// [3] compare 'flight' and 'flying' with changing strs[0]
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>            </span><span style=color:#65737e;>// [4] first loop for 'flight'
+</span><span style=color:#eff1f5;>            </span><span style=color:#65737e;>//     - is 'flow' in 'flight'? -- indexOf returns -1
+</span><span style=color:#eff1f5;>            </span><span style=color:#65737e;>//     - is 'flo ' in 'flight'? -- indexOf returns -1
+</span><span style=color:#eff1f5;>            </span><span style=color:#65737e;>//     - is 'fl  ' in 'flight'? -- indexOf returns 0 (loop ends)
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>            </span><span style=color:#65737e;>// Quick recap for 'indexOf()' (where do the 2nd param begin in the 1st one)
+</span><span style=color:#eff1f5;>            </span><span style=color:#65737e;>// - 'abc'.indexOf( 'a') -> 0
+</span><span style=color:#eff1f5;>            </span><span style=color:#65737e;>// - 'abc'.indexOf('ab') -> 0
+</span><span style=color:#eff1f5;>            </span><span style=color:#65737e;>// - 'abc'.indexOf('ac') -> -1
+</span><span style=color:#eff1f5;>            </span><span style=color:#65737e;>// - 'abc'.indexOf( 'c') -> -1
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>            </span><span style=color:#b48ead;>while </span><span style=color:#eff1f5;>(strs[i].</span><span style=color:#bf616a;>indexOf</span><span style=color:#eff1f5;>(prefix) </span><span>!= </span><span style=color:#d08770;>0</span><span style=color:#eff1f5;>) {
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>                </span><span style=color:#65737e;>// [5] substract the last character from itself
+</span><span style=color:#eff1f5;>                </span><span style=color:#65737e;>//     e.g. flow -> flo -> fl
+</span><span style=color:#eff1f5;>                prefix </span><span>=</span><span style=color:#eff1f5;> prefix.</span><span style=color:#bf616a;>substring</span><span style=color:#eff1f5;>(</span><span style=color:#d08770;>0</span><span style=color:#eff1f5;>, prefix.</span><span style=color:#bf616a;>length</span><span style=color:#eff1f5;>() </span><span>- </span><span style=color:#d08770;>1</span><span style=color:#eff1f5;>);
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>                </span><span style=color:#b48ead;>if </span><span style=color:#eff1f5;>(prefix </span><span>== ""</span><span style=color:#eff1f5;>) {
+</span><span style=color:#eff1f5;>                    </span><span style=color:#65737e;>// [6] they doesn't even have the 1st character in common
+</span><span style=color:#eff1f5;>                    </span><span style=color:#65737e;>//     and since you minus/substract the last "straw",
+</span><span style=color:#eff1f5;>                    </span><span style=color:#65737e;>//     just return directly (no need for remaining strings)
+</span><span style=color:#eff1f5;>                    </span><span style=color:#b48ead;>return </span><span>""</span><span style=color:#eff1f5;>;
+</span><span style=color:#eff1f5;>                }
+</span><span style=color:#eff1f5;>            }
+</span><span style=color:#eff1f5;>        }
+</span><span style=color:#eff1f5;>
+</span><span style=color:#eff1f5;>        </span><span style=color:#b48ead;>return</span><span style=color:#eff1f5;> prefix_lngst;
+</span><span style=color:#eff1f5;>    }
+</span><span style=color:#eff1f5;>}
+</span></code></pre><h3 id=0019-remove-nth-node-from-end-of-list>0019. Remove Nth Node From End of List</h3><pre class=language-python data-lang=python style=background-color:#2b303b;color:#c0c5ce;><code class=language-python data-lang=python><span style=color:#65737e;># Definition for singly-linked list.
 </span><span style=color:#65737e;># class ListNode:
 </span><span style=color:#65737e;>#     def __init__(self, val=0, next=None):
 </span><span style=color:#65737e;>#         self.val = val
@@ -80,7 +139,7 @@
 </span><span style=color:#b48ead;>class </span><span style=color:#ebcb8b;>Solution</span><span style=color:#eff1f5;>:
 </span><span>    </span><span style=color:#b48ead;>def </span><span style=color:#8fa1b3;>removeNthFromEnd</span><span>(</span><span style=color:#bf616a;>self</span><span>, </span><span style=color:#bf616a;>head</span><span>: Optional[ListNode], </span><span style=color:#bf616a;>n</span><span>: int) -> Optional[ListNode]:
 </span><span>        </span><span style=color:#65737e;>"""
-</span><span style=color:#65737e;>        The main thing are these two
+</span><span style=color:#65737e;>        The core idea
 </span><span style=color:#65737e;>        - Caculate the actual steps need to be taken (reversed n)
 </span><span style=color:#65737e;>        - Link the one before the nth with the one preceed it (=> deleted)
 </span><span style=color:#65737e;>        """
@@ -100,7 +159,7 @@
 </span><span>        L.next = L.next.next
 </span><span>
 </span><span>        </span><span style=color:#b48ead;>return </span><span>dummy.next
-</span></code></pre><h3 id=0021-merge-two-sorted-lists>0021: Merge Two Sorted Lists</h3><pre class=language-python data-lang=python style=background-color:#2b303b;color:#c0c5ce;><code class=language-python data-lang=python><span style=color:#65737e;># Definition for singly-linked list.
+</span></code></pre><h3 id=0021-merge-two-sorted-lists>0021. Merge Two Sorted Lists</h3><pre class=language-python data-lang=python style=background-color:#2b303b;color:#c0c5ce;><code class=language-python data-lang=python><span style=color:#65737e;># Definition for singly-linked list.
 </span><span style=color:#65737e;># class ListNode:
 </span><span style=color:#65737e;>#     def __init__(self, val=0, next=None):
 </span><span style=color:#65737e;>#         self.val = val
@@ -128,7 +187,7 @@
 </span><span>            p.next = p2
 </span><span>
 </span><span>        </span><span style=color:#b48ead;>return </span><span>dummy.next
-</span></code></pre><h3 id=0023-merge-k-sorted-linked-list>0023: Merge K Sorted Linked List</h3><pre class=language-java data-lang=java style=background-color:#2b303b;color:#c0c5ce;><code class=language-java data-lang=java><span style=color:#65737e;>/*
+</span></code></pre><h3 id=0023-merge-k-sorted-linked-list>0023. Merge K Sorted Linked List</h3><pre class=language-java data-lang=java style=background-color:#2b303b;color:#c0c5ce;><code class=language-java data-lang=java><span style=color:#65737e;>/*
 </span><span style=color:#65737e;> * Definition for singly-linked list.
 </span><span style=color:#65737e;> * public class ListNode {
 </span><span style=color:#65737e;> *     int val;
@@ -185,7 +244,7 @@
 </span><span style=color:#eff1f5;>        </span><span style=color:#b48ead;>return</span><span style=color:#eff1f5;> dummy.next;
 </span><span style=color:#eff1f5;>    }
 </span><span style=color:#eff1f5;>}
-</span></code></pre><h3 id=0049-group-anagrams>0049: Group Anagrams</h3><pre class=language-python data-lang=python style=background-color:#2b303b;color:#c0c5ce;><code class=language-python data-lang=python><span style=color:#b48ead;>from </span><span>collections </span><span style=color:#b48ead;>import </span><span>defaultdict
+</span></code></pre><h3 id=0049-group-anagrams>0049. Group Anagrams</h3><pre class=language-python data-lang=python style=background-color:#2b303b;color:#c0c5ce;><code class=language-python data-lang=python><span style=color:#b48ead;>from </span><span>collections </span><span style=color:#b48ead;>import </span><span>defaultdict
 </span><span>
 </span><span style=color:#b48ead;>class </span><span style=color:#ebcb8b;>Solution</span><span style=color:#eff1f5;>:
 </span><span>    </span><span style=color:#b48ead;>def </span><span style=color:#8fa1b3;>groupAnagrams</span><span>(</span><span style=color:#bf616a;>self</span><span>, </span><span style=color:#bf616a;>strs</span><span>: List[str]) -> List[List[str]]:
@@ -205,7 +264,7 @@
 </span><span>            ans[</span><span style=color:#bf616a;>tuple</span><span>(count)].</span><span style=color:#bf616a;>append</span><span>(word)
 </span><span>
 </span><span>        </span><span style=color:#b48ead;>return </span><span style=color:#bf616a;>list</span><span>(ans.</span><span style=color:#bf616a;>values</span><span>())
-</span></code></pre><h3 id=0070-climbing-stairs>0070: Climbing Stairs</h3><pre class=language-python data-lang=python style=background-color:#2b303b;color:#c0c5ce;><code class=language-python data-lang=python><span style=color:#b48ead;>class </span><span style=color:#ebcb8b;>Solution</span><span style=color:#eff1f5;>:
+</span></code></pre><h3 id=0070-climbing-stairs>0070. Climbing Stairs</h3><pre class=language-python data-lang=python style=background-color:#2b303b;color:#c0c5ce;><code class=language-python data-lang=python><span style=color:#b48ead;>class </span><span style=color:#ebcb8b;>Solution</span><span style=color:#eff1f5;>:
 </span><span>    </span><span style=color:#b48ead;>def </span><span style=color:#8fa1b3;>climbStairs</span><span>(</span><span style=color:#bf616a;>self</span><span>, </span><span style=color:#bf616a;>n</span><span>: int) -> int:
 </span><span>        </span><span style=color:#b48ead;>if </span><span>n <= </span><span style=color:#d08770;>3</span><span>:
 </span><span>            </span><span style=color:#b48ead;>return </span><span>n
@@ -219,7 +278,49 @@
 </span><span>            second = _sum
 </span><span>
 </span><span>        </span><span style=color:#b48ead;>return </span><span>second
-</span></code></pre><h3 id=0124-binary-tree-maximum-path-sum>0124 Binary Tree Maximum Path Sum</h3><pre class=language-python data-lang=python style=background-color:#2b303b;color:#c0c5ce;><code class=language-python data-lang=python><span style=color:#65737e;># Definition for a binary tree node.
+</span></code></pre><h3 id=0088-merge-sorted-array>0088. Merge Sorted Array</h3><pre class=language-python data-lang=python style=background-color:#2b303b;color:#c0c5ce;><code class=language-python data-lang=python><span style=color:#b48ead;>class </span><span style=color:#ebcb8b;>Solution</span><span style=color:#eff1f5;>:
+</span><span>    </span><span style=color:#b48ead;>def </span><span style=color:#8fa1b3;>merge</span><span>(</span><span style=color:#bf616a;>self</span><span>, </span><span style=color:#bf616a;>nums1</span><span>: List[int], </span><span style=color:#bf616a;>m</span><span>: int, </span><span style=color:#bf616a;>nums2</span><span>: List[int], </span><span style=color:#bf616a;>n</span><span>: int) -> </span><span style=color:#d08770;>None</span><span>:
+</span><span>        </span><span style=color:#65737e;>"""
+</span><span style=color:#65737e;>        Do not return anything, modify nums1 in-place instead.
+</span><span style=color:#65737e;>        """
+</span><span>
+</span><span>        </span><span style=color:#65737e;># Premises to remember
+</span><span>        </span><span style=color:#65737e;># - Each array is already in the non-decreasing order (1 -> 1 -> 2)
+</span><span>        </span><span style=color:#65737e;># - As there would be any new numbers smaller, we compare in reverse
+</span><span>
+</span><span>        idxComb = m + n - </span><span style=color:#d08770;>1
+</span><span>        m -= </span><span style=color:#d08770;>1
+</span><span>        n -= </span><span style=color:#d08770;>1
+</span><span>
+</span><span>        </span><span style=color:#b48ead;>while </span><span>n >= </span><span style=color:#d08770;>0</span><span>:
+</span><span>
+</span><span>            </span><span style=color:#b48ead;>if </span><span>m >= </span><span style=color:#d08770;>0 </span><span>and nums1[m] > nums2[n]:
+</span><span>                nums1[idxComb] = nums1[m]
+</span><span>                m -= </span><span style=color:#d08770;>1
+</span><span>
+</span><span>            </span><span style=color:#b48ead;>else</span><span>:
+</span><span>                nums1[idxComb] = nums2[n]
+</span><span>                n -= </span><span style=color:#d08770;>1
+</span><span>
+</span><span>            idxComb -= </span><span style=color:#d08770;>1
+</span></code></pre><h3 id=0104-maximum-depth-of-binary-tree>0104. Maximum Depth of Binary Tree</h3><pre class=language-python data-lang=python style=background-color:#2b303b;color:#c0c5ce;><code class=language-python data-lang=python><span style=color:#65737e;># Definition for a binary tree node.
+</span><span style=color:#65737e;># class TreeNode:
+</span><span style=color:#65737e;>#     def __init__(self, val=0, left=None, right=None):
+</span><span style=color:#65737e;>#         self.val = val
+</span><span style=color:#65737e;>#         self.left = left
+</span><span style=color:#65737e;>#         self.right = right
+</span><span style=color:#b48ead;>class </span><span style=color:#ebcb8b;>Solution</span><span style=color:#eff1f5;>:
+</span><span>    </span><span style=color:#b48ead;>def </span><span style=color:#8fa1b3;>maxDepth</span><span>(</span><span style=color:#bf616a;>self</span><span>, </span><span style=color:#bf616a;>root</span><span>: Optional[TreeNode]) -> int:
+</span><span>        </span><span style=color:#b48ead;>if </span><span>root is </span><span style=color:#d08770;>None</span><span>:
+</span><span>            </span><span style=color:#b48ead;>return </span><span style=color:#d08770;>0
+</span><span>
+</span><span>        depth_left = </span><span style=color:#bf616a;>self</span><span>.</span><span style=color:#bf616a;>maxDepth</span><span>(root.left)
+</span><span>        depth_right = </span><span style=color:#bf616a;>self</span><span>.</span><span style=color:#bf616a;>maxDepth</span><span>(root.right)
+</span><span>
+</span><span>        depth_max = </span><span style=color:#96b5b4;>max</span><span>(depth_left, depth_right)
+</span><span>
+</span><span>        </span><span style=color:#b48ead;>return </span><span>depth_max + </span><span style=color:#d08770;>1
+</span></code></pre><h3 id=0124-binary-tree-maximum-path-sum>0124. Binary Tree Maximum Path Sum</h3><pre class=language-python data-lang=python style=background-color:#2b303b;color:#c0c5ce;><code class=language-python data-lang=python><span style=color:#65737e;># Definition for a binary tree node.
 </span><span style=color:#65737e;># class TreeNode:
 </span><span style=color:#65737e;>#     def __init__(self, val=0, left=None, right=None):
 </span><span style=color:#65737e;>#         self.val = val
@@ -229,7 +330,7 @@
 </span><span>    </span><span style=color:#b48ead;>def </span><span style=color:#8fa1b3;>maxPathSum</span><span>(</span><span style=color:#bf616a;>self</span><span>, </span><span style=color:#bf616a;>root</span><span>: TreeNode) -> int:
 </span><span>
 </span><span>        </span><span style=color:#b48ead;>pass
-</span></code></pre><h3 id=0125-valid-palindrome>0125: Valid Palindrome</h3><pre class=language-java data-lang=java style=background-color:#2b303b;color:#c0c5ce;><code class=language-java data-lang=java><span style=color:#b48ead;>class </span><span style=color:#ebcb8b;>Solution </span><span style=color:#eff1f5;>{
+</span></code></pre><h3 id=0125-valid-palindrome>0125. Valid Palindrome</h3><pre class=language-java data-lang=java style=background-color:#2b303b;color:#c0c5ce;><code class=language-java data-lang=java><span style=color:#b48ead;>class </span><span style=color:#ebcb8b;>Solution </span><span style=color:#eff1f5;>{
 </span><span style=color:#eff1f5;>    </span><span style=color:#b48ead;>public boolean </span><span style=color:#8fa1b3;>isPalindrome</span><span style=color:#eff1f5;>(</span><span style=color:#ebcb8b;>String </span><span style=color:#bf616a;>s</span><span style=color:#eff1f5;>) {
 </span><span style=color:#eff1f5;>        </span><span style=color:#b48ead;>int</span><span style=color:#eff1f5;> i </span><span>= </span><span style=color:#d08770;>0</span><span style=color:#eff1f5;>;
 </span><span style=color:#eff1f5;>        </span><span style=color:#b48ead;>int</span><span style=color:#eff1f5;> j </span><span>=</span><span style=color:#eff1f5;> s.</span><span style=color:#bf616a;>length</span><span style=color:#eff1f5;>() </span><span>- </span><span style=color:#d08770;>1</span><span style=color:#eff1f5;>;
@@ -261,7 +362,7 @@
 </span><span style=color:#eff1f5;>        </span><span style=color:#b48ead;>return </span><span style=color:#d08770;>false</span><span style=color:#eff1f5;>;
 </span><span style=color:#eff1f5;>    }
 </span><span style=color:#eff1f5;>}
-</span></code></pre><h3 id=0128-longest-consecutive-sequence>0128: Longest Consecutive Sequence</h3><pre class=language-python data-lang=python style=background-color:#2b303b;color:#c0c5ce;><code class=language-python data-lang=python><span style=color:#b48ead;>class </span><span style=color:#ebcb8b;>Solution</span><span style=color:#eff1f5;>:
+</span></code></pre><h3 id=0128-longest-consecutive-sequence>0128. Longest Consecutive Sequence</h3><pre class=language-python data-lang=python style=background-color:#2b303b;color:#c0c5ce;><code class=language-python data-lang=python><span style=color:#b48ead;>class </span><span style=color:#ebcb8b;>Solution</span><span style=color:#eff1f5;>:
 </span><span>    </span><span style=color:#b48ead;>def </span><span style=color:#8fa1b3;>longestConsecutive</span><span>(</span><span style=color:#bf616a;>self</span><span>, </span><span style=color:#bf616a;>nums</span><span>: List[int]) -> int:
 </span><span>        seq_no_dups = </span><span style=color:#bf616a;>set</span><span>(nums)
 </span><span>        len_longest = </span><span style=color:#d08770;>0
@@ -276,7 +377,7 @@
 </span><span>                    len_sub_seq += </span><span style=color:#d08770;>1
 </span><span>
 </span><span>        </span><span style=color:#b48ead;>return </span><span>len_longest
-</span></code></pre><h3 id=0141-linked-list-cycle>0141: Linked List Cycle</h3><pre class=language-java data-lang=java style=background-color:#2b303b;color:#c0c5ce;><code class=language-java data-lang=java><span style=color:#65737e;>/*
+</span></code></pre><h3 id=0141-linked-list-cycle>0141. Linked List Cycle</h3><pre class=language-java data-lang=java style=background-color:#2b303b;color:#c0c5ce;><code class=language-java data-lang=java><span style=color:#65737e;>/*
 </span><span style=color:#65737e;> * Definition for singly-linked list.
 </span><span style=color:#65737e;> * class ListNode {
 </span><span style=color:#65737e;> *     int val;
@@ -309,7 +410,7 @@
 </span><span style=color:#eff1f5;>        </span><span style=color:#b48ead;>return </span><span style=color:#d08770;>false</span><span style=color:#eff1f5;>;
 </span><span style=color:#eff1f5;>    }
 </span><span style=color:#eff1f5;>}
-</span></code></pre><h3 id=0146-lru-cache>0146: LRU Cache</h3><pre class=language-java data-lang=java style=background-color:#2b303b;color:#c0c5ce;><code class=language-java data-lang=java><span style=color:#b48ead;>class </span><span style=color:#ebcb8b;>LRUCache </span><span style=color:#eff1f5;>{
+</span></code></pre><h3 id=0146-lru-cache>0146. LRU Cache</h3><pre class=language-java data-lang=java style=background-color:#2b303b;color:#c0c5ce;><code class=language-java data-lang=java><span style=color:#b48ead;>class </span><span style=color:#ebcb8b;>LRUCache </span><span style=color:#eff1f5;>{
 </span><span style=color:#eff1f5;>
 </span><span style=color:#eff1f5;>    </span><span style=color:#b48ead;>public </span><span style=color:#8fa1b3;>LRUCache</span><span style=color:#eff1f5;>(</span><span style=color:#b48ead;>int </span><span style=color:#bf616a;>capacity</span><span style=color:#eff1f5;>) {
 </span><span style=color:#eff1f5;>
@@ -330,7 +431,7 @@
 </span><span style=color:#65737e;> * int param_1 = obj.get(key);
 </span><span style=color:#65737e;> * obj.put(key,value);
 </span><span style=color:#65737e;> */
-</span></code></pre><h3 id=0155-min-stack>0155: Min Stack</h3><pre class=language-java data-lang=java style=background-color:#2b303b;color:#c0c5ce;><code class=language-java data-lang=java><span style=color:#b48ead;>class </span><span style=color:#ebcb8b;>MinStack </span><span style=color:#eff1f5;>{
+</span></code></pre><h3 id=0155-min-stack>0155. Min Stack</h3><pre class=language-java data-lang=java style=background-color:#2b303b;color:#c0c5ce;><code class=language-java data-lang=java><span style=color:#b48ead;>class </span><span style=color:#ebcb8b;>MinStack </span><span style=color:#eff1f5;>{
 </span><span style=color:#eff1f5;>
 </span><span style=color:#eff1f5;>    </span><span style=color:#65737e;>// A stack holding all the items
 </span><span style=color:#eff1f5;>    </span><span style=color:#ebcb8b;>Stack</span><span style=color:#eff1f5;><</span><span style=color:#ebcb8b;>Integer</span><span style=color:#eff1f5;>> wholeStack </span><span>= </span><span style=color:#b48ead;>new </span><span style=color:#ebcb8b;>Stack</span><span style=color:#eff1f5;><>();
@@ -380,7 +481,7 @@
 </span><span style=color:#65737e;> * int param_3 = obj.top();
 </span><span style=color:#65737e;> * int param_4 = obj.getMin();
 </span><span style=color:#65737e;> */
-</span></code></pre><h3 id=0217-contains-duplicate>0217: Contains Duplicate</h3><pre class=language-java data-lang=java style=background-color:#2b303b;color:#c0c5ce;><code class=language-java data-lang=java><span style=color:#b48ead;>class </span><span style=color:#ebcb8b;>Solution </span><span style=color:#eff1f5;>{
+</span></code></pre><h3 id=0217-contains-duplicate>0217. Contains Duplicate</h3><pre class=language-java data-lang=java style=background-color:#2b303b;color:#c0c5ce;><code class=language-java data-lang=java><span style=color:#b48ead;>class </span><span style=color:#ebcb8b;>Solution </span><span style=color:#eff1f5;>{
 </span><span style=color:#eff1f5;>    </span><span style=color:#b48ead;>public boolean </span><span style=color:#8fa1b3;>containsDuplicate</span><span style=color:#eff1f5;>(</span><span style=color:#b48ead;>int[] </span><span style=color:#bf616a;>nums</span><span style=color:#eff1f5;>) {
 </span><span style=color:#eff1f5;>        </span><span style=color:#65737e;>// Just like the set() you use in Python. 'Set()' is just the
 </span><span style=color:#eff1f5;>        </span><span style=color:#65737e;>// name of the interface.
@@ -457,4 +558,16 @@
 </span><span style=color:#eff1f5;>        </span><span style=color:#b48ead;>return </span><span style=color:#d08770;>true</span><span style=color:#eff1f5;>;
 </span><span style=color:#eff1f5;>    }
 </span><span style=color:#eff1f5;>}
+</span></code></pre><h3 id=0557-reverse-words-in-a-string-iii>0557. Reverse Words in a String III</h3><pre class=language-kotlin data-lang=kotlin style=background-color:#2b303b;color:#c0c5ce;><code class=language-kotlin data-lang=kotlin><span style=color:#b48ead;>class </span><span style=color:#ebcb8b;>Solution</span><span> {
+</span><span>    </span><span style=color:#b48ead;>fun </span><span style=color:#8fa1b3;>reverseWords</span><span>(s: </span><span style=color:#b48ead;>String</span><span>): </span><span style=color:#b48ead;>String</span><span> {
+</span><span>        </span><span style=color:#b48ead;>var </span><span>words = s.split(" ")
+</span><span>        </span><span style=color:#b48ead;>var </span><span>reved = ""
+</span><span>
+</span><span>        </span><span style=color:#b48ead;>for</span><span> (word </span><span style=color:#b48ead;>in</span><span> words) {
+</span><span>            reved += word.reversed() + " "
+</span><span>        }
+</span><span>
+</span><span>        </span><span style=color:#b48ead;>return</span><span> reved.trim()
+</span><span>    }
+</span><span>}
 </span></code></pre><hr><blockquote><p>This post was originally written on October 18, 2022. Was rewritten on December 7, 2022 with the help of <em>ChatGPT</em> developed by <em>OpenAI</em>.</blockquote></article><footer role=contentinfo><hr><small>Built with <a href=https://www.getzola.org/>Zola</a>.<br> </small></footer></main>

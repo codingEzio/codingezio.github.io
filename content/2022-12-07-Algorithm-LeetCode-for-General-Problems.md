@@ -19,7 +19,7 @@ description = "Practing by solving Algorithm questions on LeetCode"
 
 ## Thoughts and Code
 
-### 0001: Two Sum
+### 0001. Two Sum
 
 ```java
 class Solution {
@@ -65,7 +65,29 @@ class Solution:
         return xcp = rev
 ```
 
-### 0013: 3Sum
+### 0011. Container With Most Water
+
+```python
+class Solution:
+    def maxArea(self, height: List[int]) -> int:
+        areaMax = 0
+        L, R = 0, len(height) - 1
+
+        while L < R:
+            area = (R - L) * min(height[L], height[R])
+
+            if areaMax < area:
+                areaMax = area
+
+            if height[L] < height[R]:
+                L += 1
+            elif height[L] >= height[R]:
+                R -= 1
+
+        return areaMax
+```
+
+### 0013. 3Sum
 
 ```python
 class Solution:
@@ -107,13 +129,55 @@ class Solution:
 
 ### 0014. Longest Common Prefix
 
-```python
-class Solution:
-    def longestCommonPrefix(self, strs: List[str]) -> str:
-        pass
+```java
+class Solution {
+    public String longestCommonPrefix(String[] strs) {
+        if (strs == null || strs.length == 0) {
+            return "";
+        }
+
+        // Take 'flow, flower, flight' for example
+
+        // [1] 'flow'
+        String prefix_lngst = strs[0];
+
+        // [2] index for 1, 2, i.e. 'flight' and 'flying'
+        for (int i = 1; i < strs.length; i++) {
+
+            // [3] compare 'flight' and 'flying' with changing strs[0]
+
+            // [4] first loop for 'flight'
+            //     - is 'flow' in 'flight'? -- indexOf returns -1
+            //     - is 'flo ' in 'flight'? -- indexOf returns -1
+            //     - is 'fl  ' in 'flight'? -- indexOf returns 0 (loop ends)
+
+            // Quick recap for 'indexOf()' (where do the 2nd param begin in the 1st one)
+            // - 'abc'.indexOf( 'a') -> 0
+            // - 'abc'.indexOf('ab') -> 0
+            // - 'abc'.indexOf('ac') -> -1
+            // - 'abc'.indexOf( 'c') -> -1
+
+            while (strs[i].indexOf(prefix) != 0) {
+
+                // [5] substract the last character from itself
+                //     e.g. flow -> flo -> fl
+                prefix = prefix.substring(0, prefix.length() - 1);
+
+                if (prefix == "") {
+                    // [6] they doesn't even have the 1st character in common
+                    //     and since you minus/substract the last "straw",
+                    //     just return directly (no need for remaining strings)
+                    return "";
+                }
+            }
+        }
+
+        return prefix_lngst;
+    }
+}
 ```
 
-### 0019: Remove Nth Node From End of List
+### 0019. Remove Nth Node From End of List
 
 ```python
 # Definition for singly-linked list.
@@ -124,7 +188,7 @@ class Solution:
 class Solution:
     def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
         """
-        The main thing are these two
+        The core idea
         - Caculate the actual steps need to be taken (reversed n)
         - Link the one before the nth with the one preceed it (=> deleted)
         """
@@ -146,7 +210,7 @@ class Solution:
         return dummy.next
 ```
 
-### 0021: Merge Two Sorted Lists
+### 0021. Merge Two Sorted Lists
 
 ```python
 # Definition for singly-linked list.
@@ -179,7 +243,7 @@ class Solution:
         return dummy.next
 ```
 
-### 0023: Merge K Sorted Linked List
+### 0023. Merge K Sorted Linked List
 
 ```java
 /*
@@ -241,7 +305,7 @@ class Solution {
 }
 ```
 
-### 0049: Group Anagrams
+### 0049. Group Anagrams
 
 ```python
 from collections import defaultdict
@@ -266,7 +330,7 @@ class Solution:
         return list(ans.values())
 ```
 
-### 0070: Climbing Stairs
+### 0070. Climbing Stairs
 
 ```python
 class Solution:
@@ -285,7 +349,59 @@ class Solution:
         return second
 ```
 
-### 0124 Binary Tree Maximum Path Sum
+### 0088. Merge Sorted Array
+
+```python
+class Solution:
+    def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
+        """
+        Do not return anything, modify nums1 in-place instead.
+        """
+
+        # Premises to remember
+        # - Each array is already in the non-decreasing order (1 -> 1 -> 2)
+        # - As there would be any new numbers smaller, we compare in reverse
+
+        idxComb = m + n - 1
+        m -= 1
+        n -= 1
+
+        while n >= 0:
+
+            if m >= 0 and nums1[m] > nums2[n]:
+                nums1[idxComb] = nums1[m]
+                m -= 1
+
+            else:
+                nums1[idxComb] = nums2[n]
+                n -= 1
+
+            idxComb -= 1
+```
+
+### 0104. Maximum Depth of Binary Tree
+
+```python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def maxDepth(self, root: Optional[TreeNode]) -> int:
+        if root is None:
+            return 0
+
+        depth_left = self.maxDepth(root.left)
+        depth_right = self.maxDepth(root.right)
+
+        depth_max = max(depth_left, depth_right)
+
+        return depth_max + 1
+```
+
+### 0124. Binary Tree Maximum Path Sum
 
 ```python
 # Definition for a binary tree node.
@@ -300,7 +416,7 @@ class Solution:
         pass
 ```
 
-### 0125: Valid Palindrome
+### 0125. Valid Palindrome
 
 ```java
 class Solution {
@@ -337,7 +453,7 @@ class Solution {
 }
 ```
 
-### 0128: Longest Consecutive Sequence
+### 0128. Longest Consecutive Sequence
 
 ```python
 class Solution:
@@ -357,7 +473,7 @@ class Solution:
         return len_longest
 ```
 
-### 0141: Linked List Cycle
+### 0141. Linked List Cycle
 
 ```java
 /*
@@ -395,7 +511,7 @@ public class Solution {
 }
 ```
 
-### 0146: LRU Cache
+### 0146. LRU Cache
 
 ```java
 class LRUCache {
@@ -421,7 +537,7 @@ class LRUCache {
  */
 ```
 
-### 0155: Min Stack
+### 0155. Min Stack
 
 ```java
 class MinStack {
@@ -476,7 +592,7 @@ class MinStack {
  */
 ```
 
-### 0217: Contains Duplicate
+### 0217. Contains Duplicate
 
 ```java
 class Solution {
@@ -564,6 +680,23 @@ class Solution {
         }
 
         return true;
+    }
+}
+```
+
+### 0557. Reverse Words in a String III
+
+```kotlin
+class Solution {
+    fun reverseWords(s: String): String {
+        var words = s.split(" ")
+        var reved = ""
+
+        for (word in words) {
+            reved += word.reversed() + " "
+        }
+
+        return reved.trim()
     }
 }
 ```
