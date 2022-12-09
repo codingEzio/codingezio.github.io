@@ -582,14 +582,49 @@ class MinStack {
     }
 }
 
-/*
- * Your MinStack object will be instantiated and called as such:
- * MinStack obj = new MinStack();
- * obj.push(val);
- * obj.pop();
- * int param_3 = obj.top();
- * int param_4 = obj.getMin();
- */
+### 0160. Intersection of Two Linked Lists
+
+```python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+class Solution:
+    def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> Optional[ListNode]:
+        # no intersection as one of them or both are None
+        if not headA or not headB:
+            return None
+
+        hA, hB = headA, headB
+
+        while hA != hB:
+            hA = hA.next if hA else headB
+            hB = hB.next if hB else headA
+
+        return hA
+```
+
+### 0206. Reverse Linked List
+
+```python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        dummy = ListNode(None)
+
+        while head:
+            temp = head.next
+            head.next = dummy.next
+            dummy.next = head
+            head = temp
+
+        return dummy.next
 ```
 
 ### 0217. Contains Duplicate
