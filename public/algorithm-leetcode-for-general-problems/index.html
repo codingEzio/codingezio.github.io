@@ -473,14 +473,44 @@
 </span><span style=color:#eff1f5;>    }
 </span><span style=color:#eff1f5;>}
 </span><span>
-</span><span style=color:#65737e;>/*
-</span><span style=color:#65737e;> * Your MinStack object will be instantiated and called as such:
-</span><span style=color:#65737e;> * MinStack obj = new MinStack();
-</span><span style=color:#65737e;> * obj.push(val);
-</span><span style=color:#65737e;> * obj.pop();
-</span><span style=color:#65737e;> * int param_3 = obj.top();
-</span><span style=color:#65737e;> * int param_4 = obj.getMin();
-</span><span style=color:#65737e;> */
+</span><span>### </span><span style=color:#d08770;>0160. </span><span style=color:#ebcb8b;>Intersection</span><span> of </span><span style=color:#ebcb8b;>Two Linked Lists
+</span><span>
+</span><span>```python
+</span><span># </span><span style=color:#ebcb8b;>Definition </span><span style=color:#b48ead;>for</span><span> singly-linked list.
+</span><span># </span><span style=color:#b48ead;>class </span><span style=color:#ebcb8b;>ListNode</span><span>:
+</span><span>#     def </span><span style=color:#bf616a;>__init__</span><span>(self, x):
+</span><span>#         self.val = x
+</span><span>#         self.next = </span><span style=color:#ebcb8b;>None
+</span><span>
+</span><span>class </span><span style=color:#ebcb8b;>Solution</span><span>:
+</span><span>    def </span><span style=color:#bf616a;>getIntersectionNode</span><span>(self, headA: </span><span style=color:#ebcb8b;>ListNode</span><span>, headB: </span><span style=color:#ebcb8b;>ListNode</span><span>) -> </span><span style=color:#ebcb8b;>Optional</span><span>[</span><span style=color:#ebcb8b;>ListNode</span><span>]:
+</span><span>        # no intersection as one of them or both are </span><span style=color:#ebcb8b;>None
+</span><span>        </span><span style=color:#b48ead;>if</span><span> not headA or not headB:
+</span><span>            </span><span style=color:#b48ead;>return </span><span style=color:#ebcb8b;>None
+</span><span>
+</span><span>        hA, hB = headA, headB
+</span><span>
+</span><span>        </span><span style=color:#b48ead;>while</span><span> hA != hB:
+</span><span>            hA = hA.next </span><span style=color:#b48ead;>if</span><span> hA </span><span style=color:#b48ead;>else</span><span> headB
+</span><span>            hB = hB.next </span><span style=color:#b48ead;>if</span><span> hB </span><span style=color:#b48ead;>else</span><span> headA
+</span><span>
+</span><span>        </span><span style=color:#b48ead;>return</span><span> hA
+</span></code></pre><h3 id=0206-reverse-linked-list>0206. Reverse Linked List</h3><pre class=language-python data-lang=python style=background-color:#2b303b;color:#c0c5ce;><code class=language-python data-lang=python><span style=color:#65737e;># Definition for singly-linked list.
+</span><span style=color:#65737e;># class ListNode:
+</span><span style=color:#65737e;>#     def __init__(self, val=0, next=None):
+</span><span style=color:#65737e;>#         self.val = val
+</span><span style=color:#65737e;>#         self.next = next
+</span><span style=color:#b48ead;>class </span><span style=color:#ebcb8b;>Solution</span><span style=color:#eff1f5;>:
+</span><span>    </span><span style=color:#b48ead;>def </span><span style=color:#8fa1b3;>reverseList</span><span>(</span><span style=color:#bf616a;>self</span><span>, </span><span style=color:#bf616a;>head</span><span>: Optional[ListNode]) -> Optional[ListNode]:
+</span><span>        dummy = </span><span style=color:#bf616a;>ListNode</span><span>(</span><span style=color:#d08770;>None</span><span>)
+</span><span>
+</span><span>        </span><span style=color:#b48ead;>while </span><span>head:
+</span><span>            temp = head.next
+</span><span>            head.next = dummy.next
+</span><span>            dummy.next = head
+</span><span>            head = temp
+</span><span>
+</span><span>        </span><span style=color:#b48ead;>return </span><span>dummy.next
 </span></code></pre><h3 id=0217-contains-duplicate>0217. Contains Duplicate</h3><pre class=language-java data-lang=java style=background-color:#2b303b;color:#c0c5ce;><code class=language-java data-lang=java><span style=color:#b48ead;>class </span><span style=color:#ebcb8b;>Solution </span><span style=color:#eff1f5;>{
 </span><span style=color:#eff1f5;>    </span><span style=color:#b48ead;>public boolean </span><span style=color:#8fa1b3;>containsDuplicate</span><span style=color:#eff1f5;>(</span><span style=color:#b48ead;>int[] </span><span style=color:#bf616a;>nums</span><span style=color:#eff1f5;>) {
 </span><span style=color:#eff1f5;>        </span><span style=color:#65737e;>// Just like the set() you use in Python. 'Set()' is just the

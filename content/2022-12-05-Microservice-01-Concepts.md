@@ -30,6 +30,15 @@ description = "Concepts around Microservices"
 1. Divide the application into different **parts**
 2. Use different software to solve different **problems**
 
+#### What It Looks Like
+
+> Simply put, it's **independently running processes**. In the case of containerization, it's [`docker-compose.yml`](https://github.com/rithinch/event-driven-microservices-docker-example/blob/master/docker-compose.yml) file which manages different micro components also known as *containers* <small>(code and their dependencies wrapped)</small>.
+>
+> What about those Java projects that contain a bunch of components, which could be ran in a single command? That's the trade-off you could/sometimes make:
+>
+> - Easier operations like *starting*, *re-deploy*, *destroying*
+> - Messier debugging
+
 ## Academic-ish Explanations
 
 ### Terminology Would Be Used
