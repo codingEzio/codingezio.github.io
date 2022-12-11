@@ -349,6 +349,29 @@ class Solution:
         return second
 ```
 
+### 0078. Subsets
+
+```python
+class Solution:
+    def subsets(self, nums: List[int]) -> List[List[int]]:
+        container_sets = []
+        container_nums = []
+
+        def backtrack(nums, start_idx):
+            container_sets.append(container_nums[:])
+
+            for i in range(start, len(nums)):
+                container_nums.append(nums[i])
+
+                backtrack(nums, i + 1)
+
+                container_nums.pop()
+
+        backtrack(nums, 0)
+
+        return container_sets
+```
+
 ### 0088. Merge Sorted Array
 
 ```python

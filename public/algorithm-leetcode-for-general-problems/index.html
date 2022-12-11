@@ -278,6 +278,24 @@
 </span><span>            second = _sum
 </span><span>
 </span><span>        </span><span style=color:#b48ead;>return </span><span>second
+</span></code></pre><h3 id=0078-subsets>0078. Subsets</h3><pre class=language-python data-lang=python style=background-color:#2b303b;color:#c0c5ce;><code class=language-python data-lang=python><span style=color:#b48ead;>class </span><span style=color:#ebcb8b;>Solution</span><span style=color:#eff1f5;>:
+</span><span>    </span><span style=color:#b48ead;>def </span><span style=color:#8fa1b3;>subsets</span><span>(</span><span style=color:#bf616a;>self</span><span>, </span><span style=color:#bf616a;>nums</span><span>: List[int]) -> List[List[int]]:
+</span><span>        container_sets = []
+</span><span>        container_nums = []
+</span><span>
+</span><span>        </span><span style=color:#b48ead;>def </span><span style=color:#8fa1b3;>backtrack</span><span>(</span><span style=color:#bf616a;>nums</span><span>, </span><span style=color:#bf616a;>start_idx</span><span>):
+</span><span>            container_sets.</span><span style=color:#bf616a;>append</span><span>(container_nums[:])
+</span><span>
+</span><span>            </span><span style=color:#b48ead;>for </span><span>i </span><span style=color:#b48ead;>in </span><span style=color:#96b5b4;>range</span><span>(start, </span><span style=color:#96b5b4;>len</span><span>(nums)):
+</span><span>                container_nums.</span><span style=color:#bf616a;>append</span><span>(nums[i])
+</span><span>
+</span><span>                </span><span style=color:#bf616a;>backtrack</span><span>(nums, i + </span><span style=color:#d08770;>1</span><span>)
+</span><span>
+</span><span>                container_nums.</span><span style=color:#bf616a;>pop</span><span>()
+</span><span>
+</span><span>        </span><span style=color:#bf616a;>backtrack</span><span>(nums, </span><span style=color:#d08770;>0</span><span>)
+</span><span>
+</span><span>        </span><span style=color:#b48ead;>return </span><span>container_sets
 </span></code></pre><h3 id=0088-merge-sorted-array>0088. Merge Sorted Array</h3><pre class=language-python data-lang=python style=background-color:#2b303b;color:#c0c5ce;><code class=language-python data-lang=python><span style=color:#b48ead;>class </span><span style=color:#ebcb8b;>Solution</span><span style=color:#eff1f5;>:
 </span><span>    </span><span style=color:#b48ead;>def </span><span style=color:#8fa1b3;>merge</span><span>(</span><span style=color:#bf616a;>self</span><span>, </span><span style=color:#bf616a;>nums1</span><span>: List[int], </span><span style=color:#bf616a;>m</span><span>: int, </span><span style=color:#bf616a;>nums2</span><span>: List[int], </span><span style=color:#bf616a;>n</span><span>: int) -> </span><span style=color:#d08770;>None</span><span>:
 </span><span>        </span><span style=color:#65737e;>"""
