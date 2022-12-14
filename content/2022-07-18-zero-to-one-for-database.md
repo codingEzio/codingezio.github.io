@@ -19,7 +19,7 @@ description = "Zero to One: on Database"
 ### What is a Database
 
 > A collection of data, yet was consider as a *one*
-<img src="./images/008_database_def_database.png" alt="Illustration of a Database" width="60%" height="60%" />
+<img src="/202207/20220722-database-def-database.png" alt="Illustration of a Database" width="60%" height="60%" />
 
 ### What is a Database Management System
 
@@ -32,7 +32,7 @@ description = "Zero to One: on Database"
 
 > Combined the program to acess the data (to CRUD) and database-armed-with-utilities (DBMS), you got
 >
-> <img src="./images/008_database_def_database_system.png" alt="Illustration of a Database" width="60%" height="60%" />
+> <img src="/202207/20220722-database-def-database-system.png" alt="Illustration of a Database" width="60%" height="60%" />
 
 ### Database Terminology
 
@@ -122,11 +122,11 @@ description = "Zero to One: on Database"
 
 > University
 >
-> <img src="./images/008_database_entity_ERD_fullexample_university.png" alt="ER Diagram of University" width="60%" height="40%" />
+> <img src="/202207/20220722-database-entity-ERD-fullexample-university.png" alt="ER Diagram of University" width="60%" height="40%" />
 >
 > Airline
 >
-> <img src="./images/008_database_entity_ERD_fullexample_airline.png" alt="ER Diagram of Airline" width="60%" height="40%" />
+> <img src="/202207/20220722-database-entity-ERD-fullexample-airline.png" alt="ER Diagram of Airline" width="60%" height="40%" />
 
 ### [Relational Model Terminology](https://www.educative.io/module/page/JZmo10C1K3V0gqV0w/10370001/5182411679203328/5791308815269888)
 
