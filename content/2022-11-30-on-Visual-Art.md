@@ -25,8 +25,16 @@ description = "Movies, TV Shows and Documentaries"
 
 #### Mr Robot
 
+- [Mr. Robot <small>(channel)</small>](https://www.youtube.com/@MrRobotOfficial/videos)
+
 #### Sense 8
+
+- [The Philosophy of Sense8 | Emotion and Connection](https://www.youtube.com/watch?v=NiVwHbtdXns)
 
 #### Seven Worlds, One Planet
 
+- [Seven Worlds, One Planet: Extended Trailer (ft Sia and Hans Zimmer)](https://www.youtube.com/watch?v=IlFRPkT-hVc)
+
 #### Blue Planet II
+
+- [Blue Planet II: Hans Zimmer Theme Live Recording | BBC Earth](https://www.youtube.com/watch?v=h3bve7T-phg)
