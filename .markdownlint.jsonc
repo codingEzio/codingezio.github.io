@@ -6,12 +6,20 @@
     "style": "-----"
   },
   "no-inline-html": {
-    "allowed_elements": ["small", "del", "u", "img"]
+    "allowed_elements": [
+      "small",
+      "del",
+      "u",
+      "img",
+      "sup",
+      "sub"
+    ]
   },
   "heading-style": {
     "style": "atx"
   },
   "line-length": false,
   "heading-increment": false,
-  "single-h1": false
+  "single-h1": false,
+  "no-duplicate-header": false
 }
