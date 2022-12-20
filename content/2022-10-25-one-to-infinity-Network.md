@@ -89,13 +89,43 @@ description = "On Network in Computer Science"
 
 ### 状态码含义 HTTP Status Code
 
-> References: [\#1](https://stackoverflow.com/a/59108772/6273859), [\#2](https://www.websitepulse.com/kb/4xx_http_status_codes), [\#3](https://developer.att.com/video-optimizer/docs/best-practices/5xx-internal-server-error-best-practices), [\#4](https://umbraco.com/knowledge-base/http-status-codes/#202-accepted)
+> References: [\#1](https://stackoverflow.com/a/59108772/6273859), [\#2](https://www.websitepulse.com/kb/4xx_http_status_codes), [\#3](https://developer.att.com/video-optimizer/docs/best-practices/5xx-internal-server-error-best-practices), [\#4](https://umbraco.com/knowledge-base/http-status-codes/#202-accepted), [\#5](https://www.dute.org/http-status-code), [\#6](https://stackoverflow.com/a/18556097/6273859), [\#7](https://stackoverflow.com/a/69928214/6273859)
+
+#### 大类别
 
 - `1XX`: 纯信息
 - `2XX`: 请求成功待处
 - `3XX`: 资变重定
 - `4XX`: 客求不能满
 - `5XX`: 服端软硬不胜任
+
+#### 常见码
+
+##### `1xx`
+
+- `100`: Continue (requests received, client should proceed)
+
+##### `2xx`
+
+- `201`: Created (requests fullfilled while created new resources)
+
+##### `3xx`
+
+- `301`: Moved Permanently (request new redirected URLs from now on)
+- `302`: Moved Temporarily (request just once for the new directed URLs)
+- ``:
+
+##### `4xx`
+
+- `401`: Unauthorized (auth details provided but failed to auth)
+- `403`: Forbidden (auth-ed but do not have the permission)
+- `404`: Not Found (no relevant resources have been found)
+
+##### `5xx`
+
+- `500`: Internal Server Error
+- `501`: Not Implemented
+- `503`: Service Unavailable (can be *overloaded* or *in maintanence*)
 
 ### GET 与 POST
 
@@ -246,7 +276,7 @@ description = "On Network in Computer Science"
 
 ### TCP 从相识到离别
 
-> References: [\#1](https://afteracademy.com/blog/what-is-a-tcp-3-way-handshake-process/), [\#2](https://aurumme.com/atech/tcp-3-way-handshake-process/), [\#3](https://old.reddit.com/r/explainlikeimfive/comments/pawjz9/eli5_tcp_3_way_handshake/), [\#4](https://wiki.wireshark.org/TCP-4-times-close.md)
+> References: [\#1](https://afteracademy.com/blog/what-is-a-tcp-3-way-handshake-process/), [\#2](https://aurumme.com/atech/tcp-3-way-handshake-process/), [\#3](https://old.reddit.com/r/explainlikeimfive/comments/pawjz9/eli5_tcp_3_way_handshake/), [\#4](https://wiki.wireshark.org/TCP-4-times-close.md) || <small>(ref for ref)</small> [\#5](https://stackoverflow.com/questions/25338862/why-time-wait-state-need-to-be-2msl-long)
 
 #### 握手 🤝🤝🤝
 
@@ -256,10 +286,12 @@ description = "On Network in Computer Science"
 
   > 😜 *`CLOSE`*
 
-- 客 发 `SYN`
-- 服 返 `ACK` 即上`SYN`增壹 + `SYN`
-- 客 返 `ACK` 即上`SYN`增壹
-- 😁 *`ESTABLISHED`*
+| ACTION | STATE (客) | STATE (服) |
+| :--- | :--- | :--- |
+| 客 发 `SYN` | \ | 服入 `LISTEN` |
+| 服 返 `ACK` 即上`SYN`增壹 + `SYN` | 客入 `SYS_SENT` | \ |
+| 客 返 `ACK` 即上`SYN`增壹 | \ | 服入 `SYS_RCVD` |
+| 😁 *`ESTABLISHED`* | 客入 `ESTABLISHED` | 服入 `ESTABLISHED` |
 
 ##### 白话流程 🏄
 
@@ -275,11 +307,20 @@ description = "On Network in Computer Science"
 
   > 🗣 *`ESTABLISHED`*
 
-- 客 发 `FIN`
-- 服 返 `ACK` 即上`FIN`增壹 + 己首序 (处全务再`FIN`)
-- 服 返 `ACK` 即上`FIN`增壹 + 己另序 `FIN`
-- 客 返 `ACK` 即上`FIN`增壹
-- ✋ *`CLOSE`*
+| ACTION | STATE (客) | STATE (服) |
+| :--- | :--- | :--- |
+| 客 发 `FIN` | 客入 `FIN_WAIT_1` | \ |
+| 服 返 `ACK` 即上`FIN`增壹 + 己首序 (处全务再`FIN`) | \ | 服入 `CLOSED_WAIT` <small>(待发完资源)</small> |
+| 服 返 `ACK` 即上`FIN`增壹 + 己另序 `FIN` | 客入 `FIN_WAIT_2` | 服入 `LAST_ACK` |
+| 客 返 `ACK` 即上`FIN`增壹 | 客入 `TIME_WAIT` | 作 `CLOSE`
+| ✋ *`CLOSE`* | 待 `MSL` 后 `CLOSE` | \ |
+
+###### 为何要待 2`MSL`
+
+- MSL: *M*aximum *S*egment *L*ifetime
+- 目的：确保 客端末 `ACK` 能够到达服务器 (客 `ACK` -> 服关 -> 待MSL 客关)
+- 假想：服端 未收到 `ACK` 服端会重发 若真如此 两者重新进行 `CLOSE` 前备工作
+- 简述：客户端 多等一会儿 ("单位"为 `MSL`) 确保服务器也要 `CLOSE`
 
 ##### 白话流程 🏄
 
@@ -288,9 +329,62 @@ description = "On Network in Computer Science"
 - 行吧🥺🥺 + 走吧😔
 - 拜拜😔😔
 
-### TCP 可靠
+### Keep-Alive 保活
 
-> References: [\#](\), [\#](\), [\#](\), [\#](\) || <small>(ref for ref)</small> [\#](\), [\#](\),
+> References: [\#1](https://stackoverflow.com/a/66815132/6273859), [\#2](https://serverfault.com/a/639547/978709), [\#3](https://en.wikipedia.org/wiki/Keepalive)
 
-- A
-- A
+- 相似术语：**TCP** *keepalive <u>timer</u>* and **HTTP** *Keep-Alive <u>header</u>*
+- `TCP`: 做 服器周期性发包至端，据有无响应判断 (白话：若客端已断线-关连接省资源)
+- `HTTP`: 使 客端能在单次连接中，不断的请求资源 (白话：饭店排上号-可以随意加餐)
+
+### TCP Packet Structure 报文结构
+
+> References: [\#1](https://en.wikipedia.org/wiki/Transmission_Control_Protocol#TCP_segment_structure), [\#2](https://en.wikipedia.org/wiki/Transmission_Control_Protocol#Flow_control), [\#](\), [\#](\) || <small>(*some information were provided by ChatGPT*)</small>
+
+#### 简述
+
+> *Packet Header* + Payload aka. Data
+
+- 端号<sup>源</sup> + 端号<sup>终</sup> + 序号<sup>字节流</sup> + 确认号<sup>`ACK`</sup> + 标志位<sup>如`SYN`</sup> + 窗口<sup>限流</sup> + 校验<sup>据整</sup> + 紧针<sup>过时</sup>
+
+#### 详述
+
+| 类型 | 释 |
+| :--- | :--- |
+| 端号<sup>源</sup> | Where the packet *from* |
+| 端号<sup>终</sup> | Where the packet *go to* |
+| 序号<sup>字节流</sup> | Ensure the *order* of the data being sent |
+| 确认号<sup>`ACK`</sup> | Hold and do calculatiosn on `ACK` while in handshaking |
+| 标志位<sup>如`SYN`</sup> | *Control* bits like `ACK`, `SYN`, `FIN` |
+| 窗口<sup>限流</sup> | *Receiver* controls *how big* the data it *could handle* |
+| 校验<sup>据整</sup> | Calculate to *ensure* the data is *not corrupted* |
+| 紧针<sup>过时</sup> | *Prioritize* certain data part. *Deprecated* & outdated |
+
+### TCP Ensure Reliability 可靠度保证
+
+> [\#1](https://en.wikipedia.org/wiki/Maximum_segment_size), [\#2](https://www.cidianwang.com/cd/d/delongwangshu36054.htm)
+
+- 连接管理：握手挥手，有的放矢地保护有限资源
+- 头校验和：送发多段，何端有损，不确认且丢弃
+- 序列确认：为包加号，此段完发若无复，下段续
+- 流量控制：接端作主，据况控流，不作得陇望蜀
+- 消息长度：控不断包，单包可发，避协分小多包
+- 超时重传：确包到达
+- 拥塞控制：探况确速
+
+### TCP Flow Control 流量控制
+
+> 通过 TCP Packet *Header* 中的窗口大小，在每次客端服器沟通时，接收端带上相关参数
+
+### TCP Congestion Control 拥塞控制
+
+> 不止一种方案，其一是通过 TCP Packet 得到的 `ACK` 数量，试探性地增加每次发送的量
+
+### TCP Retransmission 重传
+
+> [\#1](https://en.wikipedia.org/wiki/Retransmission_(data_networks))
+
+#### 触发机制
+
+- By *Retransimission Timeout*
+- By *Feedback* from Receiving End
