@@ -15,10 +15,11 @@ description = "Space, Physics and all that fascinating stuff"
 
 ##### By [melodysheep](https://www.youtube.com/@melodysheep/videos)
 
+- [x] [In the Blink of an Eye: Space in an Instant](https://www.youtube.com/watch?v=fdQyD8B_odY)
 - [x] [TIMELAPSE OF THE FUTURE: A Journey to the End of Time](https://www.youtube.com/watch?v=uD4izuDMUQA)
 - [ ] [THE SIGHTS OF SPACE: A Voyage to Spectacular Alien Worlds](https://www.youtube.com/watch?v=HTHj_pvEYYE)
 - [x] [LIFE BEYOND 1. Alien life, deep time, and our place in cosmic history](https://www.youtube.com/watch?v=SUelbSa-OkA)
-- [ ] [LIFE BEYOND 2: The Museum of Alien Life](https://www.youtube.com/watch?v=ThDYazipjSI)
+- [x] [LIFE BEYOND 2: The Museum of Alien Life](https://www.youtube.com/watch?v=ThDYazipjSI)
 - [ ] [LIFE BEYOND 3: In Search of Giants. The Hunt for Intelligent Alien Life](https://www.youtube.com/watch?v=saWNMPL5ygk)
 
 ##### By [PBS Space Time](https://www.youtube.com/@pbsspacetime/videos)
