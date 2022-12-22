@@ -155,10 +155,6 @@
         <lastmod>2019-08-09</lastmod>
     </url>
     <url>
-        <loc>https://codingezio.github.io/booknote-on-shen-ru-li-jie-javaxu-ni-ji/</loc>
-        <lastmod>2022-08-28</lastmod>
-    </url>
-    <url>
         <loc>https://codingezio.github.io/booknote-on-soft-skills/</loc>
         <lastmod>2022-04-14</lastmod>
     </url>
@@ -335,6 +331,10 @@
         <lastmod>2022-12-19</lastmod>
     </url>
     <url>
+        <loc>https://codingezio.github.io/on-design-pattern/</loc>
+        <lastmod>2022-12-22</lastmod>
+    </url>
+    <url>
         <loc>https://codingezio.github.io/on-eating/</loc>
         <lastmod>2022-11-19</lastmod>
     </url>
@@ -367,6 +367,18 @@
         <lastmod>2022-08-14</lastmod>
     </url>
     <url>
+        <loc>https://codingezio.github.io/on-java-concurrency/</loc>
+        <lastmod>2022-12-21</lastmod>
+    </url>
+    <url>
+        <loc>https://codingezio.github.io/on-java-object-relational-mapping/</loc>
+        <lastmod>2022-12-22</lastmod>
+    </url>
+    <url>
+        <loc>https://codingezio.github.io/on-java-virtual-machine/</loc>
+        <lastmod>2022-12-21</lastmod>
+    </url>
+    <url>
         <loc>https://codingezio.github.io/on-json-web-token/</loc>
         <lastmod>2022-08-10</lastmod>
     </url>
@@ -387,6 +399,10 @@
         <lastmod>2022-11-16</lastmod>
     </url>
     <url>
+        <loc>https://codingezio.github.io/on-netty/</loc>
+        <lastmod>2022-12-22</lastmod>
+    </url>
+    <url>
         <loc>https://codingezio.github.io/on-network-stack/</loc>
         <lastmod>2022-12-04</lastmod>
     </url>
@@ -405,6 +421,10 @@
     <url>
         <loc>https://codingezio.github.io/on-quantum-computer/</loc>
         <lastmod>2022-12-06</lastmod>
+    </url>
+    <url>
+        <loc>https://codingezio.github.io/on-redis/</loc>
+        <lastmod>2022-12-22</lastmod>
     </url>
     <url>
         <loc>https://codingezio.github.io/on-scale/</loc>
@@ -429,6 +449,10 @@
     <url>
         <loc>https://codingezio.github.io/on-water-heater/</loc>
         <lastmod>2022-12-21</lastmod>
+    </url>
+    <url>
+        <loc>https://codingezio.github.io/on-web-server/</loc>
+        <lastmod>2022-12-22</lastmod>
     </url>
     <url>
         <loc>https://codingezio.github.io/one-to-infinity-css-and-design/</loc>

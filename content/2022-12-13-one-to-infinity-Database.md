@@ -7,18 +7,23 @@ description = "On Database in Computer Science"
 
 ### Origin
 
-> 此篇为以下两篇我的博文的*延伸* (哪些概念值得去关注，当你会了基本语法和概念)
+> 此篇为以下两篇博文的*延伸* (哪些概念值得去关注，当你会了基本语法和概念)
 >
 > - [Zero to One: on SQL](https://codingezio.github.io/zero-to-one-for-sql/)
 > - [Zero to One: on Database](https://codingezio.github.io/zero-to-one-for-database/)
 
-### Why
+### Resources
 
 > 知其本，惑消烬
 
-### What
+#### Level 1
 
-- [DB-TUTORIAL](https://dunwu.github.io/db-tutorial/)
+- [关系型数据库 (总览)](https://dunwu.github.io/db-tutorial/pages/9bb28f/#%E6%89%A7%E8%A1%8C%E8%AE%A1%E5%88%92)
+- [Mysql 应用指南 (总览)](https://dunwu.github.io/db-tutorial/pages/5fe0f3/)
+
+#### Level 2
+
+- [关系型数据库是如何工作的](https://pdai.tech/md/db/sql/sql-db-howitworks.html)
 - [Database Internals: A deep-dive into how distributed data systems work](https://www.goodreads.com/book/show/44647144)
 - 以及众多其他网站，如 [*Reddit*](http://reddit.com/), [*StackOverflow*](http://stackoverflow.com/) 等等
 
@@ -30,7 +35,7 @@ description = "On Database in Computer Science"
 
 ## Content
 
-> 祖参考资源: [DB-TUTORIAL](https://dunwu.github.io/db-tutorial/)
+> Current focus: The *Relational Database* **MySQL**
 
 ### 要讨论的话题
 

@@ -240,5 +240,6 @@ INSERT INTO Person ( .. ) { .. }
 
 ### References
 
+- [SQL语法基础](https://pdai.tech/md/db/sql-lan/sql-lan.html)
 - [Create new user in MySQL and give it full access to one database](https://stackoverflow.com/a/36190905/6273859)
 - [MySQL :: Character Sets and Collations in General](https://dev.mysql.com/doc/refman/8.0/en/charset-general.html#:~:text=A%20character%20set%20is%20a,%2C%20B%20%2C%20a%20%2C%20b%20.)
