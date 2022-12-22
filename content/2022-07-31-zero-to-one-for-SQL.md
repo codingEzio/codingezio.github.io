@@ -10,6 +10,8 @@ description = "Zero to One: on SQL"
 #### MySQL
 
 > Normally I would choose the `brew install` approach, but it appears that there were unexpected permission issues relating to *sockets*. Also tried the *GUI* approach, well, let's just say I'm not a fan of using the GUI. Eventually I chose the *Docker Installation*.
+>
+> Import data in `.sql`? I use `mycli` to connect to the database then `cd` to where that `.sql` files are and execute `source FILE.sql` to the imports.
 
 ##### The *GUI* way
 
@@ -20,31 +22,43 @@ description = "Zero to One: on SQL"
 
 ##### The *Docker* way
 
+> Suppose you already have Docker installed. For me, it's Docker in VM. To be more exact, it's Installing Docker inside a VM, which is managed by Vagrant, then I edit the relevant config file `Vagrantfile` in order to expose the ports which is already available inside the VM to the host <small>(port mapping: Docker -> VM -> Host)</small>.
+
 ```bash
 # Local directories for volume mapping (persistence)
 mkdir -p ~/Config/mysql80/mysql80_{conf,data}
 
-# Easier identification for the images downloaded
-image_name="mysql80-dev"
+# Easier identification for the container created
+container_name="mysql80-dev"
 
 # Initiation for MySQL
 ms_host_conf="~/Config/mysql80/mysql80_conf"
 ms_host_data="~/Config/mysql80/mysql80_data"
+ms_host_port=3306
 ms_pswd="password"
+
 
 # Run at background and expose the export for host to connect
 # AND mapping the directories inside to the host for persistence
 # AND setting the password to prepare for us to connect
 # AND choosing the mysql version explicitly which is 8.0.25
 docker run --detach \
-    --name=$image_name \
-    --publish 6603:3306 \
-    --volume=${mt_host_conf}/:/etc/mysql/conf.d \
-    --volume=${mt_host_data}/:/var/lib/mysql \
+    --name=$container_name \
+    --publish ${ms_host_port}:3306 \
+    --volume=${ms_host_conf}/:/etc/mysql/conf.d \
+    --volume=${ms_host_data}/:/var/lib/mysql \
     --env="MYSQL_ROOT_PASSWORD=${ms_pswd}" mysql:8.0.25
 
+# Common commands you would use
+docker container            # show all the relevant commands you could use
+docker container ls         # list all the containers (whether started or not)
+docker container start      # start the container
+docker update mysql5dot7 --restart=always   # start MySQL when Docker starts
+docker exec     mysql80-dev ls              # run `ls` in container
+docker exec -it mysql80-dev bash            # run `bash` into the container
 
 
+# And maybe you want to fetch the information of the MySQL container
 docker inspect $image_name | jq -C | less
 docker inspect $image_name | jq -C '.[0].Created'                   | less
 docker inspect $image_name | jq -C '.[0].State.Status'              | less
