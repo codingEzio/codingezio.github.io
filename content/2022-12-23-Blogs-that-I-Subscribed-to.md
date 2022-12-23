@@ -15,6 +15,8 @@ description = "Thoughts from interesting and thoughtful human beings"
 >> They are *archives of the past* <br/>
 >> They are *watchers of the future*
 
+#### In General
+
 - [Po-Jen](https://www.coderbridge.com/@Po-Jen)
 - [Hackery, Math & Design](https://acko.net/)
 - [酷壳 CoolShell](https://coolshell.cn/featured)
@@ -25,7 +27,6 @@ description = "Thoughts from interesting and thoughtful human beings"
 - [Slate Star Codex](https://slatestarcodex.com/archives/)
 - [Radimentary](https://radimentary.wordpress.com/about/)
 - [thesephist](https://thesephist.com/posts/)
-- [Knight Lab Studio](https://studio.knightlab.com/)
 - [Cassie Evans's Blog](https://www.cassie.codes/)
 - [Thicket Forte](https://thicketforte.com/)
 - [Hakim El Hattab](https://hakim.se/)
@@ -35,3 +36,9 @@ description = "Thoughts from interesting and thoughtful human beings"
 - [Neel Nanda](https://www.neelnanda.io/)
 - [困而学之](https://caminodetexas.substack.com/archive)
 - [Reimu's blog](https://blog.k8s.li/)
+- [Owen的博客](https://www.owenyoung.com/)]
+
+#### More Than Blogs
+
+- [Projects by Tom Goldstein](https://www.cs.umd.edu/~tomg/project/)
+- [Knight Lab Studio](https://studio.knightlab.com/)

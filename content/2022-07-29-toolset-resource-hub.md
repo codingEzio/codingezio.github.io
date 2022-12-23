@@ -17,3 +17,10 @@ description = "The resource hub for the toolset I've been using"
 ### GUI
 
 - [BeeKeeper Studio](https://www.beekeeperstudio.io/get)
+
+### Web
+
+#### Theme Preview
+
+- Sublime Text: [Colorsublime](https://colorsublime.github.io/)
+- VS Code: [VS Code Themes](https://vscodethemes.com/)

@@ -5,7 +5,6 @@ description = "Thoughts, notes and implementations"
 
 > Draft only, further rewrote needed
 
-
 ### Resources
 
 #### For concepts
@@ -15,8 +14,8 @@ description = "Thoughts, notes and implementations"
 #### For higher level
 
 - [https://www.ianlewis.org/en/tag/container-runtime-series](https://www.ianlewis.org/en/tag/container-runtime-series)
-	- ✔️ [https://www.ianlewis.org/en/container-runtimes-part-1-introduction-container-r](https://www.ianlewis.org/en/container-runtimes-part-1-introduction-container-r)
-	- [https://www.ianlewis.org/en/container-runtimes-part-2-anatomy-low-level-contai](https://www.ianlewis.org/en/container-runtimes-part-2-anatomy-low-level-contai)
+  - ✔️ [https://www.ianlewis.org/en/container-runtimes-part-1-introduction-container-r](https://www.ianlewis.org/en/container-runtimes-part-1-introduction-container-r)
+  - [https://www.ianlewis.org/en/container-runtimes-part-2-anatomy-low-level-contai](https://www.ianlewis.org/en/container-runtimes-part-2-anatomy-low-level-contai)
 
 #### Concepts and Implementations
 
@@ -32,11 +31,13 @@ description = "Thoughts, notes and implementations"
 > Docker is just a wrapper for tools like namespaces and cgroups.
 
 #### Namespaces
+
 > a Linux tool named unshare, it makes different types of namespaces, for processes (pid, process id, you can be the pid 1 in this new world), networking (use whatever ports without worries about conflicts), file (mount namespaces, in the practical sense, we can use it for persistence).
 >
 > of course, some other tools (could be unshare, or the other tools that related to the abstractions namespaces) allow us to enter in the virtual world (namespaces).
 
 #### Cgroups
+
 > Limit the resources can be used, like memory, CPU and so on through config files.
 >
 > it also provide cli for us to configure the resources
@@ -55,4 +56,4 @@ description = "Thoughts, notes and implementations"
 
 ### Impl
 
-> I opened a Linux VM <small>(Ubuntu 20.04 managed by Vagrant)</small> to do all the world as any other platforms would require some hacks or whatever.
+> I opened a Linux VM <small>(Ubuntu 20.04 managed by Vagrant)</small> to do all the work as any other platforms would require some hacks or whatever.
