@@ -24,6 +24,7 @@ description = "What it is, why use it and other details"
 
 - [Tomcat 源码详解知识体系详解](https://pdai.tech/md/framework/tomcat/tomcat-overview.html)
 - [Tomcat - 如何设计一个简单的web容器](https://pdai.tech/md/framework/tomcat/tomcat-x-design-web-container.html)
+- [Writing Web Server in Python: sockets](https://iximiuz.com/en/posts/writing-web-server-in-python-sockets/)
 
 ### Source Code
 

@@ -105,3 +105,12 @@ description = "All things that related to concurrency, especially Java"
 > - [Java concurrency: Countdown latch vs Cyclic barrier](https://stackoverflow.com/questions/4168772/java-concurrency-countdown-latch-vs-cyclic-barrier)
 
 -----
+
+### Non-Java
+
+#### Resources
+
+> Use non-Java resources to learn some transferrable knowledge
+
+- [Explaining `async` / `await` in 200 lines of code](https://iximiuz.com/en/posts/from-callback-hell-to-async-await-heaven/)
+- [Explaining *event loop* in 100 lines of code](https://iximiuz.com/en/posts/explain-event-loop-in-100-lines-of-code/)

@@ -1,7 +1,9 @@
 +++
-title = "One to Infinity - Flutter"
-description = "Notes for my learning journey to Flutter"
+title = "Zero to One - Flutter"
+description = "Notes for my journey of learning Flutter"
 +++
+
+> Learning materials: [Flutter实战](https://book.flutterchina.club/)
 
 ## On VS Code
 

@@ -35,6 +35,10 @@
         <lastmod>2022-06-23</lastmod>
     </url>
     <url>
+        <loc>https://codingezio.github.io/blogs-that-i-subscribed-to/</loc>
+        <lastmod>2022-12-23</lastmod>
+    </url>
+    <url>
         <loc>https://codingezio.github.io/booknote-on-21-lessons-for-the-21st-century/</loc>
         <lastmod>2019-01-25</lastmod>
     </url>
@@ -323,10 +327,6 @@
         <lastmod>2022-12-06</lastmod>
     </url>
     <url>
-        <loc>https://codingezio.github.io/on-chatgpt/</loc>
-        <lastmod>2022-12-04</lastmod>
-    </url>
-    <url>
         <loc>https://codingezio.github.io/on-container/</loc>
         <lastmod>2022-12-23</lastmod>
     </url>
@@ -357,6 +357,10 @@
     <url>
         <loc>https://codingezio.github.io/on-functional-programming/</loc>
         <lastmod>2022-12-16</lastmod>
+    </url>
+    <url>
+        <loc>https://codingezio.github.io/on-gpt/</loc>
+        <lastmod>2022-12-04</lastmod>
     </url>
     <url>
         <loc>https://codingezio.github.io/on-gun-control/</loc>
@@ -399,7 +403,7 @@
         <lastmod>2022-12-01</lastmod>
     </url>
     <url>
-        <loc>https://codingezio.github.io/on-ml-language-learning-models/</loc>
+        <loc>https://codingezio.github.io/on-machine-learning-language-models/</loc>
         <lastmod>2022-11-16</lastmod>
     </url>
     <url>
@@ -421,6 +425,10 @@
     <url>
         <loc>https://codingezio.github.io/on-presentation/</loc>
         <lastmod>2022-12-02</lastmod>
+    </url>
+    <url>
+        <loc>https://codingezio.github.io/on-programming-language-reflection/</loc>
+        <lastmod>2022-12-23</lastmod>
     </url>
     <url>
         <loc>https://codingezio.github.io/on-quantum-computer/</loc>
@@ -465,10 +473,6 @@
     <url>
         <loc>https://codingezio.github.io/one-to-infinity-database/</loc>
         <lastmod>2022-12-13</lastmod>
-    </url>
-    <url>
-        <loc>https://codingezio.github.io/one-to-infinity-flutter/</loc>
-        <lastmod>2022-11-12</lastmod>
     </url>
     <url>
         <loc>https://codingezio.github.io/one-to-infinity-network/</loc>
@@ -569,6 +573,10 @@
     <url>
         <loc>https://codingezio.github.io/words-for-thinking-out-of-the-box/</loc>
         <lastmod>2022-08-15</lastmod>
+    </url>
+    <url>
+        <loc>https://codingezio.github.io/zero-to-one-flutter/</loc>
+        <lastmod>2022-11-12</lastmod>
     </url>
     <url>
         <loc>https://codingezio.github.io/zero-to-one-for-database/</loc>
