@@ -35,6 +35,10 @@ description = "What it is, why use it and other details"
 
 - N/A
 
+### Terminology
+
+- [Is Tomcat = Apache (or other web server) + JavaEE](https://stackoverflow.com/questions/55414498/is-tomcat-apache-or-other-web-server-javaee)
+
 ### References for References
 
 - [Nginx源码分析 | Daltao's blog!](https://taodaling.github.io/blog/2020/07/16/nginx%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/)

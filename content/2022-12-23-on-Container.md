@@ -9,22 +9,23 @@ description = "Thoughts, notes and implementations"
 
 #### For concepts
 
-- ✔️ [https://jvns.ca/blog/2016/10/10/what-even-is-a-container/](https://jvns.ca/blog/2016/10/10/what-even-is-a-container/)
+- [x] [What even is a container: namespaces and cgroups](https://jvns.ca/blog/2016/10/10/what-even-is-a-container/)
 
 #### For higher level
 
-- [https://www.ianlewis.org/en/tag/container-runtime-series](https://www.ianlewis.org/en/tag/container-runtime-series)
-  - ✔️ [https://www.ianlewis.org/en/container-runtimes-part-1-introduction-container-r](https://www.ianlewis.org/en/container-runtimes-part-1-introduction-container-r)
-  - [https://www.ianlewis.org/en/container-runtimes-part-2-anatomy-low-level-contai](https://www.ianlewis.org/en/container-runtimes-part-2-anatomy-low-level-contai)
+- [Container Runtimes Series](https://www.ianlewis.org/en/tag/container-runtime-series)
+  - [x] [Container Runtimes Part 1: An Introduction to Container Runtimes](https://www.ianlewis.org/en/container-runtimes-part-1-introduction-container-r)
+  - [Container Runtimes Part 2: Anatomy of a Low-Level Container Runtime](https://www.ianlewis.org/en/container-runtimes-part-2-anatomy-low-level-contai)
 
 #### Concepts and Implementations
 
-- [https://youtu.be/Utf-A4rODH8](https://youtu.be/Utf-A4rODH8)
-- [https://cesarvr.github.io/post/2018-05-22-create-containers/](https://cesarvr.github.io/post/2018-05-22-create-containers/)
+- [Building a container from scratch in Go](https://www.youtube.com/watch?v=Utf-A4rODH8)
+- [Creating Your Own Containers in C](https://cesarvr.github.io/post/2018-05-22-create-containers/)
 
 #### Beyond Container
 
-- [https://iximiuz.com/en/posts/journey-from-containerization-to-orchestration-and-beyond/](https://iximiuz.com/en/posts/journey-from-containerization-to-orchestration-and-beyond/)
+- [Journey From Containerization To Orchestration And Beyond](https://iximiuz.com/en/posts/journey-from-containerization-to-orchestration-and-beyond/)
+- My another post about [*Container Orchestration*](https://codingezio.github.io/on-container-orchestration/)
 
 ### Thoughts
 

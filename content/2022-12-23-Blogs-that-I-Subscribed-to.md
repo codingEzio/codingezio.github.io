@@ -19,6 +19,7 @@ description = "Thoughts from interesting and thoughtful human beings"
 
 - [Po-Jen](https://www.coderbridge.com/@Po-Jen)
 - [Hackery, Math & Design](https://acko.net/)
+- [冰霜之地 HalfFrost](https://halfrost.com/archives/)
 - [酷壳 CoolShell](https://coolshell.cn/featured)
 - [BMPI.dev](https://www.bmpi.dev/about/)
 - [MindLevelup](https://mindlevelup.wordpress.com/mindlevelup-the-book/introduction/)
