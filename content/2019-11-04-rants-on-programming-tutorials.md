@@ -16,6 +16,7 @@ tutorials.
 - not scalable (pre-configured pool/size etc. not necessarily inputs)
 - (OPTIONAL) no related description
 - (OPTIONAL) not doing it in a modern way
+- [Why do youtubers create 'beginner' tutorials but do a terrible job of explaining things properly?](https://old.reddit.com/r/learnprogramming/comments/mycixo/why_do_youtubers_create_beginner_tutorials_but_do/)
 
 ### It should be
 

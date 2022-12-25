@@ -26,6 +26,7 @@ description = "Movies, TV Shows and Documentaries"
 #### Mr Robot
 
 - [Mr. Robot <small>(channel)</small>](https://www.youtube.com/@MrRobotOfficial/videos)
+- [Do you consider Mr. Robot to among the greatest TV Series of all time?](https://old.reddit.com/r/MrRobot/comments/wfj92u/do_you_consider_mr_robot_to_among_the_greatest_tv/)
 
 #### Sense 8
 
