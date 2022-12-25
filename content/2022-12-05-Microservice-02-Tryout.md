@@ -17,6 +17,7 @@ description = "Get familiar with the whole ecosystem and practical usage"
 ### The Practice
 
 - [Scaling Spring Boot with Message Queues and Kubernetes](https://learnk8s.io/blog/scaling-spring-boot-microservices) <small>([*repo*](https://github.com/learnk8s/spring-boot-k8s-hpa))</small>
+- [newbee-ltd/新蜂商城: 微服务版本](https://github.com/newbee-ltd/newbee-mall-cloud/tree/main)
 
 ## Notes
 
