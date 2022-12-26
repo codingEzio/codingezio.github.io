@@ -37,7 +37,7 @@ description = "Thoughts from interesting and thoughtful human beings"
 - [Neel Nanda](https://www.neelnanda.io/)
 - [困而学之](https://caminodetexas.substack.com/archive)
 - [Reimu's blog](https://blog.k8s.li/)
-- [Owen的博客](https://www.owenyoung.com/)]
+- [Owen的博客](https://www.owenyoung.com/)
 
 #### More Than Blogs
 
