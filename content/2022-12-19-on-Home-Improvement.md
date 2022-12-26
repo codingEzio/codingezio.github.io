@@ -1,16 +1,16 @@
 +++
 title = "On Home Improvement"
-description = "Interesting ideas to implement or just to watch"
-draft = true
+description = "Interesting ideas to implement or to watch"
 +++
 
-> Just an interesting thing, thought I should log everything that related to it
+> Just a fun thing to do, thought I should log everything that related to it
 
-
-## Ideas
+### Ideas
 
 > Resources: subreddit [*Home Improvement*](https://old.reddit.com/r/HomeImprovement/)
 
-### Coffee Table
+### Do It Yourself
+
+#### Coffee Table
 
 - [自己做个深渊茶几，好像在家打了两口井](https://www.bilibili.com/video/BV1AG411F7eF/)
