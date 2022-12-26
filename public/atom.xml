@@ -5,8 +5,38 @@
 	<link href="https://codingezio.github.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://codingezio.github.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-12-25T00:00:00+00:00</updated>
+	<updated>2022-12-26T00:00:00+00:00</updated>
 	<id>https://codingezio.github.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>On Extraterrestrial Life</title>
+		<published>2022-12-26T00:00:00+00:00</published>
+		<updated>2022-12-26T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://codingezio.github.io/on-extraterrestrial-life/" type="text/html"/>
+		<id>https://codingezio.github.io/on-extraterrestrial-life/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;Now this is just a bunch of quotations&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h2 id=&quot;quotations&quot;&gt;Quotations&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;reddit&quot;&gt;Reddit&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;the-reply-by-onetimenative-and-the-comments-under-it&quot;&gt;The reply by &lt;a href=&quot;https:&#x2F;&#x2F;old.reddit.com&#x2F;r&#x2F;Futurology&#x2F;comments&#x2F;ya397o&#x2F;scientists_outlined_one_of_the_main_problems_if&#x2F;ita8nvb&#x2F;?context=3&quot;&gt;&lt;em&gt;onetimenative&lt;&#x2F;em&gt; and the comments under it&lt;&#x2F;a&gt;&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;old.reddit.com&#x2F;r&#x2F;Futurology&#x2F;comments&#x2F;ya397o&#x2F;scientists_outlined_one_of_the_main_problems_if&#x2F;ita8nvb&#x2F;&quot;&gt;&lt;em&gt;kaos95&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I actually go with &amp;quot;Space in unimaginably huge&amp;quot; like it generally requires years of training to be able to conceptualize how actually big space is. Like, the speed of light doesn&#x27;t help us, still to huge, 10x the speed of light . . . nope still to large, on 100x . . . umm, no still take you longer than a human lifetime to get anywhere interesting.&lt;&#x2F;p&gt;
+&lt;p&gt;We haven&#x27;t met alien life because for all realistic purposes we live in an endless void, hell our early radio waves still haven&#x27;t (this might be false, I honestly haven&#x27;t checked in like a decade) hit anyplace that could have a similar civilization (ie carbon based life forms that work similar to us).&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;old.reddit.com&#x2F;r&#x2F;Futurology&#x2F;comments&#x2F;ya397o&#x2F;scientists_outlined_one_of_the_main_problems_if&#x2F;itcpyt3&#x2F;&quot;&gt;&lt;em&gt;tipper7959&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Yea a lot of people don&#x27;t realize that even going 100x light speed (which is impossible as far as we know, without literally bending space itself which we don&#x27;t know how to do but even if we did would take the mass energy equivalent of all of Jupiter) it would take 2000 years (external observer years, let&#x27;s not even start down the relativity rabbit hole) to travel across our galaxy... We&#x27;d need a self sustaining generation ship designed to last longer than any civilization has in history... even at the impossible speed of 100x the speed of light.&lt;&#x2F;p&gt;
+&lt;p&gt;The reality is we&#x27;re trapped in our little spacial bubble and every indication points to humanity cooking our little planet under a blanket of greenhouse gasses before we ever even get a chance to reach a level where we have the ability to contemplate operating civilizationally on those kind galactic timescales. Humans -- on the whole -- are angry, brutish, selfish, short-sighted, narrow-minded animals. What would any alien civilization with that kind of capability possibly gain by talking to us?&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>On Container Orchestration</title>
 		<published>2022-12-25T00:00:00+00:00</published>
