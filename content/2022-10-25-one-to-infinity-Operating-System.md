@@ -41,6 +41,8 @@ description = "Understanding the Underlying Mechanism"
 
 #### Procedure for switching
 
+> [What are interrupts? What do I need them for? When do I need them?](https://old.reddit.com/r/arduino/comments/416cs0/eli5_what_are_interrupts_what_do_i_need_them_for/)
+
 - Normal execution under Ring 3
 - .. needs system call
 - Interrupt .. to do system call
@@ -132,7 +134,7 @@ description = "Understanding the Underlying Mechanism"
 
 ##### Deadlock 死锁
 
-> References: [\#1](https://www.youtube.com/watch?v=Z7iHodl1jsM), [\#2](https://www.scaler.com/topics/operating-system/deadlock-prevention-in-operating-system/)
+> References: [\#1](https://www.youtube.com/watch?v=Z7iHodl1jsM), [\#2](https://www.scaler.com/topics/operating-system/deadlock-prevention-in-operating-system/) || <small>(ref for ref)</small> [\#3](https://old.reddit.com/r/explainlikeimfive/comments/1nq4a6/eli5the_dining_philosophers_problem/)
 >
 > <img src="/202210/20221025-operating-system-deadlock.jpeg" alt="Illustration of Deadlock" width="370px" height="auto" />
 
