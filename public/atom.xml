@@ -2841,6 +2841,12 @@ Linear algebra, including vector spaces, linear transformations, and matrix oper
 &lt;h2 id=&quot;interesting-resources-i-m-looking-forward-to-digest&quot;&gt;Interesting Resources I&#x27;m Looking Forward to &lt;em&gt;Digest&lt;&#x2F;em&gt;&lt;&#x2F;h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
+&lt;p&gt;A lightweight TCP&#x2F;IP stack&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;stm32duino&#x2F;LwIP&quot;&gt;stm32duino&#x2F;LwIP: Implementation of the TCP&#x2F;IP protocol suite&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
 &lt;p&gt;A network stack that were written in Go by Google&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;google&#x2F;netstack&quot;&gt;google&#x2F;netstack: IPv4 and IPv6 userland network stack&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;

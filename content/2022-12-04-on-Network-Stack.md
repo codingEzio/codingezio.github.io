@@ -21,6 +21,10 @@ description = "To the deepest level you could get"
 
 ## Interesting Resources I'm Looking Forward to *Digest*
 
+- A lightweight TCP/IP stack
+
+  > [stm32duino/LwIP: Implementation of the TCP/IP protocol suite](https://github.com/stm32duino/LwIP)
+
 - A network stack that were written in Go by Google
 
   > [google/netstack: IPv4 and IPv6 userland network stack](https://github.com/google/netstack)
