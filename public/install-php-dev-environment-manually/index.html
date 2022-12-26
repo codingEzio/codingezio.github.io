@@ -1,138 +1,138 @@
-<!doctype html><html lang=en><head><meta charset=UTF-8><meta content="width=device-width,initial-scale=1.0" name=viewport><title>Install PHP Dev Environment Manually · Rants and thoughts</title><meta content="The Usual LAMP stack, but Installed Separately" name=description><link rel="shortcut icon" href=https://codingezio.github.io/favicon.ico><link href=https://codingezio.github.io/atom.xml rel=alternate title=RSS type=application/atom+xml><style>html,body{background:#fffaf7;color:#2d2d2d;font:16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"}a,a:visited{color:darkred;text-decoration:none}a:hover{text-decoration:underline}main{margin:auto;max-width:38rem;padding:0.8rem}pre{background:white;overflow:scroll;padding:1rem}td{border:1px solid #2d2d2d;padding:10px}img{height:auto;max-width:100%}.homepage-list{list-style:none;padding:1rem 0}.homepage-list li{align-items:center;display:flex;flex-wrap:wrap;justify-content:space-between;margin-bottom:10px}@media (max-width: 38rem){.homepage-list li a{width:100%}}</style><meta content="Rants and thoughts" property=og:site_name><meta content="Install PHP Dev Environment Manually" property=og:title><meta content="The Usual LAMP stack, but Installed Separately" property=og:description><meta content=https://codingezio.github.io/install-php-dev-environment-manually/ property=og:url><meta property=og:image><meta content=article property=og:type><meta content=2021-05-22T00:00:00+00:00 property=article:published_time><body><main id=main role=main><header role=banner><h3 style=margin-top:0;><a href=https://codingezio.github.io title=Home>Rants and thoughts</a> <br><small>Contact me via google_plus@aim.com</small></h3></header><hr><article><h1>Install PHP Dev Environment Manually</h1><p style=font-size:90%;>Posted on <time datetime=2021-05-22T00:00:00+00:00>May 22, 2021</time><blockquote><p>This post was written quite a while ago. Consider this as outdated before I make any edits to this so I could remove this line!</blockquote><h3 id=about-installation>About Installation</h3><blockquote><p>I like to install the dev environment <strong>manually</strong> to have full control over them (ayy)</blockquote><h3 id=lamp><em>LAMP</em></h3><blockquote><p>They're actually all separated softwares, we use this term simply because they together worked pretty good, just like <em>Node</em> + <em>MongoDB</em>, is <em>MongoDB</em> any special than other DBs like <em>MySQL</em>? No!</blockquote><ol><li><em>Linux</em>: optional, every platforms are fine<li><em>PHP</em>: install separately<li><em>Apache</em>: install separately, then tweaking config for <em>PHP</em><li><em>MySQL</em>: install separately, the previous two simply <em>use</em> this</ol><h3 id=integrated-environment>Integrated Environment</h3><ul><li><em>phpStudy</em><li><em>XAMPP</em></ul><h3 id=conceptual-reasoning>Conceptual Reasoning</h3><ol><li><a href=https://stackoverflow.com/questions/21948154/what-is-the-difference-between-www-folder-and-htdocs-folder>What is the difference between www folder and htdocs folder?</a> <blockquote><p>That means you could put your <code>.php</code> files <strong>anywhere</strong> as long as you configure the path in the <code>httpd.conf</code></blockquote><li><a href=https://stackoverflow.com/questions/10262532/running-php-script-from-the-command-line>Running PHP script from the command line</a></ol><h3 id=how-do-you-run-a-php-file>How Do You Run a <code>.php</code> file</h3><blockquote><p>See <em>Usage</em> -> <em>PHP</em> (near the bottom)</blockquote><h3 id=repl>REPL</h3><blockquote><p><a href=https://www.php.net/manual/en/features.commandline.interactive.php>Built-in</a>, <a href=https://psysh.org/>third-party :: psych</a></blockquote><pre class=language-bash data-lang=bash style=background-color:#2b303b;color:#c0c5ce;><code class=language-bash data-lang=bash><span style=color:#65737e;># built-in
-</span><span style=color:#bf616a;>php -a
+<!doctype html><html lang=en><head><meta charset=UTF-8><meta content="width=device-width,initial-scale=1.0" name=viewport><title>Install PHP Dev Environment Manually · Rants and thoughts</title><meta content="The Usual LAMP stack, but Installed Separately" name=description><link rel="shortcut icon" href=https://codingezio.github.io/favicon.ico><link href=https://codingezio.github.io/atom.xml rel=alternate title=RSS type=application/atom+xml><style>html,body{background:#fffaf7;color:#2d2d2d;font:16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"}a,a:visited{color:darkred;text-decoration:none}a:hover{text-decoration:underline}main{margin:auto;max-width:38rem;padding:0.8rem}pre{background:white;overflow:scroll;padding:1rem}td{border:1px solid #2d2d2d;padding:10px}img{height:auto;max-width:100%}.homepage-list{list-style:none;padding:1rem 0}.homepage-list li{align-items:center;display:flex;flex-wrap:wrap;justify-content:space-between;margin-bottom:10px}@media (max-width: 38rem){.homepage-list li a{width:100%}}</style><meta content="Rants and thoughts" property=og:site_name><meta content="Install PHP Dev Environment Manually" property=og:title><meta content="The Usual LAMP stack, but Installed Separately" property=og:description><meta content=https://codingezio.github.io/install-php-dev-environment-manually/ property=og:url><meta property=og:image><meta content=article property=og:type><meta content=2021-05-22T00:00:00+00:00 property=article:published_time><body><main id=main role=main><header role=banner><h3 style=margin-top:0;><a href=https://codingezio.github.io title=Home>Rants and thoughts</a> <br><small>Contact me via google_plus@aim.com</small></h3></header><hr><article><h1>Install PHP Dev Environment Manually</h1><p style=font-size:90%;>Posted on <time datetime=2021-05-22T00:00:00+00:00>May 22, 2021</time><blockquote><p>This post was written quite a while ago. Consider this as outdated before I make any edits to this so I could remove this line!</blockquote><h3 id=about-installation>About Installation</h3><blockquote><p>I like to install the dev environment <strong>manually</strong> to have full control over them (ayy)</blockquote><h3 id=lamp><em>LAMP</em></h3><blockquote><p>They're actually all separated softwares, we use this term simply because they together worked pretty good, just like <em>Node</em> + <em>MongoDB</em>, is <em>MongoDB</em> any special than other DBs like <em>MySQL</em>? No!</blockquote><ol><li><em>Linux</em>: optional, every platforms are fine<li><em>PHP</em>: install separately<li><em>Apache</em>: install separately, then tweaking config for <em>PHP</em><li><em>MySQL</em>: install separately, the previous two simply <em>use</em> this</ol><h3 id=integrated-environment>Integrated Environment</h3><ul><li><em>phpStudy</em><li><em>XAMPP</em></ul><h3 id=conceptual-reasoning>Conceptual Reasoning</h3><ol><li><a href=https://stackoverflow.com/questions/21948154/what-is-the-difference-between-www-folder-and-htdocs-folder>What is the difference between www folder and htdocs folder?</a> <blockquote><p>That means you could put your <code>.php</code> files <strong>anywhere</strong> as long as you configure the path in the <code>httpd.conf</code></blockquote><li><a href=https://stackoverflow.com/questions/10262532/running-php-script-from-the-command-line>Running PHP script from the command line</a></ol><h3 id=how-do-you-run-a-php-file>How Do You Run a <code>.php</code> file</h3><blockquote><p>See <em>Usage</em> -> <em>PHP</em> (near the bottom)</blockquote><h3 id=repl>REPL</h3><blockquote><p><a href=https://www.php.net/manual/en/features.commandline.interactive.php>Built-in</a>, <a href=https://psysh.org/>third-party :: psych</a></blockquote><pre class=language-bash data-lang=bash style=background-color:#272822;color:#f8f8f2;><code class=language-bash data-lang=bash><span style=color:#75715e;># built-in
+</span><span>php</span><span style=font-style:italic;color:#fd971f;> -a
 </span><span>
-</span><span style=color:#65737e;># third-party :: psych
-</span><span style=color:#bf616a;>wget</span><span> https://psysh.org/psysh && </span><span style=color:#bf616a;>chmod</span><span> +x psych
-</span><span style=color:#bf616a;>./psych
-</span></code></pre><hr><h1 id=installation>Installation</h1><blockquote><p>You might need to {re-launch your terminal, <code>source ~/.SHELLrc</code>} and might need to run them as administrator.<blockquote><p>I really want to install <code>Apache</code> and <code>PHP</code> manually <small>(there are ?<em>NO</em> <strong>official</strong> ready-to-use tarballs or binaries)</small>, but it's too much a hassle for me compile this whole thing <strong>and manage the dependencies</strong>.</blockquote></blockquote><h3 id=apache>Apache</h3><ul><li><p>on Windows, the manual way</p> <ol><li><p>Go to <a href=https://www.apachelounge.com/download/>here</a> then search for "<em>httpd-</em>"</p><li><p>Download the <code>.zip</code> file</p> <pre class=language-bash data-lang=bash style=background-color:#2b303b;color:#c0c5ce;><code class=language-bash data-lang=bash><span style=color:#65737e;># The one I'm using is 'httpd-2.4.47-win64-VS16'
+</span><span style=color:#75715e;># third-party :: psych
+</span><span>wget https://psysh.org/psysh </span><span style=color:#f92672;>&& </span><span>chmod +x psych
+</span><span>./psych
+</span></code></pre><hr><h1 id=installation>Installation</h1><blockquote><p>You might need to {re-launch your terminal, <code>source ~/.SHELLrc</code>} and might need to run them as administrator.<blockquote><p>I really want to install <code>Apache</code> and <code>PHP</code> manually <small>(there are ?<em>NO</em> <strong>official</strong> ready-to-use tarballs or binaries)</small>, but it's too much a hassle for me compile this whole thing <strong>and manage the dependencies</strong>.</blockquote></blockquote><h3 id=apache>Apache</h3><ul><li><p>on Windows, the manual way</p> <ol><li><p>Go to <a href=https://www.apachelounge.com/download/>here</a> then search for "<em>httpd-</em>"</p><li><p>Download the <code>.zip</code> file</p> <pre class=language-bash data-lang=bash style=background-color:#272822;color:#f8f8f2;><code class=language-bash data-lang=bash><span style=color:#75715e;># The one I'm using is 'httpd-2.4.47-win64-VS16'
 </span><span>
-</span><span style=color:#65737e;># 1. extract - select where it extracts
-</span><span style=color:#65737e;># 2. extract - extracted result: 'C:\httpd-2.4.47-win64-VS16'
-</span><span style=color:#65737e;># 3. addpath - search 'edit environment' by pressing 'WIN'
-</span><span style=color:#65737e;># 4. addpath - double-click the 'PATH' on the top-half (User Variables)
-</span><span style=color:#65737e;># 5. addpath - click 'NEW' then paste the full path above here, done!
+</span><span style=color:#75715e;># 1. extract - select where it extracts
+</span><span style=color:#75715e;># 2. extract - extracted result: 'C:\httpd-2.4.47-win64-VS16'
+</span><span style=color:#75715e;># 3. addpath - search 'edit environment' by pressing 'WIN'
+</span><span style=color:#75715e;># 4. addpath - double-click the 'PATH' on the top-half (User Variables)
+</span><span style=color:#75715e;># 5. addpath - click 'NEW' then paste the full path above here, done!
 </span><span>
-</span><span style=color:#bf616a;>httpd
+</span><span>httpd
 </span><span>
-</span><span style=color:#65737e;># :: expected message ::
-</span><span style=color:#65737e;># httpd: Syntax error on line 39 of YOUR_EXTRACT_PATH/Apache24/conf/httpd.conf: ServerRoot must be a valid directory
-</span></code></pre></ol><li><p>on macOS, the <code>brew</code> way</p> <pre class=language-bash data-lang=bash style=background-color:#2b303b;color:#c0c5ce;><code class=language-bash data-lang=bash><span style=color:#65737e;># stable v2.4.47
-</span><span style=color:#bf616a;>brew</span><span> install httpd
+</span><span style=color:#75715e;># :: expected message ::
+</span><span style=color:#75715e;># httpd: Syntax error on line 39 of YOUR_EXTRACT_PATH/Apache24/conf/httpd.conf: ServerRoot must be a valid directory
+</span></code></pre></ol><li><p>on macOS, the <code>brew</code> way</p> <pre class=language-bash data-lang=bash style=background-color:#272822;color:#f8f8f2;><code class=language-bash data-lang=bash><span style=color:#75715e;># stable v2.4.47
+</span><span>brew install httpd
 </span><span>
-</span><span style=color:#65737e;># :: expected message ::
-</span><span style=color:#65737e;># the results might vary, but it'd definitely output some kind of error msg
-</span></code></pre></ul><h3 id=php>PHP</h3><ul><li><p>on Windows, the manual way</p> <ol><li><p>Go to <a href=https://windows.php.net/download>here</a> then search for "<em>x64 Thread Safe</em>"</p><li><p>Download the <code>.zip</code> file</p> <pre class=language-bash data-lang=bash style=background-color:#2b303b;color:#c0c5ce;><code class=language-bash data-lang=bash><span style=color:#65737e;># The one I'm using is 'php-7.4.19-Win32-vc15-x64'
+</span><span style=color:#75715e;># :: expected message ::
+</span><span style=color:#75715e;># the results might vary, but it'd definitely output some kind of error msg
+</span></code></pre></ul><h3 id=php>PHP</h3><ul><li><p>on Windows, the manual way</p> <ol><li><p>Go to <a href=https://windows.php.net/download>here</a> then search for "<em>x64 Thread Safe</em>"</p><li><p>Download the <code>.zip</code> file</p> <pre class=language-bash data-lang=bash style=background-color:#272822;color:#f8f8f2;><code class=language-bash data-lang=bash><span style=color:#75715e;># The one I'm using is 'php-7.4.19-Win32-vc15-x64'
 </span><span>
-</span><span style=color:#65737e;># 1. extract - select where it extracts
-</span><span style=color:#65737e;># 2. extract - extracted result: 'C:\php-7.4.19-Win32-vc15-x64'
-</span><span style=color:#65737e;># 3. addpath - search 'edit environment' by pressing 'WIN'
-</span><span style=color:#65737e;># 4. addpath - double-click the 'PATH' on the top-half (User Variables)
-</span><span style=color:#65737e;># 5. addpath - click 'NEW' then paste the full path above here, done!
+</span><span style=color:#75715e;># 1. extract - select where it extracts
+</span><span style=color:#75715e;># 2. extract - extracted result: 'C:\php-7.4.19-Win32-vc15-x64'
+</span><span style=color:#75715e;># 3. addpath - search 'edit environment' by pressing 'WIN'
+</span><span style=color:#75715e;># 4. addpath - double-click the 'PATH' on the top-half (User Variables)
+</span><span style=color:#75715e;># 5. addpath - click 'NEW' then paste the full path above here, done!
 </span><span>
-</span><span style=color:#bf616a;>php --version
+</span><span>php</span><span style=font-style:italic;color:#fd971f;> --version
 </span><span>
-</span><span style=color:#65737e;># :: expected message ::
-</span><span style=color:#65737e;># PHP 7.4.19 (cli) (built: May  4 2021 14:24:38) ( ZTS Visual C++ 2017 x64 )
-</span><span style=color:#65737e;># Copyright (c) The PHP Group
-</span><span style=color:#65737e;># Zend Engine v3.4.0, Copyright (c) Zend Technologies
-</span></code></pre></ol><li><p>on macOS, the <code>brew</code> way</p> <pre class=language-bash data-lang=bash style=background-color:#2b303b;color:#c0c5ce;><code class=language-bash data-lang=bash><span style=color:#bf616a;>brew</span><span> install php         8.0.6      </span><span style=color:#65737e;># till 2021-05-21
-</span><span style=color:#bf616a;>brew</span><span> install php@7.4    7.4.19      </span><span style=color:#65737e;># the one I'm using
-</span><span style=color:#bf616a;>brew</span><span> install php@7.3    7.3.28
-</span><span style=color:#bf616a;>brew</span><span> install php@7.2    7.2.34
+</span><span style=color:#75715e;># :: expected message ::
+</span><span style=color:#75715e;># PHP 7.4.19 (cli) (built: May  4 2021 14:24:38) ( ZTS Visual C++ 2017 x64 )
+</span><span style=color:#75715e;># Copyright (c) The PHP Group
+</span><span style=color:#75715e;># Zend Engine v3.4.0, Copyright (c) Zend Technologies
+</span></code></pre></ol><li><p>on macOS, the <code>brew</code> way</p> <pre class=language-bash data-lang=bash style=background-color:#272822;color:#f8f8f2;><code class=language-bash data-lang=bash><span>brew install php         8.0.6      </span><span style=color:#75715e;># till 2021-05-21
+</span><span>brew install php@7.4    7.4.19      </span><span style=color:#75715e;># the one I'm using
+</span><span>brew install php@7.3    7.3.28
+</span><span>brew install php@7.2    7.2.34
 </span><span>
-</span><span style=color:#65737e;># add $PATH to your ~/.SHELLrc file
-</span><span style=color:#b48ead;>export </span><span style=color:#bf616a;>PATH</span><span>="</span><span style=color:#a3be8c;>/usr/local/opt/php@7.4/bin:</span><span>$</span><span style=color:#bf616a;>PATH</span><span>"  </span><span style=color:#65737e;># path,version vary
-</span><span style=color:#b48ead;>export </span><span style=color:#bf616a;>PATH</span><span>="</span><span style=color:#a3be8c;>/usr/local/opt/php@7.4/sbin:</span><span>$</span><span style=color:#bf616a;>PATH</span><span>" </span><span style=color:#65737e;># path info provided by brew
+</span><span style=color:#75715e;># add $PATH to your ~/.SHELLrc file
+</span><span style=color:#f92672;>export </span><span>PATH</span><span style=color:#f92672;>=</span><span style=color:#e6db74;>"/usr/local/opt/php@7.4/bin:$PATH"  </span><span style=color:#75715e;># path,version vary
+</span><span style=color:#f92672;>export </span><span>PATH</span><span style=color:#f92672;>=</span><span style=color:#e6db74;>"/usr/local/opt/php@7.4/sbin:$PATH" </span><span style=color:#75715e;># path info provided by brew
 </span><span>
-</span><span style=color:#65737e;># should be two lines since macOS has a pre-installed php (7.1.7)
-</span><span style=color:#bf616a;>ls -l </span><span>$(</span><span style=color:#bf616a;>which -a</span><span> php)
-</span></code></pre></ul><h3 id=mysql>MySQL</h3><blockquote><p>Remember the only two things we need is the <code>mysql</code> <small>(<code>mysqlsh</code> on Windows)</small> and the <em>optional</em> Workbench.</blockquote><ul><li><p>on Windows, the <code>.msi</code> way <small>(GUI Installer)</small></p> <ol><li><p>Go to <a href=https://dev.mysql.com/downloads/installer/>here</a> then search for "<em>mysql-installer-community</em>"</p><li><p>Down the <code>.zip</code> file <small>(the <em>big</em> one)</small></p> <pre class=language-bash data-lang=bash style=background-color:#2b303b;color:#c0c5ce;><code class=language-bash data-lang=bash><span style=color:#65737e;># The one I'm using is 'mysql-installer-community-8.0.25.06'
+</span><span style=color:#75715e;># should be two lines since macOS has a pre-installed php (7.1.7)
+</span><span>ls</span><span style=font-style:italic;color:#fd971f;> -l </span><span>$(which</span><span style=font-style:italic;color:#fd971f;> -a</span><span> php)
+</span></code></pre></ul><h3 id=mysql>MySQL</h3><blockquote><p>Remember the only two things we need is the <code>mysql</code> <small>(<code>mysqlsh</code> on Windows)</small> and the <em>optional</em> Workbench.</blockquote><ul><li><p>on Windows, the <code>.msi</code> way <small>(GUI Installer)</small></p> <ol><li><p>Go to <a href=https://dev.mysql.com/downloads/installer/>here</a> then search for "<em>mysql-installer-community</em>"</p><li><p>Down the <code>.zip</code> file <small>(the <em>big</em> one)</small></p> <pre class=language-bash data-lang=bash style=background-color:#272822;color:#f8f8f2;><code class=language-bash data-lang=bash><span style=color:#75715e;># The one I'm using is 'mysql-installer-community-8.0.25.06'
 </span><span>
-</span><span style=color:#65737e;># Issues
-</span><span style=color:#65737e;># Q1 warning message: 'One or more product .. not been satisfied'
-</span><span style=color:#65737e;># A1 ignore it if you do in fact not having Visual Studio in your PC
+</span><span style=color:#75715e;># Issues
+</span><span style=color:#75715e;># Q1 warning message: 'One or more product .. not been satisfied'
+</span><span style=color:#75715e;># A1 ignore it if you do in fact not having Visual Studio in your PC
 </span><span>
-</span><span style=color:#65737e;># 1. double-click the .msi file (it might take a while to open)
-</span><span style=color:#65737e;># 2. :: Choosing a Setup Type -> Full (other choices are fine!)
-</span><span style=color:#65737e;># 3. :: Installation (a list of product will be installed) -> Execute
+</span><span style=color:#75715e;># 1. double-click the .msi file (it might take a while to open)
+</span><span style=color:#75715e;># 2. :: Choosing a Setup Type -> Full (other choices are fine!)
+</span><span style=color:#75715e;># 3. :: Installation (a list of product will be installed) -> Execute
 </span><span>
-</span><span style=color:#65737e;># Normally it would
-</span><span style=color:#65737e;># - be installed to 'C:\Program Files\MySQL\'
-</span><span style=color:#65737e;># - setup the env variables for you 'PATH_ABOVE\MySQL Shell 8.0\bin\'
+</span><span style=color:#75715e;># Normally it would
+</span><span style=color:#75715e;># - be installed to 'C:\Program Files\MySQL\'
+</span><span style=color:#75715e;># - setup the env variables for you 'PATH_ABOVE\MySQL Shell 8.0\bin\'
 </span><span>
-</span><span style=color:#bf616a;>mysqlsh
+</span><span>mysqlsh
 </span><span>
-</span><span style=color:#65737e;># :: expected message ::
-</span><span style=color:#65737e;># MySQL Shell 8.0.25
-</span><span style=color:#65737e;>#
-</span><span style=color:#65737e;># Copyright (c) 2016, 2021, Oracle and/or its affiliates.
-</span><span style=color:#65737e;># Oracle is a registered trademark of Oracle Corporation and/or its affiliates.
-</span><span style=color:#65737e;># Other names may be trademarks of their respective owners.
-</span><span style=color:#65737e;>#
-</span><span style=color:#65737e;># ... and the shell-related message ...
-</span></code></pre></ol><li><p>on macOS, the <code>brew</code> way</p> <pre class=language-bash data-lang=bash style=background-color:#2b303b;color:#c0c5ce;><code class=language-bash data-lang=bash><span style=color:#65737e;># stable v8.0.25
-</span><span style=color:#bf616a;>brew</span><span> install mysql
-</span></code></pre></ul><h1 id=configuration>Configuration</h1><h3 id=apache-1>Apache</h3><blockquote><p>I'll stay away from <code>DocumentRoot</code> unless I have more knowledge on this <small>(<a href=https://httpd.apache.org/docs/2.4/mod/core.html>directives in <code>httpd.conf</code></a>)</small>.</blockquote><ul><li><p>on Windows</p> <blockquote><p>If you install it a custom location, you'll need to modify the <code>SRVROOT</code> to <code>drive:/YOUR_EXTRACT_PATH/Apache24/</code></blockquote> <pre class=language-bash data-lang=bash style=background-color:#2b303b;color:#c0c5ce;><code class=language-bash data-lang=bash><span style=color:#65737e;># go to 'YOUR_EXTRACT_PATH/Apache24/'
+</span><span style=color:#75715e;># :: expected message ::
+</span><span style=color:#75715e;># MySQL Shell 8.0.25
+</span><span style=color:#75715e;>#
+</span><span style=color:#75715e;># Copyright (c) 2016, 2021, Oracle and/or its affiliates.
+</span><span style=color:#75715e;># Oracle is a registered trademark of Oracle Corporation and/or its affiliates.
+</span><span style=color:#75715e;># Other names may be trademarks of their respective owners.
+</span><span style=color:#75715e;>#
+</span><span style=color:#75715e;># ... and the shell-related message ...
+</span></code></pre></ol><li><p>on macOS, the <code>brew</code> way</p> <pre class=language-bash data-lang=bash style=background-color:#272822;color:#f8f8f2;><code class=language-bash data-lang=bash><span style=color:#75715e;># stable v8.0.25
+</span><span>brew install mysql
+</span></code></pre></ul><h1 id=configuration>Configuration</h1><h3 id=apache-1>Apache</h3><blockquote><p>I'll stay away from <code>DocumentRoot</code> unless I have more knowledge on this <small>(<a href=https://httpd.apache.org/docs/2.4/mod/core.html>directives in <code>httpd.conf</code></a>)</small>.</blockquote><ul><li><p>on Windows</p> <blockquote><p>If you install it a custom location, you'll need to modify the <code>SRVROOT</code> to <code>drive:/YOUR_EXTRACT_PATH/Apache24/</code></blockquote> <pre class=language-bash data-lang=bash style=background-color:#272822;color:#f8f8f2;><code class=language-bash data-lang=bash><span style=color:#75715e;># go to 'YOUR_EXTRACT_PATH/Apache24/'
 </span><span>
-</span><span style=color:#65737e;># 1. edit-config    ./conf/httpd.conf
-</span><span style=color:#65737e;>#   search 'ServerName'     add 'ServerName localhost'
-</span><span style=color:#65737e;>#   search 'Listen'         add 'Listen 8080'    (optional)
-</span><span style=color:#65737e;># 2. run-binary
-</span><span style=color:#65737e;>#   - httpd
-</span><span style=color:#65737e;>#   - open browser, access 'localhost:8080'   (localhost if not set 'Listen')
+</span><span style=color:#75715e;># 1. edit-config    ./conf/httpd.conf
+</span><span style=color:#75715e;>#   search 'ServerName'     add 'ServerName localhost'
+</span><span style=color:#75715e;>#   search 'Listen'         add 'Listen 8080'    (optional)
+</span><span style=color:#75715e;># 2. run-binary
+</span><span style=color:#75715e;>#   - httpd
+</span><span style=color:#75715e;>#   - open browser, access 'localhost:8080'   (localhost if not set 'Listen')
 </span><span>
-</span><span style=color:#65737e;># As for configure Apache to work with PHP, see the PHP section below.
-</span></code></pre><li><p>on macOS, the <code>brew</code> way</p> <pre class=language-bash data-lang=bash style=background-color:#2b303b;color:#c0c5ce;><code class=language-bash data-lang=bash><span style=color:#65737e;># go to '/usr/local/Cellar/httpd/' (post-installation msg provided by brew)
+</span><span style=color:#75715e;># As for configure Apache to work with PHP, see the PHP section below.
+</span></code></pre><li><p>on macOS, the <code>brew</code> way</p> <pre class=language-bash data-lang=bash style=background-color:#272822;color:#f8f8f2;><code class=language-bash data-lang=bash><span style=color:#75715e;># go to '/usr/local/Cellar/httpd/' (post-installation msg provided by brew)
 </span><span>
-</span><span style=color:#65737e;># 0. resolve the confict between the macOS built-in Apache
-</span><span style=color:#65737e;>#   - sudo launchctl unload -w /System/Library/LaunchDaemons/org.apache.httpd.plist
-</span><span style=color:#65737e;>#   - killall httpd
-</span><span style=color:#65737e;>#   - sudo /usr/sbin/apachectl stop     (possibly optional (built-in httpd))
+</span><span style=color:#75715e;># 0. resolve the confict between the macOS built-in Apache
+</span><span style=color:#75715e;>#   - sudo launchctl unload -w /System/Library/LaunchDaemons/org.apache.httpd.plist
+</span><span style=color:#75715e;>#   - killall httpd
+</span><span style=color:#75715e;>#   - sudo /usr/sbin/apachectl stop     (possibly optional (built-in httpd))
 </span><span>
-</span><span style=color:#65737e;># 1. edit-config    /usr/local/etc/httpd/httpd.conf
-</span><span style=color:#65737e;>#   search 'ServerRoot'     Windows equivalent '/usr/local/Cellar/httpd/2.4.47/'
-</span><span style=color:#65737e;>#   search 'ServerName'     add 'ServerName localhost'
-</span><span style=color:#65737e;>#   search 'Listen'         add 'Listen 8080'    (optional)
-</span><span style=color:#65737e;># 2. run-binary
-</span><span style=color:#65737e;>#   - /usr/local/opt/httpd/bin/httpd -D FOREGROUND
-</span><span style=color:#65737e;>#   - open browser, access 'localhost:8080'   (localhost if not set 'Listen')
+</span><span style=color:#75715e;># 1. edit-config    /usr/local/etc/httpd/httpd.conf
+</span><span style=color:#75715e;>#   search 'ServerRoot'     Windows equivalent '/usr/local/Cellar/httpd/2.4.47/'
+</span><span style=color:#75715e;>#   search 'ServerName'     add 'ServerName localhost'
+</span><span style=color:#75715e;>#   search 'Listen'         add 'Listen 8080'    (optional)
+</span><span style=color:#75715e;># 2. run-binary
+</span><span style=color:#75715e;>#   - /usr/local/opt/httpd/bin/httpd -D FOREGROUND
+</span><span style=color:#75715e;>#   - open browser, access 'localhost:8080'   (localhost if not set 'Listen')
 </span><span>
-</span><span style=color:#65737e;># If you installed Nginx before, the page you opened might display 'Welcome
-</span><span style=color:#65737e;># to Nginx' instead, which is pretty funny 😂. Well, as long as it displays
-</span><span style=color:#65737e;># SOMETHING, it IS working.
-</span><span style=color:#65737e;># - action      you could modify the 'index.html'
-</span><span style=color:#65737e;># - location    /usr/local/var/www/ (config: DocumentRoot)
-</span></code></pre></ul><h3 id=mysql-1>MySQL</h3><ul><li><p>on Windows</p> <pre class=language-bash data-lang=bash style=background-color:#2b303b;color:#c0c5ce;><code class=language-bash data-lang=bash><span style=color:#65737e;># continue from the mysql installation above
+</span><span style=color:#75715e;># If you installed Nginx before, the page you opened might display 'Welcome
+</span><span style=color:#75715e;># to Nginx' instead, which is pretty funny 😂. Well, as long as it displays
+</span><span style=color:#75715e;># SOMETHING, it IS working.
+</span><span style=color:#75715e;># - action      you could modify the 'index.html'
+</span><span style=color:#75715e;># - location    /usr/local/var/www/ (config: DocumentRoot)
+</span></code></pre></ul><h3 id=mysql-1>MySQL</h3><ul><li><p>on Windows</p> <pre class=language-bash data-lang=bash style=background-color:#272822;color:#f8f8f2;><code class=language-bash data-lang=bash><span style=color:#75715e;># continue from the mysql installation above
 </span><span>
-</span><span style=color:#65737e;># Product Configuration :: MySQL Server
-</span><span style=color:#65737e;># :: Type and networking    Dev Computer | TCP:3306,33060, Firewall
-</span><span style=color:#65737e;># :: Authentication Method  Use Strong Password Encryption
-</span><span style=color:#65737e;># :: Accounts and Rules     #PSWD | AddUser (john,localhost,DBAdmin,$PSWD)
-</span><span style=color:#65737e;># :: Windows Service        AsWinService MySQL80 Startup | Standard SyAcct
-</span><span style=color:#65737e;># :: Apply Configuration    Click 'Execute' to apply all the config above!
+</span><span style=color:#75715e;># Product Configuration :: MySQL Server
+</span><span style=color:#75715e;># :: Type and networking    Dev Computer | TCP:3306,33060, Firewall
+</span><span style=color:#75715e;># :: Authentication Method  Use Strong Password Encryption
+</span><span style=color:#75715e;># :: Accounts and Rules     #PSWD | AddUser (john,localhost,DBAdmin,$PSWD)
+</span><span style=color:#75715e;># :: Windows Service        AsWinService MySQL80 Startup | Standard SyAcct
+</span><span style=color:#75715e;># :: Apply Configuration    Click 'Execute' to apply all the config above!
 </span><span>
-</span><span style=color:#65737e;># Product Configuration :: MySQL Server
-</span><span style=color:#65737e;># > I don't what this is, so I'll just leave it by default (-> Finish)
+</span><span style=color:#75715e;># Product Configuration :: MySQL Server
+</span><span style=color:#75715e;># > I don't what this is, so I'll just leave it by default (-> Finish)
 </span><span>
-</span><span style=color:#65737e;># Product Configuration :: Samples and Examples
-</span><span style=color:#65737e;># > Type your root password to check (#PSWD) -> Check, Execute
+</span><span style=color:#75715e;># Product Configuration :: Samples and Examples
+</span><span style=color:#75715e;># > Type your root password to check (#PSWD) -> Check, Execute
 </span><span>
-</span><span style=color:#65737e;># ... next and other simple clicks ...
+</span><span style=color:#75715e;># ... next and other simple clicks ...
 </span><span>
-</span><span style=color:#65737e;># After all this, it would
-</span><span style=color:#65737e;># - open the 'mysqlsh.exe' in Command Prompt
-</span><span style=color:#65737e;># - open the 'MySQL Workbench' GUI software
-</span></code></pre></ul><h3 id=php-1>PHP</h3><ul><li><p>on Windows</p> <pre class=language-ini data-lang=ini style=background-color:#2b303b;color:#c0c5ce;><code class=language-ini data-lang=ini><span style=color:#65737e;># Configure PHP
+</span><span style=color:#75715e;># After all this, it would
+</span><span style=color:#75715e;># - open the 'mysqlsh.exe' in Command Prompt
+</span><span style=color:#75715e;># - open the 'MySQL Workbench' GUI software
+</span></code></pre></ul><h3 id=php-1>PHP</h3><ul><li><p>on Windows</p> <pre class=language-ini data-lang=ini style=background-color:#272822;color:#f8f8f2;><code class=language-ini data-lang=ini><span style=color:#75715e;># Configure PHP
 </span><span>
-</span><span style=color:#65737e;># before starting: GOTO 'YOUR_EXTRACT_PATH/php-7.4.19-Win32-vc15-x64/'
+</span><span style=color:#75715e;># before starting: GOTO 'YOUR_EXTRACT_PATH/php-7.4.19-Win32-vc15-x64/'
 </span><span>
-</span><span style=color:#65737e;># Enable extensions
-</span><span style=color:#65737e;># - Make a copy of 'php.ini-development' then rename it to 'php.ini'
-</span><span style=color:#65737e;># - Search 'extension_dir = "ext"' then remove the ';' (comment)
-</span><span style=color:#bf616a;>extension_dir </span><span>= </span><span style=color:#a3be8c;>"ext"
-</span></code></pre> <pre class=language-bash data-lang=bash style=background-color:#2b303b;color:#c0c5ce;><code class=language-bash data-lang=bash><span style=color:#65737e;># see what extensions were (even) loaded
-</span><span style=color:#bf616a;>php -m
-</span></code></pre> <pre class=language-xml data-lang=xml style=background-color:#2b303b;color:#c0c5ce;><code class=language-xml data-lang=xml><span># Configure Apache (to use PHP)
+</span><span style=color:#75715e;># Enable extensions
+</span><span style=color:#75715e;># - Make a copy of 'php.ini-development' then rename it to 'php.ini'
+</span><span style=color:#75715e;># - Search 'extension_dir = "ext"' then remove the ';' (comment)
+</span><span style=font-style:italic;color:#fd971f;>extension_dir </span><span style=color:#f92672;>= </span><span style=color:#e6db74;>"ext"
+</span></code></pre> <pre class=language-bash data-lang=bash style=background-color:#272822;color:#f8f8f2;><code class=language-bash data-lang=bash><span style=color:#75715e;># see what extensions were (even) loaded
+</span><span>php</span><span style=font-style:italic;color:#fd971f;> -m
+</span></code></pre> <pre class=language-xml data-lang=xml style=background-color:#272822;color:#f8f8f2;><code class=language-xml data-lang=xml><span># Configure Apache (to use PHP)
 </span><span>
 </span><span># before starting: OPEN 'YOUR_EXTRACT_PATH/Apache24/conf/httpd.conf'
 </span><span>
@@ -140,23 +140,23 @@
 </span><span>
 </span><span># search '#LoadModule xml2enc' then add these lines afer it (after all mod)
 </span><span>LoadModule php7_module "${PHPROOT}/php7apache2_4.dll"
-</span><span><</span><span style=color:#bf616a;>IfModule </span><span style=color:#d08770;>php7_module</span><span>>
+</span><span><</span><span style=color:#f92672;>IfModule </span><span style=color:#a6e22e;>php7_module</span><span>>
 </span><span>    AddHandler application/x-httpd-php .php
 </span><span>    AddType application/x-httpd-php .php .html
 </span><span>    PHPIniDir "${PHPROOT}"
-</span><span>&LT/</span><span style=color:#bf616a;>IfModule</span><span>>
-</span></code></pre> <pre class=language-bash data-lang=bash style=background-color:#2b303b;color:#c0c5ce;><code class=language-bash data-lang=bash><span style=color:#65737e;># Test whether your configuration is working (no output means ?SUCCESS)
-</span><span style=color:#bf616a;>httpd
-</span></code></pre><li><p>on macOS <small>(installed via <code>brew</code>)<p><pre class=language-ini data-lang=ini style=background-color:#2b303b;color:#c0c5ce;><code class=language-ini data-lang=ini><span style=color:#65737e;># Configure PHP
+</span><span>&LT/</span><span style=color:#f92672;>IfModule</span><span>>
+</span></code></pre> <pre class=language-bash data-lang=bash style=background-color:#272822;color:#f8f8f2;><code class=language-bash data-lang=bash><span style=color:#75715e;># Test whether your configuration is working (no output means ?SUCCESS)
+</span><span>httpd
+</span></code></pre><li><p>on macOS <small>(installed via <code>brew</code>)<p><pre class=language-ini data-lang=ini style=background-color:#272822;color:#f8f8f2;><code class=language-ini data-lang=ini><span style=color:#75715e;># Configure PHP
 </span><span>
-</span><span style=color:#65737e;># before starting: GOTO '/usr/local/etc/httpd/' (via brew)
+</span><span style=color:#75715e;># before starting: GOTO '/usr/local/etc/httpd/' (via brew)
 </span><span>
-</span><span style=color:#65737e;># Enable extensions
-</span><span style=color:#65737e;># - Make a backup copy of 'php.ini' by `cp -f php.ini php.ini.default`
-</span><span style=color:#65737e;># - Search 'extension_dir' (had values being set? leave it be, no need to change!)
-</span></code></pre> <pre class=language-bash data-lang=bash style=background-color:#2b303b;color:#c0c5ce;><code class=language-bash data-lang=bash><span style=color:#65737e;># see what extensions were (even) loaded
-</span><span style=color:#bf616a;>php -m
-</span></code></pre> <pre class=language-xml data-lang=xml style=background-color:#2b303b;color:#c0c5ce;><code class=language-xml data-lang=xml><span># Configure Apache (to use PHP)
+</span><span style=color:#75715e;># Enable extensions
+</span><span style=color:#75715e;># - Make a backup copy of 'php.ini' by `cp -f php.ini php.ini.default`
+</span><span style=color:#75715e;># - Search 'extension_dir' (had values being set? leave it be, no need to change!)
+</span></code></pre> <pre class=language-bash data-lang=bash style=background-color:#272822;color:#f8f8f2;><code class=language-bash data-lang=bash><span style=color:#75715e;># see what extensions were (even) loaded
+</span><span>php</span><span style=font-style:italic;color:#fd971f;> -m
+</span></code></pre> <pre class=language-xml data-lang=xml style=background-color:#272822;color:#f8f8f2;><code class=language-xml data-lang=xml><span># Configure Apache (to use PHP)
 </span><span>
 </span><span># before starting: OPEN '/usr/local/etc/httpd/httpd.conf' (via brew)
 </span><span>
@@ -168,77 +168,77 @@
 </span><span># search 'LoadModule' then navigate to the last one (built-in provided by macOS)
 </span><span>LoadModule php7_module /usr/libexec/apache2/libphp7.so
 </span><span>
-</span><span><</span><span style=color:#bf616a;>FilesMatch </span><span style=background-color:#bf616a;color:#2b303b;>\.php$</span><span>>
+</span><span><</span><span style=color:#f92672;>FilesMatch </span><span style=background-color:#f92672;color:#f8f8f0;>\.php$</span><span>>
 </span><span>    SetHandler application/x-httpd-php
-</span><span>&LT/</span><span style=color:#bf616a;>FilesMatch</span><span>>
+</span><span>&LT/</span><span style=color:#f92672;>FilesMatch</span><span>>
 </span><span>
 </span><span># search 'DirectoryIndex' to change the config to
-</span><span><</span><span style=color:#bf616a;>IfModule </span><span style=color:#d08770;>dir_module</span><span>>
+</span><span><</span><span style=color:#f92672;>IfModule </span><span style=color:#a6e22e;>dir_module</span><span>>
 </span><span>    DirectoryIndex index.php index.html
-</span><span>&LT/</span><span style=color:#bf616a;>IfModule</span><span>>
-</span></code></pre> <pre class=language-bash data-lang=bash style=background-color:#2b303b;color:#c0c5ce;><code class=language-bash data-lang=bash><span style=color:#65737e;># Test whether your configuration is working (no output means ?SUCCESS)
-</span><span style=color:#bf616a;>/usr/local/opt/httpd/bin/httpd -D</span><span> FOREGROUND
-</span></code></pre> <li><ul><h1 id=usage>Usage</h1><h3 id=apache-2>Apache</h3><ul><li><p>on Windows</p> <pre class=language-bash data-lang=bash style=background-color:#2b303b;color:#c0c5ce;><code class=language-bash data-lang=bash><span style=color:#bf616a;>httpd
-</span></code></pre><li><p>on macOS/Linux</p> <pre class=language-bash data-lang=bash style=background-color:#2b303b;color:#c0c5ce;><code class=language-bash data-lang=bash><span style=color:#65737e;># foreground
-</span><span style=color:#bf616a;>/usr/local/opt/httpd/bin/httpd -D</span><span> FOREGROUND
+</span><span>&LT/</span><span style=color:#f92672;>IfModule</span><span>>
+</span></code></pre> <pre class=language-bash data-lang=bash style=background-color:#272822;color:#f8f8f2;><code class=language-bash data-lang=bash><span style=color:#75715e;># Test whether your configuration is working (no output means ?SUCCESS)
+</span><span>/usr/local/opt/httpd/bin/httpd</span><span style=font-style:italic;color:#fd971f;> -D</span><span> FOREGROUND
+</span></code></pre> <li><ul><h1 id=usage>Usage</h1><h3 id=apache-2>Apache</h3><ul><li><p>on Windows</p> <pre class=language-bash data-lang=bash style=background-color:#272822;color:#f8f8f2;><code class=language-bash data-lang=bash><span>httpd
+</span></code></pre><li><p>on macOS/Linux</p> <pre class=language-bash data-lang=bash style=background-color:#272822;color:#f8f8f2;><code class=language-bash data-lang=bash><span style=color:#75715e;># foreground
+</span><span>/usr/local/opt/httpd/bin/httpd</span><span style=font-style:italic;color:#fd971f;> -D</span><span> FOREGROUND
 </span><span>
-</span><span style=color:#65737e;># background
-</span><span style=color:#bf616a;>apachectl       </span><span style=color:#b48ead;>[</span><span>start, stop, restart</span><span style=color:#b48ead;>]
-</span><span style=color:#bf616a;>brew</span><span> services   </span><span style=color:#b48ead;>[</span><span>start, stop, restart</span><span style=color:#b48ead;>]</span><span> httpd
-</span></code></pre></ul><h3 id=mysql-2>MySQL</h3><ul><li><p>on Windows</p> <pre class=language-sql data-lang=sql style=background-color:#2b303b;color:#c0c5ce;><code class=language-sql data-lang=sql><span style=color:#65737e;>-- I couldn't quite figure out how to use 'mysqlsh.exe', so I'll just use
-</span><span style=color:#65737e;>-- the 'MySQL Workbench' (GUI software).
+</span><span style=color:#75715e;># background
+</span><span>apachectl       </span><span style=color:#f92672;>[</span><span>start, stop, restart</span><span style=color:#f92672;>]
+</span><span>brew services   </span><span style=color:#f92672;>[</span><span>start, stop, restart</span><span style=color:#f92672;>]</span><span> httpd
+</span></code></pre></ul><h3 id=mysql-2>MySQL</h3><ul><li><p>on Windows</p> <pre class=language-sql data-lang=sql style=background-color:#272822;color:#f8f8f2;><code class=language-sql data-lang=sql><span style=color:#75715e;>-- I couldn't quite figure out how to use 'mysqlsh.exe', so I'll just use
+</span><span style=color:#75715e;>-- the 'MySQL Workbench' (GUI software).
 </span><span>
-</span><span style=color:#65737e;>-- Shell
-</span><span style=color:#65737e;>-- 0. open it then right click the existing 'MySQL Connections'
-</span><span style=color:#65737e;>-- 1. click 'Start Command Line Client'
-</span><span style=color:#65737e;>-- 2. type your password in the opened Command Prompt
+</span><span style=color:#75715e;>-- Shell
+</span><span style=color:#75715e;>-- 0. open it then right click the existing 'MySQL Connections'
+</span><span style=color:#75715e;>-- 1. click 'Start Command Line Client'
+</span><span style=color:#75715e;>-- 2. type your password in the opened Command Prompt
 </span><span>
-</span><span style=color:#65737e;>-- Now you are INSIDE the database "warehouse"
-</span><span style=color:#65737e;>-- 1. Make to sure to add ';' in the end
-</span><span style=color:#65737e;>-- 2. Command below can be lowercase as well.
+</span><span style=color:#75715e;>-- Now you are INSIDE the database "warehouse"
+</span><span style=color:#75715e;>-- 1. Make to sure to add ';' in the end
+</span><span style=color:#75715e;>-- 2. Command below can be lowercase as well.
 </span><span>SHOW DATABASES;
-</span></code></pre></ul><h3 id=php-2>PHP</h3><ul><li><p>PHP <em>alone</em></p> <pre class=language-bash data-lang=bash style=background-color:#2b303b;color:#c0c5ce;><code class=language-bash data-lang=bash><span style=color:#65737e;># [TYPE]                        [EQUIVALENT-in-Python]
-</span><span style=color:#65737e;># REPL                          python3
-</span><span style=color:#65737e;># Interpreter                   python3 FILE.py
-</span><span style=color:#65737e;># Program Passed in as String   python3 -c "print(10)"
-</span><span style=color:#bf616a;>php -a
-</span><span style=color:#bf616a;>php -f</span><span> FILE.php
-</span><span style=color:#bf616a;>php -c </span><span>"</span><span style=color:#a3be8c;>echo 10;</span><span>"
+</span></code></pre></ul><h3 id=php-2>PHP</h3><ul><li><p>PHP <em>alone</em></p> <pre class=language-bash data-lang=bash style=background-color:#272822;color:#f8f8f2;><code class=language-bash data-lang=bash><span style=color:#75715e;># [TYPE]                        [EQUIVALENT-in-Python]
+</span><span style=color:#75715e;># REPL                          python3
+</span><span style=color:#75715e;># Interpreter                   python3 FILE.py
+</span><span style=color:#75715e;># Program Passed in as String   python3 -c "print(10)"
+</span><span>php</span><span style=font-style:italic;color:#fd971f;> -a
+</span><span>php</span><span style=font-style:italic;color:#fd971f;> -f</span><span> FILE.php
+</span><span>php</span><span style=font-style:italic;color:#fd971f;> -c </span><span style=color:#e6db74;>"echo 10;"
 </span><span>
-</span><span style=color:#65737e;># PHP server
-</span><span style=color:#bf616a;>php -S</span><span> localhost:8081
-</span></code></pre><li><p>PHP <em>with Apache</em></p> <pre class=language-xml data-lang=xml style=background-color:#2b303b;color:#c0c5ce;><code class=language-xml data-lang=xml><span># ----- -----  ----- PHP file ----- -----  -----
+</span><span style=color:#75715e;># PHP server
+</span><span>php</span><span style=font-style:italic;color:#fd971f;> -S</span><span> localhost:8081
+</span></code></pre><li><p>PHP <em>with Apache</em></p> <pre class=language-xml data-lang=xml style=background-color:#272822;color:#f8f8f2;><code class=language-xml data-lang=xml><span># ----- -----  ----- PHP file ----- -----  -----
 </span><span>
 </span><span># > normally you would put your `.php` under 'YOUR_INSTALLATION/htdocs/'
 </span><span># > but you could put them anywhere by changing these (if not using `php -S URL:PORT`)
 </span><span>
 </span><span># -- Windows
 </span><span>DocumentRoot "${SRVROOT}/htdocs"
-</span><span><</span><span style=color:#bf616a;>Directory</span><span> "${SRVROOT}/</span><span style=background-color:#bf616a;color:#2b303b;>htdocs"</span><span>>  ... &LT/</span><span style=color:#bf616a;>Directory</span><span>>
+</span><span><</span><span style=color:#f92672;>Directory</span><span> "${SRVROOT}/</span><span style=background-color:#f92672;color:#f8f8f0;>htdocs"</span><span>>  ... &LT/</span><span style=color:#f92672;>Directory</span><span>>
 </span><span>
 </span><span># -- macOS (install via brew)
 </span><span>DocumentRoot "/usr/local/var/www"
-</span><span><</span><span style=color:#bf616a;>Directory</span><span> "/usr/local/var/</span><span style=background-color:#bf616a;color:#2b303b;>www"</span><span>> ... &LT/</span><span style=color:#bf616a;>Directory</span><span>>
-</span></code></pre> <pre class=language-bash data-lang=bash style=background-color:#2b303b;color:#c0c5ce;><code class=language-bash data-lang=bash><span style=color:#65737e;># ----- -----  ----- Server ----- -----  -----
-</span><span style=color:#bf616a;>httpd </span><span>&
-</span></code></pre> <pre class=language-php data-lang=php style=background-color:#2b303b;color:#c0c5ce;><code class=language-php data-lang=php><span># ----- -----  ----- The Code ----- -----  -----
+</span><span><</span><span style=color:#f92672;>Directory</span><span> "/usr/local/var/</span><span style=background-color:#f92672;color:#f8f8f0;>www"</span><span>> ... &LT/</span><span style=color:#f92672;>Directory</span><span>>
+</span></code></pre> <pre class=language-bash data-lang=bash style=background-color:#272822;color:#f8f8f2;><code class=language-bash data-lang=bash><span style=color:#75715e;># ----- -----  ----- Server ----- -----  -----
+</span><span>httpd </span><span style=color:#f92672;>&
+</span></code></pre> <pre class=language-php data-lang=php style=background-color:#272822;color:#f8f8f2;><code class=language-php data-lang=php><span># ----- -----  ----- The Code ----- -----  -----
 </span><span># save it as 'testings.php'
 </span><span># expected   'YOUR_INSTALLATION/htdocs/testing.php'
-</span><span style=color:#ab7967;>&LT?php
-</span><span style=color:#96b5b4;>phpinfo</span><span>();
-</span><span style=color:#ab7967;>?>
-</span></code></pre> <pre class=language-bash data-lang=bash style=background-color:#2b303b;color:#c0c5ce;><code class=language-bash data-lang=bash><span style=color:#65737e;># ----- -----  ----- Execute ----- -----  -----
-</span><span style=color:#65737e;># httpd.conf - ServerName:Listen:DocumentRoot/testing.php
-</span><span style=color:#65737e;># - ServerName      localhost
-</span><span style=color:#65737e;># - Listen          8080
-</span><span style=color:#65737e;># - DocumentRoot    win: ${SRVROOT}/htdocs, macOS: /usr/local/var/www/
+</span><span>&LT?php
+</span><span style=color:#66d9ef;>phpinfo</span><span>();
+</span><span>?>
+</span></code></pre> <pre class=language-bash data-lang=bash style=background-color:#272822;color:#f8f8f2;><code class=language-bash data-lang=bash><span style=color:#75715e;># ----- -----  ----- Execute ----- -----  -----
+</span><span style=color:#75715e;># httpd.conf - ServerName:Listen:DocumentRoot/testing.php
+</span><span style=color:#75715e;># - ServerName      localhost
+</span><span style=color:#75715e;># - Listen          8080
+</span><span style=color:#75715e;># - DocumentRoot    win: ${SRVROOT}/htdocs, macOS: /usr/local/var/www/
 </span><span>
-</span><span style=color:#65737e;># Examples
-</span><span style=color:#bf616a;>localhost:80/testing.php
-</span><span style=color:#bf616a;>localhost:8080/testing.php
-</span><span style=color:#bf616a;>localhost:8080/folder/testing.php
-</span></code></pre></ul><h1 id=more-on-amp>More on <em>AMP</em></h1><ul><li><p>Apache</p> <pre class=language-bash data-lang=bash style=background-color:#2b303b;color:#c0c5ce;><code class=language-bash data-lang=bash><span style=color:#bf616a;>man</span><span> httpd
+</span><span style=color:#75715e;># Examples
+</span><span>localhost:80/testing.php
+</span><span>localhost:8080/testing.php
+</span><span>localhost:8080/folder/testing.php
+</span></code></pre></ul><h1 id=more-on-amp>More on <em>AMP</em></h1><ul><li><p>Apache</p> <pre class=language-bash data-lang=bash style=background-color:#272822;color:#f8f8f2;><code class=language-bash data-lang=bash><span>man httpd
 </span><span>
-</span><span style=color:#bf616a;>httpd -S    </span><span>'</span><span style=color:#a3be8c;>virtualhost</span><span>' settings parsed from the config file
-</span><span style=color:#bf616a;>httpd -V</span><span>    build parameters of httpd
+</span><span>httpd</span><span style=font-style:italic;color:#fd971f;> -S    </span><span style=color:#e6db74;>'virtualhost'</span><span> settings parsed from the config file
+</span><span>httpd</span><span style=font-style:italic;color:#fd971f;> -V</span><span>    build parameters of httpd
 </span></code></pre></ul><article><footer role=contentinfo><hr><small>Built with <a href=https://www.getzola.org/>Zola</a>.<br> </small></footer><main>

@@ -1,80 +1,80 @@
-<!doctype html><html lang=en><head><meta charset=UTF-8><meta content="width=device-width,initial-scale=1.0" name=viewport><title>On CSS, Layout and Design · Rants and thoughts</title><meta content="Notes on learning CSS to build amazing things" name=description><link rel="shortcut icon" href=https://codingezio.github.io/favicon.ico><link href=https://codingezio.github.io/atom.xml rel=alternate title=RSS type=application/atom+xml><style>html,body{background:#fffaf7;color:#2d2d2d;font:16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"}a,a:visited{color:darkred;text-decoration:none}a:hover{text-decoration:underline}main{margin:auto;max-width:38rem;padding:0.8rem}pre{background:white;overflow:scroll;padding:1rem}td{border:1px solid #2d2d2d;padding:10px}img{height:auto;max-width:100%}.homepage-list{list-style:none;padding:1rem 0}.homepage-list li{align-items:center;display:flex;flex-wrap:wrap;justify-content:space-between;margin-bottom:10px}@media (max-width: 38rem){.homepage-list li a{width:100%}}</style><meta content="Rants and thoughts" property=og:site_name><meta content="On CSS, Layout and Design" property=og:title><meta content="Notes on learning CSS to build amazing things" property=og:description><meta content=https://codingezio.github.io/one-to-infinity-css-and-design/ property=og:url><meta property=og:image><meta content=article property=og:type><meta content=2022-10-30T00:00:00+00:00 property=article:published_time><body><main id=main role=main><header role=banner><h3 style=margin-top:0;><a href=https://codingezio.github.io title=Home>Rants and thoughts</a> <br><small>Contact me via google_plus@aim.com</small></h3></header><hr><article><h1>On CSS, Layout and Design</h1><p style=font-size:90%;>Posted on <time datetime=2022-10-30T00:00:00+00:00>October 30, 2022</time><h2 id=resources>Resources</h2><blockquote><p>Read, practice and write blog about it!</blockquote><ul><li>Book <ul><li><a href=https://cssmine.com/ebook/intro>CSS Mine: Dig into Web UI Development</a></ul><li>Reference <ul><li><a href=https://dribbble.com/shots/popular>Dribble</a><li><a href=https://tympanus.net/codrops/css_reference/>CSS Reference</a></ul><li>Tutorial <ul><li><a href=https://css-tricks.com/snippets/css/complete-guide-grid/>A Complete Guide to CSS Grid | CSS-Tricks - CSS-Tricks</a><li><a href=https://css-tricks.com/snippets/css/a-guide-to-flexbox/>A Complete Guide to Flexbox | CSS-Tricks - CSS-Tricks</a><li><a href=https://www.taniarascia.com/overview-of-css-concepts/>A Complete Guide to CSS Concepts and Fundamentals</a></ul><li>Examples to learn from <ul><li><a href=https://flexboxpatterns.com/>Flexbox Patterns - Intro</a><li><a href=https://freefrontend.com/css-code-examples/#sitemap-layouts>CSS Code Examples</a><li><a href=https://freefrontend.com/javascript-code-examples/>JavaScript Code Examples</a></ul><li>Snippets to use <ul><li><a href=https://csslayout.io/>A collection of popular layouts and patterns made with CSS - CSS Layout</a><li><a href=https://www.hyperui.dev/>Free Open Source Tailwind CSS Components | HyperUI</a></ul></ul><h2 id=thoughts>Thoughts</h2><h4 id=foreword>Foreword</h4><blockquote><p>Watched a lot of CSS videos, done a lot exercises on websites like <em>w3school</em>, still have no idea to build a functional layout.<p>Of course, I could just copy a template that looks familiar to my liking or the website I'm gonna build. But still, if you haven't got the foundations built, you wouldn't where to start modifying, especially you want to use some modern frameworks like <em>Bulma</em> or <em>Tailwind</em>.<p>I said to myself I'm gonna be a <em>Backend Developer</em>. Well, it's better know it all, right? It's an amazing feeling when you got the whole development process <small>(also known as <em>Fullstack</em>)</small> at your hand.<p>Sidenote<blockquote><p>When I say <em>modern</em>, it means it's <em>new</em> and <em>interesting</em> BootStrap is still amazing (so I heard) though.</blockquote></blockquote><h2 id=notes>Notes</h2><h4 id=concept>Concept</h4><ul><li>The HTML will always have some types of styling attached to them</ul><blockquote><p>It's called <em>User Agent Styles</em>. Why? Because <em>HTML</em> is just like <em>Markdown</em>, they are markup languages. It means it was merely texts, and the actual styling must be done by the software (whether it's renderer for the <em>Markdown</em> or the <em>Browser</em> for rendering HTML code).</blockquote><ul><li>Specificity</ul><blockquote><p>Based my experience, more clearer path wins. Or you could just debug them using the developer console.</blockquote><ul><li>Font</ul><blockquote><p>Keywords: <code>monospace</code>, <code>sans</code> and <code>sans-serif</code></blockquote><pre class=language-css data-lang=css style=background-color:#2b303b;color:#c0c5ce;><code class=language-css data-lang=css><span style=color:#65737e;>/* These were the built-in fonts for OSs below if not being tampered */
+<!doctype html><html lang=en><head><meta charset=UTF-8><meta content="width=device-width,initial-scale=1.0" name=viewport><title>On CSS, Layout and Design · Rants and thoughts</title><meta content="Notes on learning CSS to build amazing things" name=description><link rel="shortcut icon" href=https://codingezio.github.io/favicon.ico><link href=https://codingezio.github.io/atom.xml rel=alternate title=RSS type=application/atom+xml><style>html,body{background:#fffaf7;color:#2d2d2d;font:16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"}a,a:visited{color:darkred;text-decoration:none}a:hover{text-decoration:underline}main{margin:auto;max-width:38rem;padding:0.8rem}pre{background:white;overflow:scroll;padding:1rem}td{border:1px solid #2d2d2d;padding:10px}img{height:auto;max-width:100%}.homepage-list{list-style:none;padding:1rem 0}.homepage-list li{align-items:center;display:flex;flex-wrap:wrap;justify-content:space-between;margin-bottom:10px}@media (max-width: 38rem){.homepage-list li a{width:100%}}</style><meta content="Rants and thoughts" property=og:site_name><meta content="On CSS, Layout and Design" property=og:title><meta content="Notes on learning CSS to build amazing things" property=og:description><meta content=https://codingezio.github.io/one-to-infinity-css-and-design/ property=og:url><meta property=og:image><meta content=article property=og:type><meta content=2022-10-30T00:00:00+00:00 property=article:published_time><body><main id=main role=main><header role=banner><h3 style=margin-top:0;><a href=https://codingezio.github.io title=Home>Rants and thoughts</a> <br><small>Contact me via google_plus@aim.com</small></h3></header><hr><article><h1>On CSS, Layout and Design</h1><p style=font-size:90%;>Posted on <time datetime=2022-10-30T00:00:00+00:00>October 30, 2022</time><h2 id=resources>Resources</h2><blockquote><p>Read, practice and write blog about it!</blockquote><ul><li>Book <ul><li><a href=https://cssmine.com/ebook/intro>CSS Mine: Dig into Web UI Development</a></ul><li>Reference <ul><li><a href=https://dribbble.com/shots/popular>Dribble</a><li><a href=https://tympanus.net/codrops/css_reference/>CSS Reference</a></ul><li>Tutorial <ul><li><a href=https://css-tricks.com/snippets/css/complete-guide-grid/>A Complete Guide to CSS Grid | CSS-Tricks - CSS-Tricks</a><li><a href=https://css-tricks.com/snippets/css/a-guide-to-flexbox/>A Complete Guide to Flexbox | CSS-Tricks - CSS-Tricks</a><li><a href=https://www.taniarascia.com/overview-of-css-concepts/>A Complete Guide to CSS Concepts and Fundamentals</a></ul><li>Examples to learn from <ul><li><a href=https://flexboxpatterns.com/>Flexbox Patterns - Intro</a><li><a href=https://freefrontend.com/css-code-examples/#sitemap-layouts>CSS Code Examples</a><li><a href=https://freefrontend.com/javascript-code-examples/>JavaScript Code Examples</a></ul><li>Snippets to use <ul><li><a href=https://csslayout.io/>A collection of popular layouts and patterns made with CSS - CSS Layout</a><li><a href=https://www.hyperui.dev/>Free Open Source Tailwind CSS Components | HyperUI</a></ul></ul><h2 id=thoughts>Thoughts</h2><h4 id=foreword>Foreword</h4><blockquote><p>Watched a lot of CSS videos, done a lot exercises on websites like <em>w3school</em>, still have no idea to build a functional layout.<p>Of course, I could just copy a template that looks familiar to my liking or the website I'm gonna build. But still, if you haven't got the foundations built, you wouldn't where to start modifying, especially you want to use some modern frameworks like <em>Bulma</em> or <em>Tailwind</em>.<p>I said to myself I'm gonna be a <em>Backend Developer</em>. Well, it's better know it all, right? It's an amazing feeling when you got the whole development process <small>(also known as <em>Fullstack</em>)</small> at your hand.<p>Sidenote<blockquote><p>When I say <em>modern</em>, it means it's <em>new</em> and <em>interesting</em> BootStrap is still amazing (so I heard) though.</blockquote></blockquote><h2 id=notes>Notes</h2><h4 id=concept>Concept</h4><ul><li>The HTML will always have some types of styling attached to them</ul><blockquote><p>It's called <em>User Agent Styles</em>. Why? Because <em>HTML</em> is just like <em>Markdown</em>, they are markup languages. It means it was merely texts, and the actual styling must be done by the software (whether it's renderer for the <em>Markdown</em> or the <em>Browser</em> for rendering HTML code).</blockquote><ul><li>Specificity</ul><blockquote><p>Based my experience, more clearer path wins. Or you could just debug them using the developer console.</blockquote><ul><li>Font</ul><blockquote><p>Keywords: <code>monospace</code>, <code>sans</code> and <code>sans-serif</code></blockquote><pre class=language-css data-lang=css style=background-color:#272822;color:#f8f8f2;><code class=language-css data-lang=css><span style=color:#75715e;>/* These were the built-in fonts for OSs below if not being tampered */
 </span><span>
-</span><span style=color:#8fa1b3;>.</span><span style=color:#d08770;>for-windows </span><span>{
-</span><span> font-family: </span><span style=color:#a3be8c;>Arial</span><span>, </span><span style=color:#a3be8c;>Lucida</span><span>, </span><span style=color:#a3be8c;>Impact</span><span>, </span><span style=color:#a3be8c;>Times New Roman</span><span>, </span><span style=color:#a3be8c;>Courier New</span><span>, </span><span style=color:#a3be8c;>Tahoma</span><span>, </span><span style=color:#a3be8c;>Comic Sans</span><span>, </span><span style=color:#a3be8c;>Verdana</span><span>, </span><span style=color:#a3be8c;>Georgia</span><span>, </span><span style=color:#a3be8c;>Garamond</span><span>;
+</span><span style=color:#a6e22e;>.for-windows </span><span>{
+</span><span> </span><span style=font-style:italic;color:#66d9ef;>font-family</span><span>: </span><span style=color:#e6db74;>Arial</span><span>, </span><span style=color:#e6db74;>Lucida</span><span>, </span><span style=color:#e6db74;>Impact</span><span>, </span><span style=color:#e6db74;>Times New Roman</span><span>, </span><span style=color:#e6db74;>Courier New</span><span>, </span><span style=color:#e6db74;>Tahoma</span><span>, </span><span style=color:#e6db74;>Comic Sans</span><span>, </span><span style=color:#e6db74;>Verdana</span><span>, </span><span style=color:#e6db74;>Georgia</span><span>, </span><span style=color:#e6db74;>Garamond</span><span>;
 </span><span>}
 </span><span>
-</span><span style=color:#8fa1b3;>.</span><span style=color:#d08770;>for-macos </span><span>{
-</span><span> font-family: </span><span style=color:#a3be8c;>Helvetica</span><span>, </span><span style=color:#a3be8c;>Futura</span><span>, </span><span style=color:#a3be8c;>Bodoni</span><span>, </span><span style=color:#a3be8c;>Times</span><span>, </span><span style=color:#a3be8c;>Palatino</span><span>, </span><span style=color:#a3be8c;>Courier</span><span>, </span><span style=color:#a3be8c;>Gill Sans</span><span>, </span><span style=color:#a3be8c;>Geneva</span><span>, </span><span style=color:#a3be8c;>Baskerville</span><span>, </span><span style=color:#a3be8c;>Andale Mono</span><span>;
+</span><span style=color:#a6e22e;>.for-macos </span><span>{
+</span><span> </span><span style=font-style:italic;color:#66d9ef;>font-family</span><span>: </span><span style=color:#e6db74;>Helvetica</span><span>, </span><span style=color:#e6db74;>Futura</span><span>, </span><span style=color:#e6db74;>Bodoni</span><span>, </span><span style=color:#e6db74;>Times</span><span>, </span><span style=color:#e6db74;>Palatino</span><span>, </span><span style=color:#e6db74;>Courier</span><span>, </span><span style=color:#e6db74;>Gill Sans</span><span>, </span><span style=color:#e6db74;>Geneva</span><span>, </span><span style=color:#e6db74;>Baskerville</span><span>, </span><span style=color:#e6db74;>Andale Mono</span><span>;
 </span><span>}
-</span></code></pre><ul><li><p>Layout Model</p><li><p>Three types of them</p> <ol><li>Dumb built-in methods like <code>position</code> and such<li>Newly introduced <em>CSS Flexbox</em> and <em>CSS Grid</em></ol> <blockquote><p>More methods dedicated to the layout are available to you</blockquote> <pre class=language-css data-lang=css style=background-color:#2b303b;color:#c0c5ce;><code class=language-css data-lang=css><span style=color:#8fa1b3;>.</span><span style=color:#d08770;>stuff </span><span>{
-</span><span>  display: flex;
+</span></code></pre><ul><li><p>Layout Model</p><li><p>Three types of them</p> <ol><li>Dumb built-in methods like <code>position</code> and such<li>Newly introduced <em>CSS Flexbox</em> and <em>CSS Grid</em></ol> <blockquote><p>More methods dedicated to the layout are available to you</blockquote> <pre class=language-css data-lang=css style=background-color:#272822;color:#f8f8f2;><code class=language-css data-lang=css><span style=color:#a6e22e;>.stuff </span><span>{
+</span><span>  </span><span style=font-style:italic;color:#66d9ef;>display</span><span>: </span><span style=color:#66d9ef;>flex</span><span>;
 </span><span>
-</span><span>  </span><span style=color:#65737e;>/*
-</span><span style=color:#65737e;>    Now all the layout methods of CSS Flex would be avaialble to this
-</span><span style=color:#65737e;>    parent and all of its children elements and selectors!
-</span><span style=color:#65737e;>  */
+</span><span>  </span><span style=color:#75715e;>/*
+</span><span style=color:#75715e;>    Now all the layout methods of CSS Flex would be avaialble to this
+</span><span style=color:#75715e;>    parent and all of its children elements and selectors!
+</span><span style=color:#75715e;>  */
 </span><span>}
-</span></code></pre> <ol start=3><li>Frameworks like <em>Bootstrap</em> because back then we do not have things like <em>Flexbox</em></ol><li><p>Variable</p> <pre class=language-css data-lang=css style=background-color:#2b303b;color:#c0c5ce;><code class=language-css data-lang=css><span style=color:#65737e;>/* Global and Local Variable */
-</span><span style=color:#8fa1b3;>:</span><span style=color:#b48ead;>root </span><span>{
-</span><span>  --global-variable-color: red;
-</span><span>}
-</span><span>
-</span><span style=color:#8fa1b3;>.</span><span style=color:#d08770;>whatever </span><span>{
-</span><span>  --non-global-color: white;
-</span><span>
-</span><span>  color:            </span><span style=color:#96b5b4;>var</span><span>(--global-variable-color);
-</span><span>  background-color: </span><span style=color:#96b5b4;>var</span><span>(--non-global-color);
+</span></code></pre> <ol start=3><li>Frameworks like <em>Bootstrap</em> because back then we do not have things like <em>Flexbox</em></ol><li><p>Variable</p> <pre class=language-css data-lang=css style=background-color:#272822;color:#f8f8f2;><code class=language-css data-lang=css><span style=color:#75715e;>/* Global and Local Variable */
+</span><span>:root {
+</span><span>  </span><span style=font-style:italic;color:#66d9ef;>--global-variable-color</span><span>: </span><span style=color:#66d9ef;>red</span><span>;
 </span><span>}
 </span><span>
+</span><span style=color:#a6e22e;>.whatever </span><span>{
+</span><span>  </span><span style=font-style:italic;color:#66d9ef;>--non-global-color</span><span>: </span><span style=color:#66d9ef;>white</span><span>;
 </span><span>
-</span><span style=color:#65737e;>/* Inline Declaration */
-</span><span style=color:#8fa1b3;>.</span><span style=color:#d08770;>btn </span><span>{
-</span><span>  padding: </span><span style=color:#d08770;>2rem 4rem</span><span>;
-</span><span>
-</span><span>  font-size: </span><span style=color:#96b5b4;>var</span><span>(--button-size, 0.6em);
-</span><span>
-</span><span>  background: transparent;
-</span><span>  border: </span><span style=color:#d08770;>2px </span><span>solid </span><span style=color:#96b5b4;>var</span><span>(--color, black);
-</span><span>  border-radius: </span><span style=color:#d08770;>2px</span><span>;
-</span><span>}
-</span><span>
-</span><span style=color:#8fa1b3;>.</span><span style=color:#d08770;>btn</span><span style=color:#8fa1b3;>.</span><span style=color:#d08770;>special-button </span><span>{
-</span><span>  --color: red;
-</span><span>  --button-size: </span><span style=color:#d08770;>1.2em</span><span>;
+</span><span>  </span><span style=font-style:italic;color:#66d9ef;>color</span><span>:            </span><span style=color:#66d9ef;>var</span><span>(</span><span style=font-style:italic;color:#66d9ef;>--global-variable-color</span><span>);
+</span><span>  </span><span style=font-style:italic;color:#66d9ef;>background-color</span><span>: </span><span style=color:#66d9ef;>var</span><span>(</span><span style=font-style:italic;color:#66d9ef;>--non-global-color</span><span>);
 </span><span>}
 </span><span>
 </span><span>
-</span><span style=color:#65737e;>/* Calculation */
-</span><span style=color:#8fa1b3;>.</span><span style=color:#d08770;>header </span><span>{
-</span><span>  --space: </span><span style=color:#96b5b4;>calc</span><span>(</span><span style=color:#d08770;>16px </span><span>* </span><span style=color:#d08770;>2</span><span>);
+</span><span style=color:#75715e;>/* Inline Declaration */
+</span><span style=color:#a6e22e;>.btn </span><span>{
+</span><span>  </span><span style=font-style:italic;color:#66d9ef;>padding</span><span>: </span><span style=color:#ae81ff;>2</span><span style=color:#f92672;>rem </span><span style=color:#ae81ff;>4</span><span style=color:#f92672;>rem</span><span>;
 </span><span>
-</span><span>  font-size: </span><span style=color:#96b5b4;>var</span><span>(--space);
+</span><span>  </span><span style=font-style:italic;color:#66d9ef;>font-size</span><span>: </span><span style=color:#66d9ef;>var</span><span>(</span><span style=font-style:italic;color:#66d9ef;>--button-size</span><span>, 0.6em);
+</span><span>
+</span><span>  </span><span style=font-style:italic;color:#66d9ef;>background</span><span>: </span><span style=color:#66d9ef;>transparent</span><span>;
+</span><span>  </span><span style=font-style:italic;color:#66d9ef;>border</span><span>: </span><span style=color:#ae81ff;>2</span><span style=color:#f92672;>px </span><span style=color:#66d9ef;>solid var</span><span>(</span><span style=font-style:italic;color:#66d9ef;>--color</span><span>, black);
+</span><span>  </span><span style=font-style:italic;color:#66d9ef;>border-radius</span><span>: </span><span style=color:#ae81ff;>2</span><span style=color:#f92672;>px</span><span>;
+</span><span>}
+</span><span>
+</span><span style=color:#a6e22e;>.btn.special-button </span><span>{
+</span><span>  </span><span style=font-style:italic;color:#66d9ef;>--color</span><span>: </span><span style=color:#66d9ef;>red</span><span>;
+</span><span>  </span><span style=font-style:italic;color:#66d9ef;>--button-size</span><span>: </span><span style=color:#ae81ff;>1.2</span><span style=color:#f92672;>em</span><span>;
 </span><span>}
 </span><span>
 </span><span>
-</span><span style=color:#65737e;>/* Inheritence */
-</span><span style=color:#bf616a;>div </span><span>{
-</span><span>  --ft-size: </span><span style=color:#d08770;>17px</span><span>;
+</span><span style=color:#75715e;>/* Calculation */
+</span><span style=color:#a6e22e;>.header </span><span>{
+</span><span>  </span><span style=font-style:italic;color:#66d9ef;>--space</span><span>: </span><span style=color:#66d9ef;>calc</span><span>(</span><span style=color:#ae81ff;>16</span><span style=color:#f92672;>px * </span><span style=color:#ae81ff;>2</span><span>);
+</span><span>
+</span><span>  </span><span style=font-style:italic;color:#66d9ef;>font-size</span><span>: </span><span style=color:#66d9ef;>var</span><span>(</span><span style=font-style:italic;color:#66d9ef;>--space</span><span>);
 </span><span>}
 </span><span>
-</span><span style=color:#bf616a;>div</span><span style=color:#8fa1b3;>.</span><span style=color:#d08770;>footer </span><span>{
-</span><span>  font-size: </span><span style=color:#96b5b4;>var</span><span>(--ft-size);
+</span><span>
+</span><span style=color:#75715e;>/* Inheritence */
+</span><span style=color:#f92672;>div </span><span>{
+</span><span>  </span><span style=font-style:italic;color:#66d9ef;>--ft-size</span><span>: </span><span style=color:#ae81ff;>17</span><span style=color:#f92672;>px</span><span>;
 </span><span>}
-</span></code></pre></ul><h2 id=practice>Practice</h2><blockquote><p>On <a href=https://codepen.io/><em>CodePen</em></a></blockquote><ol><li><p><a href=https://codepen.io/techmale/pen/RwJWVjr>Sup Card</a></p><li><p><a href=https://codepen.io/techmale/pen/KKedoeL>Signup Page</a></p><li><p><a href=https://codepen.io/techmale/pen/yLEegLx>Fake Phone</a></p><li><p><a href=https://codepen.io/techmale/pen/GRGZGqL>CSS Variable > Hover</a></p><li><p><a href=https://codepen.io/techmale/pen/rNKeKdp>CSS Variable > Theme Switch</a></p><li><p><a href=https://codepen.io/techmale/pen/OJENwBO>CSS Variable > Color Preview</a></p><li><p><a href=https://codepen.io/techmale/pen/eYKzGPG>CSS Layout > Music Player</a></p><li><p>Random snippet from my React project <small>(with <em>TailwindCSS</em>)</small></p> <blockquote><p>Display all the images in the same size ()</blockquote> <pre class=language-css data-lang=css style=background-color:#2b303b;color:#c0c5ce;><code class=language-css data-lang=css><span><</span><span style=color:#b48ead;>motion</span><span style=color:#8fa1b3;>.</span><span style=color:#d08770;>div
-</span><span style=color:#b48ead;>    whileHover=</span><span>{{ scale: </span><span style=color:#d08770;>1.2 </span><span>}}
-</span><span>    </span><span style=color:#b48ead;>className="</span><span style=color:#bf616a;>w-40 h-40</span><span style=color:#b48ead;> -</span><span style=color:#bf616a;>mt-8 drop-shadow-2xl</span><span style=color:#b48ead;>"
-</span><span style=color:#b48ead;>  >
-</span><span style=color:#b48ead;>  <</span><span style=color:#bf616a;>img
-</span><span style=color:#b48ead;>    whileHover=</span><span>{{ scale: </span><span style=color:#d08770;>1.07 </span><span>}}
-</span><span>    </span><span style=color:#b48ead;>src=</span><span>{item?.imageURL}
-</span><span>    </span><span style=color:#b48ead;>alt="Random"
-</span><span style=color:#b48ead;>
-</span><span style=color:#b48ead;>    </span><span style=color:#65737e;>/**
-</span><span style=color:#65737e;>      object-contain    crop while retain all the details
-</span><span style=color:#65737e;>      object-cover      crop while might crop out details (pleasing to me)
-</span><span style=color:#65737e;>    */
-</span><span>    </span><span style=color:#b48ead;>className="</span><span style=color:#bf616a;>w-full h-full object-contain</span><span style=color:#b48ead;>"
-</span><span style=color:#b48ead;>  </span><span>/>
-</span><span>&LT/</span><span style=color:#b48ead;>motion</span><span style=color:#8fa1b3;>.</span><span style=color:#d08770;>div</span><span style=color:#b48ead;>>
+</span><span>
+</span><span style=color:#f92672;>div</span><span style=color:#a6e22e;>.footer </span><span>{
+</span><span>  </span><span style=font-style:italic;color:#66d9ef;>font-size</span><span>: </span><span style=color:#66d9ef;>var</span><span>(</span><span style=font-style:italic;color:#66d9ef;>--ft-size</span><span>);
+</span><span>}
+</span></code></pre></ul><h2 id=practice>Practice</h2><blockquote><p>On <a href=https://codepen.io/><em>CodePen</em></a></blockquote><ol><li><p><a href=https://codepen.io/techmale/pen/RwJWVjr>Sup Card</a></p><li><p><a href=https://codepen.io/techmale/pen/KKedoeL>Signup Page</a></p><li><p><a href=https://codepen.io/techmale/pen/yLEegLx>Fake Phone</a></p><li><p><a href=https://codepen.io/techmale/pen/GRGZGqL>CSS Variable > Hover</a></p><li><p><a href=https://codepen.io/techmale/pen/rNKeKdp>CSS Variable > Theme Switch</a></p><li><p><a href=https://codepen.io/techmale/pen/OJENwBO>CSS Variable > Color Preview</a></p><li><p><a href=https://codepen.io/techmale/pen/eYKzGPG>CSS Layout > Music Player</a></p><li><p>Random snippet from my React project <small>(with <em>TailwindCSS</em>)</small></p> <blockquote><p>Display all the images in the same size ()</blockquote> <pre class=language-css data-lang=css style=background-color:#272822;color:#f8f8f2;><code class=language-css data-lang=css><span>&LTmotion</span><span style=color:#a6e22e;>.div
+</span><span>    whileHover={{ </span><span style=font-style:italic;color:#66d9ef;>scale</span><span>: </span><span style=color:#ae81ff;>1.2 </span><span>}}
+</span><span>    className="</span><span style=color:#f92672;>w-40 h-40</span><span> -</span><span style=color:#f92672;>mt-8 drop-shadow-2xl</span><span>"
+</span><span>  >
+</span><span>  <</span><span style=color:#f92672;>img
+</span><span>    whileHover={{ </span><span style=font-style:italic;color:#66d9ef;>scale</span><span>: </span><span style=color:#ae81ff;>1.07 </span><span>}}
+</span><span>    src={item?.imageURL}
+</span><span>    alt="Random"
+</span><span>
+</span><span>    </span><span style=color:#75715e;>/**
+</span><span style=color:#75715e;>      object-contain    crop while retain all the details
+</span><span style=color:#75715e;>      object-cover      crop while might crop out details (pleasing to me)
+</span><span style=color:#75715e;>    */
+</span><span>    className="</span><span style=color:#f92672;>w-full h-full object-contain</span><span>"
+</span><span>  />
+</span><span>&LT/motion</span><span style=color:#a6e22e;>.div</span><span>>
 </span></code></pre></ol></article><footer role=contentinfo><hr><small>Built with <a href=https://www.getzola.org/>Zola</a>.<br> </small></footer></main>
