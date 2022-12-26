@@ -1105,18 +1105,42 @@ I came back after my miscarriages.&lt;&#x2F;p&gt;
 		<link rel="alternate" href="https://codingezio.github.io/algorithm-leetcode-for-general-problems/" type="text/html"/>
 		<id>https://codingezio.github.io/algorithm-leetcode-for-general-problems/</id>
 		<content type="html">&lt;h2 id=&quot;foreword&quot;&gt;Foreword&lt;&#x2F;h2&gt;
-&lt;h4 id=&quot;why&quot;&gt;Why&lt;&#x2F;h4&gt;
+&lt;h3 id=&quot;why-this-post&quot;&gt;Why This Post&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;formally&quot;&gt;Formally&lt;&#x2F;h4&gt;
 &lt;ul&gt;
 &lt;li&gt;Review what I&#x27;ve learnt from solving these algorithms&lt;&#x2F;li&gt;
 &lt;li&gt;A short gist of what this problem is &lt;em&gt;for&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;Save time&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h4 id=&quot;what&quot;&gt;What&lt;&#x2F;h4&gt;
-&lt;ol&gt;
-&lt;li&gt;Sorted.. by my will&lt;&#x2F;li&gt;
-&lt;li&gt;The prefix of the link would start with &lt;code&gt;https:&#x2F;&#x2F;leetcode.cn&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;Back then I just do them randomly; Now I mostly reference to &lt;a href=&quot;https:&#x2F;&#x2F;raymondjiang.net&#x2F;2022&#x2F;02&#x2F;18&#x2F;about-leetcode-blind-75&#x2F;&quot;&gt;Blind 75&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;&#x2F;ol&gt;
+&lt;h4 id=&quot;or-you-could-say&quot;&gt;Or You Could Say&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;I am really, really dumb&lt;&#x2F;li&gt;
+&lt;li&gt;I am bad at solving LeetCode problems&lt;&#x2F;li&gt;
+&lt;li&gt;I do not have too much time for LeetCode&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;idea&quot;&gt;Idea&lt;&#x2F;h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Leave the data structures to the language learning part as their usage might vary whether for the implementations. Dive right into the LeetCode problems before having a good hold on the data structures. Use it practically instead of learning without a clear goal or context.&lt;&#x2F;p&gt;
+&lt;p&gt;It&#x27;s just like learning a programming language. Start building projects as quickly as possible &lt;small&gt;(note to self: to a certain extent)&lt;&#x2F;small&gt;. Of course, I do have &lt;a href=&quot;https:&#x2F;&#x2F;codingezio.github.io&#x2F;algorithm-handbook&#x2F;&quot;&gt;another post&lt;&#x2F;a&gt; which documents the snippets of knowledge you need to get a hold on while solving these problems.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h3 id=&quot;and&quot;&gt;And&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;problem-list&quot;&gt;Problem List&lt;&#x2F;h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Some of them would be premium questions &lt;small&gt;(require you to join in the membership)&lt;&#x2F;small&gt;, but you could just give it a search on Github. Not a big deal though 🤞.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;codingEzio&#x2F;68cc6c2648b0a87c74be5dc9668a3782&quot;&gt;Blind 75&lt;&#x2F;a&gt; &lt;sup&gt;&lt;a href=&quot;https:&#x2F;&#x2F;neetcode.io&#x2F;practice&quot;&gt;&lt;em&gt;solutions&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;codingEzio&#x2F;47a8a5083f0df1a51796860fe1c0964c&quot;&gt;Grind 169&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;seanprashad.com&#x2F;leetcode-patterns&#x2F;&quot;&gt;Solution by Patterns&lt;&#x2F;a&gt; &lt;sub&gt;(171)&lt;&#x2F;sub&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;articles-to-ease-my-anxiety&quot;&gt;Articles to Ease My Anxiety&lt;&#x2F;h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;There are so many problem lists, and I want to follow them all! But that&#x27;s not gonna happen&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;old.reddit.com&#x2F;r&#x2F;cscareerquestions&#x2F;comments&#x2F;s0x7bz&#x2F;is_blind_75_enough_for_big_tech&#x2F;&quot;&gt;Is Blind 75 enough for Big Tech? : cscareerquestions&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;old.reddit.com&#x2F;r&#x2F;leetcode&#x2F;comments&#x2F;mx55az&#x2F;blind_75_20&#x2F;&quot;&gt;Blind 75 2.0? : leetcode&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;hr &#x2F;&gt;
 &lt;h2 id=&quot;thoughts-and-code&quot;&gt;Thoughts and Code&lt;&#x2F;h2&gt;
 &lt;h3 id=&quot;0001-two-sum&quot;&gt;0001. Two Sum&lt;&#x2F;h3&gt;
 &lt;pre data-lang=&quot;java&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-java &quot;&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;class &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;Solution &lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;{
@@ -1786,6 +1810,14 @@ I came back after my miscarriages.&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;    }
 &lt;&#x2F;span&gt;&lt;span&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;references&quot;&gt;References&lt;&#x2F;h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Good to have but not necessary&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.techinterviewhandbook.org&#x2F;grind75&quot;&gt;Grind 75 - A better Blind 75 you can customize, by the author of Blind 75&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
 &lt;hr &#x2F;&gt;
 &lt;blockquote&gt;
 &lt;p&gt;This post was originally written on October 18, 2022. Was rewritten on December 7, 2022 with the help of &lt;em&gt;ChatGPT&lt;&#x2F;em&gt; developed by &lt;em&gt;OpenAI&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
@@ -6622,12 +6654,30 @@ a full networking stack;&lt;&#x2F;li&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">
-		<title>Algorithm Patterns</title>
-		<published>2022-07-22T00:00:00+00:00</published>
-		<updated>2022-07-22T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://codingezio.github.io/algorithm-pattern/" type="text/html"/>
-		<id>https://codingezio.github.io/algorithm-pattern/</id>
-		<content type="html">&lt;h2 id=&quot;math&quot;&gt;Math&lt;&#x2F;h2&gt;
+		<title>Algorithm Handbook</title>
+		<published>2022-07-18T00:00:00+00:00</published>
+		<updated>2022-07-18T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://codingezio.github.io/algorithm-handbook/" type="text/html"/>
+		<id>https://codingezio.github.io/algorithm-handbook/</id>
+		<content type="html">&lt;h2 id=&quot;concepts&quot;&gt;Concepts&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;non-decreasing-order&quot;&gt;Non-decreasing Order&lt;&#x2F;h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;1963474&#x2F;is-a-non-decreasing-sequence-increasing&quot;&gt;Is a &amp;quot;non-decreasing&amp;quot; sequence &amp;quot;increasing&amp;quot;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Increasing -&amp;gt; every next is greater -&amp;gt; 1,2,3,4&lt;&#x2F;li&gt;
+&lt;li&gt;Decreasing -&amp;gt; every next is less -&amp;gt; 4,3,2,1&lt;&#x2F;li&gt;
+&lt;li&gt;It&#x27;s not completely the same as the increasing order, e.g. 1, 2, 2, 3, 4&lt;&#x2F;li&gt;
+&lt;li&gt;Its increase or decrease must applies to all to be qualified&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;chang-jian-fu-za-du-big-o-de-bian-bie&quot;&gt;常见复杂度 Big O 的辨别&lt;&#x2F;h3&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th style=&quot;text-align: center&quot;&gt;O&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: left&quot;&gt;Statement&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;em&gt;O(n)&lt;&#x2F;em&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;code&gt;for X in range(N)&lt;&#x2F;code&gt;&lt;br&gt;&lt;code&gt;for X in range(start, N, k)&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;em&gt;O(nm)&lt;&#x2F;em&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;code&gt;for X in range(N): for Y in range(M)&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;em&gt;O(n²)&lt;&#x2F;em&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;code&gt;for X in range(N): for Y in range(X)&lt;&#x2F;code&gt; &lt;br&gt;&lt;code&gt;for X in range(N): X*=2 for Y in range(X)&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;em&gt;O(logN)&lt;&#x2F;em&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;code&gt;while X &amp;lt; N: X*=k&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;h2 id=&quot;knowledge&quot;&gt;Knowledge&lt;&#x2F;h2&gt;
 &lt;h3 id=&quot;bit-wise-operator&quot;&gt;Bit-wise Operator&lt;&#x2F;h3&gt;
 &lt;h4 id=&quot;number&quot;&gt;Number&lt;&#x2F;h4&gt;
 &lt;blockquote&gt;
@@ -6651,39 +6701,6 @@ a full networking stack;&lt;&#x2F;li&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;(&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;c&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39; ^ &amp;#39; &amp;#39;) == &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;C&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;
 &lt;&#x2F;span&gt;&lt;span&gt;(&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;C&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39; ^ &amp;#39; &amp;#39;) == &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;C&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
-		<title>Algorithm Terminologies</title>
-		<published>2022-07-18T00:00:00+00:00</published>
-		<updated>2022-07-18T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://codingezio.github.io/algorithm-terminology/" type="text/html"/>
-		<id>https://codingezio.github.io/algorithm-terminology/</id>
-		<content type="html">&lt;h1 id=&quot;concepts&quot;&gt;Concepts&lt;&#x2F;h1&gt;
-&lt;h3 id=&quot;non-decreasing-order&quot;&gt;Non-decreasing Order&lt;&#x2F;h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;e.g. 1, 2, 2, 3, 4&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;Increasing -&amp;gt; every next is greater -&amp;gt; 1,2,3,4&lt;&#x2F;li&gt;
-&lt;li&gt;Decreasing -&amp;gt; every next is less -&amp;gt; 4,3,2,1&lt;&#x2F;li&gt;
-&lt;li&gt;It does NOT fully equal to increasing order&lt;&#x2F;li&gt;
-&lt;li&gt;Its increase or decrease must applies to all to be qualified&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;chang-jian-fu-za-du-big-o-de-bian-bie&quot;&gt;常见复杂度 Big O 的辨别&lt;&#x2F;h3&gt;
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th style=&quot;text-align: center&quot;&gt;O&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: left&quot;&gt;Statement&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;em&gt;O(n)&lt;&#x2F;em&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;code&gt;for X in range(N)&lt;&#x2F;code&gt;&lt;br&gt;&lt;code&gt;for X in range(start, N, k)&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;em&gt;O(nm)&lt;&#x2F;em&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;code&gt;for X in range(N): for Y in range(M)&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;em&gt;O(n²)&lt;&#x2F;em&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;code&gt;for X in range(N): for Y in range(X)&lt;&#x2F;code&gt; &lt;br&gt;&lt;code&gt;for X in range(N): X*=2 for Y in range(X)&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;em&gt;O(logN)&lt;&#x2F;em&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;code&gt;while X &amp;lt; N: X*=k&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
-&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
-&lt;hr &#x2F;&gt;
-&lt;h1 id=&quot;references&quot;&gt;References&lt;&#x2F;h1&gt;
-&lt;h3 id=&quot;non-decreasing-order-1&quot;&gt;Non-decreasing order&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;leetcode.com&#x2F;problems&#x2F;squares-of-a-sorted-array&#x2F;&quot;&gt;https:&#x2F;&#x2F;leetcode.com&#x2F;problems&#x2F;squares-of-a-sorted-array&#x2F;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;1963474&#x2F;is-a-non-decreasing-sequence-increasing&quot;&gt;https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;1963474&#x2F;is-a-non-decreasing-sequence-increasing&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">

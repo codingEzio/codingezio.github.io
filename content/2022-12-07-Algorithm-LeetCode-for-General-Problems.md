@@ -5,17 +5,44 @@ description = "Practing by solving Algorithm questions on LeetCode"
 
 ## Foreword
 
-#### Why
+### Why This Post
+
+#### Formally
 
 - Review what I've learnt from solving these algorithms
 - A short gist of what this problem is *for*
 - Save time
 
-#### What
+#### Or You Could Say
 
-1. Sorted.. by my will
-2. The prefix of the link would start with `https://leetcode.cn`
-3. Back then I just do them randomly; Now I mostly reference to [Blind 75](https://raymondjiang.net/2022/02/18/about-leetcode-blind-75/)
+- I am really, really dumb
+- I am bad at solving LeetCode problems
+- I do not have too much time for LeetCode
+
+### Idea
+
+> Leave the data structures to the language learning part as their usage might vary whether for the implementations. Dive right into the LeetCode problems before having a good hold on the data structures. Use it practically instead of learning without a clear goal or context.
+> 
+> It's just like learning a programming language. Start building projects as quickly as possible <small>(note to self: to a certain extent)</small>. Of course, I do have [another post](https://codingezio.github.io/algorithm-handbook/) which documents the snippets of knowledge you need to get a hold on while solving these problems.
+
+### And
+
+#### Problem List
+
+> Some of them would be premium questions <small>(require you to join in the membership)</small>, but you could just give it a search on Github. Not a big deal though 🤞.
+
+- [Blind 75](https://gist.github.com/codingEzio/68cc6c2648b0a87c74be5dc9668a3782) <sup>[*solutions*](https://neetcode.io/practice)</sup> and [Grind 169](https://gist.github.com/codingEzio/47a8a5083f0df1a51796860fe1c0964c)
+- [Solution by Patterns](https://seanprashad.com/leetcode-patterns/) <sub>(171)</sub>
+
+
+#### Articles to Ease My Anxiety
+
+> There are so many problem lists, and I want to follow them all! But that's not gonna happen
+
+- [Is Blind 75 enough for Big Tech? : cscareerquestions](https://old.reddit.com/r/cscareerquestions/comments/s0x7bz/is_blind_75_enough_for_big_tech/)
+- [Blind 75 2.0? : leetcode](https://old.reddit.com/r/leetcode/comments/mx55az/blind_75_20/)
+
+-----
 
 ## Thoughts and Code
 
@@ -758,6 +785,14 @@ class Solution {
     }
 }
 ```
+
+-----
+
+### References
+
+> Good to have but not necessary
+
+- [Grind 75 - A better Blind 75 you can customize, by the author of Blind 75](https://www.techinterviewhandbook.org/grind75)
 
 -----
 
