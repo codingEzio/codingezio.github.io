@@ -7,6 +7,8 @@ description = "Machine Learning and Deep Learning"
 
 ### Resources
 
+> [A Super Harsh Guide to Machine Learning](https://old.reddit.com/r/MachineLearning/comments/5z8110/d_a_super_harsh_guide_to_machine_learning/)
+
 #### Learning Materials
 
 - [📚 动手学深度学习](https://zh.d2l.ai/)
