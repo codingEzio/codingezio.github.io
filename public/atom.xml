@@ -1490,16 +1490,40 @@ I came back after my miscarriages.&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# is of the same type the parameter you passed in (i.e. []).
 &lt;&#x2F;span&gt;&lt;span&gt;        ans &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;defaultdict(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;list&lt;&#x2F;span&gt;&lt;span&gt;)
 &lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# Suppose the input is [&amp;#39;abc&amp;#39;, &amp;#39;acb&amp;#39;, &amp;#39;dce&amp;#39;]
 &lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;word &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span&gt;strs:
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# Serve as indice, though it needs to converted to a tuple first
 &lt;&#x2F;span&gt;&lt;span&gt;            count &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;* &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;26
 &lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# Calculate the indice
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# Note that anagrams would be stored under the same indice
 &lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;letter &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span&gt;word:
 &lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;                &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# All are lowercase, so the possible values would only be
+&lt;&#x2F;span&gt;&lt;span&gt;                &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# ranging from 0 to 25 (e.g. &amp;#39;a&amp;#39; -&amp;gt; 0 .. &amp;#39;z&amp;#39; -&amp;gt; 25)
 &lt;&#x2F;span&gt;&lt;span&gt;                letter_indices &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;ord&lt;&#x2F;span&gt;&lt;span&gt;(letter) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;- &lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;ord&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;#39;a&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;                &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# After each loop ends
+&lt;&#x2F;span&gt;&lt;span&gt;                &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# e.g. &amp;#39;abc&amp;#39; -&amp;gt; from [ 0, 0, 0, 0 ..] to [ 0, 1, 2, 0 .. ]
 &lt;&#x2F;span&gt;&lt;span&gt;                count[letter_indices] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;+= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;1
 &lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# Suppose the
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;#   ans[ ( 0, 1, 2, 0, .. ) ]    ADD &amp;#39;abc&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;#   ans[ ( 0, 1, 2, 0, .. ) ]    ADD &amp;#39;acb&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;#   ans[ ( 3, 2, 4, 0, .. ) ]    ADD &amp;#39;dce&amp;#39;
 &lt;&#x2F;span&gt;&lt;span&gt;            ans[&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;tuple&lt;&#x2F;span&gt;&lt;span&gt;(count)].append(word)
 &lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# defaultdict(
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;#   &amp;lt;class &amp;#39;list&amp;#39;&amp;gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;#   {
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;#     (0, 1, 2, 0): [&amp;#39;abc&amp;#39;, &amp;#39;acb&amp;#39;],
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;#     (3, 2, 4, 0): [&amp;#39;dce&amp;#39;]
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;#   }
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# )
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# Then only the values      -&amp;gt; dict_values([[&amp;#39;abc&amp;#39;, &amp;#39;acb&amp;#39;], [&amp;#39;dce&amp;#39;]])
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# Then turns it into a list -&amp;gt; [[&amp;#39;abc&amp;#39;, &amp;#39;acb&amp;#39;], [&amp;#39;dce&amp;#39;]]
 &lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;list&lt;&#x2F;span&gt;&lt;span&gt;(ans.values())
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;0070-climbing-stairs&quot;&gt;0070. Climbing Stairs&lt;&#x2F;h3&gt;
@@ -1747,29 +1771,27 @@ I came back after my miscarriages.&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return&lt;&#x2F;span&gt;&lt;span&gt; minStack.peek();
 &lt;&#x2F;span&gt;&lt;span&gt;    }
 &lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;0160-intersection-of-two-linked-lists&quot;&gt;0160. Intersection of Two Linked Lists&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# Definition for singly-linked list.
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# class ListNode:
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;#     def __init__(self, x):
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;#         self.val = x
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;#         self.next = None
 &lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;### &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;0160. &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;Intersection&lt;&#x2F;span&gt;&lt;span&gt; of &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;Two Linked Lists
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;class &lt;&#x2F;span&gt;&lt;span style=&quot;text-decoration:underline;color:#a6e22e;&quot;&gt;Solution&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;getIntersectionNode&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;headA&lt;&#x2F;span&gt;&lt;span&gt;: ListNode, &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;headB&lt;&#x2F;span&gt;&lt;span&gt;: ListNode) -&amp;gt; Optional[ListNode]:
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# no intersection as one of them or both are None
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;if not &lt;&#x2F;span&gt;&lt;span&gt;headA &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;or not &lt;&#x2F;span&gt;&lt;span&gt;headB:
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;None
 &lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;```python
-&lt;&#x2F;span&gt;&lt;span&gt;# &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;Definition &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;for&lt;&#x2F;span&gt;&lt;span&gt; singly&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span&gt;linked list.
-&lt;&#x2F;span&gt;&lt;span&gt;# &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;class &lt;&#x2F;span&gt;&lt;span style=&quot;text-decoration:underline;color:#a6e22e;&quot;&gt;ListNode&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;:
-&lt;&#x2F;span&gt;&lt;span&gt;#     def __init__(self, x)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;:
-&lt;&#x2F;span&gt;&lt;span&gt;#         self.val &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt; x
-&lt;&#x2F;span&gt;&lt;span&gt;#         self.next &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;None
+&lt;&#x2F;span&gt;&lt;span&gt;        hA, hB &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;headA, headB
 &lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;class &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;Solution&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;:
-&lt;&#x2F;span&gt;&lt;span&gt;    def getIntersectionNode(self, headA&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;ListNode&lt;&#x2F;span&gt;&lt;span&gt;, headB&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;ListNode&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;-&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;Optional&lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;ListNode&lt;&#x2F;span&gt;&lt;span&gt;]&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;:
-&lt;&#x2F;span&gt;&lt;span&gt;        # no intersection as one of them or both are &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;None
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;if&lt;&#x2F;span&gt;&lt;span&gt; not headA or not headB&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;:
-&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;None
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;while &lt;&#x2F;span&gt;&lt;span&gt;hA &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;!= &lt;&#x2F;span&gt;&lt;span&gt;hB:
+&lt;&#x2F;span&gt;&lt;span&gt;            hA &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;hA.next &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;hA &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;else &lt;&#x2F;span&gt;&lt;span&gt;headB
+&lt;&#x2F;span&gt;&lt;span&gt;            hB &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;hB.next &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;hB &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;else &lt;&#x2F;span&gt;&lt;span&gt;headA
 &lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;        hA, hB &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt; headA, headB
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;while&lt;&#x2F;span&gt;&lt;span&gt; hA &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;!=&lt;&#x2F;span&gt;&lt;span&gt; hB&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;:
-&lt;&#x2F;span&gt;&lt;span&gt;            hA &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt; hA.next &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;if&lt;&#x2F;span&gt;&lt;span&gt; hA &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;else&lt;&#x2F;span&gt;&lt;span&gt; headB
-&lt;&#x2F;span&gt;&lt;span&gt;            hB &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt; hB.next &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;if&lt;&#x2F;span&gt;&lt;span&gt; hB &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;else&lt;&#x2F;span&gt;&lt;span&gt; headA
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return&lt;&#x2F;span&gt;&lt;span&gt; hA
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;hA
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;0206-reverse-linked-list&quot;&gt;0206. Reverse Linked List&lt;&#x2F;h3&gt;
 &lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# Definition for singly-linked list.

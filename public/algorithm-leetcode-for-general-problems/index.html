@@ -253,16 +253,40 @@
 </span><span>        </span><span style=color:#75715e;># is of the same type the parameter you passed in (i.e. []).
 </span><span>        ans </span><span style=color:#f92672;>= </span><span>defaultdict(</span><span style=font-style:italic;color:#66d9ef;>list</span><span>)
 </span><span>
+</span><span>        </span><span style=color:#75715e;># Suppose the input is ['abc', 'acb', 'dce']
 </span><span>        </span><span style=color:#f92672;>for </span><span>word </span><span style=color:#f92672;>in </span><span>strs:
+</span><span>
+</span><span>            </span><span style=color:#75715e;># Serve as indice, though it needs to converted to a tuple first
 </span><span>            count </span><span style=color:#f92672;>= </span><span>[</span><span style=color:#ae81ff;>0</span><span>] </span><span style=color:#f92672;>* </span><span style=color:#ae81ff;>26
 </span><span>
+</span><span>            </span><span style=color:#75715e;># Calculate the indice
+</span><span>            </span><span style=color:#75715e;># Note that anagrams would be stored under the same indice
 </span><span>            </span><span style=color:#f92672;>for </span><span>letter </span><span style=color:#f92672;>in </span><span>word:
 </span><span>
+</span><span>                </span><span style=color:#75715e;># All are lowercase, so the possible values would only be
+</span><span>                </span><span style=color:#75715e;># ranging from 0 to 25 (e.g. 'a' -> 0 .. 'z' -> 25)
 </span><span>                letter_indices </span><span style=color:#f92672;>= </span><span style=color:#66d9ef;>ord</span><span>(letter) </span><span style=color:#f92672;>- </span><span style=color:#66d9ef;>ord</span><span>(</span><span style=color:#e6db74;>'a'</span><span>)
+</span><span>
+</span><span>                </span><span style=color:#75715e;># After each loop ends
+</span><span>                </span><span style=color:#75715e;># e.g. 'abc' -> from [ 0, 0, 0, 0 ..] to [ 0, 1, 2, 0 .. ]
 </span><span>                count[letter_indices] </span><span style=color:#f92672;>+= </span><span style=color:#ae81ff;>1
 </span><span>
+</span><span>            </span><span style=color:#75715e;># Suppose the
+</span><span>            </span><span style=color:#75715e;>#   ans[ ( 0, 1, 2, 0, .. ) ]    ADD 'abc'
+</span><span>            </span><span style=color:#75715e;>#   ans[ ( 0, 1, 2, 0, .. ) ]    ADD 'acb'
+</span><span>            </span><span style=color:#75715e;>#   ans[ ( 3, 2, 4, 0, .. ) ]    ADD 'dce'
 </span><span>            ans[</span><span style=font-style:italic;color:#66d9ef;>tuple</span><span>(count)].append(word)
 </span><span>
+</span><span>        </span><span style=color:#75715e;># defaultdict(
+</span><span>        </span><span style=color:#75715e;>#   &LTclass 'list'>,
+</span><span>        </span><span style=color:#75715e;>#   {
+</span><span>        </span><span style=color:#75715e;>#     (0, 1, 2, 0): ['abc', 'acb'],
+</span><span>        </span><span style=color:#75715e;>#     (3, 2, 4, 0): ['dce']
+</span><span>        </span><span style=color:#75715e;>#   }
+</span><span>        </span><span style=color:#75715e;># )
+</span><span>
+</span><span>        </span><span style=color:#75715e;># Then only the values      -> dict_values([['abc', 'acb'], ['dce']])
+</span><span>        </span><span style=color:#75715e;># Then turns it into a list -> [['abc', 'acb'], ['dce']]
 </span><span>        </span><span style=color:#f92672;>return </span><span style=font-style:italic;color:#66d9ef;>list</span><span>(ans.values())
 </span></code></pre><h3 id=0070-climbing-stairs>0070. Climbing Stairs</h3><pre class=language-python data-lang=python style=background-color:#272822;color:#f8f8f2;><code class=language-python data-lang=python><span style=font-style:italic;color:#f92672;>class </span><span style=text-decoration:underline;color:#a6e22e;>Solution</span><span>:
 </span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>climbStairs</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>n</span><span>: </span><span style=font-style:italic;color:#66d9ef;>int</span><span>) -> </span><span style=font-style:italic;color:#66d9ef;>int</span><span>:
@@ -490,29 +514,25 @@
 </span><span>        </span><span style=color:#f92672;>return</span><span> minStack.peek();
 </span><span>    }
 </span><span>}
+</span></code></pre><h3 id=0160-intersection-of-two-linked-lists>0160. Intersection of Two Linked Lists</h3><pre class=language-python data-lang=python style=background-color:#272822;color:#f8f8f2;><code class=language-python data-lang=python><span style=color:#75715e;># Definition for singly-linked list.
+</span><span style=color:#75715e;># class ListNode:
+</span><span style=color:#75715e;>#     def __init__(self, x):
+</span><span style=color:#75715e;>#         self.val = x
+</span><span style=color:#75715e;>#         self.next = None
 </span><span>
-</span><span>### </span><span style=color:#ae81ff;>0160. </span><span style=font-style:italic;color:#66d9ef;>Intersection</span><span> of </span><span style=font-style:italic;color:#66d9ef;>Two Linked Lists
+</span><span style=font-style:italic;color:#f92672;>class </span><span style=text-decoration:underline;color:#a6e22e;>Solution</span><span>:
+</span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>getIntersectionNode</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>headA</span><span>: ListNode, </span><span style=font-style:italic;color:#fd971f;>headB</span><span>: ListNode) -> Optional[ListNode]:
+</span><span>        </span><span style=color:#75715e;># no intersection as one of them or both are None
+</span><span>        </span><span style=color:#f92672;>if not </span><span>headA </span><span style=color:#f92672;>or not </span><span>headB:
+</span><span>            </span><span style=color:#f92672;>return </span><span style=color:#ae81ff;>None
 </span><span>
-</span><span>```python
-</span><span># </span><span style=font-style:italic;color:#66d9ef;>Definition </span><span style=color:#f92672;>for</span><span> singly</span><span style=color:#f92672;>-</span><span>linked list.
-</span><span># </span><span style=font-style:italic;color:#66d9ef;>class </span><span style=text-decoration:underline;color:#a6e22e;>ListNode</span><span style=color:#f92672;>:
-</span><span>#     def __init__(self, x)</span><span style=color:#f92672;>:
-</span><span>#         self.val </span><span style=color:#f92672;>=</span><span> x
-</span><span>#         self.next </span><span style=color:#f92672;>= </span><span style=font-style:italic;color:#66d9ef;>None
+</span><span>        hA, hB </span><span style=color:#f92672;>= </span><span>headA, headB
 </span><span>
-</span><span>class </span><span style=font-style:italic;color:#66d9ef;>Solution</span><span style=color:#f92672;>:
-</span><span>    def getIntersectionNode(self, headA</span><span style=color:#f92672;>: </span><span style=font-style:italic;color:#66d9ef;>ListNode</span><span>, headB</span><span style=color:#f92672;>: </span><span style=font-style:italic;color:#66d9ef;>ListNode</span><span>) </span><span style=color:#f92672;>-> </span><span style=font-style:italic;color:#66d9ef;>Optional</span><span>[</span><span style=font-style:italic;color:#66d9ef;>ListNode</span><span>]</span><span style=color:#f92672;>:
-</span><span>        # no intersection as one of them or both are </span><span style=font-style:italic;color:#66d9ef;>None
-</span><span>        </span><span style=color:#f92672;>if</span><span> not headA or not headB</span><span style=color:#f92672;>:
-</span><span>            </span><span style=color:#f92672;>return </span><span style=font-style:italic;color:#66d9ef;>None
+</span><span>        </span><span style=color:#f92672;>while </span><span>hA </span><span style=color:#f92672;>!= </span><span>hB:
+</span><span>            hA </span><span style=color:#f92672;>= </span><span>hA.next </span><span style=color:#f92672;>if </span><span>hA </span><span style=color:#f92672;>else </span><span>headB
+</span><span>            hB </span><span style=color:#f92672;>= </span><span>hB.next </span><span style=color:#f92672;>if </span><span>hB </span><span style=color:#f92672;>else </span><span>headA
 </span><span>
-</span><span>        hA, hB </span><span style=color:#f92672;>=</span><span> headA, headB
-</span><span>
-</span><span>        </span><span style=color:#f92672;>while</span><span> hA </span><span style=color:#f92672;>!=</span><span> hB</span><span style=color:#f92672;>:
-</span><span>            hA </span><span style=color:#f92672;>=</span><span> hA.next </span><span style=color:#f92672;>if</span><span> hA </span><span style=color:#f92672;>else</span><span> headB
-</span><span>            hB </span><span style=color:#f92672;>=</span><span> hB.next </span><span style=color:#f92672;>if</span><span> hB </span><span style=color:#f92672;>else</span><span> headA
-</span><span>
-</span><span>        </span><span style=color:#f92672;>return</span><span> hA
+</span><span>        </span><span style=color:#f92672;>return </span><span>hA
 </span></code></pre><h3 id=0206-reverse-linked-list>0206. Reverse Linked List</h3><pre class=language-python data-lang=python style=background-color:#272822;color:#f8f8f2;><code class=language-python data-lang=python><span style=color:#75715e;># Definition for singly-linked list.
 </span><span style=color:#75715e;># class ListNode:
 </span><span style=color:#75715e;>#     def __init__(self, val=0, next=None):

@@ -22,7 +22,7 @@ description = "Practing by solving Algorithm questions on LeetCode"
 ### Idea
 
 > Leave the data structures to the language learning part as their usage might vary whether for the implementations. Dive right into the LeetCode problems before having a good hold on the data structures. Use it practically instead of learning without a clear goal or context.
-> 
+>
 > It's just like learning a programming language. Start building projects as quickly as possible <small>(note to self: to a certain extent)</small>. Of course, I do have [another post](https://codingezio.github.io/algorithm-handbook/) which documents the snippets of knowledge you need to get a hold on while solving these problems.
 
 ### And
@@ -33,7 +33,6 @@ description = "Practing by solving Algorithm questions on LeetCode"
 
 - [Blind 75](https://gist.github.com/codingEzio/68cc6c2648b0a87c74be5dc9668a3782) <sup>[*solutions*](https://neetcode.io/practice)</sup> and [Grind 169](https://gist.github.com/codingEzio/47a8a5083f0df1a51796860fe1c0964c)
 - [Solution by Patterns](https://seanprashad.com/leetcode-patterns/) <sub>(171)</sub>
-
 
 #### Articles to Ease My Anxiety
 
@@ -344,16 +343,40 @@ class Solution:
         # is of the same type the parameter you passed in (i.e. []).
         ans = defaultdict(list)
 
+        # Suppose the input is ['abc', 'acb', 'dce']
         for word in strs:
+
+            # Serve as indice, though it needs to converted to a tuple first
             count = [0] * 26
 
+            # Calculate the indice
+            # Note that anagrams would be stored under the same indice
             for letter in word:
 
+                # All are lowercase, so the possible values would only be
+                # ranging from 0 to 25 (e.g. 'a' -> 0 .. 'z' -> 25)
                 letter_indices = ord(letter) - ord('a')
+
+                # After each loop ends
+                # e.g. 'abc' -> from [ 0, 0, 0, 0 ..] to [ 0, 1, 2, 0 .. ]
                 count[letter_indices] += 1
 
+            # Suppose the
+            #   ans[ ( 0, 1, 2, 0, .. ) ]    ADD 'abc'
+            #   ans[ ( 0, 1, 2, 0, .. ) ]    ADD 'acb'
+            #   ans[ ( 3, 2, 4, 0, .. ) ]    ADD 'dce'
             ans[tuple(count)].append(word)
 
+        # defaultdict(
+        #   <class 'list'>,
+        #   {
+        #     (0, 1, 2, 0): ['abc', 'acb'],
+        #     (3, 2, 4, 0): ['dce']
+        #   }
+        # )
+
+        # Then only the values      -> dict_values([['abc', 'acb'], ['dce']])
+        # Then turns it into a list -> [['abc', 'acb'], ['dce']]
         return list(ans.values())
 ```
 
@@ -631,6 +654,7 @@ class MinStack {
         return minStack.peek();
     }
 }
+```
 
 ### 0160. Intersection of Two Linked Lists
 
