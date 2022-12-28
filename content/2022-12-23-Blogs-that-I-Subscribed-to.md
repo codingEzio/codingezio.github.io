@@ -18,6 +18,7 @@ description = "Thoughts from interesting and thoughtful human beings"
 #### In General
 
 - [Po-Jen](https://www.coderbridge.com/@Po-Jen)
+- [GeekPlux](https://geekplux.com/posts)
 - [Hackery, Math & Design](https://acko.net/)
 - [冰霜之地 HalfFrost](https://halfrost.com/archives/)
 - [酷壳 CoolShell](https://coolshell.cn/featured)
@@ -33,11 +34,13 @@ description = "Thoughts from interesting and thoughtful human beings"
 - [Hakim El Hattab](https://hakim.se/)
 - [Peter Goldsborough](https://www.goldsborough.me/)
 - [大破进击](https://jesor.me/all/)
-- [HuoJu's BLOG](https://jhuo.ca/post/)
+- [Randy's Blog](https://lutaonan.com/)
+- [HuoJu's Blog](https://jhuo.ca/post/)
 - [Neel Nanda](https://www.neelnanda.io/)
 - [困而学之](https://caminodetexas.substack.com/archive)
 - [Reimu's blog](https://blog.k8s.li/)
 - [Owen的博客](https://www.owenyoung.com/)
+- [Dineshchandgr](https://dineshchandgr.medium.com/) </small>(potential $5 paywall)</small>
 
 #### More Than Blogs
 

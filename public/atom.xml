@@ -5,8 +5,31 @@
 	<link href="https://codingezio.github.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://codingezio.github.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-12-26T00:00:00+00:00</updated>
+	<updated>2022-12-28T00:00:00+00:00</updated>
 	<id>https://codingezio.github.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>On Personal Knowledge Management</title>
+		<published>2022-12-28T00:00:00+00:00</published>
+		<updated>2022-12-28T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://codingezio.github.io/on-personal-knowledge-management/" type="text/html"/>
+		<id>https://codingezio.github.io/on-personal-knowledge-management/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;For me, I use simple Markdown files, maybe linking them via &lt;em&gt;links&lt;&#x2F;em&gt;, but that&#x27;s all there is. I aim towards something like this, a single markdown file that has all the context you need and the main content. More than just a crash course which omits too much context, and not do it like a dumbfuck putting any resources he&#x2F;she could find then call it a day.&lt;&#x2F;p&gt;
+&lt;p&gt;Anyway, just want to allocate a short amount of time reviewing these kind of stuff that I kinda hated on &lt;small&gt;(the complexity and the idiotic hype around any productivity tools)&lt;&#x2F;small&gt;. Currently has not getting start yet &lt;small&gt;(this sentence would be removed once I started working on this post)&lt;&#x2F;small&gt;.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;resources&quot;&gt;Resources&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;more-than-just-listing-tools&quot;&gt;More than just listing tools&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;old.reddit.com&#x2F;r&#x2F;PKMS&#x2F;comments&#x2F;nfef59&#x2F;list_of_personal_knowledge_management_systems&#x2F;&quot;&gt;List of Personal Knowledge Management Systems&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;quick-review-of-relevant-tools&quot;&gt;Quick review of relevant tools&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=baKCC2uTbRc&quot;&gt;Stop Procrastinating With Note-Taking Apps Like Obsidian, Roam, Logseq&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=cAbf1Hy4P4A&quot;&gt;Dead Simple Task Management in Obsidian, Roam Research, and Logseq&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>On Extraterrestrial Life</title>
 		<published>2022-12-26T00:00:00+00:00</published>
@@ -182,6 +205,7 @@ They are &lt;em&gt;watchers of the future&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
 &lt;h4 id=&quot;in-general&quot;&gt;In General&lt;&#x2F;h4&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.coderbridge.com&#x2F;@Po-Jen&quot;&gt;Po-Jen&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;geekplux.com&#x2F;posts&quot;&gt;GeekPlux&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;acko.net&#x2F;&quot;&gt;Hackery, Math &amp;amp; Design&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;halfrost.com&#x2F;archives&#x2F;&quot;&gt;冰霜之地 HalfFrost&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;coolshell.cn&#x2F;featured&quot;&gt;酷壳 CoolShell&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
@@ -197,11 +221,13 @@ They are &lt;em&gt;watchers of the future&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;hakim.se&#x2F;&quot;&gt;Hakim El Hattab&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.goldsborough.me&#x2F;&quot;&gt;Peter Goldsborough&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;jesor.me&#x2F;all&#x2F;&quot;&gt;大破进击&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;jhuo.ca&#x2F;post&#x2F;&quot;&gt;HuoJu&#x27;s BLOG&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;lutaonan.com&#x2F;&quot;&gt;Randy&#x27;s Blog&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;jhuo.ca&#x2F;post&#x2F;&quot;&gt;HuoJu&#x27;s Blog&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.neelnanda.io&#x2F;&quot;&gt;Neel Nanda&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;caminodetexas.substack.com&#x2F;archive&quot;&gt;困而学之&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.k8s.li&#x2F;&quot;&gt;Reimu&#x27;s blog&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.owenyoung.com&#x2F;&quot;&gt;Owen的博客&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;dineshchandgr.medium.com&#x2F;&quot;&gt;Dineshchandgr&lt;&#x2F;a&gt; &lt;&#x2F;small&gt;(potential $5 paywall)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h4 id=&quot;more-than-blogs&quot;&gt;More Than Blogs&lt;&#x2F;h4&gt;
 &lt;ul&gt;
@@ -1181,7 +1207,10 @@ I came back after my miscarriages.&lt;&#x2F;p&gt;
 		<link rel="alternate" href="https://codingezio.github.io/algorithm-leetcode-for-general-problems/" type="text/html"/>
 		<id>https://codingezio.github.io/algorithm-leetcode-for-general-problems/</id>
 		<content type="html">&lt;h2 id=&quot;foreword&quot;&gt;Foreword&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;why-this-post&quot;&gt;Why This Post&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;why&quot;&gt;Why&lt;&#x2F;h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Do note that the solutions below aim towards the esay-to-understand aspect. Some of them are comparably slow than the most popular solutions.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
 &lt;h4 id=&quot;formally&quot;&gt;Formally&lt;&#x2F;h4&gt;
 &lt;ul&gt;
 &lt;li&gt;Review what I&#x27;ve learnt from solving these algorithms&lt;&#x2F;li&gt;
@@ -1627,22 +1656,22 @@ I came back after my miscarriages.&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; j &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt; s.length() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;- &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;;
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;while &lt;&#x2F;span&gt;&lt;span&gt;(i &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span&gt; j) {
-&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;Character&lt;&#x2F;span&gt;&lt;span&gt; start &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt; s.charAt(i);
-&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;Character&lt;&#x2F;span&gt;&lt;span&gt; end   &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt; s.charAt(j);
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;Character&lt;&#x2F;span&gt;&lt;span&gt; letter_left &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt; s.charAt(i);
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;Character&lt;&#x2F;span&gt;&lt;span&gt; letter_right &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt; s.charAt(j);
 &lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;!&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;Character&lt;&#x2F;span&gt;&lt;span&gt;.isLetterOrDigit(start)) {
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;!&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;Character&lt;&#x2F;span&gt;&lt;span&gt;.isLetterOrDigit(letter_left)) {
 &lt;&#x2F;span&gt;&lt;span&gt;                i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;++&lt;&#x2F;span&gt;&lt;span&gt;;
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;                &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;continue&lt;&#x2F;span&gt;&lt;span&gt;;
 &lt;&#x2F;span&gt;&lt;span&gt;            }
 &lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;!&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;Character&lt;&#x2F;span&gt;&lt;span&gt;.isLetterOrDigit(start)) {
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;!&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;Character&lt;&#x2F;span&gt;&lt;span&gt;.isLetterOrDigit(letter_right)) {
 &lt;&#x2F;span&gt;&lt;span&gt;                j&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;--&lt;&#x2F;span&gt;&lt;span&gt;;
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;                &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;continue&lt;&#x2F;span&gt;&lt;span&gt;;
 &lt;&#x2F;span&gt;&lt;span&gt;            }
 &lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;Character&lt;&#x2F;span&gt;&lt;span&gt;.toLowerCase(start) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;!= &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;Character&lt;&#x2F;span&gt;&lt;span&gt;.toLowerCase(end)) {
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;Character&lt;&#x2F;span&gt;&lt;span&gt;.toLowerCase(letter_left) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;!= &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;Character&lt;&#x2F;span&gt;&lt;span&gt;.toLowerCase(letter_right)) {
 &lt;&#x2F;span&gt;&lt;span&gt;                &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;false&lt;&#x2F;span&gt;&lt;span&gt;;
 &lt;&#x2F;span&gt;&lt;span&gt;            }
 &lt;&#x2F;span&gt;&lt;span&gt;
@@ -1650,9 +1679,13 @@ I came back after my miscarriages.&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;            j&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;--&lt;&#x2F;span&gt;&lt;span&gt;;
 &lt;&#x2F;span&gt;&lt;span&gt;        }
 &lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;false&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;true&lt;&#x2F;span&gt;&lt;span&gt;;
 &lt;&#x2F;span&gt;&lt;span&gt;    }
 &lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;class &lt;&#x2F;span&gt;&lt;span style=&quot;text-decoration:underline;color:#a6e22e;&quot;&gt;Solution&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;isPalindrome&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;s&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;str&lt;&#x2F;span&gt;&lt;span&gt;) -&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;bool&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;        
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;0128-longest-consecutive-sequence&quot;&gt;0128. Longest Consecutive Sequence&lt;&#x2F;h3&gt;
 &lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;class &lt;&#x2F;span&gt;&lt;span style=&quot;text-decoration:underline;color:#a6e22e;&quot;&gt;Solution&lt;&#x2F;span&gt;&lt;span&gt;:
@@ -1836,27 +1869,23 @@ I came back after my miscarriages.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;0238-product-of-array-except-self&quot;&gt;0238. Product of Array Except Self&lt;&#x2F;h3&gt;
 &lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;class &lt;&#x2F;span&gt;&lt;span style=&quot;text-decoration:underline;color:#a6e22e;&quot;&gt;Solution&lt;&#x2F;span&gt;&lt;span&gt;:
 &lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;productExceptSelf&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;nums&lt;&#x2F;span&gt;&lt;span&gt;: List[&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;]) -&amp;gt; List[&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;]:
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&amp;quot;&amp;quot;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;        Though I was able to solve (more like remembering the solution) this
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;        problem, the whole logic is still not straightforward enough for me
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;        even though I did a few walk-through using pen and paper. More clearer
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;        procedures for this problem would be added later (for myself).
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;        &amp;quot;&amp;quot;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;        ln &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;len&lt;&#x2F;span&gt;&lt;span&gt;(nums)
+&lt;&#x2F;span&gt;&lt;span&gt;        productBefore &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;* &lt;&#x2F;span&gt;&lt;span&gt;ln
+&lt;&#x2F;span&gt;&lt;span&gt;        productAfter &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;* &lt;&#x2F;span&gt;&lt;span&gt;ln
 &lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;        seq_len &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;len&lt;&#x2F;span&gt;&lt;span&gt;(nums)
-&lt;&#x2F;span&gt;&lt;span&gt;        res &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;* &lt;&#x2F;span&gt;&lt;span&gt;(seq_len)
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# Indice: 1, 2, 3 ..
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;i &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;range&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;, ln):
+&lt;&#x2F;span&gt;&lt;span&gt;            productBefore[i] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;productBefore[i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;* &lt;&#x2F;span&gt;&lt;span&gt;nums[i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;]
 &lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;        prefix &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;1
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;i &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;range&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;, seq_len, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;):
-&lt;&#x2F;span&gt;&lt;span&gt;            res[i] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;prefix
-&lt;&#x2F;span&gt;&lt;span&gt;            prefix &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;*= &lt;&#x2F;span&gt;&lt;span&gt;nums[i]
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# Indice: .. 2, 1, 0
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;i &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;range&lt;&#x2F;span&gt;&lt;span&gt;(ln &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;- &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;):
+&lt;&#x2F;span&gt;&lt;span&gt;            productAfter[i] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;productAfter[i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;* &lt;&#x2F;span&gt;&lt;span&gt;nums[i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;]
 &lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;        postfix &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;1
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;i &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;range&lt;&#x2F;span&gt;&lt;span&gt;(seq_len &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;- &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;):
-&lt;&#x2F;span&gt;&lt;span&gt;            res[i] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;*= &lt;&#x2F;span&gt;&lt;span&gt;postfix
-&lt;&#x2F;span&gt;&lt;span&gt;            postfix &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;*= &lt;&#x2F;span&gt;&lt;span&gt;nums[i]
+&lt;&#x2F;span&gt;&lt;span&gt;        result &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;[]
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;i &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;range&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;, ln):
+&lt;&#x2F;span&gt;&lt;span&gt;            result.append(productBefore[i] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;* &lt;&#x2F;span&gt;&lt;span&gt;productAfter[i])
 &lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;res
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;result
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;0242-valid-anagrams&quot;&gt;0242. Valid Anagrams&lt;&#x2F;h3&gt;
 &lt;pre data-lang=&quot;java&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-java &quot;&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;class &lt;&#x2F;span&gt;&lt;span style=&quot;text-decoration:underline;color:#a6e22e;&quot;&gt;Solution &lt;&#x2F;span&gt;&lt;span&gt;{
@@ -1893,6 +1922,11 @@ I came back after my miscarriages.&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;true&lt;&#x2F;span&gt;&lt;span&gt;;
 &lt;&#x2F;span&gt;&lt;span&gt;    }
 &lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;0347-top-k-frequent-elements&quot;&gt;0347. Top K Frequent Elements&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;class &lt;&#x2F;span&gt;&lt;span style=&quot;text-decoration:underline;color:#a6e22e;&quot;&gt;Solution&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;topKFrequent&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;nums&lt;&#x2F;span&gt;&lt;span&gt;: List[&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;], &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;k&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;) -&amp;gt; List[&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;]:
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;pass
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;0557-reverse-words-in-a-string-iii&quot;&gt;0557. Reverse Words in a String III&lt;&#x2F;h3&gt;
 &lt;pre data-lang=&quot;kotlin&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-kotlin &quot;&gt;&lt;code class=&quot;language-kotlin&quot; data-lang=&quot;kotlin&quot;&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;class &lt;&#x2F;span&gt;&lt;span&gt;Solution {
@@ -2888,11 +2922,12 @@ Linear algebra, including vector spaces, linear transformations, and matrix oper
 &lt;&#x2F;blockquote&gt;
 &lt;h3 id=&quot;topics-around-chatgpt&quot;&gt;Topics around &lt;em&gt;ChatGPT&lt;&#x2F;em&gt;&lt;&#x2F;h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;that I want to talk about&lt;&#x2F;p&gt;
+&lt;p&gt;that I want to dive in&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lesswrong.com&#x2F;posts&#x2F;R4qcDeFdE2QzHLBFQ&#x2F;a-chatgpt-story-about-chatgpt-doom&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;academia.stackexchange.com&#x2F;questions&#x2F;191197&#x2F;is-it-ok-to-generate-parts-of-a-research-paper-using-a-large-language-model-such&quot;&gt;2&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;academia.stackexchange.com&#x2F;questions&#x2F;191197&#x2F;is-it-ok-to-generate-parts-of-a-research-paper-using-a-large-language-model-such&quot;&gt;Is it OK to generate parts of a research paper using a large language model such as ChatGPT?&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lesswrong.com&#x2F;posts&#x2F;R4qcDeFdE2QzHLBFQ&#x2F;a-chatgpt-story-about-chatgpt-doom&quot;&gt;A ChatGPT story about ChatGPT doom&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;old.reddit.com&#x2F;r&#x2F;Futurology&#x2F;comments&#x2F;ysl8ka&#x2F;the_ceo_of_openai_had_dropped_hints_that_gpt4_due&#x2F;&quot;&gt;Constructive discussion around upcoming GPT-4&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h3 id=&quot;other-resources&quot;&gt;Other Resources&lt;&#x2F;h3&gt;
 &lt;h4 id=&quot;ideas-and-thoughts-from-twitter&quot;&gt;Ideas and Thoughts from &lt;em&gt;Twitter&lt;&#x2F;em&gt;&lt;&#x2F;h4&gt;
@@ -6808,6 +6843,10 @@ a full networking stack;&lt;&#x2F;li&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;#39;c&amp;#39; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;^ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;#39; &amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;== &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;#39;C&amp;#39;
 &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;#39;C&amp;#39; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;^ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;#39; &amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;== &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;#39;C&amp;#39;
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;traversing-binary-tree&quot;&gt;Traversing Binary Tree&lt;&#x2F;h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;以 root 节点为视角: &lt;em&gt;Preorder&lt;&#x2F;em&gt; &lt;sup&gt;(前序)&lt;&#x2F;sup&gt;, &lt;em&gt;Inorder&lt;&#x2F;em&gt; &lt;sup&gt;(中序)&lt;&#x2F;sup&gt;, &lt;em&gt;Postorder&lt;&#x2F;em&gt; &lt;sup&gt;(后序)&lt;&#x2F;sup&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">

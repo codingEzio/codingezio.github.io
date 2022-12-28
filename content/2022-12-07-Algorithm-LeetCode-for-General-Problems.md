@@ -5,7 +5,9 @@ description = "Practing by solving Algorithm questions on LeetCode"
 
 ## Foreword
 
-### Why This Post
+### Why
+
+> Do note that the solutions below aim towards the esay-to-understand aspect. Some of them are comparably slow than the most popular solutions.
 
 #### Formally
 
@@ -498,22 +500,22 @@ class Solution {
         int j = s.length() - 1;
 
         while (i < j) {
-            Character start = s.charAt(i);
-            Character end   = s.charAt(j);
+            Character letter_left = s.charAt(i);
+            Character letter_right = s.charAt(j);
 
-            if (!Character.isLetterOrDigit(start)) {
+            if (!Character.isLetterOrDigit(letter_left)) {
                 i++;
 
                 continue;
             }
 
-            if (!Character.isLetterOrDigit(start)) {
+            if (!Character.isLetterOrDigit(letter_right)) {
                 j--;
 
                 continue;
             }
 
-            if (Character.toLowerCase(start) != Character.toLowerCase(end)) {
+            if (Character.toLowerCase(letter_left) != Character.toLowerCase(letter_right)) {
                 return false;
             }
 
@@ -521,9 +523,15 @@ class Solution {
             j--;
         }
 
-        return false;
+        return true;
     }
 }
+```
+
+```python
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        
 ```
 
 ### 0128. Longest Consecutive Sequence
@@ -731,27 +739,23 @@ class Solution {
 ```python
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
-        """
-        Though I was able to solve (more like remembering the solution) this
-        problem, the whole logic is still not straightforward enough for me
-        even though I did a few walk-through using pen and paper. More clearer
-        procedures for this problem would be added later (for myself).
-        """
+        ln = len(nums)
+        productBefore = [1] * ln
+        productAfter = [1] * ln
 
-        seq_len = len(nums)
-        res = [1] * (seq_len)
+        # Indice: 1, 2, 3 ..
+        for i in range(1, ln):
+            productBefore[i] = productBefore[i-1] * nums[i-1]
 
-        prefix = 1
-        for i in range(0, seq_len, 1):
-            res[i] = prefix
-            prefix *= nums[i]
+        # Indice: .. 2, 1, 0
+        for i in range(ln - 2, -1, -1):
+            productAfter[i] = productAfter[i+1] * nums[i+1]
 
-        postfix = 1
-        for i in range(seq_len - 1, -1, -1):
-            res[i] *= postfix
-            postfix *= nums[i]
+        result = []
+        for i in range(0, ln):
+            result.append(productBefore[i] * productAfter[i])
 
-        return res
+        return result
 ```
 
 ### 0242. Valid Anagrams
@@ -791,6 +795,14 @@ class Solution {
         return true;
     }
 }
+```
+
+### 0347. Top K Frequent Elements
+
+```python
+class Solution:
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        pass
 ```
 
 ### 0557. Reverse Words in a String III

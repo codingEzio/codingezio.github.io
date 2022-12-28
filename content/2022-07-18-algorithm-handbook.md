@@ -53,3 +53,7 @@ description = "Non-solution notes for LeetCode problems"
 ('c' ^ ' ') == 'C'
 ('C' ^ ' ') == 'C'
 ```
+
+### Traversing Binary Tree
+
+> 以 root 节点为视角: *Preorder* <sup>(前序)</sup>, *Inorder* <sup>(中序)</sup>, *Postorder* <sup>(后序)</sup>
