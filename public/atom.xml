@@ -5,8 +5,56 @@
 	<link href="https://codingezio.github.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://codingezio.github.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-12-28T00:00:00+00:00</updated>
+	<updated>2022-12-29T00:00:00+00:00</updated>
 	<id>https://codingezio.github.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Booknote on Microservice Patterns</title>
+		<published>2022-12-29T00:00:00+00:00</published>
+		<updated>2022-12-29T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://codingezio.github.io/booknote-on-microservice-patterns/" type="text/html"/>
+		<id>https://codingezio.github.io/booknote-on-microservice-patterns/</id>
+		<content type="html">&lt;h3 id=&quot;resources&quot;&gt;Resources&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.goodreads.com&#x2F;author&#x2F;show&#x2F;568718&quot;&gt;Chris Richardson&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.goodreads.com&#x2F;book&#x2F;show&#x2F;58448831&quot;&gt;Microservices Patterns: With examples in Java&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;microservices-patterns&#x2F;ftgo-application&quot;&gt;&lt;sup&gt;src&lt;&#x2F;sup&gt;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;overview&quot;&gt;Overview&lt;&#x2F;h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Also serve as a progress tracker&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th style=&quot;text-align: left&quot;&gt;fini&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: center&quot;&gt;chap&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: center&quot;&gt;page&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: left&quot;&gt;ovrv&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;␀&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: center&quot;&gt;01&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;001 to 033&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;overview&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;␀&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: center&quot;&gt;02&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;033 .. 061&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;why and how&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;␀&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: center&quot;&gt;03&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;065 .. 104&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;async and messaging&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;␀&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: center&quot;&gt;04&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;110 .. 143&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;data consistency&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;␀&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: center&quot;&gt;05&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;146 .. 180&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;biz logic in DmnDrvnDev&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;␀&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: center&quot;&gt;06&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;183 .. 216&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;evnt-src ptn (logged ~CRUD)&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;␀&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: center&quot;&gt;07&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;220 .. 249&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;fetch data across dmn (sep read&#x2F;write)&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;␀&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: center&quot;&gt;08&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;253 .. 279&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;handlin requests from different clients&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;␀&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: center&quot;&gt;09&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;292 .. 315&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;test unit&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;␀&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: center&quot;&gt;10&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;318 .. 346&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;test integration&#x2F;component&#x2F;..&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;␀&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: center&quot;&gt;11&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;348 .. 380&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;prd-rdy: sec, ext-conf, log&#x2F;metrc&#x2F;trcin&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;␀&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: center&quot;&gt;12&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;383 .. 425&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;deploy: vm,cont,servles and srvice mesh&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;␀&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: center&quot;&gt;13&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;code&gt;428 .. 467&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;incrly refactor monoli to microservices&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;h3 id=&quot;0x01-monolithic-application&quot;&gt;0x01 Monolithic Application&lt;&#x2F;h3&gt;
+&lt;blockquote&gt;
+&lt;img src=&quot;&#x2F;202212&#x2F;2022-1229-booknote-illustration-ftgoapp-monolith.png&quot; alt=&quot;An illustration that shows the architecture of a monolithic application&quot; width=&quot;80%&quot; height=&quot;auto&quot; &#x2F;&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h4 id=&quot;normally&quot;&gt;Normally&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Simple to develop&lt;&#x2F;em&gt;: One single codebase for human and the tooling&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;em&gt;Easy to make changes&lt;&#x2F;em&gt;: Modify, build and deply&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;em&gt;Easy to scale&lt;&#x2F;em&gt;: Run multiple instances behind a load balancer&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;em&gt;Straightforward to test&lt;&#x2F;em&gt;: Backend REST API and frontend UI&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;em&gt;Straightforward to deploy&lt;&#x2F;em&gt;: Built as a &lt;code&gt;.war&lt;&#x2F;code&gt; and put it on &lt;em&gt;Tomcat&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;once-it-grows-bigger&quot;&gt;Once It Grows Bigger&lt;&#x2F;h4&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>On Personal Knowledge Management</title>
 		<published>2022-12-28T00:00:00+00:00</published>
