@@ -10,11 +10,11 @@ description = "Microservices Patterns: With examples in Java"
 
 ### Overview
 
-> Also serve as a progress tracker
+> Also serve as a progress tracker <small>(😈 means done)</small>
 
 | fini | chap | page | ovrv |
-| :--- | :---: | :---: | :--- |
-| ␀ | 01 | `001 to 033` | overview |
+| :---: | :---: | :---: | :--- |
+| 😈 | 01 | `001 to 033` | overview |
 | ␀ | 02 | `033 .. 061` | why and how |
 | ␀ | 03 | `065 .. 104` | async and messaging |
 | ␀ | 04 | `110 .. 143` | data consistency |
@@ -41,3 +41,54 @@ description = "Microservices Patterns: With examples in Java"
 - *Straightforward to deploy*: Built as a `.war` and put it on *Tomcat*
 
 #### Once It Grows Bigger
+
+- *SITUATION*: More features + More members
+- *RESULT*
+  - Difficult to *make sense of*
+  - Difficult to *make changes*
+  - Harder to *write thorough tests* to make it reliable
+  - Harder to *deliver* because the comm between each teams
+  - Harder to *scale* as each parts come with different requirements
+  - Harder to *keep it stable* as all were in the same processes
+  - Harder to *technology migration* to avoid being obsolete
+
+### 0x02 What to Do
+
+#### Conceptually
+
+> Especially for Axis *Y*: they shall be loosely coupled like communicating via API calls, and each manage/have its own/relevant databases. Something like this:
+>
+> <img src="/202212/2022-1229-booknote-illustration-ftgoapp-microservice.png" alt="An illustration that shows the architecture of a monolithic application being transformed into microservices" width="80%" height="auto" />
+
+- Axis *X*: Distributing multiple instances across places
+- Axis *Y*: Splitting things by functionalities like it's standalone
+- Axis *Z*: Splitting things like data for difference machines to handle
+
+#### What Benefits You would Get
+
+- *SITUATION*: Same features + Same members, yet all loosely coupled
+- *RESULT*
+  - Easier to *make sense of* as individual codebase is smaller
+  - Easier to *make changes* as each were <small>(almost)</small> standalone
+  - Easier to *test* and *deliver* via *Continuous Delivery*
+  - Easier to *communicate* because each were *loosely coupled*
+  - Easier to *scale* as each components were *independently deployable*
+  - Easier to *keep it stable* as in differnet process or even machines
+  - Easier to *technology migration* as APIs don't care the underlying tech
+
+#### What Drawbacks would Come With
+
+- Not easy to separate the business logic into a *right set of services*
+- Not easy to decide when to adopt <small>(mono: start faster, micro: easier later)</small>
+- Distributed systems' inter-process communications are complex
+- Distributed systems' data fetching across machines are complex
+- Distributed systems' data consistency are difficult to do it right
+- Needs high-level automation like [*k8s*](https://en.wikipedia.org/wiki/Kubernetes) to make *dev to prod* easier
+
+### 0x03 N/A
+
+> Page 19 to 32 might just be the best material I have ever read on Microservices. It mainly talks about the origin of <small>(Design)</small> *Patterns* and the actualization on Microservices.
+>
+> I shall digest and organize it into notes that were easy to understand within 3 weeks <small>(deadline: `January 19, 2022`)</small>
+
+### 0x04 \
