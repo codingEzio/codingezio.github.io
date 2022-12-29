@@ -359,6 +359,30 @@
 </span><span>                n </span><span style=color:#f92672;>-= </span><span style=color:#ae81ff;>1
 </span><span>
 </span><span>            idxComb </span><span style=color:#f92672;>-= </span><span style=color:#ae81ff;>1
+</span></code></pre><h3 id=0100-same-tree>0100. Same Tree</h3><pre class=language-python data-lang=python style=background-color:#272822;color:#f8f8f2;><code class=language-python data-lang=python><span style=color:#75715e;># Definition for a binary tree node.
+</span><span style=color:#75715e;># class TreeNode:
+</span><span style=color:#75715e;>#     def __init__(self, val=0, left=None, right=None):
+</span><span style=color:#75715e;>#         self.val = val
+</span><span style=color:#75715e;>#         self.left = left
+</span><span style=color:#75715e;>#         self.right = right
+</span><span style=font-style:italic;color:#f92672;>class </span><span style=text-decoration:underline;color:#a6e22e;>Solution</span><span>:
+</span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>isSameTree</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>p</span><span>: Optional[TreeNode], </span><span style=font-style:italic;color:#fd971f;>q</span><span>: Optional[TreeNode]) -> </span><span style=font-style:italic;color:#66d9ef;>bool</span><span>:
+</span><span>        </span><span style=color:#75715e;># Neither has elements inside them
+</span><span>        </span><span style=color:#f92672;>if not </span><span>p </span><span style=color:#f92672;>and not </span><span>q:
+</span><span>            </span><span style=color:#f92672;>return </span><span style=color:#ae81ff;>True
+</span><span>
+</span><span>        </span><span style=color:#75715e;># One of them has no elements inside
+</span><span>        </span><span style=color:#f92672;>elif not </span><span>p </span><span style=color:#f92672;>or not </span><span>q:
+</span><span>            </span><span style=color:#f92672;>return </span><span style=color:#ae81ff;>False
+</span><span>
+</span><span>        </span><span style=color:#75715e;># One and only line to do the comparsion by non-None vals
+</span><span>        </span><span style=color:#f92672;>elif </span><span>p.val </span><span style=color:#f92672;>!= </span><span>q.val:
+</span><span>            </span><span style=color:#f92672;>return </span><span style=color:#ae81ff;>False
+</span><span>
+</span><span>        </span><span style=color:#f92672;>else</span><span>:
+</span><span>            </span><span style=color:#f92672;>return </span><span>\
+</span><span>                self.isSameTree(p.left, q.left) </span><span style=color:#f92672;>and </span><span>\
+</span><span>                self.isSameTree(p.right, q.right)
 </span></code></pre><h3 id=0104-maximum-depth-of-binary-tree>0104. Maximum Depth of Binary Tree</h3><pre class=language-python data-lang=python style=background-color:#272822;color:#f8f8f2;><code class=language-python data-lang=python><span style=color:#75715e;># Definition for a binary tree node.
 </span><span style=color:#75715e;># class TreeNode:
 </span><span style=color:#75715e;>#     def __init__(self, val=0, left=None, right=None):

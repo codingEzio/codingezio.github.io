@@ -468,6 +468,35 @@ class Solution:
             idxComb -= 1
 ```
 
+### 0100. Same Tree
+
+```python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def isSameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
+        # Neither has elements inside them
+        if not p and not q:
+            return True
+
+        # One of them has no elements inside
+        elif not p or not q:
+            return False
+
+        # One and only line to do the comparsion by non-None vals
+        elif p.val != q.val:
+            return False
+
+        else:
+            return \
+                self.isSameTree(p.left, q.left) and \
+                self.isSameTree(p.right, q.right)
+```
+
 ### 0104. Maximum Depth of Binary Tree
 
 ```python
