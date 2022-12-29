@@ -13,4 +13,76 @@
 </span><span style=color:#75715e;>// Switch cases
 </span><span>(</span><span style=color:#e6db74;>'c' </span><span style=color:#f92672;>^ </span><span style=color:#e6db74;>' '</span><span>) </span><span style=color:#f92672;>== </span><span style=color:#e6db74;>'C'
 </span><span>(</span><span style=color:#e6db74;>'C' </span><span style=color:#f92672;>^ </span><span style=color:#e6db74;>' '</span><span>) </span><span style=color:#f92672;>== </span><span style=color:#e6db74;>'C'
-</span></code></pre><h3 id=traversing-binary-tree>Traversing Binary Tree</h3><blockquote><p>以 root 节点为视角: <em>Preorder</em> <sup>(前序)</sup>, <em>Inorder</em> <sup>(中序)</sup>, <em>Postorder</em> <sup>(后序)</sup></blockquote></article><footer role=contentinfo><hr><small>Built with <a href=https://www.getzola.org/>Zola</a>.<br> </small></footer></main>
+</span></code></pre><h3 id=traversing-binary-tree>Traversing Binary Tree</h3><blockquote><p>以 root 节点为视角: <em>Preorder</em> <sup>(前序)</sup>, <em>Inorder</em> <sup>(中序)</sup>, <em>Postorder</em> <sup>(后序)</sup> and .. <em>Level Order</em></blockquote><h4 id=preorder>Preorder</h4><pre class=language-python data-lang=python style=background-color:#272822;color:#f8f8f2;><code class=language-python data-lang=python><span style=color:#75715e;># Definition for a binary tree node.
+</span><span style=color:#75715e;># class TreeNode:
+</span><span style=color:#75715e;>#     def __init__(self, val=0, left=None, right=None):
+</span><span style=color:#75715e;>#         self.val = val
+</span><span style=color:#75715e;>#         self.left = left
+</span><span style=color:#75715e;>#         self.right = right
+</span><span style=font-style:italic;color:#f92672;>class </span><span style=text-decoration:underline;color:#a6e22e;>Solution</span><span>:
+</span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>preorderTraversal</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>root</span><span>: Optional[TreeNode]) -> List[</span><span style=font-style:italic;color:#66d9ef;>int</span><span>]:
+</span><span>     result </span><span style=color:#f92672;>= </span><span>[]
+</span><span>
+</span><span>     self.preorder(root, result)
+</span><span>
+</span><span>     </span><span style=color:#f92672;>return </span><span>result
+</span><span>
+</span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>preorder</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>node</span><span>, </span><span style=font-style:italic;color:#fd971f;>a_list</span><span>):
+</span><span>     </span><span style=color:#f92672;>if not </span><span>node:
+</span><span>      </span><span style=color:#f92672;>return </span><span style=color:#ae81ff;>None
+</span><span>
+</span><span>     a_list.append(node.val)
+</span><span>     self.preorder(node.left, a_list)
+</span><span>     self.preorder(node.right, a_list)
+</span></code></pre><h4 id=inorder>Inorder</h4><pre class=language-python data-lang=python style=background-color:#272822;color:#f8f8f2;><code class=language-python data-lang=python><span style=color:#75715e;># Definition for a binary tree node.
+</span><span style=color:#75715e;># class TreeNode:
+</span><span style=color:#75715e;>#     def __init__(self, val=0, left=None, right=None):
+</span><span style=color:#75715e;>#         self.val = val
+</span><span style=color:#75715e;>#         self.left = left
+</span><span style=color:#75715e;>#         self.right = right
+</span><span style=font-style:italic;color:#f92672;>class </span><span style=text-decoration:underline;color:#a6e22e;>Solution</span><span>:
+</span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>inorderTraversal</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>root</span><span>: Optional[TreeNode]) -> List[</span><span style=font-style:italic;color:#66d9ef;>int</span><span>]:
+</span><span>        result </span><span style=color:#f92672;>= </span><span>[]
+</span><span>
+</span><span>        self.inorder(root, result)
+</span><span>
+</span><span>        </span><span style=color:#f92672;>return </span><span>result
+</span><span>
+</span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>inorder</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>node</span><span>, </span><span style=font-style:italic;color:#fd971f;>a_list</span><span>):
+</span><span>        </span><span style=color:#f92672;>if not </span><span>node:
+</span><span>            </span><span style=color:#f92672;>return </span><span style=color:#ae81ff;>None
+</span><span>
+</span><span>        self.inorder(node.left, a_list)
+</span><span>        a_list.append(node.val)
+</span><span>        self.inorder(node.right, a_list)
+</span></code></pre><h4 id=postorder>Postorder</h4><pre class=language-python data-lang=python style=background-color:#272822;color:#f8f8f2;><code class=language-python data-lang=python><span style=color:#75715e;># Definition for a binary tree node.
+</span><span style=color:#75715e;># class TreeNode:
+</span><span style=color:#75715e;>#     def __init__(self, val=0, left=None, right=None):
+</span><span style=color:#75715e;>#         self.val = val
+</span><span style=color:#75715e;>#         self.left = left
+</span><span style=color:#75715e;>#         self.right = right
+</span><span style=font-style:italic;color:#f92672;>class </span><span style=text-decoration:underline;color:#a6e22e;>Solution</span><span>:
+</span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>postorderTraversal</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>root</span><span>: Optional[TreeNode]) -> List[</span><span style=font-style:italic;color:#66d9ef;>int</span><span>]:
+</span><span>     result </span><span style=color:#f92672;>= </span><span>[]
+</span><span>
+</span><span>        self.postorder(root, result)
+</span><span>
+</span><span>        </span><span style=color:#f92672;>return </span><span>result
+</span><span>
+</span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>postorder</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>node</span><span>, </span><span style=font-style:italic;color:#fd971f;>a_list</span><span>):
+</span><span>        </span><span style=color:#f92672;>if not </span><span>node:
+</span><span>            </span><span style=color:#f92672;>return </span><span style=color:#ae81ff;>None
+</span><span>
+</span><span>        self.postorder(node.left, a_list)
+</span><span>        self.postorder(node.right, a_list)
+</span><span>        a_list.append(node.val)
+</span></code></pre><h4 id=level-order><em>Level Order</em></h4><pre class=language-python data-lang=python style=background-color:#272822;color:#f8f8f2;><code class=language-python data-lang=python><span style=color:#75715e;># Definition for a binary tree node.
+</span><span style=color:#75715e;># class TreeNode:
+</span><span style=color:#75715e;>#     def __init__(self, val=0, left=None, right=None):
+</span><span style=color:#75715e;>#         self.val = val
+</span><span style=color:#75715e;>#         self.left = left
+</span><span style=color:#75715e;>#         self.right = right
+</span><span style=font-style:italic;color:#f92672;>class </span><span style=text-decoration:underline;color:#a6e22e;>Solution</span><span>:
+</span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>levelOrder</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>root</span><span>: Optional[TreeNode]) -> List[List[</span><span style=font-style:italic;color:#66d9ef;>int</span><span>]]:
+</span><span>     </span><span style=color:#f92672;>pass
+</span></code></pre></article><footer role=contentinfo><hr><small>Built with <a href=https://www.getzola.org/>Zola</a>.<br> </small></footer></main>

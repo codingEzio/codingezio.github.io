@@ -56,4 +56,96 @@ description = "Non-solution notes for LeetCode problems"
 
 ### Traversing Binary Tree
 
-> 以 root 节点为视角: *Preorder* <sup>(前序)</sup>, *Inorder* <sup>(中序)</sup>, *Postorder* <sup>(后序)</sup>
+> 以 root 节点为视角: *Preorder* <sup>(前序)</sup>, *Inorder* <sup>(中序)</sup>, *Postorder* <sup>(后序)</sup> and .. *Level Order*
+
+#### Preorder
+
+```python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def preorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+     result = []
+
+     self.preorder(root, result)
+
+     return result
+
+    def preorder(self, node, a_list):
+     if not node:
+      return None
+
+     a_list.append(node.val)
+     self.preorder(node.left, a_list)
+     self.preorder(node.right, a_list)
+```
+
+#### Inorder
+
+```python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+        result = []
+
+        self.inorder(root, result)
+
+        return result
+
+    def inorder(self, node, a_list):
+        if not node:
+            return None
+
+        self.inorder(node.left, a_list)
+        a_list.append(node.val)
+        self.inorder(node.right, a_list)
+```
+
+#### Postorder
+
+```python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def postorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+     result = []
+
+        self.postorder(root, result)
+
+        return result
+
+    def postorder(self, node, a_list):
+        if not node:
+            return None
+
+        self.postorder(node.left, a_list)
+        self.postorder(node.right, a_list)
+        a_list.append(node.val)
+```
+
+#### *Level Order*
+
+```python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
+     pass
+```

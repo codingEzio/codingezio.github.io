@@ -99,18 +99,32 @@ class Solution:
 class Solution:
     def maxArea(self, height: List[int]) -> int:
         areaMax = 0
-        L, R = 0, len(height) - 1
+        start, end = 0, len(height) - 1
 
-        while L < R:
-            area = (R - L) * min(height[L], height[R])
+        # Take [4, 7, 5, 1, 6] for example
+        #
+        # <7>      | - - - - - -  i.e. width: 5-2, height: 6or7
+        # <6>      |           |
+        # <5>      |   |       |
+        # <4>  |   |   |       |
+        # <3>  |   |   |       |
+        # <2>  |   |   |       |
+        # <1>  |   |   |   |   |
+        # <0> <1> <2> <3> <4> <5> <6> <7>
+
+
+        while start < end:
+            # Calculate and compare
+            area = (end - start) * min(height[start], height[end])
 
             if areaMax < area:
                 areaMax = area
 
-            if height[L] < height[R]:
-                L += 1
-            elif height[L] >= height[R]:
-                R -= 1
+            # Move around to maximize the height
+            if height[start] < height[end]:
+                start += 1
+            elif height[start] >= height[end]:
+                end -= 1
 
         return areaMax
 ```
@@ -531,7 +545,30 @@ class Solution {
 ```python
 class Solution:
     def isPalindrome(self, s: str) -> bool:
-        
+        idx_start = 0
+        idx_end = len(s) - 1
+
+        while idx_start < idx_end:
+            letter_left = s[idx_start]
+            letter_right = s[idx_end]
+
+            if not letter_left.isalnum():
+                idx_start += 1
+
+                continue
+
+            if not letter_right.isalnum():
+                idx_end -= 1
+
+                continue
+
+            if letter_left.lower() != letter_right.lower():
+                return False
+
+            idx_start += 1
+            idx_end -= 1
+
+        return True
 ```
 
 ### 0128. Longest Consecutive Sequence

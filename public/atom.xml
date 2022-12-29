@@ -1291,18 +1291,32 @@ I came back after my miscarriages.&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;class &lt;&#x2F;span&gt;&lt;span style=&quot;text-decoration:underline;color:#a6e22e;&quot;&gt;Solution&lt;&#x2F;span&gt;&lt;span&gt;:
 &lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;maxArea&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;height&lt;&#x2F;span&gt;&lt;span&gt;: List[&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;]) -&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;:
 &lt;&#x2F;span&gt;&lt;span&gt;        areaMax &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;0
-&lt;&#x2F;span&gt;&lt;span&gt;        L, R &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;len&lt;&#x2F;span&gt;&lt;span&gt;(height) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;- &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;1
+&lt;&#x2F;span&gt;&lt;span&gt;        start, end &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;len&lt;&#x2F;span&gt;&lt;span&gt;(height) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;- &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;1
 &lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;while &lt;&#x2F;span&gt;&lt;span&gt;L &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;&amp;lt; &lt;&#x2F;span&gt;&lt;span&gt;R:
-&lt;&#x2F;span&gt;&lt;span&gt;            area &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;(R &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;- &lt;&#x2F;span&gt;&lt;span&gt;L) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;* &lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;min&lt;&#x2F;span&gt;&lt;span&gt;(height[L], height[R])
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# Take [4, 7, 5, 1, 6] for example
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;#
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# &amp;lt;7&amp;gt;      | - - - - - -  i.e. width: 5-2, height: 6or7
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# &amp;lt;6&amp;gt;      |           |
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# &amp;lt;5&amp;gt;      |   |       |
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# &amp;lt;4&amp;gt;  |   |   |       |
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# &amp;lt;3&amp;gt;  |   |   |       |
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# &amp;lt;2&amp;gt;  |   |   |       |
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# &amp;lt;1&amp;gt;  |   |   |   |   |
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# &amp;lt;0&amp;gt; &amp;lt;1&amp;gt; &amp;lt;2&amp;gt; &amp;lt;3&amp;gt; &amp;lt;4&amp;gt; &amp;lt;5&amp;gt; &amp;lt;6&amp;gt; &amp;lt;7&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;while &lt;&#x2F;span&gt;&lt;span&gt;start &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;&amp;lt; &lt;&#x2F;span&gt;&lt;span&gt;end:
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# Calculate and compare
+&lt;&#x2F;span&gt;&lt;span&gt;            area &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;(end &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;- &lt;&#x2F;span&gt;&lt;span&gt;start) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;* &lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;min&lt;&#x2F;span&gt;&lt;span&gt;(height[start], height[end])
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;areaMax &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;&amp;lt; &lt;&#x2F;span&gt;&lt;span&gt;area:
 &lt;&#x2F;span&gt;&lt;span&gt;                areaMax &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;area
 &lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;height[L] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;&amp;lt; &lt;&#x2F;span&gt;&lt;span&gt;height[R]:
-&lt;&#x2F;span&gt;&lt;span&gt;                L &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;+= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;1
-&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;elif &lt;&#x2F;span&gt;&lt;span&gt;height[L] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;&amp;gt;= &lt;&#x2F;span&gt;&lt;span&gt;height[R]:
-&lt;&#x2F;span&gt;&lt;span&gt;                R &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;-= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;1
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# Move around to maximize the height
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;height[start] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;&amp;lt; &lt;&#x2F;span&gt;&lt;span&gt;height[end]:
+&lt;&#x2F;span&gt;&lt;span&gt;                start &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;+= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;1
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;elif &lt;&#x2F;span&gt;&lt;span&gt;height[start] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;&amp;gt;= &lt;&#x2F;span&gt;&lt;span&gt;height[end]:
+&lt;&#x2F;span&gt;&lt;span&gt;                end &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;-= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;1
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;areaMax
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
@@ -1685,7 +1699,30 @@ I came back after my miscarriages.&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;class &lt;&#x2F;span&gt;&lt;span style=&quot;text-decoration:underline;color:#a6e22e;&quot;&gt;Solution&lt;&#x2F;span&gt;&lt;span&gt;:
 &lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;isPalindrome&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;s&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;str&lt;&#x2F;span&gt;&lt;span&gt;) -&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;bool&lt;&#x2F;span&gt;&lt;span&gt;:
-&lt;&#x2F;span&gt;&lt;span&gt;        
+&lt;&#x2F;span&gt;&lt;span&gt;        idx_start &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;0
+&lt;&#x2F;span&gt;&lt;span&gt;        idx_end &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;len&lt;&#x2F;span&gt;&lt;span&gt;(s) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;- &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;1
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;while &lt;&#x2F;span&gt;&lt;span&gt;idx_start &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;&amp;lt; &lt;&#x2F;span&gt;&lt;span&gt;idx_end:
+&lt;&#x2F;span&gt;&lt;span&gt;            letter_left &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;s[idx_start]
+&lt;&#x2F;span&gt;&lt;span&gt;            letter_right &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;s[idx_end]
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;if not &lt;&#x2F;span&gt;&lt;span&gt;letter_left.isalnum():
+&lt;&#x2F;span&gt;&lt;span&gt;                idx_start &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;+= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;1
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;                &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;continue
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;if not &lt;&#x2F;span&gt;&lt;span&gt;letter_right.isalnum():
+&lt;&#x2F;span&gt;&lt;span&gt;                idx_end &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;-= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;1
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;                &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;continue
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;letter_left.lower() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;!= &lt;&#x2F;span&gt;&lt;span&gt;letter_right.lower():
+&lt;&#x2F;span&gt;&lt;span&gt;                &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;False
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;            idx_start &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;+= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;1
+&lt;&#x2F;span&gt;&lt;span&gt;            idx_end &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;-= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;1
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;True
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;0128-longest-consecutive-sequence&quot;&gt;0128. Longest Consecutive Sequence&lt;&#x2F;h3&gt;
 &lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;class &lt;&#x2F;span&gt;&lt;span style=&quot;text-decoration:underline;color:#a6e22e;&quot;&gt;Solution&lt;&#x2F;span&gt;&lt;span&gt;:
@@ -6845,8 +6882,88 @@ a full networking stack;&lt;&#x2F;li&gt;
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;traversing-binary-tree&quot;&gt;Traversing Binary Tree&lt;&#x2F;h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;以 root 节点为视角: &lt;em&gt;Preorder&lt;&#x2F;em&gt; &lt;sup&gt;(前序)&lt;&#x2F;sup&gt;, &lt;em&gt;Inorder&lt;&#x2F;em&gt; &lt;sup&gt;(中序)&lt;&#x2F;sup&gt;, &lt;em&gt;Postorder&lt;&#x2F;em&gt; &lt;sup&gt;(后序)&lt;&#x2F;sup&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;以 root 节点为视角: &lt;em&gt;Preorder&lt;&#x2F;em&gt; &lt;sup&gt;(前序)&lt;&#x2F;sup&gt;, &lt;em&gt;Inorder&lt;&#x2F;em&gt; &lt;sup&gt;(中序)&lt;&#x2F;sup&gt;, &lt;em&gt;Postorder&lt;&#x2F;em&gt; &lt;sup&gt;(后序)&lt;&#x2F;sup&gt; and .. &lt;em&gt;Level Order&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
+&lt;h4 id=&quot;preorder&quot;&gt;Preorder&lt;&#x2F;h4&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# Definition for a binary tree node.
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# class TreeNode:
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;#     def __init__(self, val=0, left=None, right=None):
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;#         self.val = val
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;#         self.left = left
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;#         self.right = right
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;class &lt;&#x2F;span&gt;&lt;span style=&quot;text-decoration:underline;color:#a6e22e;&quot;&gt;Solution&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;preorderTraversal&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;root&lt;&#x2F;span&gt;&lt;span&gt;: Optional[TreeNode]) -&amp;gt; List[&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;]:
+&lt;&#x2F;span&gt;&lt;span&gt;     result &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;[]
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;     self.preorder(root, result)
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;     &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;result
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;preorder&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;node&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;a_list&lt;&#x2F;span&gt;&lt;span&gt;):
+&lt;&#x2F;span&gt;&lt;span&gt;     &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;if not &lt;&#x2F;span&gt;&lt;span&gt;node:
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;None
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;     a_list.append(node.val)
+&lt;&#x2F;span&gt;&lt;span&gt;     self.preorder(node.left, a_list)
+&lt;&#x2F;span&gt;&lt;span&gt;     self.preorder(node.right, a_list)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h4 id=&quot;inorder&quot;&gt;Inorder&lt;&#x2F;h4&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# Definition for a binary tree node.
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# class TreeNode:
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;#     def __init__(self, val=0, left=None, right=None):
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;#         self.val = val
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;#         self.left = left
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;#         self.right = right
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;class &lt;&#x2F;span&gt;&lt;span style=&quot;text-decoration:underline;color:#a6e22e;&quot;&gt;Solution&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;inorderTraversal&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;root&lt;&#x2F;span&gt;&lt;span&gt;: Optional[TreeNode]) -&amp;gt; List[&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;]:
+&lt;&#x2F;span&gt;&lt;span&gt;        result &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;[]
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        self.inorder(root, result)
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;result
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;inorder&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;node&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;a_list&lt;&#x2F;span&gt;&lt;span&gt;):
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;if not &lt;&#x2F;span&gt;&lt;span&gt;node:
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;None
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        self.inorder(node.left, a_list)
+&lt;&#x2F;span&gt;&lt;span&gt;        a_list.append(node.val)
+&lt;&#x2F;span&gt;&lt;span&gt;        self.inorder(node.right, a_list)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h4 id=&quot;postorder&quot;&gt;Postorder&lt;&#x2F;h4&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# Definition for a binary tree node.
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# class TreeNode:
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;#     def __init__(self, val=0, left=None, right=None):
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;#         self.val = val
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;#         self.left = left
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;#         self.right = right
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;class &lt;&#x2F;span&gt;&lt;span style=&quot;text-decoration:underline;color:#a6e22e;&quot;&gt;Solution&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;postorderTraversal&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;root&lt;&#x2F;span&gt;&lt;span&gt;: Optional[TreeNode]) -&amp;gt; List[&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;]:
+&lt;&#x2F;span&gt;&lt;span&gt;     result &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;[]
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        self.postorder(root, result)
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;result
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;postorder&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;node&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;a_list&lt;&#x2F;span&gt;&lt;span&gt;):
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;if not &lt;&#x2F;span&gt;&lt;span&gt;node:
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;None
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        self.postorder(node.left, a_list)
+&lt;&#x2F;span&gt;&lt;span&gt;        self.postorder(node.right, a_list)
+&lt;&#x2F;span&gt;&lt;span&gt;        a_list.append(node.val)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h4 id=&quot;level-order&quot;&gt;&lt;em&gt;Level Order&lt;&#x2F;em&gt;&lt;&#x2F;h4&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# Definition for a binary tree node.
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# class TreeNode:
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;#     def __init__(self, val=0, left=None, right=None):
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;#         self.val = val
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;#         self.left = left
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;#         self.right = right
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;class &lt;&#x2F;span&gt;&lt;span style=&quot;text-decoration:underline;color:#a6e22e;&quot;&gt;Solution&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;levelOrder&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;root&lt;&#x2F;span&gt;&lt;span&gt;: Optional[TreeNode]) -&amp;gt; List[List[&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;]]:
+&lt;&#x2F;span&gt;&lt;span&gt;     &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;pass
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">
