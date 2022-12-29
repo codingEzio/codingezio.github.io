@@ -497,6 +497,20 @@ class Solution:
                 self.isSameTree(p.right, q.right)
 ```
 
+### 0101. Symmetric Tree
+
+```python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def isSymmetric(self, root: Optional[TreeNode]) -> bool:
+        pass
+```
+
 ### 0104. Maximum Depth of Binary Tree
 
 ```python
@@ -508,15 +522,16 @@ class Solution:
 #         self.right = right
 class Solution:
     def maxDepth(self, root: Optional[TreeNode]) -> int:
-        if root is None:
+        # Two scenarios here
+        # - Either the input doesn't have nodes inside
+        # - Or the subtrees do not (in the recursion)
+        if not root:
             return 0
 
-        depth_left = self.maxDepth(root.left)
-        depth_right = self.maxDepth(root.right)
+        L = self.maxDepth(root.left)
+        R = self.maxDepth(root.right)
 
-        depth_max = max(depth_left, depth_right)
-
-        return depth_max + 1
+        return max(L, R) + 1
 ```
 
 ### 0124. Binary Tree Maximum Path Sum
@@ -530,7 +545,6 @@ class Solution:
 #         self.right = right
 class Solution:
     def maxPathSum(self, root: TreeNode) -> int:
-
         pass
 ```
 
@@ -798,6 +812,20 @@ class Solution {
         return false;
     }
 }
+```
+
+### 0226. Invert Binary Tree
+
+```python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
+        pass
 ```
 
 ### 0238. Product of Array Except Self

@@ -383,6 +383,15 @@
 </span><span>            </span><span style=color:#f92672;>return </span><span>\
 </span><span>                self.isSameTree(p.left, q.left) </span><span style=color:#f92672;>and </span><span>\
 </span><span>                self.isSameTree(p.right, q.right)
+</span></code></pre><h3 id=0101-symmetric-tree>0101. Symmetric Tree</h3><pre class=language-python data-lang=python style=background-color:#272822;color:#f8f8f2;><code class=language-python data-lang=python><span style=color:#75715e;># Definition for a binary tree node.
+</span><span style=color:#75715e;># class TreeNode:
+</span><span style=color:#75715e;>#     def __init__(self, val=0, left=None, right=None):
+</span><span style=color:#75715e;>#         self.val = val
+</span><span style=color:#75715e;>#         self.left = left
+</span><span style=color:#75715e;>#         self.right = right
+</span><span style=font-style:italic;color:#f92672;>class </span><span style=text-decoration:underline;color:#a6e22e;>Solution</span><span>:
+</span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>isSymmetric</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>root</span><span>: Optional[TreeNode]) -> </span><span style=font-style:italic;color:#66d9ef;>bool</span><span>:
+</span><span>        </span><span style=color:#f92672;>pass
 </span></code></pre><h3 id=0104-maximum-depth-of-binary-tree>0104. Maximum Depth of Binary Tree</h3><pre class=language-python data-lang=python style=background-color:#272822;color:#f8f8f2;><code class=language-python data-lang=python><span style=color:#75715e;># Definition for a binary tree node.
 </span><span style=color:#75715e;># class TreeNode:
 </span><span style=color:#75715e;>#     def __init__(self, val=0, left=None, right=None):
@@ -391,15 +400,16 @@
 </span><span style=color:#75715e;>#         self.right = right
 </span><span style=font-style:italic;color:#f92672;>class </span><span style=text-decoration:underline;color:#a6e22e;>Solution</span><span>:
 </span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>maxDepth</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>root</span><span>: Optional[TreeNode]) -> </span><span style=font-style:italic;color:#66d9ef;>int</span><span>:
-</span><span>        </span><span style=color:#f92672;>if </span><span>root </span><span style=color:#f92672;>is </span><span style=color:#ae81ff;>None</span><span>:
+</span><span>        </span><span style=color:#75715e;># Two scenarios here
+</span><span>        </span><span style=color:#75715e;># - Either the input doesn't have nodes inside
+</span><span>        </span><span style=color:#75715e;># - Or the subtrees do not (in the recursion)
+</span><span>        </span><span style=color:#f92672;>if not </span><span>root:
 </span><span>            </span><span style=color:#f92672;>return </span><span style=color:#ae81ff;>0
 </span><span>
-</span><span>        depth_left </span><span style=color:#f92672;>= </span><span>self.maxDepth(root.left)
-</span><span>        depth_right </span><span style=color:#f92672;>= </span><span>self.maxDepth(root.right)
+</span><span>        L </span><span style=color:#f92672;>= </span><span>self.maxDepth(root.left)
+</span><span>        R </span><span style=color:#f92672;>= </span><span>self.maxDepth(root.right)
 </span><span>
-</span><span>        depth_max </span><span style=color:#f92672;>= </span><span style=color:#66d9ef;>max</span><span>(depth_left, depth_right)
-</span><span>
-</span><span>        </span><span style=color:#f92672;>return </span><span>depth_max </span><span style=color:#f92672;>+ </span><span style=color:#ae81ff;>1
+</span><span>        </span><span style=color:#f92672;>return </span><span style=color:#66d9ef;>max</span><span>(L, R) </span><span style=color:#f92672;>+ </span><span style=color:#ae81ff;>1
 </span></code></pre><h3 id=0124-binary-tree-maximum-path-sum>0124. Binary Tree Maximum Path Sum</h3><pre class=language-python data-lang=python style=background-color:#272822;color:#f8f8f2;><code class=language-python data-lang=python><span style=color:#75715e;># Definition for a binary tree node.
 </span><span style=color:#75715e;># class TreeNode:
 </span><span style=color:#75715e;>#     def __init__(self, val=0, left=None, right=None):
@@ -408,7 +418,6 @@
 </span><span style=color:#75715e;>#         self.right = right
 </span><span style=font-style:italic;color:#f92672;>class </span><span style=text-decoration:underline;color:#a6e22e;>Solution</span><span>:
 </span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>maxPathSum</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>root</span><span>: TreeNode) -> </span><span style=font-style:italic;color:#66d9ef;>int</span><span>:
-</span><span>
 </span><span>        </span><span style=color:#f92672;>pass
 </span></code></pre><h3 id=0125-valid-palindrome>0125. Valid Palindrome</h3><pre class=language-java data-lang=java style=background-color:#272822;color:#f8f8f2;><code class=language-java data-lang=java><span style=font-style:italic;color:#66d9ef;>class </span><span style=text-decoration:underline;color:#a6e22e;>Solution </span><span>{
 </span><span>    </span><span style=color:#f92672;>public </span><span style=font-style:italic;color:#66d9ef;>boolean </span><span style=color:#a6e22e;>isPalindrome</span><span>(</span><span style=font-style:italic;color:#66d9ef;>String </span><span style=font-style:italic;color:#fd971f;>s</span><span>) {
@@ -633,6 +642,15 @@
 </span><span>        </span><span style=color:#f92672;>return </span><span style=color:#ae81ff;>false</span><span>;
 </span><span>    }
 </span><span>}
+</span></code></pre><h3 id=0226-invert-binary-tree>0226. Invert Binary Tree</h3><pre class=language-python data-lang=python style=background-color:#272822;color:#f8f8f2;><code class=language-python data-lang=python><span style=color:#75715e;># Definition for a binary tree node.
+</span><span style=color:#75715e;># class TreeNode:
+</span><span style=color:#75715e;>#     def __init__(self, val=0, left=None, right=None):
+</span><span style=color:#75715e;>#         self.val = val
+</span><span style=color:#75715e;>#         self.left = left
+</span><span style=color:#75715e;>#         self.right = right
+</span><span style=font-style:italic;color:#f92672;>class </span><span style=text-decoration:underline;color:#a6e22e;>Solution</span><span>:
+</span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>invertTree</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>root</span><span>: Optional[TreeNode]) -> Optional[TreeNode]:
+</span><span>        </span><span style=color:#f92672;>pass
 </span></code></pre><h3 id=0238-product-of-array-except-self>0238. Product of Array Except Self</h3><pre class=language-python data-lang=python style=background-color:#272822;color:#f8f8f2;><code class=language-python data-lang=python><span style=font-style:italic;color:#f92672;>class </span><span style=text-decoration:underline;color:#a6e22e;>Solution</span><span>:
 </span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>productExceptSelf</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>nums</span><span>: List[</span><span style=font-style:italic;color:#66d9ef;>int</span><span>]) -> List[</span><span style=font-style:italic;color:#66d9ef;>int</span><span>]:
 </span><span>        ln </span><span style=color:#f92672;>= </span><span style=color:#66d9ef;>len</span><span>(nums)
