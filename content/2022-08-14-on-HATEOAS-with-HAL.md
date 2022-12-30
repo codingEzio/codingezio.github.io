@@ -25,7 +25,7 @@ description = "Notes on HATEOAS and HAL"
 
 ## Resources
 
-- [On Choosing a Hypermedia Type for Your API](https://sookocheff.com/post/api/on-choosing-a-hypermedia-format/)
+- [On Choosing a Hypermedia Type for Your API](https://web.archive.org/web/20221230093414/https://sookocheff.com/post/api/on-choosing-a-hypermedia-format/)
 - [Relationship and Difference between HAL and HATEOAS](https://stackoverflow.com/questions/25819477/relationship-and-difference-between-hal-and-hateoas)
 - [HATEOAS: Concise Description](https://stackoverflow.com/questions/9192648/hateoas-concise-description)
 - [Can Someone Please ELI5 HATEOAS in API?](https://old.reddit.com/r/learnprogramming/comments/qwxta9/can_someone_please_eli5_hateoas_in_api/)

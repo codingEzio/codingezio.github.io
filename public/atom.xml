@@ -749,8 +749,8 @@ TODO&lt;&#x2F;li&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;render(request,
 &lt;&#x2F;span&gt;&lt;span&gt;                &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;#39;images&#x2F;image&#x2F;detail.html&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;,
 &lt;&#x2F;span&gt;&lt;span&gt;                { &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;#39;section&amp;#39;    &lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;#39;images&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;,
-&lt;&#x2F;span&gt;&lt;span&gt;                    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;#39;image_inst&amp;#39; &lt;&#x2F;span&gt;&lt;span&gt;: image,
-&lt;&#x2F;span&gt;&lt;span&gt;                    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;#39;total_views&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;: total_views })
+&lt;&#x2F;span&gt;&lt;span&gt;                  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;#39;image_inst&amp;#39; &lt;&#x2F;span&gt;&lt;span&gt;: image,
+&lt;&#x2F;span&gt;&lt;span&gt;                  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;#39;total_views&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;: total_views })
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
@@ -6123,7 +6123,7 @@ Expect bumps in the road.&lt;&#x2F;p&gt;
 &lt;hr &#x2F;&gt;
 &lt;h2 id=&quot;resources&quot;&gt;Resources&lt;&#x2F;h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;sookocheff.com&#x2F;post&#x2F;api&#x2F;on-choosing-a-hypermedia-format&#x2F;&quot;&gt;On Choosing a Hypermedia Type for Your API&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20221230093414&#x2F;https:&#x2F;&#x2F;sookocheff.com&#x2F;post&#x2F;api&#x2F;on-choosing-a-hypermedia-format&#x2F;&quot;&gt;On Choosing a Hypermedia Type for Your API&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;25819477&#x2F;relationship-and-difference-between-hal-and-hateoas&quot;&gt;Relationship and Difference between HAL and HATEOAS&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;9192648&#x2F;hateoas-concise-description&quot;&gt;HATEOAS: Concise Description&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;old.reddit.com&#x2F;r&#x2F;learnprogramming&#x2F;comments&#x2F;qwxta9&#x2F;can_someone_please_eli5_hateoas_in_api&#x2F;&quot;&gt;Can Someone Please ELI5 HATEOAS in API?&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
