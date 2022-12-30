@@ -5,8 +5,134 @@
 	<link href="https://codingezio.github.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://codingezio.github.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-12-29T00:00:00+00:00</updated>
+	<updated>2022-12-30T00:00:00+00:00</updated>
 	<id>https://codingezio.github.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>On Information Retrieval</title>
+		<published>2022-12-30T00:00:00+00:00</published>
+		<updated>2022-12-30T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://codingezio.github.io/on-information-retrieval/" type="text/html"/>
+		<id>https://codingezio.github.io/on-information-retrieval/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;The main thing I wanna talk about is the sub-field under &lt;em&gt;Information Retrieval&lt;&#x2F;em&gt;, i.e. Search Engines like &lt;em&gt;ElasticSearch&lt;&#x2F;em&gt;. Here&#x27;s an awesome &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;codingEzio&#x2F;og-search-engineering&quot;&gt;guide&lt;&#x2F;a&gt; that I wanna dive in and talk about which is created by the amazing team &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;open-guides&quot;&gt;&lt;em&gt;open-guides&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h2 id=&quot;foundation&quot;&gt;Foundation&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;conceptually&quot;&gt;Conceptually&lt;&#x2F;h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Information retrieval&lt;&#x2F;em&gt; is a broad field that encompasses the development of algorithms and systems for searching and retrieving information, while search engines are a specific type of information retrieval system that allow users to search the internet for information.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h2 id=&quot;hands-on-learning&quot;&gt;Hands-on Learning&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;personal-project&quot;&gt;Personal Project&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;beenotung&#x2F;personal-search-engine&quot;&gt;beenotung&#x2F;personal-search-engine&lt;&#x2F;a&gt; &lt;small&gt;(&lt;em&gt;TypeScript&lt;&#x2F;em&gt;)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;SimoneStefani&#x2F;simple-search-engine&quot;&gt;SimoneStefani&#x2F;simple-search-engine&lt;&#x2F;a&gt; &lt;small&gt;(&lt;em&gt;Java&lt;&#x2F;em&gt;)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Bobzone&#x2F;simple-search-engine&quot;&gt;Bobzone&#x2F;simple-search-engine&lt;&#x2F;a&gt; &lt;small&gt;(&lt;em&gt;Java&lt;&#x2F;em&gt;)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;production-ready-libraries&quot;&gt;Production-ready Libraries&lt;&#x2F;h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Common use cases for the &lt;a href=&quot;https:&#x2F;&#x2F;www.elastic.co&#x2F;what-is&#x2F;elk-stack&quot;&gt;&lt;em&gt;ELK&lt;&#x2F;em&gt; stack&lt;&#x2F;a&gt; include log analytics, application performance monitoring, security monitoring and analysis, and business information analytics.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Elastic Stack&lt;&#x2F;em&gt; &lt;small&gt;(ELK)&lt;&#x2F;small&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;www.elastic.co&#x2F;guide&#x2F;index.html&quot;&gt;documentation&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;orgs&#x2F;elastic&#x2F;repositories?q=&amp;amp;type=source&amp;amp;language=&amp;amp;sort=stargazers&quot;&gt;source code &lt;sup&gt;repo list&lt;&#x2F;sup&gt;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;em&gt;Meilisearch&lt;&#x2F;em&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;docs.meilisearch.com&#x2F;learn&#x2F;getting_started&#x2F;quick_start.html#setup-and-installation&quot;&gt;documentation&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;meilisearch&#x2F;meilisearch&quot;&gt;source code&lt;&#x2F;a&gt; &lt;small&gt;(in comparison, ELK is more of a ecosystem)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;references&quot;&gt;References&lt;&#x2F;h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Good to have but not necessary&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;harpribot&#x2F;awesome-information-retrieval&quot;&gt;harpribot&#x2F;awesome-information-retrieval&lt;&#x2F;a&gt; &lt;small&gt;(&lt;em&gt;A curated list of awesome information retrieval resources&lt;&#x2F;em&gt;)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>On Message Queue</title>
+		<published>2022-12-30T00:00:00+00:00</published>
+		<updated>2022-12-30T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://codingezio.github.io/on-message-queue/" type="text/html"/>
+		<id>https://codingezio.github.io/on-message-queue/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;Currently it&#x27;s just a post with a bunch of links for leanring materials. The main thing I wanna achieve through this post is that not just knowing how to use Message Queues like &lt;em&gt;Kafka&lt;&#x2F;em&gt;, &lt;em&gt;RabbitMQ&lt;&#x2F;em&gt;, but also understanding how it works internally through writing an implementation of it.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h2 id=&quot;foundation&quot;&gt;Foundation&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;why-message-queue&quot;&gt;Why Message Queue&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;softwareengineering.stackexchange.com&#x2F;questions&#x2F;425190&#x2F;how-can-message-queues-improve-scalability&quot;&gt;How Can Message Queues Improve Scalability?&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.freecodecamp.org&#x2F;news&#x2F;a-dummys-guide-to-distributed-queues-2cd358d83780&#x2F;&quot;&gt;A Dummy’s Guide to Distributed Queues&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;and my own notes &lt;a href=&quot;https:&#x2F;&#x2F;codingezio.github.io&#x2F;microservice-01-concepts&#x2F;#what-the-fuck-is-message-broker&quot;&gt;What the fuck is Message Broker&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;architecture&quot;&gt;Architecture&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20221230083203&#x2F;https:&#x2F;&#x2F;medium.com&#x2F;must-know-computer-science&#x2F;system-design-message-queues-245612428a22&quot;&gt;Concepts and considerations for Message Queues in System Design&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;practice&quot;&gt;Practice&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;implementation&quot;&gt;Implementation&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;vitorluis&#x2F;SimpleMQ&quot;&gt;vitorluis&#x2F;SimpleMQ&lt;&#x2F;a&gt; &lt;small&gt;(&lt;em&gt;Python&lt;&#x2F;em&gt;, in-memory)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;dhslrl321&#x2F;zsmq&quot;&gt;dhslrl321&#x2F;zsmq&lt;&#x2F;a&gt; &lt;small&gt;(&lt;em&gt;Java&lt;&#x2F;em&gt;)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;onto-the-real-world&quot;&gt;Onto the Real World&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;which-one&quot;&gt;Which One?&lt;&#x2F;h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.conduktor.io&#x2F;blog&#x2F;comparing-apache-kafka-activemq-and-rabbitmq&quot;&gt;Comparing Apache Kafka, ActiveMQ, and RabbitMQ&lt;&#x2F;a&gt; &lt;small&gt;(this link is not a guide to the options listed below)&lt;&#x2F;small&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;RabbitMQ&lt;&#x2F;em&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;www.rabbitmq.com&#x2F;documentation.html&quot;&gt;documentation&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;orgs&#x2F;rabbitmq&#x2F;repositories?q=&amp;amp;type=source&amp;amp;language=&amp;amp;sort=stargazers&quot;&gt;source code&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;em&gt;Kafka&lt;&#x2F;em&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;kafka.apache.org&#x2F;20&#x2F;documentation.html&quot;&gt;documentation&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;apache&#x2F;kafka&quot;&gt;source code&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;em&gt;RocketMQ&lt;&#x2F;em&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;rocketmq.apache.org&#x2F;docs&#x2F;&quot;&gt;documentation&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;apache&#x2F;rocketmq&quot;&gt;source code&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>On Remote Procedure Call</title>
+		<published>2022-12-30T00:00:00+00:00</published>
+		<updated>2022-12-30T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://codingezio.github.io/on-remote-procedure-call/" type="text/html"/>
+		<id>https://codingezio.github.io/on-remote-procedure-call/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;Currently it&#x27;s just a post with a bunch of links for leanring materials. The main thing I wanna achieve through this post is that not just knowing how to use RPCs in the code like &lt;em&gt;Feign&lt;&#x2F;em&gt;, &lt;em&gt;Dubbo&lt;&#x2F;em&gt; or &lt;em&gt;gRPC&lt;&#x2F;em&gt;, but also understanding how it works internally through writing an implementation of it.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h2 id=&quot;foundation&quot;&gt;Foundation&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;what-is-it-really&quot;&gt;What Is It, Really&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;alexanderell.is&#x2F;posts&#x2F;rpc-from-scratch&#x2F;&quot;&gt;Writing an RPC From Scratch&lt;&#x2F;a&gt; &lt;small&gt;(&lt;em&gt;C&lt;&#x2F;em&gt;)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;20653240&#x2F;what-is-rpc-framework-and-apache-thrift&#x2F;20664706#20664706&quot;&gt;What is RPC framework and Apache Thrift?&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;and my own notes
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;codingezio.github.io&#x2F;microservice-01-concepts&#x2F;#how-could-different-parts-of-programs-communicate&quot;&gt;How could different (parts of) programs communicate?&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;when-to-use-it&quot;&gt;When to Use It&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.smashingmagazine.com&#x2F;2016&#x2F;09&#x2F;understanding-rest-and-rpc-for-http-apis&#x2F;&quot;&gt;Understanding RPC Vs REST For HTTP APIs&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;cloud.google.com&#x2F;blog&#x2F;products&#x2F;application-development&#x2F;rest-vs-rpc-what-problems-are-you-trying-to-solve-with-your-apis&quot;&gt;REST vs. RPC: What Problems Are You Trying to Solve with Your APIs?&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;practice&quot;&gt;Practice&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;rpc-framework&quot;&gt;RPC Framework&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;less-code-to-digest&quot;&gt;Less Code to Digest&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;earthstar-project&#x2F;mini-rpc&quot;&gt;earthstar-project&#x2F;mini-rpc&lt;&#x2F;a&gt; &lt;small&gt;(&lt;em&gt;TypeScript&lt;&#x2F;em&gt;)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;geektutu.com&#x2F;post&#x2F;geerpc.html&quot;&gt;GeeRPC: 7天用 Go 从零实现 RPC 框架&lt;&#x2F;a&gt; &lt;sup&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;geektutu&#x2F;7days-golang&#x2F;tree&#x2F;master&#x2F;gee-rpc&#x2F;doc&quot;&gt;src&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt; &lt;small&gt;(&lt;em&gt;Go&lt;&#x2F;em&gt;)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;a-bit-heavier-to-digest&quot;&gt;A Bit Heavier to Digest&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;veal98&#x2F;RPC-FromScratch&quot;&gt;veal98&#x2F;RPC-FromScratch&lt;&#x2F;a&gt; &lt;small&gt;(&lt;em&gt;Java&lt;&#x2F;em&gt;, &lt;em&gt;Netty&lt;&#x2F;em&gt; and &lt;em&gt;ZooKeeper&lt;&#x2F;em&gt;)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;CN-GuoZiyang&#x2F;My-RPC-Framework&quot;&gt;CN-GuoZiyang&#x2F;My-RPC-Framework&lt;&#x2F;a&gt; &lt;small&gt;(&lt;em&gt;Java&lt;&#x2F;em&gt;, &lt;em&gt;Netty&lt;&#x2F;em&gt; and &lt;em&gt;Nacos&lt;&#x2F;em&gt;)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;onto-the-real-world&quot;&gt;Onto the Real World&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;which-one&quot;&gt;Which One?&lt;&#x2F;h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.csdn.net&#x2F;id5555&#x2F;article&#x2F;details&#x2F;108960705&quot;&gt;Feign+Ribbon, Dubbo, gRPC 的选型对比&lt;&#x2F;a&gt; &lt;small&gt;(&lt;em&gt;CSDN&lt;&#x2F;em&gt;, non-archivable)&lt;&#x2F;small&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Feign&lt;&#x2F;em&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;docs.spring.io&#x2F;spring-cloud-openfeign&#x2F;docs&#x2F;current&#x2F;reference&#x2F;html&#x2F;&quot;&gt;documentation&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;OpenFeign&#x2F;feign&quot;&gt;source code&lt;&#x2F;a&gt; &lt;small&gt;(inexact categorization)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;em&gt;Dubbo&lt;&#x2F;em&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;dubbo.apache.org&#x2F;en&#x2F;docs&#x2F;v2.7&#x2F;user&#x2F;preface&#x2F;background&#x2F;&quot;&gt;documentation&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;apache&#x2F;dubbo&quot;&gt;source code&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;em&gt;gRPC&lt;&#x2F;em&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;grpc.io&#x2F;docs&#x2F;languages&#x2F;java&#x2F;quickstart&#x2F;&quot;&gt;documentation&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;grpc&#x2F;grpc-java&quot;&gt;source code&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>Booknote on Microservice Patterns</title>
 		<published>2022-12-29T00:00:00+00:00</published>
@@ -2052,7 +2178,15 @@ I came back after my miscarriages.&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;#         self.right = right
 &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;class &lt;&#x2F;span&gt;&lt;span style=&quot;text-decoration:underline;color:#a6e22e;&quot;&gt;Solution&lt;&#x2F;span&gt;&lt;span&gt;:
 &lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;invertTree&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;root&lt;&#x2F;span&gt;&lt;span&gt;: Optional[TreeNode]) -&amp;gt; Optional[TreeNode]:
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;pass
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;if not &lt;&#x2F;span&gt;&lt;span&gt;root:
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;None
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        root.left, root.right &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;root.right, root.left
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        self.invertTree(root.left)
+&lt;&#x2F;span&gt;&lt;span&gt;        self.invertTree(root.right)
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;root
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;0238-product-of-array-except-self&quot;&gt;0238. Product of Array Except Self&lt;&#x2F;h3&gt;
 &lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;class &lt;&#x2F;span&gt;&lt;span style=&quot;text-decoration:underline;color:#a6e22e;&quot;&gt;Solution&lt;&#x2F;span&gt;&lt;span&gt;:

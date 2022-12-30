@@ -391,6 +391,10 @@
         <lastmod>2022-12-19</lastmod>
     </url>
     <url>
+        <loc>https://codingezio.github.io/on-information-retrieval/</loc>
+        <lastmod>2022-12-30</lastmod>
+    </url>
+    <url>
         <loc>https://codingezio.github.io/on-java-concurrency/</loc>
         <lastmod>2022-12-21</lastmod>
     </url>
@@ -421,6 +425,10 @@
     <url>
         <loc>https://codingezio.github.io/on-machine-learning-language-models/</loc>
         <lastmod>2022-11-16</lastmod>
+    </url>
+    <url>
+        <loc>https://codingezio.github.io/on-message-queue/</loc>
+        <lastmod>2022-12-30</lastmod>
     </url>
     <url>
         <loc>https://codingezio.github.io/on-netty/</loc>
@@ -461,6 +469,10 @@
     <url>
         <loc>https://codingezio.github.io/on-redis/</loc>
         <lastmod>2022-12-22</lastmod>
+    </url>
+    <url>
+        <loc>https://codingezio.github.io/on-remote-procedure-call/</loc>
+        <lastmod>2022-12-30</lastmod>
     </url>
     <url>
         <loc>https://codingezio.github.io/on-scale/</loc>
