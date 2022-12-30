@@ -37,6 +37,8 @@ description = "What it is, why use it and other details"
 
 ### Terminology
 
+- [What is Nginx? Explain to Me Like I'm 5 Because I'm Clueless!](https://old.reddit.com/r/nginx/comments/mvatwk/what_is_nginx_explain_to_me_like_im_5_because_im/)
+- [What is Gunicorn and Nginx?](https://old.reddit.com/r/django/comments/b0ug27/eli5_what_is_gunicorn_and_nginx/)
 - [Is Tomcat = Apache (or other web server) + JavaEE](https://stackoverflow.com/questions/55414498/is-tomcat-apache-or-other-web-server-javaee)
 
 ### References for References
