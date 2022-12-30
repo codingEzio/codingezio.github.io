@@ -508,7 +508,28 @@ class Solution:
 #         self.right = right
 class Solution:
     def isSymmetric(self, root: Optional[TreeNode]) -> bool:
-        pass
+        if not root:
+            return False
+
+        return self.isMirror(root.left, root.right)
+
+    def isMirror(self, L, R) -> bool:
+        if not L and not R:
+            return True
+        elif not L or not R:
+            return False
+        elif L.val != R.val:
+            return False
+        else:
+            return \
+                #      1
+                #   2     3
+                # L   5   6   R
+                self.isMirror(L.left, R.right) and \
+                #      1
+                #   2     3
+                # 4   R   L   7
+                self.isMirror(L.right, L.left)
 ```
 
 ### 0104. Maximum Depth of Binary Tree

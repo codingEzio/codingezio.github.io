@@ -391,7 +391,28 @@
 </span><span style=color:#75715e;>#         self.right = right
 </span><span style=font-style:italic;color:#f92672;>class </span><span style=text-decoration:underline;color:#a6e22e;>Solution</span><span>:
 </span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>isSymmetric</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>root</span><span>: Optional[TreeNode]) -> </span><span style=font-style:italic;color:#66d9ef;>bool</span><span>:
-</span><span>        </span><span style=color:#f92672;>pass
+</span><span>        </span><span style=color:#f92672;>if not </span><span>root:
+</span><span>            </span><span style=color:#f92672;>return </span><span style=color:#ae81ff;>False
+</span><span>
+</span><span>        </span><span style=color:#f92672;>return </span><span>self.isMirror(root.left, root.right)
+</span><span>
+</span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>isMirror</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>L</span><span>, </span><span style=font-style:italic;color:#fd971f;>R</span><span>) -> </span><span style=font-style:italic;color:#66d9ef;>bool</span><span>:
+</span><span>        </span><span style=color:#f92672;>if not </span><span>L </span><span style=color:#f92672;>and not </span><span>R:
+</span><span>            </span><span style=color:#f92672;>return </span><span style=color:#ae81ff;>True
+</span><span>        </span><span style=color:#f92672;>elif not </span><span>L </span><span style=color:#f92672;>or not </span><span>R:
+</span><span>            </span><span style=color:#f92672;>return </span><span style=color:#ae81ff;>False
+</span><span>        </span><span style=color:#f92672;>elif </span><span>L.val </span><span style=color:#f92672;>!= </span><span>R.val:
+</span><span>            </span><span style=color:#f92672;>return </span><span style=color:#ae81ff;>False
+</span><span>        </span><span style=color:#f92672;>else</span><span>:
+</span><span>            </span><span style=color:#f92672;>return </span><span>\
+</span><span>                </span><span style=color:#75715e;>#      1
+</span><span>                </span><span style=color:#75715e;>#   2     3
+</span><span>                </span><span style=color:#75715e;># L   5   6   R
+</span><span>                self.isMirror(L.left, R.right) </span><span style=color:#f92672;>and </span><span>\
+</span><span>                </span><span style=color:#75715e;>#      1
+</span><span>                </span><span style=color:#75715e;>#   2     3
+</span><span>                </span><span style=color:#75715e;># 4   R   L   7
+</span><span>                self.isMirror(L.right, L.left)
 </span></code></pre><h3 id=0104-maximum-depth-of-binary-tree>0104. Maximum Depth of Binary Tree</h3><pre class=language-python data-lang=python style=background-color:#272822;color:#f8f8f2;><code class=language-python data-lang=python><span style=color:#75715e;># Definition for a binary tree node.
 </span><span style=color:#75715e;># class TreeNode:
 </span><span style=color:#75715e;>#     def __init__(self, val=0, left=None, right=None):
