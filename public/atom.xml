@@ -5402,8 +5402,7 @@ Try to do the job without looking over the time constantly.&lt;&#x2F;p&gt;
 &lt;p&gt;Replace &lt;code&gt;codingezio&lt;&#x2F;code&gt; down below with your own GitHub name&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;h4 id=&quot;get&quot;&gt;Get&lt;&#x2F;h4&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# Suppose you are on macOS
-&lt;&#x2F;span&gt;&lt;span&gt;brew install zola
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;brew install zola
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h4 id=&quot;generate&quot;&gt;Generate&lt;&#x2F;h4&gt;
 &lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;zola init codingezio.github.io
