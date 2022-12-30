@@ -5,12 +5,18 @@
 </span><span style=color:#75715e;># 2. Tweak its 'options' to "Semicolon separated .."
 </span><span style=color:#75715e;># 3. Go to bilibili.com, click 'Export' button (extension)
 </span><span style=color:#75715e;># 4. Save the string as a text file (e.g. COOKIE.txt)
-</span><span>lux</span><span style=font-style:italic;color:#fd971f;> -c </span><span>~/COOKIE.txt</span><span style=font-style:italic;color:#fd971f;> -F </span><span>~/LINKS.txt
+</span><span>lux \
+</span><span style=font-style:italic;color:#fd971f;>    --cookie </span><span>~/COOKIE.txt \
+</span><span style=font-style:italic;color:#fd971f;>    --multi-thread --thread</span><span> 20 \
+</span><span style=font-style:italic;color:#fd971f;>    --retry</span><span> 2 \
+</span><span>    </span><span style=color:#75715e;># From here you can replace it with a sole video link
+</span><span>    -F ~/LINKS.txt
 </span></code></pre><h3 id=for-youtube>For Youtube</h3><pre class=language-bash data-lang=bash style=background-color:#272822;color:#f8f8f2;><code class=language-bash data-lang=bash><span>brew install youtube-dl
 </span><span>
 </span><span>youtube-dl \
 </span><span style=font-style:italic;color:#fd971f;>    --format </span><span style=color:#e6db74;>'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' </span><span>\
 </span><span style=font-style:italic;color:#fd971f;>    --merge-output-format</span><span> mp4 \
 </span><span style=font-style:italic;color:#fd971f;>    --add-metadata --embed-thumbnail </span><span>\
-</span><span style=font-style:italic;color:#fd971f;>    -a </span><span>~/LINKS.txt
+</span><span>    </span><span style=color:#75715e;># From here you can replace it with a sole video link
+</span><span>    -a ~/LINKS.txt
 </span></code></pre></article><footer role=contentinfo><hr><small>Built with <a href=https://www.getzola.org/>Zola</a>.<br> </small></footer></main>

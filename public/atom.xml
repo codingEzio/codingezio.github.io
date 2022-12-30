@@ -134,6 +134,69 @@
 </content>
 	</entry>
 	<entry xml:lang="en">
+		<title>Toolset - ffmpeg</title>
+		<published>2022-12-30T00:00:00+00:00</published>
+		<updated>2022-12-30T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://codingezio.github.io/toolset-ffmpeg/" type="text/html"/>
+		<id>https://codingezio.github.io/toolset-ffmpeg/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;Either put these scripts into your shell configuration file like &lt;code&gt;.zshrc&lt;&#x2F;code&gt; or save it as &lt;code&gt;FILE.sh&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h3 id=&quot;categorize-videos-based-on-resolutions&quot;&gt;Categorize Videos based on Resolutions&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# 第三方命令进阶 :: ffmpeg - 归类视频 (横屏,竖屏,1:1)
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;vidoriencategorise&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;    mkdir&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt; -p&lt;&#x2F;span&gt;&lt;span&gt; landscape portrait
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;for&lt;&#x2F;span&gt;&lt;span&gt; filename &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;$@&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;; do
+&lt;&#x2F;span&gt;&lt;span&gt;        width&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;$(ffprobe&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt; -v&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt; error&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt; -select_streams&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt; v:0&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt; -show_entries&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt; stream=width:stream_tags=rotate&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt; -of&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt; csv=p=0 &amp;quot;${filename}&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&#x2F;dev&#x2F;null)
+&lt;&#x2F;span&gt;&lt;span&gt;        height&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;$(ffprobe&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt; -v&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt; error&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt; -select_streams&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt; v:0&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt; -show_entries&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt; stream=height:stream_tags=rotate&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt; -of&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt; csv=p=0 &amp;quot;${filename}&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&#x2F;dev&#x2F;null)
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;[ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;$width&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;-gt &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;$height&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;; then
+&lt;&#x2F;span&gt;&lt;span&gt;            mv &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;${filename}&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt; landscape &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;&amp;amp;&amp;amp; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;echo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;landscape&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;elif &lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;[ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;$width&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;-lt &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;$height&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;; then
+&lt;&#x2F;span&gt;&lt;span&gt;            mv &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;${filename}&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt; portrait &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;&amp;amp;&amp;amp; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;echo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;portrait&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;elif &lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;[ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;$width&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;-eq &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;$height&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;; then
+&lt;&#x2F;span&gt;&lt;span&gt;            mkdir&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt; -p&lt;&#x2F;span&gt;&lt;span&gt; oneoneratio
+&lt;&#x2F;span&gt;&lt;span&gt;            mv &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;${filename}&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt; oneoneratio &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;&amp;amp;&amp;amp; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;echo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;1:1 ratio&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;else
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;printf &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;WAIT WHAT\n&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;fi
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;done
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;convert-various-formats-to-mp4&quot;&gt;Convert Various Formats to &lt;code&gt;.mp4&lt;&#x2F;code&gt;&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# Less verbose
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# https:&#x2F;&#x2F;superuser.com&#x2F;a&#x2F;1045060
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# ffmpeg conversion reference
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# https:&#x2F;&#x2F;blog.addpipe.com&#x2F;converting-webm-to-mp4-with-ffmpeg&#x2F;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# Batch conversion
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# https:&#x2F;&#x2F;stackoverflow.com&#x2F;a&#x2F;8200370
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# Change .flv to your own source format
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;for&lt;&#x2F;span&gt;&lt;span&gt; i &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;in *&lt;&#x2F;span&gt;&lt;span&gt;.flv&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;do &lt;&#x2F;span&gt;&lt;span&gt;name&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;`&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;echo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;$i&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;| &lt;&#x2F;span&gt;&lt;span&gt;cut&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt; -d&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;#39;.&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt; -f1&lt;&#x2F;span&gt;&lt;span&gt;`
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;echo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;$name&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;  ffmpeg&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt; -i &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;$i&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt; -preset&lt;&#x2F;span&gt;&lt;span&gt; veryfast &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;${name}.mp4&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# ffmpeg -hide_banner -loglevel error -i &amp;quot;$i&amp;quot; -preset veryfast &amp;quot;${name}.mp4&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;done
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;check-video-length-in-the-unit-of-seconds&quot;&gt;Check Video Length in the Unit of Seconds&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;for&lt;&#x2F;span&gt;&lt;span&gt; name &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;in *; do
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;echo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;\n&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;echo &lt;&#x2F;span&gt;&lt;span&gt;${name}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  ffprobe&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt; -v&lt;&#x2F;span&gt;&lt;span&gt; error \
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;    -show_entries&lt;&#x2F;span&gt;&lt;span&gt; format=duration \
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;    -of&lt;&#x2F;span&gt;&lt;span&gt; default=noprint_wrappers=1:nokey=1 \
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;${name}&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;done
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
 		<title>Booknote on Microservice Patterns</title>
 		<published>2022-12-29T00:00:00+00:00</published>
 		<updated>2022-12-29T00:00:00+00:00</updated>
@@ -7663,7 +7726,12 @@ a full networking stack;&lt;&#x2F;li&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# 2. Tweak its &amp;#39;options&amp;#39; to &amp;quot;Semicolon separated ..&amp;quot;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# 3. Go to bilibili.com, click &amp;#39;Export&amp;#39; button (extension)
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# 4. Save the string as a text file (e.g. COOKIE.txt)
-&lt;&#x2F;span&gt;&lt;span&gt;lux&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt; -c &lt;&#x2F;span&gt;&lt;span&gt;~&#x2F;COOKIE.txt&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt; -F &lt;&#x2F;span&gt;&lt;span&gt;~&#x2F;LINKS.txt
+&lt;&#x2F;span&gt;&lt;span&gt;lux \
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;    --cookie &lt;&#x2F;span&gt;&lt;span&gt;~&#x2F;COOKIE.txt \
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;    --multi-thread --thread&lt;&#x2F;span&gt;&lt;span&gt; 20 \
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;    --retry&lt;&#x2F;span&gt;&lt;span&gt; 2 \
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# From here you can replace it with a sole video link
+&lt;&#x2F;span&gt;&lt;span&gt;    -F ~&#x2F;LINKS.txt
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;for-youtube&quot;&gt;For Youtube&lt;&#x2F;h3&gt;
 &lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;brew install youtube-dl
@@ -7672,7 +7740,8 @@ a full networking stack;&lt;&#x2F;li&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;    --format &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;#39;bestvideo[ext=mp4]+bestaudio[ext=m4a]&#x2F;bestvideo+bestaudio&amp;#39; &lt;&#x2F;span&gt;&lt;span&gt;\
 &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;    --merge-output-format&lt;&#x2F;span&gt;&lt;span&gt; mp4 \
 &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;    --add-metadata --embed-thumbnail &lt;&#x2F;span&gt;&lt;span&gt;\
-&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;    -a &lt;&#x2F;span&gt;&lt;span&gt;~&#x2F;LINKS.txt
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# From here you can replace it with a sole video link
+&lt;&#x2F;span&gt;&lt;span&gt;    -a ~&#x2F;LINKS.txt
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 </content>
 	</entry>

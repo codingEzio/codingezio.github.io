@@ -17,7 +17,12 @@ brew install lux
 # 2. Tweak its 'options' to "Semicolon separated .."
 # 3. Go to bilibili.com, click 'Export' button (extension)
 # 4. Save the string as a text file (e.g. COOKIE.txt)
-lux -c ~/COOKIE.txt -F ~/LINKS.txt
+lux \
+    --cookie ~/COOKIE.txt \
+    --multi-thread --thread 20 \
+    --retry 2 \
+    # From here you can replace it with a sole video link
+    -F ~/LINKS.txt
 ```
 
 ### For Youtube
@@ -29,5 +34,6 @@ youtube-dl \
     --format 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' \
     --merge-output-format mp4 \
     --add-metadata --embed-thumbnail \
+    # From here you can replace it with a sole video link
     -a ~/LINKS.txt
 ```
