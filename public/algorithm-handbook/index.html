@@ -13,7 +13,7 @@
 </span><span style=color:#75715e;>// Switch cases
 </span><span>(</span><span style=color:#e6db74;>'c' </span><span style=color:#f92672;>^ </span><span style=color:#e6db74;>' '</span><span>) </span><span style=color:#f92672;>== </span><span style=color:#e6db74;>'C'
 </span><span>(</span><span style=color:#e6db74;>'C' </span><span style=color:#f92672;>^ </span><span style=color:#e6db74;>' '</span><span>) </span><span style=color:#f92672;>== </span><span style=color:#e6db74;>'C'
-</span></code></pre><h3 id=traversing-binary-tree>Traversing Binary Tree</h3><blockquote><p>以 root 节点为视角: <em>Preorder</em> <sup>(前序)</sup>, <em>Inorder</em> <sup>(中序)</sup>, <em>Postorder</em> <sup>(后序)</sup> and .. <em>Level Order</em></blockquote><h4 id=preorder>Preorder</h4><pre class=language-python data-lang=python style=background-color:#272822;color:#f8f8f2;><code class=language-python data-lang=python><span style=color:#75715e;># Definition for a binary tree node.
+</span></code></pre><h3 id=traversing-binary-tree>Traversing Binary Tree</h3><blockquote><p>以 root 节点为视角: <em>Preorder</em> <sup>(前序)</sup>, <em>Inorder</em> <sup>(中序)</sup>, <em>Postorder</em> <sup>(后序)</sup> and .. <em>Level Order</em>. Note that these methods by themselves <strong>are</strong> LeetCode problems as well.</blockquote><h4 id=0144-binary-tree-preorder-traversal>0144. Binary Tree <em><strong>Preorder</strong></em> Traversal</h4><pre class=language-python data-lang=python style=background-color:#272822;color:#f8f8f2;><code class=language-python data-lang=python><span style=color:#75715e;># Definition for a binary tree node.
 </span><span style=color:#75715e;># class TreeNode:
 </span><span style=color:#75715e;>#     def __init__(self, val=0, left=None, right=None):
 </span><span style=color:#75715e;>#         self.val = val
@@ -34,7 +34,7 @@
 </span><span>     a_list.append(node.val)
 </span><span>     self.preorder(node.left, a_list)
 </span><span>     self.preorder(node.right, a_list)
-</span></code></pre><h4 id=inorder>Inorder</h4><pre class=language-python data-lang=python style=background-color:#272822;color:#f8f8f2;><code class=language-python data-lang=python><span style=color:#75715e;># Definition for a binary tree node.
+</span></code></pre><h4 id=0094-binary-tree-inorder-traversal>0094. Binary Tree <em><strong>Inorder</strong></em> Traversal</h4><pre class=language-python data-lang=python style=background-color:#272822;color:#f8f8f2;><code class=language-python data-lang=python><span style=color:#75715e;># Definition for a binary tree node.
 </span><span style=color:#75715e;># class TreeNode:
 </span><span style=color:#75715e;>#     def __init__(self, val=0, left=None, right=None):
 </span><span style=color:#75715e;>#         self.val = val
@@ -55,7 +55,7 @@
 </span><span>        self.inorder(node.left, a_list)
 </span><span>        a_list.append(node.val)
 </span><span>        self.inorder(node.right, a_list)
-</span></code></pre><h4 id=postorder>Postorder</h4><pre class=language-python data-lang=python style=background-color:#272822;color:#f8f8f2;><code class=language-python data-lang=python><span style=color:#75715e;># Definition for a binary tree node.
+</span></code></pre><h4 id=0145-binary-tree-postorder-traversal>0145. Binary Tree <em><strong>Postorder</strong></em> Traversal</h4><pre class=language-python data-lang=python style=background-color:#272822;color:#f8f8f2;><code class=language-python data-lang=python><span style=color:#75715e;># Definition for a binary tree node.
 </span><span style=color:#75715e;># class TreeNode:
 </span><span style=color:#75715e;>#     def __init__(self, val=0, left=None, right=None):
 </span><span style=color:#75715e;>#         self.val = val
@@ -76,7 +76,7 @@
 </span><span>        self.postorder(node.left, a_list)
 </span><span>        self.postorder(node.right, a_list)
 </span><span>        a_list.append(node.val)
-</span></code></pre><h4 id=level-order><em>Level Order</em></h4><pre class=language-python data-lang=python style=background-color:#272822;color:#f8f8f2;><code class=language-python data-lang=python><span style=color:#75715e;># Definition for a binary tree node.
+</span></code></pre><h4 id=0102-binary-tree-level-order-traversal>0102. Binary Tree <em><strong>Level Order</strong></em> Traversal</h4><pre class=language-python data-lang=python style=background-color:#272822;color:#f8f8f2;><code class=language-python data-lang=python><span style=color:#75715e;># Definition for a binary tree node.
 </span><span style=color:#75715e;># class TreeNode:
 </span><span style=color:#75715e;>#     def __init__(self, val=0, left=None, right=None):
 </span><span style=color:#75715e;>#         self.val = val

@@ -18,9 +18,9 @@ description = "Non-solution notes for LeetCode problems"
 
 | O | Statement |
 | :---: | :----- |
-| *O(n)* | `for X in range(N)`<br>`for X in range(start, N, k)` |
+| *O(n)* | `for X in range(N)`<br/>`for X in range(start, N, k)` |
 | *O(nm)* | `for X in range(N): for Y in range(M)` |
-| *O(n²)* | `for X in range(N): for Y in range(X)` <br>`for X in range(N): X*=2 for Y in range(X)` |
+| *O(n²)* | `for X in range(N): for Y in range(X)` <br/>`for X in range(N): X*=2 for Y in range(X)` |
 | *O(logN)* | `while X < N: X*=k` |
 
 ## Knowledge
@@ -56,9 +56,9 @@ description = "Non-solution notes for LeetCode problems"
 
 ### Traversing Binary Tree
 
-> 以 root 节点为视角: *Preorder* <sup>(前序)</sup>, *Inorder* <sup>(中序)</sup>, *Postorder* <sup>(后序)</sup> and .. *Level Order*
+> 以 root 节点为视角: *Preorder* <sup>(前序)</sup>, *Inorder* <sup>(中序)</sup>, *Postorder* <sup>(后序)</sup> and .. *Level Order*. Note that these methods by themselves **are** LeetCode problems as well.
 
-#### Preorder
+#### 0144. Binary Tree ***Preorder*** Traversal
 
 ```python
 # Definition for a binary tree node.
@@ -84,7 +84,7 @@ class Solution:
      self.preorder(node.right, a_list)
 ```
 
-#### Inorder
+#### 0094. Binary Tree ***Inorder*** Traversal
 
 ```python
 # Definition for a binary tree node.
@@ -110,7 +110,7 @@ class Solution:
         self.inorder(node.right, a_list)
 ```
 
-#### Postorder
+#### 0145. Binary Tree ***Postorder*** Traversal
 
 ```python
 # Definition for a binary tree node.
@@ -136,7 +136,7 @@ class Solution:
         a_list.append(node.val)
 ```
 
-#### *Level Order*
+#### 0102. Binary Tree ***Level Order*** Traversal
 
 ```python
 # Definition for a binary tree node.

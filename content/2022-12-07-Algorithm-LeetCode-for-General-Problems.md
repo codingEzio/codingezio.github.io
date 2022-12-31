@@ -23,9 +23,22 @@ description = "Practing by solving Algorithm questions on LeetCode"
 
 ### Idea
 
+#### My Approach to Learn Data Structures and Algorithms
+
 > Leave the data structures to the language learning part as their usage might vary whether for the implementations. Dive right into the LeetCode problems before having a good hold on the data structures. Use it practically instead of learning without a clear goal or context.
 >
 > It's just like learning a programming language. Start building projects as quickly as possible <small>(note to self: to a certain extent)</small>. Of course, I do have [another post](https://codingezio.github.io/algorithm-handbook/) which documents the snippets of knowledge you need to get a hold on while solving these problems.
+
+#### About *Binary Tree*
+
+> As the **traversal methods** are the foundation for a lot LeetCode problems that related to *Binary Tree*, I moved it to a separated post which named as [*Algorithm Handbook*](https://codingezio.github.io/algorithm-handbook/).
+>
+> These methods by themselves **are** LeetCode problems, that's why I mention it explicitly to avoid confusion both for myself and the future readers. Down below are a list of problems that were omitted in this post.
+
+- `0144`: *Preorder* traversal
+- `0094`: *Inorder* traversal
+- `0145`: *Postorder* traversal
+- `0102`: *Level Order* traversal
 
 ### And
 
@@ -943,6 +956,40 @@ class Solution {
         return reved.trim()
     }
 }
+```
+
+### 0572. Subtree of Another Tree
+
+```python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def isSubtree(self, root: Optional[TreeNode], subRoot: Optional[TreeNode]) -> bool:
+
+        #TODO Memorized solution, further walkthrough needed
+
+        if not root and not subRoot:
+            return True
+        if not root or not subRoot:
+            return False
+
+        return self.isSametree(root, subRoot) or \
+                self.isSubtree(root.left, subRoot) or \
+                self.isSubtree(root.right, subRoot)
+
+    def isSametree(self, L, R) -> bool:
+        if not L and not R:
+            return True
+        if not L or not R:
+            return False
+
+        return L.val == R.val and \
+                self.isSametree(L.left, R.left) and \
+                self.isSametree(L.right, R.right)
 ```
 
 -----

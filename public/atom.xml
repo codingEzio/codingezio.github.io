@@ -1518,10 +1518,22 @@ I came back after my miscarriages.&lt;&#x2F;p&gt;
 &lt;li&gt;I do not have too much time for LeetCode&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h3 id=&quot;idea&quot;&gt;Idea&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;my-approach-to-learn-data-structures-and-algorithms&quot;&gt;My Approach to Learn Data Structures and Algorithms&lt;&#x2F;h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Leave the data structures to the language learning part as their usage might vary whether for the implementations. Dive right into the LeetCode problems before having a good hold on the data structures. Use it practically instead of learning without a clear goal or context.&lt;&#x2F;p&gt;
 &lt;p&gt;It&#x27;s just like learning a programming language. Start building projects as quickly as possible &lt;small&gt;(note to self: to a certain extent)&lt;&#x2F;small&gt;. Of course, I do have &lt;a href=&quot;https:&#x2F;&#x2F;codingezio.github.io&#x2F;algorithm-handbook&#x2F;&quot;&gt;another post&lt;&#x2F;a&gt; which documents the snippets of knowledge you need to get a hold on while solving these problems.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
+&lt;h4 id=&quot;about-binary-tree&quot;&gt;About &lt;em&gt;Binary Tree&lt;&#x2F;em&gt;&lt;&#x2F;h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;As the &lt;strong&gt;traversal methods&lt;&#x2F;strong&gt; are the foundation for a lot LeetCode problems that related to &lt;em&gt;Binary Tree&lt;&#x2F;em&gt;, I moved it to a separated post which named as &lt;a href=&quot;https:&#x2F;&#x2F;codingezio.github.io&#x2F;algorithm-handbook&#x2F;&quot;&gt;&lt;em&gt;Algorithm Handbook&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;These methods by themselves &lt;strong&gt;are&lt;&#x2F;strong&gt; LeetCode problems, that&#x27;s why I mention it explicitly to avoid confusion both for myself and the future readers. Down below are a list of problems that were omitted in this post.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;0144&lt;&#x2F;code&gt;: &lt;em&gt;Preorder&lt;&#x2F;em&gt; traversal&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;0094&lt;&#x2F;code&gt;: &lt;em&gt;Inorder&lt;&#x2F;em&gt; traversal&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;0145&lt;&#x2F;code&gt;: &lt;em&gt;Postorder&lt;&#x2F;em&gt; traversal&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;0102&lt;&#x2F;code&gt;: &lt;em&gt;Level Order&lt;&#x2F;em&gt; traversal&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
 &lt;h3 id=&quot;and&quot;&gt;And&lt;&#x2F;h3&gt;
 &lt;h4 id=&quot;problem-list&quot;&gt;Problem List&lt;&#x2F;h4&gt;
 &lt;blockquote&gt;
@@ -2349,6 +2361,37 @@ I came back after my miscarriages.&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return&lt;&#x2F;span&gt;&lt;span&gt; reved&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;trim()
 &lt;&#x2F;span&gt;&lt;span&gt;    }
 &lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;0572-subtree-of-another-tree&quot;&gt;0572. Subtree of Another Tree&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# Definition for a binary tree node.
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# class TreeNode:
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;#     def __init__(self, val=0, left=None, right=None):
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;#         self.val = val
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;#         self.left = left
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;#         self.right = right
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;class &lt;&#x2F;span&gt;&lt;span style=&quot;text-decoration:underline;color:#a6e22e;&quot;&gt;Solution&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;isSubtree&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;root&lt;&#x2F;span&gt;&lt;span&gt;: Optional[TreeNode], &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;subRoot&lt;&#x2F;span&gt;&lt;span&gt;: Optional[TreeNode]) -&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;bool&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;#TODO Memorized solution, further walkthrough needed
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;if not &lt;&#x2F;span&gt;&lt;span&gt;root &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;and not &lt;&#x2F;span&gt;&lt;span&gt;subRoot:
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;True
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;if not &lt;&#x2F;span&gt;&lt;span&gt;root &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;or not &lt;&#x2F;span&gt;&lt;span&gt;subRoot:
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;False
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;self.isSametree(root, subRoot) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;or &lt;&#x2F;span&gt;&lt;span&gt;\
+&lt;&#x2F;span&gt;&lt;span&gt;                self.isSubtree(root.left, subRoot) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;or &lt;&#x2F;span&gt;&lt;span&gt;\
+&lt;&#x2F;span&gt;&lt;span&gt;                self.isSubtree(root.right, subRoot)
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;isSametree&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;L&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;R&lt;&#x2F;span&gt;&lt;span&gt;) -&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;bool&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;if not &lt;&#x2F;span&gt;&lt;span&gt;L &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;and not &lt;&#x2F;span&gt;&lt;span&gt;R:
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;True
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;if not &lt;&#x2F;span&gt;&lt;span&gt;L &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;or not &lt;&#x2F;span&gt;&lt;span&gt;R:
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;False
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;L.val &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;== &lt;&#x2F;span&gt;&lt;span&gt;R.val &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;and &lt;&#x2F;span&gt;&lt;span&gt;\
+&lt;&#x2F;span&gt;&lt;span&gt;                self.isSametree(L.left, R.left) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;and &lt;&#x2F;span&gt;&lt;span&gt;\
+&lt;&#x2F;span&gt;&lt;span&gt;                self.isSametree(L.right, R.right)
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;hr &#x2F;&gt;
 &lt;h3 id=&quot;references&quot;&gt;References&lt;&#x2F;h3&gt;
@@ -7222,9 +7265,9 @@ a full networking stack;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h3 id=&quot;chang-jian-fu-za-du-big-o-de-bian-bie&quot;&gt;常见复杂度 Big O 的辨别&lt;&#x2F;h3&gt;
 &lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th style=&quot;text-align: center&quot;&gt;O&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: left&quot;&gt;Statement&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;em&gt;O(n)&lt;&#x2F;em&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;code&gt;for X in range(N)&lt;&#x2F;code&gt;&lt;br&gt;&lt;code&gt;for X in range(start, N, k)&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;em&gt;O(n)&lt;&#x2F;em&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;code&gt;for X in range(N)&lt;&#x2F;code&gt;&lt;br&#x2F;&gt;&lt;code&gt;for X in range(start, N, k)&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
 &lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;em&gt;O(nm)&lt;&#x2F;em&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;code&gt;for X in range(N): for Y in range(M)&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
-&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;em&gt;O(n²)&lt;&#x2F;em&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;code&gt;for X in range(N): for Y in range(X)&lt;&#x2F;code&gt; &lt;br&gt;&lt;code&gt;for X in range(N): X*=2 for Y in range(X)&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;em&gt;O(n²)&lt;&#x2F;em&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;code&gt;for X in range(N): for Y in range(X)&lt;&#x2F;code&gt; &lt;br&#x2F;&gt;&lt;code&gt;for X in range(N): X*=2 for Y in range(X)&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
 &lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;em&gt;O(logN)&lt;&#x2F;em&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;code&gt;while X &amp;lt; N: X*=k&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
 &lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
 &lt;h2 id=&quot;knowledge&quot;&gt;Knowledge&lt;&#x2F;h2&gt;
@@ -7253,9 +7296,9 @@ a full networking stack;&lt;&#x2F;li&gt;
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;traversing-binary-tree&quot;&gt;Traversing Binary Tree&lt;&#x2F;h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;以 root 节点为视角: &lt;em&gt;Preorder&lt;&#x2F;em&gt; &lt;sup&gt;(前序)&lt;&#x2F;sup&gt;, &lt;em&gt;Inorder&lt;&#x2F;em&gt; &lt;sup&gt;(中序)&lt;&#x2F;sup&gt;, &lt;em&gt;Postorder&lt;&#x2F;em&gt; &lt;sup&gt;(后序)&lt;&#x2F;sup&gt; and .. &lt;em&gt;Level Order&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;以 root 节点为视角: &lt;em&gt;Preorder&lt;&#x2F;em&gt; &lt;sup&gt;(前序)&lt;&#x2F;sup&gt;, &lt;em&gt;Inorder&lt;&#x2F;em&gt; &lt;sup&gt;(中序)&lt;&#x2F;sup&gt;, &lt;em&gt;Postorder&lt;&#x2F;em&gt; &lt;sup&gt;(后序)&lt;&#x2F;sup&gt; and .. &lt;em&gt;Level Order&lt;&#x2F;em&gt;. Note that these methods by themselves &lt;strong&gt;are&lt;&#x2F;strong&gt; LeetCode problems as well.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
-&lt;h4 id=&quot;preorder&quot;&gt;Preorder&lt;&#x2F;h4&gt;
+&lt;h4 id=&quot;0144-binary-tree-preorder-traversal&quot;&gt;0144. Binary Tree &lt;em&gt;&lt;strong&gt;Preorder&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt; Traversal&lt;&#x2F;h4&gt;
 &lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# Definition for a binary tree node.
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# class TreeNode:
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;#     def __init__(self, val=0, left=None, right=None):
@@ -7278,7 +7321,7 @@ a full networking stack;&lt;&#x2F;li&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;     self.preorder(node.left, a_list)
 &lt;&#x2F;span&gt;&lt;span&gt;     self.preorder(node.right, a_list)
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h4 id=&quot;inorder&quot;&gt;Inorder&lt;&#x2F;h4&gt;
+&lt;h4 id=&quot;0094-binary-tree-inorder-traversal&quot;&gt;0094. Binary Tree &lt;em&gt;&lt;strong&gt;Inorder&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt; Traversal&lt;&#x2F;h4&gt;
 &lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# Definition for a binary tree node.
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# class TreeNode:
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;#     def __init__(self, val=0, left=None, right=None):
@@ -7301,7 +7344,7 @@ a full networking stack;&lt;&#x2F;li&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;        a_list.append(node.val)
 &lt;&#x2F;span&gt;&lt;span&gt;        self.inorder(node.right, a_list)
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h4 id=&quot;postorder&quot;&gt;Postorder&lt;&#x2F;h4&gt;
+&lt;h4 id=&quot;0145-binary-tree-postorder-traversal&quot;&gt;0145. Binary Tree &lt;em&gt;&lt;strong&gt;Postorder&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt; Traversal&lt;&#x2F;h4&gt;
 &lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# Definition for a binary tree node.
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# class TreeNode:
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;#     def __init__(self, val=0, left=None, right=None):
@@ -7324,7 +7367,7 @@ a full networking stack;&lt;&#x2F;li&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;        self.postorder(node.right, a_list)
 &lt;&#x2F;span&gt;&lt;span&gt;        a_list.append(node.val)
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h4 id=&quot;level-order&quot;&gt;&lt;em&gt;Level Order&lt;&#x2F;em&gt;&lt;&#x2F;h4&gt;
+&lt;h4 id=&quot;0102-binary-tree-level-order-traversal&quot;&gt;0102. Binary Tree &lt;em&gt;&lt;strong&gt;Level Order&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt; Traversal&lt;&#x2F;h4&gt;
 &lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# Definition for a binary tree node.
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# class TreeNode:
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;#     def __init__(self, val=0, left=None, right=None):
