@@ -5,8 +5,19 @@
 	<link href="https://codingezio.github.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://codingezio.github.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-12-30T00:00:00+00:00</updated>
+	<updated>2022-12-31T00:00:00+00:00</updated>
 	<id>https://codingezio.github.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Crash Course to Java</title>
+		<published>2022-12-31T00:00:00+00:00</published>
+		<updated>2022-12-31T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://codingezio.github.io/crash-course-to-java/" type="text/html"/>
+		<id>https://codingezio.github.io/crash-course-to-java/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;N&#x2F;A&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>On Information Retrieval</title>
 		<published>2022-12-30T00:00:00+00:00</published>
