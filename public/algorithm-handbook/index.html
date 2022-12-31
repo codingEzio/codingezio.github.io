@@ -84,5 +84,25 @@
 </span><span style=color:#75715e;>#         self.right = right
 </span><span style=font-style:italic;color:#f92672;>class </span><span style=text-decoration:underline;color:#a6e22e;>Solution</span><span>:
 </span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>levelOrder</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>root</span><span>: Optional[TreeNode]) -> List[List[</span><span style=font-style:italic;color:#66d9ef;>int</span><span>]]:
-</span><span>     </span><span style=color:#f92672;>pass
+</span><span>        </span><span style=color:#75715e;>#TODO Memorized solution, further walkthrough needed
+</span><span>
+</span><span>        res </span><span style=color:#f92672;>= </span><span>[]
+</span><span>
+</span><span>        self.dfs(root, </span><span style=color:#ae81ff;>0</span><span>, res)
+</span><span>
+</span><span>        </span><span style=color:#f92672;>return </span><span>dfs
+</span><span>
+</span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>dfs</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>node</span><span>, </span><span style=font-style:italic;color:#fd971f;>level</span><span>, </span><span style=font-style:italic;color:#fd971f;>res</span><span>):
+</span><span>        </span><span style=color:#f92672;>if not </span><span>node:
+</span><span>            </span><span style=color:#f92672;>return </span><span style=color:#ae81ff;>None
+</span><span>
+</span><span>        </span><span style=color:#f92672;>if </span><span>level </span><span style=color:#f92672;>== </span><span style=color:#66d9ef;>len</span><span>(res):
+</span><span>            res.append([])
+</span><span>
+</span><span>        res[level].append(node.val)
+</span><span>
+</span><span>        </span><span style=color:#f92672;>if </span><span>node.left:
+</span><span>            self.dfs(node.left, level </span><span style=color:#f92672;>+ </span><span style=color:#ae81ff;>1</span><span>, res)
+</span><span>        </span><span style=color:#f92672;>if </span><span>node.right:
+</span><span>            self.dfs(node.right, level </span><span style=color:#f92672;>+ </span><span style=color:#ae81ff;>1</span><span>, res)
 </span></code></pre></article><footer role=contentinfo><hr><small>Built with <a href=https://www.getzola.org/>Zola</a>.<br> </small></footer></main>

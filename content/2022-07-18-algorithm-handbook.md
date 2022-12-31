@@ -147,5 +147,25 @@ class Solution:
 #         self.right = right
 class Solution:
     def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
-     pass
+        #TODO Memorized solution, further walkthrough needed
+
+        res = []
+
+        self.dfs(root, 0, res)
+
+        return dfs
+
+    def dfs(self, node, level, res):
+        if not node:
+            return None
+
+        if level == len(res):
+            res.append([])
+
+        res[level].append(node.val)
+
+        if node.left:
+            self.dfs(node.left, level + 1, res)
+        if node.right:
+            self.dfs(node.right, level + 1, res)
 ```
