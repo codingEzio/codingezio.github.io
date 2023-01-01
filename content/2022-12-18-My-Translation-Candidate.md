@@ -23,6 +23,7 @@ description = "Video translations from English to Chinese"
 
 ### Videos 视频
 
+- [The REAL Fight over AI Art](https://www.youtube.com/watch?v=NiJeB2NJy1A)
 - [In the Blink of an Eye: Space in an Instant](https://www.youtube.com/watch?v=fdQyD8B_odY)
 - [Viola Davis: Barnard Commencement 2019](https://www.youtube.com/watch?v=7ZVDvTT82Os)
 - [Absurdism | How to Party at the End of Meaning ☄️](https://www.youtube.com/watch?v=Jv79l1b-eoI)
