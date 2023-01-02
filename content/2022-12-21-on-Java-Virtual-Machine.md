@@ -52,9 +52,9 @@ description = "All things that related to JVM, especially Hotspot"
 
 ## Practice
 
-### Compile Your Own JDK
+### Compile Your Own JDK <small>(status: ***HALTED***)</small>
 
-> Context: I'm on macOS Monterey <small>(12.6.2)</small>
+> Context: I'm on *macOS Monterey* <small>(12.6.2)</small> and the Linux I'm using is *Ubuntu 20.04 focal* <small>(kernel: `x86_64 Linux 5.4.0-135-generic`)</small>. **Simply sticking to Linux for compiling such things would save you a lot of time.**
 
 #### [Source Code](https://github.com/openjdk/jdk)
 
@@ -62,21 +62,8 @@ description = "All things that related to JVM, especially Hotspot"
 
 > Your local absolute path shall **not** include any *spaces* or *non-Latin characters*
 
-```bash
-git clone https://github.com/openjdk/jdk
-```
-
-##### Choose
-
-> We'll use JDK `12` with its [latest minor version](https://jdk.java.net/archive/) <small>(`12 GA (build 12+33)`)</small>.
-
-```bash
-# List all the existing JDK branches with minor versions
-git tag
-
-# Switch to the JDK version you want
-git checkout jdk-12+33
-```
+1. Go to the JDK 12 [page](https://hg.openjdk.java.net/jdk/jdk12/)
+2. Click the `zip` at the left side of the page
 
 #### Preparation before Compiling
 
@@ -87,11 +74,11 @@ git checkout jdk-12+33
 
 ##### macOS
 
-> Installing XCode shall be [enough](https://apple.stackexchange.com/questions/150978/what-is-the-relationship-between-xcode-and-xcode-command-line-tools) as it would also help you installing all the essential commandline tools that are needed for compiling the JDK. Also run `brew install autoconf`.
+> Installing XCode shall be [enough](https://apple.stackexchange.com/questions/150978/what-is-the-relationship-between-xcode-and-xcode-command-line-tools) as it would also help you installing all the essential commandline tools that are needed for compiling the JDK. And the `brew install autoconf` for the `make` command to work properly.
 
 ##### Linux
 
-> I have not tried the commands below. This is a snippet from the book called [*深入理解Java虚拟机：JVM高级特性与最佳实践*](https://www.goodreads.com/book/show/51301560). And of course, it assumes you are on Ubuntu-like distros since apt is being used. I do think it might be outdated depend on the systems versions and linux kernels you are using.
+> This is a snippet from the book called [*深入理解Java虚拟机：JVM高级特性与最佳实践*](https://www.goodreads.com/book/show/51301560). And of course, it assumes you are on Ubuntu-like distros since apt is being used.
 
 | Tool | Library | Command |
 | :--- | :--- | :--- |

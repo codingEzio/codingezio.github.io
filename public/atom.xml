@@ -1058,27 +1058,19 @@ TODO&lt;&#x2F;li&gt;
 &lt;p&gt;Since it behaves like an actual machine, in this very context, it would need to manage all the relevant stuff like &lt;em&gt;memory management&lt;&#x2F;em&gt;, &lt;em&gt;garbage collection&lt;&#x2F;em&gt; and of course, running the code and doing it &lt;strong&gt;efficiently&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;h2 id=&quot;practice&quot;&gt;Practice&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;compile-your-own-jdk&quot;&gt;Compile Your Own JDK&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;compile-your-own-jdk-status-halted&quot;&gt;Compile Your Own JDK &lt;small&gt;(status: &lt;em&gt;&lt;strong&gt;HALTED&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt;)&lt;&#x2F;small&gt;&lt;&#x2F;h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Context: I&#x27;m on macOS Monterey &lt;small&gt;(12.6.2)&lt;&#x2F;small&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Context: I&#x27;m on &lt;em&gt;macOS Monterey&lt;&#x2F;em&gt; &lt;small&gt;(12.6.2)&lt;&#x2F;small&gt; and the Linux I&#x27;m using is &lt;em&gt;Ubuntu 20.04 focal&lt;&#x2F;em&gt; &lt;small&gt;(kernel: &lt;code&gt;x86_64 Linux 5.4.0-135-generic&lt;&#x2F;code&gt;)&lt;&#x2F;small&gt;. &lt;strong&gt;Simply sticking to Linux for compiling such things would save you a lot of time.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;h4 id=&quot;source-code&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;openjdk&#x2F;jdk&quot;&gt;Source Code&lt;&#x2F;a&gt;&lt;&#x2F;h4&gt;
 &lt;h5 id=&quot;get&quot;&gt;Get&lt;&#x2F;h5&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Your local absolute path shall &lt;strong&gt;not&lt;&#x2F;strong&gt; include any &lt;em&gt;spaces&lt;&#x2F;em&gt; or &lt;em&gt;non-Latin characters&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;git clone https:&#x2F;&#x2F;github.com&#x2F;openjdk&#x2F;jdk
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h5 id=&quot;choose&quot;&gt;Choose&lt;&#x2F;h5&gt;
-&lt;blockquote&gt;
-&lt;p&gt;We&#x27;ll use JDK &lt;code&gt;12&lt;&#x2F;code&gt; with its &lt;a href=&quot;https:&#x2F;&#x2F;jdk.java.net&#x2F;archive&#x2F;&quot;&gt;latest minor version&lt;&#x2F;a&gt; &lt;small&gt;(&lt;code&gt;12 GA (build 12+33)&lt;&#x2F;code&gt;)&lt;&#x2F;small&gt;.&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# List all the existing JDK branches with minor versions
-&lt;&#x2F;span&gt;&lt;span&gt;git tag
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# Switch to the JDK version you want
-&lt;&#x2F;span&gt;&lt;span&gt;git checkout jdk-12+33
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ol&gt;
+&lt;li&gt;Go to the JDK 12 &lt;a href=&quot;https:&#x2F;&#x2F;hg.openjdk.java.net&#x2F;jdk&#x2F;jdk12&#x2F;&quot;&gt;page&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Click the &lt;code&gt;zip&lt;&#x2F;code&gt; at the left side of the page&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
 &lt;h4 id=&quot;preparation-before-compiling&quot;&gt;Preparation before Compiling&lt;&#x2F;h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;If you use &lt;code&gt;sdkman&lt;&#x2F;code&gt; to manage your JDK version, see &lt;a href=&quot;https:&#x2F;&#x2F;codingezio.github.io&#x2F;manage-jdk-version&#x2F;&quot;&gt;here&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
@@ -1089,11 +1081,11 @@ TODO&lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
 &lt;h5 id=&quot;macos&quot;&gt;macOS&lt;&#x2F;h5&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Installing XCode shall be &lt;a href=&quot;https:&#x2F;&#x2F;apple.stackexchange.com&#x2F;questions&#x2F;150978&#x2F;what-is-the-relationship-between-xcode-and-xcode-command-line-tools&quot;&gt;enough&lt;&#x2F;a&gt; as it would also help you installing all the essential commandline tools that are needed for compiling the JDK. Also run &lt;code&gt;brew install autoconf&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Installing XCode shall be &lt;a href=&quot;https:&#x2F;&#x2F;apple.stackexchange.com&#x2F;questions&#x2F;150978&#x2F;what-is-the-relationship-between-xcode-and-xcode-command-line-tools&quot;&gt;enough&lt;&#x2F;a&gt; as it would also help you installing all the essential commandline tools that are needed for compiling the JDK. And the &lt;code&gt;brew install autoconf&lt;&#x2F;code&gt; for the &lt;code&gt;make&lt;&#x2F;code&gt; command to work properly.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;h5 id=&quot;linux&quot;&gt;Linux&lt;&#x2F;h5&gt;
 &lt;blockquote&gt;
-&lt;p&gt;I have not tried the commands below. This is a snippet from the book called &lt;a href=&quot;https:&#x2F;&#x2F;www.goodreads.com&#x2F;book&#x2F;show&#x2F;51301560&quot;&gt;&lt;em&gt;深入理解Java虚拟机：JVM高级特性与最佳实践&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;. And of course, it assumes you are on Ubuntu-like distros since apt is being used. I do think it might be outdated depend on the systems versions and linux kernels you are using.&lt;&#x2F;p&gt;
+&lt;p&gt;This is a snippet from the book called &lt;a href=&quot;https:&#x2F;&#x2F;www.goodreads.com&#x2F;book&#x2F;show&#x2F;51301560&quot;&gt;&lt;em&gt;深入理解Java虚拟机：JVM高级特性与最佳实践&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;. And of course, it assumes you are on Ubuntu-like distros since apt is being used.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th style=&quot;text-align: left&quot;&gt;Tool&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: left&quot;&gt;Library&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: left&quot;&gt;Command&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
 &lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;FreeType&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;The Free Type Project&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;code&gt;sudo apt install libfreetype6-dev&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
