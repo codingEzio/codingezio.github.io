@@ -44,11 +44,32 @@ description = "All things that related to JVM, especially Hotspot"
 | JRE | Targeted at people who want to run Java applications<br/>A bundle of JVM impl, Java API and utilities<br/>&nbsp;&nbsp;👉 OS-specific bundle<br/>&nbsp;&nbsp;👉 OS-independent outer interface <small>(same code runs *everywhere*)</small> |
 | JDK | Targeted at people who wants more than just running the applications<br/>A bundle of JRE, a compiler <small>(`.java` to `.class`)</small>and tools for development |
 
-### More Details on *JVM*
+### Preface to *JVM*
+
+#### The Process
 
 > The code you wrote would be firstly transformed into the `.class` file, then the *JVM* would execute that code which has all the `0`s and `1`s in it, like it was an actual machine running the machine code.
 >
 > Since it behaves like an actual machine, in this very context, it would need to manage all the relevant stuff like *memory management*, *garbage collection* and of course, running the code and doing it **efficiently**.
+
+#### Why Do I Need to Learn about This
+
+> To be able to effective debug the program in order to pinpoint where does the problem actually arise, or optimizing to make the program more performant, we all eventually need to learn about how the JVM does those things for us underneath.
+>
+> Basically, we are still learning about things like *memory management*, *garbage collection*, yet unlike languages like *C++*, this topic by itself become a separate one. It's like learning about how an application works, but this time it's an app that is almost as sophisticated as the language itself.
+>> And that's also why there are different JVM implementations, since people have different opinions and needs for the memory management, the mechanism of garbage collection and so on.
+
+- e.g. *C*, *C++*, you need do all the management manually through code
+- e.g. *Python*, the language does it for you, mostly
+- e.g. *Java*, the virtual machine does it for you
+
+### Memory Management
+
+- N/A
+
+### Garbage Collection
+
+- N/A
 
 ## Practice
 
