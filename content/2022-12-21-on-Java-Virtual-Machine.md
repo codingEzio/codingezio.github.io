@@ -69,7 +69,7 @@ description = "All things that related to JVM, especially Hotspot"
 >
 > It is a part of JVM. The JVM **organizes the memory** it needs to execute program **into several** runtime **data areas**. What does it mean? Separate sections storing different kinds of data.
 
-> <img src="/static/202301/20230103-jvm-runtime-area-structure.png" alt="An illustration that shows the structure of the runtime data areas in the JVM" width="80%" height="auto" />
+> <img src="/202301/20230103-jvm-runtime-area-structure.png" alt="An illustration that shows the structure of the runtime data areas in the JVM" width="80%" height="auto" />
 
 ### Garbage Collection
 

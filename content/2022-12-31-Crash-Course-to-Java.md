@@ -125,7 +125,7 @@ protected           void     finalize()
 - not `Override`d: equivalent as `==` (memory address)
 - `Override`d: we normally compare all the attributes, `true` if all match
 
-### `public native int hashCode()`
+### 0x10 `public native int hashCode()`
 
 > Whether we're gonna store or retrieve data from a `HashMap`, we would specify how many boxes are there, then using that `hashCode` function to generate a code that which box for us to operate on.
 >
@@ -135,6 +135,10 @@ protected           void     finalize()
 
 - `hashCode()` for determing equality
 - `equals()` for further comparsion
+
+### 0x11 String, StringBuffer, StringBuilder
+
+> If you have the JDK source code, their implementations were under `/src/java.base/share/classes/java/lang/`
 
 -----
 
@@ -148,3 +152,4 @@ protected           void     finalize()
 - [What is the difference between an interface and abstract class?](https://stackoverflow.com/questions/1913098/what-is-the-difference-between-an-interface-and-abstract-class/45863762#45863762)
 - [Deep Copy vs Shallow Copy vs Reference Copy](https://stackoverflow.com/a/62399156/6273859)
 - [Java HashMap - Understanding equals() and hashCode() methods](https://www.logicbig.com/tutorials/core-java-tutorial/java-collections/hash-map-equal-and-hash-code.html)
+- [What is HashCode (Java in General forum at Coderanch)](https://coderanch.com/t/321515/java/HashCode)
