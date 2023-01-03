@@ -77,6 +77,12 @@ description = "All things that related to JVM, especially Hotspot"
 
 ## Practice
 
+- N/A
+
+-----
+
+## For Fun
+
 ### Compile Your Own JDK <small>(status: ***HALTED***)</small>
 
 > Context: I'm on *macOS Monterey* <small>(12.6.2)</small> and the Linux I'm using is *Ubuntu 20.04 focal* <small>(kernel: `x86_64 Linux 5.4.0-135-generic`)</small>. **Simply sticking to Linux for compiling such things would save you a lot of time.**
@@ -131,6 +137,4 @@ description = "All things that related to JVM, especially Hotspot"
 - [Full explanation of JVM - Runtime Data Area and How JVM using it](https://blog.knoldus.com/full-explanation-of-jvm-runtime-data-area-and-how-jvm-using-it/)
 - [How JVM Works — JVM Architecture? | by Somnathshintre | Medium](https://medium.com/@somnathshintre77/how-jvm-works-jvm-architecture-fb275c60049f)
 - [What are native methods in Java and where should they be used? - Stack Overflow](https://stackoverflow.com/a/18900771/6273859)
--
--
 -
