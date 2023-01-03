@@ -140,6 +140,144 @@ protected           void     finalize()
 
 > If you have the JDK source code, their implementations were under `/src/java.base/share/classes/java/lang/`
 
+#### Usage
+
+> Of course, normally you would not use just of them alone.
+
+- when you have no need to modify the original string: `String`
+- when you need to modify the original string: `StringBuffer`, `StringBuilder`
+
+#### Difference between `StringBuffer` and `StringBuilder`
+
+- Both are concerned with thread safety using locks
+- Both could be used when you need manipulate a ton of *String*s
+- `StringBuffer` are thread-safe aka. data in multiple threads behave normally
+
+#### Why `String` is Immutable
+
+- It is in the hand of the designer of the language
+  - Even if it's mutable in languages like Ruby
+    - It just does things underneath a bit differently
+    - It just does about the same thing in similar ways
+- In the implementation
+  - The *String* array saving it was modified in `final`
+  - The *String* does not have APIs for modifying
+  - The *String* class was in `final` so you couldn't change behaviour as well
+
+### 0x12 Operator Overloading
+
+#### Support
+
+- Java does not support it <small>(users could NOT do it)</small>
+- Java does have one exception for `+` for string concatenation
+- The reason is simply *the Java designer decided it's not worth doing it*.
+
+#### What Is It
+
+> When you want to do use the operators with different types of objects/classes and so on. Take Python for example
+
+```python
+class Complex:
+    def __init__(self, real, imag):
+        self.real = real
+        self.imag = imag
+
+    # add two objects
+    def __add__(self, other):
+        return self.real + other.real, self.imag + other.imag
+
+obj1 = Complex(1, 2)
+obj2 = Complex(3, 4)
+
+obj3 = obj1 + obj2
+```
+
+#### How It Looks Like
+
+##### The `+`
+
+> It creates a `StringBuilder` object and calls`.append()` to concat, for every single loop! Wasting memory space.
+
+```java
+String[] stringArr = { "He", "ll", "o" };
+
+String s1 = "";
+
+for (String elem : stringArr) {
+    s1 += elem;
+}
+
+// "Hello"
+System.out.println(s1);
+```
+
+##### But You Should Do Like This`
+
+> It accomplishs the exactly the same thing as above, but no extra unnecessary `StringBuilder` object would be created <small>(just one in this case)</small>
+
+```java
+String[] stringArr = { "He", "ll", "o" };
+
+StringBuilder s2 = new StringBuilder();
+
+for (String elem : stringArr) {
+    s2.append(elem);
+}
+
+// "Hello"
+System.out.println(s2);
+```
+
+### 0x13 String Constant Pool
+
+#### In Short
+
+- It was stored in the *Heap* area which is shared by all threads
+- It was put into the *Heap* area for more effective garbage collection
+- It was created to reuse existing `String` instead of repeated creation
+
+#### Code Example
+
+```java
+// If there's no "abc" constant in the heap area (so two objects)
+// - create a String object (s1)
+// - create a String constant "abc" (and assigning to object s1)
+String s1 = new String("abc");
+
+
+// Only one String object would be created
+String a1 = "abc";
+String a2 = new String("abc");
+```
+
+### 0x14 Method `intern`
+
+#### Not Creating Extra Idential String Objects
+
+- unless you have tons of idential Strings, do not use it
+- the relevant Strings would be in the PermaGen
+- and it could not garbage collected easily
+- and it occupies the precious space which is quite limited like CPU Cache
+  > when this precious space is full, you'd get `OutOfMemoryError` when in fact there were still a ton of space in the *Heap*!
+
+### 0x15 Constant Folding
+
+```java
+// The result is 'a1 == a2' as the Strings were considered as constants
+//  If some of the them were being returned in a method, then the value
+//  of it could not be determined, so no folding (optimization) would
+//  happen.
+final String s1 = "str"
+final String s2 = "ing"
+
+// Known already in the compilation stage, automatically become "string"
+String a1 = "str" + "ing";
+
+// Unless the Strings were already modified using 'final' (to be considered
+// as constant (String Constant Pool))
+String a2 = s1 + s2
+```
+
 -----
 
 ## References
@@ -153,3 +291,22 @@ protected           void     finalize()
 - [Deep Copy vs Shallow Copy vs Reference Copy](https://stackoverflow.com/a/62399156/6273859)
 - [Java HashMap - Understanding equals() and hashCode() methods](https://www.logicbig.com/tutorials/core-java-tutorial/java-collections/hash-map-equal-and-hash-code.html)
 - [What is HashCode (Java in General forum at Coderanch)](https://coderanch.com/t/321515/java/HashCode)
+
+### String
+
+- [Are Your Strings Immutable? – Daniel Lemire's blog](https://lemire.me/blog/2017/07/07/are-your-strings-immutable/)
+- [Why are Strings Immutable in Many Programming Languages?](https://stackoverflow.com/questions/9544182/why-are-strings-immutable-in-many-programming-languages)
+- [Why is String Immutable in Java?](https://stackoverflow.com/questions/22397861/why-is-string-immutable-in-java)
+- [String, StringBuffer, and StringBuilder](https://stackoverflow.com/a/2971343/6273859)
+- [Thread safety - Wikipedia](https://en.wikipedia.org/wiki/Thread_safety)
+
+### String Method `intern`
+
+- [What is Java String interning?](https://stackoverflow.com/a/10579062/6273859)
+- [Is it good practice to use java.lang.String.intern()?](https://stackoverflow.com/a/1091068/6273859)
+
+### Operator Overloading
+
+- [Why doesn't Java offer operator overloading?](https://stackoverflow.com/questions/77718/why-doesnt-java-offer-operator-overloading/77798#77798)
+- [Operator overloading in Java](https://stackoverflow.com/a/1686708/6273859)
+- [Python Operator Overloading (With Examples)](https://www.programiz.com/python-programming/operator-overloading)

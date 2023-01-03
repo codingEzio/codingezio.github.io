@@ -158,6 +158,141 @@ multiple object references could reference to 1 object&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;If you have the JDK source code, their implementations were under &lt;code&gt;&#x2F;src&#x2F;java.base&#x2F;share&#x2F;classes&#x2F;java&#x2F;lang&#x2F;&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
+&lt;h4 id=&quot;usage&quot;&gt;Usage&lt;&#x2F;h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Of course, normally you would not use just of them alone.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;when you have no need to modify the original string: &lt;code&gt;String&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;when you need to modify the original string: &lt;code&gt;StringBuffer&lt;&#x2F;code&gt;, &lt;code&gt;StringBuilder&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;difference-between-stringbuffer-and-stringbuilder&quot;&gt;Difference between &lt;code&gt;StringBuffer&lt;&#x2F;code&gt; and &lt;code&gt;StringBuilder&lt;&#x2F;code&gt;&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Both are concerned with thread safety using locks&lt;&#x2F;li&gt;
+&lt;li&gt;Both could be used when you need manipulate a ton of &lt;em&gt;String&lt;&#x2F;em&gt;s&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;StringBuffer&lt;&#x2F;code&gt; are thread-safe aka. data in multiple threads behave normally&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;why-string-is-immutable&quot;&gt;Why &lt;code&gt;String&lt;&#x2F;code&gt; is Immutable&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;It is in the hand of the designer of the language
+&lt;ul&gt;
+&lt;li&gt;Even if it&#x27;s mutable in languages like Ruby
+&lt;ul&gt;
+&lt;li&gt;It just does things underneath a bit differently&lt;&#x2F;li&gt;
+&lt;li&gt;It just does about the same thing in similar ways&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;In the implementation
+&lt;ul&gt;
+&lt;li&gt;The &lt;em&gt;String&lt;&#x2F;em&gt; array saving it was modified in &lt;code&gt;final&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;The &lt;em&gt;String&lt;&#x2F;em&gt; does not have APIs for modifying&lt;&#x2F;li&gt;
+&lt;li&gt;The &lt;em&gt;String&lt;&#x2F;em&gt; class was in &lt;code&gt;final&lt;&#x2F;code&gt; so you couldn&#x27;t change behaviour as well&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;0x12-operator-overloading&quot;&gt;0x12 Operator Overloading&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;support&quot;&gt;Support&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Java does not support it &lt;small&gt;(users could NOT do it)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Java does have one exception for &lt;code&gt;+&lt;&#x2F;code&gt; for string concatenation&lt;&#x2F;li&gt;
+&lt;li&gt;The reason is simply &lt;em&gt;the Java designer decided it&#x27;s not worth doing it&lt;&#x2F;em&gt;.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;what-is-it&quot;&gt;What Is It&lt;&#x2F;h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;When you want to do use the operators with different types of objects&#x2F;classes and so on. Take Python for example&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;class &lt;&#x2F;span&gt;&lt;span style=&quot;text-decoration:underline;color:#a6e22e;&quot;&gt;Complex&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;__init__&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;real&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;imag&lt;&#x2F;span&gt;&lt;span&gt;):
+&lt;&#x2F;span&gt;&lt;span&gt;        self.real &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;real
+&lt;&#x2F;span&gt;&lt;span&gt;        self.imag &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;imag
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# add two objects
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;__add__&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;other&lt;&#x2F;span&gt;&lt;span&gt;):
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;self.real &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;+ &lt;&#x2F;span&gt;&lt;span&gt;other.real, self.imag &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;+ &lt;&#x2F;span&gt;&lt;span&gt;other.imag
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;obj1 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;Complex(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;obj2 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;Complex(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;3&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;4&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;obj3 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;obj1 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;+ &lt;&#x2F;span&gt;&lt;span&gt;obj2
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h4 id=&quot;how-it-looks-like&quot;&gt;How It Looks Like&lt;&#x2F;h4&gt;
+&lt;h5 id=&quot;the&quot;&gt;The &lt;code&gt;+&lt;&#x2F;code&gt;&lt;&#x2F;h5&gt;
+&lt;blockquote&gt;
+&lt;p&gt;It creates a &lt;code&gt;StringBuilder&lt;&#x2F;code&gt; object and calls&lt;code&gt;.append()&lt;&#x2F;code&gt; to concat, for every single loop! Wasting memory space.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;pre data-lang=&quot;java&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-java &quot;&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;String&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;[]&lt;&#x2F;span&gt;&lt;span&gt; stringArr &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;{ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;He&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;ll&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;o&amp;quot; &lt;&#x2F;span&gt;&lt;span&gt;};
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;String&lt;&#x2F;span&gt;&lt;span&gt; s1 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;String&lt;&#x2F;span&gt;&lt;span&gt; elem &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span&gt; stringArr) {
+&lt;&#x2F;span&gt;&lt;span&gt;    s1 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;+=&lt;&#x2F;span&gt;&lt;span&gt; elem;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&#x2F;&#x2F; &amp;quot;Hello&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;System&lt;&#x2F;span&gt;&lt;span&gt;.out.println(s1);
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h5 id=&quot;but-you-should-do-like-this&quot;&gt;But You Should Do Like This`&lt;&#x2F;h5&gt;
+&lt;blockquote&gt;
+&lt;p&gt;It accomplishs the exactly the same thing as above, but no extra unnecessary &lt;code&gt;StringBuilder&lt;&#x2F;code&gt; object would be created &lt;small&gt;(just one in this case)&lt;&#x2F;small&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;pre data-lang=&quot;java&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-java &quot;&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;String&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;[]&lt;&#x2F;span&gt;&lt;span&gt; stringArr &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;{ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;He&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;ll&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;o&amp;quot; &lt;&#x2F;span&gt;&lt;span&gt;};
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;StringBuilder&lt;&#x2F;span&gt;&lt;span&gt; s2 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= new &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;StringBuilder&lt;&#x2F;span&gt;&lt;span&gt;();
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;String&lt;&#x2F;span&gt;&lt;span&gt; elem &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span&gt; stringArr) {
+&lt;&#x2F;span&gt;&lt;span&gt;    s2.append(elem);
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&#x2F;&#x2F; &amp;quot;Hello&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;System&lt;&#x2F;span&gt;&lt;span&gt;.out.println(s2);
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;0x13-string-constant-pool&quot;&gt;0x13 String Constant Pool&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;in-short&quot;&gt;In Short&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;It was stored in the &lt;em&gt;Heap&lt;&#x2F;em&gt; area which is shared by all threads&lt;&#x2F;li&gt;
+&lt;li&gt;It was put into the &lt;em&gt;Heap&lt;&#x2F;em&gt; area for more effective garbage collection&lt;&#x2F;li&gt;
+&lt;li&gt;It was created to reuse existing &lt;code&gt;String&lt;&#x2F;code&gt; instead of repeated creation&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;code-example&quot;&gt;Code Example&lt;&#x2F;h4&gt;
+&lt;pre data-lang=&quot;java&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-java &quot;&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&#x2F;&#x2F; If there&amp;#39;s no &amp;quot;abc&amp;quot; constant in the heap area (so two objects)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&#x2F;&#x2F; - create a String object (s1)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&#x2F;&#x2F; - create a String constant &amp;quot;abc&amp;quot; (and assigning to object s1)
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;String&lt;&#x2F;span&gt;&lt;span&gt; s1 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= new &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;String&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;abc&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&#x2F;&#x2F; Only one String object would be created
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;String&lt;&#x2F;span&gt;&lt;span&gt; a1 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;abc&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;String&lt;&#x2F;span&gt;&lt;span&gt; a2 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= new &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;String&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;abc&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;0x14-method-intern&quot;&gt;0x14 Method &lt;code&gt;intern&lt;&#x2F;code&gt;&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;not-creating-extra-idential-string-objects&quot;&gt;Not Creating Extra Idential String Objects&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;unless you have tons of idential Strings, do not use it&lt;&#x2F;li&gt;
+&lt;li&gt;the relevant Strings would be in the PermaGen&lt;&#x2F;li&gt;
+&lt;li&gt;and it could not garbage collected easily&lt;&#x2F;li&gt;
+&lt;li&gt;and it occupies the precious space which is quite limited like CPU Cache
+&lt;blockquote&gt;
+&lt;p&gt;when this precious space is full, you&#x27;d get &lt;code&gt;OutOfMemoryError&lt;&#x2F;code&gt; when in fact there were still a ton of space in the &lt;em&gt;Heap&lt;&#x2F;em&gt;!&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;0x15-constant-folding&quot;&gt;0x15 Constant Folding&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;java&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-java &quot;&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&#x2F;&#x2F; The result is &amp;#39;a1 == a2&amp;#39; as the Strings were considered as constants
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&#x2F;&#x2F;  If some of the them were being returned in a method, then the value
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&#x2F;&#x2F;  of it could not be determined, so no folding (optimization) would
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&#x2F;&#x2F;  happen.
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;final &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;String&lt;&#x2F;span&gt;&lt;span&gt; s1 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;str&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;final &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;String&lt;&#x2F;span&gt;&lt;span&gt; s2 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;ing&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&#x2F;&#x2F; Known already in the compilation stage, automatically become &amp;quot;string&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;String&lt;&#x2F;span&gt;&lt;span&gt; a1 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;str&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;+ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;ing&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&#x2F;&#x2F; Unless the Strings were already modified using &amp;#39;final&amp;#39; (to be considered
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&#x2F;&#x2F; as constant (String Constant Pool))
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;String&lt;&#x2F;span&gt;&lt;span&gt; a2 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt; s1 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;+&lt;&#x2F;span&gt;&lt;span&gt; s2
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;hr &#x2F;&gt;
 &lt;h2 id=&quot;references&quot;&gt;References&lt;&#x2F;h2&gt;
 &lt;blockquote&gt;
@@ -170,6 +305,25 @@ multiple object references could reference to 1 object&lt;&#x2F;p&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;a&#x2F;62399156&#x2F;6273859&quot;&gt;Deep Copy vs Shallow Copy vs Reference Copy&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.logicbig.com&#x2F;tutorials&#x2F;core-java-tutorial&#x2F;java-collections&#x2F;hash-map-equal-and-hash-code.html&quot;&gt;Java HashMap - Understanding equals() and hashCode() methods&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;coderanch.com&#x2F;t&#x2F;321515&#x2F;java&#x2F;HashCode&quot;&gt;What is HashCode (Java in General forum at Coderanch)&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;string&quot;&gt;String&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;lemire.me&#x2F;blog&#x2F;2017&#x2F;07&#x2F;07&#x2F;are-your-strings-immutable&#x2F;&quot;&gt;Are Your Strings Immutable? – Daniel Lemire&#x27;s blog&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;9544182&#x2F;why-are-strings-immutable-in-many-programming-languages&quot;&gt;Why are Strings Immutable in Many Programming Languages?&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;22397861&#x2F;why-is-string-immutable-in-java&quot;&gt;Why is String Immutable in Java?&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;a&#x2F;2971343&#x2F;6273859&quot;&gt;String, StringBuffer, and StringBuilder&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Thread_safety&quot;&gt;Thread safety - Wikipedia&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;string-method-intern&quot;&gt;String Method &lt;code&gt;intern&lt;&#x2F;code&gt;&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;a&#x2F;10579062&#x2F;6273859&quot;&gt;What is Java String interning?&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;a&#x2F;1091068&#x2F;6273859&quot;&gt;Is it good practice to use java.lang.String.intern()?&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;operator-overloading&quot;&gt;Operator Overloading&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;77718&#x2F;why-doesnt-java-offer-operator-overloading&#x2F;77798#77798&quot;&gt;Why doesn&#x27;t Java offer operator overloading?&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;a&#x2F;1686708&#x2F;6273859&quot;&gt;Operator overloading in Java&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.programiz.com&#x2F;python-programming&#x2F;operator-overloading&quot;&gt;Python Operator Overloading (With Examples)&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </content>
 	</entry>
