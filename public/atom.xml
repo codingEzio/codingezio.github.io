@@ -16,6 +16,156 @@
 		<content type="html">&lt;blockquote&gt;
 &lt;p&gt;N&#x2F;A&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
+&lt;h3 id=&quot;0x01-new&quot;&gt;0x01 &lt;code&gt;new&lt;&#x2F;code&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;create an instance of a class
+the instance object was stored in the heap
+the instance object reference was stored in the stack&lt;&#x2F;p&gt;
+&lt;p&gt;an object reference could reference 0 or 1 object
+multiple object references could reference to 1 object&lt;&#x2F;p&gt;
+&lt;p&gt;equality&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;object &amp;lt;&amp;gt; content in the memory&lt;&#x2F;li&gt;
+&lt;li&gt;reference &amp;lt;&amp;gt; memory address&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;0x02-constructor&quot;&gt;0x02 constructor&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;no-arg&quot;&gt;no arg&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;we are always using no-arg constructor the &lt;code&gt;()&lt;&#x2F;code&gt; in &lt;code&gt;new Person()&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;write a no-arg constructor or not
+&lt;ul&gt;
+&lt;li&gt;if you have nothing to declare, it&#x27;s alright&lt;&#x2F;li&gt;
+&lt;li&gt;if you does (constructor with args), write one without args as well&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;override&quot;&gt;Override&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;class O() { O() {} }&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;automatically being called when &lt;code&gt;new O()&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;over&lt;&#x2F;code&gt;xxx
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;override&lt;&#x2F;code&gt;: cannot be override (changing the behavior entirely)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;overload&lt;&#x2F;code&gt;: accept different kinds of args by having multiple constructors&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;0x03-oop-characteristics&quot;&gt;0x03 OOP characteristics&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;encapsulation&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;not expose internal obj&#x2F;var like using &lt;code&gt;private&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;inheritance&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;access all prop&#x2F;method from parent class except private ones&lt;&#x2F;li&gt;
+&lt;li&gt;child could have their own prop and method&lt;&#x2F;li&gt;
+&lt;li&gt;child could implement method from parent in their own way&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;polymorphism&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;you have more than one ways to achieve this, whether it&#x27;s abstract class, interface or something else&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;0x04-interface-and-abstract-class&quot;&gt;0x04 Interface and Abstract Class&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;interface&quot;&gt;Interface&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;like a contract, like what methods to have&lt;&#x2F;li&gt;
+&lt;li&gt;have to be &lt;code&gt;public&lt;&#x2F;code&gt; to be &lt;code&gt;implements X, Y, Z&lt;&#x2F;code&gt;ed&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;abstract-class&quot;&gt;Abstract Class&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;like a template, as it&#x27;s also a class&lt;&#x2F;li&gt;
+&lt;li&gt;scope could be anything &lt;code&gt;class OnlyOne extends SingleClass&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;0x05-copy&quot;&gt;0x05 Copy&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;java&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-java &quot;&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;class &lt;&#x2F;span&gt;&lt;span style=&quot;text-decoration:underline;color:#a6e22e;&quot;&gt;B &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;int &lt;&#x2F;span&gt;&lt;span&gt;val;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;B&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;int &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;val&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;        val &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt; val;
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;class &lt;&#x2F;span&gt;&lt;span style=&quot;text-decoration:underline;color:#a6e22e;&quot;&gt;A &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;B &lt;&#x2F;span&gt;&lt;span&gt;a;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th style=&quot;text-align: left&quot;&gt;Level&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: left&quot;&gt;Description&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: left&quot;&gt;Code&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;Reference&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;A reference pointing to the same object&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;code&gt;A orig = new A()&lt;&#x2F;code&gt;&lt;br&#x2F;&gt;&lt;code&gt;A copy = orig&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;Shallow&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;Create a new instance, though the attributes are not copied&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;code&gt;A orig = new A()&lt;&#x2F;code&gt;&lt;br&#x2F;&gt;&lt;code&gt;A copy = new A()&lt;&#x2F;code&gt;&lt;br&#x2F;&gt;&lt;br&#x2F;&gt;&lt;code&gt;copy.a = orig.a&lt;&#x2F;code&gt;&lt;br&#x2F;&gt;&lt;code&gt;copy.a.val = 10&lt;&#x2F;code&gt;&lt;br&#x2F;&gt;&lt;code&gt;copy.a.val == orig.a.val&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;Deep&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;Create a new instance, the same applies everything insisde&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;code&gt;A orig = new A()&lt;&#x2F;code&gt;&lt;br&#x2F;&gt;&lt;code&gt;A copy = new A()&lt;&#x2F;code&gt;&lt;br&#x2F;&gt;&lt;br&#x2F;&gt;&lt;code&gt;copy.a = new B(orig.a.val)&lt;&#x2F;code&gt;&lt;br&#x2F;&gt;&lt;code&gt;orig.a.val = 10&lt;&#x2F;code&gt;&lt;br&#x2F;&gt;&lt;code&gt;copy.a.val = 10&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;h3 id=&quot;0x07-common-methods-for-an-object-class&quot;&gt;0x07 Common methods for an &lt;code&gt;Object&lt;&#x2F;code&gt; class&lt;&#x2F;h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;All the &lt;code&gt;throws VariousExceptions&lt;&#x2F;code&gt; were omitted below&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;pre data-lang=&quot;java&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-java &quot;&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&#x2F;&#x2F; Equality
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;public native       &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;int      &lt;&#x2F;span&gt;&lt;span&gt;hashCode()
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;public              &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;boolean  &lt;&#x2F;span&gt;&lt;span&gt;equals(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;Object&lt;&#x2F;span&gt;&lt;span&gt; obj)
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&#x2F;&#x2F; Copy
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;protected native    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;Object   &lt;&#x2F;span&gt;&lt;span&gt;clone()
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&#x2F;&#x2F; Reflection
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;public final native &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;Class&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;?&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; getClass()
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;public              &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;String   &lt;&#x2F;span&gt;&lt;span&gt;toString()
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&#x2F;&#x2F; Concurrency for waking up threads
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;public final native&lt;&#x2F;span&gt;&lt;span&gt; void     notify()
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;public final native&lt;&#x2F;span&gt;&lt;span&gt; void     notifyAll()
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&#x2F;&#x2F; Concurrency for halting threads
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;public final native&lt;&#x2F;span&gt;&lt;span&gt; void     wait(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;long&lt;&#x2F;span&gt;&lt;span&gt; timeout)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;public final&lt;&#x2F;span&gt;&lt;span&gt;        void     wait(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;long&lt;&#x2F;span&gt;&lt;span&gt; timeout, &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; nanos)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;public final&lt;&#x2F;span&gt;&lt;span&gt;        void     wait()
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&#x2F;&#x2F; Release resources before Garbage Collection
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;protected&lt;&#x2F;span&gt;&lt;span&gt;           void     finalize()
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;0x08-equality&quot;&gt;0x08 Equality&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;&quot;&gt;&lt;code&gt;==&lt;&#x2F;code&gt;&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;For basic data types, it&#x27;s &lt;em&gt;values&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;For reference data types, it&#x27;s memory address for that object&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;equals&quot;&gt;&lt;code&gt;equals&lt;&#x2F;code&gt;&lt;&#x2F;h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Take &lt;code&gt;String&lt;&#x2F;code&gt; for example, its &lt;code&gt;equals&lt;&#x2F;code&gt; was overriden to compare the values underneath&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;not &lt;code&gt;Override&lt;&#x2F;code&gt;d: equivalent as &lt;code&gt;==&lt;&#x2F;code&gt; (memory address)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;Override&lt;&#x2F;code&gt;d: we normally compare all the attributes, &lt;code&gt;true&lt;&#x2F;code&gt; if all match&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;public-native-int-hashcode&quot;&gt;&lt;code&gt;public native int hashCode()&lt;&#x2F;code&gt;&lt;&#x2F;h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Whether we&#x27;re gonna store or retrieve data from a &lt;code&gt;HashMap&lt;&#x2F;code&gt;, we would specify how many boxes are there, then using that &lt;code&gt;hashCode&lt;&#x2F;code&gt; function to generate a code that which box for us to operate on.&lt;&#x2F;p&gt;
+&lt;p&gt;Formally speaking, it generates a key that maps to a bucket array index. And each bucket contains some pairs of keys and values.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;blockquote&gt;
+&lt;img src=&quot;&#x2F;202301&#x2F;20230103-hashmap-structure-underneath.png&quot; alt=&quot;An illustration that shows the structure of a Hashmap&quot; width=&quot;80%&quot; height=&quot;auto&quot; &#x2F;&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;hashCode()&lt;&#x2F;code&gt; for determing equality&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;equals()&lt;&#x2F;code&gt; for further comparsion&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;references&quot;&gt;References&lt;&#x2F;h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Sorted from oldest to newest&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h3 id=&quot;oop&quot;&gt;OOP&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;a&#x2F;12374437&#x2F;6273859&quot;&gt;What is the difference between method overloading and overriding?&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;1913098&#x2F;what-is-the-difference-between-an-interface-and-abstract-class&#x2F;45863762#45863762&quot;&gt;What is the difference between an interface and abstract class?&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;a&#x2F;62399156&#x2F;6273859&quot;&gt;Deep Copy vs Shallow Copy vs Reference Copy&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.logicbig.com&#x2F;tutorials&#x2F;core-java-tutorial&#x2F;java-collections&#x2F;hash-map-equal-and-hash-code.html&quot;&gt;Java HashMap - Understanding equals() and hashCode() methods&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">
@@ -1019,11 +1169,11 @@ TODO&lt;&#x2F;li&gt;
 &lt;h2 id=&quot;before-we-begin&quot;&gt;Before We Begin&lt;&#x2F;h2&gt;
 &lt;h3 id=&quot;references&quot;&gt;References&lt;&#x2F;h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;These were the core references, while it&#x27;s also the learning materials. Any other references would be at the bottom of this post.&lt;&#x2F;p&gt;
+&lt;p&gt;These were the core references, while it&#x27;s also the learning materials. Any other references would be at the bottom of this post. If some of the content do not have the relevant references down below, it means I&#x27;m following what the book says.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;doocs.github.io&#x2F;jvm&#x2F;00-quickstart.html&quot;&gt;JVM 底层原理最全知识总结&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.goodreads.com&#x2F;book&#x2F;show&#x2F;51301560&quot;&gt;深入理解Java虚拟机：JVM高级特性与最佳实践&lt;&#x2F;a&gt; &lt;small&gt;(JDK &lt;code&gt;12&lt;&#x2F;code&gt; for practice)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;doocs.github.io&#x2F;jvm&#x2F;00-quickstart.html&quot;&gt;JVM 底层原理最全知识总结&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h3 id=&quot;note&quot;&gt;Note&lt;&#x2F;h3&gt;
 &lt;blockquote&gt;
@@ -1072,9 +1222,13 @@ TODO&lt;&#x2F;li&gt;
 &lt;li&gt;e.g. &lt;em&gt;Java&lt;&#x2F;em&gt;, the virtual machine does it for you&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h3 id=&quot;memory-management&quot;&gt;Memory Management&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;N&#x2F;A&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The concept we&#x27;ll talk about is called &lt;em&gt;Runtime Data Area&lt;&#x2F;em&gt;, which is responsible to &lt;strong&gt;provide memory&lt;&#x2F;strong&gt; to store bytecode, objects, parameters, local variables, return values and intermediate computations.&lt;&#x2F;p&gt;
+&lt;p&gt;It is a part of JVM. The JVM &lt;strong&gt;organizes the memory&lt;&#x2F;strong&gt; it needs to execute program &lt;strong&gt;into several&lt;&#x2F;strong&gt; runtime &lt;strong&gt;data areas&lt;&#x2F;strong&gt;. What does it mean? Separate sections storing different kinds of data.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;blockquote&gt;
+&lt;img src=&quot;&#x2F;static&#x2F;202301&#x2F;20230103-jvm-runtime-area-structure.png&quot; alt=&quot;An illustration that shows the structure of the runtime data areas in the JVM&quot; width=&quot;80%&quot; height=&quot;auto&quot; &#x2F;&gt;
+&lt;&#x2F;blockquote&gt;
 &lt;h3 id=&quot;garbage-collection&quot;&gt;Garbage Collection&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;N&#x2F;A&lt;&#x2F;li&gt;
@@ -1124,8 +1278,17 @@ TODO&lt;&#x2F;li&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;hr &#x2F;&gt;
 &lt;h2 id=&quot;references-1&quot;&gt;References&lt;&#x2F;h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Sorted from oldest to newest&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h3 id=&quot;jvm&quot;&gt;JVM&lt;&#x2F;h3&gt;
 &lt;ul&gt;
-&lt;li&gt;N&#x2F;A&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.knoldus.com&#x2F;full-explanation-of-jvm-runtime-data-area-and-how-jvm-using-it&#x2F;&quot;&gt;Full explanation of JVM - Runtime Data Area and How JVM using it&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;medium.com&#x2F;@somnathshintre77&#x2F;how-jvm-works-jvm-architecture-fb275c60049f&quot;&gt;How JVM Works — JVM Architecture? | by Somnathshintre | Medium&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;a&#x2F;18900771&#x2F;6273859&quot;&gt;What are native methods in Java and where should they be used? - Stack Overflow&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </content>
 	</entry>

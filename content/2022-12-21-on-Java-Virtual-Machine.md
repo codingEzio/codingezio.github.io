@@ -9,10 +9,10 @@ description = "All things that related to JVM, especially Hotspot"
 
 ### References
 
-> These were the core references, while it's also the learning materials. Any other references would be at the bottom of this post.
+> These were the core references, while it's also the learning materials. Any other references would be at the bottom of this post. If some of the content do not have the relevant references down below, it means I'm following what the book says.
 
-- [JVM 底层原理最全知识总结](https://doocs.github.io/jvm/00-quickstart.html)
 - [深入理解Java虚拟机：JVM高级特性与最佳实践](https://www.goodreads.com/book/show/51301560) <small>(JDK `12` for practice)</small>
+- [JVM 底层原理最全知识总结](https://doocs.github.io/jvm/00-quickstart.html)
 
 ### Note
 
@@ -65,7 +65,11 @@ description = "All things that related to JVM, especially Hotspot"
 
 ### Memory Management
 
-- N/A
+> The concept we'll talk about is called *Runtime Data Area*, which is responsible to **provide memory** to store bytecode, objects, parameters, local variables, return values and intermediate computations.
+>
+> It is a part of JVM. The JVM **organizes the memory** it needs to execute program **into several** runtime **data areas**. What does it mean? Separate sections storing different kinds of data.
+
+> <img src="/static/202301/20230103-jvm-runtime-area-structure.png" alt="An illustration that shows the structure of the runtime data areas in the JVM" width="80%" height="auto" />
 
 ### Garbage Collection
 
@@ -120,4 +124,13 @@ description = "All things that related to JVM, especially Hotspot"
 
 ## References
 
-- N/A
+> Sorted from oldest to newest
+
+### JVM
+
+- [Full explanation of JVM - Runtime Data Area and How JVM using it](https://blog.knoldus.com/full-explanation-of-jvm-runtime-data-area-and-how-jvm-using-it/)
+- [How JVM Works — JVM Architecture? | by Somnathshintre | Medium](https://medium.com/@somnathshintre77/how-jvm-works-jvm-architecture-fb275c60049f)
+- [What are native methods in Java and where should they be used? - Stack Overflow](https://stackoverflow.com/a/18900771/6273859)
+-
+-
+-
