@@ -69,6 +69,8 @@ description = "All things that related to JVM, especially Hotspot"
 >
 > It is a part of JVM. The JVM **organizes the memory** it needs to execute program **into several** runtime **data areas**. What does it mean? Separate sections storing different kinds of data.
 
+> For keywords like *Stack*, *Heap*. Consider it a *JVM-stack* and *JVM-Heap*. It has nothing to do with any other terms other than the features we borrowed from the concept itself like *FIFO* or something. This is a graph made by me suing [*Draw.io*](https://app.diagrams.net/). It's kinda shitty and missing a lot details. Though I would try to make it more visually appealing, easier to understand, removing incorrect information and so on, all done gradually.
+>
 > <img src="/202301/20230103-jvm-runtime-area-structure.png" alt="An illustration that shows the structure of the runtime data areas in the JVM" width="80%" height="auto" />
 
 ### Garbage Collection
@@ -137,4 +139,14 @@ description = "All things that related to JVM, especially Hotspot"
 - [Full explanation of JVM - Runtime Data Area and How JVM using it](https://blog.knoldus.com/full-explanation-of-jvm-runtime-data-area-and-how-jvm-using-it/)
 - [How JVM Works — JVM Architecture? | by Somnathshintre | Medium](https://medium.com/@somnathshintre77/how-jvm-works-jvm-architecture-fb275c60049f)
 - [What are native methods in Java and where should they be used? - Stack Overflow](https://stackoverflow.com/a/18900771/6273859)
--
+- [Explain the concept of a stack frame in a nutshell - Stack Overflow](https://stackoverflow.com/questions/10057443/explain-the-concept-of-a-stack-frame-in-a-nutshell/10057468#10057468)
+- [Java Virtual Machine's Internal Architecture](https://www.artima.com/insidejvm/ed2/jvm2.html)
+- [The Structure of the Java Virtual Machine](https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-2.html#:~:text=A%20Java%20Virtual%20Machine%20stack)
+- [Call stack - Wikipedia](https://en.wikipedia.org/wiki/Call_stack#Structure)
+- [JVM 的 Stack 和 Heap](https://blog.marklee.tw/java-interview-jvm-stack-heap/)
+- [JVM Internals](https://blog.jamesdbloom.com/JVMInternals.html) <small>(absolutely the ***best*** resource on *Runtime Data Area*)</small>
+
+### Terminology-wise
+
+- [What's the technical definition for "routine"? - Stack Overflow](https://stackoverflow.com/questions/6885937/whats-the-technical-definition-for-routine)
+- [Difference between function, method, routine, procedure, subprogram, subroutine, block, task - Computer Science Stack Exchange](https://cs.stackexchange.com/questions/142024/difference-between-function-method-routine-procedure-subprogram-subroutine)

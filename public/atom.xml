@@ -1386,6 +1386,7 @@ TODO&lt;&#x2F;li&gt;
 &lt;p&gt;It is a part of JVM. The JVM &lt;strong&gt;organizes the memory&lt;&#x2F;strong&gt; it needs to execute program &lt;strong&gt;into several&lt;&#x2F;strong&gt; runtime &lt;strong&gt;data areas&lt;&#x2F;strong&gt;. What does it mean? Separate sections storing different kinds of data.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;blockquote&gt;
+&lt;p&gt;For keywords like &lt;em&gt;Stack&lt;&#x2F;em&gt;, &lt;em&gt;Heap&lt;&#x2F;em&gt;. Consider it a &lt;em&gt;JVM-stack&lt;&#x2F;em&gt; and &lt;em&gt;JVM-Heap&lt;&#x2F;em&gt;. It has nothing to do with any other terms other than the features we borrowed from the concept itself like &lt;em&gt;FIFO&lt;&#x2F;em&gt; or something. This is a graph made by me suing &lt;a href=&quot;https:&#x2F;&#x2F;app.diagrams.net&#x2F;&quot;&gt;&lt;em&gt;Draw.io&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;. It&#x27;s kinda shitty and missing a lot details. Though I would try to make it more visually appealing, easier to understand, removing incorrect information and so on, all done gradually.&lt;&#x2F;p&gt;
 &lt;img src=&quot;&#x2F;202301&#x2F;20230103-jvm-runtime-area-structure.png&quot; alt=&quot;An illustration that shows the structure of the runtime data areas in the JVM&quot; width=&quot;80%&quot; height=&quot;auto&quot; &#x2F;&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;h3 id=&quot;garbage-collection&quot;&gt;Garbage Collection&lt;&#x2F;h3&gt;
@@ -1450,7 +1451,17 @@ TODO&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.knoldus.com&#x2F;full-explanation-of-jvm-runtime-data-area-and-how-jvm-using-it&#x2F;&quot;&gt;Full explanation of JVM - Runtime Data Area and How JVM using it&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;medium.com&#x2F;@somnathshintre77&#x2F;how-jvm-works-jvm-architecture-fb275c60049f&quot;&gt;How JVM Works — JVM Architecture? | by Somnathshintre | Medium&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;a&#x2F;18900771&#x2F;6273859&quot;&gt;What are native methods in Java and where should they be used? - Stack Overflow&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;10057443&#x2F;explain-the-concept-of-a-stack-frame-in-a-nutshell&#x2F;10057468#10057468&quot;&gt;Explain the concept of a stack frame in a nutshell - Stack Overflow&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.artima.com&#x2F;insidejvm&#x2F;ed2&#x2F;jvm2.html&quot;&gt;Java Virtual Machine&#x27;s Internal Architecture&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;docs.oracle.com&#x2F;javase&#x2F;specs&#x2F;jvms&#x2F;se8&#x2F;html&#x2F;jvms-2.html#:~:text=A%20Java%20Virtual%20Machine%20stack&quot;&gt;The Structure of the Java Virtual Machine&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Call_stack#Structure&quot;&gt;Call stack - Wikipedia&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.marklee.tw&#x2F;java-interview-jvm-stack-heap&#x2F;&quot;&gt;JVM 的 Stack 和 Heap&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.jamesdbloom.com&#x2F;JVMInternals.html&quot;&gt;JVM Internals&lt;&#x2F;a&gt; &lt;small&gt;(absolutely the &lt;em&gt;&lt;strong&gt;best&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt; resource on &lt;em&gt;Runtime Data Area&lt;&#x2F;em&gt;)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;terminology-wise&quot;&gt;Terminology-wise&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;6885937&#x2F;whats-the-technical-definition-for-routine&quot;&gt;What&#x27;s the technical definition for &amp;quot;routine&amp;quot;? - Stack Overflow&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;cs.stackexchange.com&#x2F;questions&#x2F;142024&#x2F;difference-between-function-method-routine-procedure-subprogram-subroutine&quot;&gt;Difference between function, method, routine, procedure, subprogram, subroutine, block, task - Computer Science Stack Exchange&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </content>
 	</entry>
