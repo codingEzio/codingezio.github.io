@@ -299,7 +299,7 @@ String a2 = s1 + s2
 
 ### Snippet 15 Exception and Error
 
-> Ancestral class `java.lang.Throwable` under `YOUR_JDK/src/java.base/share/classes/java/lang/` <small>(and some of the *Exception*s and *Error*s as well)<small>
+> Ancestral class `java.lang.Throwable` under `YOUR_JDK/src/java.base/share/classes/java/lang/` <small>(and some of the *Exception*s and *Error*s as well)</small>
 
 #### Exception
 
@@ -324,7 +324,7 @@ String a2 = s1 + s2
 - We could use `catch` to handle it
 - We shouldn't use `catch` to handle it
 
-### Snippet 16 `try-with-resouces`
+### Snippet 16 `try` with Resouces
 
 > Resources like files would be automatically closed
 
@@ -340,21 +340,21 @@ catch (IOException exception) {
 
 ### Snippet 17 Serialization
 
-N/A
+- N/A
 
 ### Snippet 18 Annotation
 
-N/A
+- N/A
 
 ### Snippet 19 Reflection
 
-N/A
+- N/A
 
 ### Snippet 20 Generics
 
 > [What are the benefits of Java's types erasure?](https://stackoverflow.com/questions/20918650/what-are-the-benefits-of-javas-types-erasure)
 
-N/A
+- N/A
 
 -----
 
