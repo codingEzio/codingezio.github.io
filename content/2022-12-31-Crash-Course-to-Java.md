@@ -5,7 +5,9 @@ description = "Only for myself, unfortunately"
 
 > N/A
 
-### 0x01 `new`
+## Basics
+
+### Snippet 01 `new`
 
 create an instance of a class
 the instance object was stored in the heap
@@ -19,7 +21,7 @@ equality
 - object <> content in the memory
 - reference <> memory address
 
-### 0x02 constructor
+### Snippet 02 constructor
 
 #### no arg
 
@@ -33,10 +35,10 @@ equality
 - `class O() { O() {} }`
 - automatically being called when `new O()`
 - `over`xxx
-  - `override`: cannot be override (changing the behavior entirely)
+  - `override`: cannot be *override*n (changing the behavior entirely)
   - `overload`: accept different kinds of args by having multiple constructors
 
-### 0x03 OOP characteristics
+### Snippet 03 OOP characteristics
 
 - *encapsulation*
   - not expose internal obj/var like using `private`
@@ -48,7 +50,7 @@ equality
 
   > you have more than one ways to achieve this, whether it's abstract class, interface or something else
 
-### 0x04 Interface and Abstract Class
+### Snippet 04 Interface and Abstract Class
 
 #### Interface
 
@@ -60,7 +62,7 @@ equality
 - like a template, as it's also a class
 - scope could be anything `class OnlyOne extends SingleClass`
 
-### 0x05 Copy
+### Snippet 05 Copy
 
 ```java
 class B {
@@ -82,7 +84,7 @@ class A {
 | Shallow | Create a new instance, though the attributes are not copied | `A orig = new A()`<br/>`A copy = new A()`<br/><br/>`copy.a = orig.a`<br/>`copy.a.val = 10`<br/>`copy.a.val == orig.a.val` |
 | Deep | Create a new instance, the same applies everything insisde | `A orig = new A()`<br/>`A copy = new A()`<br/><br/>`copy.a = new B(orig.a.val)`<br/>`orig.a.val = 10`<br/>`copy.a.val = 10` |
 
-### 0x07 Common methods for an `Object` class
+### Snippet 06 Common methods for an `Object` class
 
 > All the `throws VariousExceptions` were omitted below
 
@@ -111,7 +113,7 @@ public final        void     wait()
 protected           void     finalize()
 ```
 
-### 0x08 Equality
+### Snippet 07 Equality
 
 #### `==`
 
@@ -125,7 +127,7 @@ protected           void     finalize()
 - not `Override`d: equivalent as `==` (memory address)
 - `Override`d: we normally compare all the attributes, `true` if all match
 
-### 0x10 `public native int hashCode()`
+### Snippet 08 `public native int hashCode()`
 
 > Whether we're gonna store or retrieve data from a `HashMap`, we would specify how many boxes are there, then using that `hashCode` function to generate a code that which box for us to operate on.
 >
@@ -136,7 +138,7 @@ protected           void     finalize()
 - `hashCode()` for determing equality
 - `equals()` for further comparsion
 
-### 0x11 String, StringBuffer, StringBuilder
+### Snippet 09 String, StringBuffer, StringBuilder
 
 > If you have the JDK source code, their implementations were under `/src/java.base/share/classes/java/lang/`
 
@@ -164,7 +166,7 @@ protected           void     finalize()
   - The *String* does not have APIs for modifying
   - The *String* class was in `final` so you couldn't change behaviour as well
 
-### 0x12 Operator Overloading
+### Snippet 10 Operator Overloading
 
 #### Support
 
@@ -228,7 +230,7 @@ for (String elem : stringArr) {
 System.out.println(s2);
 ```
 
-### 0x13 String Constant Pool
+### Snippet 11 String Constant Pool
 
 #### In Short
 
@@ -250,7 +252,7 @@ String a1 = "abc";
 String a2 = new String("abc");
 ```
 
-### 0x14 Method `intern`
+### Snippet 12 Method `intern`
 
 #### Not Creating Extra Idential String Objects
 
@@ -260,7 +262,7 @@ String a2 = new String("abc");
 - and it occupies the precious space which is quite limited like CPU Cache
   > when this precious space is full, you'd get `OutOfMemoryError` when in fact there were still a ton of space in the *Heap*!
 
-### 0x15 Constant Folding
+### Snippet 13 Constant Folding
 
 ```java
 // The result is 'a1 == a2' as the Strings were considered as constants
@@ -278,11 +280,95 @@ String a1 = "str" + "ing";
 String a2 = s1 + s2
 ```
 
+### Snippet 14 Autoboxing and Unboxing
+
+#### The Need
+
+- More functionalities than a primitive data type
+- Could be used for generics as the `<T>` accepts Objects only
+
+#### What Is It
+
+- They are minimal wrappers around primitive data types
+- They are typically stored as pointers to objects on the heap
+
+#### Simply Put
+
+- Things like `Collection` only accepts Objects, we need to *Boxing* the value
+- But when we want to do calc or simply printing it, we need to *Unboxing* it
+
+### Snippet 15 Exception and Error
+
+> Ancestral class `java.lang.Throwable` under `YOUR_JDK/src/java.base/share/classes/java/lang/` <small>(and some of the *Exception*s and *Error*s as well)<small>
+
+#### Exception
+
+> For some of them, JVM forces you to do some kind of handling (which is a good thing, I havn't seen this kind of thing in Python)
+
+##### Checked Exception
+
+- Any exceptions like `IOException` except the `RuntimeException` and its child classes
+- Exceptions like `IOException`, `FileNotFoundException`
+  - proven to be have a high chance of failing
+  - that's why Java forced you do some kind of handling
+
+##### Unchecked Exception
+
+- `RuntimeException`
+- `RuntimeException` child classes like `ArithmeticException`, `NullPointerException`
+
+#### Error
+
+> One that typically would be terminated by JVM, as it should be.
+
+- We could use `catch` to handle it
+- We shouldn't use `catch` to handle it
+
+### Snippet 16 `try-with-resouces`
+
+> Resources like files would be automatically closed
+
+```java
+try (X x = new X(new Y( new Z() ));
+     X x = new X(new Y( new Z() )); ) {
+    ..
+}
+catch (IOException exception) {
+    ..
+}
+```
+
+### Snippet 17 Serialization
+
+N/A
+
+### Snippet 18 Annotation
+
+N/A
+
+### Snippet 19 Reflection
+
+N/A
+
+### Snippet 20 Generics
+
+> [What are the benefits of Java's types erasure?](https://stackoverflow.com/questions/20918650/what-are-the-benefits-of-javas-types-erasure)
+
+N/A
+
 -----
 
-## References
+## I/O
 
-> Sorted from oldest to newest
+### N/A
+
+- N/A
+
+-----
+
+> References <small>oldest to newest</small>
+
+## Basics
 
 ### OOP
 
@@ -310,3 +396,19 @@ String a2 = s1 + s2
 - [Why doesn't Java offer operator overloading?](https://stackoverflow.com/questions/77718/why-doesnt-java-offer-operator-overloading/77798#77798)
 - [Operator overloading in Java](https://stackoverflow.com/a/1686708/6273859)
 - [Python Operator Overloading (With Examples)](https://www.programiz.com/python-programming/operator-overloading)
+
+### Boxing
+
+- [Autoboxing and Unboxine (Numbers and Strings)](https://docs.oracle.com/javase/tutorial/java/data/autoboxing.html)
+- Why do we use autoboxing and unboxing in Java? [1](https://stackoverflow.com/a/27647772/6273859), [2](https://stackoverflow.com/a/27647719/6273859), [3](https://stackoverflow.com/a/27647981/6273859)
+- What is boxing and unboxing and what are the trade offs? [1](https://stackoverflow.com/a/25324/6273859), [2](https://stackoverflow.com/a/13056/6273859)
+
+### Exception
+
+- [What are checked exceptions in Java/C#?](https://stackoverflow.com/a/9371709/6273859)
+
+## IO
+
+### N/A
+
+- N/A
