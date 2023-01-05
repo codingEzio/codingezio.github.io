@@ -358,6 +358,14 @@ catch (IOException exception) {
 
 -----
 
+## Collections
+
+### N/A
+
+- N/A
+
+-----
+
 ## I/O
 
 ### N/A
