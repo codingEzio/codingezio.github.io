@@ -1,11 +1,16 @@
 +++
 title = "Fetch Videos Online"
-description = "How You Gonna Grab Those Videos to Your Machine"
+description = "Archiving videos from various platforms"
 +++
 
 ### For AcFun
 
-- Go to [acfun.iiilab.com/](https://acfun.iiilab.com/)
+```
+brew install you-get
+
+you-get -i LINK     # get available formats
+you-get LINK        # download
+```
 
 ### For Bilibili
 

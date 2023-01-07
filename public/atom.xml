@@ -967,8 +967,9 @@ They are &lt;em&gt;watchers of the future&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;longreads.com&#x2F;&quot;&gt;Longreads&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;hr &#x2F;&gt;
-&lt;h3 id=&quot;software&quot;&gt;Software&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;misc&quot;&gt;Misc&lt;&#x2F;h3&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;awesomethread.com&#x2F;categories&#x2F;all&quot;&gt;AwesomeThread | Hand-picked and categorized Twitter threads&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.appinn.com&#x2F;&quot;&gt;小众软件&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;sspai.com&#x2F;&quot;&gt;少数派&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
@@ -1325,6 +1326,7 @@ TODO&lt;&#x2F;li&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;h2 id=&quot;before-we-begin&quot;&gt;Before We Begin&lt;&#x2F;h2&gt;
 &lt;h3 id=&quot;references&quot;&gt;References&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;main&quot;&gt;Main&lt;&#x2F;h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;These were the core references, while it&#x27;s also the learning materials&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
@@ -1332,6 +1334,10 @@ TODO&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;ithelp.ithome.com.tw&#x2F;users&#x2F;20103456&#x2F;ironman&#x2F;1766&quot;&gt;30 天介紹 Java 的 Thread&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;pdai.tech&#x2F;md&#x2F;java&#x2F;thread&#x2F;java-thread-x-overview.html&quot;&gt;Java 并发知识体系详解&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;Java 并发常见面题总结: &lt;a href=&quot;https:&#x2F;&#x2F;javaguide.cn&#x2F;java&#x2F;concurrent&#x2F;java-concurrent-questions-01.html&quot;&gt;&lt;em&gt;上&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;javaguide.cn&#x2F;java&#x2F;concurrent&#x2F;java-concurrent-questions-02.html&quot;&gt;&lt;em&gt;中&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;javaguide.cn&#x2F;java&#x2F;concurrent&#x2F;java-concurrent-questions-03.html&quot;&gt;&lt;em&gt;下&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;subsidiary&quot;&gt;Subsidiary&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gitlab.com&#x2F;Lipovsky&#x2F;awesome-concurrency&quot;&gt;Roman Lipovsky &#x2F; awesome-concurrency · GitLab&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h3 id=&quot;note&quot;&gt;Note&lt;&#x2F;h3&gt;
 &lt;blockquote&gt;
@@ -8342,9 +8348,11 @@ a full networking stack;&lt;&#x2F;li&gt;
 		<link rel="alternate" href="https://codingezio.github.io/fetching-videos-online/" type="text/html"/>
 		<id>https://codingezio.github.io/fetching-videos-online/</id>
 		<content type="html">&lt;h3 id=&quot;for-acfun&quot;&gt;For AcFun&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Go to &lt;a href=&quot;https:&#x2F;&#x2F;acfun.iiilab.com&#x2F;&quot;&gt;acfun.iiilab.com&#x2F;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
+&lt;pre style=&quot;background-color:#272822;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;brew install you-get
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;you-get -i LINK     # get available formats
+&lt;&#x2F;span&gt;&lt;span&gt;you-get LINK        # download
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;for-bilibili&quot;&gt;For Bilibili&lt;&#x2F;h3&gt;
 &lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;brew install lux
 &lt;&#x2F;span&gt;&lt;span&gt;

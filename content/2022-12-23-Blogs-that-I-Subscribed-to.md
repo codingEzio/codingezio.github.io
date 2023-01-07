@@ -63,7 +63,8 @@ description = "Thoughts from interesting and thoughtful human beings"
 
 -----
 
-### Software
+### Misc
 
+- [AwesomeThread | Hand-picked and categorized Twitter threads](https://awesomethread.com/categories/all)
 - [小众软件](https://www.appinn.com/)
 - [少数派](https://sspai.com/)
