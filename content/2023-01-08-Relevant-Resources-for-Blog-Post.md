@@ -87,6 +87,7 @@ description = "N/A"
 - [What is the difference between an interface and abstract class?](https://stackoverflow.com/questions/1913098/what-is-the-difference-between-an-interface-and-abstract-class)
 - [java - What is the difference between method overloading and overriding? - Stack Overflow](https://stackoverflow.com/questions/12374399/what-is-the-difference-between-method-overloading-and-overriding)
 - [jakarta ee - What is Java Servlet? - Stack Overflow](https://stackoverflow.com/questions/7213541/what-is-java-servlet)
+- [What are the differences between a HashMap and a Hashtable in Java? - Stack Overflow](https://stackoverflow.com/questions/40471/what-are-the-differences-between-a-hashmap-and-a-hashtable-in-java/22629569#22629569)
 
 ## Spring
 
