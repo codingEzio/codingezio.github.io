@@ -994,6 +994,28 @@ class Solution:
 
 -----
 
+## Past 2000
+
+### 2185. Counting Words With a Given Prefix
+
+```python
+class Solution:
+    def prefixCount(self, words: List[str], pref: str) -> int:
+        amountMatched = 0
+
+        # Find prefix
+        # "abc".find("a") -> 0
+        # "abc".find("b") -> -1
+        for word in words:
+            if word.find(pref) == 0:
+                amountMatched += 1
+
+        return amountMatched
+```
+
+
+-----
+
 ### References
 
 > Good to have but not necessary
