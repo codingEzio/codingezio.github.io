@@ -1,143 +1,143 @@
-<!doctype html><html lang=en><head><meta charset=UTF-8><meta content="width=device-width,initial-scale=1.0" name=viewport><title>Zero to One: on SQL · Rants and thoughts</title><meta content="Zero to One: on SQL" name=description><link rel="shortcut icon" href=https://codingezio.github.io/favicon.ico><link href=https://codingezio.github.io/atom.xml rel=alternate title=RSS type=application/atom+xml><style>html,body{background:#fffaf7;color:#2d2d2d;font:16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"}a,a:visited{color:darkred;text-decoration:none}a:hover{text-decoration:underline}main{margin:auto;max-width:38rem;padding:0.8rem}pre{background:white;overflow:scroll;padding:1rem}td{border:1px solid #2d2d2d;padding:10px}img{height:auto;max-width:100%}.homepage-list{list-style:none;padding:1rem 0}.homepage-list li{align-items:center;display:flex;flex-wrap:wrap;justify-content:space-between;margin-bottom:10px}@media (max-width: 38rem){.homepage-list li a{width:100%}}</style><meta content="Rants and thoughts" property=og:site_name><meta content="Zero to One: on SQL" property=og:title><meta content="Zero to One: on SQL" property=og:description><meta content=https://codingezio.github.io/zero-to-one-for-sql/ property=og:url><meta property=og:image><meta content=article property=og:type><meta content=2022-07-31T00:00:00+00:00 property=article:published_time><body><main id=main role=main><header role=banner><h3 style=margin-top:0;><a href=https://codingezio.github.io title=Home>Rants and thoughts</a> <br><small>Contact me via google_plus@aim.com</small></h3></header><hr><article><h1>Zero to One: on SQL</h1><p style=font-size:90%;>Posted on <time datetime=2022-07-31T00:00:00+00:00>July 31, 2022</time><h3 id=setup>Setup</h3><blockquote><p>Back then I was using <a href=https://mariadb.org/><em>MariaDB</em></a> with <a href=https://github.com/dbcli/mycli><em>mycli</em></a> on <em>macOS</em></blockquote><h4 id=mysql>MySQL</h4><blockquote><p>Normally I would choose the <code>brew install</code> approach, but it appears that there were unexpected permission issues relating to <em>sockets</em>. Also tried the <em>GUI</em> approach, well, let's just say I'm not a fan of using the GUI. Eventually I chose the <em>Docker Installation</em>.<p>Import data in <code>.sql</code>? I use <code>mycli</code> to connect to the database then <code>cd</code> to where that <code>.sql</code> files are and execute <code>source FILE.sql</code> to the imports.</blockquote><h5 id=the-gui-way>The <em>GUI</em> way</h5><ul><li>Go to the official MySQL <a href=https://dev.mysql.com/downloads/mysql/>download page</a><li>Choose whatever options that suits you along the way (~= up to you)<li>Restart your dock by <code>killall Dock</code><li>Go to the <em>MySQL</em> at the bottom in <em>System Preferences</em> to set stuff up</ul><h5 id=the-docker-way>The <em>Docker</em> way</h5><blockquote><p>Suppose you already have Docker installed. For me, it's Docker in VM. To be more exact, it's Installing Docker inside a VM, which is managed by Vagrant, then I edit the relevant config file <code>Vagrantfile</code> in order to expose the ports which is already available inside the VM to the host <small>(port mapping: Docker -> VM -> Host)</small>.</blockquote><pre class=language-bash data-lang=bash style=background-color:#272822;color:#f8f8f2;><code class=language-bash data-lang=bash><span style=color:#75715e;># Local directories for volume mapping (persistence)
-</span><span>mkdir</span><span style=font-style:italic;color:#fd971f;> -p </span><span>~/Config/mysql80/mysql80_{conf,data}
+<!doctype html><html lang=en><head><meta charset=UTF-8><meta content="width=device-width,initial-scale=1.0" name=viewport><title>Zero to One: on SQL · Ezio's blog 😊</title><meta content="Zero to One: on SQL" name=description><link rel="shortcut icon" href=https://codingezio.github.io/favicon.ico><link href=https://codingezio.github.io/atom.xml rel=alternate title=RSS type=application/atom+xml><style>html,body{background:#fffaf7;color:#2d2d2d;font:16.7px/1.57 Georgia, 'Times New Roman', Times, serif}a,a:visited{color:darkred;text-decoration:none}a:hover{text-decoration:underline}main{margin:auto;max-width:38rem;padding:0.8rem}pre{background:white;overflow:scroll;padding:1rem;font-size:0.90em;font-family:'Fira Code', 'SF Mono', 'Consolas', monospace}td{border:1px groove #2d2d2d;padding:5px}img{height:auto;max-width:100%}.homepage-list{list-style:none;padding:1rem 0}.homepage-list li{align-items:center;display:flex;flex-wrap:wrap;justify-content:space-between;margin-bottom:10px}@media (max-width: 38rem){.homepage-list li a{width:100%}}</style><meta content="Ezio's blog 😊" property=og:site_name><meta content="Zero to One: on SQL" property=og:title><meta content="Zero to One: on SQL" property=og:description><meta content=https://codingezio.github.io/zero-to-one-for-sql/ property=og:url><meta property=og:image><meta content=article property=og:type><meta content=2022-07-31T00:00:00+00:00 property=article:published_time><body><main id=main role=main><header role=banner><h3 style=margin-top:0;><a href=https://codingezio.github.io title=Home>Ezio's blog 😊</a> <br><small>A dumb coder that wants to learn everything</small></h3></header><hr><article><h1>Zero to One: on SQL</h1><p style=font-size:90%;>Posted on <time datetime=2022-07-31T00:00:00+00:00>July 31, 2022</time><h3 id=setup>Setup</h3><blockquote><p>Back then I was using <a href=https://mariadb.org/><em>MariaDB</em></a> with <a href=https://github.com/dbcli/mycli><em>mycli</em></a> on <em>macOS</em></blockquote><h4 id=mysql>MySQL</h4><blockquote><p>Normally I would choose the <code>brew install</code> approach, but it appears that there were unexpected permission issues relating to <em>sockets</em>. Also tried the <em>GUI</em> approach, well, let's just say I'm not a fan of using the GUI. Eventually I chose the <em>Docker Installation</em>.<p>Import data in <code>.sql</code>? I use <code>mycli</code> to connect to the database then <code>cd</code> to where that <code>.sql</code> files are and execute <code>source FILE.sql</code> to the imports.</blockquote><h5 id=the-gui-way>The <em>GUI</em> way</h5><ul><li>Go to the official MySQL <a href=https://dev.mysql.com/downloads/mysql/>download page</a><li>Choose whatever options that suits you along the way (~= up to you)<li>Restart your dock by <code>killall Dock</code><li>Go to the <em>MySQL</em> at the bottom in <em>System Preferences</em> to set stuff up</ul><h5 id=the-docker-way>The <em>Docker</em> way</h5><blockquote><p>Suppose you already have Docker installed. For me, it's Docker in VM. To be more exact, it's Installing Docker inside a VM, which is managed by Vagrant, then I edit the relevant config file <code>Vagrantfile</code> in order to expose the ports which is already available inside the VM to the host <small>(port mapping: Docker -> VM -> Host)</small>.</blockquote><pre class=language-bash data-lang=bash style=background-color:#282c34;color:#dcdfe4;><code class=language-bash data-lang=bash><span style=color:#5c6370;># Local directories for volume mapping (persistence)
+</span><span style=color:#e06c75;>mkdir -p ~</span><span>/Config/mysql80/mysql80_{conf,data}
 </span><span>
-</span><span style=color:#75715e;># Easier identification for the container created
-</span><span>container_name</span><span style=color:#f92672;>=</span><span style=color:#e6db74;>"mysql80-dev"
+</span><span style=color:#5c6370;># Easier identification for the container created
+</span><span style=color:#e06c75;>container_name</span><span style=color:#c678dd;>=</span><span style=color:#98c379;>"mysql80-dev"
 </span><span>
-</span><span style=color:#75715e;># Initiation for MySQL
-</span><span>ms_host_conf</span><span style=color:#f92672;>=</span><span style=color:#e6db74;>"~/Config/mysql80/mysql80_conf"
-</span><span>ms_host_data</span><span style=color:#f92672;>=</span><span style=color:#e6db74;>"~/Config/mysql80/mysql80_data"
-</span><span>ms_host_port</span><span style=color:#f92672;>=</span><span style=color:#e6db74;>3306
-</span><span>ms_pswd</span><span style=color:#f92672;>=</span><span style=color:#e6db74;>"password"
-</span><span>
-</span><span>
-</span><span style=color:#75715e;># Run at background and expose the export for host to connect
-</span><span style=color:#75715e;># AND mapping the directories inside to the host for persistence
-</span><span style=color:#75715e;># AND setting the password to prepare for us to connect
-</span><span style=color:#75715e;># AND choosing the mysql version explicitly which is 8.0.25
-</span><span>docker run</span><span style=font-style:italic;color:#fd971f;> --detach </span><span>\
-</span><span style=font-style:italic;color:#fd971f;>    --name</span><span style=color:#f92672;>=</span><span>$container_name \
-</span><span style=font-style:italic;color:#fd971f;>    --publish </span><span>${ms_host_port}:3306 \
-</span><span style=font-style:italic;color:#fd971f;>    --volume</span><span style=color:#f92672;>=</span><span>${ms_host_conf}/:/etc/mysql/conf.d \
-</span><span style=font-style:italic;color:#fd971f;>    --volume</span><span style=color:#f92672;>=</span><span>${ms_host_data}/:/var/lib/mysql \
-</span><span style=font-style:italic;color:#fd971f;>    --env</span><span style=color:#f92672;>=</span><span style=color:#e6db74;>"MYSQL_ROOT_PASSWORD=${ms_pswd}"</span><span> mysql:8.0.25
-</span><span>
-</span><span style=color:#75715e;># Common commands you would use
-</span><span>docker container            </span><span style=color:#75715e;># show all the relevant commands you could use
-</span><span>docker container ls         </span><span style=color:#75715e;># list all the containers (whether started or not)
-</span><span>docker container start      </span><span style=color:#75715e;># start the container
-</span><span>docker update mysql5dot7</span><span style=font-style:italic;color:#fd971f;> --restart</span><span style=color:#f92672;>=</span><span>always   </span><span style=color:#75715e;># start MySQL when Docker starts
-</span><span>docker exec     mysql80-dev ls              </span><span style=color:#75715e;># run `ls` in container
-</span><span>docker exec</span><span style=font-style:italic;color:#fd971f;> -it</span><span> mysql80-dev bash            </span><span style=color:#75715e;># run `bash` into the container
+</span><span style=color:#5c6370;># Initiation for MySQL
+</span><span style=color:#e06c75;>ms_host_conf</span><span style=color:#c678dd;>=</span><span style=color:#98c379;>"~/Config/mysql80/mysql80_conf"
+</span><span style=color:#e06c75;>ms_host_data</span><span style=color:#c678dd;>=</span><span style=color:#98c379;>"~/Config/mysql80/mysql80_data"
+</span><span style=color:#e06c75;>ms_host_port</span><span style=color:#c678dd;>=</span><span style=color:#98c379;>3306
+</span><span style=color:#e06c75;>ms_pswd</span><span style=color:#c678dd;>=</span><span style=color:#98c379;>"password"
 </span><span>
 </span><span>
-</span><span style=color:#75715e;># And maybe you want to fetch the information of the MySQL container
-</span><span>docker inspect $image_name </span><span style=color:#f92672;>| </span><span>jq</span><span style=font-style:italic;color:#fd971f;> -C </span><span style=color:#f92672;>| </span><span>less
-</span><span>docker inspect $image_name </span><span style=color:#f92672;>| </span><span>jq</span><span style=font-style:italic;color:#fd971f;> -C </span><span style=color:#e6db74;>'.[0].Created'                   </span><span style=color:#f92672;>| </span><span>less
-</span><span>docker inspect $image_name </span><span style=color:#f92672;>| </span><span>jq</span><span style=font-style:italic;color:#fd971f;> -C </span><span style=color:#e6db74;>'.[0].State.Status'              </span><span style=color:#f92672;>| </span><span>less
-</span><span>docker inspect $image_name </span><span style=color:#f92672;>| </span><span>jq</span><span style=font-style:italic;color:#fd971f;> -C </span><span style=color:#e6db74;>'.[0].Config.Env'                </span><span style=color:#f92672;>| </span><span>less
-</span><span>docker inspect $image_name </span><span style=color:#f92672;>| </span><span>jq</span><span style=font-style:italic;color:#fd971f;> -C </span><span style=color:#e6db74;>'.[0].Config.Env[]'              </span><span style=color:#f92672;>| </span><span>less
-</span><span>docker inspect $image_name </span><span style=color:#f92672;>| </span><span>jq</span><span style=font-style:italic;color:#fd971f;> -C </span><span style=color:#e6db74;>'.[0].Config.Env[1]'             </span><span style=color:#f92672;>| </span><span>less
-</span><span>docker inspect $image_name </span><span style=color:#f92672;>| </span><span>jq</span><span style=font-style:italic;color:#fd971f;> -C </span><span style=color:#e6db74;>'.[0].NetworkSettings.IPAddress' </span><span style=color:#f92672;>| </span><span>less
-</span></code></pre><hr><h3 id=authentication>Authentication</h3><h5 id=modify-password-for-connection>Modify Password for Connection</h5><pre class=language-sql data-lang=sql style=background-color:#272822;color:#f8f8f2;><code class=language-sql data-lang=sql><span style=color:#75715e;>-- modify your password for connection
-</span><span style=color:#f92672;>ALTER USER </span><span>root@localhost IDENTIFIED VIA mysql_native_password;
-</span><span style=color:#f92672;>SET</span><span> PASSWORD </span><span style=color:#f92672;>=</span><span> PASSWORD(</span><span style=color:#e6db74;>'YOUR-NEW-CONN-PASSWORD'</span><span>);
-</span></code></pre><h5 id=new-user-for-new-database>New User for New Database</h5><ol><li><p>Create</p> <pre class=language-sql data-lang=sql style=background-color:#272822;color:#f8f8f2;><code class=language-sql data-lang=sql><span style=color:#75715e;>-- Administrator-level privilege with all tools available
-</span><span style=color:#f92672;>CREATE USER </span><span>'</span><span style=color:#a6e22e;>joe</span><span>'@</span><span style=color:#e6db74;>'localhost'</span><span> IDENTIFIED BY </span><span style=color:#e6db74;>'jeopassword'</span><span>;
-</span><span style=color:#f92672;>GRANT</span><span> ALL PRIVILEDGES ON *.* TO </span><span style=color:#e6db74;>'joe'</span><span>@</span><span style=color:#e6db74;>'localhost'</span><span>;
+</span><span style=color:#5c6370;># Run at background and expose the export for host to connect
+</span><span style=color:#5c6370;># AND mapping the directories inside to the host for persistence
+</span><span style=color:#5c6370;># AND setting the password to prepare for us to connect
+</span><span style=color:#5c6370;># AND choosing the mysql version explicitly which is 8.0.25
+</span><span style=color:#e06c75;>docker</span><span> run</span><span style=color:#e06c75;> --detach </span><span>\
+</span><span style=color:#e06c75;>    --name</span><span style=color:#c678dd;>=</span><span>$</span><span style=color:#e06c75;>container_name </span><span>\
+</span><span style=color:#e06c75;>    --publish </span><span>${</span><span style=color:#e06c75;>ms_host_port</span><span>}:3306 \
+</span><span style=color:#e06c75;>    --volume</span><span style=color:#c678dd;>=</span><span>${</span><span style=color:#e06c75;>ms_host_conf</span><span>}/:/etc/mysql/conf.d \
+</span><span style=color:#e06c75;>    --volume</span><span style=color:#c678dd;>=</span><span>${</span><span style=color:#e06c75;>ms_host_data</span><span>}/:/var/lib/mysql \
+</span><span style=color:#e06c75;>    --env</span><span style=color:#c678dd;>=</span><span style=color:#98c379;>"MYSQL_ROOT_PASSWORD=${</span><span style=color:#e06c75;>ms_pswd</span><span style=color:#98c379;>}"</span><span> mysql:8.0.25
 </span><span>
-</span><span style=color:#75715e;>-- The `testdb` was created by the user 'root' (or whoever else)
-</span><span style=color:#75715e;>-- Granting privileges with limited scope (only tables under `testdb`)
-</span><span style=color:#f92672;>CREATE USER </span><span>'</span><span style=color:#a6e22e;>testuser</span><span>'@</span><span style=color:#e6db74;>'localhost'</span><span> IDENTIFIED BY </span><span style=color:#e6db74;>'testpasswd'</span><span>;
-</span><span style=color:#f92672;>GRANT</span><span> ALL ON testdb.* TO </span><span style=color:#e6db74;>'testuser'</span><span>@</span><span style=color:#e6db74;>'localhost'</span><span>;
+</span><span style=color:#5c6370;># Common commands you would use
+</span><span style=color:#e06c75;>docker</span><span> container            </span><span style=color:#5c6370;># show all the relevant commands you could use
+</span><span style=color:#e06c75;>docker</span><span> container ls         </span><span style=color:#5c6370;># list all the containers (whether started or not)
+</span><span style=color:#e06c75;>docker</span><span> container start      </span><span style=color:#5c6370;># start the container
+</span><span style=color:#e06c75;>docker</span><span> update mysql5dot7</span><span style=color:#e06c75;> --restart</span><span style=color:#c678dd;>=</span><span>always   </span><span style=color:#5c6370;># start MySQL when Docker starts
+</span><span style=color:#e06c75;>docker</span><span> exec     mysql80-dev ls              </span><span style=color:#5c6370;># run `ls` in container
+</span><span style=color:#e06c75;>docker</span><span> exec</span><span style=color:#e06c75;> -it</span><span> mysql80-dev bash            </span><span style=color:#5c6370;># run `bash` into the container
 </span><span>
-</span><span style=color:#75715e;>-- Kinda like reloading the config to make it work
+</span><span>
+</span><span style=color:#5c6370;># And maybe you want to fetch the information of the MySQL container
+</span><span style=color:#e06c75;>docker</span><span> inspect $</span><span style=color:#e06c75;>image_name </span><span style=color:#c678dd;>| </span><span style=color:#e06c75;>jq -C </span><span style=color:#c678dd;>| </span><span style=color:#e06c75;>less
+</span><span style=color:#e06c75;>docker</span><span> inspect $</span><span style=color:#e06c75;>image_name </span><span style=color:#c678dd;>| </span><span style=color:#e06c75;>jq -C </span><span style=color:#98c379;>'.[0].Created'                   </span><span style=color:#c678dd;>| </span><span style=color:#e06c75;>less
+</span><span style=color:#e06c75;>docker</span><span> inspect $</span><span style=color:#e06c75;>image_name </span><span style=color:#c678dd;>| </span><span style=color:#e06c75;>jq -C </span><span style=color:#98c379;>'.[0].State.Status'              </span><span style=color:#c678dd;>| </span><span style=color:#e06c75;>less
+</span><span style=color:#e06c75;>docker</span><span> inspect $</span><span style=color:#e06c75;>image_name </span><span style=color:#c678dd;>| </span><span style=color:#e06c75;>jq -C </span><span style=color:#98c379;>'.[0].Config.Env'                </span><span style=color:#c678dd;>| </span><span style=color:#e06c75;>less
+</span><span style=color:#e06c75;>docker</span><span> inspect $</span><span style=color:#e06c75;>image_name </span><span style=color:#c678dd;>| </span><span style=color:#e06c75;>jq -C </span><span style=color:#98c379;>'.[0].Config.Env[]'              </span><span style=color:#c678dd;>| </span><span style=color:#e06c75;>less
+</span><span style=color:#e06c75;>docker</span><span> inspect $</span><span style=color:#e06c75;>image_name </span><span style=color:#c678dd;>| </span><span style=color:#e06c75;>jq -C </span><span style=color:#98c379;>'.[0].Config.Env[1]'             </span><span style=color:#c678dd;>| </span><span style=color:#e06c75;>less
+</span><span style=color:#e06c75;>docker</span><span> inspect $</span><span style=color:#e06c75;>image_name </span><span style=color:#c678dd;>| </span><span style=color:#e06c75;>jq -C </span><span style=color:#98c379;>'.[0].NetworkSettings.IPAddress' </span><span style=color:#c678dd;>| </span><span style=color:#e06c75;>less
+</span></code></pre><hr><h3 id=authentication>Authentication</h3><h5 id=modify-password-for-connection>Modify Password for Connection</h5><pre class=language-sql data-lang=sql style=background-color:#282c34;color:#dcdfe4;><code class=language-sql data-lang=sql><span style=color:#5c6370;>-- modify your password for connection
+</span><span style=color:#c678dd;>ALTER USER </span><span>root@localhost IDENTIFIED VIA mysql_native_password;
+</span><span style=color:#c678dd;>SET</span><span> PASSWORD </span><span style=color:#c678dd;>=</span><span> PASSWORD(</span><span style=color:#98c379;>'YOUR-NEW-CONN-PASSWORD'</span><span>);
+</span></code></pre><h5 id=new-user-for-new-database>New User for New Database</h5><ol><li><p>Create</p> <pre class=language-sql data-lang=sql style=background-color:#282c34;color:#dcdfe4;><code class=language-sql data-lang=sql><span style=color:#5c6370;>-- Administrator-level privilege with all tools available
+</span><span style=color:#c678dd;>CREATE USER </span><span>'</span><span style=color:#61afef;>joe</span><span>'@</span><span style=color:#98c379;>'localhost'</span><span> IDENTIFIED BY </span><span style=color:#98c379;>'jeopassword'</span><span>;
+</span><span style=color:#c678dd;>GRANT</span><span> ALL PRIVILEDGES ON </span><span style=color:#e06c75;>*</span><span>.</span><span style=color:#e06c75;>*</span><span> TO </span><span style=color:#98c379;>'joe'</span><span>@</span><span style=color:#98c379;>'localhost'</span><span>;
+</span><span>
+</span><span style=color:#5c6370;>-- The `testdb` was created by the user 'root' (or whoever else)
+</span><span style=color:#5c6370;>-- Granting privileges with limited scope (only tables under `testdb`)
+</span><span style=color:#c678dd;>CREATE USER </span><span>'</span><span style=color:#61afef;>testuser</span><span>'@</span><span style=color:#98c379;>'localhost'</span><span> IDENTIFIED BY </span><span style=color:#98c379;>'testpasswd'</span><span>;
+</span><span style=color:#c678dd;>GRANT</span><span> ALL ON testdb.</span><span style=color:#e06c75;>*</span><span> TO </span><span style=color:#98c379;>'testuser'</span><span>@</span><span style=color:#98c379;>'localhost'</span><span>;
+</span><span>
+</span><span style=color:#5c6370;>-- Kinda like reloading the config to make it work
 </span><span>FLUSH PRIVILEGES;
-</span></code></pre><li><p>Connect</p> <pre class=language-bash data-lang=bash style=background-color:#272822;color:#f8f8f2;><code class=language-bash data-lang=bash><span style=color:#75715e;># Available to you by default
-</span><span>mysql</span><span style=font-style:italic;color:#fd971f;> --user</span><span> testuser</span><span style=font-style:italic;color:#fd971f;> --password</span><span> testdb
+</span></code></pre><li><p>Connect</p> <pre class=language-bash data-lang=bash style=background-color:#282c34;color:#dcdfe4;><code class=language-bash data-lang=bash><span style=color:#5c6370;># Available to you by default
+</span><span style=color:#e06c75;>mysql --user</span><span> testuser</span><span style=color:#e06c75;> --password</span><span> testdb
 </span><span>
-</span><span style=color:#75715e;># CLI with syntax highlighting and ushc (installation needed)
-</span><span>mycli</span><span style=font-style:italic;color:#fd971f;> --user</span><span> testuser</span><span style=font-style:italic;color:#fd971f;> --host</span><span> localhost testdb
-</span></code></pre></ol><h3 id=meta-info>Meta Info</h3><h5 id=into-the-database-and-its-tables>Into the <em>Database</em> and its <em>Tables</em></h5><pre class=language-sql data-lang=sql style=background-color:#272822;color:#f8f8f2;><code class=language-sql data-lang=sql><span>SHOW DATABASES;
+</span><span style=color:#5c6370;># CLI with syntax highlighting and ushc (installation needed)
+</span><span style=color:#e06c75;>mycli --user</span><span> testuser</span><span style=color:#e06c75;> --host</span><span> localhost testdb
+</span></code></pre></ol><h3 id=meta-info>Meta Info</h3><h5 id=into-the-database-and-its-tables>Into the <em>Database</em> and its <em>Tables</em></h5><pre class=language-sql data-lang=sql style=background-color:#282c34;color:#dcdfe4;><code class=language-sql data-lang=sql><span>SHOW DATABASES;
 </span><span>
-</span><span style=color:#f92672;>+</span><span style=color:#75715e;>--------------------+
+</span><span style=color:#c678dd;>+</span><span style=color:#5c6370;>--------------------+
 </span><span>| Database           |
-</span><span style=color:#f92672;>+</span><span style=color:#75715e;>--------------------+
+</span><span style=color:#c678dd;>+</span><span style=color:#5c6370;>--------------------+
 </span><span>| information_schema |
 </span><span>| mysql              |
 </span><span>| performance_schema |
 </span><span>| sys                |
 </span><span>| cardb              |
-</span><span style=color:#f92672;>+</span><span style=color:#75715e;>--------------------+
+</span><span style=color:#c678dd;>+</span><span style=color:#5c6370;>--------------------+
 </span><span>
 </span><span>
 </span><span>USE                  cardb;
-</span><span>SHOW </span><span style=color:#f92672;>CREATE DATABASE </span><span style=color:#a6e22e;>cardb</span><span>;
-</span></code></pre><pre class=language-sql data-lang=sql style=background-color:#272822;color:#f8f8f2;><code class=language-sql data-lang=sql><span>SHOW TABLES;
+</span><span>SHOW </span><span style=color:#c678dd;>CREATE DATABASE </span><span style=color:#61afef;>cardb</span><span>;
+</span></code></pre><pre class=language-sql data-lang=sql style=background-color:#282c34;color:#dcdfe4;><code class=language-sql data-lang=sql><span>SHOW TABLES;
 </span><span>
-</span><span style=color:#f92672;>+</span><span style=color:#75715e;>-----------------+
+</span><span style=color:#c678dd;>+</span><span style=color:#5c6370;>-----------------+
 </span><span>| Tables_in_cardb |
-</span><span style=color:#f92672;>+</span><span style=color:#75715e;>-----------------+
+</span><span style=color:#c678dd;>+</span><span style=color:#5c6370;>-----------------+
 </span><span>| car             |
 </span><span>| owner           |
 </span><span>| user            |
-</span><span style=color:#f92672;>+</span><span style=color:#75715e;>-----------------+
+</span><span style=color:#c678dd;>+</span><span style=color:#5c6370;>-----------------+
 </span><span>
 </span><span>
-</span><span style=color:#75715e;>-- table schema
+</span><span style=color:#5c6370;>-- table schema
 </span><span>DESCRIBE          user;
-</span><span>SHOW COLUMNS </span><span style=color:#f92672;>FROM</span><span> user;
+</span><span>SHOW COLUMNS </span><span style=color:#c678dd;>FROM</span><span> user;
 </span><span>
-</span><span style=color:#f92672;>+</span><span style=color:#75715e;>----------+--------------+------+-----+---------+----------------+
-</span><span>| Field    | Type         | </span><span style=color:#ae81ff;>Null</span><span> | Key | </span><span style=color:#f92672;>Default</span><span> | Extra          |
-</span><span style=color:#f92672;>+</span><span style=color:#75715e;>----------+--------------+------+-----+---------+----------------+
-</span><span>| id       | </span><span style=font-style:italic;color:#66d9ef;>bigint</span><span>(</span><span style=color:#ae81ff;>20</span><span>)   | NO   | PRI | </span><span style=color:#f92672;><</span><span style=color:#ae81ff;>null</span><span style=color:#f92672;>></span><span>  | auto_increment |
-</span><span>| password | </span><span style=font-style:italic;color:#66d9ef;>varchar</span><span>(</span><span style=color:#ae81ff;>255</span><span>) | NO   |     | </span><span style=color:#f92672;><</span><span style=color:#ae81ff;>null</span><span style=color:#f92672;>></span><span>  |                |
-</span><span>| role     | </span><span style=font-style:italic;color:#66d9ef;>varchar</span><span>(</span><span style=color:#ae81ff;>255</span><span>) | NO   |     | </span><span style=color:#f92672;><</span><span style=color:#ae81ff;>null</span><span style=color:#f92672;>></span><span>  |                |
-</span><span>| username | </span><span style=font-style:italic;color:#66d9ef;>varchar</span><span>(</span><span style=color:#ae81ff;>255</span><span>) | NO   | UNI | </span><span style=color:#f92672;><</span><span style=color:#ae81ff;>null</span><span style=color:#f92672;>></span><span>  |                |
-</span><span style=color:#f92672;>+</span><span style=color:#75715e;>----------+--------------+------+-----+---------+----------------+
-</span><span>
-</span><span>
-</span><span style=color:#75715e;>-- table creation
-</span><span>SHOW </span><span style=color:#f92672;>CREATE TABLE </span><span style=color:#a6e22e;>user</span><span>   ;    </span><span style=color:#75715e;>-- long string filled with '\n's
-</span><span>SHOW </span><span style=color:#f92672;>CREATE TABLE </span><span style=color:#a6e22e;>user</span><span style=color:#f92672;>/</span><span>G ;    </span><span style=color:#75715e;>-- display vertically (\n -> real line feeds)
-</span></code></pre><h5 id=non-table-metadata>Non-table Metadata</h5><pre class=language-sql data-lang=sql style=background-color:#272822;color:#f8f8f2;><code class=language-sql data-lang=sql><span style=color:#75715e;>-- A set of symbols ('A') and its encodings (65)
-</span><span>SHOW CHARACTER </span><span style=color:#f92672;>SET</span><span>;
-</span><span>SHOW VARIABLES </span><span style=color:#f92672;>LIKE </span><span style=color:#e6db74;>'char%'</span><span>;
+</span><span style=color:#c678dd;>+</span><span style=color:#5c6370;>----------+--------------+------+-----+---------+----------------+
+</span><span>| Field    | Type         | </span><span style=color:#e5c07b;>Null</span><span> | Key | </span><span style=color:#c678dd;>Default</span><span> | Extra          |
+</span><span style=color:#c678dd;>+</span><span style=color:#5c6370;>----------+--------------+------+-----+---------+----------------+
+</span><span>| id       | </span><span style=color:#c678dd;>bigint</span><span>(</span><span style=color:#e5c07b;>20</span><span>)   | NO   | PRI | </span><span style=color:#c678dd;><</span><span style=color:#e5c07b;>null</span><span style=color:#c678dd;>></span><span>  | auto_increment |
+</span><span>| password | </span><span style=color:#c678dd;>varchar</span><span>(</span><span style=color:#e5c07b;>255</span><span>) | NO   |     | </span><span style=color:#c678dd;><</span><span style=color:#e5c07b;>null</span><span style=color:#c678dd;>></span><span>  |                |
+</span><span>| role     | </span><span style=color:#c678dd;>varchar</span><span>(</span><span style=color:#e5c07b;>255</span><span>) | NO   |     | </span><span style=color:#c678dd;><</span><span style=color:#e5c07b;>null</span><span style=color:#c678dd;>></span><span>  |                |
+</span><span>| username | </span><span style=color:#c678dd;>varchar</span><span>(</span><span style=color:#e5c07b;>255</span><span>) | NO   | UNI | </span><span style=color:#c678dd;><</span><span style=color:#e5c07b;>null</span><span style=color:#c678dd;>></span><span>  |                |
+</span><span style=color:#c678dd;>+</span><span style=color:#5c6370;>----------+--------------+------+-----+---------+----------------+
 </span><span>
 </span><span>
-</span><span style=color:#75715e;>-- A set of rules for comparing characters (e.g. for sorting)
+</span><span style=color:#5c6370;>-- table creation
+</span><span>SHOW </span><span style=color:#c678dd;>CREATE TABLE </span><span style=color:#61afef;>user</span><span>   ;    </span><span style=color:#5c6370;>-- long string filled with '\n's
+</span><span>SHOW </span><span style=color:#c678dd;>CREATE TABLE </span><span style=color:#61afef;>user</span><span style=color:#c678dd;>/</span><span>G ;    </span><span style=color:#5c6370;>-- display vertically (\n -> real line feeds)
+</span></code></pre><h5 id=non-table-metadata>Non-table Metadata</h5><pre class=language-sql data-lang=sql style=background-color:#282c34;color:#dcdfe4;><code class=language-sql data-lang=sql><span style=color:#5c6370;>-- A set of symbols ('A') and its encodings (65)
+</span><span>SHOW CHARACTER </span><span style=color:#c678dd;>SET</span><span>;
+</span><span>SHOW VARIABLES </span><span style=color:#c678dd;>LIKE </span><span style=color:#98c379;>'char%'</span><span>;
+</span><span>
+</span><span>
+</span><span style=color:#5c6370;>-- A set of rules for comparing characters (e.g. for sorting)
 </span><span>SHOW COLLATION;
-</span><span>SHOW VARIABLES </span><span style=color:#f92672;>LIKE </span><span style=color:#e6db74;>'coll%'</span><span>;
-</span></code></pre><h3 id=data-creation>Data Creation</h3><h5 id=create-databases-and-tables>Create Databases and Tables</h5><pre class=language-sql data-lang=sql style=background-color:#272822;color:#f8f8f2;><code class=language-sql data-lang=sql><span style=color:#f92672;>CREATE DATABASE               </span><span style=color:#a6e22e;>Car
-</span><span style=color:#f92672;>CREATE DATABASE </span><span>IF NOT EXISTS </span><span style=color:#a6e22e;>Car
+</span><span>SHOW VARIABLES </span><span style=color:#c678dd;>LIKE </span><span style=color:#98c379;>'coll%'</span><span>;
+</span></code></pre><h3 id=data-creation>Data Creation</h3><h5 id=create-databases-and-tables>Create Databases and Tables</h5><pre class=language-sql data-lang=sql style=background-color:#282c34;color:#dcdfe4;><code class=language-sql data-lang=sql><span style=color:#c678dd;>CREATE DATABASE               </span><span style=color:#61afef;>Car
+</span><span style=color:#c678dd;>CREATE DATABASE </span><span>IF NOT EXISTS </span><span style=color:#61afef;>Car
 </span><span>
 </span><span>
-</span><span style=color:#f92672;>CREATE TABLE </span><span style=color:#a6e22e;>Owner</span><span> (
-</span><span>    OwnerId </span><span style=font-style:italic;color:#66d9ef;>INT</span><span> AUTO_INCREMENT,
-</span><span>    FirstName </span><span style=font-style:italic;color:#66d9ef;>VARCHAR</span><span>(</span><span style=color:#ae81ff;>255</span><span>),
-</span><span>    LastName </span><span style=font-style:italic;color:#66d9ef;>VARCHAR</span><span>(</span><span style=color:#ae81ff;>255</span><span>),
-</span><span>    Gender ENUM(</span><span style=color:#e6db74;>'Male'</span><span>, </span><span style=color:#e6db74;>'Female'</span><span>, </span><span style=color:#e6db74;>'Non-Binary'</span><span>, </span><span style=color:#e6db74;>'PreferNotToTell'</span><span>),
-</span><span>    Employed ENUM(</span><span style=color:#e6db74;>'Yes'</span><span>, </span><span style=color:#e6db74;>'Not-Yet'</span><span>) </span><span style=color:#f92672;>DEFAULT </span><span style=color:#e6db74;>"Not-Yet"</span><span>,
-</span><span>    </span><span style=color:#f92672;>PRIMARY KEY</span><span> (OwnerId)
+</span><span style=color:#c678dd;>CREATE TABLE </span><span style=color:#61afef;>Owner</span><span> (
+</span><span>    OwnerId </span><span style=color:#c678dd;>INT</span><span> AUTO_INCREMENT,
+</span><span>    FirstName </span><span style=color:#c678dd;>VARCHAR</span><span>(</span><span style=color:#e5c07b;>255</span><span>),
+</span><span>    LastName </span><span style=color:#c678dd;>VARCHAR</span><span>(</span><span style=color:#e5c07b;>255</span><span>),
+</span><span>    Gender ENUM(</span><span style=color:#98c379;>'Male'</span><span>, </span><span style=color:#98c379;>'Female'</span><span>, </span><span style=color:#98c379;>'Non-Binary'</span><span>, </span><span style=color:#98c379;>'PreferNotToTell'</span><span>),
+</span><span>    Employed ENUM(</span><span style=color:#98c379;>'Yes'</span><span>, </span><span style=color:#98c379;>'Not-Yet'</span><span>) </span><span style=color:#c678dd;>DEFAULT </span><span style=color:#98c379;>"Not-Yet"</span><span>,
+</span><span>    </span><span style=color:#c678dd;>PRIMARY KEY</span><span> (OwnerId)
 </span><span>);
 </span><span>
 </span><span>
-</span><span style=color:#75715e;>-- deleted after the session ends
+</span><span style=color:#5c6370;>-- deleted after the session ends
 </span><span>CREATE TEMPORARY TABLE Owner ( ... )
-</span></code></pre><h5 id=add-new-data>Add New Data</h5><pre class=language-sql data-lang=sql style=background-color:#272822;color:#f8f8f2;><code class=language-sql data-lang=sql><span style=color:#75715e;>-- Different ways to the insertion of the Primary Key
-</span><span style=color:#f92672;>INSERT INTO</span><span> Person (id, name, age)
-</span><span>                    {</span><span style=color:#ae81ff;>1</span><span> , </span><span style=color:#e6db74;>'Jo'</span><span>, </span><span style=color:#ae81ff;>29</span><span>};
+</span></code></pre><h5 id=add-new-data>Add New Data</h5><pre class=language-sql data-lang=sql style=background-color:#282c34;color:#dcdfe4;><code class=language-sql data-lang=sql><span style=color:#5c6370;>-- Different ways to the insertion of the Primary Key
+</span><span style=color:#c678dd;>INSERT INTO</span><span> Person (id, name, age)
+</span><span>                    {</span><span style=color:#e5c07b;>1</span><span> , </span><span style=color:#98c379;>'Jo'</span><span>, </span><span style=color:#e5c07b;>29</span><span>};
 </span><span>
-</span><span style=color:#f92672;>INSERT INTO</span><span> Person (name, age)
-</span><span>                    {</span><span style=color:#e6db74;>'Jo'</span><span>, </span><span style=color:#ae81ff;>29</span><span>};
+</span><span style=color:#c678dd;>INSERT INTO</span><span> Person (name, age)
+</span><span>                    {</span><span style=color:#98c379;>'Jo'</span><span>, </span><span style=color:#e5c07b;>29</span><span>};
 </span><span>
-</span><span style=color:#f92672;>INSERT INTO</span><span> Person (</span><span style=color:#f92672;>DEFAULT</span><span> , </span><span style=color:#e6db74;>'Jo'</span><span>, </span><span style=color:#ae81ff;>29</span><span>};
-</span><span style=color:#f92672;>INSERT INTO</span><span> Person (</span><span style=color:#ae81ff;>NULL</span><span>    , </span><span style=color:#e6db74;>'Jo'</span><span>, </span><span style=color:#ae81ff;>29</span><span>};
+</span><span style=color:#c678dd;>INSERT INTO</span><span> Person (</span><span style=color:#c678dd;>DEFAULT</span><span> , </span><span style=color:#98c379;>'Jo'</span><span>, </span><span style=color:#e5c07b;>29</span><span>};
+</span><span style=color:#c678dd;>INSERT INTO</span><span> Person (</span><span style=color:#e5c07b;>NULL</span><span>    , </span><span style=color:#98c379;>'Jo'</span><span>, </span><span style=color:#e5c07b;>29</span><span>};
 </span><span>
-</span><span style=color:#f92672;>INSERT INTO</span><span> Person </span><span style=color:#f92672;>SET</span><span> name</span><span style=color:#f92672;>=</span><span style=color:#e6db74;>'Jo'</span><span>, age</span><span style=color:#f92672;>=</span><span style=color:#ae81ff;>29</span><span>;
+</span><span style=color:#c678dd;>INSERT INTO</span><span> Person </span><span style=color:#c678dd;>SET</span><span> name</span><span style=color:#c678dd;>=</span><span style=color:#98c379;>'Jo'</span><span>, age</span><span style=color:#c678dd;>=</span><span style=color:#e5c07b;>29</span><span>;
 </span><span>
 </span><span>
-</span><span style=color:#75715e;>-- Fail if there's any 'NOT NULL' restraints
-</span><span style=color:#f92672;>INSERT INTO</span><span> Person ( .. ) { .. }
+</span><span style=color:#5c6370;>-- Fail if there's any 'NOT NULL' restraints
+</span><span style=color:#c678dd;>INSERT INTO</span><span> Person ( .. ) { .. }
 </span></code></pre><h3 id=syntax-in-depth>Syntax In Depth</h3><h5 id=left-join-or-left-outer-join><code>LEFT JOIN</code> or <code>LEFT OUTER JOIN</code></h5><ol><li>There are three types of <code>JOIN</code>s: <code>INNER</code>, <code>OUTER</code>, <code>CROSS</code><li>If you said <code>JOIN</code>, it's <strong><code>INNER</code></strong><code>JOIN</code><li>If you said either <code>LEFT</code>, <code>RIGHT</code> or <code>FULL</code>, it's <strong><code>OUTER</code></strong> <code>_</code> <code>JOIN</code></ol><hr><h3 id=concept>Concept</h3><h4 id=eli5-of-connect-from-host-to-the-server-lives-in-docker>ELI5 of <em>connect FROM host TO the server lives in Docker</em></h4><blockquote><p>This note was written at the time I'm having trouble understanding <em>Docker</em> and the relationship between <em>MySQL Server</em> and <em>MySQL Client</em></blockquote><h5 id=conceptual-reasoning>conceptual reasoning</h5><ol><li>the only core thing you need is a mysql-server<li>anything else is "trying to connect to the server" <ul><li>it can be mysql-client (provided by MySQL)<li>it can be a Python driver, or a JDBC(Java) driver<li>it can be a GUI DBMS like DBeaver or DataGrip (they dl drives for you)</ul><li>connecting to the MySQL lives in the docker <ul><li>it's actually not much different from the real world<li>previously it's localhost (server and client lives together)<li>now it's DOCKER_IMAGE_IP:EXPOSED_PORT (just like the real world)</ul><li>persistent storage (data isn't lost after the image was deleted) <ul><li>what we want mostly is the (custom) config (for our purpose) and the data<li>both could be achieved by creating volumes (real-world:virtual-world)<li>think of it like the 'Shared Folder' in VMs (but for more specific goals)<li>by creating vols, you expose specific folders to the outside (persistent)</ul></ol><hr><h3 id=references>References</h3><ul><li><a href=https://pdai.tech/md/db/sql-lan/sql-lan.html>SQL语法基础</a><li><a href=https://stackoverflow.com/a/36190905/6273859>Create new user in MySQL and give it full access to one database</a><li><a href="https://dev.mysql.com/doc/refman/8.0/en/charset-general.html#:~:text=A%20character%20set%20is%20a,%2C%20B%20%2C%20a%20%2C%20b%20.">MySQL :: Character Sets and Collations in General</a></ul></article><footer role=contentinfo><hr><small>Built with <a href=https://www.getzola.org/>Zola</a>.<br> </small></footer></main>

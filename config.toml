@@ -2,8 +2,8 @@
 base_url = "https://codingezio.github.io"
 
 # My essentials
-title = "Rants and thoughts"
-description = "Contact me via google_plus@aim.com"
+title = "Ezio's blog 😊"
+description = "A dumb coder that wants to learn everything"
 default_language = "en"
 minify_html = true
 
@@ -21,7 +21,8 @@ build_search_index = true
 highlight_code = true
 
 # https://www.getzola.org/documentation/getting-started/configuration/#syntax-highlighting
-highlight_theme = "monokai"
+# highlight_theme = "monokai"
+highlight_theme = "OneHalfDark"
 
 
 [link_checker]

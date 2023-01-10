@@ -2,9 +2,8 @@ html,
 body {
 	background: #fffaf7;
 	color: #2d2d2d;
-	font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-		Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-		"Segoe UI Symbol";
+	// font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+	font: 16.7px/1.57 Georgia, 'Times New Roman', Times, serif;
 }
 a,
 a:visited {
@@ -23,10 +22,13 @@ pre {
 	background: white;
 	overflow: scroll;
 	padding: 1rem;
+
+	font-size: 0.90em;
+	font-family: 'Fira Code', 'SF Mono', 'Consolas', monospace;
 }
 td {
-	border: 1px solid #2d2d2d;
-	padding: 10px;
+	border: 1px groove #2d2d2d;
+	padding: 5px;
 }
 img {
 	height: auto;

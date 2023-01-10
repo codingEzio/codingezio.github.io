@@ -1,815 +1,815 @@
-<!doctype html><html lang=en><head><meta charset=UTF-8><meta content="width=device-width,initial-scale=1.0" name=viewport><title>Algorithm - LeetCode for General Problems · Rants and thoughts</title><meta content="Practing by solving Algorithm questions on LeetCode" name=description><link rel="shortcut icon" href=https://codingezio.github.io/favicon.ico><link href=https://codingezio.github.io/atom.xml rel=alternate title=RSS type=application/atom+xml><style>html,body{background:#fffaf7;color:#2d2d2d;font:16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"}a,a:visited{color:darkred;text-decoration:none}a:hover{text-decoration:underline}main{margin:auto;max-width:38rem;padding:0.8rem}pre{background:white;overflow:scroll;padding:1rem}td{border:1px solid #2d2d2d;padding:10px}img{height:auto;max-width:100%}.homepage-list{list-style:none;padding:1rem 0}.homepage-list li{align-items:center;display:flex;flex-wrap:wrap;justify-content:space-between;margin-bottom:10px}@media (max-width: 38rem){.homepage-list li a{width:100%}}</style><meta content="Rants and thoughts" property=og:site_name><meta content="Algorithm - LeetCode for General Problems" property=og:title><meta content="Practing by solving Algorithm questions on LeetCode" property=og:description><meta content=https://codingezio.github.io/algorithm-leetcode-for-general-problems/ property=og:url><meta property=og:image><meta content=article property=og:type><meta content=2022-12-07T00:00:00+00:00 property=article:published_time><body><main id=main role=main><header role=banner><h3 style=margin-top:0;><a href=https://codingezio.github.io title=Home>Rants and thoughts</a> <br><small>Contact me via google_plus@aim.com</small></h3></header><hr><article><h1>Algorithm - LeetCode for General Problems</h1><p style=font-size:90%;>Posted on <time datetime=2022-12-07T00:00:00+00:00>December 07, 2022</time><h2 id=foreword>Foreword</h2><h3 id=why>Why</h3><blockquote><p>Do note that the solutions below aim towards the esay-to-understand aspect. Some of them are comparably slow than the most popular solutions.</blockquote><h4 id=formally>Formally</h4><ul><li>Review what I've learnt from solving these algorithms<li>A short gist of what this problem is <em>for</em><li>Save time</ul><h4 id=or-you-could-say>Or You Could Say</h4><ul><li>I am really, really dumb<li>I am bad at solving LeetCode problems<li>I do not have too much time for LeetCode</ul><h3 id=idea>Idea</h3><h4 id=my-approach-to-learn-data-structures-and-algorithms>My Approach to Learn Data Structures and Algorithms</h4><blockquote><p>Leave the data structures to the language learning part as their usage might vary whether for the implementations. Dive right into the LeetCode problems before having a good hold on the data structures. Use it practically instead of learning without a clear goal or context.<p>It's just like learning a programming language. Start building projects as quickly as possible <small>(note to self: to a certain extent)</small>. Of course, I do have <a href=https://codingezio.github.io/algorithm-handbook/>another post</a> which documents the snippets of knowledge you need to get a hold on while solving these problems.</blockquote><h4 id=about-binary-tree>About <em>Binary Tree</em></h4><blockquote><p>As the <strong>traversal methods</strong> are the foundation for a lot LeetCode problems that related to <em>Binary Tree</em>, I moved it to a separated post which named as <a href=https://codingezio.github.io/algorithm-handbook/><em>Algorithm Handbook</em></a>.<p>These methods by themselves <strong>are</strong> LeetCode problems, that's why I mention it explicitly to avoid confusion both for myself and the future readers. Down below are a list of problems that were omitted in this post.</blockquote><ul><li><code>0144</code>: <em>Preorder</em> traversal<li><code>0094</code>: <em>Inorder</em> traversal<li><code>0145</code>: <em>Postorder</em> traversal<li><code>0102</code>: <em>Level Order</em> traversal</ul><h3 id=and>And</h3><h4 id=problem-list>Problem List</h4><blockquote><p>Some of them would be premium questions <small>(require you to join in the membership)</small>, but you could just give it a search on Github. Not a big deal though 🤞.</blockquote><ul><li><a href=https://gist.github.com/codingEzio/68cc6c2648b0a87c74be5dc9668a3782>Blind 75</a> <sup><a href=https://neetcode.io/practice><em>solutions</em></a></sup> and <a href=https://gist.github.com/codingEzio/47a8a5083f0df1a51796860fe1c0964c>Grind 169</a><li><a href=https://seanprashad.com/leetcode-patterns/>Solution by Patterns</a> <sub>(171)</sub></ul><h4 id=articles-to-ease-my-anxiety>Articles to Ease My Anxiety</h4><blockquote><p>There are so many problem lists, and I want to follow them all! But that's not gonna happen</blockquote><ul><li><a href=https://old.reddit.com/r/cscareerquestions/comments/s0x7bz/is_blind_75_enough_for_big_tech/>Is Blind 75 enough for Big Tech? : cscareerquestions</a><li><a href=https://old.reddit.com/r/leetcode/comments/mx55az/blind_75_20/>Blind 75 2.0? : leetcode</a></ul><hr><h2 id=thoughts-and-code>Thoughts and Code</h2><h3 id=0001-two-sum>0001. Two Sum</h3><pre class=language-java data-lang=java style=background-color:#272822;color:#f8f8f2;><code class=language-java data-lang=java><span style=font-style:italic;color:#66d9ef;>class </span><span style=text-decoration:underline;color:#a6e22e;>Solution </span><span>{
-</span><span>    </span><span style=color:#f92672;>public </span><span style=font-style:italic;color:#66d9ef;>int</span><span style=color:#f92672;>[] </span><span style=color:#a6e22e;>twoSum</span><span>(</span><span style=font-style:italic;color:#66d9ef;>int</span><span style=color:#f92672;>[] </span><span style=font-style:italic;color:#fd971f;>nums</span><span>, </span><span style=font-style:italic;color:#66d9ef;>int </span><span style=font-style:italic;color:#fd971f;>target</span><span>) {
-</span><span>        </span><span style=font-style:italic;color:#66d9ef;>HashMap</span><span><</span><span style=font-style:italic;color:#66d9ef;>Integer</span><span>, </span><span style=font-style:italic;color:#66d9ef;>Integer</span><span>> remainders </span><span style=color:#f92672;>= new </span><span style=font-style:italic;color:#66d9ef;>HashMap</span><span>();
+<!doctype html><html lang=en><head><meta charset=UTF-8><meta content="width=device-width,initial-scale=1.0" name=viewport><title>Algorithm - LeetCode for General Problems · Ezio's blog 😊</title><meta content="Practing by solving Algorithm questions on LeetCode" name=description><link rel="shortcut icon" href=https://codingezio.github.io/favicon.ico><link href=https://codingezio.github.io/atom.xml rel=alternate title=RSS type=application/atom+xml><style>html,body{background:#fffaf7;color:#2d2d2d;font:16.7px/1.57 Georgia, 'Times New Roman', Times, serif}a,a:visited{color:darkred;text-decoration:none}a:hover{text-decoration:underline}main{margin:auto;max-width:38rem;padding:0.8rem}pre{background:white;overflow:scroll;padding:1rem;font-size:0.90em;font-family:'Fira Code', 'SF Mono', 'Consolas', monospace}td{border:1px groove #2d2d2d;padding:5px}img{height:auto;max-width:100%}.homepage-list{list-style:none;padding:1rem 0}.homepage-list li{align-items:center;display:flex;flex-wrap:wrap;justify-content:space-between;margin-bottom:10px}@media (max-width: 38rem){.homepage-list li a{width:100%}}</style><meta content="Ezio's blog 😊" property=og:site_name><meta content="Algorithm - LeetCode for General Problems" property=og:title><meta content="Practing by solving Algorithm questions on LeetCode" property=og:description><meta content=https://codingezio.github.io/algorithm-leetcode-for-general-problems/ property=og:url><meta property=og:image><meta content=article property=og:type><meta content=2022-12-07T00:00:00+00:00 property=article:published_time><body><main id=main role=main><header role=banner><h3 style=margin-top:0;><a href=https://codingezio.github.io title=Home>Ezio's blog 😊</a> <br><small>A dumb coder that wants to learn everything</small></h3></header><hr><article><h1>Algorithm - LeetCode for General Problems</h1><p style=font-size:90%;>Posted on <time datetime=2022-12-07T00:00:00+00:00>December 07, 2022</time><h2 id=foreword>Foreword</h2><h3 id=why>Why</h3><blockquote><p>Do note that the solutions below aim towards the esay-to-understand aspect. Some of them are comparably slow than the most popular solutions.</blockquote><h4 id=formally>Formally</h4><ul><li>Review what I've learnt from solving these algorithms<li>A short gist of what this problem is <em>for</em><li>Save time</ul><h4 id=or-you-could-say>Or You Could Say</h4><ul><li>I am really, really dumb<li>I am bad at solving LeetCode problems<li>I do not have too much time for LeetCode</ul><h3 id=idea>Idea</h3><h4 id=my-approach-to-learn-data-structures-and-algorithms>My Approach to Learn Data Structures and Algorithms</h4><blockquote><p>Leave the data structures to the language learning part as their usage might vary whether for the implementations. Dive right into the LeetCode problems before having a good hold on the data structures. Use it practically instead of learning without a clear goal or context.<p>It's just like learning a programming language. Start building projects as quickly as possible <small>(note to self: to a certain extent)</small>. Of course, I do have <a href=https://codingezio.github.io/algorithm-handbook/>another post</a> which documents the snippets of knowledge you need to get a hold on while solving these problems.</blockquote><h4 id=about-binary-tree>About <em>Binary Tree</em></h4><blockquote><p>As the <strong>traversal methods</strong> are the foundation for a lot LeetCode problems that related to <em>Binary Tree</em>, I moved it to a separated post which named as <a href=https://codingezio.github.io/algorithm-handbook/><em>Algorithm Handbook</em></a>.<p>These methods by themselves <strong>are</strong> LeetCode problems, that's why I mention it explicitly to avoid confusion both for myself and the future readers. Down below are a list of problems that were omitted in this post.</blockquote><ul><li><code>0144</code>: <em>Preorder</em> traversal<li><code>0094</code>: <em>Inorder</em> traversal<li><code>0145</code>: <em>Postorder</em> traversal<li><code>0102</code>: <em>Level Order</em> traversal</ul><h3 id=and>And</h3><h4 id=problem-list>Problem List</h4><blockquote><p>Some of them would be premium questions <small>(require you to join in the membership)</small>, but you could just give it a search on Github. Not a big deal though 🤞.</blockquote><ul><li><a href=https://gist.github.com/codingEzio/68cc6c2648b0a87c74be5dc9668a3782>Blind 75</a> <sup><a href=https://neetcode.io/practice><em>solutions</em></a></sup> and <a href=https://gist.github.com/codingEzio/47a8a5083f0df1a51796860fe1c0964c>Grind 169</a><li><a href=https://seanprashad.com/leetcode-patterns/>Solution by Patterns</a> <sub>(171)</sub></ul><h4 id=articles-to-ease-my-anxiety>Articles to Ease My Anxiety</h4><blockquote><p>There are so many problem lists, and I want to follow them all! But that's not gonna happen</blockquote><ul><li><a href=https://old.reddit.com/r/cscareerquestions/comments/s0x7bz/is_blind_75_enough_for_big_tech/>Is Blind 75 enough for Big Tech? : cscareerquestions</a><li><a href=https://old.reddit.com/r/leetcode/comments/mx55az/blind_75_20/>Blind 75 2.0? : leetcode</a></ul><hr><h2 id=thoughts-and-code>Thoughts and Code</h2><h3 id=0001-two-sum>0001. Two Sum</h3><pre class=language-java data-lang=java style=background-color:#282c34;color:#dcdfe4;><code class=language-java data-lang=java><span style=color:#c678dd;>class </span><span style=color:#e5c07b;>Solution </span><span>{
+</span><span>    </span><span style=color:#c678dd;>public int[] </span><span style=color:#61afef;>twoSum</span><span>(</span><span style=color:#c678dd;>int[] </span><span style=color:#e06c75;>nums</span><span>, </span><span style=color:#c678dd;>int </span><span style=color:#e06c75;>target</span><span>) {
+</span><span>        </span><span style=color:#e5c07b;>HashMap</span><span><</span><span style=color:#e5c07b;>Integer</span><span>, </span><span style=color:#e5c07b;>Integer</span><span>> remainders </span><span style=color:#c678dd;>= new </span><span style=color:#e5c07b;>HashMap</span><span>();
 </span><span>
-</span><span>        </span><span style=color:#f92672;>for </span><span>(</span><span style=font-style:italic;color:#66d9ef;>int</span><span> idx </span><span style=color:#f92672;>= </span><span style=color:#ae81ff;>0</span><span>; idx </span><span style=color:#f92672;><</span><span> nums.length; idx</span><span style=color:#f92672;>++</span><span>) {
-</span><span>            </span><span style=color:#75715e;>// Put every substracted result into a big bucket, once
-</span><span>            </span><span style=color:#75715e;>// there's a match (.containsKey), return the index of the
-</span><span>            </span><span style=color:#75715e;>// number (.get). Also, treat the `remainder` hashmap like
-</span><span>            </span><span style=color:#75715e;>// 'find remainders for 'this_half' in the hashmap'.
-</span><span>            </span><span style=font-style:italic;color:#66d9ef;>int</span><span> this_half </span><span style=color:#f92672;>=</span><span> nums[idx];
-</span><span>            </span><span style=font-style:italic;color:#66d9ef;>int</span><span> that_half </span><span style=color:#f92672;>=</span><span> target </span><span style=color:#f92672;>-</span><span> this_half;
+</span><span>        </span><span style=color:#c678dd;>for </span><span>(</span><span style=color:#c678dd;>int</span><span> idx </span><span style=color:#c678dd;>= </span><span style=color:#e5c07b;>0</span><span>; idx </span><span style=color:#c678dd;><</span><span> nums.length; idx</span><span style=color:#c678dd;>++</span><span>) {
+</span><span>            </span><span style=color:#5c6370;>// Put every substracted result into a big bucket, once
+</span><span>            </span><span style=color:#5c6370;>// there's a match (.containsKey), return the index of the
+</span><span>            </span><span style=color:#5c6370;>// number (.get). Also, treat the `remainder` hashmap like
+</span><span>            </span><span style=color:#5c6370;>// 'find remainders for 'this_half' in the hashmap'.
+</span><span>            </span><span style=color:#c678dd;>int</span><span> this_half </span><span style=color:#c678dd;>=</span><span> nums[idx];
+</span><span>            </span><span style=color:#c678dd;>int</span><span> that_half </span><span style=color:#c678dd;>=</span><span> target </span><span style=color:#c678dd;>-</span><span> this_half;
 </span><span>
-</span><span>            </span><span style=color:#f92672;>if </span><span>(remainders.containsKey(this_half)) {
-</span><span>                </span><span style=color:#f92672;>return new </span><span style=font-style:italic;color:#66d9ef;>int</span><span>[] { remainders.get(this_half), idx };
+</span><span>            </span><span style=color:#c678dd;>if </span><span>(remainders.</span><span style=color:#e06c75;>containsKey</span><span>(this_half)) {
+</span><span>                </span><span style=color:#c678dd;>return new int</span><span>[] { remainders.</span><span style=color:#e06c75;>get</span><span>(this_half), idx };
 </span><span>            }
 </span><span>
-</span><span>            </span><span style=color:#75715e;>// Put the remainder candidate in
-</span><span>            remainders.put(that_half, idx);
+</span><span>            </span><span style=color:#5c6370;>// Put the remainder candidate in
+</span><span>            remainders.</span><span style=color:#e06c75;>put</span><span>(that_half, idx);
 </span><span>        }
 </span><span>
-</span><span>        </span><span style=color:#f92672;>return new </span><span style=font-style:italic;color:#66d9ef;>int</span><span>[] {};
+</span><span>        </span><span style=color:#c678dd;>return new int</span><span>[] {};
 </span><span>    }
 </span><span>}
-</span></code></pre><h3 id=0009-palindrome-number>0009. Palindrome Number</h3><pre class=language-python data-lang=python style=background-color:#272822;color:#f8f8f2;><code class=language-python data-lang=python><span style=font-style:italic;color:#f92672;>class </span><span style=text-decoration:underline;color:#a6e22e;>Solution</span><span>:
-</span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>isPalindrome</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>x</span><span>: </span><span style=font-style:italic;color:#66d9ef;>int</span><span>) -> </span><span style=font-style:italic;color:#66d9ef;>bool</span><span>:
-</span><span>        </span><span style=color:#f92672;>if </span><span>x </span><span style=color:#f92672;>< </span><span style=color:#ae81ff;>0</span><span>: </span><span style=color:#f92672;>return </span><span style=color:#ae81ff;>False
-</span><span>        </span><span style=color:#f92672;>if </span><span>x </span><span style=color:#f92672;>== </span><span style=color:#ae81ff;>0</span><span>: </span><span style=color:#f92672;>return </span><span style=color:#ae81ff;>True
+</span></code></pre><h3 id=0009-palindrome-number>0009. Palindrome Number</h3><pre class=language-python data-lang=python style=background-color:#282c34;color:#dcdfe4;><code class=language-python data-lang=python><span style=color:#c678dd;>class </span><span style=color:#e5c07b;>Solution:
+</span><span>    </span><span style=color:#c678dd;>def </span><span style=color:#61afef;>isPalindrome</span><span>(</span><span style=color:#e06c75;>self</span><span>, </span><span style=color:#e06c75;>x</span><span>: int) -> bool:
+</span><span>        </span><span style=color:#c678dd;>if </span><span>x </span><span style=color:#c678dd;>< </span><span style=color:#e5c07b;>0</span><span>: </span><span style=color:#c678dd;>return </span><span style=color:#e5c07b;>False
+</span><span>        </span><span style=color:#c678dd;>if </span><span>x </span><span style=color:#c678dd;>== </span><span style=color:#e5c07b;>0</span><span>: </span><span style=color:#c678dd;>return </span><span style=color:#e5c07b;>True
 </span><span>
-</span><span>        xcp </span><span style=color:#f92672;>= </span><span>x </span><span style=color:#75715e;># a copy of the original number for us to compare to rev result
-</span><span>        rev </span><span style=color:#f92672;>= </span><span style=color:#ae81ff;>0 </span><span style=color:#75715e;># reverse computation; trying to cal one that equals to x
+</span><span>        xcp </span><span style=color:#c678dd;>= </span><span>x </span><span style=color:#5c6370;># a copy of the original number for us to compare to rev result
+</span><span>        rev </span><span style=color:#c678dd;>= </span><span style=color:#e5c07b;>0 </span><span style=color:#5c6370;># reverse computation; trying to cal one that equals to x
 </span><span>
-</span><span>        </span><span style=color:#f92672;>while </span><span>x </span><span style=color:#f92672;>> </span><span style=color:#ae81ff;>0</span><span>:
-</span><span>            rev </span><span style=color:#f92672;>= </span><span>(rev </span><span style=color:#f92672;>* </span><span style=color:#ae81ff;>10</span><span>) </span><span style=color:#f92672;>+ </span><span>(x </span><span style=color:#f92672;>% </span><span style=color:#ae81ff;>10</span><span>)
-</span><span>            x </span><span style=color:#f92672;>= </span><span>x </span><span style=color:#f92672;>// </span><span style=color:#ae81ff;>10
+</span><span>        </span><span style=color:#c678dd;>while </span><span>x </span><span style=color:#c678dd;>> </span><span style=color:#e5c07b;>0</span><span>:
+</span><span>            rev </span><span style=color:#c678dd;>= </span><span>(rev </span><span style=color:#c678dd;>* </span><span style=color:#e5c07b;>10</span><span>) </span><span style=color:#c678dd;>+ </span><span>(x </span><span style=color:#c678dd;>% </span><span style=color:#e5c07b;>10</span><span>)
+</span><span>            x </span><span style=color:#c678dd;>= </span><span>x </span><span style=color:#c678dd;>// </span><span style=color:#e5c07b;>10
 </span><span>
-</span><span>        </span><span style=color:#f92672;>return </span><span>xcp </span><span style=color:#f92672;>= </span><span>rev
-</span></code></pre><h3 id=0011-container-with-most-water>0011. Container With Most Water</h3><pre class=language-python data-lang=python style=background-color:#272822;color:#f8f8f2;><code class=language-python data-lang=python><span style=font-style:italic;color:#f92672;>class </span><span style=text-decoration:underline;color:#a6e22e;>Solution</span><span>:
-</span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>maxArea</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>height</span><span>: List[</span><span style=font-style:italic;color:#66d9ef;>int</span><span>]) -> </span><span style=font-style:italic;color:#66d9ef;>int</span><span>:
-</span><span>        areaMax </span><span style=color:#f92672;>= </span><span style=color:#ae81ff;>0
-</span><span>        start, end </span><span style=color:#f92672;>= </span><span style=color:#ae81ff;>0</span><span>, </span><span style=color:#66d9ef;>len</span><span>(height) </span><span style=color:#f92672;>- </span><span style=color:#ae81ff;>1
+</span><span>        </span><span style=color:#c678dd;>return </span><span>xcp </span><span style=color:#c678dd;>= </span><span>rev
+</span></code></pre><h3 id=0011-container-with-most-water>0011. Container With Most Water</h3><pre class=language-python data-lang=python style=background-color:#282c34;color:#dcdfe4;><code class=language-python data-lang=python><span style=color:#c678dd;>class </span><span style=color:#e5c07b;>Solution:
+</span><span>    </span><span style=color:#c678dd;>def </span><span style=color:#61afef;>maxArea</span><span>(</span><span style=color:#e06c75;>self</span><span>, </span><span style=color:#e06c75;>height</span><span>: List[int]) -> int:
+</span><span>        areaMax </span><span style=color:#c678dd;>= </span><span style=color:#e5c07b;>0
+</span><span>        start, end </span><span style=color:#c678dd;>= </span><span style=color:#e5c07b;>0</span><span>, </span><span style=color:#61afef;>len</span><span>(height) </span><span style=color:#c678dd;>- </span><span style=color:#e5c07b;>1
 </span><span>
-</span><span>        </span><span style=color:#75715e;># Take [4, 7, 5, 1, 6] for example
-</span><span>        </span><span style=color:#75715e;>#
-</span><span>        </span><span style=color:#75715e;># &LT7>      | - - - - - -  i.e. width: 5-2, height: 6or7
-</span><span>        </span><span style=color:#75715e;># &LT6>      |           |
-</span><span>        </span><span style=color:#75715e;># &LT5>      |   |       |
-</span><span>        </span><span style=color:#75715e;># &LT4>  |   |   |       |
-</span><span>        </span><span style=color:#75715e;># &LT3>  |   |   |       |
-</span><span>        </span><span style=color:#75715e;># &LT2>  |   |   |       |
-</span><span>        </span><span style=color:#75715e;># &LT1>  |   |   |   |   |
-</span><span>        </span><span style=color:#75715e;># &LT0> &LT1> &LT2> &LT3> &LT4> &LT5> &LT6> &LT7>
+</span><span>        </span><span style=color:#5c6370;># Take [4, 7, 5, 1, 6] for example
+</span><span>        </span><span style=color:#5c6370;>#
+</span><span>        </span><span style=color:#5c6370;># &LT7>      | - - - - - -  i.e. width: 5-2, height: 6or7
+</span><span>        </span><span style=color:#5c6370;># &LT6>      |           |
+</span><span>        </span><span style=color:#5c6370;># &LT5>      |   |       |
+</span><span>        </span><span style=color:#5c6370;># &LT4>  |   |   |       |
+</span><span>        </span><span style=color:#5c6370;># &LT3>  |   |   |       |
+</span><span>        </span><span style=color:#5c6370;># &LT2>  |   |   |       |
+</span><span>        </span><span style=color:#5c6370;># &LT1>  |   |   |   |   |
+</span><span>        </span><span style=color:#5c6370;># &LT0> &LT1> &LT2> &LT3> &LT4> &LT5> &LT6> &LT7>
 </span><span>
 </span><span>
-</span><span>        </span><span style=color:#f92672;>while </span><span>start </span><span style=color:#f92672;>< </span><span>end:
-</span><span>            </span><span style=color:#75715e;># Calculate and compare
-</span><span>            area </span><span style=color:#f92672;>= </span><span>(end </span><span style=color:#f92672;>- </span><span>start) </span><span style=color:#f92672;>* </span><span style=color:#66d9ef;>min</span><span>(height[start], height[end])
+</span><span>        </span><span style=color:#c678dd;>while </span><span>start </span><span style=color:#c678dd;>< </span><span>end:
+</span><span>            </span><span style=color:#5c6370;># Calculate and compare
+</span><span>            area </span><span style=color:#c678dd;>= </span><span>(end </span><span style=color:#c678dd;>- </span><span>start) </span><span style=color:#c678dd;>* </span><span style=color:#61afef;>min</span><span>(height[start], height[end])
 </span><span>
-</span><span>            </span><span style=color:#f92672;>if </span><span>areaMax </span><span style=color:#f92672;>< </span><span>area:
-</span><span>                areaMax </span><span style=color:#f92672;>= </span><span>area
+</span><span>            </span><span style=color:#c678dd;>if </span><span>areaMax </span><span style=color:#c678dd;>< </span><span>area:
+</span><span>                areaMax </span><span style=color:#c678dd;>= </span><span>area
 </span><span>
-</span><span>            </span><span style=color:#75715e;># Move around to maximize the height
-</span><span>            </span><span style=color:#f92672;>if </span><span>height[start] </span><span style=color:#f92672;>< </span><span>height[end]:
-</span><span>                start </span><span style=color:#f92672;>+= </span><span style=color:#ae81ff;>1
-</span><span>            </span><span style=color:#f92672;>elif </span><span>height[start] </span><span style=color:#f92672;>>= </span><span>height[end]:
-</span><span>                end </span><span style=color:#f92672;>-= </span><span style=color:#ae81ff;>1
+</span><span>            </span><span style=color:#5c6370;># Move around to maximize the height
+</span><span>            </span><span style=color:#c678dd;>if </span><span>height[start] </span><span style=color:#c678dd;>< </span><span>height[end]:
+</span><span>                start </span><span style=color:#c678dd;>+= </span><span style=color:#e5c07b;>1
+</span><span>            </span><span style=color:#c678dd;>elif </span><span>height[start] </span><span style=color:#c678dd;>>= </span><span>height[end]:
+</span><span>                end </span><span style=color:#c678dd;>-= </span><span style=color:#e5c07b;>1
 </span><span>
-</span><span>        </span><span style=color:#f92672;>return </span><span>areaMax
-</span></code></pre><h3 id=0013-3sum>0013. 3Sum</h3><pre class=language-python data-lang=python style=background-color:#272822;color:#f8f8f2;><code class=language-python data-lang=python><span style=font-style:italic;color:#f92672;>class </span><span style=text-decoration:underline;color:#a6e22e;>Solution</span><span>:
-</span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>threeSum</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>nums</span><span>: List[</span><span style=font-style:italic;color:#66d9ef;>int</span><span>]) -> List[List[</span><span style=font-style:italic;color:#66d9ef;>int</span><span>]]:
-</span><span>        </span><span style=color:#75715e;>"""
-</span><span style=color:#75715e;>        Problem description simplified
-</span><span style=color:#75715e;>        - three sum to 0 and return the values
-</span><span style=color:#75715e;>        - no complete dup for indice
-</span><span style=color:#75715e;>        - no complete dup for values
-</span><span style=color:#75715e;>        """
+</span><span>        </span><span style=color:#c678dd;>return </span><span>areaMax
+</span></code></pre><h3 id=0013-3sum>0013. 3Sum</h3><pre class=language-python data-lang=python style=background-color:#282c34;color:#dcdfe4;><code class=language-python data-lang=python><span style=color:#c678dd;>class </span><span style=color:#e5c07b;>Solution:
+</span><span>    </span><span style=color:#c678dd;>def </span><span style=color:#61afef;>threeSum</span><span>(</span><span style=color:#e06c75;>self</span><span>, </span><span style=color:#e06c75;>nums</span><span>: List[int]) -> List[List[int]]:
+</span><span>        </span><span style=color:#5c6370;>"""
+</span><span style=color:#5c6370;>        Problem description simplified
+</span><span style=color:#5c6370;>        - three sum to 0 and return the values
+</span><span style=color:#5c6370;>        - no complete dup for indice
+</span><span style=color:#5c6370;>        - no complete dup for values
+</span><span style=color:#5c6370;>        """
 </span><span>
-</span><span>        candidateCombined </span><span style=color:#f92672;>= </span><span>[]
-</span><span>        nums.sort()
+</span><span>        candidateCombined </span><span style=color:#c678dd;>= </span><span>[]
+</span><span>        nums.</span><span style=color:#e06c75;>sort</span><span>()
 </span><span>
-</span><span>        </span><span style=color:#f92672;>for </span><span>idx, elem </span><span style=color:#f92672;>in </span><span style=color:#66d9ef;>enumerate</span><span>(nums):
+</span><span>        </span><span style=color:#c678dd;>for </span><span>idx, elem </span><span style=color:#c678dd;>in </span><span style=color:#61afef;>enumerate</span><span>(nums):
 </span><span>
-</span><span>            </span><span style=color:#f92672;>if </span><span>idx </span><span style=color:#f92672;>> </span><span style=color:#ae81ff;>0 </span><span style=color:#f92672;>and </span><span>nums[idx] </span><span style=color:#f92672;>== </span><span>nums[idx</span><span style=color:#f92672;>-</span><span style=color:#ae81ff;>1</span><span>]:
-</span><span>                </span><span style=color:#f92672;>continue
+</span><span>            </span><span style=color:#c678dd;>if </span><span>idx </span><span style=color:#c678dd;>> </span><span style=color:#e5c07b;>0 </span><span style=color:#c678dd;>and </span><span>nums[idx] </span><span style=color:#c678dd;>== </span><span>nums[idx</span><span style=color:#c678dd;>-</span><span style=color:#e5c07b;>1</span><span>]:
+</span><span>                </span><span style=color:#c678dd;>continue
 </span><span>
-</span><span>            L, R </span><span style=color:#f92672;>= </span><span>idx </span><span style=color:#f92672;>+ </span><span style=color:#ae81ff;>1</span><span>, </span><span style=color:#66d9ef;>len</span><span>(nums) </span><span style=color:#f92672;>- </span><span style=color:#ae81ff;>1
+</span><span>            L, R </span><span style=color:#c678dd;>= </span><span>idx </span><span style=color:#c678dd;>+ </span><span style=color:#e5c07b;>1</span><span>, </span><span style=color:#61afef;>len</span><span>(nums) </span><span style=color:#c678dd;>- </span><span style=color:#e5c07b;>1
 </span><span>
-</span><span>            </span><span style=color:#f92672;>while </span><span>L </span><span style=color:#f92672;>< </span><span>R:
-</span><span>                sumToZero </span><span style=color:#f92672;>= </span><span>elem </span><span style=color:#f92672;>+ </span><span>nums[L] </span><span style=color:#f92672;>+ </span><span>nums[R]
+</span><span>            </span><span style=color:#c678dd;>while </span><span>L </span><span style=color:#c678dd;>< </span><span>R:
+</span><span>                sumToZero </span><span style=color:#c678dd;>= </span><span>elem </span><span style=color:#c678dd;>+ </span><span>nums[L] </span><span style=color:#c678dd;>+ </span><span>nums[R]
 </span><span>
-</span><span>                </span><span style=color:#f92672;>if </span><span>sumToZero </span><span style=color:#f92672;>== </span><span style=color:#ae81ff;>0</span><span>:
-</span><span>                    candidateCombined.append( [ elem, nums[L], nums[R] ] )
+</span><span>                </span><span style=color:#c678dd;>if </span><span>sumToZero </span><span style=color:#c678dd;>== </span><span style=color:#e5c07b;>0</span><span>:
+</span><span>                    candidateCombined.</span><span style=color:#e06c75;>append</span><span>( [ elem, nums[L], nums[R] ] )
 </span><span>
-</span><span>                    L </span><span style=color:#f92672;>+= </span><span style=color:#ae81ff;>1
-</span><span>                    </span><span style=color:#f92672;>while </span><span>L </span><span style=color:#f92672;>< </span><span>R </span><span style=color:#f92672;>and </span><span>nums[L] </span><span style=color:#f92672;>== </span><span>nums[L</span><span style=color:#f92672;>-</span><span style=color:#ae81ff;>1</span><span>]:
-</span><span>                        L </span><span style=color:#f92672;>+= </span><span style=color:#ae81ff;>1
+</span><span>                    L </span><span style=color:#c678dd;>+= </span><span style=color:#e5c07b;>1
+</span><span>                    </span><span style=color:#c678dd;>while </span><span>L </span><span style=color:#c678dd;>< </span><span>R </span><span style=color:#c678dd;>and </span><span>nums[L] </span><span style=color:#c678dd;>== </span><span>nums[L</span><span style=color:#c678dd;>-</span><span style=color:#e5c07b;>1</span><span>]:
+</span><span>                        L </span><span style=color:#c678dd;>+= </span><span style=color:#e5c07b;>1
 </span><span>
-</span><span>                </span><span style=color:#f92672;>elif </span><span>sumToZero </span><span style=color:#f92672;>< </span><span style=color:#ae81ff;>0</span><span>:
-</span><span>                    L </span><span style=color:#f92672;>+= </span><span style=color:#ae81ff;>1
-</span><span>                </span><span style=color:#f92672;>elif </span><span>sumToZero </span><span style=color:#f92672;>> </span><span style=color:#ae81ff;>0</span><span>:
-</span><span>                    R </span><span style=color:#f92672;>-= </span><span style=color:#ae81ff;>1
+</span><span>                </span><span style=color:#c678dd;>elif </span><span>sumToZero </span><span style=color:#c678dd;>< </span><span style=color:#e5c07b;>0</span><span>:
+</span><span>                    L </span><span style=color:#c678dd;>+= </span><span style=color:#e5c07b;>1
+</span><span>                </span><span style=color:#c678dd;>elif </span><span>sumToZero </span><span style=color:#c678dd;>> </span><span style=color:#e5c07b;>0</span><span>:
+</span><span>                    R </span><span style=color:#c678dd;>-= </span><span style=color:#e5c07b;>1
 </span><span>
-</span><span>        </span><span style=color:#f92672;>return </span><span>candidateCombined
-</span></code></pre><h3 id=0014-longest-common-prefix>0014. Longest Common Prefix</h3><pre class=language-java data-lang=java style=background-color:#272822;color:#f8f8f2;><code class=language-java data-lang=java><span style=font-style:italic;color:#66d9ef;>class </span><span style=text-decoration:underline;color:#a6e22e;>Solution </span><span>{
-</span><span>    </span><span style=color:#f92672;>public </span><span style=font-style:italic;color:#66d9ef;>String </span><span style=color:#a6e22e;>longestCommonPrefix</span><span>(</span><span style=font-style:italic;color:#66d9ef;>String</span><span style=color:#f92672;>[] </span><span style=font-style:italic;color:#fd971f;>strs</span><span>) {
-</span><span>        </span><span style=color:#f92672;>if </span><span>(strs </span><span style=color:#f92672;>== </span><span style=color:#ae81ff;>null </span><span style=color:#f92672;>||</span><span> strs.length </span><span style=color:#f92672;>== </span><span style=color:#ae81ff;>0</span><span>) {
-</span><span>            </span><span style=color:#f92672;>return </span><span style=color:#e6db74;>""</span><span>;
+</span><span>        </span><span style=color:#c678dd;>return </span><span>candidateCombined
+</span></code></pre><h3 id=0014-longest-common-prefix>0014. Longest Common Prefix</h3><pre class=language-java data-lang=java style=background-color:#282c34;color:#dcdfe4;><code class=language-java data-lang=java><span style=color:#c678dd;>class </span><span style=color:#e5c07b;>Solution </span><span>{
+</span><span>    </span><span style=color:#c678dd;>public </span><span style=color:#e5c07b;>String </span><span style=color:#61afef;>longestCommonPrefix</span><span>(</span><span style=color:#e5c07b;>String</span><span style=color:#c678dd;>[] </span><span style=color:#e06c75;>strs</span><span>) {
+</span><span>        </span><span style=color:#c678dd;>if </span><span>(strs </span><span style=color:#c678dd;>== </span><span style=color:#e5c07b;>null </span><span style=color:#c678dd;>||</span><span> strs.length </span><span style=color:#c678dd;>== </span><span style=color:#e5c07b;>0</span><span>) {
+</span><span>            </span><span style=color:#c678dd;>return </span><span style=color:#98c379;>""</span><span>;
 </span><span>        }
 </span><span>
-</span><span>        </span><span style=color:#75715e;>// Take 'flow, flower, flight' for example
+</span><span>        </span><span style=color:#5c6370;>// Take 'flow, flower, flight' for example
 </span><span>
-</span><span>        </span><span style=color:#75715e;>// [1] 'flow'
-</span><span>        </span><span style=font-style:italic;color:#66d9ef;>String</span><span> prefix_lngst </span><span style=color:#f92672;>=</span><span> strs[</span><span style=color:#ae81ff;>0</span><span>];
+</span><span>        </span><span style=color:#5c6370;>// [1] 'flow'
+</span><span>        </span><span style=color:#e5c07b;>String</span><span> prefix_lngst </span><span style=color:#c678dd;>=</span><span> strs[</span><span style=color:#e5c07b;>0</span><span>];
 </span><span>
-</span><span>        </span><span style=color:#75715e;>// [2] index for 1, 2, i.e. 'flight' and 'flying'
-</span><span>        </span><span style=color:#f92672;>for </span><span>(</span><span style=font-style:italic;color:#66d9ef;>int</span><span> i </span><span style=color:#f92672;>= </span><span style=color:#ae81ff;>1</span><span>; i </span><span style=color:#f92672;><</span><span> strs.length; i</span><span style=color:#f92672;>++</span><span>) {
+</span><span>        </span><span style=color:#5c6370;>// [2] index for 1, 2, i.e. 'flight' and 'flying'
+</span><span>        </span><span style=color:#c678dd;>for </span><span>(</span><span style=color:#c678dd;>int</span><span> i </span><span style=color:#c678dd;>= </span><span style=color:#e5c07b;>1</span><span>; i </span><span style=color:#c678dd;><</span><span> strs.length; i</span><span style=color:#c678dd;>++</span><span>) {
 </span><span>
-</span><span>            </span><span style=color:#75715e;>// [3] compare 'flight' and 'flying' with changing strs[0]
+</span><span>            </span><span style=color:#5c6370;>// [3] compare 'flight' and 'flying' with changing strs[0]
 </span><span>
-</span><span>            </span><span style=color:#75715e;>// [4] first loop for 'flight'
-</span><span>            </span><span style=color:#75715e;>//     - is 'flow' in 'flight'? -- indexOf returns -1
-</span><span>            </span><span style=color:#75715e;>//     - is 'flo ' in 'flight'? -- indexOf returns -1
-</span><span>            </span><span style=color:#75715e;>//     - is 'fl  ' in 'flight'? -- indexOf returns 0 (loop ends)
+</span><span>            </span><span style=color:#5c6370;>// [4] first loop for 'flight'
+</span><span>            </span><span style=color:#5c6370;>//     - is 'flow' in 'flight'? -- indexOf returns -1
+</span><span>            </span><span style=color:#5c6370;>//     - is 'flo ' in 'flight'? -- indexOf returns -1
+</span><span>            </span><span style=color:#5c6370;>//     - is 'fl  ' in 'flight'? -- indexOf returns 0 (loop ends)
 </span><span>
-</span><span>            </span><span style=color:#75715e;>// Quick recap for 'indexOf()' (where do the 2nd param begin in the 1st one)
-</span><span>            </span><span style=color:#75715e;>// - 'abc'.indexOf( 'a') -> 0
-</span><span>            </span><span style=color:#75715e;>// - 'abc'.indexOf('ab') -> 0
-</span><span>            </span><span style=color:#75715e;>// - 'abc'.indexOf('ac') -> -1
-</span><span>            </span><span style=color:#75715e;>// - 'abc'.indexOf( 'c') -> -1
+</span><span>            </span><span style=color:#5c6370;>// Quick recap for 'indexOf()' (where do the 2nd param begin in the 1st one)
+</span><span>            </span><span style=color:#5c6370;>// - 'abc'.indexOf( 'a') -> 0
+</span><span>            </span><span style=color:#5c6370;>// - 'abc'.indexOf('ab') -> 0
+</span><span>            </span><span style=color:#5c6370;>// - 'abc'.indexOf('ac') -> -1
+</span><span>            </span><span style=color:#5c6370;>// - 'abc'.indexOf( 'c') -> -1
 </span><span>
-</span><span>            </span><span style=color:#f92672;>while </span><span>(strs[i].indexOf(prefix) </span><span style=color:#f92672;>!= </span><span style=color:#ae81ff;>0</span><span>) {
+</span><span>            </span><span style=color:#c678dd;>while </span><span>(strs[i].</span><span style=color:#e06c75;>indexOf</span><span>(prefix) </span><span style=color:#c678dd;>!= </span><span style=color:#e5c07b;>0</span><span>) {
 </span><span>
-</span><span>                </span><span style=color:#75715e;>// [5] substract the last character from itself
-</span><span>                </span><span style=color:#75715e;>//     e.g. flow -> flo -> fl
-</span><span>                prefix </span><span style=color:#f92672;>=</span><span> prefix.substring(</span><span style=color:#ae81ff;>0</span><span>, prefix.length() </span><span style=color:#f92672;>- </span><span style=color:#ae81ff;>1</span><span>);
+</span><span>                </span><span style=color:#5c6370;>// [5] substract the last character from itself
+</span><span>                </span><span style=color:#5c6370;>//     e.g. flow -> flo -> fl
+</span><span>                prefix </span><span style=color:#c678dd;>=</span><span> prefix.</span><span style=color:#e06c75;>substring</span><span>(</span><span style=color:#e5c07b;>0</span><span>, prefix.</span><span style=color:#e06c75;>length</span><span>() </span><span style=color:#c678dd;>- </span><span style=color:#e5c07b;>1</span><span>);
 </span><span>
-</span><span>                </span><span style=color:#f92672;>if </span><span>(prefix </span><span style=color:#f92672;>== </span><span style=color:#e6db74;>""</span><span>) {
-</span><span>                    </span><span style=color:#75715e;>// [6] they doesn't even have the 1st character in common
-</span><span>                    </span><span style=color:#75715e;>//     and since you minus/substract the last "straw",
-</span><span>                    </span><span style=color:#75715e;>//     just return directly (no need for remaining strings)
-</span><span>                    </span><span style=color:#f92672;>return </span><span style=color:#e6db74;>""</span><span>;
+</span><span>                </span><span style=color:#c678dd;>if </span><span>(prefix </span><span style=color:#c678dd;>== </span><span style=color:#98c379;>""</span><span>) {
+</span><span>                    </span><span style=color:#5c6370;>// [6] they doesn't even have the 1st character in common
+</span><span>                    </span><span style=color:#5c6370;>//     and since you minus/substract the last "straw",
+</span><span>                    </span><span style=color:#5c6370;>//     just return directly (no need for remaining strings)
+</span><span>                    </span><span style=color:#c678dd;>return </span><span style=color:#98c379;>""</span><span>;
 </span><span>                }
 </span><span>            }
 </span><span>        }
 </span><span>
-</span><span>        </span><span style=color:#f92672;>return</span><span> prefix_lngst;
+</span><span>        </span><span style=color:#c678dd;>return</span><span> prefix_lngst;
 </span><span>    }
 </span><span>}
-</span></code></pre><h3 id=0019-remove-nth-node-from-end-of-list>0019. Remove Nth Node From End of List</h3><pre class=language-python data-lang=python style=background-color:#272822;color:#f8f8f2;><code class=language-python data-lang=python><span style=color:#75715e;># Definition for singly-linked list.
-</span><span style=color:#75715e;># class ListNode:
-</span><span style=color:#75715e;>#     def __init__(self, val=0, next=None):
-</span><span style=color:#75715e;>#         self.val = val
-</span><span style=color:#75715e;>#         self.next = next
-</span><span style=font-style:italic;color:#f92672;>class </span><span style=text-decoration:underline;color:#a6e22e;>Solution</span><span>:
-</span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>removeNthFromEnd</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>head</span><span>: Optional[ListNode], </span><span style=font-style:italic;color:#fd971f;>n</span><span>: </span><span style=font-style:italic;color:#66d9ef;>int</span><span>) -> Optional[ListNode]:
-</span><span>        </span><span style=color:#75715e;>"""
-</span><span style=color:#75715e;>        The core idea
-</span><span style=color:#75715e;>        - Caculate the actual steps need to be taken (reversed n)
-</span><span style=color:#75715e;>        - Link the one before the nth with the one preceed it (=> deleted)
-</span><span style=color:#75715e;>        """
+</span></code></pre><h3 id=0019-remove-nth-node-from-end-of-list>0019. Remove Nth Node From End of List</h3><pre class=language-python data-lang=python style=background-color:#282c34;color:#dcdfe4;><code class=language-python data-lang=python><span style=color:#5c6370;># Definition for singly-linked list.
+</span><span style=color:#5c6370;># class ListNode:
+</span><span style=color:#5c6370;>#     def __init__(self, val=0, next=None):
+</span><span style=color:#5c6370;>#         self.val = val
+</span><span style=color:#5c6370;>#         self.next = next
+</span><span style=color:#c678dd;>class </span><span style=color:#e5c07b;>Solution:
+</span><span>    </span><span style=color:#c678dd;>def </span><span style=color:#61afef;>removeNthFromEnd</span><span>(</span><span style=color:#e06c75;>self</span><span>, </span><span style=color:#e06c75;>head</span><span>: Optional[ListNode], </span><span style=color:#e06c75;>n</span><span>: int) -> Optional[ListNode]:
+</span><span>        </span><span style=color:#5c6370;>"""
+</span><span style=color:#5c6370;>        The core idea
+</span><span style=color:#5c6370;>        - Caculate the actual steps need to be taken (reversed n)
+</span><span style=color:#5c6370;>        - Link the one before the nth with the one preceed it (=> deleted)
+</span><span style=color:#5c6370;>        """
 </span><span>
-</span><span>        dummy </span><span style=color:#f92672;>= </span><span>ListNode(</span><span style=color:#ae81ff;>0</span><span>, head)
-</span><span>        L </span><span style=color:#f92672;>= </span><span>dummy
-</span><span>        R </span><span style=color:#f92672;>= </span><span>head
+</span><span>        dummy </span><span style=color:#c678dd;>= </span><span style=color:#e06c75;>ListNode</span><span>(</span><span style=color:#e5c07b;>0</span><span>, head)
+</span><span>        L </span><span style=color:#c678dd;>= </span><span>dummy
+</span><span>        R </span><span style=color:#c678dd;>= </span><span>head
 </span><span>
-</span><span>        </span><span style=color:#f92672;>while </span><span>n </span><span style=color:#f92672;>> </span><span style=color:#ae81ff;>0</span><span>:
-</span><span>            L </span><span style=color:#f92672;>= </span><span>L.next
-</span><span>            n </span><span style=color:#f92672;>-= </span><span style=color:#ae81ff;>1
+</span><span>        </span><span style=color:#c678dd;>while </span><span>n </span><span style=color:#c678dd;>> </span><span style=color:#e5c07b;>0</span><span>:
+</span><span>            L </span><span style=color:#c678dd;>= </span><span>L.next
+</span><span>            n </span><span style=color:#c678dd;>-= </span><span style=color:#e5c07b;>1
 </span><span>
-</span><span>        </span><span style=color:#f92672;>while </span><span>R </span><span style=color:#f92672;>is not </span><span style=color:#ae81ff;>None</span><span>:
-</span><span>            L </span><span style=color:#f92672;>= </span><span>L.next
-</span><span>            R </span><span style=color:#f92672;>= </span><span>R.next
+</span><span>        </span><span style=color:#c678dd;>while </span><span>R </span><span style=color:#c678dd;>is not </span><span style=color:#e5c07b;>None</span><span>:
+</span><span>            L </span><span style=color:#c678dd;>= </span><span>L.next
+</span><span>            R </span><span style=color:#c678dd;>= </span><span>R.next
 </span><span>
-</span><span>        L.next </span><span style=color:#f92672;>= </span><span>L.next.next
+</span><span>        L.next </span><span style=color:#c678dd;>= </span><span>L.next.next
 </span><span>
-</span><span>        </span><span style=color:#f92672;>return </span><span>dummy.next
-</span></code></pre><h3 id=0021-merge-two-sorted-lists>0021. Merge Two Sorted Lists</h3><pre class=language-python data-lang=python style=background-color:#272822;color:#f8f8f2;><code class=language-python data-lang=python><span style=color:#75715e;># Definition for singly-linked list.
-</span><span style=color:#75715e;># class ListNode:
-</span><span style=color:#75715e;>#     def __init__(self, val=0, next=None):
-</span><span style=color:#75715e;>#         self.val = val
-</span><span style=color:#75715e;>#         self.next = next
-</span><span style=font-style:italic;color:#f92672;>class </span><span style=text-decoration:underline;color:#a6e22e;>Solution</span><span>:
-</span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>mergeTwoLists</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>list1</span><span>: Optional[ListNode], </span><span style=font-style:italic;color:#fd971f;>list2</span><span>: Optional[ListNode]) -> Optional[ListNode]:
-</span><span>        dummy </span><span style=color:#f92672;>= </span><span>ListNode()
-</span><span>        p </span><span style=color:#f92672;>= </span><span>dummy
-</span><span>        p1 </span><span style=color:#f92672;>= </span><span>list1
-</span><span>        p2 </span><span style=color:#f92672;>= </span><span>list2
+</span><span>        </span><span style=color:#c678dd;>return </span><span>dummy.next
+</span></code></pre><h3 id=0021-merge-two-sorted-lists>0021. Merge Two Sorted Lists</h3><pre class=language-python data-lang=python style=background-color:#282c34;color:#dcdfe4;><code class=language-python data-lang=python><span style=color:#5c6370;># Definition for singly-linked list.
+</span><span style=color:#5c6370;># class ListNode:
+</span><span style=color:#5c6370;>#     def __init__(self, val=0, next=None):
+</span><span style=color:#5c6370;>#         self.val = val
+</span><span style=color:#5c6370;>#         self.next = next
+</span><span style=color:#c678dd;>class </span><span style=color:#e5c07b;>Solution:
+</span><span>    </span><span style=color:#c678dd;>def </span><span style=color:#61afef;>mergeTwoLists</span><span>(</span><span style=color:#e06c75;>self</span><span>, </span><span style=color:#e06c75;>list1</span><span>: Optional[ListNode], </span><span style=color:#e06c75;>list2</span><span>: Optional[ListNode]) -> Optional[ListNode]:
+</span><span>        dummy </span><span style=color:#c678dd;>= </span><span style=color:#e06c75;>ListNode</span><span>()
+</span><span>        p </span><span style=color:#c678dd;>= </span><span>dummy
+</span><span>        p1 </span><span style=color:#c678dd;>= </span><span>list1
+</span><span>        p2 </span><span style=color:#c678dd;>= </span><span>list2
 </span><span>
-</span><span>        </span><span style=color:#f92672;>while </span><span>p1 </span><span style=color:#f92672;>is not </span><span style=color:#ae81ff;>None </span><span style=color:#f92672;>and </span><span>p2 </span><span style=color:#f92672;>is not </span><span style=color:#ae81ff;>None</span><span>:
-</span><span>            </span><span style=color:#f92672;>if </span><span>p1.val </span><span style=color:#f92672;>< </span><span>p2.val:
-</span><span>                p.next </span><span style=color:#f92672;>= </span><span>p1
-</span><span>                p1 </span><span style=color:#f92672;>= </span><span>p1.next
-</span><span>            </span><span style=color:#f92672;>elif </span><span>p1.val </span><span style=color:#f92672;>> </span><span>p2.val:
-</span><span>                p.next </span><span style=color:#f92672;>= </span><span>p2
-</span><span>                p2 </span><span style=color:#f92672;>= </span><span>p2.next
+</span><span>        </span><span style=color:#c678dd;>while </span><span>p1 </span><span style=color:#c678dd;>is not </span><span style=color:#e5c07b;>None </span><span style=color:#c678dd;>and </span><span>p2 </span><span style=color:#c678dd;>is not </span><span style=color:#e5c07b;>None</span><span>:
+</span><span>            </span><span style=color:#c678dd;>if </span><span>p1.val </span><span style=color:#c678dd;>< </span><span>p2.val:
+</span><span>                p.next </span><span style=color:#c678dd;>= </span><span>p1
+</span><span>                p1 </span><span style=color:#c678dd;>= </span><span>p1.next
+</span><span>            </span><span style=color:#c678dd;>elif </span><span>p1.val </span><span style=color:#c678dd;>> </span><span>p2.val:
+</span><span>                p.next </span><span style=color:#c678dd;>= </span><span>p2
+</span><span>                p2 </span><span style=color:#c678dd;>= </span><span>p2.next
 </span><span>
-</span><span>            p </span><span style=color:#f92672;>= </span><span>p.next
+</span><span>            p </span><span style=color:#c678dd;>= </span><span>p.next
 </span><span>
-</span><span>        </span><span style=color:#f92672;>if </span><span>p1 </span><span style=color:#f92672;>is not </span><span style=color:#ae81ff;>None</span><span>:
-</span><span>            p.next </span><span style=color:#f92672;>= </span><span>p1
-</span><span>        </span><span style=color:#f92672;>elif </span><span>p2 </span><span style=color:#f92672;>is not </span><span style=color:#ae81ff;>None</span><span>:
-</span><span>            p.next </span><span style=color:#f92672;>= </span><span>p2
+</span><span>        </span><span style=color:#c678dd;>if </span><span>p1 </span><span style=color:#c678dd;>is not </span><span style=color:#e5c07b;>None</span><span>:
+</span><span>            p.next </span><span style=color:#c678dd;>= </span><span>p1
+</span><span>        </span><span style=color:#c678dd;>elif </span><span>p2 </span><span style=color:#c678dd;>is not </span><span style=color:#e5c07b;>None</span><span>:
+</span><span>            p.next </span><span style=color:#c678dd;>= </span><span>p2
 </span><span>
-</span><span>        </span><span style=color:#f92672;>return </span><span>dummy.next
-</span></code></pre><h3 id=0023-merge-k-sorted-linked-list>0023. Merge K Sorted Linked List</h3><pre class=language-java data-lang=java style=background-color:#272822;color:#f8f8f2;><code class=language-java data-lang=java><span style=color:#75715e;>/*
-</span><span style=color:#75715e;> * Definition for singly-linked list.
-</span><span style=color:#75715e;> * public class ListNode {
-</span><span style=color:#75715e;> *     int val;
-</span><span style=color:#75715e;> *     ListNode next;
-</span><span style=color:#75715e;> *     ListNode() {}
-</span><span style=color:#75715e;> *     ListNode(int val) { this.val = val; }
-</span><span style=color:#75715e;> *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-</span><span style=color:#75715e;> * }
-</span><span style=color:#75715e;> */
-</span><span style=font-style:italic;color:#66d9ef;>class </span><span style=text-decoration:underline;color:#a6e22e;>Solution </span><span>{
-</span><span>    </span><span style=color:#f92672;>public </span><span style=font-style:italic;color:#66d9ef;>ListNode </span><span style=color:#a6e22e;>mergeKLists</span><span>(</span><span style=font-style:italic;color:#66d9ef;>ListNode</span><span style=color:#f92672;>[] </span><span style=font-style:italic;color:#fd971f;>lists</span><span>) {
-</span><span>     </span><span style=color:#75715e;>// No more checking when there's no elements at all
-</span><span>        </span><span style=font-style:italic;color:#66d9ef;>int</span><span> ln </span><span style=color:#f92672;>=</span><span> lists.length;
-</span><span>        </span><span style=color:#f92672;>if </span><span>(ln </span><span style=color:#f92672;>== </span><span style=color:#ae81ff;>0</span><span>) {
-</span><span>         </span><span style=color:#f92672;>return </span><span style=color:#ae81ff;>null</span><span>;
+</span><span>        </span><span style=color:#c678dd;>return </span><span>dummy.next
+</span></code></pre><h3 id=0023-merge-k-sorted-linked-list>0023. Merge K Sorted Linked List</h3><pre class=language-java data-lang=java style=background-color:#282c34;color:#dcdfe4;><code class=language-java data-lang=java><span style=color:#5c6370;>/*
+</span><span style=color:#5c6370;> * Definition for singly-linked list.
+</span><span style=color:#5c6370;> * public class ListNode {
+</span><span style=color:#5c6370;> *     int val;
+</span><span style=color:#5c6370;> *     ListNode next;
+</span><span style=color:#5c6370;> *     ListNode() {}
+</span><span style=color:#5c6370;> *     ListNode(int val) { this.val = val; }
+</span><span style=color:#5c6370;> *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+</span><span style=color:#5c6370;> * }
+</span><span style=color:#5c6370;> */
+</span><span style=color:#c678dd;>class </span><span style=color:#e5c07b;>Solution </span><span>{
+</span><span>    </span><span style=color:#c678dd;>public </span><span style=color:#e5c07b;>ListNode </span><span style=color:#61afef;>mergeKLists</span><span>(</span><span style=color:#e5c07b;>ListNode</span><span style=color:#c678dd;>[] </span><span style=color:#e06c75;>lists</span><span>) {
+</span><span>     </span><span style=color:#5c6370;>// No more checking when there's no elements at all
+</span><span>        </span><span style=color:#c678dd;>int</span><span> ln </span><span style=color:#c678dd;>=</span><span> lists.length;
+</span><span>        </span><span style=color:#c678dd;>if </span><span>(ln </span><span style=color:#c678dd;>== </span><span style=color:#e5c07b;>0</span><span>) {
+</span><span>         </span><span style=color:#c678dd;>return </span><span style=color:#e5c07b;>null</span><span>;
 </span><span>        }
 </span><span>
-</span><span>        </span><span style=color:#75715e;>// Temporary variables for comparison and be as pointers
-</span><span>        </span><span style=font-style:italic;color:#66d9ef;>ListNode</span><span> dummy </span><span style=color:#f92672;>= new </span><span style=font-style:italic;color:#66d9ef;>ListNode</span><span>(</span><span style=color:#f92672;>-</span><span style=color:#ae81ff;>1</span><span>);
-</span><span>        </span><span style=font-style:italic;color:#66d9ef;>ListNode</span><span> p     </span><span style=color:#f92672;>=</span><span> dummy;
+</span><span>        </span><span style=color:#5c6370;>// Temporary variables for comparison and be as pointers
+</span><span>        </span><span style=color:#e5c07b;>ListNode</span><span> dummy </span><span style=color:#c678dd;>= new </span><span style=color:#e5c07b;>ListNode</span><span>(</span><span style=color:#c678dd;>-</span><span style=color:#e5c07b;>1</span><span>);
+</span><span>        </span><span style=color:#e5c07b;>ListNode</span><span> p     </span><span style=color:#c678dd;>=</span><span> dummy;
 </span><span>
-</span><span>        </span><span style=color:#75715e;>// Make the comparsion (non-order -> sorted by ASC)
-</span><span>        </span><span style=color:#75715e;>//  Do notice that PriorityQueue now is also a Linked List,
-</span><span>        </span><span style=color:#75715e;>//  therefore it would have methods like `.next` and needs
-</span><span>        </span><span style=color:#75715e;>// it to traverse them.
-</span><span>        </span><span style=font-style:italic;color:#66d9ef;>PriorityQueue</span><span><</span><span style=font-style:italic;color:#66d9ef;>ListNode</span><span>> pq </span><span style=color:#f92672;>= new </span><span style=font-style:italic;color:#66d9ef;>PriorityQueue</span><span><>(
+</span><span>        </span><span style=color:#5c6370;>// Make the comparsion (non-order -> sorted by ASC)
+</span><span>        </span><span style=color:#5c6370;>//  Do notice that PriorityQueue now is also a Linked List,
+</span><span>        </span><span style=color:#5c6370;>//  therefore it would have methods like `.next` and needs
+</span><span>        </span><span style=color:#5c6370;>// it to traverse them.
+</span><span>        </span><span style=color:#e5c07b;>PriorityQueue</span><span><</span><span style=color:#e5c07b;>ListNode</span><span>> pq </span><span style=color:#c678dd;>= new </span><span style=color:#e5c07b;>PriorityQueue</span><span><>(
 </span><span>            ln,
-</span><span>            (</span><span style=font-style:italic;color:#fd971f;>a</span><span>, </span><span style=font-style:italic;color:#fd971f;>b</span><span>) </span><span style=font-style:italic;color:#66d9ef;>-> </span><span>(a.val </span><span style=color:#f92672;>-</span><span> b.val)
+</span><span>            (</span><span style=color:#e06c75;>a</span><span>, </span><span style=color:#e06c75;>b</span><span>) </span><span style=color:#c678dd;>-> </span><span>(a.val </span><span style=color:#c678dd;>-</span><span> b.val)
 </span><span>        );
 </span><span>
-</span><span>        </span><span style=color:#75715e;>// Combine the elements while ordering them in an allocated heap
-</span><span>        </span><span style=color:#f92672;>for </span><span>(</span><span style=font-style:italic;color:#66d9ef;>ListNode</span><span> item </span><span style=color:#f92672;>:</span><span> lists) {
-</span><span>            </span><span style=color:#f92672;>if </span><span>(item </span><span style=color:#f92672;>!= </span><span style=color:#ae81ff;>null</span><span>) {
-</span><span>                pq.add(item);
+</span><span>        </span><span style=color:#5c6370;>// Combine the elements while ordering them in an allocated heap
+</span><span>        </span><span style=color:#c678dd;>for </span><span>(</span><span style=color:#e5c07b;>ListNode</span><span> item </span><span style=color:#c678dd;>:</span><span> lists) {
+</span><span>            </span><span style=color:#c678dd;>if </span><span>(item </span><span style=color:#c678dd;>!= </span><span style=color:#e5c07b;>null</span><span>) {
+</span><span>                pq.</span><span style=color:#e06c75;>add</span><span>(item);
 </span><span>            }
 </span><span>        }
 </span><span>
-</span><span>        </span><span style=color:#f92672;>while </span><span>(</span><span style=color:#f92672;>!</span><span>pq.isEmpty()) {
-</span><span>         </span><span style=color:#75715e;>// Get the smallest while removing itself
-</span><span>            </span><span style=font-style:italic;color:#66d9ef;>ListNode</span><span> n </span><span style=color:#f92672;>=</span><span> pq.poll();
-</span><span>            p.next     </span><span style=color:#f92672;>=</span><span> n;
+</span><span>        </span><span style=color:#c678dd;>while </span><span>(</span><span style=color:#c678dd;>!</span><span>pq.</span><span style=color:#e06c75;>isEmpty</span><span>()) {
+</span><span>         </span><span style=color:#5c6370;>// Get the smallest while removing itself
+</span><span>            </span><span style=color:#e5c07b;>ListNode</span><span> n </span><span style=color:#c678dd;>=</span><span> pq.</span><span style=color:#e06c75;>poll</span><span>();
+</span><span>            p.next     </span><span style=color:#c678dd;>=</span><span> n;
 </span><span>
-</span><span>            </span><span style=color:#75715e;>// Check if there's still items left in the heap (smallest
-</span><span>            </span><span style=color:#75715e;>// to biggest). If there is, move the pointer of the
-</span><span>            </span><span style=color:#75715e;>// PriorityQueue via the variale `n`.
-</span><span>            </span><span style=color:#f92672;>if </span><span>(n.next </span><span style=color:#f92672;>!= </span><span style=color:#ae81ff;>null</span><span>) {
-</span><span>                pq.add(n.next);
+</span><span>            </span><span style=color:#5c6370;>// Check if there's still items left in the heap (smallest
+</span><span>            </span><span style=color:#5c6370;>// to biggest). If there is, move the pointer of the
+</span><span>            </span><span style=color:#5c6370;>// PriorityQueue via the variale `n`.
+</span><span>            </span><span style=color:#c678dd;>if </span><span>(n.next </span><span style=color:#c678dd;>!= </span><span style=color:#e5c07b;>null</span><span>) {
+</span><span>                pq.</span><span style=color:#e06c75;>add</span><span>(n.next);
 </span><span>            }
 </span><span>
-</span><span>            </span><span style=color:#75715e;>// Move to the next pointer for storing the element
-</span><span>            p </span><span style=color:#f92672;>=</span><span> p.next;
+</span><span>            </span><span style=color:#5c6370;>// Move to the next pointer for storing the element
+</span><span>            p </span><span style=color:#c678dd;>=</span><span> p.next;
 </span><span>        }
 </span><span>
-</span><span>        </span><span style=color:#f92672;>return</span><span> dummy.next;
+</span><span>        </span><span style=color:#c678dd;>return</span><span> dummy.next;
 </span><span>    }
 </span><span>}
-</span></code></pre><h3 id=0049-group-anagrams>0049. Group Anagrams</h3><pre class=language-python data-lang=python style=background-color:#272822;color:#f8f8f2;><code class=language-python data-lang=python><span style=color:#f92672;>from </span><span>collections </span><span style=color:#f92672;>import </span><span>defaultdict
+</span></code></pre><h3 id=0049-group-anagrams>0049. Group Anagrams</h3><pre class=language-python data-lang=python style=background-color:#282c34;color:#dcdfe4;><code class=language-python data-lang=python><span style=color:#c678dd;>from </span><span>collections </span><span style=color:#c678dd;>import </span><span>defaultdict
 </span><span>
-</span><span style=font-style:italic;color:#f92672;>class </span><span style=text-decoration:underline;color:#a6e22e;>Solution</span><span>:
-</span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>groupAnagrams</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>strs</span><span>: List[</span><span style=font-style:italic;color:#66d9ef;>str</span><span>]) -> List[List[</span><span style=font-style:italic;color:#66d9ef;>str</span><span>]]:
-</span><span>        </span><span style=color:#75715e;># Behaves like a normal dict, though when you access the key
-</span><span>        </span><span style=color:#75715e;># which is not in it, it would return a default value which
-</span><span>        </span><span style=color:#75715e;># is of the same type the parameter you passed in (i.e. []).
-</span><span>        ans </span><span style=color:#f92672;>= </span><span>defaultdict(</span><span style=font-style:italic;color:#66d9ef;>list</span><span>)
+</span><span style=color:#c678dd;>class </span><span style=color:#e5c07b;>Solution:
+</span><span>    </span><span style=color:#c678dd;>def </span><span style=color:#61afef;>groupAnagrams</span><span>(</span><span style=color:#e06c75;>self</span><span>, </span><span style=color:#e06c75;>strs</span><span>: List[str]) -> List[List[str]]:
+</span><span>        </span><span style=color:#5c6370;># Behaves like a normal dict, though when you access the key
+</span><span>        </span><span style=color:#5c6370;># which is not in it, it would return a default value which
+</span><span>        </span><span style=color:#5c6370;># is of the same type the parameter you passed in (i.e. []).
+</span><span>        ans </span><span style=color:#c678dd;>= </span><span style=color:#e06c75;>defaultdict</span><span>(list)
 </span><span>
-</span><span>        </span><span style=color:#75715e;># Suppose the input is ['abc', 'acb', 'dce']
-</span><span>        </span><span style=color:#f92672;>for </span><span>word </span><span style=color:#f92672;>in </span><span>strs:
+</span><span>        </span><span style=color:#5c6370;># Suppose the input is ['abc', 'acb', 'dce']
+</span><span>        </span><span style=color:#c678dd;>for </span><span>word </span><span style=color:#c678dd;>in </span><span>strs:
 </span><span>
-</span><span>            </span><span style=color:#75715e;># Serve as indice, though it needs to converted to a tuple first
-</span><span>            count </span><span style=color:#f92672;>= </span><span>[</span><span style=color:#ae81ff;>0</span><span>] </span><span style=color:#f92672;>* </span><span style=color:#ae81ff;>26
+</span><span>            </span><span style=color:#5c6370;># Serve as indice, though it needs to converted to a tuple first
+</span><span>            count </span><span style=color:#c678dd;>= </span><span>[</span><span style=color:#e5c07b;>0</span><span>] </span><span style=color:#c678dd;>* </span><span style=color:#e5c07b;>26
 </span><span>
-</span><span>            </span><span style=color:#75715e;># Calculate the indice
-</span><span>            </span><span style=color:#75715e;># Note that anagrams would be stored under the same indice
-</span><span>            </span><span style=color:#f92672;>for </span><span>letter </span><span style=color:#f92672;>in </span><span>word:
+</span><span>            </span><span style=color:#5c6370;># Calculate the indice
+</span><span>            </span><span style=color:#5c6370;># Note that anagrams would be stored under the same indice
+</span><span>            </span><span style=color:#c678dd;>for </span><span>letter </span><span style=color:#c678dd;>in </span><span>word:
 </span><span>
-</span><span>                </span><span style=color:#75715e;># All are lowercase, so the possible values would only be
-</span><span>                </span><span style=color:#75715e;># ranging from 0 to 25 (e.g. 'a' -> 0 .. 'z' -> 25)
-</span><span>                letter_indices </span><span style=color:#f92672;>= </span><span style=color:#66d9ef;>ord</span><span>(letter) </span><span style=color:#f92672;>- </span><span style=color:#66d9ef;>ord</span><span>(</span><span style=color:#e6db74;>'a'</span><span>)
+</span><span>                </span><span style=color:#5c6370;># All are lowercase, so the possible values would only be
+</span><span>                </span><span style=color:#5c6370;># ranging from 0 to 25 (e.g. 'a' -> 0 .. 'z' -> 25)
+</span><span>                letter_indices </span><span style=color:#c678dd;>= </span><span style=color:#61afef;>ord</span><span>(letter) </span><span style=color:#c678dd;>- </span><span style=color:#61afef;>ord</span><span>(</span><span style=color:#98c379;>'a'</span><span>)
 </span><span>
-</span><span>                </span><span style=color:#75715e;># After each loop ends
-</span><span>                </span><span style=color:#75715e;># e.g. 'abc' -> from [ 0, 0, 0, 0 ..] to [ 0, 1, 2, 0 .. ]
-</span><span>                count[letter_indices] </span><span style=color:#f92672;>+= </span><span style=color:#ae81ff;>1
+</span><span>                </span><span style=color:#5c6370;># After each loop ends
+</span><span>                </span><span style=color:#5c6370;># e.g. 'abc' -> from [ 0, 0, 0, 0 ..] to [ 0, 1, 2, 0 .. ]
+</span><span>                count[letter_indices] </span><span style=color:#c678dd;>+= </span><span style=color:#e5c07b;>1
 </span><span>
-</span><span>            </span><span style=color:#75715e;># Suppose the
-</span><span>            </span><span style=color:#75715e;>#   ans[ ( 0, 1, 2, 0, .. ) ]    ADD 'abc'
-</span><span>            </span><span style=color:#75715e;>#   ans[ ( 0, 1, 2, 0, .. ) ]    ADD 'acb'
-</span><span>            </span><span style=color:#75715e;>#   ans[ ( 3, 2, 4, 0, .. ) ]    ADD 'dce'
-</span><span>            ans[</span><span style=font-style:italic;color:#66d9ef;>tuple</span><span>(count)].append(word)
+</span><span>            </span><span style=color:#5c6370;># Suppose the
+</span><span>            </span><span style=color:#5c6370;>#   ans[ ( 0, 1, 2, 0, .. ) ]    ADD 'abc'
+</span><span>            </span><span style=color:#5c6370;>#   ans[ ( 0, 1, 2, 0, .. ) ]    ADD 'acb'
+</span><span>            </span><span style=color:#5c6370;>#   ans[ ( 3, 2, 4, 0, .. ) ]    ADD 'dce'
+</span><span>            ans[</span><span style=color:#e06c75;>tuple</span><span>(count)].</span><span style=color:#e06c75;>append</span><span>(word)
 </span><span>
-</span><span>        </span><span style=color:#75715e;># defaultdict(
-</span><span>        </span><span style=color:#75715e;>#   &LTclass 'list'>,
-</span><span>        </span><span style=color:#75715e;>#   {
-</span><span>        </span><span style=color:#75715e;>#     (0, 1, 2, 0): ['abc', 'acb'],
-</span><span>        </span><span style=color:#75715e;>#     (3, 2, 4, 0): ['dce']
-</span><span>        </span><span style=color:#75715e;>#   }
-</span><span>        </span><span style=color:#75715e;># )
+</span><span>        </span><span style=color:#5c6370;># defaultdict(
+</span><span>        </span><span style=color:#5c6370;>#   &LTclass 'list'>,
+</span><span>        </span><span style=color:#5c6370;>#   {
+</span><span>        </span><span style=color:#5c6370;>#     (0, 1, 2, 0): ['abc', 'acb'],
+</span><span>        </span><span style=color:#5c6370;>#     (3, 2, 4, 0): ['dce']
+</span><span>        </span><span style=color:#5c6370;>#   }
+</span><span>        </span><span style=color:#5c6370;># )
 </span><span>
-</span><span>        </span><span style=color:#75715e;># Then only the values      -> dict_values([['abc', 'acb'], ['dce']])
-</span><span>        </span><span style=color:#75715e;># Then turns it into a list -> [['abc', 'acb'], ['dce']]
-</span><span>        </span><span style=color:#f92672;>return </span><span style=font-style:italic;color:#66d9ef;>list</span><span>(ans.values())
-</span></code></pre><h3 id=0070-climbing-stairs>0070. Climbing Stairs</h3><pre class=language-python data-lang=python style=background-color:#272822;color:#f8f8f2;><code class=language-python data-lang=python><span style=font-style:italic;color:#f92672;>class </span><span style=text-decoration:underline;color:#a6e22e;>Solution</span><span>:
-</span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>climbStairs</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>n</span><span>: </span><span style=font-style:italic;color:#66d9ef;>int</span><span>) -> </span><span style=font-style:italic;color:#66d9ef;>int</span><span>:
-</span><span>        </span><span style=color:#f92672;>if </span><span>n </span><span style=color:#f92672;><= </span><span style=color:#ae81ff;>3</span><span>:
-</span><span>            </span><span style=color:#f92672;>return </span><span>n
+</span><span>        </span><span style=color:#5c6370;># Then only the values      -> dict_values([['abc', 'acb'], ['dce']])
+</span><span>        </span><span style=color:#5c6370;># Then turns it into a list -> [['abc', 'acb'], ['dce']]
+</span><span>        </span><span style=color:#c678dd;>return </span><span style=color:#e06c75;>list</span><span>(ans.</span><span style=color:#e06c75;>values</span><span>())
+</span></code></pre><h3 id=0070-climbing-stairs>0070. Climbing Stairs</h3><pre class=language-python data-lang=python style=background-color:#282c34;color:#dcdfe4;><code class=language-python data-lang=python><span style=color:#c678dd;>class </span><span style=color:#e5c07b;>Solution:
+</span><span>    </span><span style=color:#c678dd;>def </span><span style=color:#61afef;>climbStairs</span><span>(</span><span style=color:#e06c75;>self</span><span>, </span><span style=color:#e06c75;>n</span><span>: int) -> int:
+</span><span>        </span><span style=color:#c678dd;>if </span><span>n </span><span style=color:#c678dd;><= </span><span style=color:#e5c07b;>3</span><span>:
+</span><span>            </span><span style=color:#c678dd;>return </span><span>n
 </span><span>
-</span><span>        first, second </span><span style=color:#f92672;>= </span><span style=color:#ae81ff;>2</span><span>, </span><span style=color:#ae81ff;>3
+</span><span>        first, second </span><span style=color:#c678dd;>= </span><span style=color:#e5c07b;>2</span><span>, </span><span style=color:#e5c07b;>3
 </span><span>
-</span><span>        </span><span style=color:#f92672;>for </span><span>i </span><span style=color:#f92672;>in </span><span style=color:#66d9ef;>range</span><span>(</span><span style=color:#ae81ff;>4</span><span>, n</span><span style=color:#f92672;>+</span><span style=color:#ae81ff;>1</span><span>):
-</span><span>            _sum </span><span style=color:#f92672;>= </span><span>first </span><span style=color:#f92672;>+ </span><span>second
+</span><span>        </span><span style=color:#c678dd;>for </span><span>i </span><span style=color:#c678dd;>in </span><span style=color:#61afef;>range</span><span>(</span><span style=color:#e5c07b;>4</span><span>, n</span><span style=color:#c678dd;>+</span><span style=color:#e5c07b;>1</span><span>):
+</span><span>            _sum </span><span style=color:#c678dd;>= </span><span>first </span><span style=color:#c678dd;>+ </span><span>second
 </span><span>
-</span><span>            first </span><span style=color:#f92672;>= </span><span>second
-</span><span>            second </span><span style=color:#f92672;>= </span><span>_sum
+</span><span>            first </span><span style=color:#c678dd;>= </span><span>second
+</span><span>            second </span><span style=color:#c678dd;>= </span><span>_sum
 </span><span>
-</span><span>        </span><span style=color:#f92672;>return </span><span>second
-</span></code></pre><h3 id=0078-subsets>0078. Subsets</h3><pre class=language-python data-lang=python style=background-color:#272822;color:#f8f8f2;><code class=language-python data-lang=python><span style=font-style:italic;color:#f92672;>class </span><span style=text-decoration:underline;color:#a6e22e;>Solution</span><span>:
-</span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>subsets</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>nums</span><span>: List[</span><span style=font-style:italic;color:#66d9ef;>int</span><span>]) -> List[List[</span><span style=font-style:italic;color:#66d9ef;>int</span><span>]]:
-</span><span>        container_sets </span><span style=color:#f92672;>= </span><span>[]
-</span><span>        container_nums </span><span style=color:#f92672;>= </span><span>[]
+</span><span>        </span><span style=color:#c678dd;>return </span><span>second
+</span></code></pre><h3 id=0078-subsets>0078. Subsets</h3><pre class=language-python data-lang=python style=background-color:#282c34;color:#dcdfe4;><code class=language-python data-lang=python><span style=color:#c678dd;>class </span><span style=color:#e5c07b;>Solution:
+</span><span>    </span><span style=color:#c678dd;>def </span><span style=color:#61afef;>subsets</span><span>(</span><span style=color:#e06c75;>self</span><span>, </span><span style=color:#e06c75;>nums</span><span>: List[int]) -> List[List[int]]:
+</span><span>        container_sets </span><span style=color:#c678dd;>= </span><span>[]
+</span><span>        container_nums </span><span style=color:#c678dd;>= </span><span>[]
 </span><span>
-</span><span>        </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>backtrack</span><span>(</span><span style=font-style:italic;color:#fd971f;>nums</span><span>, </span><span style=font-style:italic;color:#fd971f;>start_idx</span><span>):
-</span><span>            container_sets.append(container_nums[:])
+</span><span>        </span><span style=color:#c678dd;>def </span><span style=color:#61afef;>backtrack</span><span>(</span><span style=color:#e06c75;>nums</span><span>, </span><span style=color:#e06c75;>start_idx</span><span>):
+</span><span>            container_sets.</span><span style=color:#e06c75;>append</span><span>(container_nums[:])
 </span><span>
-</span><span>            </span><span style=color:#f92672;>for </span><span>i </span><span style=color:#f92672;>in </span><span style=color:#66d9ef;>range</span><span>(start, </span><span style=color:#66d9ef;>len</span><span>(nums)):
-</span><span>                container_nums.append(nums[i])
+</span><span>            </span><span style=color:#c678dd;>for </span><span>i </span><span style=color:#c678dd;>in </span><span style=color:#61afef;>range</span><span>(start, </span><span style=color:#61afef;>len</span><span>(nums)):
+</span><span>                container_nums.</span><span style=color:#e06c75;>append</span><span>(nums[i])
 </span><span>
-</span><span>                backtrack(nums, i </span><span style=color:#f92672;>+ </span><span style=color:#ae81ff;>1</span><span>)
+</span><span>                </span><span style=color:#e06c75;>backtrack</span><span>(nums, i </span><span style=color:#c678dd;>+ </span><span style=color:#e5c07b;>1</span><span>)
 </span><span>
-</span><span>                container_nums.pop()
+</span><span>                container_nums.</span><span style=color:#e06c75;>pop</span><span>()
 </span><span>
-</span><span>        backtrack(nums, </span><span style=color:#ae81ff;>0</span><span>)
+</span><span>        </span><span style=color:#e06c75;>backtrack</span><span>(nums, </span><span style=color:#e5c07b;>0</span><span>)
 </span><span>
-</span><span>        </span><span style=color:#f92672;>return </span><span>container_sets
-</span></code></pre><h3 id=0088-merge-sorted-array>0088. Merge Sorted Array</h3><pre class=language-python data-lang=python style=background-color:#272822;color:#f8f8f2;><code class=language-python data-lang=python><span style=font-style:italic;color:#f92672;>class </span><span style=text-decoration:underline;color:#a6e22e;>Solution</span><span>:
-</span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>merge</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>nums1</span><span>: List[</span><span style=font-style:italic;color:#66d9ef;>int</span><span>], </span><span style=font-style:italic;color:#fd971f;>m</span><span>: </span><span style=font-style:italic;color:#66d9ef;>int</span><span>, </span><span style=font-style:italic;color:#fd971f;>nums2</span><span>: List[</span><span style=font-style:italic;color:#66d9ef;>int</span><span>], </span><span style=font-style:italic;color:#fd971f;>n</span><span>: </span><span style=font-style:italic;color:#66d9ef;>int</span><span>) -> </span><span style=color:#ae81ff;>None</span><span>:
-</span><span>        </span><span style=color:#75715e;>"""
-</span><span style=color:#75715e;>        Do not return anything, modify nums1 in-place instead.
-</span><span style=color:#75715e;>        """
+</span><span>        </span><span style=color:#c678dd;>return </span><span>container_sets
+</span></code></pre><h3 id=0088-merge-sorted-array>0088. Merge Sorted Array</h3><pre class=language-python data-lang=python style=background-color:#282c34;color:#dcdfe4;><code class=language-python data-lang=python><span style=color:#c678dd;>class </span><span style=color:#e5c07b;>Solution:
+</span><span>    </span><span style=color:#c678dd;>def </span><span style=color:#61afef;>merge</span><span>(</span><span style=color:#e06c75;>self</span><span>, </span><span style=color:#e06c75;>nums1</span><span>: List[int], </span><span style=color:#e06c75;>m</span><span>: int, </span><span style=color:#e06c75;>nums2</span><span>: List[int], </span><span style=color:#e06c75;>n</span><span>: int) -> </span><span style=color:#e5c07b;>None</span><span>:
+</span><span>        </span><span style=color:#5c6370;>"""
+</span><span style=color:#5c6370;>        Do not return anything, modify nums1 in-place instead.
+</span><span style=color:#5c6370;>        """
 </span><span>
-</span><span>        </span><span style=color:#75715e;># Premises to remember
-</span><span>        </span><span style=color:#75715e;># - Each array is already in the non-decreasing order (1 -> 1 -> 2)
-</span><span>        </span><span style=color:#75715e;># - As there would be any new numbers smaller, we compare in reverse
+</span><span>        </span><span style=color:#5c6370;># Premises to remember
+</span><span>        </span><span style=color:#5c6370;># - Each array is already in the non-decreasing order (1 -> 1 -> 2)
+</span><span>        </span><span style=color:#5c6370;># - As there would be any new numbers smaller, we compare in reverse
 </span><span>
-</span><span>        idxComb </span><span style=color:#f92672;>= </span><span>m </span><span style=color:#f92672;>+ </span><span>n </span><span style=color:#f92672;>- </span><span style=color:#ae81ff;>1
-</span><span>        m </span><span style=color:#f92672;>-= </span><span style=color:#ae81ff;>1
-</span><span>        n </span><span style=color:#f92672;>-= </span><span style=color:#ae81ff;>1
+</span><span>        idxComb </span><span style=color:#c678dd;>= </span><span>m </span><span style=color:#c678dd;>+ </span><span>n </span><span style=color:#c678dd;>- </span><span style=color:#e5c07b;>1
+</span><span>        m </span><span style=color:#c678dd;>-= </span><span style=color:#e5c07b;>1
+</span><span>        n </span><span style=color:#c678dd;>-= </span><span style=color:#e5c07b;>1
 </span><span>
-</span><span>        </span><span style=color:#f92672;>while </span><span>n </span><span style=color:#f92672;>>= </span><span style=color:#ae81ff;>0</span><span>:
+</span><span>        </span><span style=color:#c678dd;>while </span><span>n </span><span style=color:#c678dd;>>= </span><span style=color:#e5c07b;>0</span><span>:
 </span><span>
-</span><span>            </span><span style=color:#f92672;>if </span><span>m </span><span style=color:#f92672;>>= </span><span style=color:#ae81ff;>0 </span><span style=color:#f92672;>and </span><span>nums1[m] </span><span style=color:#f92672;>> </span><span>nums2[n]:
-</span><span>                nums1[idxComb] </span><span style=color:#f92672;>= </span><span>nums1[m]
-</span><span>                m </span><span style=color:#f92672;>-= </span><span style=color:#ae81ff;>1
+</span><span>            </span><span style=color:#c678dd;>if </span><span>m </span><span style=color:#c678dd;>>= </span><span style=color:#e5c07b;>0 </span><span style=color:#c678dd;>and </span><span>nums1[m] </span><span style=color:#c678dd;>> </span><span>nums2[n]:
+</span><span>                nums1[idxComb] </span><span style=color:#c678dd;>= </span><span>nums1[m]
+</span><span>                m </span><span style=color:#c678dd;>-= </span><span style=color:#e5c07b;>1
 </span><span>
-</span><span>            </span><span style=color:#f92672;>else</span><span>:
-</span><span>                nums1[idxComb] </span><span style=color:#f92672;>= </span><span>nums2[n]
-</span><span>                n </span><span style=color:#f92672;>-= </span><span style=color:#ae81ff;>1
+</span><span>            </span><span style=color:#c678dd;>else</span><span>:
+</span><span>                nums1[idxComb] </span><span style=color:#c678dd;>= </span><span>nums2[n]
+</span><span>                n </span><span style=color:#c678dd;>-= </span><span style=color:#e5c07b;>1
 </span><span>
-</span><span>            idxComb </span><span style=color:#f92672;>-= </span><span style=color:#ae81ff;>1
-</span></code></pre><h3 id=0100-same-tree>0100. Same Tree</h3><pre class=language-python data-lang=python style=background-color:#272822;color:#f8f8f2;><code class=language-python data-lang=python><span style=color:#75715e;># Definition for a binary tree node.
-</span><span style=color:#75715e;># class TreeNode:
-</span><span style=color:#75715e;>#     def __init__(self, val=0, left=None, right=None):
-</span><span style=color:#75715e;>#         self.val = val
-</span><span style=color:#75715e;>#         self.left = left
-</span><span style=color:#75715e;>#         self.right = right
-</span><span style=font-style:italic;color:#f92672;>class </span><span style=text-decoration:underline;color:#a6e22e;>Solution</span><span>:
-</span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>isSameTree</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>p</span><span>: Optional[TreeNode], </span><span style=font-style:italic;color:#fd971f;>q</span><span>: Optional[TreeNode]) -> </span><span style=font-style:italic;color:#66d9ef;>bool</span><span>:
-</span><span>        </span><span style=color:#75715e;># Neither has elements inside them
-</span><span>        </span><span style=color:#f92672;>if not </span><span>p </span><span style=color:#f92672;>and not </span><span>q:
-</span><span>            </span><span style=color:#f92672;>return </span><span style=color:#ae81ff;>True
+</span><span>            idxComb </span><span style=color:#c678dd;>-= </span><span style=color:#e5c07b;>1
+</span></code></pre><h3 id=0100-same-tree>0100. Same Tree</h3><pre class=language-python data-lang=python style=background-color:#282c34;color:#dcdfe4;><code class=language-python data-lang=python><span style=color:#5c6370;># Definition for a binary tree node.
+</span><span style=color:#5c6370;># class TreeNode:
+</span><span style=color:#5c6370;>#     def __init__(self, val=0, left=None, right=None):
+</span><span style=color:#5c6370;>#         self.val = val
+</span><span style=color:#5c6370;>#         self.left = left
+</span><span style=color:#5c6370;>#         self.right = right
+</span><span style=color:#c678dd;>class </span><span style=color:#e5c07b;>Solution:
+</span><span>    </span><span style=color:#c678dd;>def </span><span style=color:#61afef;>isSameTree</span><span>(</span><span style=color:#e06c75;>self</span><span>, </span><span style=color:#e06c75;>p</span><span>: Optional[TreeNode], </span><span style=color:#e06c75;>q</span><span>: Optional[TreeNode]) -> bool:
+</span><span>        </span><span style=color:#5c6370;># Neither has elements inside them
+</span><span>        </span><span style=color:#c678dd;>if not </span><span>p </span><span style=color:#c678dd;>and not </span><span>q:
+</span><span>            </span><span style=color:#c678dd;>return </span><span style=color:#e5c07b;>True
 </span><span>
-</span><span>        </span><span style=color:#75715e;># One of them has no elements inside
-</span><span>        </span><span style=color:#f92672;>elif not </span><span>p </span><span style=color:#f92672;>or not </span><span>q:
-</span><span>            </span><span style=color:#f92672;>return </span><span style=color:#ae81ff;>False
+</span><span>        </span><span style=color:#5c6370;># One of them has no elements inside
+</span><span>        </span><span style=color:#c678dd;>elif not </span><span>p </span><span style=color:#c678dd;>or not </span><span>q:
+</span><span>            </span><span style=color:#c678dd;>return </span><span style=color:#e5c07b;>False
 </span><span>
-</span><span>        </span><span style=color:#75715e;># One and only line to do the comparsion by non-None vals
-</span><span>        </span><span style=color:#f92672;>elif </span><span>p.val </span><span style=color:#f92672;>!= </span><span>q.val:
-</span><span>            </span><span style=color:#f92672;>return </span><span style=color:#ae81ff;>False
+</span><span>        </span><span style=color:#5c6370;># One and only line to do the comparsion by non-None vals
+</span><span>        </span><span style=color:#c678dd;>elif </span><span>p.val </span><span style=color:#c678dd;>!= </span><span>q.val:
+</span><span>            </span><span style=color:#c678dd;>return </span><span style=color:#e5c07b;>False
 </span><span>
-</span><span>        </span><span style=color:#f92672;>else</span><span>:
-</span><span>            </span><span style=color:#f92672;>return </span><span>\
-</span><span>                self.isSameTree(p.left, q.left) </span><span style=color:#f92672;>and </span><span>\
-</span><span>                self.isSameTree(p.right, q.right)
-</span></code></pre><h3 id=0101-symmetric-tree>0101. Symmetric Tree</h3><pre class=language-python data-lang=python style=background-color:#272822;color:#f8f8f2;><code class=language-python data-lang=python><span style=color:#75715e;># Definition for a binary tree node.
-</span><span style=color:#75715e;># class TreeNode:
-</span><span style=color:#75715e;>#     def __init__(self, val=0, left=None, right=None):
-</span><span style=color:#75715e;>#         self.val = val
-</span><span style=color:#75715e;>#         self.left = left
-</span><span style=color:#75715e;>#         self.right = right
-</span><span style=font-style:italic;color:#f92672;>class </span><span style=text-decoration:underline;color:#a6e22e;>Solution</span><span>:
-</span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>isSymmetric</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>root</span><span>: Optional[TreeNode]) -> </span><span style=font-style:italic;color:#66d9ef;>bool</span><span>:
-</span><span>        </span><span style=color:#f92672;>if not </span><span>root:
-</span><span>            </span><span style=color:#f92672;>return </span><span style=color:#ae81ff;>False
+</span><span>        </span><span style=color:#c678dd;>else</span><span>:
+</span><span>            </span><span style=color:#c678dd;>return </span><span>\
+</span><span>                </span><span style=color:#e06c75;>self</span><span>.</span><span style=color:#e06c75;>isSameTree</span><span>(p.left, q.left) </span><span style=color:#c678dd;>and </span><span>\
+</span><span>                </span><span style=color:#e06c75;>self</span><span>.</span><span style=color:#e06c75;>isSameTree</span><span>(p.right, q.right)
+</span></code></pre><h3 id=0101-symmetric-tree>0101. Symmetric Tree</h3><pre class=language-python data-lang=python style=background-color:#282c34;color:#dcdfe4;><code class=language-python data-lang=python><span style=color:#5c6370;># Definition for a binary tree node.
+</span><span style=color:#5c6370;># class TreeNode:
+</span><span style=color:#5c6370;>#     def __init__(self, val=0, left=None, right=None):
+</span><span style=color:#5c6370;>#         self.val = val
+</span><span style=color:#5c6370;>#         self.left = left
+</span><span style=color:#5c6370;>#         self.right = right
+</span><span style=color:#c678dd;>class </span><span style=color:#e5c07b;>Solution:
+</span><span>    </span><span style=color:#c678dd;>def </span><span style=color:#61afef;>isSymmetric</span><span>(</span><span style=color:#e06c75;>self</span><span>, </span><span style=color:#e06c75;>root</span><span>: Optional[TreeNode]) -> bool:
+</span><span>        </span><span style=color:#c678dd;>if not </span><span>root:
+</span><span>            </span><span style=color:#c678dd;>return </span><span style=color:#e5c07b;>False
 </span><span>
-</span><span>        </span><span style=color:#f92672;>return </span><span>self.isMirror(root.left, root.right)
+</span><span>        </span><span style=color:#c678dd;>return </span><span style=color:#e06c75;>self</span><span>.</span><span style=color:#e06c75;>isMirror</span><span>(root.left, root.right)
 </span><span>
-</span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>isMirror</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>L</span><span>, </span><span style=font-style:italic;color:#fd971f;>R</span><span>) -> </span><span style=font-style:italic;color:#66d9ef;>bool</span><span>:
-</span><span>        </span><span style=color:#f92672;>if not </span><span>L </span><span style=color:#f92672;>and not </span><span>R:
-</span><span>            </span><span style=color:#f92672;>return </span><span style=color:#ae81ff;>True
-</span><span>        </span><span style=color:#f92672;>elif not </span><span>L </span><span style=color:#f92672;>or not </span><span>R:
-</span><span>            </span><span style=color:#f92672;>return </span><span style=color:#ae81ff;>False
-</span><span>        </span><span style=color:#f92672;>elif </span><span>L.val </span><span style=color:#f92672;>!= </span><span>R.val:
-</span><span>            </span><span style=color:#f92672;>return </span><span style=color:#ae81ff;>False
-</span><span>        </span><span style=color:#f92672;>else</span><span>:
-</span><span>            </span><span style=color:#f92672;>return </span><span>\
-</span><span>                </span><span style=color:#75715e;>#      1
-</span><span>                </span><span style=color:#75715e;>#   2     3
-</span><span>                </span><span style=color:#75715e;># L   5   6   R
-</span><span>                self.isMirror(L.left, R.right) </span><span style=color:#f92672;>and </span><span>\
-</span><span>                </span><span style=color:#75715e;>#      1
-</span><span>                </span><span style=color:#75715e;>#   2     3
-</span><span>                </span><span style=color:#75715e;># 4   R   L   7
-</span><span>                self.isMirror(L.right, L.left)
-</span></code></pre><h3 id=0104-maximum-depth-of-binary-tree>0104. Maximum Depth of Binary Tree</h3><pre class=language-python data-lang=python style=background-color:#272822;color:#f8f8f2;><code class=language-python data-lang=python><span style=color:#75715e;># Definition for a binary tree node.
-</span><span style=color:#75715e;># class TreeNode:
-</span><span style=color:#75715e;>#     def __init__(self, val=0, left=None, right=None):
-</span><span style=color:#75715e;>#         self.val = val
-</span><span style=color:#75715e;>#         self.left = left
-</span><span style=color:#75715e;>#         self.right = right
-</span><span style=font-style:italic;color:#f92672;>class </span><span style=text-decoration:underline;color:#a6e22e;>Solution</span><span>:
-</span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>maxDepth</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>root</span><span>: Optional[TreeNode]) -> </span><span style=font-style:italic;color:#66d9ef;>int</span><span>:
-</span><span>        </span><span style=color:#75715e;># Two scenarios here
-</span><span>        </span><span style=color:#75715e;># - Either the input doesn't have nodes inside
-</span><span>        </span><span style=color:#75715e;># - Or the subtrees do not (in the recursion)
-</span><span>        </span><span style=color:#f92672;>if not </span><span>root:
-</span><span>            </span><span style=color:#f92672;>return </span><span style=color:#ae81ff;>0
+</span><span>    </span><span style=color:#c678dd;>def </span><span style=color:#61afef;>isMirror</span><span>(</span><span style=color:#e06c75;>self</span><span>, </span><span style=color:#e06c75;>L</span><span>, </span><span style=color:#e06c75;>R</span><span>) -> bool:
+</span><span>        </span><span style=color:#c678dd;>if not </span><span>L </span><span style=color:#c678dd;>and not </span><span>R:
+</span><span>            </span><span style=color:#c678dd;>return </span><span style=color:#e5c07b;>True
+</span><span>        </span><span style=color:#c678dd;>elif not </span><span>L </span><span style=color:#c678dd;>or not </span><span>R:
+</span><span>            </span><span style=color:#c678dd;>return </span><span style=color:#e5c07b;>False
+</span><span>        </span><span style=color:#c678dd;>elif </span><span>L.val </span><span style=color:#c678dd;>!= </span><span>R.val:
+</span><span>            </span><span style=color:#c678dd;>return </span><span style=color:#e5c07b;>False
+</span><span>        </span><span style=color:#c678dd;>else</span><span>:
+</span><span>            </span><span style=color:#c678dd;>return </span><span>\
+</span><span>                </span><span style=color:#5c6370;>#      1
+</span><span>                </span><span style=color:#5c6370;>#   2     3
+</span><span>                </span><span style=color:#5c6370;># L   5   6   R
+</span><span>                </span><span style=color:#e06c75;>self</span><span>.</span><span style=color:#e06c75;>isMirror</span><span>(L.left, R.right) </span><span style=color:#c678dd;>and </span><span>\
+</span><span>                </span><span style=color:#5c6370;>#      1
+</span><span>                </span><span style=color:#5c6370;>#   2     3
+</span><span>                </span><span style=color:#5c6370;># 4   R   L   7
+</span><span>                </span><span style=color:#e06c75;>self</span><span>.</span><span style=color:#e06c75;>isMirror</span><span>(L.right, L.left)
+</span></code></pre><h3 id=0104-maximum-depth-of-binary-tree>0104. Maximum Depth of Binary Tree</h3><pre class=language-python data-lang=python style=background-color:#282c34;color:#dcdfe4;><code class=language-python data-lang=python><span style=color:#5c6370;># Definition for a binary tree node.
+</span><span style=color:#5c6370;># class TreeNode:
+</span><span style=color:#5c6370;>#     def __init__(self, val=0, left=None, right=None):
+</span><span style=color:#5c6370;>#         self.val = val
+</span><span style=color:#5c6370;>#         self.left = left
+</span><span style=color:#5c6370;>#         self.right = right
+</span><span style=color:#c678dd;>class </span><span style=color:#e5c07b;>Solution:
+</span><span>    </span><span style=color:#c678dd;>def </span><span style=color:#61afef;>maxDepth</span><span>(</span><span style=color:#e06c75;>self</span><span>, </span><span style=color:#e06c75;>root</span><span>: Optional[TreeNode]) -> int:
+</span><span>        </span><span style=color:#5c6370;># Two scenarios here
+</span><span>        </span><span style=color:#5c6370;># - Either the input doesn't have nodes inside
+</span><span>        </span><span style=color:#5c6370;># - Or the subtrees do not (in the recursion)
+</span><span>        </span><span style=color:#c678dd;>if not </span><span>root:
+</span><span>            </span><span style=color:#c678dd;>return </span><span style=color:#e5c07b;>0
 </span><span>
-</span><span>        L </span><span style=color:#f92672;>= </span><span>self.maxDepth(root.left)
-</span><span>        R </span><span style=color:#f92672;>= </span><span>self.maxDepth(root.right)
+</span><span>        L </span><span style=color:#c678dd;>= </span><span style=color:#e06c75;>self</span><span>.</span><span style=color:#e06c75;>maxDepth</span><span>(root.left)
+</span><span>        R </span><span style=color:#c678dd;>= </span><span style=color:#e06c75;>self</span><span>.</span><span style=color:#e06c75;>maxDepth</span><span>(root.right)
 </span><span>
-</span><span>        </span><span style=color:#f92672;>return </span><span style=color:#66d9ef;>max</span><span>(L, R) </span><span style=color:#f92672;>+ </span><span style=color:#ae81ff;>1
-</span></code></pre><h3 id=0124-binary-tree-maximum-path-sum>0124. Binary Tree Maximum Path Sum</h3><pre class=language-python data-lang=python style=background-color:#272822;color:#f8f8f2;><code class=language-python data-lang=python><span style=color:#75715e;># Definition for a binary tree node.
-</span><span style=color:#75715e;># class TreeNode:
-</span><span style=color:#75715e;>#     def __init__(self, val=0, left=None, right=None):
-</span><span style=color:#75715e;>#         self.val = val
-</span><span style=color:#75715e;>#         self.left = left
-</span><span style=color:#75715e;>#         self.right = right
-</span><span style=font-style:italic;color:#f92672;>class </span><span style=text-decoration:underline;color:#a6e22e;>Solution</span><span>:
-</span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>maxPathSum</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>root</span><span>: TreeNode) -> </span><span style=font-style:italic;color:#66d9ef;>int</span><span>:
-</span><span>        </span><span style=color:#f92672;>pass
-</span></code></pre><h3 id=0125-valid-palindrome>0125. Valid Palindrome</h3><pre class=language-java data-lang=java style=background-color:#272822;color:#f8f8f2;><code class=language-java data-lang=java><span style=font-style:italic;color:#66d9ef;>class </span><span style=text-decoration:underline;color:#a6e22e;>Solution </span><span>{
-</span><span>    </span><span style=color:#f92672;>public </span><span style=font-style:italic;color:#66d9ef;>boolean </span><span style=color:#a6e22e;>isPalindrome</span><span>(</span><span style=font-style:italic;color:#66d9ef;>String </span><span style=font-style:italic;color:#fd971f;>s</span><span>) {
-</span><span>        </span><span style=font-style:italic;color:#66d9ef;>int</span><span> i </span><span style=color:#f92672;>= </span><span style=color:#ae81ff;>0</span><span>;
-</span><span>        </span><span style=font-style:italic;color:#66d9ef;>int</span><span> j </span><span style=color:#f92672;>=</span><span> s.length() </span><span style=color:#f92672;>- </span><span style=color:#ae81ff;>1</span><span>;
+</span><span>        </span><span style=color:#c678dd;>return </span><span style=color:#61afef;>max</span><span>(L, R) </span><span style=color:#c678dd;>+ </span><span style=color:#e5c07b;>1
+</span></code></pre><h3 id=0124-binary-tree-maximum-path-sum>0124. Binary Tree Maximum Path Sum</h3><pre class=language-python data-lang=python style=background-color:#282c34;color:#dcdfe4;><code class=language-python data-lang=python><span style=color:#5c6370;># Definition for a binary tree node.
+</span><span style=color:#5c6370;># class TreeNode:
+</span><span style=color:#5c6370;>#     def __init__(self, val=0, left=None, right=None):
+</span><span style=color:#5c6370;>#         self.val = val
+</span><span style=color:#5c6370;>#         self.left = left
+</span><span style=color:#5c6370;>#         self.right = right
+</span><span style=color:#c678dd;>class </span><span style=color:#e5c07b;>Solution:
+</span><span>    </span><span style=color:#c678dd;>def </span><span style=color:#61afef;>maxPathSum</span><span>(</span><span style=color:#e06c75;>self</span><span>, </span><span style=color:#e06c75;>root</span><span>: TreeNode) -> int:
+</span><span>        </span><span style=color:#c678dd;>pass
+</span></code></pre><h3 id=0125-valid-palindrome>0125. Valid Palindrome</h3><pre class=language-java data-lang=java style=background-color:#282c34;color:#dcdfe4;><code class=language-java data-lang=java><span style=color:#c678dd;>class </span><span style=color:#e5c07b;>Solution </span><span>{
+</span><span>    </span><span style=color:#c678dd;>public boolean </span><span style=color:#61afef;>isPalindrome</span><span>(</span><span style=color:#e5c07b;>String </span><span style=color:#e06c75;>s</span><span>) {
+</span><span>        </span><span style=color:#c678dd;>int</span><span> i </span><span style=color:#c678dd;>= </span><span style=color:#e5c07b;>0</span><span>;
+</span><span>        </span><span style=color:#c678dd;>int</span><span> j </span><span style=color:#c678dd;>=</span><span> s.</span><span style=color:#e06c75;>length</span><span>() </span><span style=color:#c678dd;>- </span><span style=color:#e5c07b;>1</span><span>;
 </span><span>
-</span><span>        </span><span style=color:#f92672;>while </span><span>(i </span><span style=color:#f92672;><</span><span> j) {
-</span><span>            </span><span style=font-style:italic;color:#66d9ef;>Character</span><span> letter_left </span><span style=color:#f92672;>=</span><span> s.charAt(i);
-</span><span>            </span><span style=font-style:italic;color:#66d9ef;>Character</span><span> letter_right </span><span style=color:#f92672;>=</span><span> s.charAt(j);
+</span><span>        </span><span style=color:#c678dd;>while </span><span>(i </span><span style=color:#c678dd;><</span><span> j) {
+</span><span>            </span><span style=color:#e5c07b;>Character</span><span> letter_left </span><span style=color:#c678dd;>=</span><span> s.</span><span style=color:#e06c75;>charAt</span><span>(i);
+</span><span>            </span><span style=color:#e5c07b;>Character</span><span> letter_right </span><span style=color:#c678dd;>=</span><span> s.</span><span style=color:#e06c75;>charAt</span><span>(j);
 </span><span>
-</span><span>            </span><span style=color:#f92672;>if </span><span>(</span><span style=color:#f92672;>!</span><span style=font-style:italic;color:#66d9ef;>Character</span><span>.isLetterOrDigit(letter_left)) {
-</span><span>                i</span><span style=color:#f92672;>++</span><span>;
+</span><span>            </span><span style=color:#c678dd;>if </span><span>(</span><span style=color:#c678dd;>!</span><span style=color:#e5c07b;>Character</span><span>.</span><span style=color:#e06c75;>isLetterOrDigit</span><span>(letter_left)) {
+</span><span>                i</span><span style=color:#c678dd;>++</span><span>;
 </span><span>
-</span><span>                </span><span style=color:#f92672;>continue</span><span>;
+</span><span>                </span><span style=color:#c678dd;>continue</span><span>;
 </span><span>            }
 </span><span>
-</span><span>            </span><span style=color:#f92672;>if </span><span>(</span><span style=color:#f92672;>!</span><span style=font-style:italic;color:#66d9ef;>Character</span><span>.isLetterOrDigit(letter_right)) {
-</span><span>                j</span><span style=color:#f92672;>--</span><span>;
+</span><span>            </span><span style=color:#c678dd;>if </span><span>(</span><span style=color:#c678dd;>!</span><span style=color:#e5c07b;>Character</span><span>.</span><span style=color:#e06c75;>isLetterOrDigit</span><span>(letter_right)) {
+</span><span>                j</span><span style=color:#c678dd;>--</span><span>;
 </span><span>
-</span><span>                </span><span style=color:#f92672;>continue</span><span>;
+</span><span>                </span><span style=color:#c678dd;>continue</span><span>;
 </span><span>            }
 </span><span>
-</span><span>            </span><span style=color:#f92672;>if </span><span>(</span><span style=font-style:italic;color:#66d9ef;>Character</span><span>.toLowerCase(letter_left) </span><span style=color:#f92672;>!= </span><span style=font-style:italic;color:#66d9ef;>Character</span><span>.toLowerCase(letter_right)) {
-</span><span>                </span><span style=color:#f92672;>return </span><span style=color:#ae81ff;>false</span><span>;
+</span><span>            </span><span style=color:#c678dd;>if </span><span>(</span><span style=color:#e5c07b;>Character</span><span>.</span><span style=color:#e06c75;>toLowerCase</span><span>(letter_left) </span><span style=color:#c678dd;>!= </span><span style=color:#e5c07b;>Character</span><span>.</span><span style=color:#e06c75;>toLowerCase</span><span>(letter_right)) {
+</span><span>                </span><span style=color:#c678dd;>return </span><span style=color:#e5c07b;>false</span><span>;
 </span><span>            }
 </span><span>
-</span><span>            i</span><span style=color:#f92672;>++</span><span>;
-</span><span>            j</span><span style=color:#f92672;>--</span><span>;
+</span><span>            i</span><span style=color:#c678dd;>++</span><span>;
+</span><span>            j</span><span style=color:#c678dd;>--</span><span>;
 </span><span>        }
 </span><span>
-</span><span>        </span><span style=color:#f92672;>return </span><span style=color:#ae81ff;>true</span><span>;
+</span><span>        </span><span style=color:#c678dd;>return </span><span style=color:#e5c07b;>true</span><span>;
 </span><span>    }
 </span><span>}
-</span></code></pre><pre class=language-python data-lang=python style=background-color:#272822;color:#f8f8f2;><code class=language-python data-lang=python><span style=font-style:italic;color:#f92672;>class </span><span style=text-decoration:underline;color:#a6e22e;>Solution</span><span>:
-</span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>isPalindrome</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>s</span><span>: </span><span style=font-style:italic;color:#66d9ef;>str</span><span>) -> </span><span style=font-style:italic;color:#66d9ef;>bool</span><span>:
-</span><span>        idx_start </span><span style=color:#f92672;>= </span><span style=color:#ae81ff;>0
-</span><span>        idx_end </span><span style=color:#f92672;>= </span><span style=color:#66d9ef;>len</span><span>(s) </span><span style=color:#f92672;>- </span><span style=color:#ae81ff;>1
+</span></code></pre><pre class=language-python data-lang=python style=background-color:#282c34;color:#dcdfe4;><code class=language-python data-lang=python><span style=color:#c678dd;>class </span><span style=color:#e5c07b;>Solution:
+</span><span>    </span><span style=color:#c678dd;>def </span><span style=color:#61afef;>isPalindrome</span><span>(</span><span style=color:#e06c75;>self</span><span>, </span><span style=color:#e06c75;>s</span><span>: str) -> bool:
+</span><span>        idx_start </span><span style=color:#c678dd;>= </span><span style=color:#e5c07b;>0
+</span><span>        idx_end </span><span style=color:#c678dd;>= </span><span style=color:#61afef;>len</span><span>(s) </span><span style=color:#c678dd;>- </span><span style=color:#e5c07b;>1
 </span><span>
-</span><span>        </span><span style=color:#f92672;>while </span><span>idx_start </span><span style=color:#f92672;>< </span><span>idx_end:
-</span><span>            letter_left </span><span style=color:#f92672;>= </span><span>s[idx_start]
-</span><span>            letter_right </span><span style=color:#f92672;>= </span><span>s[idx_end]
+</span><span>        </span><span style=color:#c678dd;>while </span><span>idx_start </span><span style=color:#c678dd;>< </span><span>idx_end:
+</span><span>            letter_left </span><span style=color:#c678dd;>= </span><span>s[idx_start]
+</span><span>            letter_right </span><span style=color:#c678dd;>= </span><span>s[idx_end]
 </span><span>
-</span><span>            </span><span style=color:#f92672;>if not </span><span>letter_left.isalnum():
-</span><span>                idx_start </span><span style=color:#f92672;>+= </span><span style=color:#ae81ff;>1
+</span><span>            </span><span style=color:#c678dd;>if not </span><span>letter_left.</span><span style=color:#e06c75;>isalnum</span><span>():
+</span><span>                idx_start </span><span style=color:#c678dd;>+= </span><span style=color:#e5c07b;>1
 </span><span>
-</span><span>                </span><span style=color:#f92672;>continue
+</span><span>                </span><span style=color:#c678dd;>continue
 </span><span>
-</span><span>            </span><span style=color:#f92672;>if not </span><span>letter_right.isalnum():
-</span><span>                idx_end </span><span style=color:#f92672;>-= </span><span style=color:#ae81ff;>1
+</span><span>            </span><span style=color:#c678dd;>if not </span><span>letter_right.</span><span style=color:#e06c75;>isalnum</span><span>():
+</span><span>                idx_end </span><span style=color:#c678dd;>-= </span><span style=color:#e5c07b;>1
 </span><span>
-</span><span>                </span><span style=color:#f92672;>continue
+</span><span>                </span><span style=color:#c678dd;>continue
 </span><span>
-</span><span>            </span><span style=color:#f92672;>if </span><span>letter_left.lower() </span><span style=color:#f92672;>!= </span><span>letter_right.lower():
-</span><span>                </span><span style=color:#f92672;>return </span><span style=color:#ae81ff;>False
+</span><span>            </span><span style=color:#c678dd;>if </span><span>letter_left.</span><span style=color:#e06c75;>lower</span><span>() </span><span style=color:#c678dd;>!= </span><span>letter_right.</span><span style=color:#e06c75;>lower</span><span>():
+</span><span>                </span><span style=color:#c678dd;>return </span><span style=color:#e5c07b;>False
 </span><span>
-</span><span>            idx_start </span><span style=color:#f92672;>+= </span><span style=color:#ae81ff;>1
-</span><span>            idx_end </span><span style=color:#f92672;>-= </span><span style=color:#ae81ff;>1
+</span><span>            idx_start </span><span style=color:#c678dd;>+= </span><span style=color:#e5c07b;>1
+</span><span>            idx_end </span><span style=color:#c678dd;>-= </span><span style=color:#e5c07b;>1
 </span><span>
-</span><span>        </span><span style=color:#f92672;>return </span><span style=color:#ae81ff;>True
-</span></code></pre><h3 id=0128-longest-consecutive-sequence>0128. Longest Consecutive Sequence</h3><pre class=language-python data-lang=python style=background-color:#272822;color:#f8f8f2;><code class=language-python data-lang=python><span style=font-style:italic;color:#f92672;>class </span><span style=text-decoration:underline;color:#a6e22e;>Solution</span><span>:
-</span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>longestConsecutive</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>nums</span><span>: List[</span><span style=font-style:italic;color:#66d9ef;>int</span><span>]) -> </span><span style=font-style:italic;color:#66d9ef;>int</span><span>:
-</span><span>        seq_no_dups </span><span style=color:#f92672;>= </span><span style=font-style:italic;color:#66d9ef;>set</span><span>(nums)
-</span><span>        len_longest </span><span style=color:#f92672;>= </span><span style=color:#ae81ff;>0
+</span><span>        </span><span style=color:#c678dd;>return </span><span style=color:#e5c07b;>True
+</span></code></pre><h3 id=0128-longest-consecutive-sequence>0128. Longest Consecutive Sequence</h3><pre class=language-python data-lang=python style=background-color:#282c34;color:#dcdfe4;><code class=language-python data-lang=python><span style=color:#c678dd;>class </span><span style=color:#e5c07b;>Solution:
+</span><span>    </span><span style=color:#c678dd;>def </span><span style=color:#61afef;>longestConsecutive</span><span>(</span><span style=color:#e06c75;>self</span><span>, </span><span style=color:#e06c75;>nums</span><span>: List[int]) -> int:
+</span><span>        seq_no_dups </span><span style=color:#c678dd;>= </span><span style=color:#e06c75;>set</span><span>(nums)
+</span><span>        len_longest </span><span style=color:#c678dd;>= </span><span style=color:#e5c07b;>0
 </span><span>
-</span><span>        </span><span style=color:#f92672;>for </span><span>elem </span><span style=color:#f92672;>in </span><span>seq_no_dups:
+</span><span>        </span><span style=color:#c678dd;>for </span><span>elem </span><span style=color:#c678dd;>in </span><span>seq_no_dups:
 </span><span>
-</span><span>            </span><span style=color:#75715e;># Find the start for a sequence then go (incr) from there
-</span><span>            </span><span style=color:#f92672;>if </span><span>(elem </span><span style=color:#f92672;>+ </span><span style=color:#ae81ff;>1</span><span>) </span><span style=color:#f92672;>not in </span><span>seq_no_dups:
-</span><span>                len_sub_seq </span><span style=color:#f92672;>= </span><span style=color:#ae81ff;>1
+</span><span>            </span><span style=color:#5c6370;># Find the start for a sequence then go (incr) from there
+</span><span>            </span><span style=color:#c678dd;>if </span><span>(elem </span><span style=color:#c678dd;>+ </span><span style=color:#e5c07b;>1</span><span>) </span><span style=color:#c678dd;>not in </span><span>seq_no_dups:
+</span><span>                len_sub_seq </span><span style=color:#c678dd;>= </span><span style=color:#e5c07b;>1
 </span><span>
-</span><span>                </span><span style=color:#f92672;>while </span><span>(elem </span><span style=color:#f92672;>+ </span><span>len_sub_seq) </span><span style=color:#f92672;>in </span><span>seq_no_dups:
-</span><span>                    len_sub_seq </span><span style=color:#f92672;>+= </span><span style=color:#ae81ff;>1
+</span><span>                </span><span style=color:#c678dd;>while </span><span>(elem </span><span style=color:#c678dd;>+ </span><span>len_sub_seq) </span><span style=color:#c678dd;>in </span><span>seq_no_dups:
+</span><span>                    len_sub_seq </span><span style=color:#c678dd;>+= </span><span style=color:#e5c07b;>1
 </span><span>
-</span><span>        </span><span style=color:#f92672;>return </span><span>len_longest
-</span></code></pre><h3 id=0141-linked-list-cycle>0141. Linked List Cycle</h3><pre class=language-java data-lang=java style=background-color:#272822;color:#f8f8f2;><code class=language-java data-lang=java><span style=color:#75715e;>/*
-</span><span style=color:#75715e;> * Definition for singly-linked list.
-</span><span style=color:#75715e;> * class ListNode {
-</span><span style=color:#75715e;> *     int val;
-</span><span style=color:#75715e;> *     ListNode next;
-</span><span style=color:#75715e;> *     ListNode(int x) {
-</span><span style=color:#75715e;> *         val = x;
-</span><span style=color:#75715e;> *         next = null;
-</span><span style=color:#75715e;> *     }
-</span><span style=color:#75715e;> * }
-</span><span style=color:#75715e;> */
-</span><span style=color:#f92672;>public </span><span style=font-style:italic;color:#66d9ef;>class </span><span style=text-decoration:underline;color:#a6e22e;>Solution </span><span>{
-</span><span>    </span><span style=color:#f92672;>public </span><span style=font-style:italic;color:#66d9ef;>boolean </span><span style=color:#a6e22e;>hasCycle</span><span>(</span><span style=font-style:italic;color:#66d9ef;>ListNode </span><span style=font-style:italic;color:#fd971f;>head</span><span>) {
-</span><span>        </span><span style=font-style:italic;color:#66d9ef;>ListNode</span><span> slow </span><span style=color:#f92672;>=</span><span> head;
-</span><span>        </span><span style=font-style:italic;color:#66d9ef;>ListNode</span><span> fast </span><span style=color:#f92672;>=</span><span> head;
+</span><span>        </span><span style=color:#c678dd;>return </span><span>len_longest
+</span></code></pre><h3 id=0141-linked-list-cycle>0141. Linked List Cycle</h3><pre class=language-java data-lang=java style=background-color:#282c34;color:#dcdfe4;><code class=language-java data-lang=java><span style=color:#5c6370;>/*
+</span><span style=color:#5c6370;> * Definition for singly-linked list.
+</span><span style=color:#5c6370;> * class ListNode {
+</span><span style=color:#5c6370;> *     int val;
+</span><span style=color:#5c6370;> *     ListNode next;
+</span><span style=color:#5c6370;> *     ListNode(int x) {
+</span><span style=color:#5c6370;> *         val = x;
+</span><span style=color:#5c6370;> *         next = null;
+</span><span style=color:#5c6370;> *     }
+</span><span style=color:#5c6370;> * }
+</span><span style=color:#5c6370;> */
+</span><span style=color:#c678dd;>public class </span><span style=color:#e5c07b;>Solution </span><span>{
+</span><span>    </span><span style=color:#c678dd;>public boolean </span><span style=color:#61afef;>hasCycle</span><span>(</span><span style=color:#e5c07b;>ListNode </span><span style=color:#e06c75;>head</span><span>) {
+</span><span>        </span><span style=color:#e5c07b;>ListNode</span><span> slow </span><span style=color:#c678dd;>=</span><span> head;
+</span><span>        </span><span style=color:#e5c07b;>ListNode</span><span> fast </span><span style=color:#c678dd;>=</span><span> head;
 </span><span>
-</span><span>        </span><span style=color:#75715e;>// Take 3, 7, 8, 6 for example (6 cycle back to 7)
-</span><span>        </span><span style=color:#75715e;>// [SLOW]  3       7       8       6
-</span><span>        </span><span style=color:#75715e;>// [FAST]  3       8       7       6
-</span><span>        </span><span style=color:#75715e;>// [LOOP]  T[7,8]  T[8,7]  T[6,6]  F
+</span><span>        </span><span style=color:#5c6370;>// Take 3, 7, 8, 6 for example (6 cycle back to 7)
+</span><span>        </span><span style=color:#5c6370;>// [SLOW]  3       7       8       6
+</span><span>        </span><span style=color:#5c6370;>// [FAST]  3       8       7       6
+</span><span>        </span><span style=color:#5c6370;>// [LOOP]  T[7,8]  T[8,7]  T[6,6]  F
 </span><span>
-</span><span>        </span><span style=color:#f92672;>while </span><span>(fast </span><span style=color:#f92672;>!= </span><span style=color:#ae81ff;>null </span><span style=color:#f92672;>&&</span><span> fast.next </span><span style=color:#f92672;>!= </span><span style=color:#ae81ff;>null</span><span>) {
-</span><span>            slow </span><span style=color:#f92672;>=</span><span> slow.next;
-</span><span>            fast </span><span style=color:#f92672;>=</span><span> fast.next.next;
+</span><span>        </span><span style=color:#c678dd;>while </span><span>(fast </span><span style=color:#c678dd;>!= </span><span style=color:#e5c07b;>null </span><span style=color:#c678dd;>&&</span><span> fast.next </span><span style=color:#c678dd;>!= </span><span style=color:#e5c07b;>null</span><span>) {
+</span><span>            slow </span><span style=color:#c678dd;>=</span><span> slow.next;
+</span><span>            fast </span><span style=color:#c678dd;>=</span><span> fast.next.next;
 </span><span>
-</span><span>            </span><span style=color:#f92672;>if </span><span>(slow </span><span style=color:#f92672;>==</span><span> fast) {
-</span><span>                </span><span style=color:#f92672;>return </span><span style=color:#ae81ff;>true</span><span>;
-</span><span>            }
-</span><span>        }
-</span><span>
-</span><span>        </span><span style=color:#f92672;>return </span><span style=color:#ae81ff;>false</span><span>;
-</span><span>    }
-</span><span>}
-</span></code></pre><h3 id=0146-lru-cache>0146. LRU Cache</h3><pre class=language-java data-lang=java style=background-color:#272822;color:#f8f8f2;><code class=language-java data-lang=java><span style=font-style:italic;color:#66d9ef;>class </span><span style=text-decoration:underline;color:#a6e22e;>LRUCache </span><span>{
-</span><span>
-</span><span>    </span><span style=color:#f92672;>public </span><span style=color:#a6e22e;>LRUCache</span><span>(</span><span style=font-style:italic;color:#66d9ef;>int </span><span style=font-style:italic;color:#fd971f;>capacity</span><span>) {
-</span><span>
-</span><span>    }
-</span><span>
-</span><span>    </span><span style=color:#f92672;>public </span><span style=font-style:italic;color:#66d9ef;>int </span><span style=color:#a6e22e;>get</span><span>(</span><span style=font-style:italic;color:#66d9ef;>int </span><span style=font-style:italic;color:#fd971f;>key</span><span>) {
-</span><span>
-</span><span>    }
-</span><span>
-</span><span>    </span><span style=color:#f92672;>public </span><span style=font-style:italic;color:#66d9ef;>void </span><span style=color:#a6e22e;>put</span><span>(</span><span style=font-style:italic;color:#66d9ef;>int </span><span style=font-style:italic;color:#fd971f;>key</span><span>, </span><span style=font-style:italic;color:#66d9ef;>int </span><span style=font-style:italic;color:#fd971f;>value</span><span>) {
-</span><span>
-</span><span>    }
-</span><span>}
-</span><span>
-</span><span style=color:#75715e;>/*
-</span><span style=color:#75715e;> * Your LRUCache object will be instantiated and called as such:
-</span><span style=color:#75715e;> * LRUCache obj = new LRUCache(capacity);
-</span><span style=color:#75715e;> * int param_1 = obj.get(key);
-</span><span style=color:#75715e;> * obj.put(key,value);
-</span><span style=color:#75715e;> */
-</span></code></pre><h3 id=0155-min-stack>0155. Min Stack</h3><pre class=language-java data-lang=java style=background-color:#272822;color:#f8f8f2;><code class=language-java data-lang=java><span style=font-style:italic;color:#66d9ef;>class </span><span style=text-decoration:underline;color:#a6e22e;>MinStack </span><span>{
-</span><span>
-</span><span>    </span><span style=color:#75715e;>// A stack holding all the items
-</span><span>    </span><span style=font-style:italic;color:#66d9ef;>Stack</span><span><</span><span style=font-style:italic;color:#66d9ef;>Integer</span><span>> wholeStack </span><span style=color:#f92672;>= new </span><span style=font-style:italic;color:#66d9ef;>Stack</span><span><>();
-</span><span>
-</span><span>    </span><span style=color:#75715e;>// A stack holding the minium items (the amount might >= 1)
-</span><span>    </span><span style=font-style:italic;color:#66d9ef;>Stack</span><span><</span><span style=font-style:italic;color:#66d9ef;>Integer</span><span>> minStack   </span><span style=color:#f92672;>= new </span><span style=font-style:italic;color:#66d9ef;>Stack</span><span><>();
-</span><span>
-</span><span>    </span><span style=color:#f92672;>public </span><span style=color:#a6e22e;>MinStack</span><span>() {
-</span><span>    }
-</span><span>
-</span><span>    </span><span style=color:#75715e;>// Save one on the whole stack
-</span><span>    </span><span style=color:#75715e;>// - if there is no element in the min, add it (= the minimum)
-</span><span>    </span><span style=color:#75715e;>// - compare the one to be inserted with exisiting, remain or STACK on it
-</span><span>    </span><span style=color:#f92672;>public </span><span style=font-style:italic;color:#66d9ef;>void </span><span style=color:#a6e22e;>push</span><span>(</span><span style=font-style:italic;color:#66d9ef;>int </span><span style=font-style:italic;color:#fd971f;>val</span><span>) {
-</span><span>        wholeStack.push(val);
-</span><span>
-</span><span>        </span><span style=color:#f92672;>if </span><span>(minStack.isEmpty() </span><span style=color:#f92672;>||</span><span> val </span><span style=color:#f92672;><=</span><span> minStack.peek()) {
-</span><span>            minStack.push(val);
-</span><span>        }
-</span><span>    }
-</span><span>
-</span><span>    </span><span style=color:#75715e;>// #TODO document needed
-</span><span>    </span><span style=color:#f92672;>public </span><span style=font-style:italic;color:#66d9ef;>void </span><span style=color:#a6e22e;>pop</span><span>() {
-</span><span>        </span><span style=color:#f92672;>if </span><span>(minStack.peek().equals(wholeStack.peek())) {
-</span><span>            minStack.pop();
-</span><span>        }
-</span><span>
-</span><span>        wholeStack.pop();
-</span><span>    }
-</span><span>
-</span><span>    </span><span style=color:#75715e;>// No restraint, simply return the top element (also the newest)
-</span><span>    </span><span style=color:#f92672;>public </span><span style=font-style:italic;color:#66d9ef;>int </span><span style=color:#a6e22e;>top</span><span>() {
-</span><span>        </span><span style=color:#f92672;>return</span><span> wholeStack.peek();
-</span><span>    }
-</span><span>
-</span><span>    </span><span style=color:#75715e;>// As it's a min stack, the top of it must be the minimum
-</span><span>    </span><span style=color:#f92672;>public </span><span style=font-style:italic;color:#66d9ef;>int </span><span style=color:#a6e22e;>getMin</span><span>() {
-</span><span>        </span><span style=color:#f92672;>return</span><span> minStack.peek();
-</span><span>    }
-</span><span>}
-</span></code></pre><h3 id=0160-intersection-of-two-linked-lists>0160. Intersection of Two Linked Lists</h3><pre class=language-python data-lang=python style=background-color:#272822;color:#f8f8f2;><code class=language-python data-lang=python><span style=color:#75715e;># Definition for singly-linked list.
-</span><span style=color:#75715e;># class ListNode:
-</span><span style=color:#75715e;>#     def __init__(self, x):
-</span><span style=color:#75715e;>#         self.val = x
-</span><span style=color:#75715e;>#         self.next = None
-</span><span>
-</span><span style=font-style:italic;color:#f92672;>class </span><span style=text-decoration:underline;color:#a6e22e;>Solution</span><span>:
-</span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>getIntersectionNode</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>headA</span><span>: ListNode, </span><span style=font-style:italic;color:#fd971f;>headB</span><span>: ListNode) -> Optional[ListNode]:
-</span><span>        </span><span style=color:#75715e;># no intersection as one of them or both are None
-</span><span>        </span><span style=color:#f92672;>if not </span><span>headA </span><span style=color:#f92672;>or not </span><span>headB:
-</span><span>            </span><span style=color:#f92672;>return </span><span style=color:#ae81ff;>None
-</span><span>
-</span><span>        hA, hB </span><span style=color:#f92672;>= </span><span>headA, headB
-</span><span>
-</span><span>        </span><span style=color:#f92672;>while </span><span>hA </span><span style=color:#f92672;>!= </span><span>hB:
-</span><span>            hA </span><span style=color:#f92672;>= </span><span>hA.next </span><span style=color:#f92672;>if </span><span>hA </span><span style=color:#f92672;>else </span><span>headB
-</span><span>            hB </span><span style=color:#f92672;>= </span><span>hB.next </span><span style=color:#f92672;>if </span><span>hB </span><span style=color:#f92672;>else </span><span>headA
-</span><span>
-</span><span>        </span><span style=color:#f92672;>return </span><span>hA
-</span></code></pre><h3 id=0206-reverse-linked-list>0206. Reverse Linked List</h3><pre class=language-python data-lang=python style=background-color:#272822;color:#f8f8f2;><code class=language-python data-lang=python><span style=color:#75715e;># Definition for singly-linked list.
-</span><span style=color:#75715e;># class ListNode:
-</span><span style=color:#75715e;>#     def __init__(self, val=0, next=None):
-</span><span style=color:#75715e;>#         self.val = val
-</span><span style=color:#75715e;>#         self.next = next
-</span><span style=font-style:italic;color:#f92672;>class </span><span style=text-decoration:underline;color:#a6e22e;>Solution</span><span>:
-</span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>reverseList</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>head</span><span>: Optional[ListNode]) -> Optional[ListNode]:
-</span><span>        dummy </span><span style=color:#f92672;>= </span><span>ListNode(</span><span style=color:#ae81ff;>None</span><span>)
-</span><span>
-</span><span>        </span><span style=color:#f92672;>while </span><span>head:
-</span><span>            temp </span><span style=color:#f92672;>= </span><span>head.next
-</span><span>            head.next </span><span style=color:#f92672;>= </span><span>dummy.next
-</span><span>            dummy.next </span><span style=color:#f92672;>= </span><span>head
-</span><span>            head </span><span style=color:#f92672;>= </span><span>temp
-</span><span>
-</span><span>        </span><span style=color:#f92672;>return </span><span>dummy.next
-</span></code></pre><h3 id=0217-contains-duplicate>0217. Contains Duplicate</h3><pre class=language-java data-lang=java style=background-color:#272822;color:#f8f8f2;><code class=language-java data-lang=java><span style=font-style:italic;color:#66d9ef;>class </span><span style=text-decoration:underline;color:#a6e22e;>Solution </span><span>{
-</span><span>    </span><span style=color:#f92672;>public </span><span style=font-style:italic;color:#66d9ef;>boolean </span><span style=color:#a6e22e;>containsDuplicate</span><span>(</span><span style=font-style:italic;color:#66d9ef;>int</span><span style=color:#f92672;>[] </span><span style=font-style:italic;color:#fd971f;>nums</span><span>) {
-</span><span>        </span><span style=color:#75715e;>// Just like the set() you use in Python. 'Set()' is just the
-</span><span>        </span><span style=color:#75715e;>// name of the interface.
-</span><span>        </span><span style=font-style:italic;color:#66d9ef;>Set</span><span><</span><span style=font-style:italic;color:#66d9ef;>Integer</span><span>> uniq </span><span style=color:#f92672;>= new </span><span style=font-style:italic;color:#66d9ef;>HashSet</span><span><>();
-</span><span>
-</span><span>        </span><span style=color:#f92672;>for </span><span>(</span><span style=font-style:italic;color:#66d9ef;>int</span><span> idx </span><span style=color:#f92672;>= </span><span style=color:#ae81ff;>0</span><span>; idx </span><span style=color:#f92672;><</span><span> nums.length; idx</span><span style=color:#f92672;>++</span><span>) {
-</span><span>
-</span><span>            </span><span style=color:#75715e;>// Ah, I've seen this element before, it's duplicate then!
-</span><span>            </span><span style=color:#f92672;>if </span><span>(uniq.contains(nums[idx])) {
-</span><span>                </span><span style=color:#f92672;>return </span><span style=color:#ae81ff;>true</span><span>;
-</span><span>            }
-</span><span>
-</span><span>            </span><span style=color:#75715e;>// Put every elements into a non-repeating box
-</span><span>            uniq.add(nums[idx]);
-</span><span>        }
-</span><span>
-</span><span>        </span><span style=color:#f92672;>return </span><span style=color:#ae81ff;>false</span><span>;
-</span><span>    }
-</span><span>}
-</span></code></pre><h3 id=0226-invert-binary-tree>0226. Invert Binary Tree</h3><pre class=language-python data-lang=python style=background-color:#272822;color:#f8f8f2;><code class=language-python data-lang=python><span style=color:#75715e;># Definition for a binary tree node.
-</span><span style=color:#75715e;># class TreeNode:
-</span><span style=color:#75715e;>#     def __init__(self, val=0, left=None, right=None):
-</span><span style=color:#75715e;>#         self.val = val
-</span><span style=color:#75715e;>#         self.left = left
-</span><span style=color:#75715e;>#         self.right = right
-</span><span style=font-style:italic;color:#f92672;>class </span><span style=text-decoration:underline;color:#a6e22e;>Solution</span><span>:
-</span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>invertTree</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>root</span><span>: Optional[TreeNode]) -> Optional[TreeNode]:
-</span><span>        </span><span style=color:#f92672;>if not </span><span>root:
-</span><span>            </span><span style=color:#f92672;>return </span><span style=color:#ae81ff;>None
-</span><span>
-</span><span>        root.left, root.right </span><span style=color:#f92672;>= </span><span>root.right, root.left
-</span><span>
-</span><span>        self.invertTree(root.left)
-</span><span>        self.invertTree(root.right)
-</span><span>
-</span><span>        </span><span style=color:#f92672;>return </span><span>root
-</span></code></pre><h3 id=0230-kth-smallest-element-in-a-bst>0230. Kth Smallest Element in a BST</h3><pre class=language-python data-lang=python style=background-color:#272822;color:#f8f8f2;><code class=language-python data-lang=python><span style=color:#75715e;># Definition for a binary tree node.
-</span><span style=color:#75715e;># class TreeNode:
-</span><span style=color:#75715e;>#     def __init__(self, val=0, left=None, right=None):
-</span><span style=color:#75715e;>#         self.val = val
-</span><span style=color:#75715e;>#         self.left = left
-</span><span style=color:#75715e;>#         self.right = right
-</span><span style=font-style:italic;color:#f92672;>class </span><span style=text-decoration:underline;color:#a6e22e;>Solution</span><span>:
-</span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>kthSmallest</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>root</span><span>: Optional[TreeNode], </span><span style=font-style:italic;color:#fd971f;>k</span><span>: </span><span style=font-style:italic;color:#66d9ef;>int</span><span>) -> </span><span style=font-style:italic;color:#66d9ef;>int</span><span>:
-</span><span>        </span><span style=color:#75715e;># Flatten the list using inorder traversal
-</span><span>
-</span><span>        resultList </span><span style=color:#f92672;>= </span><span>[]
-</span><span>
-</span><span>        self.inorderTraversal(root, resultList)
-</span><span>
-</span><span>        </span><span style=color:#f92672;>return </span><span>resultList[k</span><span style=color:#f92672;>-</span><span style=color:#ae81ff;>1</span><span>]
-</span><span>
-</span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>inorderTraversal</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>node</span><span>, </span><span style=font-style:italic;color:#fd971f;>aggregator</span><span>):
-</span><span>        </span><span style=color:#f92672;>if not </span><span>node:
-</span><span>            </span><span style=color:#f92672;>return </span><span style=color:#ae81ff;>None
-</span><span>
-</span><span>        self.inorderTraversal(node.left, aggregator)
-</span><span>        aggregator.append(node.val)
-</span><span>        self.inorderTraversal(node.right, aggregator)
-</span></code></pre><h3 id=0238-product-of-array-except-self>0238. Product of Array Except Self</h3><pre class=language-python data-lang=python style=background-color:#272822;color:#f8f8f2;><code class=language-python data-lang=python><span style=font-style:italic;color:#f92672;>class </span><span style=text-decoration:underline;color:#a6e22e;>Solution</span><span>:
-</span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>productExceptSelf</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>nums</span><span>: List[</span><span style=font-style:italic;color:#66d9ef;>int</span><span>]) -> List[</span><span style=font-style:italic;color:#66d9ef;>int</span><span>]:
-</span><span>        ln </span><span style=color:#f92672;>= </span><span style=color:#66d9ef;>len</span><span>(nums)
-</span><span>        productBefore </span><span style=color:#f92672;>= </span><span>[</span><span style=color:#ae81ff;>1</span><span>] </span><span style=color:#f92672;>* </span><span>ln
-</span><span>        productAfter </span><span style=color:#f92672;>= </span><span>[</span><span style=color:#ae81ff;>1</span><span>] </span><span style=color:#f92672;>* </span><span>ln
-</span><span>
-</span><span>        </span><span style=color:#75715e;># Indice: 1, 2, 3 ..
-</span><span>        </span><span style=color:#f92672;>for </span><span>i </span><span style=color:#f92672;>in </span><span style=color:#66d9ef;>range</span><span>(</span><span style=color:#ae81ff;>1</span><span>, ln):
-</span><span>            productBefore[i] </span><span style=color:#f92672;>= </span><span>productBefore[i</span><span style=color:#f92672;>-</span><span style=color:#ae81ff;>1</span><span>] </span><span style=color:#f92672;>* </span><span>nums[i</span><span style=color:#f92672;>-</span><span style=color:#ae81ff;>1</span><span>]
-</span><span>
-</span><span>        </span><span style=color:#75715e;># Indice: .. 2, 1, 0
-</span><span>        </span><span style=color:#f92672;>for </span><span>i </span><span style=color:#f92672;>in </span><span style=color:#66d9ef;>range</span><span>(ln </span><span style=color:#f92672;>- </span><span style=color:#ae81ff;>2</span><span>, </span><span style=color:#f92672;>-</span><span style=color:#ae81ff;>1</span><span>, </span><span style=color:#f92672;>-</span><span style=color:#ae81ff;>1</span><span>):
-</span><span>            productAfter[i] </span><span style=color:#f92672;>= </span><span>productAfter[i</span><span style=color:#f92672;>+</span><span style=color:#ae81ff;>1</span><span>] </span><span style=color:#f92672;>* </span><span>nums[i</span><span style=color:#f92672;>+</span><span style=color:#ae81ff;>1</span><span>]
-</span><span>
-</span><span>        result </span><span style=color:#f92672;>= </span><span>[]
-</span><span>        </span><span style=color:#f92672;>for </span><span>i </span><span style=color:#f92672;>in </span><span style=color:#66d9ef;>range</span><span>(</span><span style=color:#ae81ff;>0</span><span>, ln):
-</span><span>            result.append(productBefore[i] </span><span style=color:#f92672;>* </span><span>productAfter[i])
-</span><span>
-</span><span>        </span><span style=color:#f92672;>return </span><span>result
-</span></code></pre><h3 id=0242-valid-anagrams>0242. Valid Anagrams</h3><pre class=language-java data-lang=java style=background-color:#272822;color:#f8f8f2;><code class=language-java data-lang=java><span style=font-style:italic;color:#66d9ef;>class </span><span style=text-decoration:underline;color:#a6e22e;>Solution </span><span>{
-</span><span>    </span><span style=color:#f92672;>public </span><span style=font-style:italic;color:#66d9ef;>boolean </span><span style=color:#a6e22e;>isAnagram</span><span>(</span><span style=font-style:italic;color:#66d9ef;>String </span><span style=font-style:italic;color:#fd971f;>s</span><span>, </span><span style=font-style:italic;color:#66d9ef;>String </span><span style=font-style:italic;color:#fd971f;>t</span><span>) {
-</span><span>        </span><span style=color:#f92672;>if </span><span>(s.length() </span><span style=color:#f92672;>!=</span><span> t.length()) {
-</span><span>            </span><span style=color:#f92672;>return </span><span style=color:#ae81ff;>false</span><span>;
-</span><span>        }
-</span><span>
-</span><span>        </span><span style=font-style:italic;color:#66d9ef;>int</span><span style=color:#f92672;>[]</span><span> cmp_by_compute </span><span style=color:#f92672;>= new </span><span style=font-style:italic;color:#66d9ef;>int</span><span>[</span><span style=color:#ae81ff;>26</span><span>];
-</span><span>
-</span><span>        </span><span style=color:#f92672;>for </span><span>(</span><span style=font-style:italic;color:#66d9ef;>int</span><span> idx </span><span style=color:#f92672;>= </span><span style=color:#ae81ff;>0</span><span>; idx </span><span style=color:#f92672;><</span><span> s.length(); idx</span><span style=color:#f92672;>++</span><span>) {
-</span><span>            </span><span style=color:#75715e;>// To minus lowercase 'a' is to get the ranking of the
-</span><span>            </span><span style=color:#75715e;>// letters. For example, you would get 0 for character
-</span><span>            </span><span style=color:#75715e;>// 'a' and 25 for character 'z' which is exactly what
-</span><span>            </span><span style=color:#75715e;>// we want.
-</span><span>            </span><span style=font-style:italic;color:#66d9ef;>int</span><span> s_substract </span><span style=color:#f92672;>=</span><span> s.charAt(idx) </span><span style=color:#f92672;>- </span><span style=color:#e6db74;>'a'</span><span>;
-</span><span>            </span><span style=font-style:italic;color:#66d9ef;>int</span><span> t_substract </span><span style=color:#f92672;>=</span><span> t.charAt(idx) </span><span style=color:#f92672;>- </span><span style=color:#e6db74;>'a'</span><span>;
-</span><span>
-</span><span>            </span><span style=color:#75715e;>// Suppose they are of the same character, the process
-</span><span>            </span><span style=color:#75715e;>// should be like default_val+1 then default_val-1, and
-</span><span>            </span><span style=color:#75715e;>// since the default value is 0, the end result we would
-</span><span>            </span><span style=color:#75715e;>// get for each idx shall be 0 as well.
-</span><span>            cmp_by_compute[s_substract]</span><span style=color:#f92672;>++</span><span>;
-</span><span>            cmp_by_compute[t_substract]</span><span style=color:#f92672;>--</span><span>;
-</span><span>        }
-</span><span>
-</span><span>        </span><span style=color:#75715e;>// To check if all the end result were 0
-</span><span>        </span><span style=color:#f92672;>for </span><span>(</span><span style=font-style:italic;color:#66d9ef;>int</span><span> computed_res </span><span style=color:#f92672;>:</span><span> cmp_by_compute) {
-</span><span>            </span><span style=color:#f92672;>if </span><span>(computed_res </span><span style=color:#f92672;>!= </span><span style=color:#ae81ff;>0</span><span>) {
-</span><span>                </span><span style=color:#f92672;>return </span><span style=color:#ae81ff;>false</span><span>;
+</span><span>            </span><span style=color:#c678dd;>if </span><span>(slow </span><span style=color:#c678dd;>==</span><span> fast) {
+</span><span>                </span><span style=color:#c678dd;>return </span><span style=color:#e5c07b;>true</span><span>;
 </span><span>            }
 </span><span>        }
 </span><span>
-</span><span>        </span><span style=color:#f92672;>return </span><span style=color:#ae81ff;>true</span><span>;
+</span><span>        </span><span style=color:#c678dd;>return </span><span style=color:#e5c07b;>false</span><span>;
 </span><span>    }
 </span><span>}
-</span></code></pre><h3 id=0347-top-k-frequent-elements>0347. Top K Frequent Elements</h3><pre class=language-python data-lang=python style=background-color:#272822;color:#f8f8f2;><code class=language-python data-lang=python><span style=font-style:italic;color:#f92672;>class </span><span style=text-decoration:underline;color:#a6e22e;>Solution</span><span>:
-</span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>topKFrequent</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>nums</span><span>: List[</span><span style=font-style:italic;color:#66d9ef;>int</span><span>], </span><span style=font-style:italic;color:#fd971f;>k</span><span>: </span><span style=font-style:italic;color:#66d9ef;>int</span><span>) -> List[</span><span style=font-style:italic;color:#66d9ef;>int</span><span>]:
-</span><span>        </span><span style=color:#f92672;>pass
-</span></code></pre><h3 id=0557-reverse-words-in-a-string-iii>0557. Reverse Words in a String III</h3><pre class=language-kotlin data-lang=kotlin style=background-color:#272822;color:#f8f8f2;><code class=language-kotlin data-lang=kotlin><span style=color:#f92672;>class </span><span>Solution {
-</span><span>    </span><span style=color:#f92672;>fun </span><span style=color:#a6e22e;>reverseWords</span><span>(</span><span style=font-style:italic;color:#fd971f;>s</span><span style=color:#f92672;>: </span><span style=font-style:italic;color:#66d9ef;>String</span><span>)</span><span style=color:#f92672;>: </span><span style=font-style:italic;color:#66d9ef;>String</span><span> {
-</span><span>        </span><span style=color:#f92672;>var </span><span>words </span><span style=color:#f92672;>=</span><span> s</span><span style=color:#f92672;>.</span><span>split(</span><span style=color:#e6db74;>" "</span><span>)
-</span><span>        </span><span style=color:#f92672;>var </span><span>reved </span><span style=color:#f92672;>= </span><span style=color:#e6db74;>""
+</span></code></pre><h3 id=0146-lru-cache>0146. LRU Cache</h3><pre class=language-java data-lang=java style=background-color:#282c34;color:#dcdfe4;><code class=language-java data-lang=java><span style=color:#c678dd;>class </span><span style=color:#e5c07b;>LRUCache </span><span>{
 </span><span>
-</span><span>        </span><span style=color:#f92672;>for</span><span> (word </span><span style=color:#f92672;>in</span><span> words) {
-</span><span>            reved </span><span style=color:#f92672;>+=</span><span> word</span><span style=color:#f92672;>.</span><span>reversed() </span><span style=color:#f92672;>+ </span><span style=color:#e6db74;>" "
+</span><span>    </span><span style=color:#c678dd;>public </span><span style=color:#61afef;>LRUCache</span><span>(</span><span style=color:#c678dd;>int </span><span style=color:#e06c75;>capacity</span><span>) {
+</span><span>
+</span><span>    }
+</span><span>
+</span><span>    </span><span style=color:#c678dd;>public int </span><span style=color:#61afef;>get</span><span>(</span><span style=color:#c678dd;>int </span><span style=color:#e06c75;>key</span><span>) {
+</span><span>
+</span><span>    }
+</span><span>
+</span><span>    </span><span style=color:#c678dd;>public void </span><span style=color:#61afef;>put</span><span>(</span><span style=color:#c678dd;>int </span><span style=color:#e06c75;>key</span><span>, </span><span style=color:#c678dd;>int </span><span style=color:#e06c75;>value</span><span>) {
+</span><span>
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style=color:#5c6370;>/*
+</span><span style=color:#5c6370;> * Your LRUCache object will be instantiated and called as such:
+</span><span style=color:#5c6370;> * LRUCache obj = new LRUCache(capacity);
+</span><span style=color:#5c6370;> * int param_1 = obj.get(key);
+</span><span style=color:#5c6370;> * obj.put(key,value);
+</span><span style=color:#5c6370;> */
+</span></code></pre><h3 id=0155-min-stack>0155. Min Stack</h3><pre class=language-java data-lang=java style=background-color:#282c34;color:#dcdfe4;><code class=language-java data-lang=java><span style=color:#c678dd;>class </span><span style=color:#e5c07b;>MinStack </span><span>{
+</span><span>
+</span><span>    </span><span style=color:#5c6370;>// A stack holding all the items
+</span><span>    </span><span style=color:#e5c07b;>Stack</span><span><</span><span style=color:#e5c07b;>Integer</span><span>> wholeStack </span><span style=color:#c678dd;>= new </span><span style=color:#e5c07b;>Stack</span><span><>();
+</span><span>
+</span><span>    </span><span style=color:#5c6370;>// A stack holding the minium items (the amount might >= 1)
+</span><span>    </span><span style=color:#e5c07b;>Stack</span><span><</span><span style=color:#e5c07b;>Integer</span><span>> minStack   </span><span style=color:#c678dd;>= new </span><span style=color:#e5c07b;>Stack</span><span><>();
+</span><span>
+</span><span>    </span><span style=color:#c678dd;>public </span><span style=color:#61afef;>MinStack</span><span>() {
+</span><span>    }
+</span><span>
+</span><span>    </span><span style=color:#5c6370;>// Save one on the whole stack
+</span><span>    </span><span style=color:#5c6370;>// - if there is no element in the min, add it (= the minimum)
+</span><span>    </span><span style=color:#5c6370;>// - compare the one to be inserted with exisiting, remain or STACK on it
+</span><span>    </span><span style=color:#c678dd;>public void </span><span style=color:#61afef;>push</span><span>(</span><span style=color:#c678dd;>int </span><span style=color:#e06c75;>val</span><span>) {
+</span><span>        wholeStack.</span><span style=color:#e06c75;>push</span><span>(val);
+</span><span>
+</span><span>        </span><span style=color:#c678dd;>if </span><span>(minStack.</span><span style=color:#e06c75;>isEmpty</span><span>() </span><span style=color:#c678dd;>||</span><span> val </span><span style=color:#c678dd;><=</span><span> minStack.</span><span style=color:#e06c75;>peek</span><span>()) {
+</span><span>            minStack.</span><span style=color:#e06c75;>push</span><span>(val);
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style=color:#5c6370;>// #TODO document needed
+</span><span>    </span><span style=color:#c678dd;>public void </span><span style=color:#61afef;>pop</span><span>() {
+</span><span>        </span><span style=color:#c678dd;>if </span><span>(minStack.</span><span style=color:#e06c75;>peek</span><span>().</span><span style=color:#e06c75;>equals</span><span>(wholeStack.</span><span style=color:#e06c75;>peek</span><span>())) {
+</span><span>            minStack.</span><span style=color:#e06c75;>pop</span><span>();
 </span><span>        }
 </span><span>
-</span><span>        </span><span style=color:#f92672;>return</span><span> reved</span><span style=color:#f92672;>.</span><span>trim()
+</span><span>        wholeStack.</span><span style=color:#e06c75;>pop</span><span>();
+</span><span>    }
+</span><span>
+</span><span>    </span><span style=color:#5c6370;>// No restraint, simply return the top element (also the newest)
+</span><span>    </span><span style=color:#c678dd;>public int </span><span style=color:#61afef;>top</span><span>() {
+</span><span>        </span><span style=color:#c678dd;>return</span><span> wholeStack.</span><span style=color:#e06c75;>peek</span><span>();
+</span><span>    }
+</span><span>
+</span><span>    </span><span style=color:#5c6370;>// As it's a min stack, the top of it must be the minimum
+</span><span>    </span><span style=color:#c678dd;>public int </span><span style=color:#61afef;>getMin</span><span>() {
+</span><span>        </span><span style=color:#c678dd;>return</span><span> minStack.</span><span style=color:#e06c75;>peek</span><span>();
 </span><span>    }
 </span><span>}
-</span></code></pre><h3 id=0572-subtree-of-another-tree>0572. Subtree of Another Tree</h3><pre class=language-python data-lang=python style=background-color:#272822;color:#f8f8f2;><code class=language-python data-lang=python><span style=color:#75715e;># Definition for a binary tree node.
-</span><span style=color:#75715e;># class TreeNode:
-</span><span style=color:#75715e;>#     def __init__(self, val=0, left=None, right=None):
-</span><span style=color:#75715e;>#         self.val = val
-</span><span style=color:#75715e;>#         self.left = left
-</span><span style=color:#75715e;>#         self.right = right
-</span><span style=font-style:italic;color:#f92672;>class </span><span style=text-decoration:underline;color:#a6e22e;>Solution</span><span>:
-</span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>isSubtree</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>root</span><span>: Optional[TreeNode], </span><span style=font-style:italic;color:#fd971f;>subRoot</span><span>: Optional[TreeNode]) -> </span><span style=font-style:italic;color:#66d9ef;>bool</span><span>:
+</span></code></pre><h3 id=0160-intersection-of-two-linked-lists>0160. Intersection of Two Linked Lists</h3><pre class=language-python data-lang=python style=background-color:#282c34;color:#dcdfe4;><code class=language-python data-lang=python><span style=color:#5c6370;># Definition for singly-linked list.
+</span><span style=color:#5c6370;># class ListNode:
+</span><span style=color:#5c6370;>#     def __init__(self, x):
+</span><span style=color:#5c6370;>#         self.val = x
+</span><span style=color:#5c6370;>#         self.next = None
 </span><span>
-</span><span>        </span><span style=color:#75715e;>#TODO Memorized solution, further walkthrough needed
+</span><span style=color:#c678dd;>class </span><span style=color:#e5c07b;>Solution:
+</span><span>    </span><span style=color:#c678dd;>def </span><span style=color:#61afef;>getIntersectionNode</span><span>(</span><span style=color:#e06c75;>self</span><span>, </span><span style=color:#e06c75;>headA</span><span>: ListNode, </span><span style=color:#e06c75;>headB</span><span>: ListNode) -> Optional[ListNode]:
+</span><span>        </span><span style=color:#5c6370;># no intersection as one of them or both are None
+</span><span>        </span><span style=color:#c678dd;>if not </span><span>headA </span><span style=color:#c678dd;>or not </span><span>headB:
+</span><span>            </span><span style=color:#c678dd;>return </span><span style=color:#e5c07b;>None
 </span><span>
-</span><span>        </span><span style=color:#f92672;>if not </span><span>root </span><span style=color:#f92672;>and not </span><span>subRoot:
-</span><span>            </span><span style=color:#f92672;>return </span><span style=color:#ae81ff;>True
-</span><span>        </span><span style=color:#f92672;>if not </span><span>root </span><span style=color:#f92672;>or not </span><span>subRoot:
-</span><span>            </span><span style=color:#f92672;>return </span><span style=color:#ae81ff;>False
+</span><span>        hA, hB </span><span style=color:#c678dd;>= </span><span>headA, headB
 </span><span>
-</span><span>        </span><span style=color:#f92672;>return </span><span>self.isSametree(root, subRoot) </span><span style=color:#f92672;>or </span><span>\
-</span><span>                self.isSubtree(root.left, subRoot) </span><span style=color:#f92672;>or </span><span>\
-</span><span>                self.isSubtree(root.right, subRoot)
+</span><span>        </span><span style=color:#c678dd;>while </span><span>hA </span><span style=color:#c678dd;>!= </span><span>hB:
+</span><span>            hA </span><span style=color:#c678dd;>= </span><span>hA.next </span><span style=color:#c678dd;>if </span><span>hA </span><span style=color:#c678dd;>else </span><span>headB
+</span><span>            hB </span><span style=color:#c678dd;>= </span><span>hB.next </span><span style=color:#c678dd;>if </span><span>hB </span><span style=color:#c678dd;>else </span><span>headA
 </span><span>
-</span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>isSametree</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>L</span><span>, </span><span style=font-style:italic;color:#fd971f;>R</span><span>) -> </span><span style=font-style:italic;color:#66d9ef;>bool</span><span>:
-</span><span>        </span><span style=color:#f92672;>if not </span><span>L </span><span style=color:#f92672;>and not </span><span>R:
-</span><span>            </span><span style=color:#f92672;>return </span><span style=color:#ae81ff;>True
-</span><span>        </span><span style=color:#f92672;>if not </span><span>L </span><span style=color:#f92672;>or not </span><span>R:
-</span><span>            </span><span style=color:#f92672;>return </span><span style=color:#ae81ff;>False
+</span><span>        </span><span style=color:#c678dd;>return </span><span>hA
+</span></code></pre><h3 id=0206-reverse-linked-list>0206. Reverse Linked List</h3><pre class=language-python data-lang=python style=background-color:#282c34;color:#dcdfe4;><code class=language-python data-lang=python><span style=color:#5c6370;># Definition for singly-linked list.
+</span><span style=color:#5c6370;># class ListNode:
+</span><span style=color:#5c6370;>#     def __init__(self, val=0, next=None):
+</span><span style=color:#5c6370;>#         self.val = val
+</span><span style=color:#5c6370;>#         self.next = next
+</span><span style=color:#c678dd;>class </span><span style=color:#e5c07b;>Solution:
+</span><span>    </span><span style=color:#c678dd;>def </span><span style=color:#61afef;>reverseList</span><span>(</span><span style=color:#e06c75;>self</span><span>, </span><span style=color:#e06c75;>head</span><span>: Optional[ListNode]) -> Optional[ListNode]:
+</span><span>        dummy </span><span style=color:#c678dd;>= </span><span style=color:#e06c75;>ListNode</span><span>(</span><span style=color:#e5c07b;>None</span><span>)
 </span><span>
-</span><span>        </span><span style=color:#f92672;>return </span><span>L.val </span><span style=color:#f92672;>== </span><span>R.val </span><span style=color:#f92672;>and </span><span>\
-</span><span>                self.isSametree(L.left, R.left) </span><span style=color:#f92672;>and </span><span>\
-</span><span>                self.isSametree(L.right, R.right)
-</span></code></pre><hr><h2 id=past-2000>Past 2000</h2><h3 id=2185-counting-words-with-a-given-prefix>2185. Counting Words With a Given Prefix</h3><pre class=language-python data-lang=python style=background-color:#272822;color:#f8f8f2;><code class=language-python data-lang=python><span style=font-style:italic;color:#f92672;>class </span><span style=text-decoration:underline;color:#a6e22e;>Solution</span><span>:
-</span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>prefixCount</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>words</span><span>: List[</span><span style=font-style:italic;color:#66d9ef;>str</span><span>], </span><span style=font-style:italic;color:#fd971f;>pref</span><span>: </span><span style=font-style:italic;color:#66d9ef;>str</span><span>) -> </span><span style=font-style:italic;color:#66d9ef;>int</span><span>:
-</span><span>        amountMatched </span><span style=color:#f92672;>= </span><span style=color:#ae81ff;>0
+</span><span>        </span><span style=color:#c678dd;>while </span><span>head:
+</span><span>            temp </span><span style=color:#c678dd;>= </span><span>head.next
+</span><span>            head.next </span><span style=color:#c678dd;>= </span><span>dummy.next
+</span><span>            dummy.next </span><span style=color:#c678dd;>= </span><span>head
+</span><span>            head </span><span style=color:#c678dd;>= </span><span>temp
 </span><span>
-</span><span>        </span><span style=color:#75715e;># Find prefix
-</span><span>        </span><span style=color:#75715e;># "abc".find("a") -> 0
-</span><span>        </span><span style=color:#75715e;># "abc".find("b") -> -1
-</span><span>        </span><span style=color:#f92672;>for </span><span>word </span><span style=color:#f92672;>in </span><span>words:
-</span><span>            </span><span style=color:#f92672;>if </span><span>word.find(pref) </span><span style=color:#f92672;>== </span><span style=color:#ae81ff;>0</span><span>:
-</span><span>                amountMatched </span><span style=color:#f92672;>+= </span><span style=color:#ae81ff;>1
+</span><span>        </span><span style=color:#c678dd;>return </span><span>dummy.next
+</span></code></pre><h3 id=0217-contains-duplicate>0217. Contains Duplicate</h3><pre class=language-java data-lang=java style=background-color:#282c34;color:#dcdfe4;><code class=language-java data-lang=java><span style=color:#c678dd;>class </span><span style=color:#e5c07b;>Solution </span><span>{
+</span><span>    </span><span style=color:#c678dd;>public boolean </span><span style=color:#61afef;>containsDuplicate</span><span>(</span><span style=color:#c678dd;>int[] </span><span style=color:#e06c75;>nums</span><span>) {
+</span><span>        </span><span style=color:#5c6370;>// Just like the set() you use in Python. 'Set()' is just the
+</span><span>        </span><span style=color:#5c6370;>// name of the interface.
+</span><span>        </span><span style=color:#e5c07b;>Set</span><span><</span><span style=color:#e5c07b;>Integer</span><span>> uniq </span><span style=color:#c678dd;>= new </span><span style=color:#e5c07b;>HashSet</span><span><>();
 </span><span>
-</span><span>        </span><span style=color:#f92672;>return </span><span>amountMatched
+</span><span>        </span><span style=color:#c678dd;>for </span><span>(</span><span style=color:#c678dd;>int</span><span> idx </span><span style=color:#c678dd;>= </span><span style=color:#e5c07b;>0</span><span>; idx </span><span style=color:#c678dd;><</span><span> nums.length; idx</span><span style=color:#c678dd;>++</span><span>) {
+</span><span>
+</span><span>            </span><span style=color:#5c6370;>// Ah, I've seen this element before, it's duplicate then!
+</span><span>            </span><span style=color:#c678dd;>if </span><span>(uniq.</span><span style=color:#e06c75;>contains</span><span>(nums[idx])) {
+</span><span>                </span><span style=color:#c678dd;>return </span><span style=color:#e5c07b;>true</span><span>;
+</span><span>            }
+</span><span>
+</span><span>            </span><span style=color:#5c6370;>// Put every elements into a non-repeating box
+</span><span>            uniq.</span><span style=color:#e06c75;>add</span><span>(nums[idx]);
+</span><span>        }
+</span><span>
+</span><span>        </span><span style=color:#c678dd;>return </span><span style=color:#e5c07b;>false</span><span>;
+</span><span>    }
+</span><span>}
+</span></code></pre><h3 id=0226-invert-binary-tree>0226. Invert Binary Tree</h3><pre class=language-python data-lang=python style=background-color:#282c34;color:#dcdfe4;><code class=language-python data-lang=python><span style=color:#5c6370;># Definition for a binary tree node.
+</span><span style=color:#5c6370;># class TreeNode:
+</span><span style=color:#5c6370;>#     def __init__(self, val=0, left=None, right=None):
+</span><span style=color:#5c6370;>#         self.val = val
+</span><span style=color:#5c6370;>#         self.left = left
+</span><span style=color:#5c6370;>#         self.right = right
+</span><span style=color:#c678dd;>class </span><span style=color:#e5c07b;>Solution:
+</span><span>    </span><span style=color:#c678dd;>def </span><span style=color:#61afef;>invertTree</span><span>(</span><span style=color:#e06c75;>self</span><span>, </span><span style=color:#e06c75;>root</span><span>: Optional[TreeNode]) -> Optional[TreeNode]:
+</span><span>        </span><span style=color:#c678dd;>if not </span><span>root:
+</span><span>            </span><span style=color:#c678dd;>return </span><span style=color:#e5c07b;>None
+</span><span>
+</span><span>        root.left, root.right </span><span style=color:#c678dd;>= </span><span>root.right, root.left
+</span><span>
+</span><span>        </span><span style=color:#e06c75;>self</span><span>.</span><span style=color:#e06c75;>invertTree</span><span>(root.left)
+</span><span>        </span><span style=color:#e06c75;>self</span><span>.</span><span style=color:#e06c75;>invertTree</span><span>(root.right)
+</span><span>
+</span><span>        </span><span style=color:#c678dd;>return </span><span>root
+</span></code></pre><h3 id=0230-kth-smallest-element-in-a-bst>0230. Kth Smallest Element in a BST</h3><pre class=language-python data-lang=python style=background-color:#282c34;color:#dcdfe4;><code class=language-python data-lang=python><span style=color:#5c6370;># Definition for a binary tree node.
+</span><span style=color:#5c6370;># class TreeNode:
+</span><span style=color:#5c6370;>#     def __init__(self, val=0, left=None, right=None):
+</span><span style=color:#5c6370;>#         self.val = val
+</span><span style=color:#5c6370;>#         self.left = left
+</span><span style=color:#5c6370;>#         self.right = right
+</span><span style=color:#c678dd;>class </span><span style=color:#e5c07b;>Solution:
+</span><span>    </span><span style=color:#c678dd;>def </span><span style=color:#61afef;>kthSmallest</span><span>(</span><span style=color:#e06c75;>self</span><span>, </span><span style=color:#e06c75;>root</span><span>: Optional[TreeNode], </span><span style=color:#e06c75;>k</span><span>: int) -> int:
+</span><span>        </span><span style=color:#5c6370;># Flatten the list using inorder traversal
+</span><span>
+</span><span>        resultList </span><span style=color:#c678dd;>= </span><span>[]
+</span><span>
+</span><span>        </span><span style=color:#e06c75;>self</span><span>.</span><span style=color:#e06c75;>inorderTraversal</span><span>(root, resultList)
+</span><span>
+</span><span>        </span><span style=color:#c678dd;>return </span><span>resultList[k</span><span style=color:#c678dd;>-</span><span style=color:#e5c07b;>1</span><span>]
+</span><span>
+</span><span>    </span><span style=color:#c678dd;>def </span><span style=color:#61afef;>inorderTraversal</span><span>(</span><span style=color:#e06c75;>self</span><span>, </span><span style=color:#e06c75;>node</span><span>, </span><span style=color:#e06c75;>aggregator</span><span>):
+</span><span>        </span><span style=color:#c678dd;>if not </span><span>node:
+</span><span>            </span><span style=color:#c678dd;>return </span><span style=color:#e5c07b;>None
+</span><span>
+</span><span>        </span><span style=color:#e06c75;>self</span><span>.</span><span style=color:#e06c75;>inorderTraversal</span><span>(node.left, aggregator)
+</span><span>        aggregator.</span><span style=color:#e06c75;>append</span><span>(node.val)
+</span><span>        </span><span style=color:#e06c75;>self</span><span>.</span><span style=color:#e06c75;>inorderTraversal</span><span>(node.right, aggregator)
+</span></code></pre><h3 id=0238-product-of-array-except-self>0238. Product of Array Except Self</h3><pre class=language-python data-lang=python style=background-color:#282c34;color:#dcdfe4;><code class=language-python data-lang=python><span style=color:#c678dd;>class </span><span style=color:#e5c07b;>Solution:
+</span><span>    </span><span style=color:#c678dd;>def </span><span style=color:#61afef;>productExceptSelf</span><span>(</span><span style=color:#e06c75;>self</span><span>, </span><span style=color:#e06c75;>nums</span><span>: List[int]) -> List[int]:
+</span><span>        ln </span><span style=color:#c678dd;>= </span><span style=color:#61afef;>len</span><span>(nums)
+</span><span>        productBefore </span><span style=color:#c678dd;>= </span><span>[</span><span style=color:#e5c07b;>1</span><span>] </span><span style=color:#c678dd;>* </span><span>ln
+</span><span>        productAfter </span><span style=color:#c678dd;>= </span><span>[</span><span style=color:#e5c07b;>1</span><span>] </span><span style=color:#c678dd;>* </span><span>ln
+</span><span>
+</span><span>        </span><span style=color:#5c6370;># Indice: 1, 2, 3 ..
+</span><span>        </span><span style=color:#c678dd;>for </span><span>i </span><span style=color:#c678dd;>in </span><span style=color:#61afef;>range</span><span>(</span><span style=color:#e5c07b;>1</span><span>, ln):
+</span><span>            productBefore[i] </span><span style=color:#c678dd;>= </span><span>productBefore[i</span><span style=color:#c678dd;>-</span><span style=color:#e5c07b;>1</span><span>] </span><span style=color:#c678dd;>* </span><span>nums[i</span><span style=color:#c678dd;>-</span><span style=color:#e5c07b;>1</span><span>]
+</span><span>
+</span><span>        </span><span style=color:#5c6370;># Indice: .. 2, 1, 0
+</span><span>        </span><span style=color:#c678dd;>for </span><span>i </span><span style=color:#c678dd;>in </span><span style=color:#61afef;>range</span><span>(ln </span><span style=color:#c678dd;>- </span><span style=color:#e5c07b;>2</span><span>, </span><span style=color:#c678dd;>-</span><span style=color:#e5c07b;>1</span><span>, </span><span style=color:#c678dd;>-</span><span style=color:#e5c07b;>1</span><span>):
+</span><span>            productAfter[i] </span><span style=color:#c678dd;>= </span><span>productAfter[i</span><span style=color:#c678dd;>+</span><span style=color:#e5c07b;>1</span><span>] </span><span style=color:#c678dd;>* </span><span>nums[i</span><span style=color:#c678dd;>+</span><span style=color:#e5c07b;>1</span><span>]
+</span><span>
+</span><span>        result </span><span style=color:#c678dd;>= </span><span>[]
+</span><span>        </span><span style=color:#c678dd;>for </span><span>i </span><span style=color:#c678dd;>in </span><span style=color:#61afef;>range</span><span>(</span><span style=color:#e5c07b;>0</span><span>, ln):
+</span><span>            result.</span><span style=color:#e06c75;>append</span><span>(productBefore[i] </span><span style=color:#c678dd;>* </span><span>productAfter[i])
+</span><span>
+</span><span>        </span><span style=color:#c678dd;>return </span><span>result
+</span></code></pre><h3 id=0242-valid-anagrams>0242. Valid Anagrams</h3><pre class=language-java data-lang=java style=background-color:#282c34;color:#dcdfe4;><code class=language-java data-lang=java><span style=color:#c678dd;>class </span><span style=color:#e5c07b;>Solution </span><span>{
+</span><span>    </span><span style=color:#c678dd;>public boolean </span><span style=color:#61afef;>isAnagram</span><span>(</span><span style=color:#e5c07b;>String </span><span style=color:#e06c75;>s</span><span>, </span><span style=color:#e5c07b;>String </span><span style=color:#e06c75;>t</span><span>) {
+</span><span>        </span><span style=color:#c678dd;>if </span><span>(s.</span><span style=color:#e06c75;>length</span><span>() </span><span style=color:#c678dd;>!=</span><span> t.</span><span style=color:#e06c75;>length</span><span>()) {
+</span><span>            </span><span style=color:#c678dd;>return </span><span style=color:#e5c07b;>false</span><span>;
+</span><span>        }
+</span><span>
+</span><span>        </span><span style=color:#c678dd;>int[]</span><span> cmp_by_compute </span><span style=color:#c678dd;>= new int</span><span>[</span><span style=color:#e5c07b;>26</span><span>];
+</span><span>
+</span><span>        </span><span style=color:#c678dd;>for </span><span>(</span><span style=color:#c678dd;>int</span><span> idx </span><span style=color:#c678dd;>= </span><span style=color:#e5c07b;>0</span><span>; idx </span><span style=color:#c678dd;><</span><span> s.</span><span style=color:#e06c75;>length</span><span>(); idx</span><span style=color:#c678dd;>++</span><span>) {
+</span><span>            </span><span style=color:#5c6370;>// To minus lowercase 'a' is to get the ranking of the
+</span><span>            </span><span style=color:#5c6370;>// letters. For example, you would get 0 for character
+</span><span>            </span><span style=color:#5c6370;>// 'a' and 25 for character 'z' which is exactly what
+</span><span>            </span><span style=color:#5c6370;>// we want.
+</span><span>            </span><span style=color:#c678dd;>int</span><span> s_substract </span><span style=color:#c678dd;>=</span><span> s.</span><span style=color:#e06c75;>charAt</span><span>(idx) </span><span style=color:#c678dd;>- </span><span style=color:#98c379;>'a'</span><span>;
+</span><span>            </span><span style=color:#c678dd;>int</span><span> t_substract </span><span style=color:#c678dd;>=</span><span> t.</span><span style=color:#e06c75;>charAt</span><span>(idx) </span><span style=color:#c678dd;>- </span><span style=color:#98c379;>'a'</span><span>;
+</span><span>
+</span><span>            </span><span style=color:#5c6370;>// Suppose they are of the same character, the process
+</span><span>            </span><span style=color:#5c6370;>// should be like default_val+1 then default_val-1, and
+</span><span>            </span><span style=color:#5c6370;>// since the default value is 0, the end result we would
+</span><span>            </span><span style=color:#5c6370;>// get for each idx shall be 0 as well.
+</span><span>            cmp_by_compute[s_substract]</span><span style=color:#c678dd;>++</span><span>;
+</span><span>            cmp_by_compute[t_substract]</span><span style=color:#c678dd;>--</span><span>;
+</span><span>        }
+</span><span>
+</span><span>        </span><span style=color:#5c6370;>// To check if all the end result were 0
+</span><span>        </span><span style=color:#c678dd;>for </span><span>(</span><span style=color:#c678dd;>int</span><span> computed_res </span><span style=color:#c678dd;>:</span><span> cmp_by_compute) {
+</span><span>            </span><span style=color:#c678dd;>if </span><span>(computed_res </span><span style=color:#c678dd;>!= </span><span style=color:#e5c07b;>0</span><span>) {
+</span><span>                </span><span style=color:#c678dd;>return </span><span style=color:#e5c07b;>false</span><span>;
+</span><span>            }
+</span><span>        }
+</span><span>
+</span><span>        </span><span style=color:#c678dd;>return </span><span style=color:#e5c07b;>true</span><span>;
+</span><span>    }
+</span><span>}
+</span></code></pre><h3 id=0347-top-k-frequent-elements>0347. Top K Frequent Elements</h3><pre class=language-python data-lang=python style=background-color:#282c34;color:#dcdfe4;><code class=language-python data-lang=python><span style=color:#c678dd;>class </span><span style=color:#e5c07b;>Solution:
+</span><span>    </span><span style=color:#c678dd;>def </span><span style=color:#61afef;>topKFrequent</span><span>(</span><span style=color:#e06c75;>self</span><span>, </span><span style=color:#e06c75;>nums</span><span>: List[int], </span><span style=color:#e06c75;>k</span><span>: int) -> List[int]:
+</span><span>        </span><span style=color:#c678dd;>pass
+</span></code></pre><h3 id=0557-reverse-words-in-a-string-iii>0557. Reverse Words in a String III</h3><pre class=language-kotlin data-lang=kotlin style=background-color:#282c34;color:#dcdfe4;><code class=language-kotlin data-lang=kotlin><span style=color:#c678dd;>class </span><span style=color:#e5c07b;>Solution</span><span> {
+</span><span>    </span><span style=color:#c678dd;>fun </span><span style=color:#61afef;>reverseWords</span><span>(s</span><span style=color:#c678dd;>: String</span><span>)</span><span style=color:#c678dd;>: String</span><span> {
+</span><span>        </span><span style=color:#c678dd;>var </span><span>words </span><span style=color:#c678dd;>=</span><span> s</span><span style=color:#c678dd;>.</span><span>split(</span><span style=color:#98c379;>" "</span><span>)
+</span><span>        </span><span style=color:#c678dd;>var </span><span>reved </span><span style=color:#c678dd;>= </span><span style=color:#98c379;>""
+</span><span>
+</span><span>        </span><span style=color:#c678dd;>for</span><span> (word </span><span style=color:#c678dd;>in</span><span> words) {
+</span><span>            reved </span><span style=color:#c678dd;>+=</span><span> word</span><span style=color:#c678dd;>.</span><span>reversed() </span><span style=color:#c678dd;>+ </span><span style=color:#98c379;>" "
+</span><span>        }
+</span><span>
+</span><span>        </span><span style=color:#c678dd;>return</span><span> reved</span><span style=color:#c678dd;>.</span><span>trim()
+</span><span>    }
+</span><span>}
+</span></code></pre><h3 id=0572-subtree-of-another-tree>0572. Subtree of Another Tree</h3><pre class=language-python data-lang=python style=background-color:#282c34;color:#dcdfe4;><code class=language-python data-lang=python><span style=color:#5c6370;># Definition for a binary tree node.
+</span><span style=color:#5c6370;># class TreeNode:
+</span><span style=color:#5c6370;>#     def __init__(self, val=0, left=None, right=None):
+</span><span style=color:#5c6370;>#         self.val = val
+</span><span style=color:#5c6370;>#         self.left = left
+</span><span style=color:#5c6370;>#         self.right = right
+</span><span style=color:#c678dd;>class </span><span style=color:#e5c07b;>Solution:
+</span><span>    </span><span style=color:#c678dd;>def </span><span style=color:#61afef;>isSubtree</span><span>(</span><span style=color:#e06c75;>self</span><span>, </span><span style=color:#e06c75;>root</span><span>: Optional[TreeNode], </span><span style=color:#e06c75;>subRoot</span><span>: Optional[TreeNode]) -> bool:
+</span><span>
+</span><span>        </span><span style=color:#5c6370;>#TODO Memorized solution, further walkthrough needed
+</span><span>
+</span><span>        </span><span style=color:#c678dd;>if not </span><span>root </span><span style=color:#c678dd;>and not </span><span>subRoot:
+</span><span>            </span><span style=color:#c678dd;>return </span><span style=color:#e5c07b;>True
+</span><span>        </span><span style=color:#c678dd;>if not </span><span>root </span><span style=color:#c678dd;>or not </span><span>subRoot:
+</span><span>            </span><span style=color:#c678dd;>return </span><span style=color:#e5c07b;>False
+</span><span>
+</span><span>        </span><span style=color:#c678dd;>return </span><span style=color:#e06c75;>self</span><span>.</span><span style=color:#e06c75;>isSametree</span><span>(root, subRoot) </span><span style=color:#c678dd;>or </span><span>\
+</span><span>                </span><span style=color:#e06c75;>self</span><span>.</span><span style=color:#e06c75;>isSubtree</span><span>(root.left, subRoot) </span><span style=color:#c678dd;>or </span><span>\
+</span><span>                </span><span style=color:#e06c75;>self</span><span>.</span><span style=color:#e06c75;>isSubtree</span><span>(root.right, subRoot)
+</span><span>
+</span><span>    </span><span style=color:#c678dd;>def </span><span style=color:#61afef;>isSametree</span><span>(</span><span style=color:#e06c75;>self</span><span>, </span><span style=color:#e06c75;>L</span><span>, </span><span style=color:#e06c75;>R</span><span>) -> bool:
+</span><span>        </span><span style=color:#c678dd;>if not </span><span>L </span><span style=color:#c678dd;>and not </span><span>R:
+</span><span>            </span><span style=color:#c678dd;>return </span><span style=color:#e5c07b;>True
+</span><span>        </span><span style=color:#c678dd;>if not </span><span>L </span><span style=color:#c678dd;>or not </span><span>R:
+</span><span>            </span><span style=color:#c678dd;>return </span><span style=color:#e5c07b;>False
+</span><span>
+</span><span>        </span><span style=color:#c678dd;>return </span><span>L.val </span><span style=color:#c678dd;>== </span><span>R.val </span><span style=color:#c678dd;>and </span><span>\
+</span><span>                </span><span style=color:#e06c75;>self</span><span>.</span><span style=color:#e06c75;>isSametree</span><span>(L.left, R.left) </span><span style=color:#c678dd;>and </span><span>\
+</span><span>                </span><span style=color:#e06c75;>self</span><span>.</span><span style=color:#e06c75;>isSametree</span><span>(L.right, R.right)
+</span></code></pre><hr><h2 id=past-2000>Past 2000</h2><h3 id=2185-counting-words-with-a-given-prefix>2185. Counting Words With a Given Prefix</h3><pre class=language-python data-lang=python style=background-color:#282c34;color:#dcdfe4;><code class=language-python data-lang=python><span style=color:#c678dd;>class </span><span style=color:#e5c07b;>Solution:
+</span><span>    </span><span style=color:#c678dd;>def </span><span style=color:#61afef;>prefixCount</span><span>(</span><span style=color:#e06c75;>self</span><span>, </span><span style=color:#e06c75;>words</span><span>: List[str], </span><span style=color:#e06c75;>pref</span><span>: str) -> int:
+</span><span>        amountMatched </span><span style=color:#c678dd;>= </span><span style=color:#e5c07b;>0
+</span><span>
+</span><span>        </span><span style=color:#5c6370;># Find prefix
+</span><span>        </span><span style=color:#5c6370;># "abc".find("a") -> 0
+</span><span>        </span><span style=color:#5c6370;># "abc".find("b") -> -1
+</span><span>        </span><span style=color:#c678dd;>for </span><span>word </span><span style=color:#c678dd;>in </span><span>words:
+</span><span>            </span><span style=color:#c678dd;>if </span><span>word.</span><span style=color:#e06c75;>find</span><span>(pref) </span><span style=color:#c678dd;>== </span><span style=color:#e5c07b;>0</span><span>:
+</span><span>                amountMatched </span><span style=color:#c678dd;>+= </span><span style=color:#e5c07b;>1
+</span><span>
+</span><span>        </span><span style=color:#c678dd;>return </span><span>amountMatched
 </span></code></pre><hr><h3 id=references>References</h3><blockquote><p>Good to have but not necessary</blockquote><ul><li><a href=https://www.techinterviewhandbook.org/grind75>Grind 75 - A better Blind 75 you can customize, by the author of Blind 75</a></ul><hr><blockquote><p>This post was originally written on October 18, 2022. Was rewritten on December 7, 2022 with the help of <em>ChatGPT</em> developed by <em>OpenAI</em>.</blockquote></article><footer role=contentinfo><hr><small>Built with <a href=https://www.getzola.org/>Zola</a>.<br> </small></footer></main>

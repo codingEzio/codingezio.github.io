@@ -1,108 +1,108 @@
-<!doctype html><html lang=en><head><meta charset=UTF-8><meta content="width=device-width,initial-scale=1.0" name=viewport><title>Algorithm Handbook · Rants and thoughts</title><meta content="Non-solution notes for LeetCode problems" name=description><link rel="shortcut icon" href=https://codingezio.github.io/favicon.ico><link href=https://codingezio.github.io/atom.xml rel=alternate title=RSS type=application/atom+xml><style>html,body{background:#fffaf7;color:#2d2d2d;font:16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"}a,a:visited{color:darkred;text-decoration:none}a:hover{text-decoration:underline}main{margin:auto;max-width:38rem;padding:0.8rem}pre{background:white;overflow:scroll;padding:1rem}td{border:1px solid #2d2d2d;padding:10px}img{height:auto;max-width:100%}.homepage-list{list-style:none;padding:1rem 0}.homepage-list li{align-items:center;display:flex;flex-wrap:wrap;justify-content:space-between;margin-bottom:10px}@media (max-width: 38rem){.homepage-list li a{width:100%}}</style><meta content="Rants and thoughts" property=og:site_name><meta content="Algorithm Handbook" property=og:title><meta content="Non-solution notes for LeetCode problems" property=og:description><meta content=https://codingezio.github.io/algorithm-handbook/ property=og:url><meta property=og:image><meta content=article property=og:type><meta content=2022-07-18T00:00:00+00:00 property=article:published_time><body><main id=main role=main><header role=banner><h3 style=margin-top:0;><a href=https://codingezio.github.io title=Home>Rants and thoughts</a> <br><small>Contact me via google_plus@aim.com</small></h3></header><hr><article><h1>Algorithm Handbook</h1><p style=font-size:90%;>Posted on <time datetime=2022-07-18T00:00:00+00:00>July 18, 2022</time><h2 id=concepts>Concepts</h2><h3 id=non-decreasing-order>Non-decreasing Order</h3><blockquote><p><a href=https://stackoverflow.com/questions/1963474/is-a-non-decreasing-sequence-increasing>Is a "non-decreasing" sequence "increasing"</a></blockquote><ul><li>Increasing -> every next is greater -> 1,2,3,4<li>Decreasing -> every next is less -> 4,3,2,1<li>It's not completely the same as the increasing order, e.g. 1, 2, 2, 3, 4<li>Its increase or decrease must applies to all to be qualified</ul><h3 id=chang-jian-fu-za-du-big-o-de-bian-bie>常见复杂度 Big O 的辨别</h3><table><thead><tr><th style="text-align: center">O<th style="text-align: left">Statement<tbody><tr><td style="text-align: center"><em>O(n)</em><td style="text-align: left"><code>for X in range(N)</code><br><code>for X in range(start, N, k)</code><tr><td style="text-align: center"><em>O(nm)</em><td style="text-align: left"><code>for X in range(N): for Y in range(M)</code><tr><td style="text-align: center"><em>O(n²)</em><td style="text-align: left"><code>for X in range(N): for Y in range(X)</code> <br><code>for X in range(N): X*=2 for Y in range(X)</code><tr><td style="text-align: center"><em>O(logN)</em><td style="text-align: left"><code>while X < N: X*=k</code></table><h2 id=knowledge>Knowledge</h2><h3 id=bit-wise-operator>Bit-wise Operator</h3><h4 id=number>Number</h4><blockquote><p>本质上都是二进制操作，不进位</blockquote><pre class=language-bash data-lang=bash style=background-color:#272822;color:#f8f8f2;><code class=language-bash data-lang=bash><span style=color:#75715e;># ~ Bitwise NOT    -> -(0bN + 0b1)
-</span><span style=color:#75715e;># | Bitwise OR     -> (0, 0) leads to 0, otherwise 1
-</span><span style=color:#75715e;># & Bitwise AND    -> (1, 1) leads to 1, otherwise 0
-</span><span style=color:#75715e;># ^ Bitwise XOR    -> (1, 0)(0, 1) leads to 1, otherwise 0
-</span></code></pre><h4 id=letter>Letter</h4><pre class=language-java data-lang=java style=background-color:#272822;color:#f8f8f2;><code class=language-java data-lang=java><span style=color:#75715e;>// To lowercase
-</span><span>(</span><span style=color:#e6db74;>'a' </span><span style=color:#f92672;>| </span><span style=color:#e6db74;>' '</span><span>) </span><span style=color:#f92672;>== </span><span style=color:#e6db74;>'a'
-</span><span>(</span><span style=color:#e6db74;>'A' </span><span style=color:#f92672;>| </span><span style=color:#e6db74;>' '</span><span>) </span><span style=color:#f92672;>== </span><span style=color:#e6db74;>'a'
+<!doctype html><html lang=en><head><meta charset=UTF-8><meta content="width=device-width,initial-scale=1.0" name=viewport><title>Algorithm Handbook · Ezio's blog 😊</title><meta content="Non-solution notes for LeetCode problems" name=description><link rel="shortcut icon" href=https://codingezio.github.io/favicon.ico><link href=https://codingezio.github.io/atom.xml rel=alternate title=RSS type=application/atom+xml><style>html,body{background:#fffaf7;color:#2d2d2d;font:16.7px/1.57 Georgia, 'Times New Roman', Times, serif}a,a:visited{color:darkred;text-decoration:none}a:hover{text-decoration:underline}main{margin:auto;max-width:38rem;padding:0.8rem}pre{background:white;overflow:scroll;padding:1rem;font-size:0.90em;font-family:'Fira Code', 'SF Mono', 'Consolas', monospace}td{border:1px groove #2d2d2d;padding:5px}img{height:auto;max-width:100%}.homepage-list{list-style:none;padding:1rem 0}.homepage-list li{align-items:center;display:flex;flex-wrap:wrap;justify-content:space-between;margin-bottom:10px}@media (max-width: 38rem){.homepage-list li a{width:100%}}</style><meta content="Ezio's blog 😊" property=og:site_name><meta content="Algorithm Handbook" property=og:title><meta content="Non-solution notes for LeetCode problems" property=og:description><meta content=https://codingezio.github.io/algorithm-handbook/ property=og:url><meta property=og:image><meta content=article property=og:type><meta content=2022-07-18T00:00:00+00:00 property=article:published_time><body><main id=main role=main><header role=banner><h3 style=margin-top:0;><a href=https://codingezio.github.io title=Home>Ezio's blog 😊</a> <br><small>A dumb coder that wants to learn everything</small></h3></header><hr><article><h1>Algorithm Handbook</h1><p style=font-size:90%;>Posted on <time datetime=2022-07-18T00:00:00+00:00>July 18, 2022</time><h2 id=concepts>Concepts</h2><h3 id=non-decreasing-order>Non-decreasing Order</h3><blockquote><p><a href=https://stackoverflow.com/questions/1963474/is-a-non-decreasing-sequence-increasing>Is a "non-decreasing" sequence "increasing"</a></blockquote><ul><li>Increasing -> every next is greater -> 1,2,3,4<li>Decreasing -> every next is less -> 4,3,2,1<li>It's not completely the same as the increasing order, e.g. 1, 2, 2, 3, 4<li>Its increase or decrease must applies to all to be qualified</ul><h3 id=chang-jian-fu-za-du-big-o-de-bian-bie>常见复杂度 Big O 的辨别</h3><table><thead><tr><th style="text-align: center">O<th style="text-align: left">Statement<tbody><tr><td style="text-align: center"><em>O(n)</em><td style="text-align: left"><code>for X in range(N)</code><br><code>for X in range(start, N, k)</code><tr><td style="text-align: center"><em>O(nm)</em><td style="text-align: left"><code>for X in range(N): for Y in range(M)</code><tr><td style="text-align: center"><em>O(n²)</em><td style="text-align: left"><code>for X in range(N): for Y in range(X)</code> <br><code>for X in range(N): X*=2 for Y in range(X)</code><tr><td style="text-align: center"><em>O(logN)</em><td style="text-align: left"><code>while X < N: X*=k</code></table><h2 id=knowledge>Knowledge</h2><h3 id=bit-wise-operator>Bit-wise Operator</h3><h4 id=number>Number</h4><blockquote><p>本质上都是二进制操作，不进位</blockquote><pre class=language-bash data-lang=bash style=background-color:#282c34;color:#dcdfe4;><code class=language-bash data-lang=bash><span style=color:#5c6370;># ~ Bitwise NOT    -> -(0bN + 0b1)
+</span><span style=color:#5c6370;># | Bitwise OR     -> (0, 0) leads to 0, otherwise 1
+</span><span style=color:#5c6370;># & Bitwise AND    -> (1, 1) leads to 1, otherwise 0
+</span><span style=color:#5c6370;># ^ Bitwise XOR    -> (1, 0)(0, 1) leads to 1, otherwise 0
+</span></code></pre><h4 id=letter>Letter</h4><pre class=language-java data-lang=java style=background-color:#282c34;color:#dcdfe4;><code class=language-java data-lang=java><span style=color:#5c6370;>// To lowercase
+</span><span>(</span><span style=color:#98c379;>'a' </span><span style=color:#c678dd;>| </span><span style=color:#98c379;>' '</span><span>) </span><span style=color:#c678dd;>== </span><span style=color:#98c379;>'a'
+</span><span>(</span><span style=color:#98c379;>'A' </span><span style=color:#c678dd;>| </span><span style=color:#98c379;>' '</span><span>) </span><span style=color:#c678dd;>== </span><span style=color:#98c379;>'a'
 </span><span>
-</span><span style=color:#75715e;>// To uppercase
-</span><span>(</span><span style=color:#e6db74;>'b' </span><span style=color:#f92672;>& </span><span style=color:#e6db74;>'_'</span><span>) </span><span style=color:#f92672;>== </span><span style=color:#e6db74;>'B'
-</span><span>(</span><span style=color:#e6db74;>'B' </span><span style=color:#f92672;>& </span><span style=color:#e6db74;>'_'</span><span>) </span><span style=color:#f92672;>== </span><span style=color:#e6db74;>'B'
+</span><span style=color:#5c6370;>// To uppercase
+</span><span>(</span><span style=color:#98c379;>'b' </span><span style=color:#c678dd;>& </span><span style=color:#98c379;>'_'</span><span>) </span><span style=color:#c678dd;>== </span><span style=color:#98c379;>'B'
+</span><span>(</span><span style=color:#98c379;>'B' </span><span style=color:#c678dd;>& </span><span style=color:#98c379;>'_'</span><span>) </span><span style=color:#c678dd;>== </span><span style=color:#98c379;>'B'
 </span><span>
-</span><span style=color:#75715e;>// Switch cases
-</span><span>(</span><span style=color:#e6db74;>'c' </span><span style=color:#f92672;>^ </span><span style=color:#e6db74;>' '</span><span>) </span><span style=color:#f92672;>== </span><span style=color:#e6db74;>'C'
-</span><span>(</span><span style=color:#e6db74;>'C' </span><span style=color:#f92672;>^ </span><span style=color:#e6db74;>' '</span><span>) </span><span style=color:#f92672;>== </span><span style=color:#e6db74;>'C'
-</span></code></pre><h3 id=traversing-binary-tree>Traversing Binary Tree</h3><blockquote><p>以 root 节点为视角: <em>Preorder</em> <sup>(前序)</sup>, <em>Inorder</em> <sup>(中序)</sup>, <em>Postorder</em> <sup>(后序)</sup> and .. <em>Level Order</em>. Note that these methods by themselves <strong>are</strong> LeetCode problems as well.</blockquote><h4 id=0144-binary-tree-preorder-traversal>0144. Binary Tree <em><strong>Preorder</strong></em> Traversal</h4><pre class=language-python data-lang=python style=background-color:#272822;color:#f8f8f2;><code class=language-python data-lang=python><span style=color:#75715e;># Definition for a binary tree node.
-</span><span style=color:#75715e;># class TreeNode:
-</span><span style=color:#75715e;>#     def __init__(self, val=0, left=None, right=None):
-</span><span style=color:#75715e;>#         self.val = val
-</span><span style=color:#75715e;>#         self.left = left
-</span><span style=color:#75715e;>#         self.right = right
-</span><span style=font-style:italic;color:#f92672;>class </span><span style=text-decoration:underline;color:#a6e22e;>Solution</span><span>:
-</span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>preorderTraversal</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>root</span><span>: Optional[TreeNode]) -> List[</span><span style=font-style:italic;color:#66d9ef;>int</span><span>]:
-</span><span>     result </span><span style=color:#f92672;>= </span><span>[]
+</span><span style=color:#5c6370;>// Switch cases
+</span><span>(</span><span style=color:#98c379;>'c' </span><span style=color:#c678dd;>^ </span><span style=color:#98c379;>' '</span><span>) </span><span style=color:#c678dd;>== </span><span style=color:#98c379;>'C'
+</span><span>(</span><span style=color:#98c379;>'C' </span><span style=color:#c678dd;>^ </span><span style=color:#98c379;>' '</span><span>) </span><span style=color:#c678dd;>== </span><span style=color:#98c379;>'C'
+</span></code></pre><h3 id=traversing-binary-tree>Traversing Binary Tree</h3><blockquote><p>以 root 节点为视角: <em>Preorder</em> <sup>(前序)</sup>, <em>Inorder</em> <sup>(中序)</sup>, <em>Postorder</em> <sup>(后序)</sup> and .. <em>Level Order</em>. Note that these methods by themselves <strong>are</strong> LeetCode problems as well.</blockquote><h4 id=0144-binary-tree-preorder-traversal>0144. Binary Tree <em><strong>Preorder</strong></em> Traversal</h4><pre class=language-python data-lang=python style=background-color:#282c34;color:#dcdfe4;><code class=language-python data-lang=python><span style=color:#5c6370;># Definition for a binary tree node.
+</span><span style=color:#5c6370;># class TreeNode:
+</span><span style=color:#5c6370;>#     def __init__(self, val=0, left=None, right=None):
+</span><span style=color:#5c6370;>#         self.val = val
+</span><span style=color:#5c6370;>#         self.left = left
+</span><span style=color:#5c6370;>#         self.right = right
+</span><span style=color:#c678dd;>class </span><span style=color:#e5c07b;>Solution:
+</span><span>    </span><span style=color:#c678dd;>def </span><span style=color:#61afef;>preorderTraversal</span><span>(</span><span style=color:#e06c75;>self</span><span>, </span><span style=color:#e06c75;>root</span><span>: Optional[TreeNode]) -> List[int]:
+</span><span>     result </span><span style=color:#c678dd;>= </span><span>[]
 </span><span>
-</span><span>     self.preorder(root, result)
+</span><span>     </span><span style=color:#e06c75;>self</span><span>.</span><span style=color:#e06c75;>preorder</span><span>(root, result)
 </span><span>
-</span><span>     </span><span style=color:#f92672;>return </span><span>result
+</span><span>     </span><span style=color:#c678dd;>return </span><span>result
 </span><span>
-</span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>preorder</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>node</span><span>, </span><span style=font-style:italic;color:#fd971f;>a_list</span><span>):
-</span><span>     </span><span style=color:#f92672;>if not </span><span>node:
-</span><span>      </span><span style=color:#f92672;>return </span><span style=color:#ae81ff;>None
+</span><span>    </span><span style=color:#c678dd;>def </span><span style=color:#61afef;>preorder</span><span>(</span><span style=color:#e06c75;>self</span><span>, </span><span style=color:#e06c75;>node</span><span>, </span><span style=color:#e06c75;>a_list</span><span>):
+</span><span>     </span><span style=color:#c678dd;>if not </span><span>node:
+</span><span>      </span><span style=color:#c678dd;>return </span><span style=color:#e5c07b;>None
 </span><span>
-</span><span>     a_list.append(node.val)
-</span><span>     self.preorder(node.left, a_list)
-</span><span>     self.preorder(node.right, a_list)
-</span></code></pre><h4 id=0094-binary-tree-inorder-traversal>0094. Binary Tree <em><strong>Inorder</strong></em> Traversal</h4><pre class=language-python data-lang=python style=background-color:#272822;color:#f8f8f2;><code class=language-python data-lang=python><span style=color:#75715e;># Definition for a binary tree node.
-</span><span style=color:#75715e;># class TreeNode:
-</span><span style=color:#75715e;>#     def __init__(self, val=0, left=None, right=None):
-</span><span style=color:#75715e;>#         self.val = val
-</span><span style=color:#75715e;>#         self.left = left
-</span><span style=color:#75715e;>#         self.right = right
-</span><span style=font-style:italic;color:#f92672;>class </span><span style=text-decoration:underline;color:#a6e22e;>Solution</span><span>:
-</span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>inorderTraversal</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>root</span><span>: Optional[TreeNode]) -> List[</span><span style=font-style:italic;color:#66d9ef;>int</span><span>]:
-</span><span>        result </span><span style=color:#f92672;>= </span><span>[]
+</span><span>     a_list.</span><span style=color:#e06c75;>append</span><span>(node.val)
+</span><span>     </span><span style=color:#e06c75;>self</span><span>.</span><span style=color:#e06c75;>preorder</span><span>(node.left, a_list)
+</span><span>     </span><span style=color:#e06c75;>self</span><span>.</span><span style=color:#e06c75;>preorder</span><span>(node.right, a_list)
+</span></code></pre><h4 id=0094-binary-tree-inorder-traversal>0094. Binary Tree <em><strong>Inorder</strong></em> Traversal</h4><pre class=language-python data-lang=python style=background-color:#282c34;color:#dcdfe4;><code class=language-python data-lang=python><span style=color:#5c6370;># Definition for a binary tree node.
+</span><span style=color:#5c6370;># class TreeNode:
+</span><span style=color:#5c6370;>#     def __init__(self, val=0, left=None, right=None):
+</span><span style=color:#5c6370;>#         self.val = val
+</span><span style=color:#5c6370;>#         self.left = left
+</span><span style=color:#5c6370;>#         self.right = right
+</span><span style=color:#c678dd;>class </span><span style=color:#e5c07b;>Solution:
+</span><span>    </span><span style=color:#c678dd;>def </span><span style=color:#61afef;>inorderTraversal</span><span>(</span><span style=color:#e06c75;>self</span><span>, </span><span style=color:#e06c75;>root</span><span>: Optional[TreeNode]) -> List[int]:
+</span><span>        result </span><span style=color:#c678dd;>= </span><span>[]
 </span><span>
-</span><span>        self.inorder(root, result)
+</span><span>        </span><span style=color:#e06c75;>self</span><span>.</span><span style=color:#e06c75;>inorder</span><span>(root, result)
 </span><span>
-</span><span>        </span><span style=color:#f92672;>return </span><span>result
+</span><span>        </span><span style=color:#c678dd;>return </span><span>result
 </span><span>
-</span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>inorder</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>node</span><span>, </span><span style=font-style:italic;color:#fd971f;>a_list</span><span>):
-</span><span>        </span><span style=color:#f92672;>if not </span><span>node:
-</span><span>            </span><span style=color:#f92672;>return </span><span style=color:#ae81ff;>None
+</span><span>    </span><span style=color:#c678dd;>def </span><span style=color:#61afef;>inorder</span><span>(</span><span style=color:#e06c75;>self</span><span>, </span><span style=color:#e06c75;>node</span><span>, </span><span style=color:#e06c75;>a_list</span><span>):
+</span><span>        </span><span style=color:#c678dd;>if not </span><span>node:
+</span><span>            </span><span style=color:#c678dd;>return </span><span style=color:#e5c07b;>None
 </span><span>
-</span><span>        self.inorder(node.left, a_list)
-</span><span>        a_list.append(node.val)
-</span><span>        self.inorder(node.right, a_list)
-</span></code></pre><h4 id=0145-binary-tree-postorder-traversal>0145. Binary Tree <em><strong>Postorder</strong></em> Traversal</h4><pre class=language-python data-lang=python style=background-color:#272822;color:#f8f8f2;><code class=language-python data-lang=python><span style=color:#75715e;># Definition for a binary tree node.
-</span><span style=color:#75715e;># class TreeNode:
-</span><span style=color:#75715e;>#     def __init__(self, val=0, left=None, right=None):
-</span><span style=color:#75715e;>#         self.val = val
-</span><span style=color:#75715e;>#         self.left = left
-</span><span style=color:#75715e;>#         self.right = right
-</span><span style=font-style:italic;color:#f92672;>class </span><span style=text-decoration:underline;color:#a6e22e;>Solution</span><span>:
-</span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>postorderTraversal</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>root</span><span>: Optional[TreeNode]) -> List[</span><span style=font-style:italic;color:#66d9ef;>int</span><span>]:
-</span><span>     result </span><span style=color:#f92672;>= </span><span>[]
+</span><span>        </span><span style=color:#e06c75;>self</span><span>.</span><span style=color:#e06c75;>inorder</span><span>(node.left, a_list)
+</span><span>        a_list.</span><span style=color:#e06c75;>append</span><span>(node.val)
+</span><span>        </span><span style=color:#e06c75;>self</span><span>.</span><span style=color:#e06c75;>inorder</span><span>(node.right, a_list)
+</span></code></pre><h4 id=0145-binary-tree-postorder-traversal>0145. Binary Tree <em><strong>Postorder</strong></em> Traversal</h4><pre class=language-python data-lang=python style=background-color:#282c34;color:#dcdfe4;><code class=language-python data-lang=python><span style=color:#5c6370;># Definition for a binary tree node.
+</span><span style=color:#5c6370;># class TreeNode:
+</span><span style=color:#5c6370;>#     def __init__(self, val=0, left=None, right=None):
+</span><span style=color:#5c6370;>#         self.val = val
+</span><span style=color:#5c6370;>#         self.left = left
+</span><span style=color:#5c6370;>#         self.right = right
+</span><span style=color:#c678dd;>class </span><span style=color:#e5c07b;>Solution:
+</span><span>    </span><span style=color:#c678dd;>def </span><span style=color:#61afef;>postorderTraversal</span><span>(</span><span style=color:#e06c75;>self</span><span>, </span><span style=color:#e06c75;>root</span><span>: Optional[TreeNode]) -> List[int]:
+</span><span>     result </span><span style=color:#c678dd;>= </span><span>[]
 </span><span>
-</span><span>        self.postorder(root, result)
+</span><span>        </span><span style=color:#e06c75;>self</span><span>.</span><span style=color:#e06c75;>postorder</span><span>(root, result)
 </span><span>
-</span><span>        </span><span style=color:#f92672;>return </span><span>result
+</span><span>        </span><span style=color:#c678dd;>return </span><span>result
 </span><span>
-</span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>postorder</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>node</span><span>, </span><span style=font-style:italic;color:#fd971f;>a_list</span><span>):
-</span><span>        </span><span style=color:#f92672;>if not </span><span>node:
-</span><span>            </span><span style=color:#f92672;>return </span><span style=color:#ae81ff;>None
+</span><span>    </span><span style=color:#c678dd;>def </span><span style=color:#61afef;>postorder</span><span>(</span><span style=color:#e06c75;>self</span><span>, </span><span style=color:#e06c75;>node</span><span>, </span><span style=color:#e06c75;>a_list</span><span>):
+</span><span>        </span><span style=color:#c678dd;>if not </span><span>node:
+</span><span>            </span><span style=color:#c678dd;>return </span><span style=color:#e5c07b;>None
 </span><span>
-</span><span>        self.postorder(node.left, a_list)
-</span><span>        self.postorder(node.right, a_list)
-</span><span>        a_list.append(node.val)
-</span></code></pre><h4 id=0102-binary-tree-level-order-traversal>0102. Binary Tree <em><strong>Level Order</strong></em> Traversal</h4><pre class=language-python data-lang=python style=background-color:#272822;color:#f8f8f2;><code class=language-python data-lang=python><span style=color:#75715e;># Definition for a binary tree node.
-</span><span style=color:#75715e;># class TreeNode:
-</span><span style=color:#75715e;>#     def __init__(self, val=0, left=None, right=None):
-</span><span style=color:#75715e;>#         self.val = val
-</span><span style=color:#75715e;>#         self.left = left
-</span><span style=color:#75715e;>#         self.right = right
-</span><span style=font-style:italic;color:#f92672;>class </span><span style=text-decoration:underline;color:#a6e22e;>Solution</span><span>:
-</span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>levelOrder</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>root</span><span>: Optional[TreeNode]) -> List[List[</span><span style=font-style:italic;color:#66d9ef;>int</span><span>]]:
-</span><span>        </span><span style=color:#75715e;>#TODO Memorized solution, further walkthrough needed
+</span><span>        </span><span style=color:#e06c75;>self</span><span>.</span><span style=color:#e06c75;>postorder</span><span>(node.left, a_list)
+</span><span>        </span><span style=color:#e06c75;>self</span><span>.</span><span style=color:#e06c75;>postorder</span><span>(node.right, a_list)
+</span><span>        a_list.</span><span style=color:#e06c75;>append</span><span>(node.val)
+</span></code></pre><h4 id=0102-binary-tree-level-order-traversal>0102. Binary Tree <em><strong>Level Order</strong></em> Traversal</h4><pre class=language-python data-lang=python style=background-color:#282c34;color:#dcdfe4;><code class=language-python data-lang=python><span style=color:#5c6370;># Definition for a binary tree node.
+</span><span style=color:#5c6370;># class TreeNode:
+</span><span style=color:#5c6370;>#     def __init__(self, val=0, left=None, right=None):
+</span><span style=color:#5c6370;>#         self.val = val
+</span><span style=color:#5c6370;>#         self.left = left
+</span><span style=color:#5c6370;>#         self.right = right
+</span><span style=color:#c678dd;>class </span><span style=color:#e5c07b;>Solution:
+</span><span>    </span><span style=color:#c678dd;>def </span><span style=color:#61afef;>levelOrder</span><span>(</span><span style=color:#e06c75;>self</span><span>, </span><span style=color:#e06c75;>root</span><span>: Optional[TreeNode]) -> List[List[int]]:
+</span><span>        </span><span style=color:#5c6370;>#TODO Memorized solution, further walkthrough needed
 </span><span>
-</span><span>        res </span><span style=color:#f92672;>= </span><span>[]
+</span><span>        res </span><span style=color:#c678dd;>= </span><span>[]
 </span><span>
-</span><span>        self.dfs(root, </span><span style=color:#ae81ff;>0</span><span>, res)
+</span><span>        </span><span style=color:#e06c75;>self</span><span>.</span><span style=color:#e06c75;>dfs</span><span>(root, </span><span style=color:#e5c07b;>0</span><span>, res)
 </span><span>
-</span><span>        </span><span style=color:#f92672;>return </span><span>dfs
+</span><span>        </span><span style=color:#c678dd;>return </span><span>dfs
 </span><span>
-</span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>dfs</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>node</span><span>, </span><span style=font-style:italic;color:#fd971f;>level</span><span>, </span><span style=font-style:italic;color:#fd971f;>res</span><span>):
-</span><span>        </span><span style=color:#f92672;>if not </span><span>node:
-</span><span>            </span><span style=color:#f92672;>return </span><span style=color:#ae81ff;>None
+</span><span>    </span><span style=color:#c678dd;>def </span><span style=color:#61afef;>dfs</span><span>(</span><span style=color:#e06c75;>self</span><span>, </span><span style=color:#e06c75;>node</span><span>, </span><span style=color:#e06c75;>level</span><span>, </span><span style=color:#e06c75;>res</span><span>):
+</span><span>        </span><span style=color:#c678dd;>if not </span><span>node:
+</span><span>            </span><span style=color:#c678dd;>return </span><span style=color:#e5c07b;>None
 </span><span>
-</span><span>        </span><span style=color:#f92672;>if </span><span>level </span><span style=color:#f92672;>== </span><span style=color:#66d9ef;>len</span><span>(res):
-</span><span>            res.append([])
+</span><span>        </span><span style=color:#c678dd;>if </span><span>level </span><span style=color:#c678dd;>== </span><span style=color:#61afef;>len</span><span>(res):
+</span><span>            res.</span><span style=color:#e06c75;>append</span><span>([])
 </span><span>
-</span><span>        res[level].append(node.val)
+</span><span>        res[level].</span><span style=color:#e06c75;>append</span><span>(node.val)
 </span><span>
-</span><span>        </span><span style=color:#f92672;>if </span><span>node.left:
-</span><span>            self.dfs(node.left, level </span><span style=color:#f92672;>+ </span><span style=color:#ae81ff;>1</span><span>, res)
-</span><span>        </span><span style=color:#f92672;>if </span><span>node.right:
-</span><span>            self.dfs(node.right, level </span><span style=color:#f92672;>+ </span><span style=color:#ae81ff;>1</span><span>, res)
+</span><span>        </span><span style=color:#c678dd;>if </span><span>node.left:
+</span><span>            </span><span style=color:#e06c75;>self</span><span>.</span><span style=color:#e06c75;>dfs</span><span>(node.left, level </span><span style=color:#c678dd;>+ </span><span style=color:#e5c07b;>1</span><span>, res)
+</span><span>        </span><span style=color:#c678dd;>if </span><span>node.right:
+</span><span>            </span><span style=color:#e06c75;>self</span><span>.</span><span style=color:#e06c75;>dfs</span><span>(node.right, level </span><span style=color:#c678dd;>+ </span><span style=color:#e5c07b;>1</span><span>, res)
 </span></code></pre></article><footer role=contentinfo><hr><small>Built with <a href=https://www.getzola.org/>Zola</a>.<br> </small></footer></main>
