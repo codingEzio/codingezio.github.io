@@ -870,6 +870,34 @@ class Solution:
         return root
 ```
 
+### 0230. Kth Smallest Element in a BST
+
+```python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:
+        # Flatten the list using inorder traversal
+
+        resultList = []
+
+        self.inorderTraversal(root, resultList)
+
+        return resultList[k-1]
+
+    def inorderTraversal(self, node, aggregator):
+        if not node:
+            return None
+
+        self.inorderTraversal(node.left, aggregator)
+        aggregator.append(node.val)
+        self.inorderTraversal(node.right, aggregator)
+```
+
 ### 0238. Product of Array Except Self
 
 ```python

@@ -680,6 +680,29 @@
 </span><span>        self.invertTree(root.right)
 </span><span>
 </span><span>        </span><span style=color:#f92672;>return </span><span>root
+</span></code></pre><h3 id=0230-kth-smallest-element-in-a-bst>0230. Kth Smallest Element in a BST</h3><pre class=language-python data-lang=python style=background-color:#272822;color:#f8f8f2;><code class=language-python data-lang=python><span style=color:#75715e;># Definition for a binary tree node.
+</span><span style=color:#75715e;># class TreeNode:
+</span><span style=color:#75715e;>#     def __init__(self, val=0, left=None, right=None):
+</span><span style=color:#75715e;>#         self.val = val
+</span><span style=color:#75715e;>#         self.left = left
+</span><span style=color:#75715e;>#         self.right = right
+</span><span style=font-style:italic;color:#f92672;>class </span><span style=text-decoration:underline;color:#a6e22e;>Solution</span><span>:
+</span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>kthSmallest</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>root</span><span>: Optional[TreeNode], </span><span style=font-style:italic;color:#fd971f;>k</span><span>: </span><span style=font-style:italic;color:#66d9ef;>int</span><span>) -> </span><span style=font-style:italic;color:#66d9ef;>int</span><span>:
+</span><span>        </span><span style=color:#75715e;># Flatten the list using inorder traversal
+</span><span>
+</span><span>        resultList </span><span style=color:#f92672;>= </span><span>[]
+</span><span>
+</span><span>        self.inorderTraversal(root, resultList)
+</span><span>
+</span><span>        </span><span style=color:#f92672;>return </span><span>resultList[k</span><span style=color:#f92672;>-</span><span style=color:#ae81ff;>1</span><span>]
+</span><span>
+</span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>inorderTraversal</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>node</span><span>, </span><span style=font-style:italic;color:#fd971f;>aggregator</span><span>):
+</span><span>        </span><span style=color:#f92672;>if not </span><span>node:
+</span><span>            </span><span style=color:#f92672;>return </span><span style=color:#ae81ff;>None
+</span><span>
+</span><span>        self.inorderTraversal(node.left, aggregator)
+</span><span>        aggregator.append(node.val)
+</span><span>        self.inorderTraversal(node.right, aggregator)
 </span></code></pre><h3 id=0238-product-of-array-except-self>0238. Product of Array Except Self</h3><pre class=language-python data-lang=python style=background-color:#272822;color:#f8f8f2;><code class=language-python data-lang=python><span style=font-style:italic;color:#f92672;>class </span><span style=text-decoration:underline;color:#a6e22e;>Solution</span><span>:
 </span><span>    </span><span style=font-style:italic;color:#f92672;>def </span><span style=color:#a6e22e;>productExceptSelf</span><span>(</span><span style=font-style:italic;color:#fd971f;>self</span><span>, </span><span style=font-style:italic;color:#fd971f;>nums</span><span>: List[</span><span style=font-style:italic;color:#66d9ef;>int</span><span>]) -> List[</span><span style=font-style:italic;color:#66d9ef;>int</span><span>]:
 </span><span>        ln </span><span style=color:#f92672;>= </span><span style=color:#66d9ef;>len</span><span>(nums)

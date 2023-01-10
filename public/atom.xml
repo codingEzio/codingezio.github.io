@@ -2975,6 +2975,31 @@ I came back after my miscarriages.&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;root
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;0230-kth-smallest-element-in-a-bst&quot;&gt;0230. Kth Smallest Element in a BST&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# Definition for a binary tree node.
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# class TreeNode:
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;#     def __init__(self, val=0, left=None, right=None):
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;#         self.val = val
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;#         self.left = left
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;#         self.right = right
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;class &lt;&#x2F;span&gt;&lt;span style=&quot;text-decoration:underline;color:#a6e22e;&quot;&gt;Solution&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;kthSmallest&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;root&lt;&#x2F;span&gt;&lt;span&gt;: Optional[TreeNode], &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;k&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;) -&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# Flatten the list using inorder traversal
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        resultList &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;[]
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        self.inorderTraversal(root, resultList)
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;resultList[k&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;inorderTraversal&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;node&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;aggregator&lt;&#x2F;span&gt;&lt;span&gt;):
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;if not &lt;&#x2F;span&gt;&lt;span&gt;node:
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;None
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        self.inorderTraversal(node.left, aggregator)
+&lt;&#x2F;span&gt;&lt;span&gt;        aggregator.append(node.val)
+&lt;&#x2F;span&gt;&lt;span&gt;        self.inorderTraversal(node.right, aggregator)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;0238-product-of-array-except-self&quot;&gt;0238. Product of Array Except Self&lt;&#x2F;h3&gt;
 &lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;class &lt;&#x2F;span&gt;&lt;span style=&quot;text-decoration:underline;color:#a6e22e;&quot;&gt;Solution&lt;&#x2F;span&gt;&lt;span&gt;:
 &lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;productExceptSelf&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;nums&lt;&#x2F;span&gt;&lt;span&gt;: List[&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;]) -&amp;gt; List[&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;]:
