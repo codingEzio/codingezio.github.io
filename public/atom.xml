@@ -4681,8 +4681,9 @@ Linear algebra, including vector spaces, linear transformations, and matrix oper
 &lt;&#x2F;ul&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;h3 id=&quot;setup-vagrant&quot;&gt;Setup &lt;em&gt;Vagrant&lt;&#x2F;em&gt;&lt;&#x2F;h3&gt;
-&lt;pre style=&quot;background-color:#282c34;color:#dcdfe4;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt; Skipped at the moment because of my own time allocation
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Skipped at the moment because of my own time allocation&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
 &lt;h3 id=&quot;usage&quot;&gt;Usage&lt;&#x2F;h3&gt;
 &lt;h4 id=&quot;you-should-know&quot;&gt;You Should Know&lt;&#x2F;h4&gt;
 &lt;ul&gt;

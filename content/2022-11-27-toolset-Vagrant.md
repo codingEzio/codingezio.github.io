@@ -20,7 +20,7 @@ description = "Thoughts and notes on Vagrant"
 
 ### Setup *Vagrant*
 
-    > Skipped at the moment because of my own time allocation
+> Skipped at the moment because of my own time allocation
 
 ### Usage
 
