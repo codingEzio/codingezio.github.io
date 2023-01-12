@@ -33,6 +33,11 @@ description = "A deep-dive into How Distributed Data Systems Work"
   - offering a schema, a query language, indexing, transactions
   - and many other useful features.
 
+- Storage Engine
+  - 属 DBMS 中一部件 存/取/管理
+  - 露 CRUD API 至外部
+  - 建 SE 之上，DBMS 供用户 定<sup>(schema)</sup>、言<sup>SQL</sup>、索<sup>Index</sup>、务<sup>Transaction</sup> etc.
+
 ## Choose the Right Database for You
 
 ### Caveats when Choosing Databases
