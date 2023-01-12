@@ -98,7 +98,7 @@ description = "A deep-dive into How Distributed Data Systems Work"
 >
 > As you will see throughout this book, there are many different approaches to storage engine design, and every implementation has its own upsides and downsides.
 
-#### Example on *City Planning*
+### Example on *City Planning*
 
 > To draw a parallel with city planning, it is possible to build a city for a specific population and choose to build up or build out. In both cases, the same number of people will fit into the city,
 >
@@ -107,14 +107,29 @@ description = "A deep-dive into How Distributed Data Systems Work"
 > - When building the city up, people live in apartments and population density is likely to lead to more traffic in a smaller area;
 > - in a more spread-out city, people are more likely to live in houses, but commuting will require covering larger distances.
 
+## Architecture of a Database Management System
+
+### Illustration
+
+### Components Overview
+
 ## Database Categorization
 
-- N/A
+### By *Storage Medium*
+
+### By *Layout*
+
+### By *Architecture*
+
+> .. : focus on
+
+- OL<u>*T*</u>P: .. handling a large number of requests and transactions
+- OL<u>*A*</u>P: .. handling complex aggregations for analytics, warehousing etc.
+- *H*<u>TA</u>P: .. combine both properties, postgreSQL is one of them
 
 -----
 
 ## References
 
-### N/A
-
-- N/A
+- [What are *OLTP* and *OLAP*. What is the difference between them?](https://stackoverflow.com/questions/21900185/what-are-oltp-and-olap-what-is-the-difference-between-them)
+- [Alex Xu: PostgreSQL is based on *HTAP* architecture](https://twitter.com/alexxubyte/status/1585296480729911296?lang=en)
