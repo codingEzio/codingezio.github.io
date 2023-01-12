@@ -1,0 +1,308 @@
+<!doctype html><html lang=en><head><meta charset=UTF-8><meta content="width=device-width,initial-scale=1.0"name=viewport><title>Booknote on Spring Boot with React · Ezio's blog 😊</title><meta content="Full Stack Development with Spring Boot and React"name=description><link rel="shortcut icon"href=https://codingezio.github.io/favicon.ico><link href=https://codingezio.github.io/atom.xml rel=alternate title=RSS type=application/atom+xml><style>html,body{background:#fffaf7;color:#2d2d2d;font:16.5px/1.55 Georgia, 'Times New Roman', Times, serif}header[role='banner']{font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif}main article h1:nth-child(1){font-family:Copperplate, Papyrus, fantasy;font-style:italic}a,a:visited{color:darkred;text-decoration:none}a:hover{text-decoration:underline}main{margin:auto;max-width:43rem;padding:0.8rem}pre{background:white;overflow:scroll;padding:1rem;font-size:0.88em}th,td{font-family:'Inziu Roboto SC', 'Roboto', 'Trebuchet MS', sans-serif}th{font-weight:bold;font-style:italic}td{border:1px groove #2d2d2d;padding:5px;font-size:0.9em}pre,td code,p code,ul code,ol code,li code{font-family:'Menlo', 'Fira Code', 'SF Mono', 'Consolas', monospace}pre,img{border-radius:22px}img{height:auto;max-width:100%}p{letter-spacing:0.2px}.homepage-list{list-style:none;padding:1rem 0}.homepage-list li{align-items:center;display:flex;flex-wrap:wrap;justify-content:space-between;margin-bottom:10px}@media (max-width: 38rem){.homepage-list li a{width:100%}}</style><meta content="Ezio's blog 😊"property=og:site_name><meta content="Booknote on Spring Boot with React"property=og:title><meta content="Full Stack Development with Spring Boot and React"property=og:description><meta content=https://codingezio.github.io/booknote-on-spring-boot-with-react/ property=og:url><meta property=og:image><meta content=article property=og:type><meta content=2022-07-30T00:00:00+00:00 property=article:published_time><link href=https://codingezio.github.io/booknote-on-web-browser-engineering/ rel=prev><link href=https://codingezio.github.io/zero-to-one-for-sql/ rel=next><body><main id=main role=main><header role=banner><h3 style=margin-top:0;><a href=https://codingezio.github.io title=Home>Ezio's blog 😊</a> <br><small>A coder that wants to learn everything</small></h3></header><hr><article><h1>Booknote on Spring Boot with React</h1><p style=font-size:90%;>Posted on <time datetime=2022-07-30T00:00:00+00:00>July 30, 2022</time><h3 id=metadata>Metadata</h3><ul><li><em>Full Stack Development with Spring Boot and React: Third Edition</em><li>Get the <a href=https://www.amazon.com/Full-Stack-Development-Spring-React/dp/1801816786><em>book</em></a><li>Get the <a href=https://github.com/PacktPublishing/Full-Stack-Development-with-Spring-Boot-and-React><em>source code</em></a></ul><h3 id=preface>Preface</h3><ul><li>Third-party software I will be using <ul><li><a href=https://www.postman.com/downloads/>Postman</a>: An API platform for building and using APIs<li><a href=https://github.com/dbcli/mycli><code>mycli</code></a>: Terminal client for MySQL that have auto-completion and syntax highlighting<li><a href=https://github.com/httpie/httpie><code>http</code></a>: Human-friendly CLI HTTP client for the API era<li><a href=https://github.com/stedolan/jq><code>jq</code></a>: Lightweight and flexible command-line JSON processor.</ul></ul><hr><h3 id=data>Data</h3><h5 id=table-relationship>Table Relationship</h5><ul><li><p>Take <strong>Alex</strong> <em>HAS</em> many <strong>cars</strong></p> <pre class=language-java data-lang=java style=background-color:#282c34;color:#dcdfe4;><code class=language-java data-lang=java><span style=color:#5c6370;>// (1) Define the ONE  in MANY    subject / 主体
+</span><span style=color:#5c6370;>// (2) Define the MANY in ONE     object  / 客体
+</span><span>
+</span><span>
+</span><span style=color:#5c6370;>// (1) Car.java
+</span><span>@</span><span style=color:#e06c75;>ManyToOne</span><span>(</span><span style=color:#e06c75;>fetch </span><span style=color:#c678dd;>= </span><span style=color:#e5c07b;>FetchType</span><span>.</span><span style=color:#e5c07b;>LAZY</span><span>)
+</span><span>@</span><span style=color:#e06c75;>JoinColumn</span><span>(</span><span style=color:#e06c75;>name </span><span style=color:#c678dd;>= </span><span style=color:#98c379;>"owner"</span><span>)
+</span><span style=color:#c678dd;>private </span><span style=color:#e5c07b;>Owner</span><span> owner;                   </span><span style=color:#5c6370;>// Here the `owner` steer all the name changes
+</span><span>
+</span><span style=color:#5c6370;>// (2) Owner.java
+</span><span>@</span><span style=color:#e06c75;>OneToMany</span><span>(</span><span style=color:#e06c75;>cascade </span><span style=color:#c678dd;>= </span><span style=color:#e5c07b;>CascadeType</span><span>.</span><span style=color:#e5c07b;>ALL</span><span>,  </span><span style=color:#5c6370;>// del ONE, all related MANY were deleted as well
+</span><span>           </span><span style=color:#e06c75;>mappedBy </span><span style=color:#c678dd;>= </span><span style=color:#98c379;>"owner"</span><span>)         </span><span style=color:#5c6370;>// signify 'MANY has ONE' (inst init in Car.java)
+</span><span style=color:#c678dd;>private </span><span style=color:#e5c07b;>List</span><span><</span><span style=color:#e5c07b;>Car</span><span>> cars;
+</span></code></pre></ul><h3 id=spring-security>Spring Security</h3><h5 id=basic-authentication>Basic Authentication</h5><ol><li><p>Out-of-the-box authentication <small>(<strong>only for development</strong>)</small></p> <blockquote><p>That's it! Go grab the password from the terminal output</blockquote> <pre class=language-xml data-lang=xml style=background-color:#282c34;color:#dcdfe4;><code class=language-xml data-lang=xml><span><</span><span style=color:#e06c75;>dependency</span><span>>
+</span><span>    <</span><span style=color:#e06c75;>groupId</span><span>>org.springframework.boot&LT/</span><span style=color:#e06c75;>groupId</span><span>>
+</span><span>    <</span><span style=color:#e06c75;>artifactId</span><span>>spring-boot-starter-security&LT/</span><span style=color:#e06c75;>artifactId</span><span>>
+</span><span>&LT/</span><span style=color:#e06c75;>dependency</span><span>>
+</span></code></pre><li><p>Be ready to save the users to the database</p> <pre class=language-java data-lang=java style=background-color:#282c34;color:#dcdfe4;><code class=language-java data-lang=java><span style=color:#5c6370;>// User.java             POJO with Getters and Setters
+</span><span style=color:#5c6370;>// UserRepository.java   CrudRepository with a method `findByUsername`
+</span><span>
+</span></code></pre><li><p>Configuring users' details by overriding <code>UserDetailsService</code></p> <pre class=language-java data-lang=java style=background-color:#282c34;color:#dcdfe4;><code class=language-java data-lang=java><span style=color:#c678dd;>public class </span><span style=color:#e5c07b;>UserDetailsServiceImpl </span><span style=color:#c678dd;>implements </span><span style=color:#e5c07b;>UserDetailsService </span><span>{
+</span><span>
+</span><span>    ...
+</span><span>
+</span><span>    </span><span style=color:#c678dd;>public </span><span style=color:#e5c07b;>UserDetails </span><span style=color:#61afef;>loadUserByUsername</span><span>(</span><span style=color:#e5c07b;>String </span><span style=color:#e06c75;>username</span><span>) .. {
+</span><span>
+</span><span>        ...
+</span><span>
+</span><span>    }
+</span><span>
+</span><span>}
+</span></code></pre><li><p>Integrating <code>UserDetailsService</code> into the <code>AuthenticationManagerBuilder</code></p> <blockquote><p>We use the <a href=https://web.archive.org/web/20220831085838/https://auth0.com/blog/hashing-in-action-understanding-bcrypt/>BCrypt</a> hashing in this case, go to <a href=https://www.bcryptcalculator.com/encode>bcryptcalculator</a> create your own</blockquote> <pre class=language-java data-lang=java style=background-color:#282c34;color:#dcdfe4;><code class=language-java data-lang=java><span style=color:#5c6370;>// Switch off the &LTdefault> web security &LTconfiguration> (we'll customize it)
+</span><span>@</span><span style=color:#e06c75;>Configuration
+</span><span>@</span><span style=color:#e06c75;>EnableWebSecurity
+</span><span>
+</span><span style=color:#5c6370;>// A new configuration class to customize `WebSecurityConfigurerAdapter`
+</span><span style=color:#c678dd;>public class </span><span>.. extends </span><span style=color:#e5c07b;>WebSecurityConfigurerAdapter </span><span>{
+</span><span>
+</span><span>    </span><span style=color:#5c6370;>// Define which endpoints are secured or not (abstractly speaking)
+</span><span>    </span><span style=color:#5c6370;>// We'll delete this one for the `configureGlobal()` to work properly
+</span><span>    @</span><span style=color:#e06c75;>Override
+</span><span>    .. </span><span style=color:#e06c75;>configure      </span><span>(</span><span style=color:#e5c07b;>HttpSecurity</span><span> httpSecurity)         .. { ... }
+</span><span>
+</span><span>    </span><span style=color:#5c6370;>// The method name
+</span><span>    @</span><span style=color:#e06c75;>Override
+</span><span>    .. </span><span style=color:#e06c75;>configureGlobal</span><span>(</span><span style=color:#e5c07b;>AuthenticationManagerBuilder</span><span> auth) .. {
+</span><span>
+</span><span>        authenticationManagerBuilder
+</span><span>            .</span><span style=color:#e06c75;>userDetailsService </span><span>( .. )
+</span><span>            .</span><span style=color:#e06c75;>passwordEncoder    </span><span>( .. ) ;
+</span><span>    }
+</span><span>
+</span><span>}
+</span></code></pre><li><p>Extra cautions need to be made</p> <pre class=language-java data-lang=java style=background-color:#282c34;color:#dcdfe4;><code class=language-java data-lang=java><span style=color:#5c6370;>// domain/UserRepository.java
+</span><span>
+</span><span style=color:#5c6370;>// Not exposing '/api/user/' as a RESTful resource
+</span><span>@</span><span style=color:#e06c75;>RepositoryRestResource</span><span>(</span><span style=color:#e06c75;>exported </span><span style=color:#c678dd;>= </span><span style=color:#e5c07b;>false</span><span>)
+</span><span style=color:#c678dd;>public interface </span><span style=color:#e5c07b;>UserRepository </span><span style=color:#c678dd;>extends </span><span>.. < .. > { ... }
+</span></code></pre><li><p>Testing the authentication process</p> <pre class=language-bash data-lang=bash style=background-color:#282c34;color:#dcdfe4;><code class=language-bash data-lang=bash><span style=color:#5c6370;># The basic authentication would go live as soon as you got the dependencies
+</span><span style=color:#5c6370;># - username    user'
+</span><span style=color:#5c6370;># - password    shown in terminal (e.g. de4c2211-0031-4251-991d-1ee3f8aa521e)
+</span><span style=color:#e06c75;>http</span><span> GET http://localhost:8080/api/cars</span><span style=color:#e06c75;> --auth-type</span><span> basic</span><span style=color:#e06c75;> --auth</span><span> user:PASSWORD
+</span><span style=color:#e06c75;>http</span><span> GET http://localhost:8080/api/cars</span><span style=color:#e06c75;>                   --auth</span><span> user:PASSWORD
+</span><span>
+</span><span style=color:#5c6370;># Note that even if we added the BCrypt hashing, when you are doing the
+</span><span style=color:#5c6370;># the authentication in a terminal, you still only need to use the plain-text form.
+</span></code></pre></ol><h5 id=spring-security-with-jwt>Spring Security with <em>JWT</em></h5><blockquote><p><em>J</em>SON <em>W</em>eb <em>T</em>oken</blockquote><h6 id=configure-authentication-for-login>Configure Authentication for <code>/login</code></h6><ol><li><p>Adding dependencies</p> <blockquote><p>Copied from the <a href=https://github.com/jwtk/jjwt#maven><em>Java JWT</em> Github repository</a> <small>(<em>Maven</em>)</small></blockquote> <pre class=language-xml data-lang=xml style=background-color:#282c34;color:#dcdfe4;><code class=language-xml data-lang=xml><span>.. <</span><span style=color:#e06c75;>artifactId</span><span>>jjwt-api&LT/</span><span style=color:#e06c75;>artifactId</span><span>>     ..
+</span><span>.. <</span><span style=color:#e06c75;>artifactId</span><span>>jjwt-impl&LT/</span><span style=color:#e06c75;>artifactId</span><span>>    ..
+</span><span>.. <</span><span style=color:#e06c75;>artifactId</span><span>>jjwt-jackson&LT/</span><span style=color:#e06c75;>artifactId</span><span>> ..
+</span></code></pre><li><p>Writing utilities</p> <blockquote><p><code>service/JwtService.java</code></blockquote> <pre class=language-java data-lang=java style=background-color:#282c34;color:#dcdfe4;><code class=language-java data-lang=java><span>.. </span><span style=color:#e06c75;>generateJwtToken     </span><span>() { ... }
+</span><span>.. </span><span style=color:#e06c75;>getAuthenticatedUser </span><span>() { ... }
+</span></code></pre><li><p>Medium for storing authentication credentials</p> <pre class=language-java data-lang=java style=background-color:#282c34;color:#dcdfe4;><code class=language-java data-lang=java><span style=color:#c678dd;>public class </span><span style=color:#e5c07b;>AccountCredentials </span><span>{
+</span><span>    </span><span style=color:#c678dd;>private </span><span style=color:#e5c07b;>String </span><span>username;
+</span><span>    </span><span style=color:#c678dd;>private </span><span style=color:#e5c07b;>String </span><span>password;
+</span><span>
+</span><span>    </span><span style=color:#5c6370;>// setters and getters
+</span><span>}
+</span></code></pre><li><p>Telling Spring this is an object would be used later</p> <blockquote><p><code>SecurityConfig.java</code></blockquote> <pre class=language-java data-lang=java style=background-color:#282c34;color:#dcdfe4;><code class=language-java data-lang=java><span>@</span><span style=color:#e06c75;>Bean
+</span><span style=color:#c678dd;>public </span><span style=color:#e5c07b;>AuthenticationManager </span><span style=color:#e06c75;>theNameDoesNotMatter </span><span>( .. ) {
+</span><span>
+</span><span>    </span><span style=color:#5c6370;>// Used later in the LoginController for authenticating
+</span><span>    </span><span style=color:#c678dd;>return </span><span style=color:#e06c75;>authenticationManager</span><span>();
+</span><span>}
+</span></code></pre><li><p>Doing the authentication then returning the response with token</p> <blockquote><p><code>LoginController.java</code></blockquote> <pre class=language-java data-lang=java style=background-color:#282c34;color:#dcdfe4;><code class=language-java data-lang=java><span>@</span><span style=color:#e06c75;>RequestMapping</span><span>( .. </span><span style=color:#98c379;>"/login" </span><span>.. </span><span style=color:#e5c07b;>POST</span><span>)
+</span><span>.. </span><span style=color:#e06c75;>tryAuthThenEmptyRespWithJwtToken </span><span>( .. ) {
+</span><span>
+</span><span>    </span><span style=color:#5c6370;>// provide the username and password for authentication
+</span><span>
+</span><span>    .. authenticationManager.</span><span style=color:#e06c75;>authenticate</span><span>(credentials)
+</span><span>    .. jwtService           .</span><span style=color:#e06c75;>generateJwtToken</span><span>( .. )
+</span><span>
+</span><span>    </span><span style=color:#5c6370;>// return a blank response along with token related HTTP headers
+</span><span>}
+</span></code></pre><li><p>Excluding <code>/login</code> from being secured (it's protected by passwords already!)</p> <blockquote><p>Still <code>SecurityConfig.java</code> (in the step 4)</blockquote> <pre class=language-java data-lang=java style=background-color:#282c34;color:#dcdfe4;><code class=language-java data-lang=java><span>@</span><span style=color:#e06c75;>Override
+</span><span style=color:#c678dd;>protected</span><span> void </span><span style=color:#e06c75;>configure </span><span>( </span><span style=color:#e5c07b;>HttpSecurity</span><span> httpSecurity ) {
+</span><span>
+</span><span>    httpSecurity
+</span><span>
+</span><span>        </span><span style=color:#5c6370;>// Disable CSRF protection
+</span><span>        .</span><span style=color:#e06c75;>csrf</span><span>().</span><span style=color:#e06c75;>disable</span><span>()
+</span><span>
+</span><span>        </span><span style=color:#5c6370;>// Disable session creation
+</span><span>        .</span><span style=color:#e06c75;>sessionManagement</span><span>()
+</span><span>        .</span><span style=color:#e06c75;>sessionCreationPolicy</span><span>(</span><span style=color:#e5c07b;>SessionCreationPolicy</span><span>.</span><span style=color:#e5c07b;>STATELESS</span><span>).</span><span style=color:#e06c75;>and</span><span>()
+</span><span>
+</span><span>        </span><span style=color:#5c6370;>// Allow EVERYONE access the LOGIN via POST
+</span><span>        </span><span style=color:#5c6370;>// - Allow (&LTPermit>All) everyone (Permit&LTAll>)
+</span><span>        </span><span style=color:#5c6370;>// - to access (authorizeRequests)
+</span><span>        </span><span style=color:#5c6370;>// - /login                         /login
+</span><span>        </span><span style=color:#5c6370;>// - with the HTTP method POST      HttpMethod.POST
+</span><span>        .</span><span style=color:#e06c75;>authorizeRequests</span><span>()
+</span><span>        .</span><span style=color:#e06c75;>antMatchers</span><span>(</span><span style=color:#e5c07b;>HttpMethod</span><span>.</span><span style=color:#e5c07b;>POST</span><span>, </span><span style=color:#98c379;>"/login"</span><span>)
+</span><span>        .</span><span style=color:#e06c75;>permitAll</span><span>()
+</span><span>
+</span><span>        </span><span style=color:#5c6370;>// Any other requests are allowed by authenticated users
+</span><span>        </span><span style=color:#5c6370;>// i.e. you have to be authenticated when making any other requests
+</span><span>        .</span><span style=color:#e06c75;>anyRequest</span><span>().</span><span style=color:#e06c75;>authenticated</span><span>();
+</span><span>
+</span><span>    }
+</span></code></pre></ol><h6 id=configure-authentication-for-anything-else>Configure Authentication for anything else</h6><blockquote><p>For the sole login step which is <strong>accessing <code>./login</code></strong>, you could <em>POST</em> with a JSON body of <em>username with password</em>. For everything else, you cannot use it anymore ><blockquote><ol><li>You have to use <code>GET</code> for <em>Read</em><li>and <code>POST</code> for <em>Create</em> (with its own body!)<li>and <code>PUT</code> or <code>PATCH</code> to <em>Update</em><li>and <code>DELETE</code> to <em>Delete</em></ol></blockquote><p>Now you need to configure it in such a way that only a JWT token in the HHTP header is needed for authentication (of course, you have to be authenticated once already in order to get the JWT token).</blockquote><ol><li><p>Making use of the JWT token in the existing authentication state</p> <blockquote><p><code>AuthenticationFilter.java</code></blockquote> <pre class=language-java data-lang=java style=background-color:#282c34;color:#dcdfe4;><code class=language-java data-lang=java><span>@</span><span style=color:#e06c75;>Component
+</span><span style=color:#c678dd;>public class </span><span style=color:#e5c07b;>AuthenticationFilter </span><span style=color:#c678dd;>extends </span><span style=color:#e5c07b;>OncePerRequestFilter </span><span>{
+</span><span>
+</span><span>    ...
+</span><span>
+</span><span>    </span><span style=color:#5c6370;>// Actions inside happen before the request
+</span><span>
+</span><span>    @</span><span style=color:#e06c75;>Override
+</span><span>    .. </span><span style=color:#61afef;>doFilterInternal </span><span>( </span><span style=background-color:#e06c75;color:#dcdfe4;>.</span><span>. ) throws .. {
+</span><span>
+</span><span>        </span><span style=color:#5c6370;>// Is there a JWT Authorization header
+</span><span>
+</span><span>        </span><span style=color:#5c6370;>// If there is
+</span><span>        </span><span style=color:#5c6370;>// -> get the authenticated user object
+</span><span>        </span><span style=color:#5c6370;>// -> authenticate with user object
+</span><span>        </span><span style=color:#5c6370;>// -> set the global state to 'authenticated' (figuratively)
+</span><span>
+</span><span>    }
+</span><span>
+</span><span>    ... </span><span style=color:#5c6370;>// proceed the request as usual
+</span><span>}
+</span></code></pre><li><p>Adding the filter into the <em>pre-login</em> process</p> <blockquote><p><code>SecurityConfig.java</code></blockquote> <pre class=language-java data-lang=java style=background-color:#282c34;color:#dcdfe4;><code class=language-java data-lang=java><span style=color:#c678dd;>public class </span><span style=color:#e5c07b;>SecurityConfig </span><span style=color:#c678dd;>extends </span><span style=color:#e5c07b;>WebSecurityConfigurerAdapter </span><span>{
+</span><span>
+</span><span>    ...
+</span><span>
+</span><span>    @</span><span style=color:#e06c75;>Override
+</span><span>    .. </span><span style=color:#61afef;>configure</span><span>(</span><span style=color:#e5c07b;>HttpSecurity </span><span style=color:#e06c75;>httpSecurity</span><span>) .. {
+</span><span>
+</span><span>        httpSecurity
+</span><span>            ..  </span><span style=color:#5c6370;>// disable CSRF protection and session for '/login'
+</span><span>            ..  </span><span style=color:#5c6370;>// require authentication for requests other than logging in
+</span><span>
+</span><span>            .</span><span style=color:#e06c75;>and</span><span>()
+</span><span>
+</span><span>            </span><span style=color:#5c6370;>// Integrating the new filter (find JWT then auth automatically)
+</span><span>            </span><span style=color:#5c6370;>// into the authentication process. It would be invoked before
+</span><span>            </span><span style=color:#5c6370;>// the actual 'username with password' authenticating step.
+</span><span>
+</span><span>            .</span><span style=color:#e06c75;>addFilterBefore</span><span>(authenticationFilter,
+</span><span>                             </span><span style=color:#e5c07b;>UsernamePasswordAuthenticationFilter</span><span>.</span><span style=color:#e06c75;>class</span><span>);
+</span><span>
+</span><span>    }
+</span><span>
+</span><span>}
+</span></code></pre></ol><h6 id=testing-the-jwt-we-integrated-into-the-authentication-process>Testing the <em>JWT</em> we integrated into the authentication process</h6><ul><li><p>Log in using the username with password</p> <blockquote><p>The JWT token would be returned in the 'Authorization' HTTP Header</blockquote> <pre class=language-bash data-lang=bash style=background-color:#282c34;color:#dcdfe4;><code class=language-bash data-lang=bash><span style=color:#5c6370;># Postman
+</span><span style=color:#5c6370;># 1. Set URL          http://localhost:8080/login
+</span><span style=color:#5c6370;># 2. Set HTTP method  POST
+</span><span style=color:#5c6370;># 3. Click Tab 'Body' -> Raw -> 'JSON'
+</span><span style=color:#5c6370;># 4. Input your name and password (in the form of JSON)
+</span><span style=color:#5c6370;>#    e.g. { "username": "user", "password": "user" }
+</span><span>
+</span><span>
+</span><span style=color:#5c6370;># HTTPie
+</span><span style=color:#e06c75;>http --json</span><span> POST </span><span style=color:#98c379;>'http://localhost:8080/login' </span><span>\
+</span><span>    </span><span style=color:#98c379;>'Content-Type'</span><span>:</span><span style=color:#98c379;>'application/json; charset=utf-8' </span><span>\
+</span><span>    username=</span><span style=color:#98c379;>"user" </span><span>\
+</span><span>    password=</span><span style=color:#98c379;>"user"
+</span></code></pre><li><p>Can we log in using the JWT token we got? <small>(yes.. with <em>filters</em>)</small></p> <blockquote><p>I tried to POST with the 'Authorization' header with the 'Bearer: YOUR_JWT_TOKEN', it's always the 40X or 50X error code. The last error (after making various tweaks to the Controller) I got is the <code>500 Internal Server Error</code>, it said something like <em><code>Cannot invoke "com.packt.cardatabase.domain.AccountCredentials.getUsername()" because "credentials" is null</code></em>.<p>Then something clicked in my mind, it's not a syntax error or incorrectly using the Spring framework, instead it's a <em>logic error</em> or a <em>human error</em>. You see, by default, each request made by the API testing software <small>(whether it's <em>Postman</em>, <em>HTTPie</em> or <em>curl</em> and so on)</small> are separated. Unless you tweaked the specific settings, each request are standalone <small>(simply put, each request has their own lifecycle or domain, there would not be any cookies attached, no sessions being maintained)</small>.<p>That's why the thought of <em>using the JWT token to authenticate</em> failed. Why? Let's sort out the authentication process (simplified) ><blockquote><ol><li>You need <em>username</em> and <em>password</em> to authenticate<li>You got the <em>JWT</em> token from the request (response header)<li>You want to use the <em>JWT</em> to authenticate</ol></blockquote><p>The thing is, after step 1, you no longer have a valid <em>JWT token</em>, remember? Each request are <strong>standalone</strong>. Since we aren't using a database to store the authentication details (or <em>credentials</em>, or <em>authentication attempts</em>), the <em>JWT token</em> would go out of existence as soon as your successful request (with the JWT response header) ends. When you want to use a <small>(invalid)</small> JWT token to authenticate, the first thing Spring requires is your <em>username</em> and <em>password</em>, since you didn't provide one, the <code>AccountCredentials</code> would be <code>null</code> for sure.<p>The solution would be saving the <em>credentials</em> to the database, we actually won't do that as of now since we were just testing this out. But now you get the idea, eh?</blockquote><li><p>The filter we added resolved this issue once and for all. Now you could</p> <pre class=language-bash data-lang=bash style=background-color:#282c34;color:#dcdfe4;><code class=language-bash data-lang=bash><span style=color:#5c6370;># Postman
+</span><span style=color:#5c6370;># 1. Set URL          http://localhost:8080/login
+</span><span style=color:#5c6370;># 2. Set HTTP method  POST
+</span><span style=color:#5c6370;># 3. Click Tab 'Body' -> Raw -> 'JSON'
+</span><span style=color:#5c6370;># 4. Input your name and password (in the form of JSON)
+</span><span style=color:#5c6370;>#    e.g. { "username": "user", "password": "user" }
+</span><span style=color:#5c6370;>#
+</span><span style=color:#5c6370;># -- Grab the token from the response header --
+</span><span style=color:#5c6370;>#
+</span><span style=color:#5c6370;># 5. Set HTTP method  GET (choose based on your CRUD need)
+</span><span style=color:#5c6370;># 6. Click Tab 'Header', set these
+</span><span style=color:#5c6370;>#          - KEY    Authorization
+</span><span style=color:#5c6370;>#          - VALUE  Bearer YOUR.JWT.TOKEN
+</span><span>
+</span><span>
+</span><span style=color:#5c6370;># HTTPie
+</span><span style=color:#5c6370;># 1. Get the JWT token first (from the response header)
+</span><span style=color:#5c6370;># 2. Use the JWT token
+</span><span>
+</span><span style=color:#e06c75;>http --json</span><span> POST </span><span style=color:#98c379;>'http://localhost:8080/login' </span><span>\
+</span><span>    </span><span style=color:#98c379;>'Content-Type'</span><span>:</span><span style=color:#98c379;>'application/json; charset=utf-8' </span><span>\
+</span><span>    username=</span><span style=color:#98c379;>"user" </span><span>\
+</span><span>    password=</span><span style=color:#98c379;>"user"
+</span><span>
+</span><span style=color:#e06c75;>http</span><span> GET </span><span style=color:#98c379;>'http://localhost:8080/api/owners/1' </span><span>\
+</span><span>    </span><span style=color:#98c379;>"Authorization: Bearer YOUR.JWT.TOKEN"
+</span></code></pre></ul><h3 id=implementing-crud-and-query>Implementing <em>CRUD</em> and <em>Query</em></h3><h5 id=create><em>C</em>reate</h5><ul><li><p>Postman</p> <pre class=language-json data-lang=json style=background-color:#282c34;color:#dcdfe4;><code class=language-json data-lang=json><span>
+</span><span style=color:#5c6370;>// 1. Method: POST
+</span><span style=color:#5c6370;>// 2. URL   : http://localhost:8080/api/cars (无具体 ID)
+</span><span style=color:#5c6370;>// 3. Select Tab 'Body' -> raw -> JSON
+</span><span>
+</span><span>{
+</span><span>    </span><span style=color:#98c379;>"brand"</span><span>: </span><span style=color:#98c379;>"Auto"</span><span>,
+</span><span>    </span><span style=color:#98c379;>"model"</span><span>: </span><span style=color:#98c379;>"TrueEV"</span><span>,
+</span><span>    </span><span style=color:#98c379;>"color"</span><span>: </span><span style=color:#98c379;>"White"</span><span>,
+</span><span>    </span><span style=color:#98c379;>"registerNumber"</span><span>: </span><span style=color:#98c379;>"AEV-1001"</span><span>,
+</span><span>    </span><span style=color:#98c379;>"releasedAt"</span><span>: </span><span style=color:#e5c07b;>2023</span><span>,
+</span><span>    </span><span style=color:#98c379;>"price"</span><span>: </span><span style=color:#e5c07b;>22000
+</span><span>}
+</span></code></pre><li><p>HTTPie</p> <pre class=language-bash data-lang=bash style=background-color:#282c34;color:#dcdfe4;><code class=language-bash data-lang=bash><span style=color:#e06c75;>http --json</span><span> POST </span><span style=color:#98c379;>'http://localhost:8080/api/cars/' </span><span>\
+</span><span>    </span><span style=color:#98c379;>'Content-Type'</span><span>:</span><span style=color:#98c379;>'application/json; charset=utf-8' </span><span>\
+</span><span>    brand=</span><span style=color:#98c379;>"Auto" </span><span>\
+</span><span>    model=</span><span style=color:#98c379;>"TrueEV" </span><span>\
+</span><span>    color=</span><span style=color:#98c379;>"White" </span><span>\
+</span><span>    registerNumber=</span><span style=color:#98c379;>"ATO-0001" </span><span>\
+</span><span>    releasedAt=2023 \
+</span><span>    price=22000
+</span></code></pre></ul><h5 id=read><em>R</em>ead</h5><ul><li><p>HTTPie</p> <pre class=language-bash data-lang=bash style=background-color:#282c34;color:#dcdfe4;><code class=language-bash data-lang=bash><span style=color:#e06c75;>http</span><span> GET http://localhost:8080/api
+</span><span>
+</span><span style=color:#e06c75;>http</span><span> GET http://localhost:8080/api/cars
+</span><span style=color:#e06c75;>http</span><span> GET http://localhost:8080/api/cars/1
+</span><span style=color:#e06c75;>http</span><span> GET http://localhost:8080/api/cars/1/owner
+</span><span>
+</span><span style=color:#e06c75;>http</span><span> GET http://localhost:8080/api/owners
+</span><span style=color:#e06c75;>http</span><span> GET http://localhost:8080/api/owners/1
+</span><span style=color:#e06c75;>http</span><span> GET http://localhost:8080/api/owners/1/cars
+</span></code></pre></ul><h5 id=update><em>U</em>pdate</h5><blockquote><p>Added <em>how you could add fields which are from another table</em></blockquote><ul><li><p>Postman</p> <pre class=language-json data-lang=json style=background-color:#282c34;color:#dcdfe4;><code class=language-json data-lang=json><span style=color:#5c6370;>// 1. Method:
+</span><span style=color:#5c6370;>//    - PATCH   fields you wanna update (>= 0 fields)
+</span><span style=color:#5c6370;>//    - PUT     require all fields (left blank -> update NULL)
+</span><span style=color:#5c6370;>// 2. URL   : http://localhost:8080/api/cars/4 (附上具体 ID)
+</span><span style=color:#5c6370;>// 3. Select Tab 'Body' -> raw -> JSON
+</span><span>
+</span><span>{
+</span><span>    </span><span style=color:#98c379;>"brand"</span><span>: </span><span style=color:#98c379;>"Auto"</span><span>,
+</span><span>    </span><span style=color:#98c379;>"releasedAt"</span><span>: </span><span style=color:#e5c07b;>2022</span><span>,
+</span><span>    </span><span style=color:#98c379;>"price"</span><span>: </span><span style=color:#e5c07b;>22000
+</span><span>}
+</span><span>
+</span><span>
+</span><span style=color:#5c6370;>// Update fields that were in another table
+</span><span style=color:#5c6370;>// 1. Choose Method "PUT"
+</span><span style=color:#5c6370;>// 2. Choose 'Headers'
+</span><span style=color:#5c6370;>// 3. Put 'Content-Type' (KEY) and 'text/uri-list' (VALUE) in
+</span><span style=color:#5c6370;>// 4. Select Tab 'Body' -> raw, then 'http://localhost:8080/api/owners/2'
+</span></code></pre><li><p>HTTPie</p> <pre class=language-bash data-lang=bash style=background-color:#282c34;color:#dcdfe4;><code class=language-bash data-lang=bash><span style=color:#5c6370;># Update specific fields
+</span><span style=color:#e06c75;>http --json</span><span> PATCH </span><span style=color:#98c379;>'http://localhost:8080/api/cars/4' </span><span>\
+</span><span>    </span><span style=color:#98c379;>'Content-Type'</span><span>:</span><span style=color:#98c379;>'application/json; charset=utf-8' </span><span>\
+</span><span>    brand=</span><span style=color:#98c379;>"Auto" </span><span>\
+</span><span>    releasedAt=2023
+</span><span>
+</span><span>
+</span><span style=color:#5c6370;># Update named fields and set all else to NULL
+</span><span style=color:#e06c75;>http --json</span><span> PUT </span><span style=color:#98c379;>'http://localhost:8080/api/cars/4' </span><span>\
+</span><span>    </span><span style=color:#98c379;>'Content-Type'</span><span>:</span><span style=color:#98c379;>'application/json; charset=utf-8' </span><span>\
+</span><span>    brand=</span><span style=color:#98c379;>"Auto" </span><span>\
+</span><span>    releasedAt=2023
+</span><span>
+</span><span>
+</span><span style=color:#5c6370;># For some fields that were in another table, notice these quirks
+</span><span style=color:#5c6370;># 1. URL is under the '/api/cars/{id}/owner'
+</span><span style=color:#5c6370;># 2. Add the 'text/uri-list' HTTP header
+</span><span style=color:#5c6370;># 3. Submit the 'owner' "link" in the form of 'form' instead of JSON
+</span><span style=color:#e06c75;>http --form</span><span> PUT </span><span style=color:#98c379;>'http://localhost:8080/api/cars/10/owner' </span><span>\
+</span><span>    </span><span style=color:#98c379;>'Content-Type'</span><span>:</span><span style=color:#98c379;>'text/uri-list' </span><span>\
+</span><span>    </span><span style=color:#98c379;>'data'</span><span>=</span><span style=color:#98c379;>'http://localhost:8080/api/owners/1'
+</span></code></pre></ul><h5 id=delete><em>D</em>elete</h5><ul><li><p>HTTPie</p> <pre class=language-bash data-lang=bash style=background-color:#282c34;color:#dcdfe4;><code class=language-bash data-lang=bash><span style=color:#e06c75;>http</span><span> DELETE http://localhost:8080/api/cars/3
+</span><span style=color:#e06c75;>http</span><span> DELETE http://localhost:8080/api/owners/1
+</span></code></pre></ul><hr><h5 id=query><em>Q</em>uery</h5><pre class=language-bash data-lang=bash style=background-color:#282c34;color:#dcdfe4;><code class=language-bash data-lang=bash><span>
+</span><span style=color:#5c6370;># Show the query methods available
+</span><span style=color:#e06c75;>http</span><span> GET </span><span style=color:#98c379;>"http://localhost:8080/api/cars/search/" </span><span style=color:#c678dd;>| </span><span style=color:#e06c75;>jq </span><span style=color:#98c379;>"._links"
+</span><span style=color:#5c6370;># > http://localhost:8080/api/cars/search/findByColor{?color}
+</span><span style=color:#5c6370;># > http://localhost:8080/api/cars/search/findByColorAndReleasedAt{?color,year}
+</span><span>
+</span><span>
+</span><span style=color:#5c6370;># Test by '?KEY=VALUE'
+</span><span style=color:#5c6370;># http://localhost:8080/api/cars/search/findByColor {?color}
+</span><span style=color:#5c6370;># http://localhost:8080/api/cars/search/findByColor ?color=White
+</span><span>
+</span><span>
+</span><span style=color:#5c6370;># Test by '?KEY=VALUE&KEY2=VALUE2'
+</span><span style=color:#5c6370;># http://localhost:8080/api/cars/search/
+</span><span style=color:#5c6370;># -> findByColorAndReleasedAt {?color,       year}
+</span><span style=color:#5c6370;># -> findByColorAndReleasedAt  ?color=White &year=2021
+</span></code></pre><h3 id=building-frontend-with-react>Building Frontend with <em>React</em></h3><h5 id=the-mockup>The Mockup</h5><blockquote><p>You gotta know what you wanna build like how it looks, eh?<p><em>List</em> of <code>Car</code>s<blockquote><img alt="List of Cars"height=50% src=./images/043_spring_react_frontend_mockup_carlist.png width=40%></blockquote><p><em>Adding</em> <code>Car</code><blockquote><img alt="Adding cars"height=50% src=./images/043_spring_react_frontend_mockup_caradd.png width=40%></blockquote></blockquote><h3 id=spring-test>Spring Test</h3><h5 id=testing-the-test-files-you-wrote>Testing the test files you wrote</h5><blockquote><p>Credit to <a href=https://stackoverflow.com/a/62999592/6273859>Run a single test method with maven</a></blockquote><pre class=language-bash data-lang=bash style=background-color:#282c34;color:#dcdfe4;><code class=language-bash data-lang=bash><span style=color:#e06c75;>./mvnw</span><span> test
+</span><span style=color:#e06c75;>./mvnw</span><span> test</span><span style=color:#e06c75;> -Dtest</span><span style=color:#c678dd;>=</span><span>CarRestTest
+</span><span style=color:#e06c75;>./mvnw</span><span> test</span><span style=color:#e06c75;> -Dtest</span><span style=color:#c678dd;>=</span><span>CarRestTest, OwnerRepositoryTest
+</span><span style=color:#e06c75;>./mvnw</span><span> test</span><span style=color:#e06c75;> -Dtest</span><span style=color:#c678dd;>=</span><span>CarRestTest, OwnerRepositoryTest#saveOwner
+</span><span style=color:#e06c75;>./mvnw</span><span> test</span><span style=color:#e06c75;> -Dtest</span><span style=color:#c678dd;>=</span><span>CarRestTest, OwnerRepositoryTest#saveOwner+deleteOwners
+</span></code></pre><h3 id=miscellaneous>Miscellaneous</h3><h5 id=annotation>Annotation</h5><ul><li><code>@SpringBootApplication</code> <ul><li><code>@EnableAutoConfiguration</code>: Enable the auto configuration powered by <em>Spring Boot</em><li><code>@ComponentScan</code>: Scan the components in your project<li><code>@Configure</code>: Mark as a source of bean/object definitions</ul></ul><h5 id=interface>Interface</h5><ul><li><p><code>CrudRepository</code></p> <pre class=language-java data-lang=java style=background-color:#282c34;color:#dcdfe4;><code class=language-java data-lang=java><span style=color:#5c6370;>// Car  -> Repository for the Entity 'Car'
+</span><span style=color:#5c6370;>// Long -> Type of the ID field is 'Long'
+</span><span style=color:#c678dd;>public interface </span><span>.. extends </span><span style=color:#e5c07b;>CrudRepository</span><span><</span><span style=color:#e5c07b;>Car</span><span>, </span><span style=color:#e5c07b;>Long</span><span>> { }
+</span><span>
+</span><span style=color:#5c6370;>// Now various CRUD related methods are available to the
+</span><span style=color:#5c6370;>// Entity 'Car', methods like `findAll()`, `findById` etc.
+</span></code></pre></ul><h3 id=issue>Issue</h3><h5 id=sql-reserved-keyword>SQL Reserved Keyword</h5><ul><li>Q: Can you use <code>year</code> as an attribute in your database?<li>A: No, it's a <a href="https://docs.microsoft.com/en-us/sql/t-sql/language-elements/reserved-keywords-transact-sql?view=sql-server-ver16">reserved</a> keyword, and JPA couldn't create it for you.</ul><h5 id=import-not-resolved-for-springframework-data-rest>Import Not Resolved for <code>.. springframework.data.rest ..</code></h5><ul><li><p>Q: The IDE couldn't resolve the dependency I declared in the <code>pom.xml</code></p><li><p>A: Explicit versioning is needed according to other developers</p> <pre class=language-xml data-lang=xml style=background-color:#282c34;color:#dcdfe4;><code class=language-xml data-lang=xml><span><</span><span style=color:#e06c75;>dependency</span><span>>
+</span><span>  <</span><span style=color:#e06c75;>groupId</span><span>>org.springframework.boot&LT/</span><span style=color:#e06c75;>groupId</span><span>>
+</span><span>  <</span><span style=color:#e06c75;>artifactId</span><span>>spring-boot-starter-data-rest&LT/</span><span style=color:#e06c75;>artifactId</span><span>>
+</span><span>
+</span><span>    </span><span style=color:#5c6370;>&LT!-- New -->
+</span><span>  <</span><span style=color:#e06c75;>version</span><span>>2.3.1.RELEASE&LT/</span><span style=color:#e06c75;>version</span><span>>
+</span><span>&LT/</span><span style=color:#e06c75;>dependency</span><span>>
+</span></code></pre></ul></article><footer role=contentinfo><hr><small>Built with <a href=https://www.getzola.org/>Zola</a> using <a href=https://www.getzola.org/themes/lightspeed/>Lightspeed ⚡️</a>.<br> </small></footer></main>
