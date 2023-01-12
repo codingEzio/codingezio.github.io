@@ -360,6 +360,50 @@ class Solution {
 }
 ```
 
+### 0043. Multiply Strings
+
+```python
+class Solution:
+    def multiply(self, num1: str, num2: str) -> str:
+        # Constant
+        zero = "0"
+
+        # Handle edge case
+        if num1 == zero or num2 == zero:
+            return zero
+
+        # Convert individual letters do not break the rule
+        listOfNum1 = [int(i) for i in num1]
+        listOfNum2 = [int(i) for i in num2]
+
+        # Initialization
+        lnNum1 = len(num1)
+        lnNum2 = len(num2)
+        resultInArray = [0] * (lnNum1 + lnNum2)
+
+        #TODO Comments are needed for this section
+        for multiplicand in range(lnNum1 - 1, -1, -1):
+            for multiplier in range(lnNum2 - 1, -1, -1):
+                mutResult = num1[multiplicand] * num2[multiplier]
+
+                index1 = multiplicand + multiplier + 1
+                index2 = multiplicand + multiplier
+
+                mutResult += resultInArray[index1]
+
+                resultInArray[index1] = mutResult % 10
+                resultInArray[index2] += mutResult // 10
+
+        # Omit unnecessary prefix zeros
+        if resultInArray[0] == 0:
+            resultInArray = resultInArray[1:]
+
+        # Convert the list back to a string
+        resultInString = "".join([str(i) for i in resultInArray])
+
+        return resultInString
+```
+
 ### 0049. Group Anagrams
 
 ```python
@@ -1040,7 +1084,6 @@ class Solution:
 
         return amountMatched
 ```
-
 
 -----
 

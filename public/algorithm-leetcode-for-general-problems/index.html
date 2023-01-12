@@ -258,6 +258,45 @@
 </span><span>        </span><span style=color:#c678dd;>return</span><span> dummy.next;
 </span><span>    }
 </span><span>}
+</span></code></pre><h3 id=0043-multiply-strings>0043. Multiply Strings</h3><pre class=language-python data-lang=python style=background-color:#282c34;color:#dcdfe4;><code class=language-python data-lang=python><span style=color:#c678dd;>class </span><span style=color:#e5c07b;>Solution:
+</span><span>    </span><span style=color:#c678dd;>def </span><span style=color:#61afef;>multiply</span><span>(</span><span style=color:#e06c75;>self</span><span>, </span><span style=color:#e06c75;>num1</span><span>: str, </span><span style=color:#e06c75;>num2</span><span>: str) -> str:
+</span><span>        </span><span style=color:#5c6370;># Constant
+</span><span>        zero </span><span style=color:#c678dd;>= </span><span style=color:#98c379;>"0"
+</span><span>
+</span><span>        </span><span style=color:#5c6370;># Handle edge case
+</span><span>        </span><span style=color:#c678dd;>if </span><span>num1 </span><span style=color:#c678dd;>== </span><span>zero </span><span style=color:#c678dd;>or </span><span>num2 </span><span style=color:#c678dd;>== </span><span>zero:
+</span><span>            </span><span style=color:#c678dd;>return </span><span>zero
+</span><span>
+</span><span>        </span><span style=color:#5c6370;># Convert individual letters do not break the rule
+</span><span>        listOfNum1 </span><span style=color:#c678dd;>= </span><span>[</span><span style=color:#e06c75;>int</span><span>(i) </span><span style=color:#c678dd;>for </span><span>i </span><span style=color:#c678dd;>in </span><span>num1]
+</span><span>        listOfNum2 </span><span style=color:#c678dd;>= </span><span>[</span><span style=color:#e06c75;>int</span><span>(i) </span><span style=color:#c678dd;>for </span><span>i </span><span style=color:#c678dd;>in </span><span>num2]
+</span><span>
+</span><span>        </span><span style=color:#5c6370;># Initialization
+</span><span>        lnNum1 </span><span style=color:#c678dd;>= </span><span style=color:#61afef;>len</span><span>(num1)
+</span><span>        lnNum2 </span><span style=color:#c678dd;>= </span><span style=color:#61afef;>len</span><span>(num2)
+</span><span>        resultInArray </span><span style=color:#c678dd;>= </span><span>[</span><span style=color:#e5c07b;>0</span><span>] </span><span style=color:#c678dd;>* </span><span>(lnNum1 </span><span style=color:#c678dd;>+ </span><span>lnNum2)
+</span><span>
+</span><span>        </span><span style=color:#5c6370;>#TODO Comments are needed for this section
+</span><span>        </span><span style=color:#c678dd;>for </span><span>multiplicand </span><span style=color:#c678dd;>in </span><span style=color:#61afef;>range</span><span>(lnNum1 </span><span style=color:#c678dd;>- </span><span style=color:#e5c07b;>1</span><span>, </span><span style=color:#c678dd;>-</span><span style=color:#e5c07b;>1</span><span>, </span><span style=color:#c678dd;>-</span><span style=color:#e5c07b;>1</span><span>):
+</span><span>            </span><span style=color:#c678dd;>for </span><span>multiplier </span><span style=color:#c678dd;>in </span><span style=color:#61afef;>range</span><span>(lnNum2 </span><span style=color:#c678dd;>- </span><span style=color:#e5c07b;>1</span><span>, </span><span style=color:#c678dd;>-</span><span style=color:#e5c07b;>1</span><span>, </span><span style=color:#c678dd;>-</span><span style=color:#e5c07b;>1</span><span>):
+</span><span>                mutResult </span><span style=color:#c678dd;>= </span><span>num1[multiplicand] </span><span style=color:#c678dd;>* </span><span>num2[multiplier]
+</span><span>
+</span><span>                index1 </span><span style=color:#c678dd;>= </span><span>multiplicand </span><span style=color:#c678dd;>+ </span><span>multiplier </span><span style=color:#c678dd;>+ </span><span style=color:#e5c07b;>1
+</span><span>                index2 </span><span style=color:#c678dd;>= </span><span>multiplicand </span><span style=color:#c678dd;>+ </span><span>multiplier
+</span><span>
+</span><span>                mutResult </span><span style=color:#c678dd;>+= </span><span>resultInArray[index1]
+</span><span>
+</span><span>                resultInArray[index1] </span><span style=color:#c678dd;>= </span><span>mutResult </span><span style=color:#c678dd;>% </span><span style=color:#e5c07b;>10
+</span><span>                resultInArray[index2] </span><span style=color:#c678dd;>+= </span><span>mutResult </span><span style=color:#c678dd;>// </span><span style=color:#e5c07b;>10
+</span><span>
+</span><span>        </span><span style=color:#5c6370;># Omit unnecessary prefix zeros
+</span><span>        </span><span style=color:#c678dd;>if </span><span>resultInArray[</span><span style=color:#e5c07b;>0</span><span>] </span><span style=color:#c678dd;>== </span><span style=color:#e5c07b;>0</span><span>:
+</span><span>            resultInArray </span><span style=color:#c678dd;>= </span><span>resultInArray[</span><span style=color:#e5c07b;>1</span><span>:]
+</span><span>
+</span><span>        </span><span style=color:#5c6370;># Convert the list back to a string
+</span><span>        resultInString </span><span style=color:#c678dd;>= </span><span style=color:#98c379;>""</span><span>.</span><span style=color:#e06c75;>join</span><span>([</span><span style=color:#e06c75;>str</span><span>(i) </span><span style=color:#c678dd;>for </span><span>i </span><span style=color:#c678dd;>in </span><span>resultInArray])
+</span><span>
+</span><span>        </span><span style=color:#c678dd;>return </span><span>resultInString
 </span></code></pre><h3 id=0049-group-anagrams>0049. Group Anagrams</h3><pre class=language-python data-lang=python style=background-color:#282c34;color:#dcdfe4;><code class=language-python data-lang=python><span style=color:#c678dd;>from </span><span>collections </span><span style=color:#c678dd;>import </span><span>defaultdict
 </span><span>
 </span><span style=color:#c678dd;>class </span><span style=color:#e5c07b;>Solution:
