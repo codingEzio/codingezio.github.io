@@ -13,11 +13,17 @@ description = "N/A"
 -----
 
 <img src="/202301/20230108-references-for-posts-part1.png" alt="An illustration of the overview of the references - part one" width="80%" height="auto" />
-<img src="/202301/20230108-references-for-posts-part2.png" alt="An illustration of the overview of the references - part two" width="80%" height="auto" />
+<img src="/202301/20230108-references-for-posts-part2.png" alt="An illustration of the overview of the references - part two" width="90%" height="auto" />
+<img src="/202301/20230108-references-for-posts-part3.png" alt="An illustration of the overview of the references - part three" width="90%" height="auto" />
 
 -----
 
 # Database
+
+## Storage Engine
+
+- [ELI5: B-Tree](https://old.reddit.com/r/explainlikeimfive/comments/wfz52/eli5_btree/)
+- [ELI5: B+ Trees](https://old.reddit.com/r/learnprogramming/comments/a5rh54/eli5_b_trees/)
 
 ## Norm
 
@@ -32,25 +38,60 @@ description = "N/A"
 
 ### Concept
 
-- [mysql - What are the differences between utf8\_general\_ci and utf8\_unicode\_ci? ](https://stackoverflow.com/questions/1036454/what-are-the-differences-between-utf8-general-ci-and-utf8-unicode-ci/1036459#1036459)
-- [encoding - What is the difference between utf8mb4 and utf8 charsets in MySQL? ](https://stackoverflow.com/questions/30074492/what-is-the-difference-between-utf8mb4-and-utf8-charsets-in-mysql/30074553#30074553)
+- [mysql - What are the differences between utf8_general_ci and utf8_unicode_ci?](https://stackoverflow.com/questions/1036454/what-are-the-differences-between-utf8-general-ci-and-utf8-unicode-ci/1036459#1036459)
+- [encoding - What is the difference between utf8mb4 and utf8 charsets in MySQL?](https://stackoverflow.com/questions/30074492/what-is-the-difference-between-utf8mb4-and-utf8-charsets-in-mysql/30074553#30074553)
 
 ### Operation
 
 - [How to easily convert utf8 tables to utf8mb4 in MySQL 5.5 - Database Administrators Stack Exchange](https://dba.stackexchange.com/questions/8239/how-to-easily-convert-utf8-tables-to-utf8mb4-in-mysql-5-5)
 - [collation - Create a MySQL database with charset UTF-8 - Database Administrators Stack Exchange](https://dba.stackexchange.com/questions/76788/create-a-mysql-database-with-charset-utf-8/76789#76789)
 
+## Optimization
+
+### Database Design
+
+- [数据库设计-冗余字段 on 知乎](https://www.zhihu.com/question/50662784/answer/147731726)
+
+### Configuration
+
+- [Common MySQL Performance Tuning Settings](https://www.percona.com/blog/2014/01/28/10-mysql-performance-tuning-settings-after-installation/)
+
+## Lock
+
+### Confusion
+
+- [What is the difference between Non-Repeatable Read and Phantom Read?](https://stackoverflow.com/questions/11043712/what-is-the-difference-between-non-repeatable-read-and-phantom-read)
+- [Why do we need intent lock?](https://stackoverflow.com/questions/33166066/why-do-we-need-intent-lock)
+
+### Definition
+
+- [Optimistic v/s Pessimistic Locks](https://medium.com/@saraswat.prateek1000/optimistic-v-s-pessimistic-locks-6be05ae97391)
+- [Optimistic vs. Pessimistic locking](https://stackoverflow.com/questions/129329/optimistic-vs-pessimistic-locking)
+- [Difference between an exclusive lock and a shared lock?](https://stackoverflow.com/questions/11837428/whats-the-difference-between-an-exclusive-lock-and-a-shared-lock)
+
+## Index
+
+- [What do Clustered and Non-Clustered index actually mean?](https://stackoverflow.com/questions/1251636/what-do-clustered-and-non-clustered-index-actually-mean)
+- [What is a Covered Index?](https://stackoverflow.com/questions/62137/what-is-a-covered-index)
+- [Mysql: Prefix index vs index](https://stackoverflow.com/questions/31526618/mysql-prefix-index-vs-index)
+
+## Profiling
+
+- [MySQL 性能优化工具 `EXPLAIN` 使用](https://segmentfault.com/a/1190000008131735)
+
+-----
+
 ## Around Spring
 
 ### Term
 
-- [model view controller - What is a Data Transfer Object (DTO)? ](https://stackoverflow.com/questions/1051182/what-is-a-data-transfer-object-dto)
-- [java - Difference between DTO, VO, POJO, JavaBeans? ](https://stackoverflow.com/questions/1612334/difference-between-dto-vo-pojo-javabeans)
-- [java - What is Persistence Context? ](https://stackoverflow.com/questions/19930152/what-is-persistence-context)
+- [model view controller - What is a Data Transfer Object (DTO)?](https://stackoverflow.com/questions/1051182/what-is-a-data-transfer-object-dto)
+- [java - Difference between DTO, VO, POJO, JavaBeans?](https://stackoverflow.com/questions/1612334/difference-between-dto-vo-pojo-javabeans)
+- [java - What is Persistence Context?](https://stackoverflow.com/questions/19930152/what-is-persistence-context)
 
 ### Config
 
-- [hibernate - Why do I need to configure the SQL dialect of a data source? ](https://stackoverflow.com/questions/21012799/why-do-i-need-to-configure-the-sql-dialect-of-a-data-source)
+- [hibernate - Why do I need to configure the SQL dialect of a data source?](https://stackoverflow.com/questions/21012799/why-do-i-need-to-configure-the-sql-dialect-of-a-data-source)
 
 # Operating System
 
@@ -60,16 +101,16 @@ description = "N/A"
 - [Embed With Elliot: Interrupts, The Good… | Hackaday](https://hackaday.com/2015/09/18/embed-with-elliot-interrupts-the-good/)
 - [Can someone please ELI5 what is a mutex? | Hacker News](https://news.ycombinator.com/item?id=26969642)
 - [ELI5: synchronized blocks : javahelp](https://old.reddit.com/r/javahelp/comments/31p2vk/eli5_synchronized_blocks/)
-- [concurrency - What is the difference between lock, mutex and semaphore? ](https://stackoverflow.com/questions/2332765/what-is-the-difference-between-lock-mutex-and-semaphore)
+- [concurrency - What is the difference between lock, mutex and semaphore?](https://stackoverflow.com/questions/2332765/what-is-the-difference-between-lock-mutex-and-semaphore)
 
 ## Concept
 
 - [Introduction to Concurrency](https://cs.lmu.edu/~ray/notes/introconcurrency/)
-- [multithreading - What is a "thread" (really)? ](https://stackoverflow.com/questions/5201852/what-is-a-thread-really)
-- [architecture - Difference between a "coroutine" and a "thread"? ](https://stackoverflow.com/questions/1934715/difference-between-a-coroutine-and-a-thread)
+- [multithreading - What is a "thread" (really)?](https://stackoverflow.com/questions/5201852/what-is-a-thread-really)
+- [architecture - Difference between a "coroutine" and a "thread"?](https://stackoverflow.com/questions/1934715/difference-between-a-coroutine-and-a-thread)
 - [進程 (Process)、線程 (Thread)、協程 (Coroutine) 的概念講解 | Kenny's Blog](https://blog.kennycoder.io/2020/05/16/%E9%80%B2%E7%A8%8B-Process-%E3%80%81%E7%B7%9A%E7%A8%8B-Thread-%E3%80%81%E5%8D%94%E7%A8%8B-Coroutine-%E7%9A%84%E6%A6%82%E5%BF%B5%E8%AC%9B%E8%A7%A3/)
 - [ELI5: In computer software, what is the difference between a program, service, thread, process etc.? : explainlikeimfive](https://old.reddit.com/r/explainlikeimfive/comments/1mf26j/eli5_in_computer_software_what_is_the_difference/)
-- [language agnostic - What is the difference between concurrency and parallelism? ](https://stackoverflow.com/questions/1050222/what-is-the-difference-between-concurrency-and-parallelism)
+- [language agnostic - What is the difference between concurrency and parallelism?](https://stackoverflow.com/questions/1050222/what-is-the-difference-between-concurrency-and-parallelism)
 - [multithreading - What is the meaning of the term "thread-safe"](https://stackoverflow.com/questions/261683/what-is-the-meaning-of-the-term-thread-safe)
 - [multithreading - What does threadsafe mean](https://stackoverflow.com/questions/2033879/what-does-threadsafe-mean)
 
@@ -82,9 +123,9 @@ description = "N/A"
 ### Demystification
 
 - [multithreading - What is a thread pool?](https://softwareengineering.stackexchange.com/questions/173575/what-is-a-thread-pool)
-- [java - Difference between Thread and Threadpool ](https://stackoverflow.com/questions/6592976/difference-between-thread-and-threadpool)
-- [java - Core pool size vs maximum pool size in ThreadPoolExecutor ](https://stackoverflow.com/questions/17659510/core-pool-size-vs-maximum-pool-size-in-threadpoolexecutor)
-- [java - What is the use of ThreadLocal? ](https://stackoverflow.com/questions/30197863/what-is-the-use-of-threadlocal)
+- [java - Difference between Thread and Threadpool](https://stackoverflow.com/questions/6592976/difference-between-thread-and-threadpool)
+- [java - Core pool size vs maximum pool size in ThreadPoolExecutor](https://stackoverflow.com/questions/17659510/core-pool-size-vs-maximum-pool-size-in-threadpoolexecutor)
+- [java - What is the use of ThreadLocal?](https://stackoverflow.com/questions/30197863/what-is-the-use-of-threadlocal)
 - [Python ThreadPool: The Complete Guide](https://superfastpython.com/threadpool-python/#ThreadPool_Example)
 - [Explain thread executor services and their types](https://old.reddit.com/r/learnjava/comments/jg5ut7/can_anyone_please_explain_thread_executor/)
 
@@ -112,8 +153,8 @@ description = "N/A"
 
 ## Data Type
 
-- [multithreading - What is the difference between Atomic Integer and Normal immutable Integer class in Java? ](https://stackoverflow.com/questions/38846976/what-is-the-difference-between-atomic-integer-and-normal-immutable-integer-class)
-- [concurrency - AbstractQueuedSynchronizer in Java concurrent ](https://stackoverflow.com/questions/9644856/abstractqueuedsynchronizer-in-java-concurrent)
+- [multithreading - What is the difference between Atomic Integer and Normal immutable Integer class in Java?](https://stackoverflow.com/questions/38846976/what-is-the-difference-between-atomic-integer-and-normal-immutable-integer-class)
+- [concurrency - AbstractQueuedSynchronizer in Java concurrent](https://stackoverflow.com/questions/9644856/abstractqueuedsynchronizer-in-java-concurrent)
 - [java - When and how should I use a ThreadLocal variable](https://stackoverflow.com/questions/817856/when-and-how-should-i-use-a-threadlocal-variable)
 - [java - Purpose of ThreadLocal](https://stackoverflow.com/questions/1490919/purpose-of-threadlocal)
 
@@ -121,8 +162,14 @@ description = "N/A"
 
 # JVM
 
+## Compliation
+
 - [AOT vs. JIT Compilation in Java](https://www.cesarsotovalero.net/blog/aot-vs-jit-compilation-in-java.html)
 
+## Garbage Collection
+
+- [Default garbage collector for Java 8](https://stackoverflow.com/questions/33206313/default-garbage-collector-for-java-8)
+- [Understanding HotSpot VM Garbage Collectors (GC) in Depth](https://dzone.com/articles/understanding-garbage-collectorsgc-in-depth)
 
 -----
 
@@ -131,33 +178,33 @@ description = "N/A"
 ## Java
 
 - [Encapsulation in Java](https://old.reddit.com/r/explainlikeimfive/comments/nfcgq/eli5_encapsulation_in_java/)
-- [Difference between abstraction and encapsulation? ](https://stackoverflow.com/questions/742341/difference-between-abstraction-and-encapsulation)
+- [Difference between abstraction and encapsulation?](https://stackoverflow.com/questions/742341/difference-between-abstraction-and-encapsulation)
 - [What is the difference between an interface and abstract class?](https://stackoverflow.com/questions/1913098/what-is-the-difference-between-an-interface-and-abstract-class)
-- [java - What is the difference between method overloading and overriding? ](https://stackoverflow.com/questions/12374399/what-is-the-difference-between-method-overloading-and-overriding)
-- [jakarta ee - What is Java Servlet? ](https://stackoverflow.com/questions/7213541/what-is-java-servlet)
-- [What are the differences between a HashMap and a Hashtable in Java? ](https://stackoverflow.com/questions/40471/what-are-the-differences-between-a-hashmap-and-a-hashtable-in-java/22629569#22629569)
-- [naming - Java Queues - why "poll" and "offer"? ](https://stackoverflow.com/questions/9343081/java-queues-why-poll-and-offer)
+- [java - What is the difference between method overloading and overriding?](https://stackoverflow.com/questions/12374399/what-is-the-difference-between-method-overloading-and-overriding)
+- [jakarta ee - What is Java Servlet?](https://stackoverflow.com/questions/7213541/what-is-java-servlet)
+- [What are the differences between a HashMap and a Hashtable in Java?](https://stackoverflow.com/questions/40471/what-are-the-differences-between-a-hashmap-and-a-hashtable-in-java/22629569#22629569)
+- [naming - Java Queues - why "poll" and "offer"?](https://stackoverflow.com/questions/9343081/java-queues-why-poll-and-offer)
 
 ## Spring
 
 - [What is Spring Framework? An Unorthodox Guide](https://www.marcobehler.com/guides/spring-framework)
 - [Dependency Injection Demystified](http://www.jamesshore.com/v2/blog/2006/dependency-injection-demystified)
-- [java - What's the difference between @Component, @Repository & @Service annotations in Spring? ](https://stackoverflow.com/questions/6827752/whats-the-difference-between-component-repository-service-annotations-in)
-- [java - Difference between @Bean and @Autowired ](https://stackoverflow.com/questions/34172888/difference-between-bean-and-autowired)
-- [java - What is @ModelAttribute in Spring MVC? ](https://stackoverflow.com/questions/3423262/what-is-modelattribute-in-spring-mvc)
+- [java - What's the difference between @Component, @Repository & @Service annotations in Spring?](https://stackoverflow.com/questions/6827752/whats-the-difference-between-component-repository-service-annotations-in)
+- [java - Difference between @Bean and @Autowired](https://stackoverflow.com/questions/34172888/difference-between-bean-and-autowired)
+- [java - What is @ModelAttribute in Spring MVC?](https://stackoverflow.com/questions/3423262/what-is-modelattribute-in-spring-mvc)
 
 # Confusion
 
 ## Spring Security
 
-- [What's the difference between 'configure' and 'configureGlobal' methods? ](https://stackoverflow.com/questions/35023900/whats-the-difference-between-configure-and-configureglobal-methods)
-- [How To Inject AuthenticationManager using Java Configuration in a Custom Filter ](https://stackoverflow.com/questions/21633555/how-to-inject-authenticationmanager-using-java-configuration-in-a-custom-filter)
-- [Difference between registerGlobal(), configure(), configureGlobal(),configureGlobalSecurity in Spring security ](https://stackoverflow.com/questions/35218354/difference-between-registerglobal-configure-configureglobal-configureglo)
-- [Any difference between @Autowired AuthenticationManager and @Override configure(AuthenticationManagerBuilder auth)](https://github.com/spring-projects/spring-security/issues/4571)
+- [What's the difference between 'configure' and 'configureGlobal' methods?](https://stackoverflow.com/questions/35023900/whats-the-difference-between-configure-and-configureglobal-methods)
+- [How To Inject AuthenticationManager using Java Configuration in a Custom Filter](https://stackoverflow.com/questions/21633555/how-to-inject-authenticationmanager-using-java-configuration-in-a-custom-filter)
+- [Difference `registerGlobal()`, `configure()`, `configureGlobal()`,`configureGlobalSecurity`](https://stackoverflow.com/questions/35218354/difference-between-registerglobal-configure-configureglobal-configureglo)
+- [Difference `AuthenticationManager` and `configure(AuthenticationManagerBuilder auth)`](https://github.com/spring-projects/spring-security/issues/4571)
 
 ## JWT
 
-- [JWT Private / Public Key Confusion ](https://stackoverflow.com/questions/60538047/jwt-private-public-key-confusion)
+- [JWT Private / Public Key Confusion](https://stackoverflow.com/questions/60538047/jwt-private-public-key-confusion)
 
 -----
 
@@ -172,7 +219,7 @@ description = "N/A"
 ### JWT
 
 - [JSON Web Token Introduction - jwt.io](https://jwt.io/introduction)
-- [security - How does a server verify a JWT? Where does the Public Key come from? ](https://stackoverflow.com/questions/63106661/how-does-a-server-verify-a-jwt-where-does-the-public-key-come-from)
+- [security - How does a server verify a JWT? Where does the Public Key come from?](https://stackoverflow.com/questions/63106661/how-does-a-server-verify-a-jwt-where-does-the-public-key-come-from)
 
 ## Distributed System
 
@@ -185,7 +232,7 @@ description = "N/A"
 
 ## Spring
 
-- [java - Failed to start bean 'documentationPluginsBootstrapper' in spring data rest ](https://stackoverflow.com/questions/40241843/failed-to-start-bean-documentationpluginsbootstrapper-in-spring-data-rest)
+- [java - Failed to start bean 'documentationPluginsBootstrapper' in spring data rest](https://stackoverflow.com/questions/40241843/failed-to-start-bean-documentationpluginsbootstrapper-in-spring-data-rest)
 
 -----
 
@@ -220,8 +267,8 @@ description = "N/A"
 
 ## `npm`
 
-- [javascript - What does npm install --legacy-peer-deps do exactly? When is it recommended / What's a potential use case? ](https://stackoverflow.com/questions/66239691/what-does-npm-install-legacy-peer-deps-do-exactly-when-is-it-recommended-wh)
-- [node.js - What's the difference between dependencies, devDependencies and peerDependencies in npm package.json file? ](https://stackoverflow.com/questions/18875674/whats-the-difference-between-dependencies-devdependencies-and-peerdependencies/22004559#22004559)
+- [javascript - What does npm install --legacy-peer-deps do exactly? When is it recommended / What's a potential use case?](https://stackoverflow.com/questions/66239691/what-does-npm-install-legacy-peer-deps-do-exactly-when-is-it-recommended-wh)
+- [node.js - What's the difference between dependencies, devDependencies and peerDependencies in npm package.json file?](https://stackoverflow.com/questions/18875674/whats-the-difference-between-dependencies-devdependencies-and-peerdependencies/22004559#22004559)
 
 -----
 
@@ -241,13 +288,13 @@ description = "N/A"
 
 ## Docker
 
-- [dockerfile - what is docker run -it flag? ](https://stackoverflow.com/questions/48368411/what-is-docker-run-it-flag)
-- [docker - What is the '--rm' flag doing? ](https://stackoverflow.com/questions/49726272/what-is-the-rm-flag-doing)
+- [dockerfile - what is docker run -it flag?](https://stackoverflow.com/questions/48368411/what-is-docker-run-it-flag)
+- [docker - What is the '--rm' flag doing?](https://stackoverflow.com/questions/49726272/what-is-the-rm-flag-doing)
 
 ## File
 
-- [c - What is file-descriptor? ](https://stackoverflow.com/questions/40864527/what-is-file-descriptor)
-- [c - What's the difference between a file descriptor and file pointer? ](https://stackoverflow.com/questions/2423628/whats-the-difference-between-a-file-descriptor-and-file-pointer)
+- [c - What is file-descriptor?](https://stackoverflow.com/questions/40864527/what-is-file-descriptor)
+- [c - What's the difference between a file descriptor and file pointer?](https://stackoverflow.com/questions/2423628/whats-the-difference-between-a-file-descriptor-and-file-pointer)
 
 ## Cloud
 
@@ -269,6 +316,6 @@ description = "N/A"
 
 ## Backend
 
-- [When and why would you use Java's Supplier and Consumer interfaces? ](https://stackoverflow.com/questions/28417262/when-and-why-would-you-use-javas-supplier-and-consumer-interfaces)
+- [When and why would you use Java's Supplier and Consumer interfaces?](https://stackoverflow.com/questions/28417262/when-and-why-would-you-use-javas-supplier-and-consumer-interfaces)
 
 -----

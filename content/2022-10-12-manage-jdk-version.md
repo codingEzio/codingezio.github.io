@@ -7,7 +7,7 @@ description = "When you have multiple versions of JDK on your machine"
 
 - No `brew`, because it only downloads and installs. It does *NOT* managing different vers
 
-### SDKMan 
+### SDKMan
 
 > Still exploring!
 

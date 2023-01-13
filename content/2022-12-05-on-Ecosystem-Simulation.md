@@ -46,7 +46,6 @@ description = "Simulating real-life ecosystem or much more"
 - [BLayman/Artificial-Life-Simulator: An ecologically inspired multi-agent system. Agents are designed with neural network based decision making, and complex resource requirements.](https://github.com/BLayman/Artificial-Life-Simulator)
 - [JasperDre/Biomes: A dynamic simulation of ecosystems using Unity.](https://github.com/JasperDre/Biomes)
 - [sayansil/Ecosystem: You play God](https://github.com/sayansil/Ecosystem)
--
 
 ### Misc
 
