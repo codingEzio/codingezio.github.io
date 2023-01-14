@@ -5,8 +5,42 @@
 	<link href="https://codingezio.github.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://codingezio.github.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2023-01-11T00:00:00+00:00</updated>
+	<updated>2023-01-14T00:00:00+00:00</updated>
 	<id>https://codingezio.github.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Booknote on Understanding MySQL Internals</title>
+		<published>2023-01-14T00:00:00+00:00</published>
+		<updated>2023-01-14T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://codingezio.github.io/booknote-on-understanding-mysql-internals/" type="text/html"/>
+		<id>https://codingezio.github.io/booknote-on-understanding-mysql-internals/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;Unless you dive deep into the source code to do the debugging by yourself, all the optimizations could just be counted as &lt;em&gt;guesswork&lt;&#x2F;em&gt; &lt;small&gt;(a bit exaggerated for sure)&lt;&#x2F;small&gt;. &lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h3 id=&quot;resources&quot;&gt;Resources&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.goodreads.com&#x2F;author&#x2F;show&#x2F;491876&quot;&gt;Sasha Pachev (Author of Understanding MySQL Internals)&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.goodreads.com&#x2F;book&#x2F;show&#x2F;974458&quot;&gt;Understanding MySQL Internals by Sasha Pachev | Goodreads&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;foreword&quot;&gt;Foreword&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;mysql&#x2F;mysql-server&quot;&gt;codebase of MySQL&lt;&#x2F;a&gt; is too huge for me, that&#x27;s why we need a book for guidance&lt;&#x2F;li&gt;
+&lt;li&gt;You could also opt to a smaller codebase like &lt;em&gt;sqlite&lt;&#x2F;em&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;davideuler&#x2F;SQLite-2.5.0-for-code-reading&quot;&gt;davideuler&#x2F;SQLite-2.5.0-for-code-reading&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;madushadhanushka&#x2F;simple-sqlite&quot;&gt;madushadhanushka&#x2F;simple-sqlite&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;notes&quot;&gt;Notes&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;N&#x2F;A&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>On Automobile</title>
 		<published>2023-01-11T00:00:00+00:00</published>
