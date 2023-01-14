@@ -5066,15 +5066,27 @@ Linear algebra, including vector spaces, linear transformations, and matrix oper
 		<id>https://codingezio.github.io/issue-docker-slow-download/</id>
 		<content type="html">&lt;h3 id=&quot;context&quot;&gt;Context&lt;&#x2F;h3&gt;
 &lt;ul&gt;
+&lt;li&gt;Fetching images is extremly slow&lt;&#x2F;li&gt;
+&lt;li&gt;Fail sometimes when fetching like &lt;code&gt;failed to read expected number of bytes: unexpected EOF&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;solution-via-config&quot;&gt;Solution via &lt;em&gt;Config&lt;&#x2F;em&gt;&lt;&#x2F;h3&gt;
+&lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;Docker (GUI) -&amp;gt; Settings -&amp;gt; &lt;em&gt;Resources&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#282c34;color:#dcdfe4;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;#  -&amp;gt; Proxies
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;#   -&amp;gt; Manual proxy configuration
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;#   -&amp;gt; Web Server (HTTP) -&amp;gt; http:&#x2F;&#x2F;127.0.0.1:7890
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Then &lt;small&gt;(the &lt;code&gt;7890&lt;&#x2F;code&gt; port part depends on the app you&#x27;re using)&lt;&#x2F;small&gt;&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#282c34;color:#dcdfe4;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# Proxies (with &amp;#39;Manual proxy configuration&amp;#39; checked)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;#   Web Server (HTTP)          -&amp;gt; http:&#x2F;&#x2F;127.0.0.1:7890
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;#   Secure Web Server (HTTPS)  -&amp;gt; http:&#x2F;&#x2F;127.0.0.1:7890
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;#   Bypass proxy .. domains .. -&amp;gt; localhost,127.0.0.1
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;solution&quot;&gt;Solution&lt;&#x2F;h3&gt;
+&lt;&#x2F;ol&gt;
+&lt;h3 id=&quot;solution-using-mirror&quot;&gt;Solution using &lt;em&gt;Mirror&lt;&#x2F;em&gt;&lt;&#x2F;h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Abandoned&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;Uncheck the &lt;em&gt;Manual proxy configuration&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;

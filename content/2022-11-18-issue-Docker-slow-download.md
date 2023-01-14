@@ -5,15 +5,24 @@ description = "Resolve the Docker network issue"
 
 ### Context
 
-- Docker (GUI) -> Settings -> *Resources*
+- Fetching images is extremly slow
+- Fail sometimes when fetching like `failed to read expected number of bytes: unexpected EOF`
+
+### Solution via *Config*
+
+1. Docker (GUI) -> Settings -> *Resources*
+2. Then <small>(the `7890` port part depends on the app you're using)</small>
 
     ```bash
-    #  -> Proxies
-    #   -> Manual proxy configuration
-    #   -> Web Server (HTTP) -> http://127.0.0.1:7890
+    # Proxies (with 'Manual proxy configuration' checked)
+    #   Web Server (HTTP)          -> http://127.0.0.1:7890
+    #   Secure Web Server (HTTPS)  -> http://127.0.0.1:7890
+    #   Bypass proxy .. domains .. -> localhost,127.0.0.1
     ```
 
-### Solution
+### Solution using *Mirror*
+
+> Abandoned
 
 1. Uncheck the *Manual proxy configuration*
 2. Add this to *Docker Engine*
