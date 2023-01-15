@@ -3,12 +3,12 @@ title = "Booknote on Understanding MySQL Internals"
 description = "Understanding MySQL Internals"
 +++
 
-> Unless you dive deep into the source code to do the debugging by yourself, all the optimizations could just be counted as *guesswork* <small>(a bit exaggerated for sure)</small>. 
+> Unless you dive deep into the source code to do the debugging by yourself, all the optimizations could just be counted as *guesswork* <small>(a bit exaggerated for sure)</small>.
 
 ### Resources
 
-- [Sasha Pachev (Author of Understanding MySQL Internals)](https://www.goodreads.com/author/show/491876)
-  - [Understanding MySQL Internals by Sasha Pachev | Goodreads](https://www.goodreads.com/book/show/974458)
+- [Sasha Pachev](https://www.goodreads.com/author/show/491876)
+  - [Understanding MySQL Internals](https://www.goodreads.com/book/show/974458)
 
 ### Foreword
 

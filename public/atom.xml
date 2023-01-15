@@ -14,13 +14,13 @@
 		<link rel="alternate" href="https://codingezio.github.io/booknote-on-understanding-mysql-internals/" type="text/html"/>
 		<id>https://codingezio.github.io/booknote-on-understanding-mysql-internals/</id>
 		<content type="html">&lt;blockquote&gt;
-&lt;p&gt;Unless you dive deep into the source code to do the debugging by yourself, all the optimizations could just be counted as &lt;em&gt;guesswork&lt;&#x2F;em&gt; &lt;small&gt;(a bit exaggerated for sure)&lt;&#x2F;small&gt;. &lt;&#x2F;p&gt;
+&lt;p&gt;Unless you dive deep into the source code to do the debugging by yourself, all the optimizations could just be counted as &lt;em&gt;guesswork&lt;&#x2F;em&gt; &lt;small&gt;(a bit exaggerated for sure)&lt;&#x2F;small&gt;.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;h3 id=&quot;resources&quot;&gt;Resources&lt;&#x2F;h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.goodreads.com&#x2F;author&#x2F;show&#x2F;491876&quot;&gt;Sasha Pachev (Author of Understanding MySQL Internals)&lt;&#x2F;a&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.goodreads.com&#x2F;author&#x2F;show&#x2F;491876&quot;&gt;Sasha Pachev&lt;&#x2F;a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.goodreads.com&#x2F;book&#x2F;show&#x2F;974458&quot;&gt;Understanding MySQL Internals by Sasha Pachev | Goodreads&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.goodreads.com&#x2F;book&#x2F;show&#x2F;974458&quot;&gt;Understanding MySQL Internals&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
@@ -10957,6 +10957,91 @@ look carefully you can find problems in all writers. And that should give you gr
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Booknote on Ten Percent Happier</title>
+		<published>2021-03-25T00:00:00+00:00</published>
+		<updated>2021-03-25T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://codingezio.github.io/ten-percent-happier/" type="text/html"/>
+		<id>https://codingezio.github.io/ten-percent-happier/</id>
+		<content type="html">&lt;h3 id=&quot;resources&quot;&gt;Resources&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.goodreads.com&#x2F;author&#x2F;show&#x2F;233215&quot;&gt;Kevin Griffin&lt;&#x2F;a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.goodreads.com&#x2F;book&#x2F;show&#x2F;57465628&quot;&gt;Ten Percent Happier&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;meta-information&quot;&gt;Meta Information&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Is it worth the read: &lt;em&gt;trashy&lt;&#x2F;em&gt; and &lt;em&gt;extremly slow paced&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Current status: &lt;em&gt;abandoned&lt;&#x2F;em&gt; &lt;small&gt;(no more new notes would be added)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;notes&quot;&gt;Notes&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;preface&quot;&gt;Preface&lt;&#x2F;h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;It’s a fever swamp of urges, desires, and judgments. It’s fixated on the past and the future, to the detriment of the here and now. It’s what has us reaching into the fridge when we’re not hungry, losing our temper when we know it’s not really in our best interest, and pruning our inboxes when we’re ostensibly engaged in conversation with other human beings.&lt;&#x2F;p&gt;
+&lt;p&gt;.. we don’t pay close attention—which very few of us are taught how to do—it can be a malevolent puppeteer.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If you can get past the cultural baggage, though, what you’ll find is that meditation is simply exercise for your brain. It’s a proven technique for preventing the voice in your head from leading you around by the nose. To be clear, it’s not a miracle cure. It won’t make you taller or better-looking, nor will it magically solve all of your problems.&lt;&#x2F;p&gt;
+&lt;p&gt;.. disregard the fancy books and the famous gurus promising immediate enlightenment ..&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h3 id=&quot;snippet-1&quot;&gt;Snippet 1&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;snippet-1-1&quot;&gt;Snippet 1.1&lt;&#x2F;h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Our entire lives, he argued, are governed by a voice in our heads. This voice is engaged in a ceaseless stream of thinking—most of it negative, repetitive, and self-referential. It squawks away at us from the minute we open our eyes in the morning until the minute we fall asleep at night, if it allows us to sleep at all. Talk, talk, talk: the voice is constantly judging and labeling everything in its field of vision. Its targets aren’t just external; it often viciously taunts us, too. &lt;small&gt;(context: a book the author is reading named &lt;em&gt;A New Earth: Awakening to Your Life’s Purpose&lt;&#x2F;em&gt;)&lt;&#x2F;small&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h4 id=&quot;snippet-1-2&quot;&gt;Snippet 1.2&lt;&#x2F;h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;According to Tolle, the ego is our inner narrator, our sense of “I.”&lt;&#x2F;p&gt;
+&lt;p&gt;even though the voice is the ridgepole of our interior lives, most of us take it completely for granted. He argued that the failure to recognize thoughts for what they are—quantum bursts of psychic energy that exist solely in your head—is the primordial human error.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h4 id=&quot;snippet-1-3&quot;&gt;Snippet 1.3&lt;&#x2F;h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The ego is never satisfied.&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;No matter how much stuff we buy, no matter how many arguments we win or delicious meals we consume, the ego never feels complete.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The ego is constantly comparing itself to others.&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;It has us measuring our self-worth against the looks, wealth, and social status of everyone else.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The ego thrives on drama.&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;It keeps our old resentments and grievances alive through compulsive thought .. and obsessed with the past and the future, at the expense of the present. We “live almost exclusively through memory and anticipation,”&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h4 id=&quot;snippet-1-4&quot;&gt;Snippet 1.4&lt;&#x2F;h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I first realized that the voice in my head—the running commentary that had dominated my field of consciousness since I could remember—was kind of an asshole.&lt;&#x2F;p&gt;
+&lt;p&gt;You see, it doesn’t work. I can’t be free of thinking.’ Which is more thinking,” he said, laughing gently. “So how do you break out of that?” “You simply observe that it’s another thought. And by knowing that it’s another thought, you’re not totally identified with the thought.”&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h4 id=&quot;snippet-1-5&quot;&gt;Snippet 1.5&lt;&#x2F;h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Make the present moment your friend rather than your enemy&lt;&#x2F;p&gt;
+&lt;p&gt;.. many people live habitually as if the present moment were an obstacle that they need to overcome in order to get to the next moment. And imagine living your whole life like that, where always this moment is never quite right, not good enough because you need to get to the next one. That is continuous stress.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h3 id=&quot;snippet-2&quot;&gt;Snippet 2&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;snippet-2-1&quot;&gt;Snippet 2.1&lt;&#x2F;h4&gt;
+&lt;h4 id=&quot;snippet-2-2&quot;&gt;Snippet 2.2&lt;&#x2F;h4&gt;
+&lt;h4 id=&quot;snippet-2-3&quot;&gt;Snippet 2.3&lt;&#x2F;h4&gt;
+&lt;h4 id=&quot;snippet-2-4&quot;&gt;Snippet 2.4&lt;&#x2F;h4&gt;
+&lt;h4 id=&quot;snippet-2-5&quot;&gt;Snippet 2.5&lt;&#x2F;h4&gt;
+&lt;h4 id=&quot;snippet-2-6&quot;&gt;Snippet 2.6&lt;&#x2F;h4&gt;
+&lt;h3 id=&quot;snippet-3&quot;&gt;Snippet 3&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;snippet-3-1&quot;&gt;Snippet 3.1&lt;&#x2F;h4&gt;
+&lt;h4 id=&quot;snippet-3-2&quot;&gt;Snippet 3.2&lt;&#x2F;h4&gt;
+&lt;h4 id=&quot;snippet-3-3&quot;&gt;Snippet 3.3&lt;&#x2F;h4&gt;
+&lt;h4 id=&quot;snippet-3-4&quot;&gt;Snippet 3.4&lt;&#x2F;h4&gt;
+&lt;h4 id=&quot;snippet-3-5&quot;&gt;Snippet 3.5&lt;&#x2F;h4&gt;
+&lt;h4 id=&quot;snippet-3-6&quot;&gt;Snippet 3.6&lt;&#x2F;h4&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">
