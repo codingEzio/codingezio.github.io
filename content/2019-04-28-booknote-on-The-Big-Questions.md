@@ -286,10 +286,10 @@ description = "A Short Introduction to Philosophy"
 
     > Simply put, it might produce stuff like *False but Valid* or *True but Invalid*.
     >
-    > If we wanna get a good <deductive> arg, these have to be met
+    > If we wanna get a good \<deductive\> arg, these have to be met
     >
-    > - It is a VALID <argument>
-    > - Its <premises> are TRUE
+    > - It is a VALID \<argument\>
+    > - Its \<premises\> are TRUE
 
 #### About *Induction*
 
@@ -507,16 +507,16 @@ An argument
 
 ```toml
 [MINE]
-1.1. How do we define the world, for fuck’s sake?
-1.2. It depends on the CONTEXT
-1.3. It depends on who/what we’re talking about.
+1. How do we define the world, for fuck’s sake?
+2. It depends on the CONTEXT
+3. It depends on who/what we’re talking about.
 ```
 
 #### 0x09
 
 > What purpose does human life have that is not to be found in the life of a cow or an insect? What is the purpose of your life?
 >
-> Answer: Concepts like this aren’t meant to be answered directly, not just because it is hard, but also the concept itself hasn’t been defined clearly and <universally>.
+> Answer: Concepts like this aren’t meant to be answered directly, not just because it is hard, but also the concept itself hasn’t been defined clearly and \<universally\>.
 
 #### 0x10
 
@@ -525,7 +525,7 @@ An argument
 > A: Different perspectives
 >
 > - Scientist — bunch of particles, atoms and molecules in various arrangements
-> - Philosopher/Psychologist — it’s <your sense> to the chair indicating that “the chair exists” ( terms: “infer” )
+> - Philosopher/Psychologist — it’s \<your sense\> to the chair indicating that “the chair exists” ( terms: “infer” )
 
 #### 0x11
 
@@ -547,10 +547,10 @@ An argument
 >
 > Answer:
 >
-> - 1.1. Finishing a few books about philosophy.
-> - 1.2. Deep talk with my family
-> - 1.3. Exercising, literally
-> - 1.4. Get my family out of fin crisis.
+> 1. Finishing a few books about philosophy.
+> 2. Deep talk with my family
+> 3. Exercising, literally
+> 4. Get my family out of fin crisis.
 
 #### 0x13
 
@@ -558,10 +558,10 @@ An argument
 >
 > Answer:
 >
-> - 1.1. Exercising — Laziness, shyness, not-enough motivation.
-> - 1.2. Finishing books about phi — I still have other stuff to do
-> - 1.3. Deep talk with family — Didn’t have chance, well, at the right time
-> - 1.4. Get my fam out of fin crisis — Simply living a better life
+> 1. Exercising — Laziness, shyness, not-enough motivation.
+> 2. Finishing books about phi — I still have other stuff to do
+> 3. Deep talk with family — Didn’t have chance, well, at the right time
+> 4. Get my fam out of fin crisis — Simply living a better life
 
 ### The Meaning of Life
 
