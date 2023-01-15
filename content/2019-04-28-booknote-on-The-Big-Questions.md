@@ -75,7 +75,7 @@ description = "A Short Introduction to Philosophy"
 
 - Articulation
 
-    ```toml
+    ```txt
     [DEFINITION]
     State your ideas in clear, concise,
     and readily understandable language :D
@@ -87,7 +87,7 @@ description = "A Short Introduction to Philosophy"
 
 - Argument
 
-    ```toml
+    ```txt
     [DEFINITION]
     Support your ideas with reasons
     FROM other ideas,principles,observations
@@ -115,7 +115,7 @@ description = "A Short Introduction to Philosophy"
 
 - Analysis
 
-    ```toml
+    ```txt
     [DEFINITION]
     Understanding an idea by distinguishing
     and clarifying its components (KNOW IT)
@@ -128,7 +128,7 @@ description = "A Short Introduction to Philosophy"
 
 - Synthesis
 
-    ```toml
+    ```txt
     [DEFINITION]
     Gather different ideas together
     into a single, unified, vision.
@@ -153,7 +153,7 @@ description = "A Short Introduction to Philosophy"
 
 - Category
 
-    ```python
+    ```txt
     <Logic>
     * The study of
         — formal structures of sound thinking
@@ -201,7 +201,7 @@ description = "A Short Introduction to Philosophy"
 
 - To be part of the extended conversation that is philosophy, you will need the following
 
-    ```toml
+    ```txt
     [SUB - Ideas]
     ~ Your IDEA, clearly articulated :)
 
@@ -250,7 +250,7 @@ description = "A Short Introduction to Philosophy"
 
 - Syllogism
 
-    ```toml
+    ```txt
     [EXAMPLE :: Formula]
     ~ All P’s are Q’s
     ~ S is a P
@@ -314,7 +314,7 @@ description = "A Short Introduction to Philosophy"
 
 - 0x01
 
-    ```toml
+    ```txt
     [SUB - Dedutive logic]
     ~ It guarantee <the truth of the conclusion>
     ~ if the <premises are True of course :D
@@ -347,7 +347,7 @@ description = "A Short Introduction to Philosophy"
 
 #### Paradox
 
-```toml
+```txt
 [DEFINITION]
 It’s a <self-contradictory> or seemingly
 absurd conclusion based on apart gd ones.
@@ -372,7 +372,7 @@ begging the question, repeating as a supposed solution the very problem that it 
 
 #### The Basic Concepts of Logic
 
-```toml
+```txt
 [DEFINITION]
 An argument
 ~ is A seq of assertions or stmts to back up a viewpoint or idea
@@ -400,7 +400,7 @@ An argument
 
 - 0x01
 
-    ```toml
+    ```txt
     [MINE]
     1. Enlighting people
     2. Saving people from danger
@@ -410,7 +410,7 @@ An argument
 
     > If you had only a few minutes to live, what would you do with them? What if you had only a few days? Twenty years?
 
-    ```toml
+    ```txt
     [MINE]
     1. If minutes, say goodbye & giving advice
     2. If days, running, reading, socializing
@@ -423,7 +423,7 @@ An argument
 
 > "Life is but a dream," says an old popular song. Suppose the thought were to occur to you (as it will in a philosophy class) that it is possible, or at least conceivable, that you are just dreaming at this moment, that you are still asleep in bed, dreaming about reading a philosophy book. How would you prove to yourself that this is not true, that you are indeed awake? (Pinching yourself won’t do it. Why not?)
 
-```toml
+```txt
 [MINE]
 1.1 I would try to do something quite “meta”, such as “sleeping” itself.
 1.2. Just like software, you might encounter bugs if it was fed into some marginal data.
@@ -435,7 +435,7 @@ An argument
 
 > Describe yourself as if you were a character in a story. Describe your gestures, habits, personality traits, and characteristic word phrases. What kind of a person do you turn out to be? Do you like the person you have just described? What do you like—and dislike—about yourself?
 
-```toml
+```txt
 [MINE]
 1.1. I’m a man with a little obsessed with reading.
 1.2. I don’t like being chanllenged (thus I’m weak).
@@ -458,7 +458,7 @@ An argument
 
 > Would you like to step into the happiness box? Why or why not?
 
-```toml
+```txt
 [MINE]
 1.1. Definitely not.
 2.1. I want to be different, kinda silly right?
@@ -470,7 +470,7 @@ An argument
 
 > Will a good person (one who does no evil and does everything he or she is supposed to do) necessarily be happy, too? In other words, do you believe that life is ultimately fair? Will a wicked person surely suffer, at least in the long run? (If not, why should anyone bother trying to be good?)
 
-```toml
+```txt
 [MINE]
 1.1. In my opinion, no, it’s not ultimately fair.
 2.1. Possibly, surely not definitely.
@@ -482,7 +482,7 @@ An argument
 
 > Have you ever made a decision that was entirely your own, that was no one’s responsibility but yours?
 
-```toml
+```txt
 [MINE]
 1.1. Yes, there is. Not much indeed.
 2.1. Reading books as much as possible.
@@ -505,7 +505,7 @@ An argument
 
 #### 0x08 Is Freedom Always A Good Thing?
 
-```toml
+```txt
 [MINE]
 1. How do we define the world, for fuck’s sake?
 2. It depends on the CONTEXT
