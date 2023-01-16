@@ -5,8 +5,52 @@
 	<link href="https://codingezio.github.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://codingezio.github.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2023-01-14T00:00:00+00:00</updated>
+	<updated>2023-01-16T00:00:00+00:00</updated>
 	<id>https://codingezio.github.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>On Emoji</title>
+		<published>2023-01-16T00:00:00+00:00</published>
+		<updated>2023-01-16T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://codingezio.github.io/on-emoji/" type="text/html"/>
+		<id>https://codingezio.github.io/on-emoji/</id>
+		<content type="html">&lt;h2 id=&quot;not-just-an-unicode-symbol&quot;&gt;Not Just An Unicode Symbol&lt;&#x2F;h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Source: &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=Fr9L27V337E&quot;&gt;Have you ever heard of the &amp;quot;Emoji Commission&amp;quot;? | DW Documentary&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h3 id=&quot;introduction&quot;&gt;Introduction&lt;&#x2F;h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Simply put, it&#x27;s not really just an Unicode symbol but things that are much more complicated. Just a few things that sneaking underneath it: &lt;em&gt;Lingustics&lt;&#x2F;em&gt;, &lt;em&gt;Politics&lt;&#x2F;em&gt; &lt;small&gt;(e.g. &lt;em&gt;Freedom of Speech&lt;&#x2F;em&gt;, &lt;em&gt;LGBT&lt;&#x2F;em&gt;)&lt;&#x2F;small&gt;, &lt;em&gt;Advertisement&lt;&#x2F;em&gt;, &lt;em&gt;Conglomerate versus Government&lt;&#x2F;em&gt; and so on.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h2 id=&quot;status&quot;&gt;Status&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Gotta organize the notes for this in the upcoming two months&lt;&#x2F;li&gt;
+&lt;li&gt;I also might do a translation in Chinese for this video 😊&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;application&quot;&gt;Application&lt;&#x2F;h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Combining different emojis&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;emojikitchen.dev&#x2F;&quot;&gt;Emoji Kitchen&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;information&quot;&gt;Information&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;emojipedia.org&#x2F;new&#x2F;&quot;&gt;Latest Approved Emojis&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;emojis.wiki&#x2F;&quot;&gt;Emojis Wiki&lt;&#x2F;a&gt; &lt;small&gt;(meanings and usage)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;unicode.org&#x2F;emoji&#x2F;charts&#x2F;full-emoji-list.html&quot;&gt;Full Emoji List, v15.0&lt;&#x2F;a&gt; &lt;small&gt;(Comparison between Different Vendors)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;resource&quot;&gt;Resource&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;twitter&#x2F;twemoji&#x2F;releases&#x2F;&quot;&gt;twitter&#x2F;twemoji: Emoji for everyone&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;rant&quot;&gt;Rant&lt;&#x2F;h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;For the love of old, please do not use the fucking emojis in your commit message like &lt;a href=&quot;https:&#x2F;&#x2F;gitmoji.dev&#x2F;&quot;&gt;&lt;em&gt;gitmoji&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>Booknote on Understanding MySQL Internals</title>
 		<published>2023-01-14T00:00:00+00:00</published>
@@ -1997,6 +2041,7 @@ TODO&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=fdQyD8B_odY&quot;&gt;In the Blink of an Eye: Space in an Instant&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=7ZVDvTT82Os&quot;&gt;Viola Davis: Barnard Commencement 2019&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=Jv79l1b-eoI&quot;&gt;Absurdism | How to Party at the End of Meaning ☄️&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=Fr9L27V337E&quot;&gt;Have you ever heard of the &amp;quot;Emoji Commission&amp;quot;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </content>
 	</entry>
