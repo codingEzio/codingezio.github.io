@@ -1,5 +1,5 @@
 +++
-title = "Relevant Resources for Blog Post"
+title = "Blog Post References"
 description = "N/A"
 +++
 
@@ -15,6 +15,7 @@ description = "N/A"
 <img src="/202301/20230108-references-for-posts-part1.png" alt="An illustration of the overview of the references - part one" width="80%" height="auto" />
 <img src="/202301/20230108-references-for-posts-part2.png" alt="An illustration of the overview of the references - part two" width="90%" height="auto" />
 <img src="/202301/20230108-references-for-posts-part3.png" alt="An illustration of the overview of the references - part three" width="90%" height="auto" />
+<img src="/202301/20230108-references-for-posts-part4.png" alt="An illustration of the overview of the references - part four" width="90%" height="auto" />
 
 -----
 
@@ -113,7 +114,7 @@ description = "N/A"
 
 -----
 
-# Operating System
+# OS
 
 ## For Consistency
 
@@ -136,7 +137,7 @@ description = "N/A"
 
 -----
 
-# Concurrency (*Java*)
+# Concurrency
 
 ## What
 
@@ -172,8 +173,8 @@ description = "N/A"
 ## Data Type
 
 - [Atomic Integer and Normal immutable Integer?](https://stackoverflow.com/questions/38846976/what-is-the-difference-between-atomic-integer-and-normal-immutable-integer-class)
-- [`AbstractQueuedSynchronizer` in Java concurrent](https://stackoverflow.com/questions/9644856/abstractqueuedsynchronizer-in-java-concurrent)
-- [When and how should I use a `ThreadLocal` variable](https://stackoverflow.com/questions/817856/when-and-how-should-i-use-a-threadlocal-variable)
+- [`AbstractQueuedSynchronizer` in Java](https://stackoverflow.com/questions/9644856/abstractqueuedsynchronizer-in-java-concurrent)
+- [When and how `ThreadLocal` variable](https://stackoverflow.com/questions/817856/when-and-how-should-i-use-a-threadlocal-variable)
 - [Purpose of `ThreadLocal`](https://stackoverflow.com/questions/1490919/purpose-of-threadlocal)
 
 -----

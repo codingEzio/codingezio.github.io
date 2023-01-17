@@ -110,7 +110,7 @@
 </content>
 	</entry>
 	<entry xml:lang="en">
-		<title>Relevant Resources for Blog Post</title>
+		<title>Blog Post References</title>
 		<published>2023-01-08T00:00:00+00:00</published>
 		<updated>2023-01-08T00:00:00+00:00</updated>
 		<link rel="alternate" href="https://codingezio.github.io/blog-post-references/" type="text/html"/>
@@ -126,6 +126,7 @@
 &lt;img src=&quot;&#x2F;202301&#x2F;20230108-references-for-posts-part1.png&quot; alt=&quot;An illustration of the overview of the references - part one&quot; width=&quot;80%&quot; height=&quot;auto&quot; &#x2F;&gt;
 &lt;img src=&quot;&#x2F;202301&#x2F;20230108-references-for-posts-part2.png&quot; alt=&quot;An illustration of the overview of the references - part two&quot; width=&quot;90%&quot; height=&quot;auto&quot; &#x2F;&gt;
 &lt;img src=&quot;&#x2F;202301&#x2F;20230108-references-for-posts-part3.png&quot; alt=&quot;An illustration of the overview of the references - part three&quot; width=&quot;90%&quot; height=&quot;auto&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;202301&#x2F;20230108-references-for-posts-part4.png&quot; alt=&quot;An illustration of the overview of the references - part four&quot; width=&quot;90%&quot; height=&quot;auto&quot; &#x2F;&gt;
 &lt;hr &#x2F;&gt;
 &lt;h1 id=&quot;rdbms&quot;&gt;RDBMS&lt;&#x2F;h1&gt;
 &lt;h2 id=&quot;storage-engine&quot;&gt;Storage Engine&lt;&#x2F;h2&gt;
@@ -213,7 +214,7 @@
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;21012799&#x2F;why-do-i-need-to-configure-the-sql-dialect-of-a-data-source&quot;&gt;hibernate SQL dialect of a data source?&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;hr &#x2F;&gt;
-&lt;h1 id=&quot;operating-system&quot;&gt;Operating System&lt;&#x2F;h1&gt;
+&lt;h1 id=&quot;os&quot;&gt;OS&lt;&#x2F;h1&gt;
 &lt;h2 id=&quot;for-consistency&quot;&gt;For Consistency&lt;&#x2F;h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;old.reddit.com&#x2F;r&#x2F;arduino&#x2F;comments&#x2F;416cs0&#x2F;eli5_what_are_interrupts_what_do_i_need_them_for&#x2F;&quot;&gt;What are interrupts? What for and when?&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
@@ -234,7 +235,7 @@
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;2033879&#x2F;what-does-threadsafe-mean&quot;&gt;What does threadsafe mean&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;hr &#x2F;&gt;
-&lt;h1 id=&quot;concurrency-java&quot;&gt;Concurrency (&lt;em&gt;Java&lt;&#x2F;em&gt;)&lt;&#x2F;h1&gt;
+&lt;h1 id=&quot;concurrency&quot;&gt;Concurrency&lt;&#x2F;h1&gt;
 &lt;h2 id=&quot;what&quot;&gt;What&lt;&#x2F;h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;softwareengineering.stackexchange.com&#x2F;questions&#x2F;173575&#x2F;what-is-a-thread-pool&quot;&gt;multithreading - What is a thread pool?&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
@@ -269,8 +270,8 @@
 &lt;h2 id=&quot;data-type&quot;&gt;Data Type&lt;&#x2F;h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;38846976&#x2F;what-is-the-difference-between-atomic-integer-and-normal-immutable-integer-class&quot;&gt;Atomic Integer and Normal immutable Integer?&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;9644856&#x2F;abstractqueuedsynchronizer-in-java-concurrent&quot;&gt;&lt;code&gt;AbstractQueuedSynchronizer&lt;&#x2F;code&gt; in Java concurrent&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;817856&#x2F;when-and-how-should-i-use-a-threadlocal-variable&quot;&gt;When and how should I use a &lt;code&gt;ThreadLocal&lt;&#x2F;code&gt; variable&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;9644856&#x2F;abstractqueuedsynchronizer-in-java-concurrent&quot;&gt;&lt;code&gt;AbstractQueuedSynchronizer&lt;&#x2F;code&gt; in Java&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;817856&#x2F;when-and-how-should-i-use-a-threadlocal-variable&quot;&gt;When and how &lt;code&gt;ThreadLocal&lt;&#x2F;code&gt; variable&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;1490919&#x2F;purpose-of-threadlocal&quot;&gt;Purpose of &lt;code&gt;ThreadLocal&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;hr &#x2F;&gt;
