@@ -81,6 +81,22 @@ description = "N/A"
 
 -----
 
+# Redis
+
+## Persistence
+
+- [AOF and RDB stand for in Redis](https://stackoverflow.com/questions/45040666/what-do-the-acronyms-aof-and-rdb-stand-for-in-redis)
+
+## Caching Strategy
+
+- [缓存更新的套路 - CoolShell](https://coolshell.cn/articles/17416.html)
+- [In-Memory Caching Solutions](https://redis.com/solutions/use-cases/caching/)
+- [Caching Strategies Using Redis](https://docs.aws.amazon.com/whitepapers/latest/database-caching-strategies-using-redis/caching-patterns.html)
+
+## Biz Concern
+
+- [*BigKey* and *HotKey* Issues in Redis](https://dev.to/mrboogiej/deep-dive-of-bigkey-and-hotkey-issues-in-redis-what-they-are-how-to-discover-how-to-handle-4ldl)
+
 -----
 
 # Around Spring
