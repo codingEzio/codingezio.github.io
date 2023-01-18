@@ -272,26 +272,53 @@ description = "N/A"
 
 ## Functional
 
-- [Why should I use Ramda instead of native Array methods](https://github.com/ramda/ramda/issues/2404)
+### JavaScript
+
+- [Why Ramda instead of native Array methods](https://github.com/ramda/ramda/issues/2404)
+
+### Java
+
+- [Java's Supplier and Consumer interfaces](https://stackoverflow.com/questions/28417262/when-and-why-would-you-use-javas-supplier-and-consumer-interfaces)
 
 -----
 
 # Frontend
 
+## Misc
+
+- [ELI5 Concepts · reactwg/react-18](https://github.com/reactwg/react-18/discussions/46)
+
+## State Management
+
+- [ELI5: redux actions and reducers : reactjs](https://old.reddit.com/r/reactjs/comments/7d10vo/eli5_redux_actions_and_reducers/)
+
+### React Context
+
+- [article](https://blog.isquaredsoftware.com/2021/01/context-redux-differences/)
+- [comments](https://old.reddit.com/r/reactjs/comments/kzw46y/why_react_context_is_not_a_state_management_tool/)
+
 ## Hooks
 
-- React Context Not "State Management" Tool
-  - [article](https://blog.isquaredsoftware.com/2021/01/context-redux-differences/)
-  - [comments](https://old.reddit.com/r/reactjs/comments/kzw46y/why_react_context_is_not_a_state_management_tool/)
-- [在 Vue3 中实现 React 原生 Hooks（useState、useEffect）](https://www.51cto.com/article/716793.html)
-
-- [Can someone explain useEffect dependency arrays like im 5? : reactjs](https://old.reddit.com/r/reactjs/comments/ualpri/can_someone_explain_useeffect_dependency_arrays/)
-- [ELI5: redux actions and reducers : reactjs](https://old.reddit.com/r/reactjs/comments/7d10vo/eli5_redux_actions_and_reducers/)
+- [Vue3 实现 React Hooks (`useState`, `useEffect`)](https://www.51cto.com/article/716793.html)
+- [Vue lifecycle hooks](https://blog.logrocket.com/introduction-to-vue-lifecycle-hooks/)
+- [ELI 5 `useEffect` dependency arrays](https://old.reddit.com/r/reactjs/comments/ualpri/can_someone_explain_useeffect_dependency_arrays/)
 
 ## `npm`
 
 - [What does `npm install --legacy-peer-deps` do exactly?](https://stackoverflow.com/questions/66239691/what-does-npm-install-legacy-peer-deps-do-exactly-when-is-it-recommended-wh)
 - [dependencies, devDependencies and peerDependencies?](https://stackoverflow.com/questions/18875674/whats-the-difference-between-dependencies-devdependencies-and-peerdependencies/22004559#22004559)
+
+## More
+
+### Text Fragments
+
+- [Text Fragments - web.dev](https://web.dev/text-fragments/)
+- [What exactly is the `#:~:text=` in an URL](https://stackoverflow.com/questions/62161819/what-exactly-is-the-text-location-hash-in-an-url)
+
+### Accessibility
+
+- [Accessibility (web.dev)](https://web.dev/learn/accessibility/)
+- [Accessibility (MDN)](https://developer.mozilla.org/en-US/docs/Learn/Accessibility)
 
 -----
 
@@ -327,18 +354,5 @@ description = "N/A"
 
 - [Bootiful Azure: Object Storage Service (5/6)](https://spring.io/blog/2019/01/17/bootiful-azure-object-storage-service-5-6)
 - [Can someone explain NAS to me? : hardware](https://old.reddit.com/r/hardware/comments/1p1nnk/can_someone_explain_nas_to_me/)
-
------
-
-# Misc
-
-## Frontend
-
-- [Glossary + Explain Like I'm Five · Discussion #46 · reactwg/react-18](https://github.com/reactwg/react-18/discussions/46)
-- [Introduction to Vue lifecycle hooks - LogRocket Blog](https://blog.logrocket.com/introduction-to-vue-lifecycle-hooks/)
-
-## Backend
-
-- [When and why would you use Java's Supplier and Consumer interfaces?](https://stackoverflow.com/questions/28417262/when-and-why-would-you-use-javas-supplier-and-consumer-interfaces)
 
 -----
