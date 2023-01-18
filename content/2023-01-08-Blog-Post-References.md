@@ -84,6 +84,11 @@ description = "N/A"
 
 # Redis
 
+## Data Type
+
+- [Redis Streams and the Unified Log](https://brandur.org/redis-streams)
+- [Approaches of Kafka and Redis to Handle Streams](https://devm.io/databases/kafka-redis-streams)
+
 ## Persistence
 
 - [AOF and RDB stand for in Redis](https://stackoverflow.com/questions/45040666/what-do-the-acronyms-aof-and-rdb-stand-for-in-redis)
