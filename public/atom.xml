@@ -5,8 +5,27 @@
 	<link href="https://codingezio.github.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://codingezio.github.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2023-01-16T00:00:00+00:00</updated>
+	<updated>2023-01-18T00:00:00+00:00</updated>
 	<id>https://codingezio.github.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Toolset - imagemagick</title>
+		<published>2023-01-18T00:00:00+00:00</published>
+		<updated>2023-01-18T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://codingezio.github.io/toolset-imagemagick/" type="text/html"/>
+		<id>https://codingezio.github.io/toolset-imagemagick/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;Suppose you&#x27;re on macOS&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h3 id=&quot;convert-svg-files-to-png&quot;&gt;Convert &lt;code&gt;.svg&lt;&#x2F;code&gt; files to &lt;code&gt;.png&lt;&#x2F;code&gt;&lt;&#x2F;h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;9853325&#x2F;how-to-convert-a-svg-to-a-png-with-imagemagick&quot;&gt;How to convert a SVG to a PNG with ImageMagick&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#282c34;color:#dcdfe4;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# Either &amp;#39;brew install imagemagick&amp;#39;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# Or     &amp;#39;brew install librsvg&amp;#39;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;rsvg-convert -w&lt;&#x2F;span&gt;&lt;span&gt; 1024&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt; -h&lt;&#x2F;span&gt;&lt;span&gt; 1024 IN.svg&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt; -o&lt;&#x2F;span&gt;&lt;span&gt; OUT.png
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>On Emoji</title>
 		<published>2023-01-16T00:00:00+00:00</published>
