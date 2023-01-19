@@ -4407,11 +4407,11 @@ Linear algebra, including vector spaces, linear transformations, and matrix oper
 </content>
 	</entry>
 	<entry xml:lang="en">
-		<title>On GPT</title>
+		<title>On Large Language Model</title>
 		<published>2022-12-04T00:00:00+00:00</published>
 		<updated>2022-12-04T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://codingezio.github.io/on-gpt/" type="text/html"/>
-		<id>https://codingezio.github.io/on-gpt/</id>
+		<link rel="alternate" href="https://codingezio.github.io/on-large-language-model/" type="text/html"/>
+		<id>https://codingezio.github.io/on-large-language-model/</id>
 		<content type="html">&lt;blockquote&gt;
 &lt;p&gt;Not eligible to offer one and doesn&#x27;t have the time yet :)&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
@@ -4421,16 +4421,21 @@ Linear algebra, including vector spaces, linear transformations, and matrix oper
 &lt;&#x2F;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;academia.stackexchange.com&#x2F;questions&#x2F;191197&#x2F;is-it-ok-to-generate-parts-of-a-research-paper-using-a-large-language-model-such&quot;&gt;Is it OK to generate parts of a research paper using a large language model such as ChatGPT?&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lesswrong.com&#x2F;posts&#x2F;R4qcDeFdE2QzHLBFQ&#x2F;a-chatgpt-story-about-chatgpt-doom&quot;&gt;A ChatGPT story about ChatGPT doom&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;old.reddit.com&#x2F;r&#x2F;Futurology&#x2F;comments&#x2F;ysl8ka&#x2F;the_ceo_of_openai_had_dropped_hints_that_gpt4_due&#x2F;&quot;&gt;Constructive discussion around upcoming GPT-4&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lesswrong.com&#x2F;posts&#x2F;R4qcDeFdE2QzHLBFQ&#x2F;a-chatgpt-story-about-chatgpt-doom&quot;&gt;A ChatGPT Story about ChatGPT Doom&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;old.reddit.com&#x2F;r&#x2F;Futurology&#x2F;comments&#x2F;ysl8ka&#x2F;the_ceo_of_openai_had_dropped_hints_that_gpt4_due&#x2F;&quot;&gt;Constructive Discussion around Upcoming GPT-4&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;other-resources&quot;&gt;Other Resources&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;preparation-for-the-ai-tsunami&quot;&gt;Preparation for the &lt;em&gt;AI&lt;&#x2F;em&gt; Tsunami&lt;&#x2F;h3&gt;
 &lt;h4 id=&quot;ideas-and-thoughts-from-twitter&quot;&gt;Ideas and Thoughts from &lt;em&gt;Twitter&lt;&#x2F;em&gt;&lt;&#x2F;h4&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;yetone&#x2F;status&#x2F;1605621537335189506&quot;&gt;yetone: GPT 與 MLOps&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;Svwang1&#x2F;status&#x2F;1605371548394610688&quot;&gt;硅谷王川: GPT-4 明年二季度 &#x2F; OpenAI 的算力赶上人脑&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;sterlingcrispin&#x2F;status&#x2F;1606064292926615552&quot;&gt;Sterling Crispin: AI Model PaLM more powerful then OpenAI&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;kevinzhow&#x2F;status&#x2F;1600029430562230272&quot;&gt;kevinzhow: 近乎无限的获得这种智力资源 &#x2F; 人类是无法面对这次浪潮的&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;for-the-outsiders-to-enjoy&quot;&gt;For the Outsiders to Enjoy&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;@DrAlanDThompson&#x2F;videos&quot;&gt;Dr Alan D. Thompson&lt;&#x2F;a&gt; &lt;small&gt;(testing and talking about tons of different models)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;@TwoMinutePapers&#x2F;videos&quot;&gt;Two Minute Papers&lt;&#x2F;a&gt; &lt;small&gt;(actual demonstrations of different amazing ~breakthroughs)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h3 id=&quot;build-your-own&quot;&gt;Build Your Own&lt;&#x2F;h3&gt;
 &lt;blockquote&gt;
@@ -4445,6 +4450,14 @@ Linear algebra, including vector spaces, linear transformations, and matrix oper
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;fauxpilot&#x2F;fauxpilot&#x2F;tree&#x2F;main&quot;&gt;fauxpilot&#x2F;fauxpilot: FauxPilot - an open-source GitHub Copilot server&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;CodedotAl&#x2F;gpt-code-clippy&#x2F;tree&#x2F;camera-ready&quot;&gt;CodedotAl&#x2F;gpt-code-clippy: An open source version of GitHub Copilot&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;misc&quot;&gt;Misc&lt;&#x2F;h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Random searches I did that might be of use for this post&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;veekaybee&#x2F;6f8885e9906aa9c5408ebe5c7e870698&quot;&gt;Everything I Understand about ChatGPT&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </content>
 	</entry>

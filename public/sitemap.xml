@@ -479,10 +479,6 @@
         <lastmod>2022-12-16</lastmod>
     </url>
     <url>
-        <loc>https://codingezio.github.io/on-gpt/</loc>
-        <lastmod>2022-12-04</lastmod>
-    </url>
-    <url>
         <loc>https://codingezio.github.io/on-gun-control/</loc>
         <lastmod>2022-12-01</lastmod>
     </url>
@@ -517,6 +513,10 @@
     <url>
         <loc>https://codingezio.github.io/on-json-web-token/</loc>
         <lastmod>2022-08-10</lastmod>
+    </url>
+    <url>
+        <loc>https://codingezio.github.io/on-large-language-model/</loc>
+        <lastmod>2022-12-04</lastmod>
     </url>
     <url>
         <loc>https://codingezio.github.io/on-learning-german/</loc>
