@@ -1651,18 +1651,66 @@ TODO&lt;&#x2F;li&gt;
 		<updated>2022-12-22T00:00:00+00:00</updated>
 		<link rel="alternate" href="https://codingezio.github.io/on-redis/" type="text/html"/>
 		<id>https://codingezio.github.io/on-redis/</id>
-		<content type="html">&lt;h2 id=&quot;before-we-begin&quot;&gt;Before We Begin&lt;&#x2F;h2&gt;
+		<content type="html">&lt;h1 id=&quot;prior-knowledge&quot;&gt;Prior Knowledge&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;context&quot;&gt;Context&lt;&#x2F;h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;I&#x27;ve used &lt;em&gt;Redis&lt;&#x2F;em&gt; before in my Django project which is simply for recording the views of the images posted. Now I wanna give it a review and diving deep about the details and explore more use cases.&lt;&#x2F;p&gt;
+&lt;p&gt;I&#x27;ve used &lt;em&gt;Redis&lt;&#x2F;em&gt; a few years ago in my Django project which is simply for recording the views of the images posted. Now I wanna give it a review and diving deep about the details and explore more use cases.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h2 id=&quot;termiology&quot;&gt;Termiology&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;data-store&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Data_store&quot;&gt;Data store&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In short, it&#x27;s all about &lt;em&gt;data&lt;&#x2F;em&gt; but in different ways of storing it&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;ul&gt;
-&lt;li&gt;It saves data in the memory&lt;&#x2F;li&gt;
-&lt;li&gt;It could persist the data in memory to the disk (periodically)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;em&gt;Database&lt;&#x2F;em&gt; is a narrow sense of storing specific types of bytes
+&lt;ul&gt;
+&lt;li&gt;managed by a DBMS&lt;&#x2F;li&gt;
+&lt;li&gt;have constraints of what the data could be&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h2 id=&quot;usage&quot;&gt;Usage&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;preparation&quot;&gt;Preparation&lt;&#x2F;h3&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;em&gt;Data Store&lt;&#x2F;em&gt; also does persistence, and goes beyond the database
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;a repository for storing and managing collections of data&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;any ways of storing some forms of data can be considered as it&lt;&#x2F;p&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th style=&quot;text-align: left&quot;&gt;Form&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: left&quot;&gt;Content&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;Paper&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;Letters written on it&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;File System&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;Files and directories&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;Spreadsheet&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;Cell&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;what-redis-is&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;developer.redis.com&#x2F;explore&#x2F;what-is-redis&#x2F;&quot;&gt;What Redis Is&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Different ways of using it. And it certainly could be easily replaced&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;An in-memory &lt;em&gt;data store&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;A &lt;em&gt;message broker&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;A &lt;em&gt;cache&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;A &lt;em&gt;queue&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;data-type&quot;&gt;Data Type&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;context-1&quot;&gt;Context&lt;&#x2F;h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Redis by itself is much simpler than RDBMS like MySQL, whether it&#x27;s about the data types or the amount of the hidden concepts to learn.&lt;&#x2F;p&gt;
+&lt;p&gt;The data types &lt;strong&gt;are&lt;&#x2F;strong&gt; Redis itself. So you gotta give more real-life examples along with all the data types you presented. Almost all the tutorials were &lt;strong&gt;not&lt;&#x2F;strong&gt; doing a good job of it and written in the perspective of a senior developer who has already understood the business use cases and only writing notes that were really abstract &lt;small&gt;(notes were written by the junior developers that were all about syntax would not be taken in consideration)&lt;&#x2F;small&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;What I wanna say is that you gotta get closer to the real-life project. It means I would need to find&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h3 id=&quot;overview&quot;&gt;Overview&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;N&#x2F;A&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;hr &#x2F;&gt;
+&lt;h1 id=&quot;usage&quot;&gt;Usage&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;environment-preparation&quot;&gt;Environment Preparation&lt;&#x2F;h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Suppose you already have Docker installed. For me, it&#x27;s Docker in VM. To be more exact, it&#x27;s Installing Docker inside a VM, which is managed by Vagrant, then I edit the relevant config file &lt;code&gt;Vagrantfile&lt;&#x2F;code&gt; in order to expose the ports which is already available inside the VM to the host &lt;small&gt;(port mapping: Docker -&amp;gt; VM -&amp;gt; Host)&lt;&#x2F;small&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Updated: Now I&#x27;m using &lt;em&gt;Docker&lt;&#x2F;em&gt; directly in the host &lt;small&gt;(macOS)&lt;&#x2F;small&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#282c34;color:#dcdfe4;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# ----- Now you&amp;#39;re in the host ----
 &lt;&#x2F;span&gt;&lt;span&gt;
@@ -1682,7 +1730,7 @@ TODO&lt;&#x2F;li&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#61afef;&quot;&gt;echo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;#39;appendonly yes&amp;#39; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;${&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;rd_host_conf&lt;&#x2F;span&gt;&lt;span&gt;}&#x2F;redis.conf
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# ----- Now you&amp;#39;re in the VM managed by Vagrant ----
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# ----- Now you&amp;#39;re in where the place you run `docker` ----
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;docker&lt;&#x2F;span&gt;&lt;span&gt; run&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt; --detach &lt;&#x2F;span&gt;&lt;span&gt;\
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;    --name&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;container_name &lt;&#x2F;span&gt;&lt;span&gt;\
@@ -1700,27 +1748,28 @@ TODO&lt;&#x2F;li&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;docker&lt;&#x2F;span&gt;&lt;span&gt; exec     redis616-dev ls              &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# run `ls` in container
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;docker&lt;&#x2F;span&gt;&lt;span&gt; exec&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt; -it&lt;&#x2F;span&gt;&lt;span&gt; redis616-dev bash            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# run `bash` into the container
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h2 id=&quot;concepts&quot;&gt;Concepts&lt;&#x2F;h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&#x2F;&gt;
-TODO&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;hr &#x2F;&gt;
-&lt;h2 id=&quot;references&quot;&gt;References&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;learning-materials&quot;&gt;Learning Materials&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;pdai.tech&#x2F;md&#x2F;db&#x2F;nosql-redis&#x2F;db-redis-introduce.html&quot;&gt;Redis 入门&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;pdai.tech&#x2F;md&#x2F;db&#x2F;nosql-redis&#x2F;db-redis-x-cache.html&quot;&gt;Redis 缓存问题：一致性, 穿击, 穿透, 雪崩, 污染等&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tobebetterjavaer.com&#x2F;sidebar&#x2F;sanfene&#x2F;redis.html&quot;&gt;Redis 概览&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;directly-inspired&quot;&gt;Directly Inspired&lt;&#x2F;h3&gt;
+&lt;h2 id=&quot;actual-use-case&quot;&gt;Actual Use Case&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;n-a&quot;&gt;N&#x2F;A&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;N&#x2F;A&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;references-for-references&quot;&gt;References for References&lt;&#x2F;h3&gt;
+&lt;hr &#x2F;&gt;
+&lt;h1 id=&quot;references&quot;&gt;References&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;learning-materials&quot;&gt;Learning Materials&lt;&#x2F;h2&gt;
 &lt;ul&gt;
-&lt;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;pdai.tech&#x2F;md&#x2F;db&#x2F;nosql-redis&#x2F;db-redis-introduce.html&quot;&gt;Redis 入门&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;redis.io&#x2F;docs&#x2F;data-types&#x2F;&quot;&gt;Redis Data Types&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;pdai.tech&#x2F;md&#x2F;db&#x2F;nosql-redis&#x2F;db-redis-x-cache.html&quot;&gt;Redis 缓存问题：一致性, 穿击, 穿透, 雪崩, 污染等&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tobebetterjavaer.com&#x2F;sidebar&#x2F;sanfene&#x2F;redis.html&quot;&gt;Redis 概览&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;directly-inspired&quot;&gt;Directly Inspired&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;N&#x2F;A&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;references-for-references&quot;&gt;References for References&lt;&#x2F;h2&gt;
+&lt;blockquote&gt;
 &lt;p&gt;A snippet of how I use it with Django (a few years ago)&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
 &lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#282c34;color:#dcdfe4;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#61afef;&quot;&gt;image_detail&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;request&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;image_id&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;slug&lt;&#x2F;span&gt;&lt;span&gt;):
 &lt;&#x2F;span&gt;&lt;span&gt;    image &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;get_object_or_404&lt;&#x2F;span&gt;&lt;span&gt;(Image, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;id&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;image_id, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;slug&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;slug)
 &lt;&#x2F;span&gt;&lt;span&gt;
@@ -1730,11 +1779,9 @@ TODO&lt;&#x2F;li&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;render&lt;&#x2F;span&gt;&lt;span&gt;(request,
 &lt;&#x2F;span&gt;&lt;span&gt;                &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;#39;images&#x2F;image&#x2F;detail.html&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;,
 &lt;&#x2F;span&gt;&lt;span&gt;                { &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;#39;section&amp;#39;    &lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;#39;images&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;,
-&lt;&#x2F;span&gt;&lt;span&gt;                  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;#39;image_inst&amp;#39; &lt;&#x2F;span&gt;&lt;span&gt;: image,
-&lt;&#x2F;span&gt;&lt;span&gt;                  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;#39;total_views&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;: total_views })
+&lt;&#x2F;span&gt;&lt;span&gt;                    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;#39;image_inst&amp;#39; &lt;&#x2F;span&gt;&lt;span&gt;: image,
+&lt;&#x2F;span&gt;&lt;span&gt;                    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;#39;total_views&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;: total_views })
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">
