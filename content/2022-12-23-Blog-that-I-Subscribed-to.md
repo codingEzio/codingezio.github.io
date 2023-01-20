@@ -52,13 +52,16 @@ description = "Thoughts from interesting and thoughtful human beings"
 - [困而学之](https://caminodetexas.substack.com/archive)
 - [潮流周刊](https://weekly.tw93.fun/posts/01-%E5%AE%89%E5%90%89%E9%BB%84%E6%98%8F)
 
-### More Than Blogs
+### More Than Blog
 
 - [Projects by Tom Goldstein](https://www.cs.umd.edu/~tomg/project/)
 - [Knight Lab Studio](https://studio.knightlab.com/)
 
 ### Beyond Blog
 
+- [Aeon](https://aeon.co/)
+- [Psyche](https://psyche.co/)
+- [Nautilus](https://nautil.us/)
 - [Longreads](https://longreads.com/)
 
 -----
