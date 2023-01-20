@@ -20,4 +20,10 @@
 </span><span style=color:#5c6370;># $ rsync -v -e ssh jerry@openbsd.nixcraft.in:~/webroot.txt /tmp
 </span><span style=color:#5c6370;># $ rsync -v -e ssh root@1.2.3.4:/root/dl_vids/ ~/Desktop/vids/
 </span><span style=color:#e06c75;>rsync -v -e</span><span> ssh USERNAME@SERVER_IP:PATH_TO_DIR_OR_FILE LOCAL_DIR_PATH
+</span></code></pre><h3 id=increase-ssh-connection-timeout>Increase SSH Connection Timeout</h3><blockquote><p><a href=https://web.archive.org/web/20200909024011/https://www.tecmint.com/increase-ssh-connection-timeout/>Increase SSH Connection Timeout in Linux</a></blockquote><pre class=language-bash data-lang=bash style=background-color:#282c34;color:#dcdfe4;><code class=language-bash data-lang=bash><span style=color:#5c6370;># ClientAliveInterval 3600
+</span><span style=color:#5c6370;># ClientAliveCountMax 3
+</span><span style=color:#e06c75;>vim</span><span> /etc/ssh/sshd_config
+</span><span>
+</span><span style=color:#5c6370;># Reload
+</span><span style=color:#e06c75;>systemctl</span><span> reload sshd
 </span></code></pre></article><footer role=contentinfo><hr><small>Built with <a href=https://www.getzola.org/>Zola</a> using <a href=https://www.getzola.org/themes/lightspeed/>Lightspeed ⚡️</a>.<br> </small></footer></main>

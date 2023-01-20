@@ -11665,6 +11665,17 @@ look carefully you can find problems in all writers. And that should give you gr
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# $ rsync -v -e ssh root@1.2.3.4:&#x2F;root&#x2F;dl_vids&#x2F; ~&#x2F;Desktop&#x2F;vids&#x2F;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;rsync -v -e&lt;&#x2F;span&gt;&lt;span&gt; ssh USERNAME@SERVER_IP:PATH_TO_DIR_OR_FILE LOCAL_DIR_PATH
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;increase-ssh-connection-timeout&quot;&gt;Increase SSH Connection Timeout&lt;&#x2F;h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20200909024011&#x2F;https:&#x2F;&#x2F;www.tecmint.com&#x2F;increase-ssh-connection-timeout&#x2F;&quot;&gt;Increase SSH Connection Timeout in Linux&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#282c34;color:#dcdfe4;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# ClientAliveInterval 3600
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# ClientAliveCountMax 3
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;vim&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;etc&#x2F;ssh&#x2F;sshd_config
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# Reload
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;systemctl&lt;&#x2F;span&gt;&lt;span&gt; reload sshd
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">
