@@ -5,8 +5,97 @@
 	<link href="https://codingezio.github.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://codingezio.github.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2023-01-18T00:00:00+00:00</updated>
+	<updated>2023-01-20T00:00:00+00:00</updated>
 	<id>https://codingezio.github.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>On C++</title>
+		<published>2023-01-20T00:00:00+00:00</published>
+		<updated>2023-01-20T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://codingezio.github.io/on-cpp/" type="text/html"/>
+		<id>https://codingezio.github.io/on-cpp/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;Honestly I do not have the proper use case for C++, but it&#x27;s always good to know the basics and it&#x27;s quite handy once you are digging deep in the field of &lt;em&gt;Computer Science&lt;&#x2F;em&gt;. I do know the bare minimum of C++ in the process of translating a tiny C++ book&lt;sup&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;codingEzio&#x2F;translation_book_cpp_for_py_dev&quot;&gt;C++ for Python Programmers&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h2 id=&quot;c&quot;&gt;&lt;em&gt;C++&lt;&#x2F;em&gt;&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=u_ij0YNkFUs&quot;&gt;C++20: C++ at 40 - Bjarne Stroustrup - CppCon 2019&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;carbon&quot;&gt;&lt;em&gt;Carbon&lt;&#x2F;em&gt;&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;carbon-language&#x2F;carbon-lang&quot;&gt;carbon-language&#x2F;carbon-lang&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=omrY53kbVoA&quot;&gt;Carbon Language: An Experimental Successor to C++&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=9Y2ivB8VaIs&quot;&gt;Carbon Language: Syntax and Trade-offs&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>On Tech Talk</title>
+		<published>2023-01-20T00:00:00+00:00</published>
+		<updated>2023-01-20T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://codingezio.github.io/on-tech-talk/" type="text/html"/>
+		<id>https://codingezio.github.io/on-tech-talk/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;I was going to use the phrase &lt;em&gt;dev talk&lt;&#x2F;em&gt;, but eventually I chose the phrase &lt;em&gt;Tech Talk&lt;&#x2F;em&gt; because &lt;a href=&quot;https:&#x2F;&#x2F;developer.apple.com&#x2F;tech-talks&#x2F;&quot;&gt;how it was used&lt;&#x2F;a&gt; on the Apple Developer website.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h2 id=&quot;talk&quot;&gt;Talk&lt;&#x2F;h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I havn&#x27;t found a good way to incorporate these videos to my relevant posts, so they&#x27;ll just stay here for the moment.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h3 id=&quot;algorithm&quot;&gt;Algorithm&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=sAjkAz75jis&quot;&gt;Coding Interview in 16 Minutes&lt;&#x2F;a&gt; &lt;small&gt;(mostly focused on Algorithms)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=2MXyNS33t2k&quot;&gt;Better Algorithm Intuition&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=owcvg2YZ7Y8&quot;&gt;Fast By Default: Algorithmic Performance Optimization in Practice&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;concurrency&quot;&gt;Concurrency&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=NLaeCFr_FlI&quot;&gt;Async&#x2F;Awaiting Production&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=0kXaLh8Fz3k&quot;&gt;Thinking Outside the GIL with AsyncIO and Multiprocessing - PyCon 2018&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;diving-deep&quot;&gt;Diving Deep&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=1SqRRrmQHx0&quot;&gt;Hacking the CPython Interpreter | SciPy 2016&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;misc&quot;&gt;Misc&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=RfvL_423a-I&quot;&gt;AWS re:Invent 2022 - Keynote with Dr. Werner Vogels&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;hub&quot;&gt;Hub&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;coding-tech&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;@CodingTech&#x2F;videos&quot;&gt;&lt;em&gt;Coding Tech&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Tons of interesting topics to explore, but please note that not all of them hold the same quality as some are downright &lt;em&gt;bad&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h3 id=&quot;gdc-programming-talks&quot;&gt;GDC &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;playlist?list=PL2e4mYbwSTbaw1l65rE0Gv6_B9ctOzYyW&quot;&gt;&lt;em&gt;Programming Talks&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Annual &lt;em&gt;&lt;strong&gt;G&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt;ame &lt;em&gt;&lt;strong&gt;D&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt;evelopers &lt;em&gt;&lt;strong&gt;C&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt;onference&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h3 id=&quot;goto-conferences&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;@GOTO-&#x2F;videos&quot;&gt;&lt;em&gt;GOTO Conferences&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I do not have a proper summarization for it, so here&#x27;s a &lt;a href=&quot;https:&#x2F;&#x2F;gotocon.com&#x2F;aboutjaoo&#x2F;&quot;&gt;quote&lt;&#x2F;a&gt; from &lt;a href=&quot;https:&#x2F;&#x2F;gotocon.com&quot;&gt;gotocon.com&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;q&gt;&lt;em&gt;The target audience for GOTO conferences are software developers, IT architects and project managers. GOTO Aarhus is an annual event in Denmark which attracts more than 1300 participants and the first GOTO Copenhagen will be launched May, 2011.&lt;&#x2F;em&gt;&lt;&#x2F;q&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Toolset - imagemagick</title>
+		<published>2023-01-20T00:00:00+00:00</published>
+		<updated>2023-01-20T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://codingezio.github.io/on-visual-effect/" type="text/html"/>
+		<id>https://codingezio.github.io/on-visual-effect/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;Firstly, I do not have any domain knowledge around this field. I&#x27;m just a bit interested in it, both for the AI-oriented future and the wish of creating my own &lt;small&gt;(the DIY aspect)&lt;&#x2F;small&gt;.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h2 id=&quot;the-talk&quot;&gt;The Talk&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=Z8AAX-ENWvQ&quot;&gt;The Secrets of Photorealism&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;the-future&quot;&gt;The Future&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=YX5AoaWrowY&quot;&gt;Why THIS is the Future of Imagery&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>Toolset - imagemagick</title>
 		<published>2023-01-18T00:00:00+00:00</published>
@@ -1473,7 +1562,7 @@ They are &lt;em&gt;watchers of the future&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;ul&gt;
 &lt;h4 id=&quot;concepts-and-implementations&quot;&gt;Concepts and Implementations&lt;&#x2F;h4&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=Utf-A4rODH8&quot;&gt;Building a container from scratch in Go&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=Utf-A4rODH8&quot;&gt;Building a Container from Scratch in Go&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;cesarvr.github.io&#x2F;post&#x2F;2018-05-22-create-containers&#x2F;&quot;&gt;Creating Your Own Containers in C&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h4 id=&quot;beyond-container&quot;&gt;Beyond Container&lt;&#x2F;h4&gt;
@@ -4516,27 +4605,23 @@ Linear algebra, including vector spaces, linear transformations, and matrix oper
 &lt;blockquote&gt;
 &lt;p&gt;I might open a new series about this, or simply adding the content in here.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
-&lt;h2 id=&quot;interesting-resources-i-m-looking-forward-to-digest&quot;&gt;Interesting Resources I&#x27;m Looking Forward to &lt;em&gt;Digest&lt;&#x2F;em&gt;&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;resources&quot;&gt;Resources&lt;&#x2F;h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Note that I would gradually shrink this list as I&#x27;m learning more about this. Just listing resources or maybe categorizing them don&#x27;t really help much. &lt;em&gt;F&lt;&#x2F;em&gt; to the Youtubers and bloggers that does this &lt;small&gt;(dumb opinion, ignore if you don&#x27;t like it)&lt;&#x2F;small&gt;.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
+&lt;h3 id=&quot;prior-knowledge&quot;&gt;Prior Knowledge&lt;&#x2F;h3&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;All the concepts you need to know around and about &lt;em&gt;System Design&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;dev.to&#x2F;karanpratapsingh&#x2F;system-design-the-complete-course-10fo#tcp-and-udp&quot;&gt;System Design: The complete course - DEV Community 👩‍💻👨‍💻&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;alexxubyte&quot;&gt;Alex Xu (@alexxubyte)&lt;&#x2F;a&gt; on Twitter&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;interview-oriented&quot;&gt;Interview-oriented&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=Y93BGebBwEE&quot;&gt;System Design Interview in 9 Minutes - YouTube&lt;&#x2F;a&gt; by &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;@jasonmel&quot;&gt;jasonmel&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=28n0DVP3U14&quot;&gt;系统设计怎么考？系统设计题怎么答？&lt;&#x2F;a&gt; by &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;@bittigerbittigerofficialch1523&quot;&gt;BigTiger&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;systematic-course&quot;&gt;Systematic Course&lt;&#x2F;h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;dev.to&#x2F;karanpratapsingh&#x2F;system-design-the-complete-course-10fo#tcp-and-udp&quot;&gt;System Design: The complete course - DEV Community 👩‍💻👨‍💻&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;The almighty &lt;em&gt;Alex Xu&lt;&#x2F;em&gt; who does an amazing job explaing complex subjects&lt;&#x2F;p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;alexxubyte&quot;&gt;Alex Xu (@alexxubyte)&lt;&#x2F;a&gt; on Twitter&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;And a paid platform that offers really good courses on various topics&lt;&#x2F;p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;i.e. &lt;a href=&quot;https:&#x2F;&#x2F;www.educative.io&#x2F;&quot;&gt;Educative: Interactive Courses for Software Developers&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Paid platform &lt;a href=&quot;https:&#x2F;&#x2F;www.educative.io&#x2F;&quot;&gt;Educative.io&lt;&#x2F;a&gt; that offers really good courses on various topics. Further cleanup needed as five is still too many to choose from!&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.educative.io&#x2F;courses&#x2F;grokking-adv-system-design-intvw&quot;&gt;Grokking the Advanced System Design Interview&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
@@ -4544,8 +4629,6 @@ Linear algebra, including vector spaces, linear transformations, and matrix oper
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.educative.io&#x2F;path&#x2F;scalability-system-design&quot;&gt;Scalability &amp;amp; System Design for Developers&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.educative.io&#x2F;path&#x2F;deep-dive-into-system-design-interview&quot;&gt;Deep Dive into System Design Interview&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.educative.io&#x2F;courses&#x2F;grokking-modern-system-design-interview-for-engineers-managers&quot;&gt;Grokking Modern System Design Interview for Engineers &amp;amp; Managers&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </content>
 	</entry>

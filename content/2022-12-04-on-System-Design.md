@@ -15,23 +15,26 @@ description = "I wish I knew about this when I started learning to program"
 
 > I might open a new series about this, or simply adding the content in here.
 
-## Interesting Resources I'm Looking Forward to *Digest*
+## Resources
 
 > Note that I would gradually shrink this list as I'm learning more about this. Just listing resources or maybe categorizing them don't really help much. *F* to the Youtubers and bloggers that does this <small>(dumb opinion, ignore if you don't like it)</small>.
 
-- All the concepts you need to know around and about *System Design*
+### Prior Knowledge
 
-  > [System Design: The complete course - DEV Community 👩‍💻👨‍💻](https://dev.to/karanpratapsingh/system-design-the-complete-course-10fo#tcp-and-udp)
+- [System Design: The complete course - DEV Community 👩‍💻👨‍💻](https://dev.to/karanpratapsingh/system-design-the-complete-course-10fo#tcp-and-udp)
+- [Alex Xu (@alexxubyte)](https://twitter.com/alexxubyte) on Twitter
 
-- The almighty *Alex Xu* who does an amazing job explaing complex subjects
+### Interview-oriented
 
-  > [Alex Xu (@alexxubyte)](https://twitter.com/alexxubyte) on Twitter
+- [System Design Interview in 9 Minutes - YouTube](https://www.youtube.com/watch?v=Y93BGebBwEE) by [jasonmel](https://www.youtube.com/@jasonmel)
+- [系统设计怎么考？系统设计题怎么答？](https://www.youtube.com/watch?v=28n0DVP3U14) by [BigTiger](https://www.youtube.com/@bittigerbittigerofficialch1523)
 
-- And a paid platform that offers really good courses on various topics
-  > i.e. [Educative: Interactive Courses for Software Developers](https://www.educative.io/)
+### Systematic Course
 
-  - [Grokking the Advanced System Design Interview](https://www.educative.io/courses/grokking-adv-system-design-intvw)
-  - [Grokking the System Design Interview](https://www.educative.io/courses/grokking-the-system-design-interview)
-  - [Scalability & System Design for Developers](https://www.educative.io/path/scalability-system-design)
-  - [Deep Dive into System Design Interview](https://www.educative.io/path/deep-dive-into-system-design-interview)
-  - [Grokking Modern System Design Interview for Engineers & Managers](https://www.educative.io/courses/grokking-modern-system-design-interview-for-engineers-managers)
+> Paid platform [Educative.io](https://www.educative.io/) that offers really good courses on various topics. Further cleanup needed as five is still too many to choose from!
+
+- [Grokking the Advanced System Design Interview](https://www.educative.io/courses/grokking-adv-system-design-intvw)
+- [Grokking the System Design Interview](https://www.educative.io/courses/grokking-the-system-design-interview)
+- [Scalability & System Design for Developers](https://www.educative.io/path/scalability-system-design)
+- [Deep Dive into System Design Interview](https://www.educative.io/path/deep-dive-into-system-design-interview)
+- [Grokking Modern System Design Interview for Engineers & Managers](https://www.educative.io/courses/grokking-modern-system-design-interview-for-engineers-managers)

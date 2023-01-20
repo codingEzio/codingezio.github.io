@@ -19,7 +19,7 @@ description = "Thoughts, notes and implementations"
 
 #### Concepts and Implementations
 
-- [Building a container from scratch in Go](https://www.youtube.com/watch?v=Utf-A4rODH8)
+- [Building a Container from Scratch in Go](https://www.youtube.com/watch?v=Utf-A4rODH8)
 - [Creating Your Own Containers in C](https://cesarvr.github.io/post/2018-05-22-create-containers/)
 
 #### Beyond Container
