@@ -134,6 +134,31 @@
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# Or     &amp;#39;brew install librsvg&amp;#39;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;rsvg-convert -w&lt;&#x2F;span&gt;&lt;span&gt; 1024&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt; -h&lt;&#x2F;span&gt;&lt;span&gt; 1024 IN.svg&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt; -o&lt;&#x2F;span&gt;&lt;span&gt; OUT.png
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;blur-image&quot;&gt;Blur Image&lt;&#x2F;h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;askubuntu.com&#x2F;questions&#x2F;1002254&#x2F;how-to-blur-an-image-from-command-line&quot;&gt;How to blur an image from command line&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#282c34;color:#dcdfe4;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;convert&lt;&#x2F;span&gt;&lt;span&gt; INPUT.jpg&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt; -blur&lt;&#x2F;span&gt;&lt;span&gt; 0x8 OUTPUT.jpg
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;format-conversion&quot;&gt;Format Conversion&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;icon&quot;&gt;Icon&lt;&#x2F;h4&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#282c34;color:#dcdfe4;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;convert&lt;&#x2F;span&gt;&lt;span&gt; INPUT.jpg&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt; -scale&lt;&#x2F;span&gt;&lt;span&gt; 128 OUTPUT.ico
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;convert&lt;&#x2F;span&gt;&lt;span&gt; INPUT.jpg&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt; -scale&lt;&#x2F;span&gt;&lt;span&gt; 256 OUTPUT.ico
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;convert&lt;&#x2F;span&gt;&lt;span&gt; INPUT.jpg&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt; -scale&lt;&#x2F;span&gt;&lt;span&gt; 512 OUTPUT.ico
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h4 id=&quot;misc&quot;&gt;Misc&lt;&#x2F;h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;e.g. &lt;code&gt;.webp&lt;&#x2F;code&gt; to &lt;code&gt;.jpg&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#282c34;color:#dcdfe4;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;convert&lt;&#x2F;span&gt;&lt;span&gt; INPUT.webp OUTPUT.jpg
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;get-image-resolution&quot;&gt;Get Image Resolution&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#282c34;color:#dcdfe4;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;identify -verbose&lt;&#x2F;span&gt;&lt;span&gt; INPUT.jpg  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# Extremely detailed meta info
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;identify&lt;&#x2F;span&gt;&lt;span&gt;          INPUT.jpg  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# Simplified overview
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;identify&lt;&#x2F;span&gt;&lt;span&gt; INPUT.jpg &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;| &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;awk &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;#39;{print $3}&amp;#39; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# Extension
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;identify&lt;&#x2F;span&gt;&lt;span&gt; INPUT.jpg &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;| &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;awk &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;#39;{print $2}&amp;#39; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# Resolution (AxB)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">
@@ -1122,8 +1147,30 @@ multiple object references could reference to 1 object&lt;&#x2F;p&gt;
 		<link rel="alternate" href="https://codingezio.github.io/toolset-ffmpeg/" type="text/html"/>
 		<id>https://codingezio.github.io/toolset-ffmpeg/</id>
 		<content type="html">&lt;blockquote&gt;
-&lt;p&gt;Either put these scripts into your shell configuration file like &lt;code&gt;.zshrc&lt;&#x2F;code&gt; or save it as &lt;code&gt;FILE.sh&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Either put these scripts into your shell configuration file like &lt;code&gt;.zshrc&lt;&#x2F;code&gt; or save it as &lt;code&gt;FILE.sh&lt;&#x2F;code&gt;. Note that all of these were only tested on macOS as of the moment.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
+&lt;h3 id=&quot;format-conversion&quot;&gt;Format Conversion&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;music&quot;&gt;Music&lt;&#x2F;h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;e.g. &lt;code&gt;.wma&lt;&#x2F;code&gt; to &lt;code&gt;.mp3&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#282c34;color:#dcdfe4;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# Convert ONE
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;ffmpeg -i&lt;&#x2F;span&gt;&lt;span&gt; INPUT.wma&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt; -ab&lt;&#x2F;span&gt;&lt;span&gt; 192 OUTPUT.mp3
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# Convert MORE THAN ONE
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;for&lt;&#x2F;span&gt;&lt;span&gt; file &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;in *&lt;&#x2F;span&gt;&lt;span&gt;.wma&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;do &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;ffmpeg -i &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;quot;${&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;file&lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;}&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt; -ab&lt;&#x2F;span&gt;&lt;span&gt; 192 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;quot;${&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;file&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;.wma&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;.mp3}&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;done
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h4 id=&quot;subtitle&quot;&gt;Subtitle&lt;&#x2F;h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;e.g. &lt;code&gt;.vtt&lt;&#x2F;code&gt; to &lt;code&gt;.ass&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#282c34;color:#dcdfe4;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;ffmpeg -i&lt;&#x2F;span&gt;&lt;span&gt; INPUT.vtt OUTPUT.ass
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;embed-subtitle-into-video&quot;&gt;Embed Subtitle into Video&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#282c34;color:#dcdfe4;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;ffmpeg -i&lt;&#x2F;span&gt;&lt;span&gt; INPUT_VID.mp4&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt; -vf&lt;&#x2F;span&gt;&lt;span&gt; ass=INPUT_SUB.ass OUTPUT_WITH_SUB.mp4
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;categorize-videos-based-on-resolutions&quot;&gt;Categorize Videos based on Resolutions&lt;&#x2F;h3&gt;
 &lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#282c34;color:#dcdfe4;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# 第三方命令进阶 :: ffmpeg - 归类视频 (横屏,竖屏,1:1)
 &lt;&#x2F;span&gt;&lt;span&gt;
@@ -11503,6 +11550,154 @@ look carefully you can find problems in all writers. And that should give you gr
 &lt;h4 id=&quot;snippet-3-4&quot;&gt;Snippet 3.4&lt;&#x2F;h4&gt;
 &lt;h4 id=&quot;snippet-3-5&quot;&gt;Snippet 3.5&lt;&#x2F;h4&gt;
 &lt;h4 id=&quot;snippet-3-6&quot;&gt;Snippet 3.6&lt;&#x2F;h4&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>On Physical Archiving</title>
+		<published>2021-04-18T00:00:00+00:00</published>
+		<updated>2021-04-18T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://codingezio.github.io/on-physical-archiving/" type="text/html"/>
+		<id>https://codingezio.github.io/on-physical-archiving/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;The type of medium you could touch and feel :)&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h2 id=&quot;before-paper&quot;&gt;Before Paper&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;ollydbg.de&#x2F;Paperbak&#x2F;&quot;&gt;PaperBack&lt;&#x2F;a&gt; &lt;small&gt;(Windows only)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;paper&quot;&gt;Paper&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;format&quot;&gt;Format&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.codinghorror.com&#x2F;the-paper-data-storage-option&#x2F;&quot;&gt;The Paper Data Storage Option&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;type&quot;&gt;Type&lt;&#x2F;h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;It is estimated that acid-free papers could last for 100 years. As for cheap papers I used daily, nope, ~10 years if stored CORRECTLY.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Acid-free_paper&quot;&gt;Acid-free Paper&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Paper_data_storage&quot;&gt;Paper Data Storage&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>On Startup Apps</title>
+		<published>2021-04-18T00:00:00+00:00</published>
+		<updated>2021-04-18T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://codingezio.github.io/on-startup-apps/" type="text/html"/>
+		<id>https://codingezio.github.io/on-startup-apps/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;Automatically open apps when boot up :) I&#x27;m not talking about the terminology &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Startup_company&quot;&gt;&lt;em&gt;Startup&lt;&#x2F;em&gt; company&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h2 id=&quot;macos&quot;&gt;macOS&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;by-gui&quot;&gt;By GUI&lt;&#x2F;h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;macOS Monterey 12.6.2&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;Open &lt;em&gt;System Preferences&lt;&#x2F;em&gt; &lt;small&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Open &lt;em&gt;Users &amp;amp; Groups&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Click &lt;em&gt;Login Items&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Add relevant apps to the list&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h2 id=&quot;windows&quot;&gt;Windows&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;by-moving-shortcuts&quot;&gt;By Moving Shortcuts&lt;&#x2F;h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20200820140228&#x2F;https:&#x2F;&#x2F;helpdeskgeek.com&#x2F;windows-10&#x2F;how-to-access-the-windows-10-startup-folder&#x2F;&quot;&gt;How to Access the Windows 10 Startup Folder&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;Find the folder&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#282c34;color:#dcdfe4;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# ALl Users versus Current User
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# CMD + R
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;Shell:common&lt;&#x2F;span&gt;&lt;span&gt; startup
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;Shell:startup
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# Path for reference
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;C:&lt;&#x2F;span&gt;&lt;span style=&quot;color:#56b6c2;&quot;&gt;\P&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;rogramData&lt;&#x2F;span&gt;&lt;span style=&quot;color:#56b6c2;&quot;&gt;\M&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;icrosoft&lt;&#x2F;span&gt;&lt;span style=&quot;color:#56b6c2;&quot;&gt;\W&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;indows&lt;&#x2F;span&gt;&lt;span style=&quot;color:#56b6c2;&quot;&gt;\S&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;tart&lt;&#x2F;span&gt;&lt;span&gt; Menu&lt;&#x2F;span&gt;&lt;span style=&quot;color:#56b6c2;&quot;&gt;\P&lt;&#x2F;span&gt;&lt;span&gt;rograms&lt;&#x2F;span&gt;&lt;span style=&quot;color:#56b6c2;&quot;&gt;\S&lt;&#x2F;span&gt;&lt;span&gt;tartUp
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;C:&lt;&#x2F;span&gt;&lt;span style=&quot;color:#56b6c2;&quot;&gt;\U&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;sers&lt;&#x2F;span&gt;&lt;span style=&quot;color:#56b6c2;&quot;&gt;\U&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;SER_NAME&lt;&#x2F;span&gt;&lt;span style=&quot;color:#56b6c2;&quot;&gt;\A&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;ppData&lt;&#x2F;span&gt;&lt;span style=&quot;color:#56b6c2;&quot;&gt;\R&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;oaming&lt;&#x2F;span&gt;&lt;span style=&quot;color:#56b6c2;&quot;&gt;\M&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;icrosoft&lt;&#x2F;span&gt;&lt;span style=&quot;color:#56b6c2;&quot;&gt;\W&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;indows&lt;&#x2F;span&gt;&lt;span style=&quot;color:#56b6c2;&quot;&gt;\S&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;tart&lt;&#x2F;span&gt;&lt;span&gt; Menu&lt;&#x2F;span&gt;&lt;span style=&quot;color:#56b6c2;&quot;&gt;\P&lt;&#x2F;span&gt;&lt;span&gt;rograms&lt;&#x2F;span&gt;&lt;span style=&quot;color:#56b6c2;&quot;&gt;\S&lt;&#x2F;span&gt;&lt;span&gt;tartup
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;Copy the shortcut of your application into the folder just opened&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Toolset - screen</title>
+		<published>2021-04-18T00:00:00+00:00</published>
+		<updated>2021-04-18T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://codingezio.github.io/on-vps/" type="text/html"/>
+		<id>https://codingezio.github.io/on-vps/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;VPS: Virtual Private Server&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h3 id=&quot;keep-process-running-at-background&quot;&gt;Keep Process Running at Background&lt;&#x2F;h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Even after ending the SSH session. Like &lt;a href=&quot;https:&#x2F;&#x2F;askubuntu.com&#x2F;a&#x2F;8657&#x2F;1650652&quot;&gt;how to keep processes running after ending ssh session&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#282c34;color:#dcdfe4;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# There were also other options like nohup, tmux etc.
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# Run &amp;#39;screen&amp;#39; before you wanna do anything
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# 1. if you only need one task being executed at the background
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;screen               &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# enter the environment
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# [ctrl+A], [ctrl+D] # exit the environment
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;screen -r            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# re-enter the environment
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# 2. if you need to run multiple tasks at the background
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;screen -S&lt;&#x2F;span&gt;&lt;span&gt; task1      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# name the env as &amp;#39;task1&amp;#39; then enter the env
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# [ctrl+A], [ctrl+D] # exit the environment
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;screen -r&lt;&#x2F;span&gt;&lt;span&gt; task1      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# re-enter the environment named &amp;#39;task1&amp;#39;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;synchroize-files-using-rsync&quot;&gt;Synchroize Files using &lt;code&gt;rsync&lt;&#x2F;code&gt;&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#282c34;color:#dcdfe4;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# Transfer files FROM local TO your server
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# $ rsync -v -e ssh &#x2F;www&#x2F;backup.tar.gz jerry@openbsd.nixcraft.in:~
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# $ rsync -v -e ssh ~&#x2F;.zshrc root@1.2.3.4:~
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;rsync -v -e&lt;&#x2F;span&gt;&lt;span&gt; ssh PATH_TO_DIR_OR_FILE USERNAME@SERVER_IP:SERVER_DIR_PATH
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# Transfer files FROM your server TO your local machine
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# $ rsync -v -e ssh jerry@openbsd.nixcraft.in:~&#x2F;webroot.txt &#x2F;tmp
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# $ rsync -v -e ssh root@1.2.3.4:&#x2F;root&#x2F;dl_vids&#x2F; ~&#x2F;Desktop&#x2F;vids&#x2F;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;rsync -v -e&lt;&#x2F;span&gt;&lt;span&gt; ssh USERNAME@SERVER_IP:PATH_TO_DIR_OR_FILE LOCAL_DIR_PATH
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Toolset - screen</title>
+		<published>2021-04-18T00:00:00+00:00</published>
+		<updated>2021-04-18T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://codingezio.github.io/toolset-adb/" type="text/html"/>
+		<id>https://codingezio.github.io/toolset-adb/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;adb: Android Debug Bridge&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h3 id=&quot;tooling&quot;&gt;Tooling&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;adb&lt;&#x2F;code&gt;: &lt;code&gt;brew install android-platform-tools&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;adb-sync&lt;&#x2F;code&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;SelfAdjointOperator&#x2F;better-adb-sync&quot;&gt;SelfAdjointOperator&#x2F;better-adb-sync&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;connect&quot;&gt;Connect&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#282c34;color:#dcdfe4;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# Connect via USB cable
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;adb&lt;&#x2F;span&gt;&lt;span&gt; devices
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# Connect via WiFi after connecting at least once via cable
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;adb&lt;&#x2F;span&gt;&lt;span&gt; tcp-ip 5555
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;adb&lt;&#x2F;span&gt;&lt;span&gt; connect ANDROID_PHONE_IP:5555
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;put-files-into-android-phone&quot;&gt;Put Files into Android Phone&lt;&#x2F;h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Trivial syntax for whether copy the folder or just the files&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#282c34;color:#dcdfe4;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;adb&lt;&#x2F;span&gt;&lt;span&gt; push host1&#x2F;       &#x2F;sdcard&#x2F;tmp&#x2F; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# -&amp;gt; &#x2F;..&#x2F;tmp&#x2F;host1&#x2F;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;adb&lt;&#x2F;span&gt;&lt;span&gt; push host1&#x2F;.      &#x2F;sdcard&#x2F;tmp&#x2F; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# -&amp;gt; &#x2F;..&#x2F;tmp&#x2F;{all-files-under-host1}
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;adb&lt;&#x2F;span&gt;&lt;span&gt; push host1&#x2F;a.txt  &#x2F;sdcard&#x2F;tmp&#x2F; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# -&amp;gt; &#x2F;..&#x2F;tmp&#x2F;a.txt
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">

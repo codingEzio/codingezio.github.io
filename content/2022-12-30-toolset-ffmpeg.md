@@ -3,7 +3,37 @@ title = "Toolset - ffmpeg"
 description = "ffmpeg usage"
 +++
 
-> Either put these scripts into your shell configuration file like `.zshrc` or save it as `FILE.sh`
+> Either put these scripts into your shell configuration file like `.zshrc` or save it as `FILE.sh`. Note that all of these were only tested on macOS as of the moment.
+
+### Format Conversion
+
+#### Music
+
+> e.g. `.wma` to `.mp3`
+
+```bash
+# Convert ONE
+ffmpeg -i INPUT.wma -ab 192 OUTPUT.mp3
+
+# Convert MORE THAN ONE
+for file in *.wma;
+    do ffmpeg -i "${file}" -ab 192 "${file/.wma/.mp3}";
+done
+```
+
+#### Subtitle
+
+> e.g. `.vtt` to `.ass`
+
+```bash
+ffmpeg -i INPUT.vtt OUTPUT.ass
+```
+
+### Embed Subtitle into Video
+
+```bash
+ffmpeg -i INPUT_VID.mp4 -vf ass=INPUT_SUB.ass OUTPUT_WITH_SUB.mp4
+```
 
 ### Categorize Videos based on Resolutions
 

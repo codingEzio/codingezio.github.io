@@ -5,7 +5,6 @@ description = "Food production in the future"
 
 Source: [Food Security - A Growing Dilemma | DW Documentary](https://www.youtube.com/watch?v=wu7PjKawjwI)
 
-
 Climate change affects everything, including the one we are so depended on, Food. As you all know, about half (reference needed) the carbon emission is produced during the food producton (it's just one part of the giant framework, like transportation would also be included).
 
 Different people face different kinds of problems.

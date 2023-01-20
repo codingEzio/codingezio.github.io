@@ -13,4 +13,3 @@ Some fun facts about the theme:
 * Now with SEO!
 
 For more information check out the [ReadMe on Github](https://github.com/carpetscheme/lightspeed).
-
