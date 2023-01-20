@@ -1,5 +1,5 @@
 +++
-title = "Blogs that I Subscribed to"
+title = "Blog that I Subscribed to"
 description = "Thoughts from interesting and thoughtful human beings"
 +++
 

@@ -7,12 +7,19 @@ description = "All things that related to concurrency, especially Java"
 
 ## References
 
-> These were the core references, while it's also the learning materials
+### Learning Material
 
+- [Introduction to Concurrency](https://cs.lmu.edu/~ray/notes/introconcurrency/)
 - [30 天介紹 Java 的 Thread](https://ithelp.ithome.com.tw/users/20103456/ironman/1766)
 - [Java 并发知识体系详解](https://pdai.tech/md/java/thread/java-thread-x-overview.html)
+
+### Interview-oriented
+
 - Java 并发常见面题总结: [*上*](https://javaguide.cn/java/concurrent/java-concurrent-questions-01.html), [*中*](https://javaguide.cn/java/concurrent/java-concurrent-questions-02.html), [*下*](https://javaguide.cn/java/concurrent/java-concurrent-questions-03.html)
-- [Roman Lipovsky / awesome-concurrency · GitLab](https://gitlab.com/Lipovsky/awesome-concurrency)
+
+### More
+
+- [awesome-concurrency / Roman Lipovsky](https://gitlab.com/Lipovsky/awesome-concurrency)
 
 ## Note
 

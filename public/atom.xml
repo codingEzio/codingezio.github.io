@@ -8,6 +8,27 @@
 	<updated>2023-01-20T00:00:00+00:00</updated>
 	<id>https://codingezio.github.io/atom.xml</id>
 	<entry xml:lang="en">
+		<title>On Aaron Swartz</title>
+		<published>2023-01-20T00:00:00+00:00</published>
+		<updated>2023-01-20T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://codingezio.github.io/on-aaron-swartz/" type="text/html"/>
+		<id>https://codingezio.github.io/on-aaron-swartz/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;Unlike other posts that slowly turns the references into my own words, this post would keep the references only, as the person I&#x27;m talking about &lt;em&gt;Aaron Swartz&lt;&#x2F;em&gt; has his own blog and a documentary about him.&lt;&#x2F;p&gt;
+&lt;p&gt;His thought greatly influenced me how I see this world, Kudos to the hero &lt;em&gt;Aaron&lt;&#x2F;em&gt;!&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h2 id=&quot;him&quot;&gt;Him&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;www.aaronsw.com&#x2F;weblog&#x2F;&quot;&gt;Raw Thought: Aaron Swartz&#x27;s Weblog&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;about-him&quot;&gt;About Him&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=9vz06QO3UkQ&quot;&gt;The Internet&#x27;s Own Boy: The Story of Aaron Swartz&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;weekly.dhk.org&#x2F;p&#x2F;issue-83-aaron-swartz&quot;&gt;Aaron Swartz 逝世十年 世界更形封閉 - DHK dao&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
 		<title>On C++</title>
 		<published>2023-01-20T00:00:00+00:00</published>
 		<updated>2023-01-20T00:00:00+00:00</updated>
@@ -1459,11 +1480,11 @@ multiple object references could reference to 1 object&lt;&#x2F;p&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">
-		<title>Blogs that I Subscribed to</title>
+		<title>Blog that I Subscribed to</title>
 		<published>2022-12-23T00:00:00+00:00</published>
 		<updated>2022-12-23T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://codingezio.github.io/blogs-that-i-subscribed-to/" type="text/html"/>
-		<id>https://codingezio.github.io/blogs-that-i-subscribed-to/</id>
+		<link rel="alternate" href="https://codingezio.github.io/blog-that-i-subscribed-to/" type="text/html"/>
+		<id>https://codingezio.github.io/blog-that-i-subscribed-to/</id>
 		<content type="html">&lt;blockquote&gt;
 &lt;p&gt;Note that this post is more like public bookmarks for myself. It seemed that merely saving these as bookmarks weren&#x27;t enough, whether they are which were saved in the browser, or services like &lt;a href=&quot;https:&#x2F;&#x2F;raindrop.io&#x2F;&quot;&gt;Raindrop.io&lt;&#x2F;a&gt;. For me, I loves to categorize and minimize stuff, but that weren&#x27;t an easy task for me as I need to archive every single one that I might need in the future, yet not too much to cause that &lt;em&gt;paralyzation&lt;&#x2F;em&gt; caused by Information Overload. Also, I did tried convert all these to &lt;em&gt;RSS&lt;&#x2F;em&gt;, unfortunately it became be very hard to get all the old posts which defeats the entire purpose of aggregating them together.&lt;&#x2F;p&gt;
 &lt;p&gt;I need an app to grab all that old posts and provide reasonable options to change the font size and such. Well, &lt;em&gt;&lt;strong&gt;I found none&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt; at the moment. &lt;em&gt;NetNewsWire&lt;&#x2F;em&gt; is an excellent tool to grab the sweet &lt;em&gt;RSS&lt;&#x2F;em&gt; feed, but the limitation of &lt;em&gt;RSS&lt;&#x2F;em&gt; itself stopped me from using it. I either read all of them by opening a bunch of links in the browser, or consuming them in a hub that has all that inside.&lt;&#x2F;p&gt;
@@ -1932,14 +1953,19 @@ TODO&lt;&#x2F;li&gt;
 &lt;p&gt;The materials I used for learning are mostly in Java, whether for the concepts or the examples being used. I would stick to the &lt;em&gt;&lt;u&gt;Java&lt;&#x2F;u&gt; Concurrency&lt;&#x2F;em&gt; at the moment considering it&#x27;s not universal enough. Though I might rewrote this post into something that is language-agnostic in the future.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;h2 id=&quot;references&quot;&gt;References&lt;&#x2F;h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;These were the core references, while it&#x27;s also the learning materials&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
+&lt;h3 id=&quot;learning-material&quot;&gt;Learning Material&lt;&#x2F;h3&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;cs.lmu.edu&#x2F;~ray&#x2F;notes&#x2F;introconcurrency&#x2F;&quot;&gt;Introduction to Concurrency&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;ithelp.ithome.com.tw&#x2F;users&#x2F;20103456&#x2F;ironman&#x2F;1766&quot;&gt;30 天介紹 Java 的 Thread&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;pdai.tech&#x2F;md&#x2F;java&#x2F;thread&#x2F;java-thread-x-overview.html&quot;&gt;Java 并发知识体系详解&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;interview-oriented&quot;&gt;Interview-oriented&lt;&#x2F;h3&gt;
+&lt;ul&gt;
 &lt;li&gt;Java 并发常见面题总结: &lt;a href=&quot;https:&#x2F;&#x2F;javaguide.cn&#x2F;java&#x2F;concurrent&#x2F;java-concurrent-questions-01.html&quot;&gt;&lt;em&gt;上&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;javaguide.cn&#x2F;java&#x2F;concurrent&#x2F;java-concurrent-questions-02.html&quot;&gt;&lt;em&gt;中&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;javaguide.cn&#x2F;java&#x2F;concurrent&#x2F;java-concurrent-questions-03.html&quot;&gt;&lt;em&gt;下&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gitlab.com&#x2F;Lipovsky&#x2F;awesome-concurrency&quot;&gt;Roman Lipovsky &#x2F; awesome-concurrency · GitLab&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;more&quot;&gt;More&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gitlab.com&#x2F;Lipovsky&#x2F;awesome-concurrency&quot;&gt;awesome-concurrency &#x2F; Roman Lipovsky&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h2 id=&quot;note&quot;&gt;Note&lt;&#x2F;h2&gt;
 &lt;blockquote&gt;
@@ -2325,12 +2351,21 @@ TODO&lt;&#x2F;li&gt;
 		<content type="html">&lt;blockquote&gt;
 &lt;p&gt;Currently have no plans to build one as I&#x27;ve already got the macOS laptop to do most of the job. But I might need a guide to build one in the future, maybe to play some games. Down below are the relevant sources I collected for future references&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
-&lt;h3 id=&quot;resources&quot;&gt;Resources&lt;&#x2F;h3&gt;
-&lt;h4 id=&quot;youtube&quot;&gt;YouTube&lt;&#x2F;h4&gt;
+&lt;h2 id=&quot;hardware&quot;&gt;Hardware&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;youtube&quot;&gt;YouTube&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=3ICo9jMqcBE&quot;&gt;A Calming $500 Gaming PC Build 💛&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=QNakbNjdrjk&quot;&gt;4K PC Gaming is Cheap Now! - $1000 Gaming PC Build 2022&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=fuiAJFf0EJI&quot;&gt;This $500 Budget Gaming PC Is AWESOME&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;software&quot;&gt;Software&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;system&quot;&gt;System&lt;&#x2F;h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Tools to help you install operating system on your newly built machine&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;rufus.ie&#x2F;en&#x2F;&quot;&gt;Rufus&lt;&#x2F;a&gt; &lt;em&gt;Create bootable USB drives the easy way&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.ventoy.net&#x2F;en&#x2F;index.html&quot;&gt;Ventoy&lt;&#x2F;a&gt; &lt;em&gt;A New Bootable USB Solution&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </content>
 	</entry>
