@@ -15,6 +15,10 @@ description = "Notes and resources on learning German"
 
 ## Resources
 
+### Text
+
+- [A Review of German Grammar](https://www.dartmouth.edu/~deutsch/Grammatik/Grammatik.html)
+
 ### Video
 
 > Thoughts

@@ -7,6 +7,9 @@ description = "What you can do to reduce climate change"
 
 - [Seth Wynes](https://www.goodreads.com/author/show/19101258.Seth_Wynes)
   - [SOS: What You Can Do to Reduce Climate Change – Simple Actions that Make A Difference](https://www.goodreads.com/book/show/45308834-sos)
+- Relevant articles you should read
+  - [Why Cold Weather Doesn’t Mean Climate Change is Fake](https://www.nationalgeographic.com/environment/article/climate-change-colder-winters-global-warming-polar-vortex)
+  - [It's Cold! Is Global Warming Over?](https://climatekids.nasa.gov/harsh-winter/)
 
 ### Meta Information
 

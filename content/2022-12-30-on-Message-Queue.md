@@ -11,7 +11,9 @@ description = "Know, learn, build and teach"
 
 - [How Can Message Queues Improve Scalability?](https://softwareengineering.stackexchange.com/questions/425190/how-can-message-queues-improve-scalability)
 - [A Dummy’s Guide to Distributed Queues](https://www.freecodecamp.org/news/a-dummys-guide-to-distributed-queues-2cd358d83780/)
-- and my own notes [What the fuck is Message Broker](https://codingezio.github.io/microservice-01-concepts/#what-the-fuck-is-message-broker)
+- [In Which Domains are Message-oriented Middleware like AMQP Useful?](https://stackoverflow.com/questions/2388539/in-which-domains-are-message-oriented-middleware-like-amqp-useful/)
+- [Microservices Communications - Why Switch to Message Queue](https://dev.to/matteojoliveau/microservices-communications-why-you-should-switch-to-message-queues--48ia)
+- and my own notes [What the Fuck is Message Broker](https://codingezio.github.io/microservice-01-concepts/#what-the-fuck-is-message-broker)
 
 ### Architecture
 

@@ -1067,7 +1067,9 @@ multiple object references could reference to 1 object&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;softwareengineering.stackexchange.com&#x2F;questions&#x2F;425190&#x2F;how-can-message-queues-improve-scalability&quot;&gt;How Can Message Queues Improve Scalability?&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.freecodecamp.org&#x2F;news&#x2F;a-dummys-guide-to-distributed-queues-2cd358d83780&#x2F;&quot;&gt;A Dummy’s Guide to Distributed Queues&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;and my own notes &lt;a href=&quot;https:&#x2F;&#x2F;codingezio.github.io&#x2F;microservice-01-concepts&#x2F;#what-the-fuck-is-message-broker&quot;&gt;What the fuck is Message Broker&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;2388539&#x2F;in-which-domains-are-message-oriented-middleware-like-amqp-useful&#x2F;&quot;&gt;In Which Domains are Message-oriented Middleware like AMQP Useful?&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;dev.to&#x2F;matteojoliveau&#x2F;microservices-communications-why-you-should-switch-to-message-queues--48ia&quot;&gt;Microservices Communications - Why Switch to Message Queue&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;and my own notes &lt;a href=&quot;https:&#x2F;&#x2F;codingezio.github.io&#x2F;microservice-01-concepts&#x2F;#what-the-fuck-is-message-broker&quot;&gt;What the Fuck is Message Broker&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h3 id=&quot;architecture&quot;&gt;Architecture&lt;&#x2F;h3&gt;
 &lt;ul&gt;
@@ -1149,6 +1151,13 @@ multiple object references could reference to 1 object&lt;&#x2F;p&gt;
 		<content type="html">&lt;blockquote&gt;
 &lt;p&gt;Either put these scripts into your shell configuration file like &lt;code&gt;.zshrc&lt;&#x2F;code&gt; or save it as &lt;code&gt;FILE.sh&lt;&#x2F;code&gt;. Note that all of these were only tested on macOS as of the moment.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
+&lt;h3 id=&quot;reverse&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;video.stackexchange.com&#x2F;a&#x2F;17739&quot;&gt;Reverse&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;just-the-video&quot;&gt;Just the Video&lt;&#x2F;h4&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#282c34;color:#dcdfe4;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;ffmpeg -loglevel&lt;&#x2F;span&gt;&lt;span&gt; 40&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt; -i&lt;&#x2F;span&gt;&lt;span&gt; INPUT.mp4&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt; -vf&lt;&#x2F;span&gt;&lt;span&gt; reverse OUTPUT.mp4
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h4 id=&quot;both-the-video-and-audio&quot;&gt;Both the Video and Audio&lt;&#x2F;h4&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#282c34;color:#dcdfe4;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;ffmpeg -loglevel&lt;&#x2F;span&gt;&lt;span&gt; 40&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt; -i&lt;&#x2F;span&gt;&lt;span&gt; INPUT.mp4&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt; -vf&lt;&#x2F;span&gt;&lt;span&gt; reverse&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt; -af&lt;&#x2F;span&gt;&lt;span&gt; areverse OUTPUT.mp4
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;format-conversion&quot;&gt;Format Conversion&lt;&#x2F;h3&gt;
 &lt;h4 id=&quot;music&quot;&gt;Music&lt;&#x2F;h4&gt;
 &lt;blockquote&gt;
@@ -1441,19 +1450,29 @@ multiple object references could reference to 1 object&lt;&#x2F;p&gt;
 		<content type="html">&lt;blockquote&gt;
 &lt;p&gt;Draft only, further rewrote needed &lt;small&gt;(this post is based on &lt;a href=&quot;https:&#x2F;&#x2F;codingezio.github.io&#x2F;on-container&#x2F;&quot;&gt;&lt;em&gt;my another post&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;)&lt;&#x2F;small&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
-&lt;h3 id=&quot;resources&quot;&gt;Resources&lt;&#x2F;h3&gt;
-&lt;h4 id=&quot;confusion-and-terminology&quot;&gt;Confusion and Terminology&lt;&#x2F;h4&gt;
+&lt;h2 id=&quot;resource&quot;&gt;Resource&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;confusion-and-terminology&quot;&gt;Confusion and Terminology&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;47536536&#x2F;whats-the-difference-between-docker-compose-and-kubernetes&quot;&gt;Difference between Docker Compose and Kubernetes&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h4 id=&quot;learning-materials&quot;&gt;Learning Materials&lt;&#x2F;h4&gt;
+&lt;h3 id=&quot;learning-materials&quot;&gt;Learning Materials&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;iximiuz.com&#x2F;en&#x2F;posts&#x2F;journey-from-containerization-to-orchestration-and-beyond&#x2F;&quot;&gt;Journey From Containerization To Orchestration And Beyond&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;learnk8s.io&#x2F;blog&#x2F;scaling-spring-boot-microservices&quot;&gt;Scaling Spring Boot with Message Queues and Kubernetes&lt;&#x2F;a&gt; &lt;small&gt;(&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;learnk8s&#x2F;spring-boot-k8s-hpa&quot;&gt;&lt;em&gt;repo&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h4 id=&quot;alternatives&quot;&gt;Alternatives&lt;&#x2F;h4&gt;
+&lt;h3 id=&quot;references&quot;&gt;References&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;docker&#x2F;docs&#x2F;blob&#x2F;main&#x2F;develop&#x2F;develop-images&#x2F;dockerfile_best-practices.md&quot;&gt;&lt;code&gt;Dockerfile&lt;&#x2F;code&gt; Best Practices&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;alternatives&quot;&gt;Alternatives&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;geekflare.com&#x2F;container-orchestration-software&#x2F;&quot;&gt;List of Container Orchestration Tools for DevOps&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;notes&quot;&gt;Notes&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;n-a&quot;&gt;N&#x2F;A&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;N&#x2F;A&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </content>
 	</entry>
@@ -1578,6 +1597,7 @@ They are &lt;em&gt;watchers of the future&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;ericasadun.com&#x2F;&quot;&gt;Erica Sadun&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;inessential.com&#x2F;&quot;&gt;inessential: weblog&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;dineshchandgr.medium.com&#x2F;&quot;&gt;Dineshchandgr&lt;&#x2F;a&gt; &lt;&#x2F;small&gt;(potential $5 paywall)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;www.yinwang.org&#x2F;&quot;&gt;当然我在扯淡&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h3 id=&quot;newsletter-ish&quot;&gt;Newsletter&lt;small&gt;(ish)&lt;&#x2F;small&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
@@ -1986,6 +2006,7 @@ TODO&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;old.reddit.com&#x2F;r&#x2F;nginx&#x2F;comments&#x2F;mvatwk&#x2F;what_is_nginx_explain_to_me_like_im_5_because_im&#x2F;&quot;&gt;What is Nginx? Explain to Me Like I&#x27;m 5 Because I&#x27;m Clueless!&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;old.reddit.com&#x2F;r&#x2F;django&#x2F;comments&#x2F;b0ug27&#x2F;eli5_what_is_gunicorn_and_nginx&#x2F;&quot;&gt;What is Gunicorn and Nginx?&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;55414498&#x2F;is-tomcat-apache-or-other-web-server-javaee&quot;&gt;Is Tomcat = Apache (or other web server) + JavaEE&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;224664&#x2F;whats-the-difference-between-a-proxy-server-and-a-reverse-proxy-server&quot;&gt;What&#x27;s the Difference between A Proxy Server and A Reverse Proxy Server?&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h3 id=&quot;references-for-references&quot;&gt;References for References&lt;&#x2F;h3&gt;
 &lt;ul&gt;
@@ -2023,6 +2044,15 @@ TODO&lt;&#x2F;li&gt;
 &lt;p&gt;Even blogs like &lt;a href=&quot;https:&#x2F;&#x2F;javaguide.cn&quot;&gt;Java Guide&lt;&#x2F;a&gt; or &lt;a href=&quot;https:&#x2F;&#x2F;tobebetterjavaer.com&#x2F;&quot;&gt;To Be a Better Programmer&lt;&#x2F;a&gt; are just compiling a lot of loosely-related concepts, interview problems, while providing little to none or simple awful &lt;small&gt;(meh)&lt;&#x2F;small&gt; examples&#x2F;analogies for the readers to understand them better.&lt;&#x2F;p&gt;
 &lt;p&gt;I am still a bit far from converting what I learnt to a better structured knowledge vault. Working on it though!&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;outside-of-the-ecosystem-of-java-concurrency&quot;&gt;Outside of the Ecosystem of Java Concurrency&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.aeracode.org&#x2F;2018&#x2F;02&#x2F;19&#x2F;python-async-simplified&#x2F;&quot;&gt;Python &amp;amp; Async Simplified - Aeracode&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.roguelynn.com&#x2F;words&#x2F;asyncio-we-did-it-wrong&#x2F;&quot;&gt;asyncio: We Did It Wrong – roguelynn&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;yeraydiazdiaz.medium.com&#x2F;asyncio-coroutine-patterns-errors-and-cancellation-3bb422e961ff&quot;&gt;Asyncio Coroutine Patterns: Errors and cancellation&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;pawelmhm.github.io&#x2F;asyncio&#x2F;python&#x2F;aiohttp&#x2F;2016&#x2F;04&#x2F;22&#x2F;asyncio-aiohttp.html&quot;&gt;Making 1 Million Requests with python-aiohttp&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.integralist.co.uk&#x2F;posts&#x2F;python-asyncio&#x2F;&quot;&gt;Guide to Concurrency in Python with Asyncio ⋆ Mark McDonnell&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">
@@ -2280,6 +2310,20 @@ TODO&lt;&#x2F;li&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.daydaycook.com&#x2F;daydaycook&#x2F;hk&#x2F;website&#x2F;index.do&quot;&gt;日日煮 &lt;small&gt;(&lt;em&gt;hk&lt;&#x2F;em&gt;)&lt;&#x2F;small&gt;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.daydaycook.com.cn&#x2F;daydaycook&quot;&gt;日日煮 &lt;small&gt;(&lt;em&gt;cn&lt;&#x2F;em&gt;)&lt;&#x2F;small&gt;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;notes&quot;&gt;Notes&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;simplest-thing-to-make&quot;&gt;Simplest Thing to Make&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;zhu-yu-mi&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;zh.wikihow.com&#x2F;%E7%85%AE%E7%8E%89%E7%B1%B3#:~:text=%E7%85%AE%E7%8E%89%E7%B1%B3%E6%A3%92&quot;&gt;煮玉米&lt;&#x2F;a&gt;&lt;&#x2F;h4&gt;
+&lt;ol&gt;
+&lt;li&gt;Prepare the food&lt;&#x2F;li&gt;
+&lt;li&gt;Add water to the depth that completely submerges it&lt;&#x2F;li&gt;
+&lt;li&gt;Boil the water&lt;&#x2F;li&gt;
+&lt;li&gt;Add the food and wait for around 9 minutes&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h4 id=&quot;zi-zhi-dou-jiang&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;food.ltn.com.tw&#x2F;article&#x2F;5526&quot;&gt;自製豆漿&lt;&#x2F;a&gt;&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;N&#x2F;A&lt;&#x2F;li&gt;
+&lt;li&gt;N&#x2F;A&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </content>
 	</entry>
@@ -4581,11 +4625,11 @@ Linear algebra, including vector spaces, linear transformations, and matrix oper
 </content>
 	</entry>
 	<entry xml:lang="en">
-		<title>On Large Language Model</title>
+		<title>On AI - Large Language Model</title>
 		<published>2022-12-04T00:00:00+00:00</published>
 		<updated>2022-12-04T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://codingezio.github.io/on-large-language-model/" type="text/html"/>
-		<id>https://codingezio.github.io/on-large-language-model/</id>
+		<link rel="alternate" href="https://codingezio.github.io/on-ai-large-language-model/" type="text/html"/>
+		<id>https://codingezio.github.io/on-ai-large-language-model/</id>
 		<content type="html">&lt;blockquote&gt;
 &lt;p&gt;Not eligible to offer one and doesn&#x27;t have the time yet :)&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
@@ -4800,6 +4844,10 @@ Linear algebra, including vector spaces, linear transformations, and matrix oper
 &lt;&#x2F;ul&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;h2 id=&quot;resources&quot;&gt;Resources&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;text&quot;&gt;Text&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.dartmouth.edu&#x2F;~deutsch&#x2F;Grammatik&#x2F;Grammatik.html&quot;&gt;A Review of German Grammar&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
 &lt;h3 id=&quot;video&quot;&gt;Video&lt;&#x2F;h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Thoughts&lt;&#x2F;p&gt;
@@ -5502,11 +5550,11 @@ Linear algebra, including vector spaces, linear transformations, and matrix oper
 </content>
 	</entry>
 	<entry xml:lang="en">
-		<title>On Machine Learning Language Models</title>
+		<title>On AI - Running Out of Data to Train On</title>
 		<published>2022-11-16T00:00:00+00:00</published>
 		<updated>2022-11-16T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://codingezio.github.io/on-machine-learning-language-models/" type="text/html"/>
-		<id>https://codingezio.github.io/on-machine-learning-language-models/</id>
+		<link rel="alternate" href="https://codingezio.github.io/on-ai-running-out-of-data-to-train-on/" type="text/html"/>
+		<id>https://codingezio.github.io/on-ai-running-out-of-data-to-train-on/</id>
 		<content type="html">&lt;ul&gt;
 &lt;li&gt;Source: &lt;a href=&quot;https:&#x2F;&#x2F;www.lesswrong.com&#x2F;posts&#x2F;Couhhp4pPHbbhJ2Mg&#x2F;will-we-run-out-of-ml-data-evidence-from-projecting-dataset&quot;&gt;https:&#x2F;&#x2F;www.lesswrong.com&#x2F;posts&#x2F;Couhhp4pPHbbhJ2Mg&#x2F;will-we-run-out-of-ml-data-evidence-from-projecting-dataset&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;Will we run out of ML data? Evidence from projecting dataset size trends&lt;&#x2F;li&gt;
@@ -5523,6 +5571,8 @@ Linear algebra, including vector spaces, linear transformations, and matrix oper
 &lt;blockquote&gt;
 &lt;p&gt;&amp;quot;Our projections predict that we will have exhausted the stock of low-quality language data by 2030 to 2050, high-quality language data before 2026, and vision data by 2030 to 2060. This might slow down ML progress.&amp;quot;&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;blockquote&gt;
 &lt;p&gt;To me, it means even though human generates humongous amounts of data, it might not able to catch up with the machines that consume and analyze them. And what we need to do is more like finding more efficient ways to make use of the data we currently have, as the author also holds similar views in the essay.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;blockquote&gt;
@@ -6800,7 +6850,7 @@ Try to do the job without looking over the time constantly.&lt;&#x2F;p&gt;
 &lt;&#x2F;ul&gt;
 &lt;h4 id=&quot;i-o-duo-lu-fu-yong-multiplexing&quot;&gt;I&#x2F;O 多路复用 Multiplexing&lt;&#x2F;h4&gt;
 &lt;blockquote&gt;
-&lt;p&gt;References: &lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;a&#x2F;40864759&#x2F;6273859&quot;&gt;#1&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;wiyi.org&#x2F;linux-file-descriptor.html&quot;&gt;#2&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;jvns.ca&#x2F;blog&#x2F;2017&#x2F;06&#x2F;03&#x2F;async-io-on-linux--select--poll--and-epoll&#x2F;&quot;&gt;#3&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;References: &lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;a&#x2F;40864759&#x2F;6273859&quot;&gt;#1&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;wiyi.org&#x2F;linux-file-descriptor.html&quot;&gt;#2&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;jvns.ca&#x2F;blog&#x2F;2017&#x2F;06&#x2F;03&#x2F;async-io-on-linux--select--poll--and-epoll&#x2F;&quot;&gt;#3&lt;&#x2F;a&gt; &lt;small&gt;(ref for ref)&lt;&#x2F;small&gt; &lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;5256599&#x2F;what-are-file-descriptors-explained-in-simple-terms&quot;&gt;#4&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;基础 复用即分单线专处理&lt;&#x2F;li&gt;
@@ -8947,20 +8997,45 @@ a full networking stack;&lt;&#x2F;li&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">
+		<title>Toolset - grep</title>
+		<published>2022-07-17T00:00:00+00:00</published>
+		<updated>2022-07-17T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://codingezio.github.io/toolset-grep/" type="text/html"/>
+		<id>https://codingezio.github.io/toolset-grep/</id>
+		<content type="html">&lt;h3 id=&quot;find-all-occurrences&quot;&gt;Find All Occurrences&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;by-default&quot;&gt;By Default&lt;&#x2F;h4&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#282c34;color:#dcdfe4;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;grep -i&lt;&#x2F;span&gt;&lt;span&gt; PATTERN FILENAME
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h4 id=&quot;advanced-usage&quot;&gt;Advanced Usage&lt;&#x2F;h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The &lt;code&gt;INPUT&lt;&#x2F;code&gt; could either be a &lt;em&gt;path&lt;&#x2F;em&gt; or a &lt;em&gt;filename&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th style=&quot;text-align: left&quot;&gt;COMMAND&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: left&quot;&gt;WHAT IT DOES&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;code&gt;grep -iRl PATTERN INPUT&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;16956810&#x2F;how-to-find-all-files-containing-specific-text-string-on-linux&#x2F;16956844#16956844&quot;&gt;Find all files containing specific text&lt;&#x2F;a&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;code&gt;grep -inr PATTERN INPUT&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;Highlight where it matches (with FILE:LINENO:)&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
 		<title>Toolset - jq</title>
 		<published>2022-07-17T00:00:00+00:00</published>
 		<updated>2022-07-17T00:00:00+00:00</updated>
 		<link rel="alternate" href="https://codingezio.github.io/toolset-jq/" type="text/html"/>
 		<id>https://codingezio.github.io/toolset-jq/</id>
-		<content type="html">&lt;h3 id=&quot;snippets&quot;&gt;Snippets&lt;&#x2F;h3&gt;
-&lt;h5 id=&quot;general-snippet&quot;&gt;General Snippet&lt;&#x2F;h5&gt;
+		<content type="html">&lt;h2 id=&quot;resources&quot;&gt;Resources&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;andrew.gibiansky.com&#x2F;blog&#x2F;command-line&#x2F;jq-primer&#x2F;&quot;&gt;jq Primer: Munging JSON Data&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;medium.com&#x2F;@antonmedv&#x2F;discover-how-to-use-fx-effectively-668845d2a4ea&quot;&gt;Discover how to use fx effectively, a JSON manipulation command line tool&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;snippets&quot;&gt;Snippets&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;general-snippet&quot;&gt;General Snippet&lt;&#x2F;h3&gt;
 &lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#282c34;color:#dcdfe4;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# Colorized for piping
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span&gt;JSON-OUTPUT&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;&amp;gt;        | &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;jq --color-output &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;| &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;less
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# [ {} ]
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span&gt;JSON-OUTPUT &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;NESTED&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;&amp;gt; | &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;jq -C &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;quot;.[0] .IPAM&amp;quot;
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h5 id=&quot;dedicated-usage&quot;&gt;Dedicated Usage&lt;&#x2F;h5&gt;
+&lt;h3 id=&quot;dedicated-usage&quot;&gt;Dedicated Usage&lt;&#x2F;h3&gt;
 &lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#282c34;color:#dcdfe4;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;cat&lt;&#x2F;span&gt;&lt;span&gt; package.json &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;| &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;jq &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;quot;.scripts&amp;quot;
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 </content>
@@ -11690,10 +11765,9 @@ look carefully you can find problems in all writers. And that should give you gr
 &lt;li&gt;&lt;code&gt;adb&lt;&#x2F;code&gt;: &lt;code&gt;brew install android-platform-tools&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;code&gt;adb-sync&lt;&#x2F;code&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;SelfAdjointOperator&#x2F;better-adb-sync&quot;&gt;SelfAdjointOperator&#x2F;better-adb-sync&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;connect&quot;&gt;Connect&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;connect&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20230121052050&#x2F;https:&#x2F;&#x2F;adbshell.com&#x2F;commands&#x2F;adb-connect&quot;&gt;Connect&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#282c34;color:#dcdfe4;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# Connect via USB cable
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;adb&lt;&#x2F;span&gt;&lt;span&gt; devices
-&lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# Connect via WiFi after connecting at least once via cable
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;adb&lt;&#x2F;span&gt;&lt;span&gt; tcp-ip 5555
@@ -11707,6 +11781,20 @@ look carefully you can find problems in all writers. And that should give you gr
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;adb&lt;&#x2F;span&gt;&lt;span&gt; push host1&#x2F;.      &#x2F;sdcard&#x2F;tmp&#x2F; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# -&amp;gt; &#x2F;..&#x2F;tmp&#x2F;{all-files-under-host1}
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;adb&lt;&#x2F;span&gt;&lt;span&gt; push host1&#x2F;a.txt  &#x2F;sdcard&#x2F;tmp&#x2F; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# -&amp;gt; &#x2F;..&#x2F;tmp&#x2F;a.txt
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;install-apk&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;a&#x2F;7076679&#x2F;6273859&quot;&gt;Install &lt;code&gt;.apk&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;pre style=&quot;background-color:#282c34;color:#dcdfe4;&quot;&gt;&lt;code&gt;&lt;span&gt;adb install INPUT.apk
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;backup&quot;&gt;Backup&lt;&#x2F;h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Haven&#x27;t tested it since I normally only need the media files inside &lt;small&gt;(&lt;a href=&quot;https:&#x2F;&#x2F;9to5google.com&#x2F;2017&#x2F;11&#x2F;04&#x2F;how-to-backup-restore-android-device-data-android-basics&#x2F;&quot;&gt;How to fully backup and restore your Android device without root&lt;&#x2F;a&gt;)&lt;&#x2F;small&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#282c34;color:#dcdfe4;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;adb&lt;&#x2F;span&gt;&lt;span&gt; backup&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt; -apk -shared -all -f&lt;&#x2F;span&gt;&lt;span&gt; HOST_PATH&#x2F;BACKUP_FILENAME.ab
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;adb&lt;&#x2F;span&gt;&lt;span&gt; restore HOST_PATH&#x2F;BACKUP_FILENAME.ab
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;hr &#x2F;&gt;
+&lt;blockquote&gt;
+&lt;p&gt;For more complete solution on backup, see &lt;a href=&quot;https:&#x2F;&#x2F;sspai.com&#x2F;post&#x2F;54075&quot;&gt;&lt;em&gt;无惧「翻车」与换机，这些 Android 数据备份方案值得了解&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">
@@ -12515,6 +12603,25 @@ look carefully you can find problems in all writers. And that should give you gr
 </content>
 	</entry>
 	<entry xml:lang="en">
+		<title>On AI - Facial Recognition</title>
+		<published>2020-06-06T00:00:00+00:00</published>
+		<updated>2020-06-06T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://codingezio.github.io/on-ai-facial-recognition/" type="text/html"/>
+		<id>https://codingezio.github.io/on-ai-facial-recognition/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;Would try extract more notes from the first article I listed here&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h2 id=&quot;the-article&quot;&gt;The Article&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20200415055010&#x2F;https:&#x2F;&#x2F;www.nytimes.com&#x2F;2020&#x2F;01&#x2F;18&#x2F;technology&#x2F;clearview-privacy-facial-recognition.html&quot;&gt;The Secretive Company That Might End Privacy as We Know It&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;the-solution&quot;&gt;The Solution&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.businessinsider.com&#x2F;clothes-accessories-that-outsmart-facial-recognition-tech-2019-10#images-from-echizens-lab-shows-how-the-visor-blocks-ais-ability-to-detect-a-face-6&quot;&gt;These Clothes and Accessories Outsmart Facial Recognition Tech&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
 		<title>Booknote on Biology Science with Physiology</title>
 		<published>2020-05-08T00:00:00+00:00</published>
 		<updated>2020-05-08T00:00:00+00:00</updated>
@@ -12726,6 +12833,12 @@ enslaved
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.goodreads.com&#x2F;author&#x2F;show&#x2F;19101258.Seth_Wynes&quot;&gt;Seth Wynes&lt;&#x2F;a&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.goodreads.com&#x2F;book&#x2F;show&#x2F;45308834-sos&quot;&gt;SOS: What You Can Do to Reduce Climate Change – Simple Actions that Make A Difference&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Relevant articles you should read
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.nationalgeographic.com&#x2F;environment&#x2F;article&#x2F;climate-change-colder-winters-global-warming-polar-vortex&quot;&gt;Why Cold Weather Doesn’t Mean Climate Change is Fake&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;climatekids.nasa.gov&#x2F;harsh-winter&#x2F;&quot;&gt;It&#x27;s Cold! Is Global Warming Over?&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;

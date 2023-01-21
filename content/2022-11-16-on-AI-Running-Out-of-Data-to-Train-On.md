@@ -1,5 +1,5 @@
 +++
-title = "On Machine Learning Language Models"
+title = "On AI - Running Out of Data to Train On"
 description = "Will we run out of dataset to train for AI?"
 +++
 
@@ -15,7 +15,7 @@ description = "Will we run out of dataset to train for AI?"
 > The things is, suppose the demand for training data are still going strong and the data indeed put in use effectively, we would actually soon run out of data to train on. According to the what the author of the eassy found in their [research](https://arxiv.org/abs/2211.04325),
 >
 >> "Our projections predict that we will have exhausted the stock of low-quality language data by 2030 to 2050, high-quality language data before 2026, and vision data by 2030 to 2060. This might slow down ML progress."
->
+
 > To me, it means even though human generates humongous amounts of data, it might not able to catch up with the machines that consume and analyze them. And what we need to do is more like finding more efficient ways to make use of the data we currently have, as the author also holds similar views in the essay.
 
 > Bottleneck was a word that appeared multiple times both in the essay and the comment sections. Simply put, the less data we have, the fewer ways we have in order to optimize the AI product we've build, if we haven't come up better ways to harvest more data and more efficiently from the existing dataset. Take the translation for example. The reason why Google Translate can be so powerful is that Google holds an unthinkable amount of data in their hands, and with tons of professsional AI researchers, you are almost guaranteed with an extremely powerful product for natural language translator.

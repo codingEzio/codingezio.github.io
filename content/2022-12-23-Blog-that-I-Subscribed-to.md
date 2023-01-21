@@ -45,6 +45,7 @@ description = "Thoughts from interesting and thoughtful human beings"
 - [Erica Sadun](https://ericasadun.com/)
 - [inessential: weblog](https://inessential.com/)
 - [Dineshchandgr](https://dineshchandgr.medium.com/) </small>(potential $5 paywall)</small>
+- [当然我在扯淡](http://www.yinwang.org/)
 
 ### Newsletter<small>(ish)</small>
 

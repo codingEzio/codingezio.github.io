@@ -5,6 +5,20 @@ description = "ffmpeg usage"
 
 > Either put these scripts into your shell configuration file like `.zshrc` or save it as `FILE.sh`. Note that all of these were only tested on macOS as of the moment.
 
+### [Reverse](https://video.stackexchange.com/a/17739)
+
+#### Just the Video
+
+```bash
+ffmpeg -loglevel 40 -i INPUT.mp4 -vf reverse OUTPUT.mp4
+```
+
+#### Both the Video and Audio
+
+```bash
+ffmpeg -loglevel 40 -i INPUT.mp4 -vf reverse -af areverse OUTPUT.mp4
+```
+
 ### Format Conversion
 
 #### Music

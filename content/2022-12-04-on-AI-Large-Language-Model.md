@@ -1,6 +1,6 @@
 +++
-title = "On Large Language Model"
-description = "Anything that is related to the GPT and similar things"
+title = "On AI - Large Language Model"
+description = "Anything that is related to OpenAI GPT and similar things"
 +++
 
 > Not eligible to offer one and doesn't have the time yet :)

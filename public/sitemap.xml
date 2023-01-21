@@ -431,6 +431,18 @@
         <lastmod>2023-01-20</lastmod>
     </url>
     <url>
+        <loc>https://codingezio.github.io/on-ai-facial-recognition/</loc>
+        <lastmod>2020-06-06</lastmod>
+    </url>
+    <url>
+        <loc>https://codingezio.github.io/on-ai-large-language-model/</loc>
+        <lastmod>2022-12-04</lastmod>
+    </url>
+    <url>
+        <loc>https://codingezio.github.io/on-ai-running-out-of-data-to-train-on/</loc>
+        <lastmod>2022-11-16</lastmod>
+    </url>
+    <url>
         <loc>https://codingezio.github.io/on-anxiety-towards-ai/</loc>
         <lastmod>2022-12-06</lastmod>
     </url>
@@ -523,10 +535,6 @@
         <lastmod>2022-08-10</lastmod>
     </url>
     <url>
-        <loc>https://codingezio.github.io/on-large-language-model/</loc>
-        <lastmod>2022-12-04</lastmod>
-    </url>
-    <url>
         <loc>https://codingezio.github.io/on-learning-german/</loc>
         <lastmod>2022-12-02</lastmod>
     </url>
@@ -537,10 +545,6 @@
     <url>
         <loc>https://codingezio.github.io/on-longevity/</loc>
         <lastmod>2022-12-01</lastmod>
-    </url>
-    <url>
-        <loc>https://codingezio.github.io/on-machine-learning-language-models/</loc>
-        <lastmod>2022-11-16</lastmod>
     </url>
     <url>
         <loc>https://codingezio.github.io/on-message-queue/</loc>
@@ -729,6 +733,10 @@
     <url>
         <loc>https://codingezio.github.io/toolset-find/</loc>
         <lastmod>2022-09-20</lastmod>
+    </url>
+    <url>
+        <loc>https://codingezio.github.io/toolset-grep/</loc>
+        <lastmod>2022-07-17</lastmod>
     </url>
     <url>
         <loc>https://codingezio.github.io/toolset-imagemagick/</loc>

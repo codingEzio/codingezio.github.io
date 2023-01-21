@@ -211,7 +211,7 @@ description = "Understanding the Underlying Mechanism"
 
 #### I/O 多路复用 Multiplexing
 
-> References: [\#1](https://stackoverflow.com/a/40864759/6273859), [\#2](https://wiyi.org/linux-file-descriptor.html), [\#3](https://jvns.ca/blog/2017/06/03/async-io-on-linux--select--poll--and-epoll/)
+> References: [\#1](https://stackoverflow.com/a/40864759/6273859), [\#2](https://wiyi.org/linux-file-descriptor.html), [\#3](https://jvns.ca/blog/2017/06/03/async-io-on-linux--select--poll--and-epoll/) <small>(ref for ref)</small> [\#4](https://stackoverflow.com/questions/5256599/what-are-file-descriptors-explained-in-simple-terms)
 
 - 基础 复用即分单线专处理
 - 基础 原 CPU询 有新处新

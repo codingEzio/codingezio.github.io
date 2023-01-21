@@ -28,3 +28,13 @@ description = "All things that related to concurrency, especially Java"
 > Even blogs like [Java Guide](https://javaguide.cn) or [To Be a Better Programmer](https://tobebetterjavaer.com/) are just compiling a lot of loosely-related concepts, interview problems, while providing little to none or simple awful <small>(meh)</small> examples/analogies for the readers to understand them better.
 >
 > I am still a bit far from converting what I learnt to a better structured knowledge vault. Working on it though!
+
+-----
+
+## Outside of the Ecosystem of Java Concurrency
+
+- [Python & Async Simplified - Aeracode](https://www.aeracode.org/2018/02/19/python-async-simplified/)
+- [asyncio: We Did It Wrong – roguelynn](https://www.roguelynn.com/words/asyncio-we-did-it-wrong/)
+- [Asyncio Coroutine Patterns: Errors and cancellation](https://yeraydiazdiaz.medium.com/asyncio-coroutine-patterns-errors-and-cancellation-3bb422e961ff)
+- [Making 1 Million Requests with python-aiohttp](https://pawelmhm.github.io/asyncio/python/aiohttp/2016/04/22/asyncio-aiohttp.html)
+- [Guide to Concurrency in Python with Asyncio ⋆ Mark McDonnell](https://www.integralist.co.uk/posts/python-asyncio/)

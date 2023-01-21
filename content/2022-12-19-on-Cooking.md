@@ -24,3 +24,19 @@ description = "Notes on learning to cook"
 
 - [日日煮 <small>(*hk*)</small>](https://www.daydaycook.com/daydaycook/hk/website/index.do)
 - [日日煮 <small>(*cn*)</small>](https://www.daydaycook.com.cn/daydaycook)
+
+## Notes
+
+### Simplest Thing to Make
+
+#### [煮玉米](https://zh.wikihow.com/%E7%85%AE%E7%8E%89%E7%B1%B3#:~:text=%E7%85%AE%E7%8E%89%E7%B1%B3%E6%A3%92)
+
+1. Prepare the food
+2. Add water to the depth that completely submerges it
+3. Boil the water
+4. Add the food and wait for around 9 minutes
+
+#### [自製豆漿](https://food.ltn.com.tw/article/5526)
+
+- N/A
+- N/A
