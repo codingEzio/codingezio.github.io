@@ -7,20 +7,16 @@ description = "Let apps automatically open when boot up"
 
 ## macOS
 
-### By GUI
+> By GUI (macOS Monterey 12.6.2)
 
-> macOS Monterey 12.6.2
-
-1. Open *System Preferences* <small>
+1. Open *System Preferences*
 2. Open *Users & Groups*
 3. Click *Login Items*
 4. Add relevant apps to the list
 
 ## Windows
 
-### By Moving Shortcuts
-
-> [How to Access the Windows 10 Startup Folder](https://web.archive.org/web/20200820140228/https://helpdeskgeek.com/windows-10/how-to-access-the-windows-10-startup-folder/)
+> By moving shortcuts [<small>(How to Access the Windows 10 Startup Folder)</small>](https://web.archive.org/web/20200820140228/https://helpdeskgeek.com/windows-10/how-to-access-the-windows-10-startup-folder/)
 
 1. Find the folder
 

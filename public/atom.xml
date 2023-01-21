@@ -11594,20 +11594,18 @@ look carefully you can find problems in all writers. And that should give you gr
 &lt;p&gt;Automatically open apps when boot up :) I&#x27;m not talking about the terminology &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Startup_company&quot;&gt;&lt;em&gt;Startup&lt;&#x2F;em&gt; company&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;h2 id=&quot;macos&quot;&gt;macOS&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;by-gui&quot;&gt;By GUI&lt;&#x2F;h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;macOS Monterey 12.6.2&lt;&#x2F;p&gt;
+&lt;p&gt;By GUI (macOS Monterey 12.6.2)&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;ol&gt;
-&lt;li&gt;Open &lt;em&gt;System Preferences&lt;&#x2F;em&gt; &lt;small&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Open &lt;em&gt;System Preferences&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;Open &lt;em&gt;Users &amp;amp; Groups&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;Click &lt;em&gt;Login Items&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;Add relevant apps to the list&lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
 &lt;h2 id=&quot;windows&quot;&gt;Windows&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;by-moving-shortcuts&quot;&gt;By Moving Shortcuts&lt;&#x2F;h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20200820140228&#x2F;https:&#x2F;&#x2F;helpdeskgeek.com&#x2F;windows-10&#x2F;how-to-access-the-windows-10-startup-folder&#x2F;&quot;&gt;How to Access the Windows 10 Startup Folder&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;By moving shortcuts &lt;a href=&quot;https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20200820140228&#x2F;https:&#x2F;&#x2F;helpdeskgeek.com&#x2F;windows-10&#x2F;how-to-access-the-windows-10-startup-folder&#x2F;&quot;&gt;&lt;small&gt;(How to Access the Windows 10 Startup Folder)&lt;&#x2F;small&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;ol&gt;
 &lt;li&gt;Find the folder&lt;&#x2F;li&gt;
@@ -11628,7 +11626,7 @@ look carefully you can find problems in all writers. And that should give you gr
 </content>
 	</entry>
 	<entry xml:lang="en">
-		<title>Toolset - screen</title>
+		<title>On VPS</title>
 		<published>2021-04-18T00:00:00+00:00</published>
 		<updated>2021-04-18T00:00:00+00:00</updated>
 		<link rel="alternate" href="https://codingezio.github.io/on-vps/" type="text/html"/>
@@ -11679,7 +11677,7 @@ look carefully you can find problems in all writers. And that should give you gr
 </content>
 	</entry>
 	<entry xml:lang="en">
-		<title>Toolset - screen</title>
+		<title>Toolset - adb</title>
 		<published>2021-04-18T00:00:00+00:00</published>
 		<updated>2021-04-18T00:00:00+00:00</updated>
 		<link rel="alternate" href="https://codingezio.github.io/toolset-adb/" type="text/html"/>

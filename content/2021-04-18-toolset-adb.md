@@ -1,6 +1,6 @@
 +++
-title = "Toolset - screen"
-description = "screen usage"
+title = "Toolset - adb"
+description = "adb usage"
 +++
 
 > adb: Android Debug Bridge
