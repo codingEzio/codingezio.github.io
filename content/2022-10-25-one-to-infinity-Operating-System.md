@@ -24,7 +24,9 @@ description = "Understanding the Underlying Mechanism"
 
 #### Beyond Interview Prep
 
-- [Beej's Guide to Unix IPC](https://beej.us/guide/bgipc/html/single/bgipc.html) <sup>[src](https://github.com/beejjorgensen/bgipc)</sup>
+- [Beej's Guide to Unix IPC](https://beej.us/guide/bgipc/) <sup>[src](https://github.com/beejjorgensen/bgipc)</sup>
+- [Beej's Guide to Network Programming](https://beej.us/guide/bgnet/) <sup>[src](https://github.com/beejjorgensen/bgnet)</sup>
+-
 
 ### How
 

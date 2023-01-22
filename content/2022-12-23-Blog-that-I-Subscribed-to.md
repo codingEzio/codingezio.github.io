@@ -28,6 +28,7 @@ description = "Thoughts from interesting and thoughtful human beings"
 - [MindLevelup](https://mindlevelup.wordpress.com/mindlevelup-the-book/introduction/)
 - [Julia Evans](https://jvns.ca/)
 - [Be Well Tuned](http://bewelltuned.com/)
+- [透明盒子计划](https://clearbox.substack.com/archive)
 - [Slate Star Codex](https://slatestarcodex.com/archives/)
 - [Radimentary](https://radimentary.wordpress.com/about/)
 - [thesephist](https://thesephist.com/posts/)
