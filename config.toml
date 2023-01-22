@@ -63,8 +63,8 @@ skip_prefixes = [
 # Lightspeed https://www.getzola.org/themes/lightspeed/
 theme = "lightspeed"
 
-# footer_links = [
-#     {url = "$BASE_URL/about", name = "About"},
-#     {url = "$BASE_URL/atom.xml", name = "RSS"},
-#     {url = "https://google.com", name = "Google"},
-# ]
+# https://www.getzola.org/themes/lightspeed/#:~:text=footer_links
+footer_links = [
+    {url = "https://twitter.com/_Drahtzieher", name = "Twitter"},
+    {url = "https://github.com/codingEzio", name = "Github"},
+]

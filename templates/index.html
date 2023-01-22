@@ -69,11 +69,12 @@
       <footer role="contentinfo">
         <hr />
         {% if config.extra.footer_links %}
-        <nav style="margin-bottom:1rem;" role="navigation">
+        <nav style="margin-bottom:0.15rem; font-size: 0.90rem;" role="navigation">
+          Social Media 🤞
           {% for item in config.extra.footer_links %}
             <a href="{{ item.url | replace(from="$BASE_URL", to=config.base_url) | safe }}">{{ item.name }}</a>
             {% if loop.last %}{% else %}
-              <span>&middot;</span>
+              <span> &middot; </span>
             {% endif %}
           {% endfor %}
         </nav>
