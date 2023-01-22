@@ -5,6 +5,8 @@ description = "Understanding the Underlying Mechanism"
 
 ## Foreword
 
+> Currently this post serves as materials for interview prep, eventually it would be turned into a post digs even more deep and explores more topics.
+
 ### Why
 
 > 复习这些非常必要的底层知识。设想一个连底层知识都不了解的人，如何写出高质且稳定的程序？
@@ -13,10 +15,16 @@ description = "Understanding the Underlying Mechanism"
 
 ### Where
 
+#### Overview
+
 - [操作系统 OS面试题八股文](https://tobebetterjavaer.com/sidebar/sanfene/os.html)
 - [操作系统核心知识点大梳理](https://tobebetterjavaer.com/cs/os.html)
 - [操作系统常见面试题总结](https://javaguide.cn/cs-basics/operating-system/operating-system-basic-questions-01.html)
 - 以及众多其他网站，如 [*Reddit*](http://reddit.com/), [*StackOverflow*](http://stackoverflow.com/), [*IBM*](https://www.ibm.com/docs/en/rhapsody/9.0.0?topic=reference-frameworks-operating-systems) 等等
+
+#### Beyond Interview Prep
+
+- [Beej's Guide to Unix IPC](https://beej.us/guide/bgipc/html/single/bgipc.html) <sup>[src](https://github.com/beejjorgensen/bgipc)</sup>
 
 ### How
 
@@ -28,7 +36,7 @@ description = "Understanding the Underlying Mechanism"
 
 > 祖参考资源: [操作系统 必看](https://tobebetterjavaer.com/sidebar/sanfene/os.html)
 >
-> 参考资料中的井字数序确有意义，若有兴趣可按顺序读下来
+> 参考资料中的 `#` 字数序 确有意义，若有兴趣可按顺序读下来
 
 ### 内核与用户
 

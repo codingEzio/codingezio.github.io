@@ -6729,17 +6729,25 @@ Try to do the job without looking over the time constantly.&lt;&#x2F;p&gt;
 		<link rel="alternate" href="https://codingezio.github.io/one-to-infinity-operating-system/" type="text/html"/>
 		<id>https://codingezio.github.io/one-to-infinity-operating-system/</id>
 		<content type="html">&lt;h2 id=&quot;foreword&quot;&gt;Foreword&lt;&#x2F;h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Currently this post serves as materials for interview prep, eventually it would be turned into a post digs even more deep and explores more topics.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
 &lt;h3 id=&quot;why&quot;&gt;Why&lt;&#x2F;h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;复习这些非常必要的底层知识。设想一个连底层知识都不了解的人，如何写出高质且稳定的程序？&lt;&#x2F;p&gt;
 &lt;p&gt;多数人都陷进了抽象的深坑！当然，我也明白要其易懂要耗费极大精力&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;h3 id=&quot;where&quot;&gt;Where&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;overview&quot;&gt;Overview&lt;&#x2F;h4&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tobebetterjavaer.com&#x2F;sidebar&#x2F;sanfene&#x2F;os.html&quot;&gt;操作系统 OS面试题八股文&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tobebetterjavaer.com&#x2F;cs&#x2F;os.html&quot;&gt;操作系统核心知识点大梳理&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;javaguide.cn&#x2F;cs-basics&#x2F;operating-system&#x2F;operating-system-basic-questions-01.html&quot;&gt;操作系统常见面试题总结&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;以及众多其他网站，如 &lt;a href=&quot;http:&#x2F;&#x2F;reddit.com&#x2F;&quot;&gt;&lt;em&gt;Reddit&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;, &lt;a href=&quot;http:&#x2F;&#x2F;stackoverflow.com&#x2F;&quot;&gt;&lt;em&gt;StackOverflow&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;www.ibm.com&#x2F;docs&#x2F;en&#x2F;rhapsody&#x2F;9.0.0?topic=reference-frameworks-operating-systems&quot;&gt;&lt;em&gt;IBM&lt;&#x2F;em&gt;&lt;&#x2F;a&gt; 等等&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;beyond-interview-prep&quot;&gt;Beyond Interview Prep&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;beej.us&#x2F;guide&#x2F;bgipc&#x2F;html&#x2F;single&#x2F;bgipc.html&quot;&gt;Beej&#x27;s Guide to Unix IPC&lt;&#x2F;a&gt; &lt;sup&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;beejjorgensen&#x2F;bgipc&quot;&gt;src&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h3 id=&quot;how&quot;&gt;How&lt;&#x2F;h3&gt;
 &lt;ol&gt;
@@ -6750,7 +6758,7 @@ Try to do the job without looking over the time constantly.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;content&quot;&gt;Content&lt;&#x2F;h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;祖参考资源: &lt;a href=&quot;https:&#x2F;&#x2F;tobebetterjavaer.com&#x2F;sidebar&#x2F;sanfene&#x2F;os.html&quot;&gt;操作系统 必看&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;参考资料中的井字数序确有意义，若有兴趣可按顺序读下来&lt;&#x2F;p&gt;
+&lt;p&gt;参考资料中的 &lt;code&gt;#&lt;&#x2F;code&gt; 字数序 确有意义，若有兴趣可按顺序读下来&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;h3 id=&quot;nei-he-yu-yong-hu&quot;&gt;内核与用户&lt;&#x2F;h3&gt;
 &lt;h4 id=&quot;difference-between-them&quot;&gt;Difference between them&lt;&#x2F;h4&gt;
@@ -11917,9 +11925,11 @@ look carefully you can find problems in all writers. And that should give you gr
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;adb&lt;&#x2F;span&gt;&lt;span&gt; restore HOST_PATH&#x2F;BACKUP_FILENAME.ab
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;hr &#x2F;&gt;
-&lt;blockquote&gt;
-&lt;p&gt;For more complete solution on backup, see &lt;a href=&quot;https:&#x2F;&#x2F;sspai.com&#x2F;post&#x2F;54075&quot;&gt;&lt;em&gt;无惧「翻车」与换机，这些 Android 数据备份方案值得了解&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
+&lt;h3 id=&quot;references&quot;&gt;References&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.growingwiththeweb.com&#x2F;2014&#x2F;01&#x2F;handy-adb-commands-for-android.html&quot;&gt;Handy adb commands for Android&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;sspai.com&#x2F;post&#x2F;54075&quot;&gt;无惧「翻车」与换机，这些 Android 数据备份方案值得了解&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">

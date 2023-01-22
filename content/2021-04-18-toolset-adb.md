@@ -48,4 +48,7 @@ adb restore HOST_PATH/BACKUP_FILENAME.ab
 
 -----
 
-> For more complete solution on backup, see [*无惧「翻车」与换机，这些 Android 数据备份方案值得了解*](https://sspai.com/post/54075)
+### References
+
+- [Handy adb commands for Android](https://www.growingwiththeweb.com/2014/01/handy-adb-commands-for-android.html)
+- [无惧「翻车」与换机，这些 Android 数据备份方案值得了解](https://sspai.com/post/54075)
