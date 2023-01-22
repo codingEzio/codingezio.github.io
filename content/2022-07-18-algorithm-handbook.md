@@ -1,11 +1,13 @@
 +++
 title = "Algorithm Handbook"
-description = "Non-solution notes for LeetCode problems"
+description = "Things that would help solving Algorithm problems"
 +++
 
-## Concepts
+# Concepts
 
-### Non-decreasing Order
+## Fucking Terminology
+
+### In ***Non-decreasing*** Order
 
 > [Is a "non-decreasing" sequence "increasing"](https://stackoverflow.com/questions/1963474/is-a-non-decreasing-sequence-increasing)
 
@@ -14,7 +16,19 @@ description = "Non-solution notes for LeetCode problems"
 - It's not completely the same as the increasing order, e.g. 1, 2, 2, 3, 4
 - Its increase or decrease must applies to all to be qualified
 
-### 常见复杂度 Big O 的辨别
+### ***Stability*** in Sorting Algorithms
+
+- [What Is Stability In Sorting Algorithms And Why Is It Important?](https://stackoverflow.com/questions/1517793/what-is-stability-in-sorting-algorithms-and-why-is-it-important)
+
+### A ***Balanced*** Tree
+
+- [ ] [Definition of a Balanced Tree](https://stackoverflow.com/questions/8015630/definition-of-a-balanced-tree)
+- [ ] [Is a Balanced Binary Tree a Complete Binary Tree](https://cs.stackexchange.com/a/54209/155546)
+- [ ] [What Is The Difference Between a Balanced Binary Search Tree and a Binary Search Tree](https://stackoverflow.com/questions/31027422/what-is-the-difference-between-a-balanced-binary-search-tree-and-a-binary-search)
+
+## 常见复杂度 Big O 的辨别
+
+### Demonstration
 
 | O | Statement |
 | :---: | :----- |
@@ -23,11 +37,9 @@ description = "Non-solution notes for LeetCode problems"
 | *O(n²)* | `for X in range(N): for Y in range(X)` <br/>`for X in range(N): X*=2 for Y in range(X)` |
 | *O(logN)* | `while X < N: X*=k` |
 
-## Knowledge
+## Bit-wise Operator
 
-### Bit-wise Operator
-
-#### Number
+### Number
 
 > 本质上都是二进制操作，不进位
 
@@ -38,7 +50,7 @@ description = "Non-solution notes for LeetCode problems"
 # ^ Bitwise XOR    -> (1, 0)(0, 1) leads to 1, otherwise 0
 ```
 
-#### Letter
+### Letter
 
 ```java
 // To lowercase
@@ -54,11 +66,13 @@ description = "Non-solution notes for LeetCode problems"
 ('C' ^ ' ') == 'C'
 ```
 
-### Traversing Binary Tree
+# In Practice
+
+## Traversing Binary Tree
 
 > 以 root 节点为视角: *Preorder* <sup>(前序)</sup>, *Inorder* <sup>(中序)</sup>, *Postorder* <sup>(后序)</sup> and .. *Level Order*. Note that these methods by themselves **are** LeetCode problems as well.
 
-#### 0144. Binary Tree ***Preorder*** Traversal
+### 0144. Binary Tree ***Preorder*** Traversal
 
 ```python
 # Definition for a binary tree node.
@@ -84,7 +98,7 @@ class Solution:
      self.preorder(node.right, a_list)
 ```
 
-#### 0094. Binary Tree ***Inorder*** Traversal
+### 0094. Binary Tree ***Inorder*** Traversal
 
 ```python
 # Definition for a binary tree node.
@@ -110,7 +124,7 @@ class Solution:
         self.inorder(node.right, a_list)
 ```
 
-#### 0145. Binary Tree ***Postorder*** Traversal
+### 0145. Binary Tree ***Postorder*** Traversal
 
 ```python
 # Definition for a binary tree node.
@@ -136,7 +150,7 @@ class Solution:
         a_list.append(node.val)
 ```
 
-#### 0102. Binary Tree ***Level Order*** Traversal
+### 0102. Binary Tree ***Level Order*** Traversal
 
 ```python
 # Definition for a binary tree node.
@@ -169,3 +183,17 @@ class Solution:
         if node.right:
             self.dfs(node.right, level + 1, res)
 ```
+
+## Sorting
+
+> [十大排序从入门到入赘](https://leetcode.cn/circle/discuss/eBo9UB/) and [Put Them in Use](https://leetcode.cn/problems/sort-an-array/solution/fu-xi-ji-chu-pai-xu-suan-fa-java-by-liweiwei1419/)
+
+-----
+
+# References
+
+## Books
+
+> Read some of them before
+
+- [Problem Solving with Algorithms and Data Structures using Python](https://runestone.academy/ns/books/published/pythonds/index.html)

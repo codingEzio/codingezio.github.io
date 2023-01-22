@@ -5,8 +5,107 @@
 	<link href="https://codingezio.github.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://codingezio.github.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2023-01-20T00:00:00+00:00</updated>
+	<updated>2023-01-22T00:00:00+00:00</updated>
 	<id>https://codingezio.github.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>On Reactive Programming</title>
+		<published>2023-01-22T00:00:00+00:00</published>
+		<updated>2023-01-22T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://codingezio.github.io/on-reactive-programming/" type="text/html"/>
+		<id>https://codingezio.github.io/on-reactive-programming/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;Just an overview, not really a grand topic that I want to explore at the moment.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h2 id=&quot;resources&quot;&gt;Resources&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;learning-material&quot;&gt;Learning Material&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;staltz&#x2F;868e7e9bc2a7b8c1f754&quot;&gt;Introduction to Reactive Programming&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;ithelp.ithome.com.tw&#x2F;users&#x2F;20141418&#x2F;ironman&#x2F;4617&quot;&gt;從零開始 Reactive Programming - Spring&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;misc&quot;&gt;Misc&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;javascript.plainenglish.io&#x2F;eli5-observables-vs-subjects-vs-behavior-subjects-f2494f14813d&quot;&gt;Observables vs Subjects vs Behavior Subjects&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;dev.to&#x2F;dipteekhd&#x2F;angular-behaviorsubject-p1&quot;&gt;Angular : RxJS BehaviorSubject&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>On Software Engineering</title>
+		<published>2023-01-22T00:00:00+00:00</published>
+		<updated>2023-01-22T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://codingezio.github.io/on-software-engineering/" type="text/html"/>
+		<id>https://codingezio.github.io/on-software-engineering/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;Coding is barely a small part in the process of delivering the final product. If you as a programmer really want to devote your life to this field, you shall have more than a strong foundation of CS knowledge and programming skills.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h2 id=&quot;resources&quot;&gt;Resources&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;12factor.net&#x2F;&quot;&gt;The Twelve-Factor App&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;mixmastamyk.bitbucket.io&#x2F;pro_soft_dev&#x2F;&quot;&gt;Professional Software Development 2021.03&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.books.com.tw&#x2F;products&#x2F;CN11457194&quot;&gt;構建之法：現代軟件工程&lt;&#x2F;a&gt; by &lt;a href=&quot;https:&#x2F;&#x2F;www.cnblogs.com&#x2F;xinz&#x2F;&quot;&gt;邹欣&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>On Visualization</title>
+		<published>2023-01-22T00:00:00+00:00</published>
+		<updated>2023-01-22T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://codingezio.github.io/on-visualization/" type="text/html"/>
+		<id>https://codingezio.github.io/on-visualization/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;Data + Idea + Right Chart= &lt;small&gt;(Probably)&lt;&#x2F;small&gt;Good Visualization&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h2 id=&quot;resources&quot;&gt;Resources&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;basics&quot;&gt;Basics&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20230122035329&#x2F;https:&#x2F;&#x2F;blog.adioma.com&#x2F;how-to-think-visually-using-visual-analogies-infographic&#x2F;&quot;&gt;How To Think Visually Using Visual Analogies - Infographic - Adioma&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20230122034918&#x2F;https:&#x2F;&#x2F;www.labnol.org&#x2F;software&#x2F;find-right-chart-type-for-your-data&#x2F;6523&#x2F;&quot;&gt;Choose the Right Chart Type for your Data - Digital Inspiration&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;tools-that-help-you-choose&quot;&gt;Tools that Help You Choose&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.data-to-viz.com&#x2F;&quot;&gt;From Data to Viz&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;datavizcatalogue.com&#x2F;search.html&quot;&gt;The Data Visualisation Catalogue&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;references&quot;&gt;References&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;alpers&#x2F;awesome-data-visualization&quot;&gt;alpers&#x2F;awesome-data-visualization&lt;&#x2F;a&gt; &lt;small&gt;(blog, lab, studio and so much more!)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;javierluraschi&#x2F;awesome-dataviz&quot;&gt;javierluraschi&#x2F;awesome-dataviz&lt;&#x2F;a&gt; &lt;small&gt;(relevant programming libraries)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Booknote on 产品经理的无限游戏</title>
+		<published>2023-01-21T00:00:00+00:00</published>
+		<updated>2023-01-21T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://codingezio.github.io/booknote-on-chan-pin-jing-li-de-wu-xian-you-xi/" type="text/html"/>
+		<id>https://codingezio.github.io/booknote-on-chan-pin-jing-li-de-wu-xian-you-xi/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;Switching the perspective to a higher level, not just thinking as a programmer.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h2 id=&quot;resources&quot;&gt;Resources&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&#x2F;&gt;
+&lt;a href=&quot;https:&#x2F;&#x2F;jiewang.gitbook.io&#x2F;chan-pin-jing-li-de-wu-xian-you-xi&#x2F;&quot;&gt;产品经理的无限游戏&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>On Web Security</title>
+		<published>2023-01-21T00:00:00+00:00</published>
+		<updated>2023-01-21T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://codingezio.github.io/on-web-security/" type="text/html"/>
+		<id>https://codingezio.github.io/on-web-security/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;Just an overview, not really a grand topic that I want to explore at the moment.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h2 id=&quot;resources&quot;&gt;Resources&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;juejin.cn&#x2F;post&#x2F;6844903842635579405&quot;&gt;你须懂的Web安全 - 掘金&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.goodreads.com&#x2F;en&#x2F;book&#x2F;show&#x2F;52522835-web-security-for-developers&quot;&gt;Web Security for Developers&lt;&#x2F;a&gt; by &lt;a href=&quot;https:&#x2F;&#x2F;www.goodreads.com&#x2F;author&#x2F;show&#x2F;20096586.Malcolm_McDonald&quot;&gt;Malcolm McDonald&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>On Aaron Swartz</title>
 		<published>2023-01-20T00:00:00+00:00</published>
@@ -37,15 +136,22 @@
 		<content type="html">&lt;blockquote&gt;
 &lt;p&gt;Honestly I do not have the proper use case for C++, but it&#x27;s always good to know the basics and it&#x27;s quite handy once you are digging deep in the field of &lt;em&gt;Computer Science&lt;&#x2F;em&gt;. I do know the bare minimum of C++ in the process of translating a tiny C++ book&lt;sup&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;codingEzio&#x2F;translation_book_cpp_for_py_dev&quot;&gt;C++ for Python Programmers&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
-&lt;h2 id=&quot;c&quot;&gt;&lt;em&gt;C++&lt;&#x2F;em&gt;&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;c&quot;&gt;&lt;em&gt;C&lt;&#x2F;em&gt;&lt;&#x2F;h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Give it a read if you also gonna be medelling with some &lt;em&gt;C&lt;&#x2F;em&gt; code&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;beej.us&#x2F;guide&#x2F;bgc&#x2F;html&#x2F;split&#x2F;&quot;&gt;Beej&#x27;s Guide to C Programming&lt;&#x2F;a&gt; &lt;sup&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;beejjorgensen&#x2F;bgc&quot;&gt;src&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;c-1&quot;&gt;&lt;em&gt;C++&lt;&#x2F;em&gt;&lt;&#x2F;h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=u_ij0YNkFUs&quot;&gt;C++20: C++ at 40 - Bjarne Stroustrup - CppCon 2019&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h2 id=&quot;carbon&quot;&gt;&lt;em&gt;Carbon&lt;&#x2F;em&gt;&lt;&#x2F;h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;carbon-language&#x2F;carbon-lang&quot;&gt;carbon-language&#x2F;carbon-lang&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=omrY53kbVoA&quot;&gt;Carbon Language: An Experimental Successor to C++&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=9Y2ivB8VaIs&quot;&gt;Carbon Language: Syntax and Trade-offs&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Tech Talk: &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=omrY53kbVoA&quot;&gt;Carbon Language: An Experimental Successor to C++&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Tech Talk: &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=9Y2ivB8VaIs&quot;&gt;Carbon Language: Syntax and Trade-offs&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </content>
 	</entry>
@@ -501,19 +607,12 @@
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;40241843&#x2F;failed-to-start-bean-documentationpluginsbootstrapper-in-spring-data-rest&quot;&gt;java - Failed to start bean &#x27;documentationPluginsBootstrapper&#x27; in spring data rest&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;hr &#x2F;&gt;
-&lt;h1 id=&quot;programming-paradigm&quot;&gt;Programming Paradigm&lt;&#x2F;h1&gt;
-&lt;h2 id=&quot;reactive&quot;&gt;Reactive&lt;&#x2F;h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;staltz&#x2F;868e7e9bc2a7b8c1f754&quot;&gt;Introduction to Reactive Programming&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;javascript.plainenglish.io&#x2F;eli5-observables-vs-subjects-vs-behavior-subjects-f2494f14813d&quot;&gt;Observables vs Subjects vs Behavior Subjects&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;dev.to&#x2F;dipteekhd&#x2F;angular-behaviorsubject-p1&quot;&gt;Angular : RxJS BehaviorSubject&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h2 id=&quot;functional&quot;&gt;Functional&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;javascript&quot;&gt;JavaScript&lt;&#x2F;h3&gt;
+&lt;h1 id=&quot;functional-programming&quot;&gt;Functional Programming&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;javascript&quot;&gt;JavaScript&lt;&#x2F;h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ramda&#x2F;ramda&#x2F;issues&#x2F;2404&quot;&gt;Why Ramda instead of native Array methods&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;java-1&quot;&gt;Java&lt;&#x2F;h3&gt;
+&lt;h2 id=&quot;java-1&quot;&gt;Java&lt;&#x2F;h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;28417262&#x2F;when-and-why-would-you-use-javas-supplier-and-consumer-interfaces&quot;&gt;Java&#x27;s Supplier and Consumer interfaces&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
@@ -1074,6 +1173,7 @@ multiple object references could reference to 1 object&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;architecture&quot;&gt;Architecture&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20221230083203&#x2F;https:&#x2F;&#x2F;medium.com&#x2F;must-know-computer-science&#x2F;system-design-message-queues-245612428a22&quot;&gt;Concepts and considerations for Message Queues in System Design&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.conduktor.io&#x2F;blog&#x2F;comparing-apache-kafka-activemq-and-rabbitmq&quot;&gt;Comparing Apache Kafka, ActiveMQ, and RabbitMQ&lt;&#x2F;a&gt; &lt;small&gt;(weigh on)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h2 id=&quot;practice&quot;&gt;Practice&lt;&#x2F;h2&gt;
 &lt;h3 id=&quot;implementation&quot;&gt;Implementation&lt;&#x2F;h3&gt;
@@ -1588,6 +1688,7 @@ They are &lt;em&gt;watchers of the future&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;hakim.se&#x2F;&quot;&gt;Hakim El Hattab&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.goldsborough.me&#x2F;&quot;&gt;Peter Goldsborough&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;jesor.me&#x2F;all&#x2F;&quot;&gt;大破进击&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;waitbutwhy.com&#x2F;archive&quot;&gt;Wait But Why&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;lutaonan.com&#x2F;&quot;&gt;Randy&#x27;s Blog&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;jhuo.ca&#x2F;post&#x2F;&quot;&gt;HuoJu&#x27;s Blog&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.neelnanda.io&#x2F;&quot;&gt;Neel Nanda&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
@@ -3658,9 +3759,12 @@ I came back after my miscarriages.&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;hr &#x2F;&gt;
 &lt;h3 id=&quot;references&quot;&gt;References&lt;&#x2F;h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Good to have but not necessary&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
+&lt;h4 id=&quot;train-of-thought&quot;&gt;Train of Thought&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;ithelp.ithome.com.tw&#x2F;users&#x2F;20111580&#x2F;ironman&#x2F;4951&quot;&gt;挑戰 Blind 75 - 以圖解方式練習解題&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;neetcode.io&#x2F;practice&quot;&gt;Neetcode.io&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;good-to-have&quot;&gt;Good to Have&lt;&#x2F;h4&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.techinterviewhandbook.org&#x2F;grind75&quot;&gt;Grind 75 - A better Blind 75 you can customize, by the author of Blind 75&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
@@ -4247,20 +4351,7 @@ Linear algebra, including vector spaces, linear transformations, and matrix oper
 &lt;&#x2F;ul&gt;
 &lt;hr &#x2F;&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;to practice&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;programmingtechie.com&#x2F;2021&#x2F;03&#x2F;24&#x2F;spring-boot-microservices-project-tutorial-part-1&#x2F;&quot;&gt;Spring Boot Microservices Project Tutorial - Part 1 - ProgrammingTechie&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;to extract&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.conduktor.io&#x2F;blog&#x2F;comparing-apache-kafka-activemq-and-rabbitmq&quot;&gt;Comparing Apache Kafka, ActiveMQ, and RabbitMQ&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;note for myself&lt;&#x2F;p&gt;
+&lt;li&gt;note for myself
 &lt;ul&gt;
 &lt;li&gt;I&#x27;m stretching the real-life analogies to the limit&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
@@ -4288,6 +4379,11 @@ Linear algebra, including vector spaces, linear transformations, and matrix oper
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;learnk8s.io&#x2F;blog&#x2F;scaling-spring-boot-microservices&quot;&gt;Scaling Spring Boot with Message Queues and Kubernetes&lt;&#x2F;a&gt; &lt;small&gt;(&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;learnk8s&#x2F;spring-boot-k8s-hpa&quot;&gt;&lt;em&gt;repo&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;newbee-ltd&#x2F;newbee-mall-cloud&#x2F;tree&#x2F;main&quot;&gt;newbee-ltd&#x2F;新蜂商城: 微服务版本&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;the-course&quot;&gt;The Course&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;playlist?list=PLeKd45zvjcDFUEv_ohr_HdUFe97RItdiB&quot;&gt;Distributed Systems Lecture Series&lt;&#x2F;a&gt; by &lt;a href=&quot;https:&#x2F;&#x2F;martin.kleppmann.com&#x2F;&quot;&gt;Martin Kleppmann&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;playlist?list=PLrw6a1wE39_tb2fErI4-WkMbsvGQk9_UB&quot;&gt;MIT 6.824 Distributed Systems (Spring 2020)&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h2 id=&quot;notes&quot;&gt;Notes&lt;&#x2F;h2&gt;
 &lt;ul&gt;
@@ -4747,6 +4843,7 @@ Linear algebra, including vector spaces, linear transformations, and matrix oper
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=Y93BGebBwEE&quot;&gt;System Design Interview in 9 Minutes - YouTube&lt;&#x2F;a&gt; by &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;@jasonmel&quot;&gt;jasonmel&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=28n0DVP3U14&quot;&gt;系统设计怎么考？系统设计题怎么答？&lt;&#x2F;a&gt; by &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;@bittigerbittigerofficialch1523&quot;&gt;BigTiger&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;playlist?list=PLbhaS_83B97vSWVslD63vjIi5OTYmSVrk&quot;&gt;系统设计 &lt;sup&gt;(playlist)&lt;&#x2F;sup&gt;&lt;&#x2F;a&gt; by &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;@XCode1024&#x2F;videos&quot;&gt;X Code&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h3 id=&quot;systematic-course&quot;&gt;Systematic Course&lt;&#x2F;h3&gt;
 &lt;blockquote&gt;
@@ -8539,8 +8636,9 @@ a full networking stack;&lt;&#x2F;li&gt;
 		<updated>2022-07-18T00:00:00+00:00</updated>
 		<link rel="alternate" href="https://codingezio.github.io/algorithm-handbook/" type="text/html"/>
 		<id>https://codingezio.github.io/algorithm-handbook/</id>
-		<content type="html">&lt;h2 id=&quot;concepts&quot;&gt;Concepts&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;non-decreasing-order&quot;&gt;Non-decreasing Order&lt;&#x2F;h3&gt;
+		<content type="html">&lt;h1 id=&quot;concepts&quot;&gt;Concepts&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;fucking-terminology&quot;&gt;Fucking Terminology&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;in-non-decreasing-order&quot;&gt;In &lt;em&gt;&lt;strong&gt;Non-decreasing&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt; Order&lt;&#x2F;h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;1963474&#x2F;is-a-non-decreasing-sequence-increasing&quot;&gt;Is a &amp;quot;non-decreasing&amp;quot; sequence &amp;quot;increasing&amp;quot;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
@@ -8550,16 +8648,29 @@ a full networking stack;&lt;&#x2F;li&gt;
 &lt;li&gt;It&#x27;s not completely the same as the increasing order, e.g. 1, 2, 2, 3, 4&lt;&#x2F;li&gt;
 &lt;li&gt;Its increase or decrease must applies to all to be qualified&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;chang-jian-fu-za-du-big-o-de-bian-bie&quot;&gt;常见复杂度 Big O 的辨别&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;stability-in-sorting-algorithms&quot;&gt;&lt;em&gt;&lt;strong&gt;Stability&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt; in Sorting Algorithms&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;1517793&#x2F;what-is-stability-in-sorting-algorithms-and-why-is-it-important&quot;&gt;What Is Stability In Sorting Algorithms And Why Is It Important?&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;a-balanced-tree&quot;&gt;A &lt;em&gt;&lt;strong&gt;Balanced&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt; Tree&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&#x2F;&gt;
+&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;8015630&#x2F;definition-of-a-balanced-tree&quot;&gt;Definition of a Balanced Tree&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&#x2F;&gt;
+&lt;a href=&quot;https:&#x2F;&#x2F;cs.stackexchange.com&#x2F;a&#x2F;54209&#x2F;155546&quot;&gt;Is a Balanced Binary Tree a Complete Binary Tree&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&#x2F;&gt;
+&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;31027422&#x2F;what-is-the-difference-between-a-balanced-binary-search-tree-and-a-binary-search&quot;&gt;What Is The Difference Between a Balanced Binary Search Tree and a Binary Search Tree&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;chang-jian-fu-za-du-big-o-de-bian-bie&quot;&gt;常见复杂度 Big O 的辨别&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;demonstration&quot;&gt;Demonstration&lt;&#x2F;h3&gt;
 &lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th style=&quot;text-align: center&quot;&gt;O&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: left&quot;&gt;Statement&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
 &lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;em&gt;O(n)&lt;&#x2F;em&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;code&gt;for X in range(N)&lt;&#x2F;code&gt;&lt;br&#x2F;&gt;&lt;code&gt;for X in range(start, N, k)&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
 &lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;em&gt;O(nm)&lt;&#x2F;em&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;code&gt;for X in range(N): for Y in range(M)&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
 &lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;em&gt;O(n²)&lt;&#x2F;em&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;code&gt;for X in range(N): for Y in range(X)&lt;&#x2F;code&gt; &lt;br&#x2F;&gt;&lt;code&gt;for X in range(N): X*=2 for Y in range(X)&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
 &lt;tr&gt;&lt;td style=&quot;text-align: center&quot;&gt;&lt;em&gt;O(logN)&lt;&#x2F;em&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;code&gt;while X &amp;lt; N: X*=k&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
 &lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
-&lt;h2 id=&quot;knowledge&quot;&gt;Knowledge&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;bit-wise-operator&quot;&gt;Bit-wise Operator&lt;&#x2F;h3&gt;
-&lt;h4 id=&quot;number&quot;&gt;Number&lt;&#x2F;h4&gt;
+&lt;h2 id=&quot;bit-wise-operator&quot;&gt;Bit-wise Operator&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;number&quot;&gt;Number&lt;&#x2F;h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;本质上都是二进制操作，不进位&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
@@ -8568,7 +8679,7 @@ a full networking stack;&lt;&#x2F;li&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# &amp;amp; Bitwise AND    -&amp;gt; (1, 1) leads to 1, otherwise 0
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# ^ Bitwise XOR    -&amp;gt; (1, 0)(0, 1) leads to 1, otherwise 0
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h4 id=&quot;letter&quot;&gt;Letter&lt;&#x2F;h4&gt;
+&lt;h3 id=&quot;letter&quot;&gt;Letter&lt;&#x2F;h3&gt;
 &lt;pre data-lang=&quot;java&quot; style=&quot;background-color:#282c34;color:#dcdfe4;&quot; class=&quot;language-java &quot;&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;&#x2F;&#x2F; To lowercase
 &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;#39;a&amp;#39; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;| &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;#39; &amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;== &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;#39;a&amp;#39;
 &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;#39;A&amp;#39; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;| &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;#39; &amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;== &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;#39;a&amp;#39;
@@ -8581,11 +8692,12 @@ a full networking stack;&lt;&#x2F;li&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;#39;c&amp;#39; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;^ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;#39; &amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;== &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;#39;C&amp;#39;
 &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;#39;C&amp;#39; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;^ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;#39; &amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;== &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;#39;C&amp;#39;
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h3 id=&quot;traversing-binary-tree&quot;&gt;Traversing Binary Tree&lt;&#x2F;h3&gt;
+&lt;h1 id=&quot;in-practice&quot;&gt;In Practice&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;traversing-binary-tree&quot;&gt;Traversing Binary Tree&lt;&#x2F;h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;以 root 节点为视角: &lt;em&gt;Preorder&lt;&#x2F;em&gt; &lt;sup&gt;(前序)&lt;&#x2F;sup&gt;, &lt;em&gt;Inorder&lt;&#x2F;em&gt; &lt;sup&gt;(中序)&lt;&#x2F;sup&gt;, &lt;em&gt;Postorder&lt;&#x2F;em&gt; &lt;sup&gt;(后序)&lt;&#x2F;sup&gt; and .. &lt;em&gt;Level Order&lt;&#x2F;em&gt;. Note that these methods by themselves &lt;strong&gt;are&lt;&#x2F;strong&gt; LeetCode problems as well.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
-&lt;h4 id=&quot;0144-binary-tree-preorder-traversal&quot;&gt;0144. Binary Tree &lt;em&gt;&lt;strong&gt;Preorder&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt; Traversal&lt;&#x2F;h4&gt;
+&lt;h3 id=&quot;0144-binary-tree-preorder-traversal&quot;&gt;0144. Binary Tree &lt;em&gt;&lt;strong&gt;Preorder&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt; Traversal&lt;&#x2F;h3&gt;
 &lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#282c34;color:#dcdfe4;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# Definition for a binary tree node.
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# class TreeNode:
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;#     def __init__(self, val=0, left=None, right=None):
@@ -8608,7 +8720,7 @@ a full networking stack;&lt;&#x2F;li&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;     &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;preorder&lt;&#x2F;span&gt;&lt;span&gt;(node.left, a_list)
 &lt;&#x2F;span&gt;&lt;span&gt;     &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;preorder&lt;&#x2F;span&gt;&lt;span&gt;(node.right, a_list)
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h4 id=&quot;0094-binary-tree-inorder-traversal&quot;&gt;0094. Binary Tree &lt;em&gt;&lt;strong&gt;Inorder&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt; Traversal&lt;&#x2F;h4&gt;
+&lt;h3 id=&quot;0094-binary-tree-inorder-traversal&quot;&gt;0094. Binary Tree &lt;em&gt;&lt;strong&gt;Inorder&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt; Traversal&lt;&#x2F;h3&gt;
 &lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#282c34;color:#dcdfe4;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# Definition for a binary tree node.
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# class TreeNode:
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;#     def __init__(self, val=0, left=None, right=None):
@@ -8631,7 +8743,7 @@ a full networking stack;&lt;&#x2F;li&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;        a_list.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;append&lt;&#x2F;span&gt;&lt;span&gt;(node.val)
 &lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;inorder&lt;&#x2F;span&gt;&lt;span&gt;(node.right, a_list)
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h4 id=&quot;0145-binary-tree-postorder-traversal&quot;&gt;0145. Binary Tree &lt;em&gt;&lt;strong&gt;Postorder&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt; Traversal&lt;&#x2F;h4&gt;
+&lt;h3 id=&quot;0145-binary-tree-postorder-traversal&quot;&gt;0145. Binary Tree &lt;em&gt;&lt;strong&gt;Postorder&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt; Traversal&lt;&#x2F;h3&gt;
 &lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#282c34;color:#dcdfe4;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# Definition for a binary tree node.
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# class TreeNode:
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;#     def __init__(self, val=0, left=None, right=None):
@@ -8654,7 +8766,7 @@ a full networking stack;&lt;&#x2F;li&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;postorder&lt;&#x2F;span&gt;&lt;span&gt;(node.right, a_list)
 &lt;&#x2F;span&gt;&lt;span&gt;        a_list.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;append&lt;&#x2F;span&gt;&lt;span&gt;(node.val)
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h4 id=&quot;0102-binary-tree-level-order-traversal&quot;&gt;0102. Binary Tree &lt;em&gt;&lt;strong&gt;Level Order&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt; Traversal&lt;&#x2F;h4&gt;
+&lt;h3 id=&quot;0102-binary-tree-level-order-traversal&quot;&gt;0102. Binary Tree &lt;em&gt;&lt;strong&gt;Level Order&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt; Traversal&lt;&#x2F;h3&gt;
 &lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#282c34;color:#dcdfe4;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# Definition for a binary tree node.
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# class TreeNode:
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;#     def __init__(self, val=0, left=None, right=None):
@@ -8685,6 +8797,19 @@ a full networking stack;&lt;&#x2F;li&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;node.right:
 &lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;dfs&lt;&#x2F;span&gt;&lt;span&gt;(node.right, level &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;+ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;, res)
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;sorting&quot;&gt;Sorting&lt;&#x2F;h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;leetcode.cn&#x2F;circle&#x2F;discuss&#x2F;eBo9UB&#x2F;&quot;&gt;十大排序从入门到入赘&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;leetcode.cn&#x2F;problems&#x2F;sort-an-array&#x2F;solution&#x2F;fu-xi-ji-chu-pai-xu-suan-fa-java-by-liweiwei1419&#x2F;&quot;&gt;Put Them in Use&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;hr &#x2F;&gt;
+&lt;h1 id=&quot;references&quot;&gt;References&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;books&quot;&gt;Books&lt;&#x2F;h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Read some of them before&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;runestone.academy&#x2F;ns&#x2F;books&#x2F;published&#x2F;pythonds&#x2F;index.html&quot;&gt;Problem Solving with Algorithms and Data Structures using Python&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">

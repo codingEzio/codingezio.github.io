@@ -262,21 +262,13 @@ description = "N/A"
 
 -----
 
-# Programming Paradigm
+# Functional Programming
 
-## Reactive
-
-- [Introduction to Reactive Programming](https://gist.github.com/staltz/868e7e9bc2a7b8c1f754)
-- [Observables vs Subjects vs Behavior Subjects](https://javascript.plainenglish.io/eli5-observables-vs-subjects-vs-behavior-subjects-f2494f14813d)
-- [Angular : RxJS BehaviorSubject](https://dev.to/dipteekhd/angular-behaviorsubject-p1)
-
-## Functional
-
-### JavaScript
+## JavaScript
 
 - [Why Ramda instead of native Array methods](https://github.com/ramda/ramda/issues/2404)
 
-### Java
+## Java
 
 - [Java's Supplier and Consumer interfaces](https://stackoverflow.com/questions/28417262/when-and-why-would-you-use-javas-supplier-and-consumer-interfaces)
 

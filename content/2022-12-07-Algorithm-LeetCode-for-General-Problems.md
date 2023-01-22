@@ -1089,7 +1089,12 @@ class Solution:
 
 ### References
 
-> Good to have but not necessary
+#### Train of Thought
+
+- [挑戰 Blind 75 - 以圖解方式練習解題](https://ithelp.ithome.com.tw/users/20111580/ironman/4951)
+- [Neetcode.io](https://neetcode.io/practice)
+
+#### Good to Have
 
 - [Grind 75 - A better Blind 75 you can customize, by the author of Blind 75](https://www.techinterviewhandbook.org/grind75)
 

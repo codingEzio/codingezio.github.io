@@ -18,6 +18,7 @@ description = "Know, learn, build and teach"
 ### Architecture
 
 - [Concepts and considerations for Message Queues in System Design](https://web.archive.org/web/20221230083203/https://medium.com/must-know-computer-science/system-design-message-queues-245612428a22)
+- [Comparing Apache Kafka, ActiveMQ, and RabbitMQ](https://www.conduktor.io/blog/comparing-apache-kafka-activemq-and-rabbitmq) <small>(weigh on)</small>
 
 ## Practice
 

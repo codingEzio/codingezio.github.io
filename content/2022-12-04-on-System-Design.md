@@ -28,6 +28,7 @@ description = "I wish I knew about this when I started learning to program"
 
 - [System Design Interview in 9 Minutes - YouTube](https://www.youtube.com/watch?v=Y93BGebBwEE) by [jasonmel](https://www.youtube.com/@jasonmel)
 - [系统设计怎么考？系统设计题怎么答？](https://www.youtube.com/watch?v=28n0DVP3U14) by [BigTiger](https://www.youtube.com/@bittigerbittigerofficialch1523)
+- [系统设计 <sup>(playlist)</sup>](https://www.youtube.com/playlist?list=PLbhaS_83B97vSWVslD63vjIi5OTYmSVrk) by [X Code](https://www.youtube.com/@XCode1024/videos)
 
 ### Systematic Course
 

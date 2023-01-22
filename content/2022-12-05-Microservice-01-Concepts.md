@@ -135,11 +135,5 @@ description = "The WHY for Microservices and demystified some concepts"
 
 -----
 
-- to practice
-  - [Spring Boot Microservices Project Tutorial - Part 1 - ProgrammingTechie](https://programmingtechie.com/2021/03/24/spring-boot-microservices-project-tutorial-part-1/)
-
-- to extract
-  - [Comparing Apache Kafka, ActiveMQ, and RabbitMQ](https://www.conduktor.io/blog/comparing-apache-kafka-activemq-and-rabbitmq)
-
 - note for myself
   - I'm stretching the real-life analogies to the limit

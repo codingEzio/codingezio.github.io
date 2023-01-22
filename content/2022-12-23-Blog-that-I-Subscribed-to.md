@@ -36,6 +36,7 @@ description = "Thoughts from interesting and thoughtful human beings"
 - [Hakim El Hattab](https://hakim.se/)
 - [Peter Goldsborough](https://www.goldsborough.me/)
 - [大破进击](https://jesor.me/all/)
+- [Wait But Why](https://waitbutwhy.com/archive)
 - [Randy's Blog](https://lutaonan.com/)
 - [HuoJu's Blog](https://jhuo.ca/post/)
 - [Neel Nanda](https://www.neelnanda.io/)
