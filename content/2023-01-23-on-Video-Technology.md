@@ -1,6 +1,6 @@
 +++
 title = "On Video Technology"
-description = "Thoughts and notes on Reactive Programming"
+description = "Thoughts and notes on Video Technology"
 +++
 
 > Just an overview, not really a grand topic that I want to explore at the moment.

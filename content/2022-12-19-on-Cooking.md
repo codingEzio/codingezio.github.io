@@ -11,19 +11,10 @@ description = "Notes on learning to cook"
 
 ## Knowledge
 
-### Resources
-
-> Source repository for [\#1](https://github.com/YunYouJun/cook), [\#2](https://github.com/Anduin2017/HowToCook)
-
-#### Pragmatically
-
-- [隔离食用手册](https://cook.yunyoujun.cn/)：不同食材间组合，并有相关教程
-- [程序员做饭指南](https://cook.aiurs.co/)：做饭方法论，以及常见食谱
-
-#### Universality
-
-- [日日煮 <small>(*hk*)</small>](https://www.daydaycook.com/daydaycook/hk/website/index.do)
-- [日日煮 <small>(*cn*)</small>](https://www.daydaycook.com.cn/daydaycook)
+- [隔离食用手册](https://cook.yunyoujun.cn/) <sup>[src](https://github.com/YunYouJun/cook)</sup>：不同食材间组合，并有相关教程
+- [程序员做饭指南](https://cook.aiurs.co/) <sup>[src](https://github.com/Anduin2017/HowToCook)</sup>：做饭方法论，以及常见食谱
+- 食谱 [日日煮 <small>(*hk*)</small>](https://www.daydaycook.com/daydaycook/hk/website/index.do)
+- 食谱 [日日煮 <small>(*cn*)</small>](https://www.daydaycook.com.cn/daydaycook)
 
 ## Notes
 
