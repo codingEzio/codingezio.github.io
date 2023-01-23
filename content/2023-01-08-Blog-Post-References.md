@@ -84,6 +84,11 @@ description = "N/A"
 
 # Redis
 
+## Overview
+
+- [Zero to Master - Part 1](https://www.openmymind.net/2011/11/8/Redis-Zero-To-Master-In-30-Minutes-Part-1/)
+- [Zero to Master - Part 2](https://www.openmymind.net/2011/11/8/Redis-Zero-To-Master-In-30-Minutes-Part-2/)
+
 ## Data Type
 
 - [Redis Streams and the Unified Log](https://brandur.org/redis-streams)
@@ -102,6 +107,12 @@ description = "N/A"
 ## Biz Concern
 
 - [*BigKey* and *HotKey* Issues in Redis](https://dev.to/mrboogiej/deep-dive-of-bigkey-and-hotkey-issues-in-redis-what-they-are-how-to-discover-how-to-handle-4ldl)
+
+## Confusion
+
+- [Why Redis 'Zset' Means 'Sorted Set'](https://stackoverflow.com/a/64024605/6273859)
+- [Colons within Redis Keys](https://stackoverflow.com/a/3555759/6273859)
+- [Redis Key Naming Conventions](https://stackoverflow.com/a/6971415/6273859)
 
 -----
 

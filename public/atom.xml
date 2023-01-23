@@ -5,8 +5,67 @@
 	<link href="https://codingezio.github.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://codingezio.github.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2023-01-22T00:00:00+00:00</updated>
+	<updated>2023-01-23T00:00:00+00:00</updated>
 	<id>https://codingezio.github.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>On Authentication</title>
+		<published>2023-01-23T00:00:00+00:00</published>
+		<updated>2023-01-23T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://codingezio.github.io/on-authentication/" type="text/html"/>
+		<id>https://codingezio.github.io/on-authentication/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;Just an overview, not really a grand topic that I want to explore at the moment.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h2 id=&quot;resources&quot;&gt;Resources&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;learning-material&quot;&gt;Learning Material&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;staltz&#x2F;868e7e9bc2a7b8c1f754&quot;&gt;Introduction to Reactive Programming&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;ithelp.ithome.com.tw&#x2F;users&#x2F;20141418&#x2F;ironman&#x2F;4617&quot;&gt;從零開始 Reactive Programming - Spring&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;misc&quot;&gt;Misc&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;javascript.plainenglish.io&#x2F;eli5-observables-vs-subjects-vs-behavior-subjects-f2494f14813d&quot;&gt;Observables vs Subjects vs Behavior Subjects&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;dev.to&#x2F;dipteekhd&#x2F;angular-behaviorsubject-p1&quot;&gt;Angular : RxJS BehaviorSubject&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>On Video Technology</title>
+		<published>2023-01-23T00:00:00+00:00</published>
+		<updated>2023-01-23T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://codingezio.github.io/on-video-technology/" type="text/html"/>
+		<id>https://codingezio.github.io/on-video-technology/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;Just an overview, not really a grand topic that I want to explore at the moment.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h2 id=&quot;resources&quot;&gt;Resources&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;learning-material&quot;&gt;Learning Material&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;staltz&#x2F;868e7e9bc2a7b8c1f754&quot;&gt;Introduction to Reactive Programming&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;ithelp.ithome.com.tw&#x2F;users&#x2F;20141418&#x2F;ironman&#x2F;4617&quot;&gt;從零開始 Reactive Programming - Spring&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;misc&quot;&gt;Misc&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;javascript.plainenglish.io&#x2F;eli5-observables-vs-subjects-vs-behavior-subjects-f2494f14813d&quot;&gt;Observables vs Subjects vs Behavior Subjects&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;dev.to&#x2F;dipteekhd&#x2F;angular-behaviorsubject-p1&quot;&gt;Angular : RxJS BehaviorSubject&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Read Essay on How to Identify Personal Strength</title>
+		<published>2023-01-23T00:00:00+00:00</published>
+		<updated>2023-01-23T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://codingezio.github.io/read-essay-on-how-to-identify-personal-strength/" type="text/html"/>
+		<id>https://codingezio.github.io/read-essay-on-how-to-identify-personal-strength/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;As the content inside is really dense and &lt;em&gt;hard&lt;&#x2F;em&gt; to digest, I thought I should open a dedicated post to write down the notes along with my own context. See &lt;a href=&quot;https:&#x2F;&#x2F;80000hours.org&#x2F;articles&#x2F;personal-strengths&#x2F;&quot;&gt;&lt;em&gt;How to Identify Your Personal Strength&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h2 id=&quot;n-a&quot;&gt;N&#x2F;A&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;N&#x2F;A&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>On Reactive Programming</title>
 		<published>2023-01-22T00:00:00+00:00</published>
@@ -447,6 +506,11 @@
 &lt;&#x2F;ul&gt;
 &lt;hr &#x2F;&gt;
 &lt;h1 id=&quot;redis&quot;&gt;Redis&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.openmymind.net&#x2F;2011&#x2F;11&#x2F;8&#x2F;Redis-Zero-To-Master-In-30-Minutes-Part-1&#x2F;&quot;&gt;Zero to Master - Part 1&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.openmymind.net&#x2F;2011&#x2F;11&#x2F;8&#x2F;Redis-Zero-To-Master-In-30-Minutes-Part-2&#x2F;&quot;&gt;Zero to Master - Part 2&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
 &lt;h2 id=&quot;data-type&quot;&gt;Data Type&lt;&#x2F;h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;brandur.org&#x2F;redis-streams&quot;&gt;Redis Streams and the Unified Log&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
@@ -465,6 +529,12 @@
 &lt;h2 id=&quot;biz-concern&quot;&gt;Biz Concern&lt;&#x2F;h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;dev.to&#x2F;mrboogiej&#x2F;deep-dive-of-bigkey-and-hotkey-issues-in-redis-what-they-are-how-to-discover-how-to-handle-4ldl&quot;&gt;&lt;em&gt;BigKey&lt;&#x2F;em&gt; and &lt;em&gt;HotKey&lt;&#x2F;em&gt; Issues in Redis&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;confusion-1&quot;&gt;Confusion&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;a&#x2F;64024605&#x2F;6273859&quot;&gt;Why Redis &#x27;Zset&#x27; Means &#x27;Sorted Set&#x27;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;a&#x2F;3555759&#x2F;6273859&quot;&gt;Colons within Redis Keys&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;a&#x2F;6971415&#x2F;6273859&quot;&gt;Redis Key Naming Conventions&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;hr &#x2F;&gt;
 &lt;h1 id=&quot;around-spring&quot;&gt;Around Spring&lt;&#x2F;h1&gt;
@@ -571,7 +641,7 @@
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;3423262&#x2F;what-is-modelattribute-in-spring-mvc&quot;&gt;What is &lt;code&gt;@ModelAttribute&lt;&#x2F;code&gt; in Spring MVC?&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;hr &#x2F;&gt;
-&lt;h1 id=&quot;confusion-1&quot;&gt;Confusion&lt;&#x2F;h1&gt;
+&lt;h1 id=&quot;confusion-2&quot;&gt;Confusion&lt;&#x2F;h1&gt;
 &lt;h2 id=&quot;spring-security&quot;&gt;Spring Security&lt;&#x2F;h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;35023900&#x2F;whats-the-difference-between-configure-and-configureglobal-methods&quot;&gt;&lt;code&gt;configure&lt;&#x2F;code&gt; and &lt;code&gt;configureGlobal&lt;&#x2F;code&gt; methods?&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
@@ -1645,11 +1715,11 @@ multiple object references could reference to 1 object&lt;&#x2F;p&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">
-		<title>Blog that I Subscribed to</title>
+		<title>My Own Information Universe</title>
 		<published>2022-12-23T00:00:00+00:00</published>
 		<updated>2022-12-23T00:00:00+00:00</updated>
-		<link rel="alternate" href="https://codingezio.github.io/blog-that-i-subscribed-to/" type="text/html"/>
-		<id>https://codingezio.github.io/blog-that-i-subscribed-to/</id>
+		<link rel="alternate" href="https://codingezio.github.io/my-own-information-universe/" type="text/html"/>
+		<id>https://codingezio.github.io/my-own-information-universe/</id>
 		<content type="html">&lt;blockquote&gt;
 &lt;p&gt;Note that this post is more like public bookmarks for myself. It seemed that merely saving these as bookmarks weren&#x27;t enough, whether they are which were saved in the browser, or services like &lt;a href=&quot;https:&#x2F;&#x2F;raindrop.io&#x2F;&quot;&gt;Raindrop.io&lt;&#x2F;a&gt;. For me, I loves to categorize and minimize stuff, but that weren&#x27;t an easy task for me as I need to archive every single one that I might need in the future, yet not too much to cause that &lt;em&gt;paralyzation&lt;&#x2F;em&gt; caused by Information Overload. Also, I did tried convert all these to &lt;em&gt;RSS&lt;&#x2F;em&gt;, unfortunately it became be very hard to get all the old posts which defeats the entire purpose of aggregating them together.&lt;&#x2F;p&gt;
 &lt;p&gt;I need an app to grab all that old posts and provide reasonable options to change the font size and such. Well, &lt;em&gt;&lt;strong&gt;I found none&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt; at the moment. &lt;em&gt;NetNewsWire&lt;&#x2F;em&gt; is an excellent tool to grab the sweet &lt;em&gt;RSS&lt;&#x2F;em&gt; feed, but the limitation of &lt;em&gt;RSS&lt;&#x2F;em&gt; itself stopped me from using it. I either read all of them by opening a bunch of links in the browser, or consuming them in a hub that has all that inside.&lt;&#x2F;p&gt;
@@ -1658,7 +1728,7 @@ multiple object references could reference to 1 object&lt;&#x2F;p&gt;
 &lt;p&gt;Lol, I still do not have one yet. Though it seemed that writing on the topics that I was interested in into one or many posts did help a bit, not only I enjoy through the whole process but also actively produce stuff from them instead of the usual &lt;a href=&quot;https:&#x2F;&#x2F;www.wired.com&#x2F;story&#x2F;returning-to-reading&#x2F;&quot;&gt;read-never&lt;&#x2F;a&gt; for morden humans.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;&#x2F;blockquote&gt;
-&lt;h3 id=&quot;blog&quot;&gt;Blog&lt;&#x2F;h3&gt;
+&lt;h2 id=&quot;blog&quot;&gt;Blog&lt;&#x2F;h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Blogs are &lt;strong&gt;powerful&lt;&#x2F;strong&gt;, just as books are.&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
@@ -1667,11 +1737,13 @@ They are &lt;em&gt;archives of the past&lt;&#x2F;em&gt; &lt;br&#x2F;&gt;
 They are &lt;em&gt;watchers of the future&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;&#x2F;blockquote&gt;
+&lt;h3 id=&quot;yi&quot;&gt;一&lt;&#x2F;h3&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.stephenwolfram.com&#x2F;publications&#x2F;&quot;&gt;Stephen Wolfram - &lt;em&gt;Publications&lt;&#x2F;em&gt;, &lt;em&gt;Writings&lt;&#x2F;em&gt; and &lt;em&gt;Speeches&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.coderbridge.com&#x2F;@Po-Jen&quot;&gt;Po-Jen&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;geekplux.com&#x2F;posts&quot;&gt;GeekPlux&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;acko.net&#x2F;&quot;&gt;Hackery, Math &amp;amp; Design&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;cate.blog&#x2F;&quot;&gt;Accidentally in Code – Engineering an Interesting Life&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;cate.blog&#x2F;&quot;&gt;Accidentally in Code&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;brianlui.dog&#x2F;&quot;&gt;Brian Lui&#x27;s blog&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;halfrost.com&#x2F;archives&#x2F;&quot;&gt;冰霜之地 HalfFrost&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;coolshell.cn&#x2F;featured&quot;&gt;酷壳 CoolShell&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
@@ -1679,7 +1751,6 @@ They are &lt;em&gt;watchers of the future&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;mindlevelup.wordpress.com&#x2F;mindlevelup-the-book&#x2F;introduction&#x2F;&quot;&gt;MindLevelup&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;jvns.ca&#x2F;&quot;&gt;Julia Evans&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;bewelltuned.com&#x2F;&quot;&gt;Be Well Tuned&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;clearbox.substack.com&#x2F;archive&quot;&gt;透明盒子计划&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;slatestarcodex.com&#x2F;archives&#x2F;&quot;&gt;Slate Star Codex&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;radimentary.wordpress.com&#x2F;about&#x2F;&quot;&gt;Radimentary&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;thesephist.com&#x2F;posts&#x2F;&quot;&gt;thesephist&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
@@ -1692,38 +1763,79 @@ They are &lt;em&gt;watchers of the future&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;lutaonan.com&#x2F;&quot;&gt;Randy&#x27;s Blog&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;jhuo.ca&#x2F;post&#x2F;&quot;&gt;HuoJu&#x27;s Blog&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.neelnanda.io&#x2F;&quot;&gt;Neel Nanda&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;caminodetexas.substack.com&#x2F;archive&quot;&gt;困而学之&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.k8s.li&#x2F;&quot;&gt;Reimu&#x27;s blog&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.owenyoung.com&#x2F;&quot;&gt;Owen的博客&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;ericasadun.com&#x2F;&quot;&gt;Erica Sadun&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;inessential.com&#x2F;&quot;&gt;inessential: weblog&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;dineshchandgr.medium.com&#x2F;&quot;&gt;Dineshchandgr&lt;&#x2F;a&gt; &lt;&#x2F;small&gt;(potential $5 paywall)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;www.yinwang.org&#x2F;&quot;&gt;当然我在扯淡&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;lifearchitect.ai&#x2F;about-alan&#x2F;&quot;&gt;Life Architect&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;newsletter-ish&quot;&gt;Newsletter&lt;small&gt;(ish)&lt;&#x2F;small&gt;&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;er&quot;&gt;二&lt;&#x2F;h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.bytebytego.com&#x2F;archive&quot;&gt;ByteByteGo&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;caminodetexas.substack.com&#x2F;archive&quot;&gt;困而学之&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;clearbox.substack.com&#x2F;archive&quot;&gt;透明盒子计划&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;caminodetexas.substack.com&#x2F;archive&quot;&gt;困而学之&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;weekly.tw93.fun&#x2F;posts&#x2F;01-%E5%AE%89%E5%90%89%E9%BB%84%E6%98%8F&quot;&gt;潮流周刊&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;more-than-blog&quot;&gt;More Than Blog&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;san&quot;&gt;三&lt;&#x2F;h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.cs.umd.edu&#x2F;~tomg&#x2F;project&#x2F;&quot;&gt;Projects by Tom Goldstein&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;studio.knightlab.com&#x2F;&quot;&gt;Knight Lab Studio&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.bytebytego.com&#x2F;archive&quot;&gt;ByteByteGo&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;dineshchandgr.medium.com&#x2F;&quot;&gt;Dineshchandgr&lt;&#x2F;a&gt; &lt;&#x2F;small&gt;(potential $5 paywall)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;beyond-blog&quot;&gt;Beyond Blog&lt;&#x2F;h3&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;beyond-blog&quot;&gt;Beyond Blog&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;yi-1&quot;&gt;一&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.cs.umd.edu&#x2F;~tomg&#x2F;project&#x2F;&quot;&gt;Tom Goldstein - Projects&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;studio.knightlab.com&#x2F;&quot;&gt;Knight Lab Studio&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.thehighestofthemountains.com&#x2F;about.php#h5o-9&quot;&gt;The Highest of The Mountains&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;er-1&quot;&gt;二&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;aeon.co&#x2F;&quot;&gt;Aeon&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;psyche.co&#x2F;&quot;&gt;Psyche&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;nautil.us&#x2F;&quot;&gt;Nautilus&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;longreads.com&#x2F;&quot;&gt;Longreads&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.lesswrong.com&#x2F;&quot;&gt;LessWrong&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;san-1&quot;&gt;三&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;awesomethread.com&#x2F;categories&#x2F;all&quot;&gt;Twitter Threads &lt;small&gt;(Hand-picked and Categorized)&lt;&#x2F;small&gt;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.producthunt.com&#x2F;discussions&quot;&gt;Product Hunt | Discussion&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;and-more&quot;&gt;And More&lt;&#x2F;h2&gt;
 &lt;h3 id=&quot;misc&quot;&gt;Misc&lt;&#x2F;h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;awesomethread.com&#x2F;categories&#x2F;all&quot;&gt;AwesomeThread | Hand-picked and categorized Twitter threads&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.futuretools.io&#x2F;&quot;&gt;Future Tools&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;free-for.dev&#x2F;&quot;&gt;Free for Developers&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.appinn.com&#x2F;&quot;&gt;小众软件&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;sspai.com&#x2F;&quot;&gt;少数派&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;interview-prep-oriented&quot;&gt;Interview-prep Oriented&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;text&quot;&gt;Text&lt;&#x2F;h4&gt;
+&lt;h5 id=&quot;currently-in-use&quot;&gt;Currently In Use&lt;&#x2F;h5&gt;
+&lt;blockquote&gt;
+&lt;p&gt;These mark the making of &lt;strong&gt;my own knowledge map&lt;&#x2F;strong&gt; as I found tons of &lt;em&gt;bad&lt;&#x2F;em&gt; analogies and explanations inside, yet, there were also no short of good insight for me to learn from. They were of great help to me, but eventually, however detailed and easy their explanations be, they could only serves as a &lt;em&gt;Table of Contents&lt;&#x2F;em&gt; for the person reading it.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;pdai.tech&#x2F;&quot;&gt;Java 全栈知识体系&lt;&#x2F;a&gt; ⭐️⭐️⭐️&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tobebetterjavaer.com&#x2F;&quot;&gt;Java 进阶之路&lt;&#x2F;a&gt; ⭐️⭐️&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;javaguide.cn&#x2F;&quot;&gt;Java 学习指南&lt;&#x2F;a&gt; ⭐️&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h5 id=&quot;new&quot;&gt;New&lt;&#x2F;h5&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Having an even wider span of knowledge notes&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;eric-zhang-seattle.gitbook.io&#x2F;mess-around&#x2F;&quot;&gt;Mess Around Software System Design&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;video&quot;&gt;Video&lt;&#x2F;h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I almost never watch videos to learn as it&#x27;s too inefficient and slow. Though I thought I should keep a backup in case someday the content inside might be of help 😊.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;playlist &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;@codelearning5921&#x2F;playlists&quot;&gt;Code Learning&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;playlist &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;playlist?list=PLHpfx416EzLPcj1JItKYftQDv8ghtoiXQ&quot;&gt;IT技术&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </content>
 	</entry>
@@ -2031,6 +2143,9 @@ TODO&lt;&#x2F;li&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;docker&lt;&#x2F;span&gt;&lt;span&gt; exec&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt; -it&lt;&#x2F;span&gt;&lt;span&gt; redis616-dev bash            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# run `bash` into the container
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id=&quot;actual-use-case&quot;&gt;Actual Use Case&lt;&#x2F;h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;When being in use with code, consider it as a fast database backend with nice APIs &lt;small&gt;(e.g. &lt;code&gt;SADD HSET LPUSH ZADD&lt;&#x2F;code&gt;)&lt;&#x2F;small&gt; and free naming convensions &lt;small&gt;(e.g. &lt;code&gt;job:github:0001&lt;&#x2F;code&gt;&lt;&#x2F;small&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
 &lt;h3 id=&quot;n-a&quot;&gt;N&#x2F;A&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;N&#x2F;A&lt;&#x2F;li&gt;
@@ -4740,6 +4855,9 @@ Linear algebra, including vector spaces, linear transformations, and matrix oper
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;old.reddit.com&#x2F;r&#x2F;Futurology&#x2F;comments&#x2F;ysl8ka&#x2F;the_ceo_of_openai_had_dropped_hints_that_gpt4_due&#x2F;&quot;&gt;Constructive Discussion around Upcoming GPT-4&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h3 id=&quot;preparation-for-the-ai-tsunami&quot;&gt;Preparation for the &lt;em&gt;AI&lt;&#x2F;em&gt; Tsunami&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;lifearchitect.ai&#x2F;kurzweil&#x2F;&quot;&gt;Dr Ray Kurzweil: 2022-2023 Updates&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
 &lt;h4 id=&quot;ideas-and-thoughts-from-twitter&quot;&gt;Ideas and Thoughts from &lt;em&gt;Twitter&lt;&#x2F;em&gt;&lt;&#x2F;h4&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;yetone&#x2F;status&#x2F;1605621537335189506&quot;&gt;yetone: GPT 與 MLOps&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;

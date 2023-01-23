@@ -15,6 +15,8 @@ description = "Anything that is related to OpenAI GPT and similar things"
 
 ### Preparation for the *AI* Tsunami
 
+- [Dr Ray Kurzweil: 2022-2023 Updates](https://lifearchitect.ai/kurzweil/)
+
 #### Ideas and Thoughts from *Twitter*
 
 - [yetone: GPT 與 MLOps](https://twitter.com/yetone/status/1605621537335189506)
