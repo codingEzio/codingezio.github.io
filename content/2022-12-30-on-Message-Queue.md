@@ -19,19 +19,29 @@ description = "Know, learn, build and teach"
 
 - [Concepts and considerations for Message Queues in System Design](https://web.archive.org/web/20221230083203/https://medium.com/must-know-computer-science/system-design-message-queues-245612428a22)
 
-## Practice
+## Hands-on
 
 ### Implementation
 
 - [vitorluis/SimpleMQ](https://github.com/vitorluis/SimpleMQ) <small>(*Python*, in-memory)</small>
 - [dhslrl321/zsmq](https://github.com/dhslrl321/zsmq) <small>(*Java*)</small>
 
-## Onto the Real World
-
-### Which One?
+### Which One
 
 > [Comparing Apache Kafka, ActiveMQ, and RabbitMQ](https://www.conduktor.io/blog/comparing-apache-kafka-activemq-and-rabbitmq) <small>(this link is not a guide to the options listed below)</small>
 
-- *RabbitMQ*: [documentation](https://www.rabbitmq.com/documentation.html), [source code](https://github.com/orgs/rabbitmq/repositories?q=&type=source&language=&sort=stargazers)
 - *Kafka*: [documentation](https://kafka.apache.org/20/documentation.html), [source code](https://github.com/apache/kafka)
 - *RocketMQ*: [documentation](https://rocketmq.apache.org/docs/), [source code](https://github.com/apache/rocketmq)
+- *RabbitMQ*: [documentation](https://www.rabbitmq.com/documentation.html), [source code](https://github.com/orgs/rabbitmq/repositories?q=&type=source&language=&sort=stargazers)
+
+-----
+
+## Overview
+
+### Resource
+
+- [消息队列基础总结](https://javaguide.cn/high-performance/message-queue/message-queue.html#%E5%89%8A%E5%B3%B0-%E9%99%90%E6%B5%81)
+
+### N/A
+
+- N/A

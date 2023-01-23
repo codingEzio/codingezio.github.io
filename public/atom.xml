@@ -5,8 +5,23 @@
 	<link href="https://codingezio.github.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://codingezio.github.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2023-01-23T00:00:00+00:00</updated>
+	<updated>2023-01-24T00:00:00+00:00</updated>
 	<id>https://codingezio.github.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>On Everything as Code</title>
+		<published>2023-01-24T00:00:00+00:00</published>
+		<updated>2023-01-24T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://codingezio.github.io/on-everything-as-code/" type="text/html"/>
+		<id>https://codingezio.github.io/on-everything-as-code/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;[some software term] as code = Automation&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h2 id=&quot;resources&quot;&gt;Resources&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;N&#x2F;A&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
 	<entry xml:lang="en">
 		<title>On Authentication</title>
 		<published>2023-01-23T00:00:00+00:00</published>
@@ -1251,21 +1266,30 @@ multiple object references could reference to 1 object&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20221230083203&#x2F;https:&#x2F;&#x2F;medium.com&#x2F;must-know-computer-science&#x2F;system-design-message-queues-245612428a22&quot;&gt;Concepts and considerations for Message Queues in System Design&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h2 id=&quot;practice&quot;&gt;Practice&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;hands-on&quot;&gt;Hands-on&lt;&#x2F;h2&gt;
 &lt;h3 id=&quot;implementation&quot;&gt;Implementation&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;vitorluis&#x2F;SimpleMQ&quot;&gt;vitorluis&#x2F;SimpleMQ&lt;&#x2F;a&gt; &lt;small&gt;(&lt;em&gt;Python&lt;&#x2F;em&gt;, in-memory)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;dhslrl321&#x2F;zsmq&quot;&gt;dhslrl321&#x2F;zsmq&lt;&#x2F;a&gt; &lt;small&gt;(&lt;em&gt;Java&lt;&#x2F;em&gt;)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h2 id=&quot;onto-the-real-world&quot;&gt;Onto the Real World&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;which-one&quot;&gt;Which One?&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;which-one&quot;&gt;Which One&lt;&#x2F;h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.conduktor.io&#x2F;blog&#x2F;comparing-apache-kafka-activemq-and-rabbitmq&quot;&gt;Comparing Apache Kafka, ActiveMQ, and RabbitMQ&lt;&#x2F;a&gt; &lt;small&gt;(this link is not a guide to the options listed below)&lt;&#x2F;small&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;RabbitMQ&lt;&#x2F;em&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;www.rabbitmq.com&#x2F;documentation.html&quot;&gt;documentation&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;orgs&#x2F;rabbitmq&#x2F;repositories?q=&amp;amp;type=source&amp;amp;language=&amp;amp;sort=stargazers&quot;&gt;source code&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;em&gt;Kafka&lt;&#x2F;em&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;kafka.apache.org&#x2F;20&#x2F;documentation.html&quot;&gt;documentation&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;apache&#x2F;kafka&quot;&gt;source code&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;em&gt;RocketMQ&lt;&#x2F;em&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;rocketmq.apache.org&#x2F;docs&#x2F;&quot;&gt;documentation&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;apache&#x2F;rocketmq&quot;&gt;source code&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;em&gt;RabbitMQ&lt;&#x2F;em&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;www.rabbitmq.com&#x2F;documentation.html&quot;&gt;documentation&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;orgs&#x2F;rabbitmq&#x2F;repositories?q=&amp;amp;type=source&amp;amp;language=&amp;amp;sort=stargazers&quot;&gt;source code&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;resource&quot;&gt;Resource&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;javaguide.cn&#x2F;high-performance&#x2F;message-queue&#x2F;message-queue.html#%E5%89%8A%E5%B3%B0-%E9%99%90%E6%B5%81&quot;&gt;消息队列基础总结&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;n-a&quot;&gt;N&#x2F;A&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;N&#x2F;A&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </content>
 	</entry>
