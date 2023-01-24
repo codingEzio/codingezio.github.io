@@ -5062,14 +5062,11 @@ Linear algebra, including vector spaces, linear transformations, and matrix oper
 		<link rel="alternate" href="https://codingezio.github.io/on-system-design/" type="text/html"/>
 		<id>https://codingezio.github.io/on-system-design/</id>
 		<content type="html">&lt;h2 id=&quot;intro&quot;&gt;Intro&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;why&quot;&gt;Why&lt;&#x2F;h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;As you and I all know, even for a normal &lt;em&gt;Spring&lt;&#x2F;em&gt; project, it&#x27;s already complex enough for the human brain to comprehend just &lt;strong&gt;in one go&lt;&#x2F;strong&gt; &lt;small&gt;(with or without a good documentation)&lt;&#x2F;small&gt;. Just like it would be unimaginably more complex for projects like &lt;em&gt;Google Play Store&lt;&#x2F;em&gt; that would need to provide various APIs, payment stuff and many other details &lt;small&gt;(I was going to choose Twitter back then, then I realized that it wasn&#x27;t really looking &lt;em&gt;that&lt;&#x2F;em&gt; complicated &lt;strong&gt;for&lt;&#x2F;strong&gt; a non-technical person. Anyway, just think of it as a really complicated project, and a growing one!)&lt;&#x2F;small&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;For me, I think the reason for companies like Google asking interview questions that related to &lt;em&gt;System Design&lt;&#x2F;em&gt;, is to see if the person really has the ability to have a clear grasp and an organized view for the projects she&#x2F;he&#x2F;x gonna built, and also, you would need to &lt;em&gt;anticipate for the future&lt;&#x2F;em&gt;. As the project grows, you &lt;strong&gt;have&lt;&#x2F;strong&gt; to consider &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Database_scalability#Hardware&quot;&gt;scaling resources like &lt;em&gt;Database&lt;&#x2F;em&gt;&lt;&#x2F;a&gt; and concepts like &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Shard_(database_architecture)&quot;&gt;Database &lt;em&gt;Sharding&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
-&lt;h2 id=&quot;in-practice&quot;&gt;In Practice&lt;&#x2F;h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;I might open a new series about this, or simply adding the content in here.&lt;&#x2F;p&gt;
+&lt;p&gt;For me, I think the reason for companies like Google asking interview questions that related to &lt;em&gt;System Design&lt;&#x2F;em&gt;, is to see if the person really has the ability to have a clear grasp and an organized view for the projects she&#x2F;he&#x2F;x gonna built, and also, you would need to &lt;em&gt;anticipate for the future&lt;&#x2F;em&gt;. As the project grows, you &lt;strong&gt;have&lt;&#x2F;strong&gt; to consider &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Database_scalability#Hardware&quot;&gt;scaling resources like &lt;em&gt;Database&lt;&#x2F;em&gt;&lt;&#x2F;a&gt; and concepts like &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Shard_(database_architecture)&quot;&gt;Database &lt;em&gt;Sharding&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;h2 id=&quot;resources&quot;&gt;Resources&lt;&#x2F;h2&gt;
 &lt;blockquote&gt;
@@ -5096,6 +5093,22 @@ Linear algebra, including vector spaces, linear transformations, and matrix oper
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.educative.io&#x2F;path&#x2F;scalability-system-design&quot;&gt;Scalability &amp;amp; System Design for Developers&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.educative.io&#x2F;path&#x2F;deep-dive-into-system-design-interview&quot;&gt;Deep Dive into System Design Interview&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.educative.io&#x2F;courses&#x2F;grokking-modern-system-design-interview-for-engineers-managers&quot;&gt;Grokking Modern System Design Interview for Engineers &amp;amp; Managers&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;in-practice&quot;&gt;In Practice&lt;&#x2F;h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I might open a new series about this, or simply adding the content in here.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h3 id=&quot;login-via-qr-code&quot;&gt;Login via QR Code&lt;&#x2F;h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This was mostly focused on &lt;em&gt;WeChat&lt;&#x2F;em&gt; login&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;juejin.cn&#x2F;post&#x2F;6940976355097985032&quot;&gt;二维码扫码登录原理&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;mp.weixin.qq.com&#x2F;s?__biz=MzkwODE5ODM0Ng==&amp;amp;mid=2247488444&amp;amp;idx=1&amp;amp;sn=aa290efff32f7d1e52a4011512597032&amp;amp;chksm=c0ccfb19f7bb720f03f8939ea6348492ac5a69b018cbe41457d1ec546b13fba8387cb23db62e&amp;amp;scene=178&amp;amp;cur_album_id=2041709347461709827#rd&quot;&gt;实现扫码登录功能&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;cloud.tencent.com&#x2F;developer&#x2F;article&#x2F;1589934&quot;&gt;微信和淘宝扫码登录的实现原理&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;juejin.cn&#x2F;post&#x2F;6881597417637511181&quot;&gt;微信扫码登录背后的实现原理&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;juejin.cn&#x2F;post&#x2F;7056544865647067172&quot;&gt;搞懂扫码登录的原理&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </content>
 	</entry>
