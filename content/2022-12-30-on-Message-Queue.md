@@ -40,7 +40,11 @@ description = "Know, learn, build and teach"
 
 ### Resource
 
-- [消息队列基础总结](https://javaguide.cn/high-performance/message-queue/message-queue.html#%E5%89%8A%E5%B3%B0-%E9%99%90%E6%B5%81)
+- [消息队列基础知识总结](https://javaguide.cn/high-performance/message-queue/message-queue.html#%E5%89%8A%E5%B3%B0-%E9%99%90%E6%B5%81)
+- [Kafka 总结](https://javaguide.cn/high-performance/message-queue/kafka-questions-01.html)
+- [RocketMQ 基础总结](https://javaguide.cn/high-performance/message-queue/rocketmq-intro.html)
+- [RocketMQ 二十三问](https://mp.weixin.qq.com/s?__biz=MzkwODE5ODM0Ng==&mid=2247490996&idx=1&sn=ba9558574d71979aa689a710c28c7e0e&chksm=c0ccf511f7bb7c07f23d6593e0792cae5dcc9fd003bc4b92f590199b470133ae32fa4025ec39&scene=178&cur_album_id=2041709347461709827#rd)
+- [RocketMQ 常见总结](https://javaguide.cn/high-performance/message-queue/rocketmq-questions.html)
 
 ### N/A
 
