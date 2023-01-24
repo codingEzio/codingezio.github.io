@@ -52,6 +52,8 @@ description = "Thoughts from interesting and thoughtful human beings"
 
 ### 二
 
+- [Something about Everything](https://www.zhihu.com/column/somethingabouteverything)
+- [别处Elsewhere](https://www.zhihu.com/column/elsewhere)
 - [困而学之](https://caminodetexas.substack.com/archive)
 - [透明盒子计划](https://clearbox.substack.com/archive)
 - [困而学之](https://caminodetexas.substack.com/archive)
