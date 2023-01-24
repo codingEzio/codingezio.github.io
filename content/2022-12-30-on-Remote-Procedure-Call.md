@@ -14,6 +14,10 @@ description = "Know, learn, build and teach"
 - and my own notes
   > [How could different (parts of) programs communicate?](https://codingezio.github.io/microservice-01-concepts/#how-could-different-parts-of-programs-communicate)
 
+### What RPC Does for You
+
+- [为什么说 Feign 是伪 RPC?](https://www.zhihu.com/question/298707085) <small>(看内容,不要管标题)</small>
+
 ### When to Use It
 
 - [Understanding RPC Vs REST For HTTP APIs](https://www.smashingmagazine.com/2016/09/understanding-rest-and-rpc-for-http-apis/)
@@ -23,9 +27,9 @@ description = "Know, learn, build and teach"
 
 > [Feign+Ribbon, Dubbo, gRPC 的选型对比](https://blog.csdn.net/id5555/article/details/108960705) <small>(*CSDN*, non-archivable)</small>
 
-- *Feign*: [documentation](https://docs.spring.io/spring-cloud-openfeign/docs/current/reference/html/), [source code](https://github.com/OpenFeign/feign) <small>(inexact categorization)</small>
-- *Dubbo*: [documentation](https://dubbo.apache.org/en/docs/v2.7/user/preface/background/), [source code](https://github.com/apache/dubbo)
-- *gRPC*: [documentation](https://grpc.io/docs/languages/java/quickstart/), [source code](https://github.com/grpc/grpc-java)
+- *Feign*: [documentation](https://docs.spring.io/spring-cloud-openfeign/docs/current/reference/html/), [source code](https://github.com/OpenFeign/feign) <small>(more of a tool that helps you does *RPC*s)</small>
+- *Dubbo*: [documentation](https://dubbo.apache.org/en/docs/v2.7/user/preface/background/), [source code](https://github.com/apache/dubbo) <small>(RPC Framework)</small>
+- *gRPC*: [documentation](https://grpc.io/docs/languages/java/quickstart/), [source code](https://github.com/grpc/grpc-java) <small>(RPC Framework)</small>
 
 ## Implement Your Own
 
@@ -48,4 +52,5 @@ description = "Know, learn, build and teach"
 ### Resource
 
 - [RPC 基础常见总结](https://javaguide.cn/distributed-system/rpc/rpc-intro.html)
+- [有了 HTTP 协议，为什么还要有 RPC](https://javaguide.cn/distributed-system/rpc/http&rpc.html#http-%E5%92%8C-rpc-%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB)
 - [Dubbo 常见总结](https://javaguide.cn/distributed-system/rpc/dubbo.html)
