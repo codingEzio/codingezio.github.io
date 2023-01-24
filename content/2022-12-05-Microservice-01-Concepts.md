@@ -4,6 +4,14 @@ description = "The WHY for Microservices and demystified some concepts"
 +++
 
 
+## Note to Self
+
+- The analogies shall be understandable even for a layman
+- The anologies shall not went too far to be of practical usage
+- Tech stacks to choose from, see [mfornos/awesome-microservices](https://github.com/mfornos/awesome-microservices#capabilities)
+
+-----
+
 ## Why
 
 ### What
@@ -57,6 +65,14 @@ description = "The WHY for Microservices and demystified some concepts"
 - I'm confused and scared by the sheer amount of stuff I need to know
   - Don't worry, they are here to solve *problems*
   - Don't be scared, they are inherently simple, the *complexity* is in your business
+
+#### Why the functionalities overlap so much
+
+> What I meant by that is things like *Nacos* tries to solve/does multiple things like *Service Discovery*, *Service Registration* and *Configuration Management*. Is it a bad thing? Hell no! But it does confuse me a bit about which tech stack to choose from when I was trying learn about Microservices at the very beginning.
+
+- Is it hard to switch from one stack to an *alternative*
+
+  > Especially you used not just one features that the alternative to it doesn't have
 
 ## How (and why)
 
@@ -132,8 +148,3 @@ description = "The WHY for Microservices and demystified some concepts"
     - therefore you need put the config (and/with metadata) somewhere
     - ZooKeeper does stuff like service registration, config management and so on
       - we want the *config management* (hold, replicate, publish)
-
------
-
-- note for myself
-  - I'm stretching the real-life analogies to the limit

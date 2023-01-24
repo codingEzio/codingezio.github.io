@@ -1322,20 +1322,7 @@ multiple object references could reference to 1 object&lt;&#x2F;p&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.smashingmagazine.com&#x2F;2016&#x2F;09&#x2F;understanding-rest-and-rpc-for-http-apis&#x2F;&quot;&gt;Understanding RPC Vs REST For HTTP APIs&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;cloud.google.com&#x2F;blog&#x2F;products&#x2F;application-development&#x2F;rest-vs-rpc-what-problems-are-you-trying-to-solve-with-your-apis&quot;&gt;REST vs. RPC: What Problems Are You Trying to Solve with Your APIs?&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h2 id=&quot;practice&quot;&gt;Practice&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;rpc-framework&quot;&gt;RPC Framework&lt;&#x2F;h3&gt;
-&lt;h4 id=&quot;less-code-to-digest&quot;&gt;Less Code to Digest&lt;&#x2F;h4&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;earthstar-project&#x2F;mini-rpc&quot;&gt;earthstar-project&#x2F;mini-rpc&lt;&#x2F;a&gt; &lt;small&gt;(&lt;em&gt;TypeScript&lt;&#x2F;em&gt;)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;geektutu.com&#x2F;post&#x2F;geerpc.html&quot;&gt;GeeRPC: 7天用 Go 从零实现 RPC 框架&lt;&#x2F;a&gt; &lt;sup&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;geektutu&#x2F;7days-golang&#x2F;tree&#x2F;master&#x2F;gee-rpc&#x2F;doc&quot;&gt;src&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt; &lt;small&gt;(&lt;em&gt;Go&lt;&#x2F;em&gt;)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h4 id=&quot;a-bit-heavier-to-digest&quot;&gt;A Bit Heavier to Digest&lt;&#x2F;h4&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;veal98&#x2F;RPC-FromScratch&quot;&gt;veal98&#x2F;RPC-FromScratch&lt;&#x2F;a&gt; &lt;small&gt;(&lt;em&gt;Java&lt;&#x2F;em&gt;, &lt;em&gt;Netty&lt;&#x2F;em&gt; and &lt;em&gt;ZooKeeper&lt;&#x2F;em&gt;)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;CN-GuoZiyang&#x2F;My-RPC-Framework&quot;&gt;CN-GuoZiyang&#x2F;My-RPC-Framework&lt;&#x2F;a&gt; &lt;small&gt;(&lt;em&gt;Java&lt;&#x2F;em&gt;, &lt;em&gt;Netty&lt;&#x2F;em&gt; and &lt;em&gt;Nacos&lt;&#x2F;em&gt;)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h2 id=&quot;onto-the-real-world&quot;&gt;Onto the Real World&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;which-one&quot;&gt;Which One?&lt;&#x2F;h3&gt;
+&lt;h2 id=&quot;which-one&quot;&gt;Which One?&lt;&#x2F;h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;blog.csdn.net&#x2F;id5555&#x2F;article&#x2F;details&#x2F;108960705&quot;&gt;Feign+Ribbon, Dubbo, gRPC 的选型对比&lt;&#x2F;a&gt; &lt;small&gt;(&lt;em&gt;CSDN&lt;&#x2F;em&gt;, non-archivable)&lt;&#x2F;small&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
@@ -1343,6 +1330,27 @@ multiple object references could reference to 1 object&lt;&#x2F;p&gt;
 &lt;li&gt;&lt;em&gt;Feign&lt;&#x2F;em&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;docs.spring.io&#x2F;spring-cloud-openfeign&#x2F;docs&#x2F;current&#x2F;reference&#x2F;html&#x2F;&quot;&gt;documentation&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;OpenFeign&#x2F;feign&quot;&gt;source code&lt;&#x2F;a&gt; &lt;small&gt;(inexact categorization)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;em&gt;Dubbo&lt;&#x2F;em&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;dubbo.apache.org&#x2F;en&#x2F;docs&#x2F;v2.7&#x2F;user&#x2F;preface&#x2F;background&#x2F;&quot;&gt;documentation&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;apache&#x2F;dubbo&quot;&gt;source code&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;em&gt;gRPC&lt;&#x2F;em&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;grpc.io&#x2F;docs&#x2F;languages&#x2F;java&#x2F;quickstart&#x2F;&quot;&gt;documentation&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;grpc&#x2F;grpc-java&quot;&gt;source code&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;implement-your-own&quot;&gt;Implement Your Own&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;less-code-to-digest&quot;&gt;Less Code to Digest&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;earthstar-project&#x2F;mini-rpc&quot;&gt;earthstar-project&#x2F;mini-rpc&lt;&#x2F;a&gt; &lt;small&gt;(&lt;em&gt;TypeScript&lt;&#x2F;em&gt;)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;geektutu.com&#x2F;post&#x2F;geerpc.html&quot;&gt;GeeRPC: 7天用 Go 从零实现 RPC 框架&lt;&#x2F;a&gt; &lt;sup&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;geektutu&#x2F;7days-golang&#x2F;tree&#x2F;master&#x2F;gee-rpc&#x2F;doc&quot;&gt;src&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt; &lt;small&gt;(&lt;em&gt;Go&lt;&#x2F;em&gt;)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;a-bit-heavier-to-digest&quot;&gt;A Bit Heavier to Digest&lt;&#x2F;h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Why was &lt;em&gt;ZooKeeper&lt;&#x2F;em&gt; and &lt;em&gt;Nacos&lt;&#x2F;em&gt; being used? Because to communicate via &lt;em&gt;RPC&lt;&#x2F;em&gt;, you need to have difference services to start with, and they must be able to find each other when you invoke methods that does &lt;em&gt;RPC&lt;&#x2F;em&gt; underneath between services.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;veal98&#x2F;RPC-FromScratch&quot;&gt;veal98&#x2F;RPC-FromScratch&lt;&#x2F;a&gt; &lt;small&gt;(&lt;em&gt;Java&lt;&#x2F;em&gt;, &lt;em&gt;Netty&lt;&#x2F;em&gt; and &lt;em&gt;ZooKeeper&lt;&#x2F;em&gt;)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;CN-GuoZiyang&#x2F;My-RPC-Framework&quot;&gt;CN-GuoZiyang&#x2F;My-RPC-Framework&lt;&#x2F;a&gt; &lt;small&gt;(&lt;em&gt;Java&lt;&#x2F;em&gt;, &lt;em&gt;Netty&lt;&#x2F;em&gt; and &lt;em&gt;Nacos&lt;&#x2F;em&gt;)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;resource&quot;&gt;Resource&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;javaguide.cn&#x2F;distributed-system&#x2F;rpc&#x2F;rpc-intro.html&quot;&gt;RPC 基础常见总结&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;javaguide.cn&#x2F;distributed-system&#x2F;rpc&#x2F;dubbo.html&quot;&gt;Dubbo 常见总结&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </content>
 	</entry>
@@ -4245,7 +4253,14 @@ Linear algebra, including vector spaces, linear transformations, and matrix oper
 		<updated>2022-12-05T00:00:00+00:00</updated>
 		<link rel="alternate" href="https://codingezio.github.io/microservice-01-concepts/" type="text/html"/>
 		<id>https://codingezio.github.io/microservice-01-concepts/</id>
-		<content type="html">&lt;h2 id=&quot;why&quot;&gt;Why&lt;&#x2F;h2&gt;
+		<content type="html">&lt;h2 id=&quot;note-to-self&quot;&gt;Note to Self&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;The analogies shall be understandable even for a layman&lt;&#x2F;li&gt;
+&lt;li&gt;The anologies shall not went too far to be of practical usage&lt;&#x2F;li&gt;
+&lt;li&gt;Tech stacks to choose from, see &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;mfornos&#x2F;awesome-microservices#capabilities&quot;&gt;mfornos&#x2F;awesome-microservices&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;why&quot;&gt;Why&lt;&#x2F;h2&gt;
 &lt;h3 id=&quot;what&quot;&gt;What&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Something happened
@@ -4338,6 +4353,18 @@ Linear algebra, including vector spaces, linear transformations, and matrix oper
 &lt;li&gt;Don&#x27;t worry, they are here to solve &lt;em&gt;problems&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;Don&#x27;t be scared, they are inherently simple, the &lt;em&gt;complexity&lt;&#x2F;em&gt; is in your business&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;why-the-functionalities-overlap-so-much&quot;&gt;Why the functionalities overlap so much&lt;&#x2F;h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;What I meant by that is things like &lt;em&gt;Nacos&lt;&#x2F;em&gt; tries to solve&#x2F;does multiple things like &lt;em&gt;Service Discovery&lt;&#x2F;em&gt;, &lt;em&gt;Service Registration&lt;&#x2F;em&gt; and &lt;em&gt;Configuration Management&lt;&#x2F;em&gt;. Is it a bad thing? Hell no! But it does confuse me a bit about which tech stack to choose from when I was trying learn about Microservices at the very beginning.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Is it hard to switch from one stack to an &lt;em&gt;alternative&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Especially you used not just one features that the alternative to it doesn&#x27;t have&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h2 id=&quot;how-and-why&quot;&gt;How (and why)&lt;&#x2F;h2&gt;
@@ -4489,14 +4516,6 @@ Linear algebra, including vector spaces, linear transformations, and matrix oper
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;hr &#x2F;&gt;
-&lt;ul&gt;
-&lt;li&gt;note for myself
-&lt;ul&gt;
-&lt;li&gt;I&#x27;m stretching the real-life analogies to the limit&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
