@@ -34,6 +34,10 @@ description = "I wish I knew about this when I started learning to program"
 - [Deep Dive into System Design Interview](https://www.educative.io/path/deep-dive-into-system-design-interview)
 - [Grokking Modern System Design Interview for Engineers & Managers](https://www.educative.io/courses/grokking-modern-system-design-interview-for-engineers-managers)
 
+### On the Real-world Side
+
+- [系统设计技巧](https://mp.weixin.qq.com/s/FJi3ko9wjTBNWS79RVQf5A)
+
 -----
 
 ## In Practice
