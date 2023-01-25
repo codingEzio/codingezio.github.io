@@ -105,7 +105,7 @@ description = "Thoughts from interesting and thoughtful human beings"
 
 > These mark the making of **my own knowledge map** as I found tons of *bad* analogies and explanations inside, yet, there were also no short of good insight for me to learn from. They were of great help to me, but eventually, however detailed and easy their explanations be, they could only serves as a *Table of Contents* for the person reading it.
 
-- [Java 全栈知识体系](https://pdai.tech/) ⭐️⭐️⭐️
+- [Java 全栈体系](https://pdai.tech/) ⭐️⭐️⭐️
 - [Java 进阶之路](https://tobebetterjavaer.com/) ⭐️⭐️
 - [Java 学习指南](https://javaguide.cn/) ⭐️
 
