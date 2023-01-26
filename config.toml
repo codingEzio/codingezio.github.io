@@ -67,4 +67,6 @@ theme = "lightspeed"
 footer_links = [
     {url = "https://twitter.com/_Drahtzieher", name = "Twitter"},
     {url = "https://github.com/codingEzio", name = "Github"},
+    {url = "https://t.me/gw9rw3t", name = "Telegram"},
+
 ]

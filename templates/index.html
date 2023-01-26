@@ -70,18 +70,18 @@
         <hr />
         {% if config.extra.footer_links %}
         <nav style="margin-bottom:0.15rem; font-size: 0.90rem;" role="navigation">
-          Social Media 🤞
+          Contact me via [
           {% for item in config.extra.footer_links %}
             <a href="{{ item.url | replace(from="$BASE_URL", to=config.base_url) | safe }}">{{ item.name }}</a>
             {% if loop.last %}{% else %}
-              <span> &middot; </span>
+              <span> &hearts; </span>
             {% endif %}
-          {% endfor %}
+          {% endfor %} ]
         </nav>
         {% endif %}
         {% block taglines %}
         <small>
-          {%- if config.extra.zola or config.extra.zola is undefined -%}Built with <a href="https://www.getzola.org/">Zola</a> using <a href="https://www.getzola.org/themes/lightspeed/">Lightspeed ⚡️</a>{%- endif -%}
+          {%- if config.extra.zola or config.extra.zola is undefined -%}Built with <a href="https://www.getzola.org/">Zola</a> using <a href="https://www.getzola.org/themes/lightspeed/">Lightspeed</a> theme{%- endif -%}
           {%- if config.extra.netlify %} & hosted on <a href="https://netlify.com">Netlify</a>{%- endif -%}
           {%- if config.extra.zola or config.extra.zola is undefined -%}.<br />{%- endif %}
           {% if config.extra.footer_tagline %}{{ config.extra.footer_tagline }}{% endif %}
