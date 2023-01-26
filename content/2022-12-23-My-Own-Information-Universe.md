@@ -20,6 +20,7 @@ description = "Thoughts from interesting and thoughtful human beings"
 ### 一
 
 - [Stephen Wolfram - *Publications*, *Writings* and *Speeches*](https://www.stephenwolfram.com/publications/)
+- [Naval](https://nav.al/archive)
 - [Po-Jen](https://www.coderbridge.com/@Po-Jen)
 - [GeekPlux](https://geekplux.com/posts)
 - [Hackery, Math & Design](https://acko.net/)
@@ -44,10 +45,10 @@ description = "Thoughts from interesting and thoughtful human beings"
 - [HuoJu's Blog](https://jhuo.ca/post/)
 - [Neel Nanda](https://www.neelnanda.io/)
 - [Reimu's blog](https://blog.k8s.li/)
-- [Owen的博客](https://www.owenyoung.com/)
 - [Erica Sadun](https://ericasadun.com/)
 - [inessential: weblog](https://inessential.com/)
 - [当然我在扯淡](http://www.yinwang.org/)
+- [Owen的博客](https://www.owenyoung.com/)
 - [Life Architect](https://lifearchitect.ai/about-alan/)
 
 ### 二
