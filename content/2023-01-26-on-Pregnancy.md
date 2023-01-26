@@ -53,7 +53,7 @@ description = "Logging about what effects do pregnancy have on women"
 
 ### Jike <small>(即刻)</small>
 
-> The link might die. Websites like Jike or Zhihu tries their fucking best for stopping me from archiving their pages but I'll my best.
+> The link might die. Websites like Jike or Zhihu tries their fucking best for stopping me from archiving their pages but I'll try my best.
 
 - A [post](https://web.okjike.com/originalPost/61f4085d1b3afa001092521f) written by [吴小毛大乱斗](https://web.okjike.com/u/89954AE0-41D1-48A2-B525-8171E0DA3B1C), posted on *一个想法不一定对* <small>([archive](https://archive.is/uPkwQ))</small>
 

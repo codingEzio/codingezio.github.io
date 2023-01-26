@@ -45,7 +45,7 @@ description = "A grand topic to explore"
 
 | RESOURCE | NOTES |
 | :--- | :--- |
-| [我們一定得談戀愛嗎?](https://www.youtube.com/watch?v=bHVKaLFjUo0) on [文森說書](https://www.youtube.com/@vincent_reading/videos) | 👉 Not really a good title<br/>👈 Love despite faults, basically |
+| [我們一定得談戀愛嗎?](https://www.youtube.com/watch?v=bHVKaLFjUo0) on [文森說書](https://www.youtube.com/@vincent_reading/videos) | 👈 Not really a good title<br/>👉 Love despite faults, basically |
 
 ----
 
@@ -68,7 +68,7 @@ description = "A grand topic to explore"
 
 ### Jike <small>(即刻)</small>
 
-> The link might die. Websites like Jike or Zhihu tries their fucking best for stopping me from archiving their pages but I'll my best.
+> The link might die. Websites like Jike or Zhihu tries their fucking best for stopping me from archiving their pages but I'll try my best.
 
 - A [post](https://web.okjike.com/originalPost/63aeed05ee7bbb182bf307e0) written by [Yukinana.me](https://web.okjike.com/u/74E9FD45-B575-4DFC-B0C9-523047FE90A9), posted on *一个想法不一定对* <small>(*failed to archive*)</small>
 
