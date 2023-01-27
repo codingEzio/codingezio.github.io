@@ -304,51 +304,93 @@
 		<id>https://codingezio.github.io/on-housing/</id>
 		<content type="html">&lt;h2 id=&quot;context&quot;&gt;Context&lt;&#x2F;h2&gt;
 &lt;ul&gt;
+&lt;li&gt;The accuracy of this post solely relies on the good will of the reference&lt;&#x2F;li&gt;
 &lt;li&gt;Just a small node in my knowledge map&lt;&#x2F;li&gt;
 &lt;li&gt;I don&#x27;t know shit about this field&lt;&#x2F;li&gt;
 &lt;li&gt;Based in &lt;em&gt;PRC&lt;&#x2F;em&gt; China&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h2 id=&quot;notes&quot;&gt;Notes&lt;&#x2F;h2&gt;
 &lt;h3 id=&quot;buy&quot;&gt;Buy&lt;&#x2F;h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;References: &lt;a href=&quot;https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;34853334&quot;&gt;真诚的买房建议&lt;&#x2F;a&gt;, 以及更多信息 &lt;a href=&quot;https:&#x2F;&#x2F;www.zhihu.com&#x2F;question&#x2F;433902931&#x2F;answer&#x2F;1635216494&quot;&gt;第一次买房的人可参考的经验&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h4 id=&quot;summary&quot;&gt;Summary&lt;&#x2F;h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;就像你若想要实现梦想，你需要先将其无限分解为可执行的 &lt;em&gt;块&lt;&#x2F;em&gt; 儿。&lt;strong&gt;买&lt;&#x2F;strong&gt;房以及&lt;strong&gt;买什么样&lt;&#x2F;strong&gt;的房，同样需要如此对待&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
 &lt;ul&gt;
-&lt;li&gt;x&lt;&#x2F;li&gt;
-&lt;li&gt;x&lt;&#x2F;li&gt;
+&lt;li&gt;简单来说，这是一个将不同因素汇总排序，纳入考虑不断累积打分的过程&lt;&#x2F;li&gt;
+&lt;li&gt;普通人也能接触到的杠杆 &lt;small&gt;(ELI5: 小换大)&lt;&#x2F;small&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;较之其收益、多样的效用及其必要性，房贷算是良性的&lt;small&gt;(大)&lt;&#x2F;small&gt;压力&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;methodology&quot;&gt;Methodology&lt;&#x2F;h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;大概的框架 (breaking down like how you did it before the coding interview)&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;确保你 能得到高质信息&lt;&#x2F;li&gt;
+&lt;li&gt;确保你 能高质筛选&lt;&#x2F;li&gt;
+&lt;li&gt;因素如 通勤、有人住、位置好、地产靠谱、八时睡-八时工-另八时在房周边&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;finally&quot;&gt;Finally&lt;&#x2F;h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If you have time and the skill, please go study abroad. That&#x27;s a much better leverage than a mere housing morgage.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
 &lt;h3 id=&quot;sell&quot;&gt;Sell&lt;&#x2F;h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Before paying off the mortgage&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
+&lt;h4 id=&quot;thoughts&quot;&gt;Thoughts&lt;&#x2F;h4&gt;
 &lt;ul&gt;
-&lt;li&gt;x&lt;&#x2F;li&gt;
-&lt;li&gt;x&lt;&#x2F;li&gt;
+&lt;li&gt;Honestly I still think I&#x27;m &lt;strong&gt;not&lt;&#x2F;strong&gt; in a position to offer such summaries or advice&lt;&#x2F;li&gt;
+&lt;li&gt;Make you sure you
+&lt;ul&gt;
+&lt;li&gt;talk to the bank that you apply the morgage from&lt;&#x2F;li&gt;
+&lt;li&gt;get the housing ownering certificate&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;sell-and-buy&quot;&gt;Sell and Buy&lt;&#x2F;h3&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;learning-material&quot;&gt;Learning Material&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;102865203&quot;&gt;房贷没还完是否可以卖房&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.zhihu.com&#x2F;question&#x2F;452968467&#x2F;answer&#x2F;1906735298&quot;&gt;房贷未偿清但想卖房如何操作&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;347284260&quot;&gt;二手房置换需要注意的法律风险&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;whose-name-is-on-it-after-marriage&quot;&gt;Whose Name is on &lt;u&gt;&lt;em&gt;It&lt;&#x2F;em&gt;&lt;&#x2F;u&gt; &lt;em&gt;after Marriage&lt;&#x2F;em&gt;&lt;&#x2F;h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Before paying off the mortgage&lt;&#x2F;p&gt;
+&lt;p&gt;References: &lt;a href=&quot;https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;26459076&quot;&gt;房产证上的名字&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;x&lt;&#x2F;li&gt;
-&lt;li&gt;x&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;whose-name-is-on-it-after-marriage&quot;&gt;Whose Name is on &lt;em&gt;It&lt;&#x2F;em&gt; after Marriage&lt;&#x2F;h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;It&lt;&#x2F;em&gt;: Property Ownership Certificate &lt;small&gt;(房产所有权证)&lt;&#x2F;small&gt;&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;x&lt;&#x2F;li&gt;
-&lt;li&gt;x&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;hr &#x2F;&gt;
-&lt;h2 id=&quot;references&quot;&gt;References&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;directly-used-in-this-post&quot;&gt;Directly Used in This Post&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;x&lt;&#x2F;li&gt;
-&lt;li&gt;x&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;reference-for-references&quot;&gt;Reference for References&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;x&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#282c34;color:#dcdfe4;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;&amp;quot;&amp;quot;&amp;quot; 如何将您伴侣的名字加到房产证上 &amp;quot;&amp;quot;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;d &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;quot;spending_roughly&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;quot;loan_changes&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;False
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;quot;contracts_notes&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;quot;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;quot;contracts_needed&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: [],
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# According to what the article says, it&amp;#39;s much more complicated to do
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# before the marriage than after it, therefore I&amp;#39;d omit it.
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;for_spouse:
+&lt;&#x2F;span&gt;&lt;span&gt;    d[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;#39;spending_roughly&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;100
+&lt;&#x2F;span&gt;&lt;span&gt;    d[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;#39;contracts_notes&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;quot;a lot less than before marriage&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;paid_off:
+&lt;&#x2F;span&gt;&lt;span&gt;        d[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;#39;spending_roughly&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;+= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;0
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;elif not &lt;&#x2F;span&gt;&lt;span&gt;paid_off:
+&lt;&#x2F;span&gt;&lt;span&gt;        d[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;#39;spending_roughly&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;+= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;200
+&lt;&#x2F;span&gt;&lt;span&gt;        d[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;#39;loan_changes&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;True
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        d[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;quot;contracts_needed&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;].&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;append&lt;&#x2F;span&gt;&lt;span&gt;(
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;quot;身份证&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;quot;结婚证&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;quot;房产证&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;quot;房屋登记申请书&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;quot;以及其他相关材料&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;        )
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# The output depends on what your situation looks like
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#61afef;&quot;&gt;print&lt;&#x2F;span&gt;&lt;span&gt;(items)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">
@@ -747,15 +789,21 @@ not a trigger for stressful emotions or deadlines&lt;&#x2F;p&gt;
 &lt;&#x2F;ul&gt;
 &lt;hr &#x2F;&gt;
 &lt;h2 id=&quot;hub&quot;&gt;Hub&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;coding-tech&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;@CodingTech&#x2F;videos&quot;&gt;&lt;em&gt;Coding Tech&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;all-kinds-of-topics&quot;&gt;All Kinds of Topics&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;coding-tech&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;@CodingTech&#x2F;videos&quot;&gt;&lt;em&gt;Coding Tech&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;&lt;&#x2F;h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Tons of interesting topics to explore, but please note that not all of them hold the same quality as some are downright &lt;em&gt;bad&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
-&lt;h3 id=&quot;gdc-programming-talks&quot;&gt;GDC &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;playlist?list=PL2e4mYbwSTbaw1l65rE0Gv6_B9ctOzYyW&quot;&gt;&lt;em&gt;Programming Talks&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;confreaks&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;@Confreaks&#x2F;playlists&quot;&gt;&lt;em&gt;Confreaks&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;&lt;&#x2F;h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Having all kinds of tech talks recorded or hosted by &lt;em&gt;Confreaks&lt;&#x2F;em&gt;. Suited for people who wants to find a specific topic or programming language&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h3 id=&quot;around-a-specific-kind-of-topics&quot;&gt;Around A Specific Kind of Topics&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;gdc-programming-talks&quot;&gt;GDC &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;playlist?list=PL2e4mYbwSTbaw1l65rE0Gv6_B9ctOzYyW&quot;&gt;&lt;em&gt;Programming Talks&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;&lt;&#x2F;h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Annual &lt;em&gt;&lt;strong&gt;G&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt;ame &lt;em&gt;&lt;strong&gt;D&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt;evelopers &lt;em&gt;&lt;strong&gt;C&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt;onference&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
-&lt;h3 id=&quot;goto-conferences&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;@GOTO-&#x2F;videos&quot;&gt;&lt;em&gt;GOTO Conferences&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;goto-conferences&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;@GOTO-&#x2F;videos&quot;&gt;&lt;em&gt;GOTO Conferences&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;&lt;&#x2F;h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;I do not have a proper summarization for it, so here&#x27;s a &lt;a href=&quot;https:&#x2F;&#x2F;gotocon.com&#x2F;aboutjaoo&#x2F;&quot;&gt;quote&lt;&#x2F;a&gt; from &lt;a href=&quot;https:&#x2F;&#x2F;gotocon.com&quot;&gt;gotocon.com&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;q&gt;&lt;em&gt;The target audience for GOTO conferences are software developers, IT architects and project managers. GOTO Aarhus is an annual event in Denmark which attracts more than 1300 participants and the first GOTO Copenhagen will be launched May, 2011.&lt;&#x2F;em&gt;&lt;&#x2F;q&gt;&lt;&#x2F;p&gt;
@@ -4374,6 +4422,14 @@ I came back after my miscarriages.&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;true&lt;&#x2F;span&gt;&lt;span&gt;;
 &lt;&#x2F;span&gt;&lt;span&gt;    }
 &lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;0283-move-zeros&quot;&gt;0283. Move Zeros&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#282c34;color:#dcdfe4;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;class &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;Solution:
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#61afef;&quot;&gt;moveZeroes&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;nums&lt;&#x2F;span&gt;&lt;span&gt;: List[int]) -&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;None&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;&amp;quot;&amp;quot;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;        Do not return anything, modify nums in-place instead.
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;        &amp;quot;&amp;quot;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;pass
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;0347-top-k-frequent-elements&quot;&gt;0347. Top K Frequent Elements&lt;&#x2F;h3&gt;
 &lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#282c34;color:#dcdfe4;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;class &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;Solution:

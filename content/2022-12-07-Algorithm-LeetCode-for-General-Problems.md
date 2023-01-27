@@ -1062,6 +1062,17 @@ class Solution {
 }
 ```
 
+### 0283. Move Zeros
+
+```python
+class Solution:
+    def moveZeroes(self, nums: List[int]) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        pass
+```
+
 ### 0347. Top K Frequent Elements
 
 ```python

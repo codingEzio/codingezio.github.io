@@ -32,15 +32,23 @@ description = "Talks that broaden my vision"
 
 ## Hub
 
-### [*Coding Tech*](https://www.youtube.com/@CodingTech/videos)
+### All Kinds of Topics
+
+#### [*Coding Tech*](https://www.youtube.com/@CodingTech/videos)
 
 > Tons of interesting topics to explore, but please note that not all of them hold the same quality as some are downright *bad*.
 
-### GDC [*Programming Talks*](https://www.youtube.com/playlist?list=PL2e4mYbwSTbaw1l65rE0Gv6_B9ctOzYyW)
+#### [*Confreaks*](https://www.youtube.com/@Confreaks/playlists)
+
+> Having all kinds of tech talks recorded or hosted by *Confreaks*. Suited for people who wants to find a specific topic or programming language
+
+### Around A Specific Kind of Topics
+
+#### GDC [*Programming Talks*](https://www.youtube.com/playlist?list=PL2e4mYbwSTbaw1l65rE0Gv6_B9ctOzYyW)
 
 > Annual ***G***ame ***D***evelopers ***C***onference
 
-### [*GOTO Conferences*](https://www.youtube.com/@GOTO-/videos)
+#### [*GOTO Conferences*](https://www.youtube.com/@GOTO-/videos)
 
 > I do not have a proper summarization for it, so here's a [quote](https://gotocon.com/aboutjaoo/) from [gotocon.com](https://gotocon.com).
 >
