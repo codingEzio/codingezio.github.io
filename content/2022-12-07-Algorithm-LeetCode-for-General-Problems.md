@@ -453,6 +453,28 @@ class Solution:
         return list(ans.values())
 ```
 
+### 0069. Sqrt(x)
+
+```python
+class Solution:
+    def mySqrt(self, x: int) -> int:
+        L, R = 0, x
+        answer = -1
+
+        while L <= R:
+            mid = (L + R) // 2
+
+            if mid ** 2 <= x:
+                answer = mid
+
+                L = mid + 1
+
+            elif mid ** 2 > x:
+                R = mid - 1
+
+        return answer
+```
+
 ### 0070. Climbing Stairs
 
 ```python
@@ -712,6 +734,21 @@ class Solution:
         return len_longest
 ```
 
+### 0136. Single Number
+
+```python
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        init = 0
+
+        # For every dups                N ^ N -> 0
+        # For the sole non-dup number   0 ^ N -> N
+        for elem in nums:
+            init = init ^ elem
+
+        return init
+```
+
 ### 0141. Linked List Cycle
 
 ```java
@@ -844,6 +881,26 @@ class Solution:
             hB = hB.next if hB else headA
 
         return hA
+```
+
+### 0169. Majority Element
+
+```python
+class Solution:
+    def majorityElement(self, nums: List[int]) -> int:
+        minion = 0
+        generl = 0
+
+        for elem in nums:
+            if minion == 0:
+                generl = elem
+
+            if generl == elem:
+                minion += 1
+            elif generl != elem:
+                minion -= 1
+
+        return generl
 ```
 
 ### 0206. Reverse Linked List
@@ -1062,6 +1119,32 @@ class Solution:
         return L.val == R.val and \
                 self.isSametree(L.left, R.left) and \
                 self.isSametree(L.right, R.right)
+```
+
+### 0704. Binary Search
+
+```python
+class Solution:
+    def search(self, nums: List[int], target: int) -> int:
+        """
+        Three main things:
+        - init the pointer
+        - return either the incremented index or the -1 (not found)
+        - move based on the comparison (heavily depended on "sorted")
+        """
+        left, right = 0, len(nums) - 1
+
+        while left < right:
+            mid = left + (right - left) // 2
+
+            if nums[mid] == target:
+                return mid
+            elif nums[mid] < target:
+                left = mid + 1
+            elif nums[mid] > target:
+                right = mid - 1
+
+        return -1
 ```
 
 -----

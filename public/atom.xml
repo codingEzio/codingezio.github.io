@@ -3834,6 +3834,25 @@ I came back after my miscarriages.&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# Then turns it into a list -&amp;gt; [[&amp;#39;abc&amp;#39;, &amp;#39;acb&amp;#39;], [&amp;#39;dce&amp;#39;]]
 &lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;list&lt;&#x2F;span&gt;&lt;span&gt;(ans.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;values&lt;&#x2F;span&gt;&lt;span&gt;())
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;0069-sqrt-x&quot;&gt;0069. Sqrt(x)&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#282c34;color:#dcdfe4;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;class &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;Solution:
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#61afef;&quot;&gt;mySqrt&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;x&lt;&#x2F;span&gt;&lt;span&gt;: int) -&amp;gt; int:
+&lt;&#x2F;span&gt;&lt;span&gt;        L, R &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;, x
+&lt;&#x2F;span&gt;&lt;span&gt;        answer &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;= -&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;1
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;while &lt;&#x2F;span&gt;&lt;span&gt;L &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;&amp;lt;= &lt;&#x2F;span&gt;&lt;span&gt;R:
+&lt;&#x2F;span&gt;&lt;span&gt;            mid &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;(L &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;+ &lt;&#x2F;span&gt;&lt;span&gt;R) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;&#x2F;&#x2F; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;2
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;mid &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;** &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;2 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;&amp;lt;= &lt;&#x2F;span&gt;&lt;span&gt;x:
+&lt;&#x2F;span&gt;&lt;span&gt;                answer &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;mid
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;                L &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;mid &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;+ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;1
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;elif &lt;&#x2F;span&gt;&lt;span&gt;mid &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;** &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;2 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;x:
+&lt;&#x2F;span&gt;&lt;span&gt;                R &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;mid &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;- &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;1
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;answer
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;0070-climbing-stairs&quot;&gt;0070. Climbing Stairs&lt;&#x2F;h3&gt;
 &lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#282c34;color:#dcdfe4;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;class &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;Solution:
 &lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#61afef;&quot;&gt;climbStairs&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;n&lt;&#x2F;span&gt;&lt;span&gt;: int) -&amp;gt; int:
@@ -4064,6 +4083,18 @@ I came back after my miscarriages.&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;len_longest
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;0136-single-number&quot;&gt;0136. Single Number&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#282c34;color:#dcdfe4;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;class &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;Solution:
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#61afef;&quot;&gt;singleNumber&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;nums&lt;&#x2F;span&gt;&lt;span&gt;: List[int]) -&amp;gt; int:
+&lt;&#x2F;span&gt;&lt;span&gt;        init &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;0
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# For every dups                N ^ N -&amp;gt; 0
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# For the sole non-dup number   0 ^ N -&amp;gt; N
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;elem &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span&gt;nums:
+&lt;&#x2F;span&gt;&lt;span&gt;            init &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;init &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;^ &lt;&#x2F;span&gt;&lt;span&gt;elem
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;init
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;0141-linked-list-cycle&quot;&gt;0141. Linked List Cycle&lt;&#x2F;h3&gt;
 &lt;pre data-lang=&quot;java&quot; style=&quot;background-color:#282c34;color:#dcdfe4;&quot; class=&quot;language-java &quot;&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;&#x2F;*
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt; * Definition for singly-linked list.
@@ -4185,6 +4216,23 @@ I came back after my miscarriages.&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;            hB &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;hB.next &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;hB &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;else &lt;&#x2F;span&gt;&lt;span&gt;headA
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;hA
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;0169-majority-element&quot;&gt;0169. Majority Element&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#282c34;color:#dcdfe4;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;class &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;Solution:
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#61afef;&quot;&gt;majorityElement&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;nums&lt;&#x2F;span&gt;&lt;span&gt;: List[int]) -&amp;gt; int:
+&lt;&#x2F;span&gt;&lt;span&gt;        minion &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;0
+&lt;&#x2F;span&gt;&lt;span&gt;        generl &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;0
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;elem &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span&gt;nums:
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;minion &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;== &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;                generl &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;elem
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;generl &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;== &lt;&#x2F;span&gt;&lt;span&gt;elem:
+&lt;&#x2F;span&gt;&lt;span&gt;                minion &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;+= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;1
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;elif &lt;&#x2F;span&gt;&lt;span&gt;generl &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;!= &lt;&#x2F;span&gt;&lt;span&gt;elem:
+&lt;&#x2F;span&gt;&lt;span&gt;                minion &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;-= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;1
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;generl
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;0206-reverse-linked-list&quot;&gt;0206. Reverse Linked List&lt;&#x2F;h3&gt;
 &lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#282c34;color:#dcdfe4;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# Definition for singly-linked list.
@@ -4376,6 +4424,29 @@ I came back after my miscarriages.&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;L.val &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;== &lt;&#x2F;span&gt;&lt;span&gt;R.val &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;and &lt;&#x2F;span&gt;&lt;span&gt;\
 &lt;&#x2F;span&gt;&lt;span&gt;                &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;isSametree&lt;&#x2F;span&gt;&lt;span&gt;(L.left, R.left) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;and &lt;&#x2F;span&gt;&lt;span&gt;\
 &lt;&#x2F;span&gt;&lt;span&gt;                &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;isSametree&lt;&#x2F;span&gt;&lt;span&gt;(L.right, R.right)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;0704-binary-search&quot;&gt;0704. Binary Search&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#282c34;color:#dcdfe4;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;class &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;Solution:
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#61afef;&quot;&gt;search&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;nums&lt;&#x2F;span&gt;&lt;span&gt;: List[int], &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e06c75;&quot;&gt;target&lt;&#x2F;span&gt;&lt;span&gt;: int) -&amp;gt; int:
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;&amp;quot;&amp;quot;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;        Three main things:
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;        - init the pointer
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;        - return either the incremented index or the -1 (not found)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;        - move based on the comparison (heavily depended on &amp;quot;sorted&amp;quot;)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;        &amp;quot;&amp;quot;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;        left, right &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#61afef;&quot;&gt;len&lt;&#x2F;span&gt;&lt;span&gt;(nums) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;- &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;1
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;while &lt;&#x2F;span&gt;&lt;span&gt;left &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;&amp;lt; &lt;&#x2F;span&gt;&lt;span&gt;right:
+&lt;&#x2F;span&gt;&lt;span&gt;            mid &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;left &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;+ &lt;&#x2F;span&gt;&lt;span&gt;(right &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;- &lt;&#x2F;span&gt;&lt;span&gt;left) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;&#x2F;&#x2F; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;2
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;nums[mid] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;== &lt;&#x2F;span&gt;&lt;span&gt;target:
+&lt;&#x2F;span&gt;&lt;span&gt;                &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;mid
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;elif &lt;&#x2F;span&gt;&lt;span&gt;nums[mid] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;&amp;lt; &lt;&#x2F;span&gt;&lt;span&gt;target:
+&lt;&#x2F;span&gt;&lt;span&gt;                left &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;mid &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;+ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;1
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;elif &lt;&#x2F;span&gt;&lt;span&gt;nums[mid] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;target:
+&lt;&#x2F;span&gt;&lt;span&gt;                right &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;mid &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;- &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;1
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;return -&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;1
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;hr &#x2F;&gt;
 &lt;h2 id=&quot;past-2000&quot;&gt;Past 2000&lt;&#x2F;h2&gt;

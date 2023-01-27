@@ -341,6 +341,23 @@
 </span><span>        </span><span style=color:#5c6370;># Then only the values      -> dict_values([['abc', 'acb'], ['dce']])
 </span><span>        </span><span style=color:#5c6370;># Then turns it into a list -> [['abc', 'acb'], ['dce']]
 </span><span>        </span><span style=color:#c678dd;>return </span><span style=color:#e06c75;>list</span><span>(ans.</span><span style=color:#e06c75;>values</span><span>())
+</span></code></pre><h3 id=0069-sqrt-x>0069. Sqrt(x)</h3><pre class=language-python data-lang=python style=background-color:#282c34;color:#dcdfe4;><code class=language-python data-lang=python><span style=color:#c678dd;>class </span><span style=color:#e5c07b;>Solution:
+</span><span>    </span><span style=color:#c678dd;>def </span><span style=color:#61afef;>mySqrt</span><span>(</span><span style=color:#e06c75;>self</span><span>, </span><span style=color:#e06c75;>x</span><span>: int) -> int:
+</span><span>        L, R </span><span style=color:#c678dd;>= </span><span style=color:#e5c07b;>0</span><span>, x
+</span><span>        answer </span><span style=color:#c678dd;>= -</span><span style=color:#e5c07b;>1
+</span><span>
+</span><span>        </span><span style=color:#c678dd;>while </span><span>L </span><span style=color:#c678dd;><= </span><span>R:
+</span><span>            mid </span><span style=color:#c678dd;>= </span><span>(L </span><span style=color:#c678dd;>+ </span><span>R) </span><span style=color:#c678dd;>// </span><span style=color:#e5c07b;>2
+</span><span>
+</span><span>            </span><span style=color:#c678dd;>if </span><span>mid </span><span style=color:#c678dd;>** </span><span style=color:#e5c07b;>2 </span><span style=color:#c678dd;><= </span><span>x:
+</span><span>                answer </span><span style=color:#c678dd;>= </span><span>mid
+</span><span>
+</span><span>                L </span><span style=color:#c678dd;>= </span><span>mid </span><span style=color:#c678dd;>+ </span><span style=color:#e5c07b;>1
+</span><span>
+</span><span>            </span><span style=color:#c678dd;>elif </span><span>mid </span><span style=color:#c678dd;>** </span><span style=color:#e5c07b;>2 </span><span style=color:#c678dd;>> </span><span>x:
+</span><span>                R </span><span style=color:#c678dd;>= </span><span>mid </span><span style=color:#c678dd;>- </span><span style=color:#e5c07b;>1
+</span><span>
+</span><span>        </span><span style=color:#c678dd;>return </span><span>answer
 </span></code></pre><h3 id=0070-climbing-stairs>0070. Climbing Stairs</h3><pre class=language-python data-lang=python style=background-color:#282c34;color:#dcdfe4;><code class=language-python data-lang=python><span style=color:#c678dd;>class </span><span style=color:#e5c07b;>Solution:
 </span><span>    </span><span style=color:#c678dd;>def </span><span style=color:#61afef;>climbStairs</span><span>(</span><span style=color:#e06c75;>self</span><span>, </span><span style=color:#e06c75;>n</span><span>: int) -> int:
 </span><span>        </span><span style=color:#c678dd;>if </span><span>n </span><span style=color:#c678dd;><= </span><span style=color:#e5c07b;>3</span><span>:
@@ -552,6 +569,16 @@
 </span><span>                    len_sub_seq </span><span style=color:#c678dd;>+= </span><span style=color:#e5c07b;>1
 </span><span>
 </span><span>        </span><span style=color:#c678dd;>return </span><span>len_longest
+</span></code></pre><h3 id=0136-single-number>0136. Single Number</h3><pre class=language-python data-lang=python style=background-color:#282c34;color:#dcdfe4;><code class=language-python data-lang=python><span style=color:#c678dd;>class </span><span style=color:#e5c07b;>Solution:
+</span><span>    </span><span style=color:#c678dd;>def </span><span style=color:#61afef;>singleNumber</span><span>(</span><span style=color:#e06c75;>self</span><span>, </span><span style=color:#e06c75;>nums</span><span>: List[int]) -> int:
+</span><span>        init </span><span style=color:#c678dd;>= </span><span style=color:#e5c07b;>0
+</span><span>
+</span><span>        </span><span style=color:#5c6370;># For every dups                N ^ N -> 0
+</span><span>        </span><span style=color:#5c6370;># For the sole non-dup number   0 ^ N -> N
+</span><span>        </span><span style=color:#c678dd;>for </span><span>elem </span><span style=color:#c678dd;>in </span><span>nums:
+</span><span>            init </span><span style=color:#c678dd;>= </span><span>init </span><span style=color:#c678dd;>^ </span><span>elem
+</span><span>
+</span><span>        </span><span style=color:#c678dd;>return </span><span>init
 </span></code></pre><h3 id=0141-linked-list-cycle>0141. Linked List Cycle</h3><pre class=language-java data-lang=java style=background-color:#282c34;color:#dcdfe4;><code class=language-java data-lang=java><span style=color:#5c6370;>/*
 </span><span style=color:#5c6370;> * Definition for singly-linked list.
 </span><span style=color:#5c6370;> * class ListNode {
@@ -666,6 +693,21 @@
 </span><span>            hB </span><span style=color:#c678dd;>= </span><span>hB.next </span><span style=color:#c678dd;>if </span><span>hB </span><span style=color:#c678dd;>else </span><span>headA
 </span><span>
 </span><span>        </span><span style=color:#c678dd;>return </span><span>hA
+</span></code></pre><h3 id=0169-majority-element>0169. Majority Element</h3><pre class=language-python data-lang=python style=background-color:#282c34;color:#dcdfe4;><code class=language-python data-lang=python><span style=color:#c678dd;>class </span><span style=color:#e5c07b;>Solution:
+</span><span>    </span><span style=color:#c678dd;>def </span><span style=color:#61afef;>majorityElement</span><span>(</span><span style=color:#e06c75;>self</span><span>, </span><span style=color:#e06c75;>nums</span><span>: List[int]) -> int:
+</span><span>        minion </span><span style=color:#c678dd;>= </span><span style=color:#e5c07b;>0
+</span><span>        generl </span><span style=color:#c678dd;>= </span><span style=color:#e5c07b;>0
+</span><span>
+</span><span>        </span><span style=color:#c678dd;>for </span><span>elem </span><span style=color:#c678dd;>in </span><span>nums:
+</span><span>            </span><span style=color:#c678dd;>if </span><span>minion </span><span style=color:#c678dd;>== </span><span style=color:#e5c07b;>0</span><span>:
+</span><span>                generl </span><span style=color:#c678dd;>= </span><span>elem
+</span><span>
+</span><span>            </span><span style=color:#c678dd;>if </span><span>generl </span><span style=color:#c678dd;>== </span><span>elem:
+</span><span>                minion </span><span style=color:#c678dd;>+= </span><span style=color:#e5c07b;>1
+</span><span>            </span><span style=color:#c678dd;>elif </span><span>generl </span><span style=color:#c678dd;>!= </span><span>elem:
+</span><span>                minion </span><span style=color:#c678dd;>-= </span><span style=color:#e5c07b;>1
+</span><span>
+</span><span>        </span><span style=color:#c678dd;>return </span><span>generl
 </span></code></pre><h3 id=0206-reverse-linked-list>0206. Reverse Linked List</h3><pre class=language-python data-lang=python style=background-color:#282c34;color:#dcdfe4;><code class=language-python data-lang=python><span style=color:#5c6370;># Definition for singly-linked list.
 </span><span style=color:#5c6370;># class ListNode:
 </span><span style=color:#5c6370;>#     def __init__(self, val=0, next=None):
@@ -839,6 +881,27 @@
 </span><span>        </span><span style=color:#c678dd;>return </span><span>L.val </span><span style=color:#c678dd;>== </span><span>R.val </span><span style=color:#c678dd;>and </span><span>\
 </span><span>                </span><span style=color:#e06c75;>self</span><span>.</span><span style=color:#e06c75;>isSametree</span><span>(L.left, R.left) </span><span style=color:#c678dd;>and </span><span>\
 </span><span>                </span><span style=color:#e06c75;>self</span><span>.</span><span style=color:#e06c75;>isSametree</span><span>(L.right, R.right)
+</span></code></pre><h3 id=0704-binary-search>0704. Binary Search</h3><pre class=language-python data-lang=python style=background-color:#282c34;color:#dcdfe4;><code class=language-python data-lang=python><span style=color:#c678dd;>class </span><span style=color:#e5c07b;>Solution:
+</span><span>    </span><span style=color:#c678dd;>def </span><span style=color:#61afef;>search</span><span>(</span><span style=color:#e06c75;>self</span><span>, </span><span style=color:#e06c75;>nums</span><span>: List[int], </span><span style=color:#e06c75;>target</span><span>: int) -> int:
+</span><span>        </span><span style=color:#5c6370;>"""
+</span><span style=color:#5c6370;>        Three main things:
+</span><span style=color:#5c6370;>        - init the pointer
+</span><span style=color:#5c6370;>        - return either the incremented index or the -1 (not found)
+</span><span style=color:#5c6370;>        - move based on the comparison (heavily depended on "sorted")
+</span><span style=color:#5c6370;>        """
+</span><span>        left, right </span><span style=color:#c678dd;>= </span><span style=color:#e5c07b;>0</span><span>, </span><span style=color:#61afef;>len</span><span>(nums) </span><span style=color:#c678dd;>- </span><span style=color:#e5c07b;>1
+</span><span>
+</span><span>        </span><span style=color:#c678dd;>while </span><span>left </span><span style=color:#c678dd;>< </span><span>right:
+</span><span>            mid </span><span style=color:#c678dd;>= </span><span>left </span><span style=color:#c678dd;>+ </span><span>(right </span><span style=color:#c678dd;>- </span><span>left) </span><span style=color:#c678dd;>// </span><span style=color:#e5c07b;>2
+</span><span>
+</span><span>            </span><span style=color:#c678dd;>if </span><span>nums[mid] </span><span style=color:#c678dd;>== </span><span>target:
+</span><span>                </span><span style=color:#c678dd;>return </span><span>mid
+</span><span>            </span><span style=color:#c678dd;>elif </span><span>nums[mid] </span><span style=color:#c678dd;>< </span><span>target:
+</span><span>                left </span><span style=color:#c678dd;>= </span><span>mid </span><span style=color:#c678dd;>+ </span><span style=color:#e5c07b;>1
+</span><span>            </span><span style=color:#c678dd;>elif </span><span>nums[mid] </span><span style=color:#c678dd;>> </span><span>target:
+</span><span>                right </span><span style=color:#c678dd;>= </span><span>mid </span><span style=color:#c678dd;>- </span><span style=color:#e5c07b;>1
+</span><span>
+</span><span>        </span><span style=color:#c678dd;>return -</span><span style=color:#e5c07b;>1
 </span></code></pre><hr><h2 id=past-2000>Past 2000</h2><h3 id=2185-counting-words-with-a-given-prefix>2185. Counting Words With a Given Prefix</h3><pre class=language-python data-lang=python style=background-color:#282c34;color:#dcdfe4;><code class=language-python data-lang=python><span style=color:#c678dd;>class </span><span style=color:#e5c07b;>Solution:
 </span><span>    </span><span style=color:#c678dd;>def </span><span style=color:#61afef;>prefixCount</span><span>(</span><span style=color:#e06c75;>self</span><span>, </span><span style=color:#e06c75;>words</span><span>: List[str], </span><span style=color:#e06c75;>pref</span><span>: str) -> int:
 </span><span>        amountMatched </span><span style=color:#c678dd;>= </span><span style=color:#e5c07b;>0
