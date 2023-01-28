@@ -18,7 +18,7 @@ description = "Automation for [some software term] as code"
 
 ### Overview
 
-| X | PROJ |
+| *EVERYTHING* | PROJ |
 | :--- | :--- |
 | Build | Maven, Gradle, Webpack, Make |
 | Test | JUnit, Selenium |
@@ -26,6 +26,7 @@ description = "Automation for [some software term] as code"
 | Infrastructure | Terraform |
 | Database | SQL Schema |
 | Presentation | Marp |
+| Diagram | Mermaid |
 | Environment | Vagrant, Docker |
 | Architecture | Structurizr |
 | Configuration | Ansible, Chef, Puppet |
@@ -73,5 +74,5 @@ description = "Automation for [some software term] as code"
 ### 三
 
 - [Marp: Markdown Presentation Ecosystem](https://marp.app/)
-- [Structurizr - C4 Models as Code](https://github.com/structurizr)
+- [Mermaid | Diagramming and charting tool](https://mermaid.js.org/#/)- [Structurizr - C4 Models as Code](https://github.com/structurizr)
 - [OpenSCAD - The Programmers Solid 3D CAD Modeller](https://openscad.org/)

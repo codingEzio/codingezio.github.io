@@ -413,13 +413,14 @@
 &lt;li&gt;Shared Understanding&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h3 id=&quot;overview&quot;&gt;Overview&lt;&#x2F;h3&gt;
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th style=&quot;text-align: left&quot;&gt;X&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: left&quot;&gt;PROJ&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th style=&quot;text-align: left&quot;&gt;&lt;em&gt;EVERYTHING&lt;&#x2F;em&gt;&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: left&quot;&gt;PROJ&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
 &lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;Build&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;Maven, Gradle, Webpack, Make&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
 &lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;Test&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;JUnit, Selenium&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
 &lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;Pipeline&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;Jenkins, Github Actions&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
 &lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;Infrastructure&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;Terraform&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
 &lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;Database&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;SQL Schema&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
 &lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;Presentation&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;Marp&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;Diagram&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;Mermaid&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
 &lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;Environment&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;Vagrant, Docker&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
 &lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;Architecture&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;Structurizr&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
 &lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;Configuration&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;Ansible, Chef, Puppet&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
@@ -465,7 +466,7 @@
 &lt;h3 id=&quot;san&quot;&gt;三&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;marp.app&#x2F;&quot;&gt;Marp: Markdown Presentation Ecosystem&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;structurizr&quot;&gt;Structurizr - C4 Models as Code&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;mermaid.js.org&#x2F;#&#x2F;&quot;&gt;Mermaid | Diagramming and charting tool&lt;&#x2F;a&gt;- &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;structurizr&quot;&gt;Structurizr - C4 Models as Code&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;openscad.org&#x2F;&quot;&gt;OpenSCAD - The Programmers Solid 3D CAD Modeller&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </content>
