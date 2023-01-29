@@ -1,0 +1,88 @@
+<!doctype html><html lang=en><head><meta charset=UTF-8><meta content="width=device-width,initial-scale=1.0"name=viewport><title>Toolset - Docker · Ezio's blog 😊</title><meta content="Thoughts and notes on Docker"name=description><link rel="shortcut icon"href=https://codingezio.github.io/favicon.ico><link href=https://codingezio.github.io/atom.xml rel=alternate title=RSS type=application/atom+xml><style>html,body{background:#fffaf7;color:#2d2d2d;font:16.5px/1.55 Georgia, 'Times New Roman', Times, serif}header[role='banner']{font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif}main article h1:nth-child(1){font-family:Copperplate, Papyrus, fantasy;font-style:italic}a,a:visited{color:darkred;text-decoration:none}a:hover{text-decoration:underline}footer>nav>a{font-style:italic}main{margin:auto;max-width:43rem;padding:0.8rem}pre{background:white;overflow:scroll;padding:1rem;font-size:0.88em}th,td{font-family:'Inziu Roboto SC', 'Roboto', 'Trebuchet MS', sans-serif}th{font-weight:bold;font-style:italic}td{border:1px groove #2d2d2d;padding:5px;font-size:0.9em}pre,td code,p code,ul code,ol code,li code{font-family:'Menlo', 'Fira Code', 'SF Mono', 'Consolas', monospace}pre,img{border-radius:22px}img{height:auto;max-width:100%}p{letter-spacing:0.2px}.homepage-list{list-style:none;padding:1rem 0}.homepage-list li{align-items:center;display:flex;flex-wrap:wrap;justify-content:space-between;margin-bottom:10px}@media (max-width: 38rem){.homepage-list li a{width:100%}}</style><meta content="Ezio's blog 😊"property=og:site_name><meta content="Toolset - Docker"property=og:title><meta content="Thoughts and notes on Docker"property=og:description><meta content=https://codingezio.github.io/toolset-docker/ property=og:url><meta property=og:image><meta content=article property=og:type><meta content=2022-11-27T00:00:00+00:00 property=article:published_time><link href=https://codingezio.github.io/toolset-vagrant/ rel=prev><link href=https://codingezio.github.io/browserextension-stylish/ rel=next><body><main id=main role=main><header role=banner><h3 style=margin-top:0;><a href=https://codingezio.github.io title=Home>Ezio's blog 😊</a> <br><small>A coder that wants to learn everything</small></h3></header><hr><article><h1>Toolset - Docker</h1><p style=font-size:90%;>Posted on <time datetime=2022-11-27T00:00:00+00:00>November 27, 2022</time><h3 id=foreword>Foreword</h3><blockquote><p>Recently I switched from <em>Docker for macOS</em> to <em><strong>Docker in VM</strong></em> (managed by <strong>Vagrant</strong>), so I though I should do a write up for the whole process and caveats.<p>And, I'm <strong>not</strong> going to make the installation more uniform (similar logic for an easier transfer effort) before I have more time to refine this.</blockquote><h3 id=installation>Installation</h3><blockquote><p>I Assume You Already Have<ul><li><strong>Configured</strong> the <em>proxies</em> to access the <em>normal</em> Internet<li><strong>Gained</strong> the <em>access to root</em> in your VM in order to run <code>sudo</code></ul></blockquote><h4 id=centos><a href=https://app.vagrantup.com/centos/boxes/7>CentOS</a></h4><blockquote><p>Thanks to <a href=https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-centos-7>How To Install and Use Docker on CentOS 7 | DigitalOcean</a> and <a href=https://stackoverflow.com/a/71985088/6273859><strong>this</strong></a></blockquote><pre class=language-bash data-lang=bash style=background-color:#282c34;color:#dcdfe4;><code class=language-bash data-lang=bash><span style=color:#5c6370;># Resolve issues around fetching packages
+</span><span style=color:#5c6370;># https://stackoverflow.com/a/71985088/6273859
+</span><span style=color:#61afef;>cd</span><span> /etc/yum.repos.d/
+</span><span style=color:#e06c75;>sudo</span><span> sed</span><span style=color:#e06c75;> -i </span><span style=color:#98c379;>'s/mirrorlist/#mirrorlist/g'</span><span> /etc/yum.repos.d/CentOS-</span><span style=color:#c678dd;>*
+</span><span style=color:#e06c75;>sudo</span><span> sed</span><span style=color:#e06c75;> -i </span><span style=color:#98c379;>'s|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g'</span><span> /etc/yum.repos.d/CentOS-</span><span style=color:#c678dd;>*
+</span><span>
+</span><span style=color:#5c6370;># Preparation overall
+</span><span style=color:#e06c75;>sudo</span><span> yum update</span><span style=color:#e06c75;> -y
+</span><span style=color:#e06c75;>sudo</span><span> yum check-update
+</span><span>
+</span><span style=color:#5c6370;># Preparation for Docker
+</span><span style=color:#e06c75;>curl -fsSL</span><span> https://get.docker.com/ </span><span style=color:#c678dd;>| </span><span style=color:#e06c75;>sh
+</span><span>
+</span><span>
+</span><span style=color:#5c6370;># Check the Docker status
+</span><span style=color:#e06c75;>sudo</span><span> systemctl start docker
+</span><span style=color:#e06c75;>sudo</span><span> systemctl status docker
+</span><span>
+</span><span style=color:#5c6370;># Launch Docker every time the VM boots
+</span><span style=color:#e06c75;>sudo</span><span> systemctl enable docker
+</span><span>
+</span><span style=color:#5c6370;># Test if it works as expected
+</span><span style=color:#e06c75;>sudo</span><span> docker run hello-world
+</span></code></pre><h4 id=ubuntu><a href=https://app.vagrantup.com/ubuntu/boxes/focal64>Ubuntu</a></h4><blockquote><p>Thanks to <a href=https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04>How To Install and Use Docker on Ubuntu 20.04 | DigitalOcean</a></blockquote><pre class=language-bash data-lang=bash style=background-color:#282c34;color:#dcdfe4;><code class=language-bash data-lang=bash><span style=color:#5c6370;># Preparation overall
+</span><span style=color:#e06c75;>sudo</span><span> apt update
+</span><span style=color:#e06c75;>sudo</span><span> apt install apt-transport-https ca-certificates curl software-properties-common
+</span><span style=color:#e06c75;>curl -fsSL</span><span> https://download.docker.com/linux/ubuntu/gpg </span><span style=color:#c678dd;>| </span><span style=color:#e06c75;>sudo</span><span> apt-key add -
+</span><span>
+</span><span style=color:#5c6370;># Preparation for Docker
+</span><span style=color:#e06c75;>sudo</span><span> add-apt-repository </span><span style=color:#98c379;>"deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
+</span><span style=color:#e06c75;>apt-cache</span><span> policy docker-ce
+</span><span style=color:#e06c75;>sudo</span><span> apt install docker-ce
+</span><span>
+</span><span>
+</span><span style=color:#5c6370;># Check the Docker status
+</span><span style=color:#e06c75;>sudo</span><span> systemctl start docker
+</span><span style=color:#e06c75;>sudo</span><span> systemctl status docker
+</span><span>
+</span><span style=color:#5c6370;># Launch Docker every time the VM boots
+</span><span style=color:#e06c75;>sudo</span><span> systemctl enable docker
+</span><span>
+</span><span style=color:#5c6370;># Test if it works as expected
+</span><span style=color:#e06c75;>sudo</span><span> docker run hello-world
+</span></code></pre><h3 id=practical-usage>Practical Usage</h3><h4 id=mysql>MySQL</h4><pre class=language-bash data-lang=bash style=background-color:#282c34;color:#dcdfe4;><code class=language-bash data-lang=bash><span style=color:#5c6370;># The base to modify on
+</span><span style=color:#e06c75;>sudo</span><span> docker pull mysql:8.0
+</span><span style=color:#e06c75;>sudo</span><span> docker images </span><span style=color:#c678dd;>| </span><span style=color:#e06c75;>grep</span><span> mysql
+</span><span>
+</span><span style=color:#5c6370;># The instance we actually use (based on the image (class))
+</span><span style=color:#e06c75;>sudo</span><span> docker container ls
+</span><span style=color:#e06c75;>sudo</span><span> docker container start mysql80-dev
+</span><span style=color:#e06c75;>sudo</span><span> docker container stop mysql80-dev
+</span><span style=color:#e06c75;>sudo</span><span> docker container rm   mysql80-dev
+</span><span>
+</span><span style=color:#5c6370;># Create the instance
+</span><span style=color:#e06c75;>sudo</span><span> docker run \
+</span><span style=color:#e06c75;>    --name</span><span style=color:#c678dd;>=</span><span>mysql80-dev \
+</span><span style=color:#e06c75;>    --publish</span><span> 3306:3306 \
+</span><span style=color:#e06c75;>    --volume</span><span style=color:#c678dd;>=</span><span>/mydata/mysql80_conf/:/etc/mysql/conf.d \
+</span><span style=color:#e06c75;>    --volume</span><span style=color:#c678dd;>=</span><span>/mydata/mysql80_data/:/var/lib/mysql \
+</span><span style=color:#e06c75;>    --volume</span><span style=color:#c678dd;>=</span><span>/mydata/mysql80_log/:/var/log/mysql \
+</span><span style=color:#e06c75;>    --env</span><span style=color:#c678dd;>=</span><span style=color:#98c379;>"MYSQL_ROOT_PASSWORD=password" </span><span>\
+</span><span style=color:#e06c75;>    --detach</span><span> mysql:8.0
+</span><span>
+</span><span style=color:#5c6370;># The content were down below
+</span><span style=color:#e06c75;>sudo</span><span> vi /mydata/mysql80_conf/my.cnf
+</span><span>
+</span><span style=color:#5c6370;># Restart and adding to boot list
+</span><span style=color:#e06c75;>sudo</span><span> docker restart mysql5dot7
+</span><span style=color:#e06c75;>sudo</span><span> docker update mysql80-dev</span><span style=color:#e06c75;> --restart</span><span style=color:#c678dd;>=</span><span>always
+</span><span>
+</span><span style=color:#5c6370;># Go into the Docker container
+</span><span style=color:#e06c75;>sudo</span><span> docker exec</span><span style=color:#e06c75;> -it</span><span> mysql80-dev /bin/bash
+</span></code></pre><pre class=language-ini data-lang=ini style=background-color:#282c34;color:#dcdfe4;><code class=language-ini data-lang=ini><span style=color:#c678dd;>[client]
+</span><span style=color:#e06c75;>default-character-set</span><span style=color:#c678dd;>=</span><span>utf8
+</span><span>
+</span><span style=color:#c678dd;>[mysql]
+</span><span style=color:#e06c75;>default-character-set</span><span style=color:#c678dd;>=</span><span>utf8
+</span><span>
+</span><span style=color:#c678dd;>[mysqld]
+</span><span style=color:#e06c75;>init_connect</span><span style=color:#c678dd;>=</span><span style=color:#98c379;>'SET NAMES utf8'
+</span><span style=color:#e06c75;>init_connect</span><span style=color:#c678dd;>=</span><span style=color:#98c379;>'SET collation_connection = utf8_unicode_ci'
+</span><span>
+</span><span style=color:#e06c75;>character-set-server</span><span style=color:#c678dd;>=</span><span>utf8
+</span><span style=color:#e06c75;>collation-server</span><span style=color:#c678dd;>=</span><span>utf8_unicode_ci
+</span><span>
+</span><span style=color:#e06c75;>skip-character-set-client-handshake
+</span><span style=color:#e06c75;>skip-name-resolve
+</span></code></pre></article><footer role=contentinfo><hr><nav style="margin-bottom:0.15rem; font-size: 0.90rem;"role=navigation>Contact me via [ <a href=https://twitter.com/_Drahtzieher>Twitter</a><span> ♥ </span><a href=https://github.com/codingEzio>Github</a><span> ♥ </span><a href=https://t.me/gw9rw3t>Telegram</a> ]</nav><small>Built with <a href=https://www.getzola.org/>Zola</a> using <a href=https://www.getzola.org/themes/lightspeed/>Lightspeed</a> theme.<br> </small></footer></main>
