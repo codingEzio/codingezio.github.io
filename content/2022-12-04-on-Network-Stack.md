@@ -19,7 +19,7 @@ description = "To the deepest level you could get"
 >
 > ***Current stage: finding good resources that could lead me to accomplish that.***
 
-## Interesting Resources I'm Looking Forward to *Digest*
+## Interesting Stuff to *Dive In*
 
 - A lightweight TCP/IP stack
 
