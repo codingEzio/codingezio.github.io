@@ -354,11 +354,42 @@ catch (IOException exception) {
 
 ### Snippet 20 Generics
 
-#### Type
+#### Terminology
 
-#### Why Generics
+> They are similar to me, conceptually
+
+1. *Polymorphism* means a single entity behaves differently depending on the input
+2. *Polymorphism* means an object varies its behaviors based on the input type
+3. *Generics* is a type of *Polymorphism*
+
+#### Examples
+
+##### Operator Overloading
+
+```python
+# Language: Python
+# '+' serves different kinds of functionalities here
+"1" + "1"
+100 + 100
+```
+
+##### Function Overloading
+
+```python
+# Language: Python
+# Accepts different types of arguments
+len([1, 2, 3])                    # 3
+len("abc")                        # 3
+len({"name": "John", "age": 40})  # 2
+```
+
+#### Now Let's Talk About the *WHY*
+
+- pass
 
 #### Type Erasure
+
+- pass
 
 -----
 
@@ -410,6 +441,14 @@ catch (IOException exception) {
 - [Why doesn't Java offer operator overloading?](https://stackoverflow.com/questions/77718/why-doesnt-java-offer-operator-overloading/77798#77798)
 - [Operator overloading in Java](https://stackoverflow.com/a/1686708/6273859)
 - [Python Operator Overloading (With Examples)](https://www.programiz.com/python-programming/operator-overloading)
+
+### Generics
+
+- [What's the difference between using polymorphism and generics in Java? - Quora](https://qr.ae/pr4NCR)
+- [Generics and polymorphism](https://stackoverflow.com/a/2423355/6273859)
+- [Polymorphism Relates to Inheritance](https://stackoverflow.com/a/2423999/6273859)
+- [What is Polymorphism in Python?](https://www.educative.io/blog/what-is-polymorphism-python)
+- [Polymorphism in Python(with Examples)](https://www.programiz.com/python-programming/polymorphism)
 
 ### Boxing
 

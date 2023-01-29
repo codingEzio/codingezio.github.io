@@ -8,6 +8,21 @@
 	<updated>2023-01-29T00:00:00+00:00</updated>
 	<id>https://codingezio.github.io/atom.xml</id>
 	<entry xml:lang="en">
+		<title>On Disability</title>
+		<published>2023-01-29T00:00:00+00:00</published>
+		<updated>2023-01-29T00:00:00+00:00</updated>
+		<link rel="alternate" href="https://codingezio.github.io/on-disability/" type="text/html"/>
+		<id>https://codingezio.github.io/on-disability/</id>
+		<content type="html">&lt;blockquote&gt;
+&lt;p&gt;This is a giant topic that I couldn&#x27;t yet write a thoughtful summary on, yet. Currently this is just a post containing bunch of links for me and the others to discovery&#x2F;learn about the all the things that related to disabilities.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h2 id=&quot;transportation&quot;&gt;Transportation&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=MRntgEiTHIY&quot;&gt;Flying Has Become Hell for Passengers with Wheelchairs - YouTube&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
 		<title>On Prepare for the Inevitable</title>
 		<published>2023-01-29T00:00:00+00:00</published>
 		<updated>2023-01-29T00:00:00+00:00</updated>
@@ -1715,9 +1730,37 @@ multiple object references could reference to 1 object&lt;&#x2F;p&gt;
 &lt;li&gt;N&#x2F;A&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h3 id=&quot;snippet-20-generics&quot;&gt;Snippet 20 Generics&lt;&#x2F;h3&gt;
-&lt;h4 id=&quot;type&quot;&gt;Type&lt;&#x2F;h4&gt;
-&lt;h4 id=&quot;why-generics&quot;&gt;Why Generics&lt;&#x2F;h4&gt;
+&lt;h4 id=&quot;terminology&quot;&gt;Terminology&lt;&#x2F;h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;They are similar to me, conceptually&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;em&gt;Polymorphism&lt;&#x2F;em&gt; means a single entity behaves differently depending on the input&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;em&gt;Polymorphism&lt;&#x2F;em&gt; means an object varies its behaviors based on the input type&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;em&gt;Generics&lt;&#x2F;em&gt; is a type of &lt;em&gt;Polymorphism&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h4 id=&quot;examples&quot;&gt;Examples&lt;&#x2F;h4&gt;
+&lt;h5 id=&quot;operator-overloading&quot;&gt;Operator Overloading&lt;&#x2F;h5&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#282c34;color:#dcdfe4;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# Language: Python
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# &amp;#39;+&amp;#39; serves different kinds of functionalities here
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;quot;1&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;+ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;quot;1&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;100 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c678dd;&quot;&gt;+ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;100
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h5 id=&quot;function-overloading&quot;&gt;Function Overloading&lt;&#x2F;h5&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#282c34;color:#dcdfe4;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# Language: Python
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# Accepts different types of arguments
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#61afef;&quot;&gt;len&lt;&#x2F;span&gt;&lt;span&gt;([&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;3&lt;&#x2F;span&gt;&lt;span&gt;])                    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# 3
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#61afef;&quot;&gt;len&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;quot;abc&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;)                        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# 3
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#61afef;&quot;&gt;len&lt;&#x2F;span&gt;&lt;span&gt;({&lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;quot;name&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;quot;John&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#98c379;&quot;&gt;&amp;quot;age&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;40&lt;&#x2F;span&gt;&lt;span&gt;})  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5c6370;&quot;&gt;# 2
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h4 id=&quot;now-let-s-talk-about-the-why&quot;&gt;Now Let&#x27;s Talk About the &lt;em&gt;WHY&lt;&#x2F;em&gt;&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;pass&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
 &lt;h4 id=&quot;type-erasure&quot;&gt;Type Erasure&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;pass&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
 &lt;hr &#x2F;&gt;
 &lt;h2 id=&quot;collections&quot;&gt;Collections&lt;&#x2F;h2&gt;
 &lt;h3 id=&quot;n-a&quot;&gt;N&#x2F;A&lt;&#x2F;h3&gt;
@@ -1757,11 +1800,19 @@ multiple object references could reference to 1 object&lt;&#x2F;p&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;a&#x2F;10579062&#x2F;6273859&quot;&gt;What is Java String interning?&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;a&#x2F;1091068&#x2F;6273859&quot;&gt;Is it good practice to use java.lang.String.intern()?&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;operator-overloading&quot;&gt;Operator Overloading&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;operator-overloading-1&quot;&gt;Operator Overloading&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;77718&#x2F;why-doesnt-java-offer-operator-overloading&#x2F;77798#77798&quot;&gt;Why doesn&#x27;t Java offer operator overloading?&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;a&#x2F;1686708&#x2F;6273859&quot;&gt;Operator overloading in Java&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.programiz.com&#x2F;python-programming&#x2F;operator-overloading&quot;&gt;Python Operator Overloading (With Examples)&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;generics&quot;&gt;Generics&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;qr.ae&#x2F;pr4NCR&quot;&gt;What&#x27;s the difference between using polymorphism and generics in Java? - Quora&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;a&#x2F;2423355&#x2F;6273859&quot;&gt;Generics and polymorphism&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;a&#x2F;2423999&#x2F;6273859&quot;&gt;Polymorphism Relates to Inheritance&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.educative.io&#x2F;blog&#x2F;what-is-polymorphism-python&quot;&gt;What is Polymorphism in Python?&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.programiz.com&#x2F;python-programming&#x2F;polymorphism&quot;&gt;Polymorphism in Python(with Examples)&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h3 id=&quot;boxing&quot;&gt;Boxing&lt;&#x2F;h3&gt;
 &lt;ul&gt;
