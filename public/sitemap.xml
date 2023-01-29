@@ -383,10 +383,6 @@
         <lastmod>2018-11-25</lastmod>
     </url>
     <url>
-        <loc>https://codingezio.github.io/list-to-practice-for-leetcode/</loc>
-        <lastmod>0001-01-01</lastmod>
-    </url>
-    <url>
         <loc>https://codingezio.github.io/manage-jdk-version/</loc>
         <lastmod>2022-10-12</lastmod>
     </url>
@@ -749,6 +745,10 @@
     <url>
         <loc>https://codingezio.github.io/optimization-for-virtual-machine/</loc>
         <lastmod>2022-08-03</lastmod>
+    </url>
+    <url>
+        <loc>https://codingezio.github.io/practice-list-for-leetcode/</loc>
+        <lastmod>0001-01-01</lastmod>
     </url>
     <url>
         <loc>https://codingezio.github.io/quality-of-work-i-wanna-achieve/</loc>
