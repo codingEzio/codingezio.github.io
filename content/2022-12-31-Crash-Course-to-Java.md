@@ -5,6 +5,8 @@ description = "Only for myself, unfortunately"
 
 > N/A
 
+# Notes
+
 ## Basics
 
 ### Snippet 01 `new`
@@ -352,9 +354,11 @@ catch (IOException exception) {
 
 ### Snippet 20 Generics
 
-> [What are the benefits of Java's types erasure?](https://stackoverflow.com/questions/20918650/what-are-the-benefits-of-javas-types-erasure)
+#### Type
 
-- N/A
+#### Why Generics
+
+#### Type Erasure
 
 -----
 
@@ -374,7 +378,9 @@ catch (IOException exception) {
 
 -----
 
-> References <small>oldest to newest</small>
+# References
+
+> <small>oldest to newest</small>
 
 ## Basics
 
