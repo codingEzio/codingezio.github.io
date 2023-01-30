@@ -33,7 +33,7 @@ adb push host1/a.txt  /sdcard/tmp/ # -> /../tmp/a.txt
 
 ### [Install `.apk`](https://stackoverflow.com/a/7076679/6273859)
 
-```
+```bash
 adb install INPUT.apk
 ```
 

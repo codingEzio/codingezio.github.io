@@ -5,7 +5,7 @@ description = "Archiving videos from various platforms"
 
 ### For AcFun
 
-```
+```bash
 brew install you-get
 
 you-get -i LINK     # get available formats
