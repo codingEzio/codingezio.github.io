@@ -2,7 +2,7 @@
 base_url = "https://codingezio.github.io"
 
 # My essentials
-title = "Ezio's blog 😊"
+title = "Ezio's blog"
 description = "A coder that wants to learn everything"
 default_language = "en"
 minify_html = true
