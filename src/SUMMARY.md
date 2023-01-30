@@ -1,8 +1,11 @@
-# Ok
+# Foreword
 
-- [230130 On Child Labor and Child Marriage](./230130-on-Child-Labor-and-Child-Marriage.md)
+- [221204 About This Blog](./221204-about-this-blog.md)
+- [221006 Zola Blog](./221006-zola-blog.md)
+- [220920 Why Write Blog](./220920-why-write-blog.md)
+- [220623 Blogging Platforms](./220623-blogging-platforms.md)
 
-# Summary
+# Content
 
 - [230130 On Child Labor and Child Marriage](./230130-on-Child-Labor-and-Child-Marriage.md)
 - [230129 On Preparing for the Inevitable](./230129-on-Preparing-for-the-Inevitable.md)
@@ -85,7 +88,6 @@
 - [221204 My Translation for Video 30~60 (min)](./221204-My-Translation-for-Video-030min-to-060min.md)
 - [221204 My Translation for Video 10~30 (min)](./221204-My-Translation-for-Video-010min-to-030min.md)
 - [221204 My Translation for Video 00~10 (min)](./221204-My-Translation-for-Video-000min-to-010min.md)
-- [221204 About This Blog](./221204-about-this-blog.md)
 - [221202 On Presentation](./221202-on-Presentation.md)
 - [221202 On Learning German](./221202-on-Learning-German.md)
 - [221202 Issue Spring Swagger Failed to Start](./221202-issue-Spring-Swagger-failed-to-start.md)
@@ -110,10 +112,8 @@
 - [221025 One to Infinity Network](./221025-one-to-infinity-Network.md)
 - [221012 Manage JDK Version](./221012-manage-jdk-version.md)
 - [221010 Issue node-sass Fail to Compile](./221010-issue-node-sass-fail-to-compile.md)
-- [221006 Zola Blog](./221006-zola-blog.md)
 - [221004 Booknote on Millionaire Fastlane](./221004-booknote-on-The-Millionaire-Fastlane.md)
 - [221002 What I Strive For](./221002-what-I-strive-for.md)
-- [220920 Why Write Blog](./220920-why-write-blog.md)
 - [220920 Toolset VSCode](./220920-toolset-VSCode.md)
 - [220920 Toolset vim](./220920-toolset-vim.md)
 - [220920 Toolset JetBrains IDEA](./220920-toolset-JetBrains-IDEA.md)
@@ -140,7 +140,6 @@
 - [220701 Fetching Videos Online](./220701-fetching-videos-online.md)
 - [220628 Booknote on Database Internals](./220628-booknote-on-Database-Internals.md)
 - [220623 Stateless Midn](./220623-stateless-mind.md)
-- [220623 Blogging Platforms](./220623-blogging-platforms.md)
 - [220608 Booknote on Picturing Womanchild](./220608-booknote-on-Picturing-the-WomanChild.md)
 - [220604 Booknote on 斜杠青年](./220604-booknote-on-斜杠青年.md)
 - [220520 Booknote on Algorithms to Live](./220520-booknote-on-Algorithms-to-Live-By.md)
