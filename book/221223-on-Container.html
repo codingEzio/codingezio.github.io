@@ -1,0 +1,257 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>221223 On Container - Human</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="230130-on-Child-Labor-and-Child-Marriage.html"><strong aria-hidden="true">1.</strong> 230130 On Child Labor and Child Marriage</a></li><li class="chapter-item expanded affix "><li class="part-title">Summary</li><li class="chapter-item expanded "><a href="230130-on-Child-Labor-and-Child-Marriage.html"><strong aria-hidden="true">2.</strong> 230130 On Child Labor and Child Marriage</a></li><li class="chapter-item expanded "><a href="230129-on-Preparing-for-the-Inevitable.html"><strong aria-hidden="true">3.</strong> 230129 On Preparing for the Inevitable</a></li><li class="chapter-item expanded "><a href="230129-on-ISIS-and-Taliban.html"><strong aria-hidden="true">4.</strong> 230129 On ISIS and Taliban</a></li><li class="chapter-item expanded "><a href="230129-on-Disability.html"><strong aria-hidden="true">5.</strong> 230129 On Disability</a></li><li class="chapter-item expanded "><a href="230126-on-Pregnancy.html"><strong aria-hidden="true">6.</strong> 230126 On Pregnancy</a></li><li class="chapter-item expanded "><a href="230126-on-Learning-to-Love.html"><strong aria-hidden="true">7.</strong> 230126 On Learning to Love</a></li><li class="chapter-item expanded "><a href="230126-Common-Sense-for-Me-but-Might-Not-Others.html"><strong aria-hidden="true">8.</strong> 230126 Common Sense for Me but Might Not Others</a></li><li class="chapter-item expanded "><a href="230126-booknote-on-The-Second-Mountain.html"><strong aria-hidden="true">9.</strong> 230126 Booknote on Second Mountain</a></li><li class="chapter-item expanded "><a href="230125-on-Housing.html"><strong aria-hidden="true">10.</strong> 230125 On Housing</a></li><li class="chapter-item expanded "><a href="230125-on-Diabetes.html"><strong aria-hidden="true">11.</strong> 230125 On Diabetes</a></li><li class="chapter-item expanded "><a href="230125-on-Being-Drunk.html"><strong aria-hidden="true">12.</strong> 230125 On Being Drunk</a></li><li class="chapter-item expanded "><a href="230124-on-Everything-as-Code.html"><strong aria-hidden="true">13.</strong> 230124 On Everything as Code</a></li><li class="chapter-item expanded "><a href="230123-Read-Essay-on-How-to-Identify-Personal-Strength.html"><strong aria-hidden="true">14.</strong> 230123 Read Essay on Identify Personal Strenth</a></li><li class="chapter-item expanded "><a href="230123-Read-Essay-on-Four-Thousand-Weeks.html"><strong aria-hidden="true">15.</strong> 230123 Read Essay on Four Thousand Weeks</a></li><li class="chapter-item expanded "><a href="230123-on-Video-Technology.html"><strong aria-hidden="true">16.</strong> 230123 On Video Technology</a></li><li class="chapter-item expanded "><a href="230123-on-Authentication.html"><strong aria-hidden="true">17.</strong> 230123 On Authentication</a></li><li class="chapter-item expanded "><a href="230122-on-Visualization.html"><strong aria-hidden="true">18.</strong> 230122 On Visualization</a></li><li class="chapter-item expanded "><a href="230122-on-Software-Engineering.html"><strong aria-hidden="true">19.</strong> 230122 On Software Engineering</a></li><li class="chapter-item expanded "><a href="230122-on-Reactive-Programming.html"><strong aria-hidden="true">20.</strong> 230122 On Reactive Programming</a></li><li class="chapter-item expanded "><a href="230121-on-Web-Security.html"><strong aria-hidden="true">21.</strong> 230121 On Web Security</a></li><li class="chapter-item expanded "><a href="230121-booknote-on-产品经理的无限游戏.html"><strong aria-hidden="true">22.</strong> 230121 Booknote on 产品经理的无限游戏</a></li><li class="chapter-item expanded "><a href="230120-on-Visual-Effect.html"><strong aria-hidden="true">23.</strong> 230120 On Visual Effect</a></li><li class="chapter-item expanded "><a href="230120-on-Tech-Talk.html"><strong aria-hidden="true">24.</strong> 230120 On Tech Talk</a></li><li class="chapter-item expanded "><a href="230120-on-Cpp.html"><strong aria-hidden="true">25.</strong> 230120 On C++</a></li><li class="chapter-item expanded "><a href="230120-on-Aaron-Swartz.html"><strong aria-hidden="true">26.</strong> 230120 On Aaron Swartz</a></li><li class="chapter-item expanded "><a href="230118-toolset-imagemagick.html"><strong aria-hidden="true">27.</strong> 230118 Toolset imagemagick</a></li><li class="chapter-item expanded "><a href="230116-on-Emoji.html"><strong aria-hidden="true">28.</strong> 230116 On Emoji</a></li><li class="chapter-item expanded "><a href="230114-booknote-on-Understanding-MySQL-Internals.html"><strong aria-hidden="true">29.</strong> 230114 Booknote on Understand MySQL Internals</a></li><li class="chapter-item expanded "><a href="230111-on-Automobile.html"><strong aria-hidden="true">30.</strong> 230111 On Automobile</a></li><li class="chapter-item expanded "><a href="230108-Blog-Post-References.html"><strong aria-hidden="true">31.</strong> 230108 Blog Post References</a></li><li class="chapter-item expanded "><a href="221231-Crash-Course-to-Java.html"><strong aria-hidden="true">32.</strong> 221231 Crash Course to Java</a></li><li class="chapter-item expanded "><a href="221230-toolset-ffmpeg.html"><strong aria-hidden="true">33.</strong> 221230 Toolset ffmpeg</a></li><li class="chapter-item expanded "><a href="221230-on-Remote-Procedure-Call.html"><strong aria-hidden="true">34.</strong> 221230 On RPC</a></li><li class="chapter-item expanded "><a href="221230-on-Message-Queue.html"><strong aria-hidden="true">35.</strong> 221230 On Message Queue</a></li><li class="chapter-item expanded "><a href="221230-on-Information-Retrieval.html"><strong aria-hidden="true">36.</strong> 221230 On Information Retrieval</a></li><li class="chapter-item expanded "><a href="221229-booknote-on-Microservice-Patterns.html"><strong aria-hidden="true">37.</strong> 221229 Booknote on Microservice Patterns</a></li><li class="chapter-item expanded "><a href="221228-On-Personal-Knowledge-Management.html"><strong aria-hidden="true">38.</strong> 221228 On Personal Knowledge Management</a></li><li class="chapter-item expanded "><a href="221226-on-Prepper.html"><strong aria-hidden="true">39.</strong> 221226 On Prepper</a></li><li class="chapter-item expanded "><a href="221226-on-Extraterrestrial-Life.html"><strong aria-hidden="true">40.</strong> 221226 On Extraterrestrial Life</a></li><li class="chapter-item expanded "><a href="221225-on-Shehulk.html"><strong aria-hidden="true">41.</strong> 221225 On Shehulk</a></li><li class="chapter-item expanded "><a href="221225-on-Container-Orchestration.html"><strong aria-hidden="true">42.</strong> 221225 On Container Orchestration</a></li><li class="chapter-item expanded "><a href="221224-Resources-around-Machine-Learning.html"><strong aria-hidden="true">43.</strong> 221224 Resources around Machine Learning</a></li><li class="chapter-item expanded "><a href="221223-on-Programming-Language-Reflection.html"><strong aria-hidden="true">44.</strong> 221223 On Programming Language Reflection</a></li><li class="chapter-item expanded "><a href="221223-on-Container.html" class="active"><strong aria-hidden="true">45.</strong> 221223 On Container</a></li><li class="chapter-item expanded "><a href="221223-My-Own-Information-Universe.html"><strong aria-hidden="true">46.</strong> 221223 My Own Information Universe</a></li><li class="chapter-item expanded "><a href="221222-on-Web-Server.html"><strong aria-hidden="true">47.</strong> 221222 On Web Server</a></li><li class="chapter-item expanded "><a href="221222-on-Redis.html"><strong aria-hidden="true">48.</strong> 221222 On Redis</a></li><li class="chapter-item expanded "><a href="221222-on-Netty.html"><strong aria-hidden="true">49.</strong> 221222 On Netty</a></li><li class="chapter-item expanded "><a href="221222-on-Java-Object-Relational-Mapping.html"><strong aria-hidden="true">50.</strong> 221222 On Java ORM</a></li><li class="chapter-item expanded "><a href="221222-on-Design-Pattern.html"><strong aria-hidden="true">51.</strong> 221222 On Design Pattern</a></li><li class="chapter-item expanded "><a href="221221-on-Water-Heater.html"><strong aria-hidden="true">52.</strong> 221221 On Water Heater</a></li><li class="chapter-item expanded "><a href="221221-on-Java-Virtual-Machine.html"><strong aria-hidden="true">53.</strong> 221221 On JVM</a></li><li class="chapter-item expanded "><a href="221221-on-Java-Concurrency.html"><strong aria-hidden="true">54.</strong> 221221 On Java Concurrency</a></li><li class="chapter-item expanded "><a href="221219-on-Home-Improvement.html"><strong aria-hidden="true">55.</strong> 221219 On Home Improvement</a></li><li class="chapter-item expanded "><a href="221219-on-Cooking.html"><strong aria-hidden="true">56.</strong> 221219 On Cooking</a></li><li class="chapter-item expanded "><a href="221219-MOOC-on-Human-Language.html"><strong aria-hidden="true">57.</strong> 221219 MOOC on Human Language</a></li><li class="chapter-item expanded "><a href="221219-MOOC-on-Computer-Science.html"><strong aria-hidden="true">58.</strong> 221219 MOOC on Computer Science</a></li><li class="chapter-item expanded "><a href="221218-on-PC-Build.html"><strong aria-hidden="true">59.</strong> 221218 On PC Build</a></li><li class="chapter-item expanded "><a href="221218-on-Entertainment-around-Space.html"><strong aria-hidden="true">60.</strong> 221218 On Entertainment around Space</a></li><li class="chapter-item expanded "><a href="221218-My-Translation-Candidate.html"><strong aria-hidden="true">61.</strong> 221218 My Translation Candidate</a></li><li class="chapter-item expanded "><a href="221216-on-Functional-Programming.html"><strong aria-hidden="true">62.</strong> 221216 On Functional Programming</a></li><li class="chapter-item expanded "><a href="221213-one-to-infinity-Database.html"><strong aria-hidden="true">63.</strong> 221213 One to Infinity Database</a></li><li class="chapter-item expanded "><a href="221209-Quotations-from-Human.html"><strong aria-hidden="true">64.</strong> 221209 Quotations from Human</a></li><li class="chapter-item expanded "><a href="221207-Algorithm-LeetCode-for-SQL-Problems.html"><strong aria-hidden="true">65.</strong> 221207 Algorithm LeetCode for SQL Problems</a></li><li class="chapter-item expanded "><a href="221207-Algorithm-LeetCode-for-General-Problems.html"><strong aria-hidden="true">66.</strong> 221207 Algorithm LeetCode for General Algorithms</a></li><li class="chapter-item expanded "><a href="221207-Algorithm-learn-with-AI.html"><strong aria-hidden="true">67.</strong> 221207 Algorithm Learn with AI</a></li><li class="chapter-item expanded "><a href="221206-on-Scale.html"><strong aria-hidden="true">68.</strong> 221206 On Scale</a></li><li class="chapter-item expanded "><a href="221206-on-Quantum-Computer.html"><strong aria-hidden="true">69.</strong> 221206 On Quantum Computer</a></li><li class="chapter-item expanded "><a href="221206-on-Anxiety-towards-AI.html"><strong aria-hidden="true">70.</strong> 221206 On Anxiety towards AI</a></li><li class="chapter-item expanded "><a href="221205-on-Open-Source-Contribution.html"><strong aria-hidden="true">71.</strong> 221205 On Open Source Contribution</a></li><li class="chapter-item expanded "><a href="221205-on-Ecosystem-Simulation.html"><strong aria-hidden="true">72.</strong> 221205 On Ecosystem Simulation</a></li><li class="chapter-item expanded "><a href="221205-My-Translation-for-Book-Programming.html"><strong aria-hidden="true">73.</strong> 221205 My Translation for Book Programming</a></li><li class="chapter-item expanded "><a href="221205-Microservice-02-Tryout.html"><strong aria-hidden="true">74.</strong> 221205 Microservice 02 Tryout</a></li><li class="chapter-item expanded "><a href="221205-Microservice-01-Concepts.html"><strong aria-hidden="true">75.</strong> 221205 Microservice 01 Concepts</a></li><li class="chapter-item expanded "><a href="221205-Microservice-00-Idea.html"><strong aria-hidden="true">76.</strong> 221205 Microservice 00 Idea</a></li><li class="chapter-item expanded "><a href="221204-on-System-Design.html"><strong aria-hidden="true">77.</strong> 221204 On System Design</a></li><li class="chapter-item expanded "><a href="221204-on-Network-Stack.html"><strong aria-hidden="true">78.</strong> 221204 On Network Stack</a></li><li class="chapter-item expanded "><a href="221204-on-AI-Large-Language-Model.html"><strong aria-hidden="true">79.</strong> 221204 On AI Large Language Model</a></li><li class="chapter-item expanded "><a href="221204-My-Translation-for-Video-030min-to-060min.html"><strong aria-hidden="true">80.</strong> 221204 My Translation for Video 30~60 (min)</a></li><li class="chapter-item expanded "><a href="221204-My-Translation-for-Video-010min-to-030min.html"><strong aria-hidden="true">81.</strong> 221204 My Translation for Video 10~30 (min)</a></li><li class="chapter-item expanded "><a href="221204-My-Translation-for-Video-000min-to-010min.html"><strong aria-hidden="true">82.</strong> 221204 My Translation for Video 00~10 (min)</a></li><li class="chapter-item expanded "><a href="221204-about-this-blog.html"><strong aria-hidden="true">83.</strong> 221204 About This Blog</a></li><li class="chapter-item expanded "><a href="221202-on-Presentation.html"><strong aria-hidden="true">84.</strong> 221202 On Presentation</a></li><li class="chapter-item expanded "><a href="221202-on-Learning-German.html"><strong aria-hidden="true">85.</strong> 221202 On Learning German</a></li><li class="chapter-item expanded "><a href="221202-issue-Spring-Swagger-failed-to-start.html"><strong aria-hidden="true">86.</strong> 221202 Issue Spring Swagger Failed to Start</a></li><li class="chapter-item expanded "><a href="221202-issue-Spring-MapStruct-IDEA-failed-to-build.html"><strong aria-hidden="true">87.</strong> 221202 Issue Spring MapStruct IDEA Failed to Build</a></li><li class="chapter-item expanded "><a href="221202-issue-Spring-Devtools-not-reloading.html"><strong aria-hidden="true">88.</strong> 221202 Issue Spring Devtools not Reloading</a></li><li class="chapter-item expanded "><a href="221201-on-Longevity.html"><strong aria-hidden="true">89.</strong> 221201 On Longevity</a></li><li class="chapter-item expanded "><a href="221201-on-Life.html"><strong aria-hidden="true">90.</strong> 221201 On Life</a></li><li class="chapter-item expanded "><a href="221201-on-Gun-Control.html"><strong aria-hidden="true">91.</strong> 221201 On Gun Control</a></li><li class="chapter-item expanded "><a href="221130-on-Visual-Art.html"><strong aria-hidden="true">92.</strong> 221130 On Visual Art</a></li><li class="chapter-item expanded "><a href="221127-toolset-Vagrant.html"><strong aria-hidden="true">93.</strong> 221127 Toolset Vagrant</a></li><li class="chapter-item expanded "><a href="221127-toolset-Docker.html"><strong aria-hidden="true">94.</strong> 221127 Toolset Docker</a></li><li class="chapter-item expanded "><a href="221127-browserextension-Stylish.html"><strong aria-hidden="true">95.</strong> 221127 Browser Extension Stylish</a></li><li class="chapter-item expanded "><a href="221119-on-Eating.html"><strong aria-hidden="true">96.</strong> 221119 On Eating</a></li><li class="chapter-item expanded "><a href="221118-issue-Docker-slow-download.html"><strong aria-hidden="true">97.</strong> 221118 Issue Docker Slow Download</a></li><li class="chapter-item expanded "><a href="221116-on-AI-Running-Out-of-Data-to-Train-On.html"><strong aria-hidden="true">98.</strong> 221116 AI Run Out Data to Train</a></li><li class="chapter-item expanded "><a href="221112-zero-to-one-Flutter.html"><strong aria-hidden="true">99.</strong> 221112 Zero to One Flutter</a></li><li class="chapter-item expanded "><a href="221112-issue-downgrade-Flutter.html"><strong aria-hidden="true">100.</strong> 221112 Issue Downgrade Flutter</a></li><li class="chapter-item expanded "><a href="221030-one-to-infinity-CSS-and-Design.html"><strong aria-hidden="true">101.</strong> 221030 One to Infinity CSS and Design</a></li><li class="chapter-item expanded "><a href="221028-on-Time.html"><strong aria-hidden="true">102.</strong> 221028 On Time</a></li><li class="chapter-item expanded "><a href="221028-on-Food-Security.html"><strong aria-hidden="true">103.</strong> 221028 On Food Security</a></li><li class="chapter-item expanded "><a href="221025-one-to-infinity-Operating-System.html"><strong aria-hidden="true">104.</strong> 221025 One to Infinity OS</a></li><li class="chapter-item expanded "><a href="221025-one-to-infinity-Network.html"><strong aria-hidden="true">105.</strong> 221025 One to Infinity Network</a></li><li class="chapter-item expanded "><a href="221012-manage-jdk-version.html"><strong aria-hidden="true">106.</strong> 221012 Manage JDK Version</a></li><li class="chapter-item expanded "><a href="221010-issue-node-sass-fail-to-compile.html"><strong aria-hidden="true">107.</strong> 221010 Issue node-sass Fail to Compile</a></li><li class="chapter-item expanded "><a href="221006-zola-blog.html"><strong aria-hidden="true">108.</strong> 221006 Zola Blog</a></li><li class="chapter-item expanded "><a href="221004-booknote-on-The-Millionaire-Fastlane.html"><strong aria-hidden="true">109.</strong> 221004 Booknote on Millionaire Fastlane</a></li><li class="chapter-item expanded "><a href="221002-what-I-strive-for.html"><strong aria-hidden="true">110.</strong> 221002 What I Strive For</a></li><li class="chapter-item expanded "><a href="220920-why-write-blog.html"><strong aria-hidden="true">111.</strong> 220920 Why Write Blog</a></li><li class="chapter-item expanded "><a href="220920-toolset-VSCode.html"><strong aria-hidden="true">112.</strong> 220920 Toolset VSCode</a></li><li class="chapter-item expanded "><a href="220920-toolset-vim.html"><strong aria-hidden="true">113.</strong> 220920 Toolset vim</a></li><li class="chapter-item expanded "><a href="220920-toolset-JetBrains-IDEA.html"><strong aria-hidden="true">114.</strong> 220920 Toolset JetBrains IDEA</a></li><li class="chapter-item expanded "><a href="220920-toolset-find.html"><strong aria-hidden="true">115.</strong> 220920 Toolset find</a></li><li class="chapter-item expanded "><a href="220920-toolset-brew.html"><strong aria-hidden="true">116.</strong> 220920 Toolset brew</a></li><li class="chapter-item expanded "><a href="220920-toolset-Anki.html"><strong aria-hidden="true">117.</strong> 220920 Toolset Anki</a></li><li class="chapter-item expanded "><a href="220920-on-version-control.html"><strong aria-hidden="true">118.</strong> 220920 On Version Control</a></li><li class="chapter-item expanded "><a href="220817-booknote-on-演讲的力量.html"><strong aria-hidden="true">119.</strong> 220817 Booknote on 演讲的力量</a></li><li class="chapter-item expanded "><a href="220815-words-for-thinking-out-of-the-box.html"><strong aria-hidden="true">120.</strong> 220815 Words Think Out Box</a></li><li class="chapter-item expanded "><a href="220814-on-HATEOAS-with-HAL.html"><strong aria-hidden="true">121.</strong> 220814 On HATEOAS with HAL</a></li><li class="chapter-item expanded "><a href="220810-on-JSON-Web-Token.html"><strong aria-hidden="true">122.</strong> 220810 On JWT</a></li><li class="chapter-item expanded "><a href="220803-optimization-for-virtual-machine.html"><strong aria-hidden="true">123.</strong> 220803 Optimization for VM</a></li><li class="chapter-item expanded "><a href="220731-zero-to-one-for-SQL.html"><strong aria-hidden="true">124.</strong> 220731 Zero to One SQL</a></li><li class="chapter-item expanded "><a href="220730-booknote-on-Spring-Boot-with-React.html"><strong aria-hidden="true">125.</strong> 220730 Booknote on Spring Boot with React</a></li><li class="chapter-item expanded "><a href="220729-toolset-resource-hub.html"><strong aria-hidden="true">126.</strong> 220729 Toolset Resource Hub</a></li><li class="chapter-item expanded "><a href="220729-booknote-on-Web-Browser-Engineering.html"><strong aria-hidden="true">127.</strong> 220729 Booknote on Web Browser Engineering</a></li><li class="chapter-item expanded "><a href="220718-zero-to-one-for-database.html"><strong aria-hidden="true">128.</strong> 220718 Zero to One Database</a></li><li class="chapter-item expanded "><a href="220718-Algorithm-Handbook.html"><strong aria-hidden="true">129.</strong> 220718 Algorithm Handbook</a></li><li class="chapter-item expanded "><a href="220717-toolset-jq.html"><strong aria-hidden="true">130.</strong> 220717 Toolset jq</a></li><li class="chapter-item expanded "><a href="220717-toolset-grep.html"><strong aria-hidden="true">131.</strong> 220717 Toolset grep</a></li><li class="chapter-item expanded "><a href="220710-learn-to-focus.html"><strong aria-hidden="true">132.</strong> 220710 Learn to Focus</a></li><li class="chapter-item expanded "><a href="220710-last-day-of-your-life.html"><strong aria-hidden="true">133.</strong> 220710 Last Day of Your Life</a></li><li class="chapter-item expanded "><a href="220702-new-language-features.html"><strong aria-hidden="true">134.</strong> 220702 New Language Features</a></li><li class="chapter-item expanded "><a href="220701-fetching-videos-online.html"><strong aria-hidden="true">135.</strong> 220701 Fetching Videos Online</a></li><li class="chapter-item expanded "><a href="220628-booknote-on-Database-Internals.html"><strong aria-hidden="true">136.</strong> 220628 Booknote on Database Internals</a></li><li class="chapter-item expanded "><a href="220623-stateless-mind.html"><strong aria-hidden="true">137.</strong> 220623 Stateless Midn</a></li><li class="chapter-item expanded "><a href="220623-blogging-platforms.html"><strong aria-hidden="true">138.</strong> 220623 Blogging Platforms</a></li><li class="chapter-item expanded "><a href="220608-booknote-on-Picturing-the-WomanChild.html"><strong aria-hidden="true">139.</strong> 220608 Booknote on Picturing Womanchild</a></li><li class="chapter-item expanded "><a href="220604-booknote-on-斜杠青年.html"><strong aria-hidden="true">140.</strong> 220604 Booknote on 斜杠青年</a></li><li class="chapter-item expanded "><a href="220520-booknote-on-Algorithms-to-Live-By.html"><strong aria-hidden="true">141.</strong> 220520 Booknote on Algorithms to Live</a></li><li class="chapter-item expanded "><a href="220510-booknote-on-Java高并发编程详解-多线程与架构设计.html"><strong aria-hidden="true">142.</strong> 220510 Booknote on Java高并发 多线程与架构设计</a></li><li class="chapter-item expanded "><a href="220510-booknote-on-Is-Rape-A-Crime.html"><strong aria-hidden="true">143.</strong> 220510 Booknote on Is Rape A Crime</a></li><li class="chapter-item expanded "><a href="220503-booknote-on-经济学通识课.html"><strong aria-hidden="true">144.</strong> 220503 Booknote on 经济学通识课</a></li><li class="chapter-item expanded "><a href="220503-booknote-on-Rape.html"><strong aria-hidden="true">145.</strong> 220503 Booknote on Rape</a></li><li class="chapter-item expanded "><a href="220502-booknote-on-Operating-System-Concepts-Essentials.html"><strong aria-hidden="true">146.</strong> 220502 Booknote on OS Concepts Essentials</a></li><li class="chapter-item expanded "><a href="220426-booknote-on-SQL-and-Relational-Theory.html"><strong aria-hidden="true">147.</strong> 220426 Booknote on SQL Relational Theory</a></li><li class="chapter-item expanded "><a href="220423-booknote-on-超级学霸.html"><strong aria-hidden="true">148.</strong> 220423 Booknote on 超级学霸</a></li><li class="chapter-item expanded "><a href="220417-booknote-on-零售的哲学.html"><strong aria-hidden="true">149.</strong> 220417 Booknote on 零售的哲学</a></li><li class="chapter-item expanded "><a href="220417-booknote-on-Code-of-the-Extraordinary-Mind.html"><strong aria-hidden="true">150.</strong> 220417 Booknote on Code Extraordinary Mind</a></li><li class="chapter-item expanded "><a href="220414-booknote-on-Soft-Skills.html"><strong aria-hidden="true">151.</strong> 220414 Booknote on Soft Skills</a></li><li class="chapter-item expanded "><a href="220414-booknote-on-Jumpstat-Your-Software-Career.html"><strong aria-hidden="true">152.</strong> 220414 Booknote on Jumpstat Software Career</a></li><li class="chapter-item expanded "><a href="220402-booknote-on-Zero-to-One.html"><strong aria-hidden="true">153.</strong> 220402 Booknote on Zero to One</a></li><li class="chapter-item expanded "><a href="220402-booknote-on-Every-Day-I-Write-the-Book.html"><strong aria-hidden="true">154.</strong> 220402 Booknote on Every Day I Write the Book</a></li><li class="chapter-item expanded "><a href="220331-booknote-on-用得上的哲学.html"><strong aria-hidden="true">155.</strong> 220331 Booknote on 用得上的哲学</a></li><li class="chapter-item expanded "><a href="220319-booknote-on-The-Mans-Guide-to-Women.html"><strong aria-hidden="true">156.</strong> 220319 Booknote on Man's Guide to Women</a></li><li class="chapter-item expanded "><a href="220319-booknote-on-Happiness-Is-a-Choice-You-Make.html"><strong aria-hidden="true">157.</strong> 220319 Booknote on Happiness Is Choice</a></li><li class="chapter-item expanded "><a href="220316-booknote-on-HTTP-the-Definitive-Guide.html"><strong aria-hidden="true">158.</strong> 220316 Booknote on HTTP Guide</a></li><li class="chapter-item expanded "><a href="220315-booknote-on-Author-Alan-Watts.html"><strong aria-hidden="true">159.</strong> 220315 Booknote on Author Alan Watts</a></li><li class="chapter-item expanded "><a href="211116-booknote-on-Other-Minds.html"><strong aria-hidden="true">160.</strong> 211116 Booknote on Other Minds</a></li><li class="chapter-item expanded "><a href="210910-booknote-on-Anesthesia.html"><strong aria-hidden="true">161.</strong> 210910 Booknote on Anesthesia</a></li><li class="chapter-item expanded "><a href="210704-one-to-infinity-PowerShell.html"><strong aria-hidden="true">162.</strong> 210704 One to Infinity PowerShell</a></li><li class="chapter-item expanded "><a href="210522-Install-PHP-Dev-Environment-Manually.html"><strong aria-hidden="true">163.</strong> 210522 Install PHP Dev Environment</a></li><li class="chapter-item expanded "><a href="210521-booknote-on-Docker-Demystified.html"><strong aria-hidden="true">164.</strong> 210521 Booknote on Docker Demystified</a></li><li class="chapter-item expanded "><a href="210501-booknote-on-Becoming-Fluent.html"><strong aria-hidden="true">165.</strong> 210501 Booknote on Becoming Fluent</a></li><li class="chapter-item expanded "><a href="210418-toolset-adb.html"><strong aria-hidden="true">166.</strong> 210418 Toolset adb</a></li><li class="chapter-item expanded "><a href="210418-on-VPS.html"><strong aria-hidden="true">167.</strong> 210418 On VPS</a></li><li class="chapter-item expanded "><a href="210418-on-Startup-Apps.html"><strong aria-hidden="true">168.</strong> 210418 On Startup Apps</a></li><li class="chapter-item expanded "><a href="210418-on-Physical-Archiving.html"><strong aria-hidden="true">169.</strong> 210418 On Physical Archiving</a></li><li class="chapter-item expanded "><a href="210403-booknote-on-Beyond-Biocentrism.html"><strong aria-hidden="true">170.</strong> 210403 Booknote on Beyond Biocentrism</a></li><li class="chapter-item expanded "><a href="210325-Ten-Percent-Happier.html"><strong aria-hidden="true">171.</strong> 210325 Booknote on Ten Percent Happier</a></li><li class="chapter-item expanded "><a href="210317-booknote-on-Radical-Abundance.html"><strong aria-hidden="true">172.</strong> 210317 Booknote on Radical Abundance</a></li><li class="chapter-item expanded "><a href="210303-booknote-on-Realms-of-Human-Unconscious.html"><strong aria-hidden="true">173.</strong> 210303 Booknote on Realm Human Unconscious</a></li><li class="chapter-item expanded "><a href="210211-booknote-on-Guide-to-Investing-in-Crypto.html"><strong aria-hidden="true">174.</strong> 210211 Booknote on Guide Invest Crypto</a></li><li class="chapter-item expanded "><a href="210208-booknote-on-Germany-Culture-Smart.html"><strong aria-hidden="true">175.</strong> 210208 Booknote on Germany</a></li><li class="chapter-item expanded "><a href="210206-booknote-on-Stock-Market-101.html"><strong aria-hidden="true">176.</strong> 210206 Booknote on Stock Market 101</a></li><li class="chapter-item expanded "><a href="210206-booknote-on-Stock-Investing-for-Dummies.html"><strong aria-hidden="true">177.</strong> 210206 Booknote on Stock Invest Dummies</a></li><li class="chapter-item expanded "><a href="210117-booknote-on-Superintelligence.html"><strong aria-hidden="true">178.</strong> 210117 Booknote on Superintelligence</a></li><li class="chapter-item expanded "><a href="210110-booknote-on-Food.html"><strong aria-hidden="true">179.</strong> 210110 Booknote on Food</a></li><li class="chapter-item expanded "><a href="201224-booknote-on-On-GAIA.html"><strong aria-hidden="true">180.</strong> 201224 Booknote on On GAIA</a></li><li class="chapter-item expanded "><a href="201201-booknote-on-Nature-of-Fear.html"><strong aria-hidden="true">181.</strong> 201201 Booknote on Nature of Fear</a></li><li class="chapter-item expanded "><a href="201026-booknote-on-Solaris.html"><strong aria-hidden="true">182.</strong> 201026 Booknote on Solaris</a></li><li class="chapter-item expanded "><a href="201016-booknote-on-Surface-and-Essense.html"><strong aria-hidden="true">183.</strong> 201016 Booknote on Surface and Essense</a></li><li class="chapter-item expanded "><a href="200711-booknote-on-翻译新究.html"><strong aria-hidden="true">184.</strong> 200711 Booknote on 翻译新究</a></li><li class="chapter-item expanded "><a href="200707-booknote-on-Too-Much-of-A-Good-Thing.html"><strong aria-hidden="true">185.</strong> 200707 Booknote on Too Much of A Good Thing</a></li><li class="chapter-item expanded "><a href="200606-on-AI-Facial-Recognition.html"><strong aria-hidden="true">186.</strong> 200606 </a></li><li class="chapter-item expanded "><a href="200508-booknote-on-Biology-Science-for-Life-with-Physiology.html"><strong aria-hidden="true">187.</strong> 200508 Booknote on Biology</a></li><li class="chapter-item expanded "><a href="200215-booknote-on-Author-Lu-Xun.html"><strong aria-hidden="true">188.</strong> 200215 Booknote on Author Lu Xun</a></li><li class="chapter-item expanded "><a href="191106-consume-less.html"><strong aria-hidden="true">189.</strong> 191106 Consume Less</a></li><li class="chapter-item expanded "><a href="191104-quality-of-work-I-wanna-achieve.html"><strong aria-hidden="true">190.</strong> 191104 Quality of Work I Wanna Achieve</a></li><li class="chapter-item expanded "><a href="191104-rants-on-programming-tutorials.html"><strong aria-hidden="true">191.</strong> 191104 On Programming Tutorials</a></li><li class="chapter-item expanded "><a href="191104-booknote-on-SOS-Reduce-Climate-Change.html"><strong aria-hidden="true">192.</strong> 191104 Booknote on SOS Reduce Climate Change</a></li><li class="chapter-item expanded "><a href="191104-booknote-on-Sexual-Consent.html"><strong aria-hidden="true">193.</strong> 191104 Booknote on Sexual Consent</a></li><li class="chapter-item expanded "><a href="191021-booknote-on-有所不为的反叛者.html"><strong aria-hidden="true">194.</strong> 191021 Booknote on 有所不为的反叛者</a></li><li class="chapter-item expanded "><a href="191015-booknote-on-Computer-Networking.html"><strong aria-hidden="true">195.</strong> 191015 Booknote on Computer Networking</a></li><li class="chapter-item expanded "><a href="190809-booknote-on-人体的故事.html"><strong aria-hidden="true">196.</strong> 190809 Booknote on 人体的故事</a></li><li class="chapter-item expanded "><a href="190808-booknote-on-Hunting-Girls.html"><strong aria-hidden="true">197.</strong> 190808 Booknote on Hunting Girls</a></li><li class="chapter-item expanded "><a href="190712-booknote-on-Author-Shi-Tie-Sheng.html"><strong aria-hidden="true">198.</strong> 190712 Booknote on Author Shi Tie Sheng</a></li><li class="chapter-item expanded "><a href="190517-booknote-on-I-Am-A-Strange-Loop.html"><strong aria-hidden="true">199.</strong> 190517 Booknote on I Am A Strange Loop</a></li><li class="chapter-item expanded "><a href="190512-booknote-on-中国哲学简史.html"><strong aria-hidden="true">200.</strong> 190512 Booknote on 中国哲学简史</a></li><li class="chapter-item expanded "><a href="190428-booknote-on-The-Big-Questions.html"><strong aria-hidden="true">201.</strong> 190428 Booknote on Big Questions</a></li><li class="chapter-item expanded "><a href="190419-on-Hardware-Hacking.html"><strong aria-hidden="true">202.</strong> 190419 On Hardware Hacking</a></li><li class="chapter-item expanded "><a href="190418-finding-and-forging-identity.html"><strong aria-hidden="true">203.</strong> 190418 Find and Forge Identity</a></li><li class="chapter-item expanded "><a href="190219-thoughts-on-books.html"><strong aria-hidden="true">204.</strong> 190219 Thoughts on Books</a></li><li class="chapter-item expanded "><a href="190219-booknote-on-Effective-Programming.html"><strong aria-hidden="true">205.</strong> 190219 Booknote on Effective Programming</a></li><li class="chapter-item expanded "><a href="190131-thoughts-on-depression.html"><strong aria-hidden="true">206.</strong> 190131 Thoughts on Depression</a></li><li class="chapter-item expanded "><a href="190125-booknote-on-21-Lessons-for-the-21st-Century.html"><strong aria-hidden="true">207.</strong> 190125 Booknote on 21 Lessons for 21st Century</a></li><li class="chapter-item expanded "><a href="190118-thoughts-on-thinking.html"><strong aria-hidden="true">208.</strong> 190118 Thoughts on Thinking</a></li><li class="chapter-item expanded "><a href="190118-only-utilize-never-indulge.html"><strong aria-hidden="true">209.</strong> 190118 Only Utilize Never Indulge</a></li><li class="chapter-item expanded "><a href="190114-booknote-on-Intuition-Pump-Tools-for-Thinking.html"><strong aria-hidden="true">210.</strong> 190114 Booknote on Intuition Pump Tools for Thinking</a></li><li class="chapter-item expanded "><a href="181213-booknote-on-Tribe-of-Mentors.html"><strong aria-hidden="true">211.</strong> 181213 Booknote on Tribe of Mentors</a></li><li class="chapter-item expanded "><a href="181207-fuck-mediocre-tutorials.html"><strong aria-hidden="true">212.</strong> 181207 Fuck Mediocre Tutorials</a></li><li class="chapter-item expanded "><a href="181125-life-quirks-in-programming.html"><strong aria-hidden="true">213.</strong> 181125 Life Quirks in Programming</a></li><li class="chapter-item expanded "><a href="181116-booknote-on-Irrational-Man.html"><strong aria-hidden="true">214.</strong> 181116 Booknote on Irrational Man</a></li><li class="chapter-item expanded "><a href="181101-booknote-on-Life-3-Being-Human-in-the-Age-of-AI.html"><strong aria-hidden="true">215.</strong> 181101 Booknote on Life 3.0</a></li><li class="chapter-item expanded "><a href="181031-booknote-on-Information-Hiding.html"><strong aria-hidden="true">216.</strong> 181031 Booknote on Information Hiding</a></li><li class="chapter-item expanded "><a href="180930-thoughts-on-reading.html"><strong aria-hidden="true">217.</strong> 180930 On Reading</a></li><li class="chapter-item expanded "><a href="180901-Neuroenhancer.html"><strong aria-hidden="true">218.</strong> 180901 Neuroenhancer</a></li><li class="chapter-item expanded "><a href="180731-booknote-on-Author-Liu-Yu.html"><strong aria-hidden="true">219.</strong> 180731 Booknote on Author Liu Yu</a></li><li class="chapter-item expanded "><a href="010101-Practice-List-for-LeetCode.html"><strong aria-hidden="true">220.</strong> 010101 Practice List for LeetCode</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Human</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p>+++
+title = &quot;On Container&quot;
+description = &quot;Thoughts, notes and implementations&quot;
++++</p>
+<blockquote>
+<p>Draft only, further rewrote needed</p>
+</blockquote>
+<h3 id="resources"><a class="header" href="#resources">Resources</a></h3>
+<h4 id="for-concepts"><a class="header" href="#for-concepts">For concepts</a></h4>
+<ul>
+<li><input disabled="" type="checkbox" checked=""/>
+<a href="https://jvns.ca/blog/2016/10/10/what-even-is-a-container/">What even is a container: namespaces and cgroups</a></li>
+</ul>
+<h4 id="for-higher-level"><a class="header" href="#for-higher-level">For higher level</a></h4>
+<ul>
+<li><a href="https://www.ianlewis.org/en/tag/container-runtime-series">Container Runtimes Series</a>
+<ul>
+<li><input disabled="" type="checkbox" checked=""/>
+<a href="https://www.ianlewis.org/en/container-runtimes-part-1-introduction-container-r">Container Runtimes Part 1: An Introduction to Container Runtimes</a></li>
+<li><a href="https://www.ianlewis.org/en/container-runtimes-part-2-anatomy-low-level-contai">Container Runtimes Part 2: Anatomy of a Low-Level Container Runtime</a></li>
+</ul>
+</li>
+</ul>
+<h4 id="concepts-and-implementations"><a class="header" href="#concepts-and-implementations">Concepts and Implementations</a></h4>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=Utf-A4rODH8">Building a Container from Scratch in Go</a></li>
+<li><a href="https://cesarvr.github.io/post/2018-05-22-create-containers/">Creating Your Own Containers in C</a></li>
+</ul>
+<h4 id="beyond-container"><a class="header" href="#beyond-container">Beyond Container</a></h4>
+<ul>
+<li><a href="https://iximiuz.com/en/posts/journey-from-containerization-to-orchestration-and-beyond/">Journey From Containerization To Orchestration And Beyond</a></li>
+<li>My another post about <a href="https://codingezio.github.io/on-container-orchestration/"><em>Container Orchestration</em></a></li>
+</ul>
+<h3 id="thoughts"><a class="header" href="#thoughts">Thoughts</a></h3>
+<blockquote>
+<p>Docker is just a wrapper for tools like namespaces and cgroups.</p>
+</blockquote>
+<h4 id="namespaces"><a class="header" href="#namespaces">Namespaces</a></h4>
+<blockquote>
+<p>a Linux tool named unshare, it makes different types of namespaces, for processes (pid, process id, you can be the pid 1 in this new world), networking (use whatever ports without worries about conflicts), file (mount namespaces, in the practical sense, we can use it for persistence).</p>
+<p>of course, some other tools (could be unshare, or the other tools that related to the abstractions namespaces) allow us to enter in the virtual world (namespaces).</p>
+</blockquote>
+<h4 id="cgroups"><a class="header" href="#cgroups">Cgroups</a></h4>
+<blockquote>
+<p>Limit the resources can be used, like memory, CPU and so on through config files.</p>
+<p>it also provide cli for us to configure the resources</p>
+</blockquote>
+<h4 id="container"><a class="header" href="#container">Container</a></h4>
+<blockquote>
+<p>Containers? Just they two and some good features attached to them.</p>
+<p>Container runtime are just another thing (set of tools, as usual) to manage the virtualization (namespaces) like start, end and such, and adding some restrictions to it via cgroups, also it shall have tools for you to enter in the virtualization to run commands (port mapping? persistence? it’s already provided by namespaces technology).</p>
+</blockquote>
+<blockquote>
+<p>Runtimes are the thing to handle your program start to end (like HotSpot in Java JVM). This is another abstraction, fuck me 🤣</p>
+<p>There are different types of container runtime. Some of them are bare bone (some of the higher runtimes ARE based on the lower-level types of runtimes), some are more full-featured (e.g. think of it as Docker-to-Kubernetes, it’s not just feature, but giving you solutions, the higher/application-centric level). That’s why you have Docker, Kubernetes, Podman and so on.</p>
+</blockquote>
+<blockquote>
+<p>Now I suddenly realized why Podman once claimed that you can simply alias podman as docker. Why? Because the needs to start/end/anything-else are universal. The needs are the APIs, the (basic) needs rarely change.</p>
+</blockquote>
+<h3 id="impl"><a class="header" href="#impl">Impl</a></h3>
+<blockquote>
+<p>I opened a Linux VM <small>(Ubuntu 20.04 managed by Vagrant)</small> to do all the work as any other platforms would require some hacks or whatever.</p>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="221223-on-Programming-Language-Reflection.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="221223-My-Own-Information-Universe.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="221223-on-Programming-Language-Reflection.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="221223-My-Own-Information-Universe.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

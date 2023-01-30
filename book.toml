@@ -1,0 +1,6 @@
+[book]
+authors = ["!Mensch"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Human"
