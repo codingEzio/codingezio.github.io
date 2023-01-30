@@ -1,17 +1,16 @@
 # On every push this script is executed
 on: push
-name: Build and deploy GH Pages
+name: Build and Deploy GH Pages
 jobs:
   build:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master'
-    steps:
-      - run: git config --global --add safe.directory *
       - name: checkout
         uses: actions/checkout@v2
-      - run: git config --global --add safe.directory /github/workspace
+      - name: Fix permission issue
+        run: git config --global --add safe.directory /github/workspace
       - name: build_and_deploy
-        uses: shalzz/zola-deploy-action@v0.14.1
+        uses: shalzz/zola-deploy-action@v0.16.1
         env:
           # Target branch
           PAGES_BRANCH: gh-pages
@@ -22,3 +21,5 @@ jobs:
           # Or if publishing to the same repo, use the automatic token
           # It turns out this Github Action failed..
           # TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Fix permission issue
+        run: git config --global --add safe.directory /github/workspace
