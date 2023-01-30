@@ -1,7 +1,7 @@
-+++
-title = "About This Blog"
-description = "What this blog is really all about"
-+++
+# About This Blog
+> What this blog is really all about
+
+-----
 
 ## Why
 

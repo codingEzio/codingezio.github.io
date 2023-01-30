@@ -1,7 +1,6 @@
-+++
-title = "Thoughts on Blogging Platforms"
-description = "Choosing the Right Blogging Platform"
-+++
+# Thoughts on Blogging Platforms
+
+-----
 
 ### Various Ways to Write Blogs
 

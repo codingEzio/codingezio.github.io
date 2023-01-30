@@ -1,7 +1,6 @@
-+++
-title = "Why Write Blog"
-description = "Why still write blogs"
-+++
+# Why Write Blog
+
+-----
 
 ### Why Write This Blog
 

@@ -1,7 +1,6 @@
 # Foreword
 
 - [221204 About This Blog](./221204-about-this-blog.md)
-- [221006 Zola Blog](./221006-zola-blog.md)
 - [220920 Why Write Blog](./220920-why-write-blog.md)
 - [220623 Blogging Platforms](./220623-blogging-platforms.md)
 
@@ -112,6 +111,7 @@
 - [221025 One to Infinity Network](./221025-one-to-infinity-Network.md)
 - [221012 Manage JDK Version](./221012-manage-jdk-version.md)
 - [221010 Issue node-sass Fail to Compile](./221010-issue-node-sass-fail-to-compile.md)
+- [221006 Zola Blog](./221006-zola-blog.md)
 - [221004 Booknote on Millionaire Fastlane](./221004-booknote-on-The-Millionaire-Fastlane.md)
 - [221002 What I Strive For](./221002-what-I-strive-for.md)
 - [220920 Toolset VSCode](./220920-toolset-VSCode.md)
