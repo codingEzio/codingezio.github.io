@@ -1,25 +1,20 @@
-# On every push this script is executed
 on: push
-name: Build and Deploy GH Pages
+name: Build and deploy GH Pages
 jobs:
   build:
     runs-on: ubuntu-latest
+    # Change 'master' to 'main' depends on your main branch name
     if: github.ref == 'refs/heads/master'
+    steps:
       - name: checkout
         uses: actions/checkout@v2
-      - name: Fix permission issue
-        run: git config --global --add safe.directory /github/workspace
+      - run: git config --global --add safe.directory /github/workspace
       - name: build_and_deploy
         uses: shalzz/zola-deploy-action@v0.16.1
         env:
-          # Target branch
+          # You build the blog files in 'master' (or 'main')
+          # It spits out to the 'gh-pages' branch (GitHub Pages)
           PAGES_BRANCH: gh-pages
-          # Provide personal access token
-          # Generated then add it to this repo (name)
-          # TOKEN: ${{ secrets.TOKEN }}
+          # The name of the secret you set under this repository
+          # Go to 'Security -> Secrets -> Actions' to check :)
           TOKEN: ${{ secrets.ZOLA }}
-          # Or if publishing to the same repo, use the automatic token
-          # It turns out this Github Action failed..
-          # TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Fix permission issue
-        run: git config --global --add safe.directory /github/workspace
