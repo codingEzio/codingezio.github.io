@@ -1,8 +1,5 @@
+> Booknote on Irrational Man: A Study in Existential Philosophy
 <!-- toc -->
-+++
-title = "Booknote on Irrational Man"
-description = "A Study in Existential Philosophy"
-+++
 
 ### Resources
 

@@ -1,10 +1,5 @@
+> Crash Course to Java
 <!-- toc -->
-+++
-title = "Crash Course to Java"
-description = "Only for myself, unfortunately"
-+++
-
-> N/A
 
 # Notes
 

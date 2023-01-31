@@ -1,13 +1,10 @@
+> Booknote on Web Browser Engineering
 <!-- toc -->
-+++
-title = "Booknote on Web Browser Engineering"
-description = "Building a Basic but Complete Web Browser"
-+++
 
 ### Resources
 
 - [Pavel Panchekha](https://pavpanchekha.com/) and [Chris Harrelson](https://twitter.com/chrishtr)
-  - [Web Browser Engineering](https://browser.engineering/)
+  - [Web Browser Engineering](https://browser.engineering/) <small>(building a basic but complete browser)</small>
 
 ### Notes
 

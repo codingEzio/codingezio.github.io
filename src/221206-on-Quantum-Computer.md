@@ -1,8 +1,5 @@
+> Researches, breakthroughs and the future
 <!-- toc -->
-+++
-title = "On Quantum Computer"
-description = "Researches, breakthroughs and the future"
-+++
 
 ## To learn
 

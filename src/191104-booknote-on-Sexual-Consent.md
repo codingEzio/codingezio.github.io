@@ -1,8 +1,5 @@
+> Booknote on Sexual Consent
 <!-- toc -->
-+++
-title = "Booknote on Sexual Consent"
-description = "Essential Knowledge for Sexual Consent"
-+++
 
 ### Resources
 

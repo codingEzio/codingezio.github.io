@@ -1,8 +1,5 @@
+> Finding real motivation for LeetCode (with the help of AI)
 <!-- toc -->
-+++
-title = "Algorithm - Learn with AI"
-description = "Finding real motivation for LeetCode (with the help of AI)"
-+++
 
 ### Foreword
 

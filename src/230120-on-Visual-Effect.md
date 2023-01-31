@@ -1,8 +1,4 @@
 <!-- toc -->
-+++
-title = "On Visual Effect"
-description = "Interesting field to explore"
-+++
 
 > Firstly, I do not have any domain knowledge around this field. I'm just a bit interested in it, both for the AI-oriented future and the wish of creating my own <small>(the DIY aspect)</small>.
 

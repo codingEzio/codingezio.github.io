@@ -1,8 +1,4 @@
 <!-- toc -->
-+++
-title = "On Prepper"
-description = "Prepare for anything"
-+++
 
 > What is this <small>([wikipedia](https://en.wikipedia.org/wiki/Survivalism))</small>
 >> Survivalism is a social movement of individuals or groups (called survivalists or preppers) who proactively prepare for emergencies, such as natural disasters, as well as other disasters causing disruption to social order (that is, civil disorder) caused by political or economic crises.

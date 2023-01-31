@@ -1,8 +1,5 @@
+> Algorithm - LeetCode for SQL Problems
 <!-- toc -->
-+++
-title = "Algorithm - LeetCode for SQL Problems"
-description = "Practing by solving SQL problems on LeetCode"
-+++
 
 ## Foreword
 

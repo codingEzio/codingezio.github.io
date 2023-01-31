@@ -1,9 +1,5 @@
+> Booknote on Picturing the Woman-Child
 <!-- toc -->
-+++
-title = "Booknote on Picturing the Woman-Child"
-description = "Fashion, Feminism and the Female Gaze"
-+++
-
 
 ### Resources
 

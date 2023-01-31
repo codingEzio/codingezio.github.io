@@ -1,8 +1,4 @@
 <!-- toc -->
-+++
-title = "On Design Pattern"
-description = "High level thinking"
-+++
 
 ## Foreword
 

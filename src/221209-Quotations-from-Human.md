@@ -1,8 +1,4 @@
 <!-- toc -->
-+++
-title = "Quotations from Human"
-description = "No more categorization, just logging it"
-+++
 
 > As you can see from my posts, almost all of them were trying to *figure something out*, or to find something that I could *make use of*. But that's not how the life goes, sometimes it's best to just not having any goals in mind. Sorrows like losing your relatives, there were no medications to resolve that.
 >

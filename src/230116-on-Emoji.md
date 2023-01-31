@@ -1,8 +1,4 @@
 <!-- toc -->
-+++
-title = "On Emoji"
-description = "Emoji controls the language you are speaking"
-+++
 
 ## Not Just An Unicode Symbol
 

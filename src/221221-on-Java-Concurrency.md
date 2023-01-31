@@ -1,8 +1,5 @@
+> All things that related to concurrency, especially Java
 <!-- toc -->
-+++
-title = "On Java Concurrency"
-description = "All things that related to concurrency, especially Java"
-+++
 
 > The materials I used for learning are mostly in Java, whether for the concepts or the examples being used. I would stick to the *<u>Java</u> Concurrency* at the moment considering it's not universal enough. Though I might rewrote this post into something that is language-agnostic in the future.
 

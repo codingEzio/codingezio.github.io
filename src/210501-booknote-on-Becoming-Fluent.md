@@ -1,8 +1,5 @@
+> Booknote on Becoming Fluent
 <!-- toc -->
-+++
-title = "Booknote on Becoming Fluent"
-description = "How Cognitive Science Can Help Adults Learn a Foreign Language"
-+++
 
 ### Resources
 

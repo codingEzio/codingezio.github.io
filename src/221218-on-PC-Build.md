@@ -1,8 +1,4 @@
 <!-- toc -->
-+++
-title = "On PC Build"
-description = "Build a PC based on your needs"
-+++
 
 > Currently have no plans to build one as I've already got the macOS laptop to do most of the job. But I might need a guide to build one in the future, maybe to play some games. Down below are the relevant sources I collected for future references
 

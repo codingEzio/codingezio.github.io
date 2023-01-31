@@ -1,8 +1,4 @@
 <!-- toc -->
-+++
-title = "On Container Orchestration"
-description = "Thoughts, notes and implementations"
-+++
 
 > Draft only, further rewrote needed <small>(this post is based on [*my another post*](https://codingezio.github.io/on-container/))</small>
 

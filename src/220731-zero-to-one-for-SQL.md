@@ -1,8 +1,4 @@
 <!-- toc -->
-+++
-title = "Zero to One: on SQL"
-description = "Zero to One: on SQL"
-+++
 
 ### Setup
 

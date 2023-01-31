@@ -1,10 +1,5 @@
-<!-- toc -->
-+++
-title = "Toolset - adb"
-description = "adb usage"
-+++
-
 > adb: Android Debug Bridge
+<!-- toc -->
 
 ### Tooling
 

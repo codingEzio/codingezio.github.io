@@ -1,8 +1,4 @@
 <!-- toc -->
-+++
-title = "On Functional Programming"
-description = "Always been interested in it, time to try it out"
-+++
 
 ## Setup
 

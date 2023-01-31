@@ -1,8 +1,5 @@
+> Booknote on 斜杠青年：如何开启你的多重身份
 <!-- toc -->
-+++
-title = "Booknote on 斜杠青年"
-description = "斜杠青年：如何开启你的多重身份"
-+++
 
 ### Resources
 

@@ -1,8 +1,4 @@
 <!-- toc -->
-+++
-title = "Thoughts on Thinking"
-description = "Notes on Thinking"
-+++
 
 ## 0x01
 

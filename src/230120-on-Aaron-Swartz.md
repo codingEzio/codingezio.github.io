@@ -1,8 +1,4 @@
 <!-- toc -->
-+++
-title = "On Aaron Swartz"
-description = "A Hero"
-+++
 
 > Unlike other posts that slowly turns the references into my own words, this post would keep the references only, as the person I'm talking about *Aaron Swartz* has his own blog and a documentary about him.
 >

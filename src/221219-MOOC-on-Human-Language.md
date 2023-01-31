@@ -1,8 +1,5 @@
+> Things like language courses, test prep and so on
 <!-- toc -->
-+++
-title = "MOOC on Human Language"
-description = "Things like language courses, test prep and so on"
-+++
 
 > A list of the courses that I would like learn with books, instead of just understanding in a shallow sense.
 

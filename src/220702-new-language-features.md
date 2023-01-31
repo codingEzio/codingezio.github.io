@@ -1,8 +1,4 @@
 <!-- toc -->
-+++
-title = "New Language Features"
-description = "Checking Out the Bleeding Edge Features"
-+++
 
 ### Aha
 

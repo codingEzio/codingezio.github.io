@@ -1,9 +1,4 @@
 <!-- toc -->
-+++
-title = "My Translation for Books (category Programming)"
-description = "Book translations from English to Chinese"
-+++
-
 
 ## Why 为何
 

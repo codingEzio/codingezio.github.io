@@ -1,8 +1,5 @@
+> My Own Information Universe
 <!-- toc -->
-+++
-title = "My Own Information Universe"
-description = "Thoughts from interesting and thoughtful human beings"
-+++
 
 > Note that this post is more like public bookmarks for myself. It seemed that merely saving these as bookmarks weren't enough, whether they are which were saved in the browser, or services like [Raindrop.io](https://raindrop.io/). For me, I loves to categorize and minimize stuff, but that weren't an easy task for me as I need to archive every single one that I might need in the future, yet not too much to cause that *paralyzation* caused by Information Overload. Also, I did tried convert all these to *RSS*, unfortunately it became be very hard to get all the old posts which defeats the entire purpose of aggregating them together.
 >

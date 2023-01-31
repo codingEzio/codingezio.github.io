@@ -1,8 +1,4 @@
 <!-- toc -->
-+++
-title = "Fetch Videos Online"
-description = "Archiving videos from various platforms"
-+++
 
 ### For AcFun
 

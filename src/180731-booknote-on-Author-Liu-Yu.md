@@ -1,8 +1,5 @@
+> Booknote on Books written by Liu Yu
 <!-- toc -->
-+++
-title = "Booknote on Books written by Liu Yu"
-description = "Books written by Liu Yu"
-+++
 
 ### Note
 

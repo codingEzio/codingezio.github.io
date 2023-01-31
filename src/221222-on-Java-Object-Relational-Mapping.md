@@ -1,8 +1,4 @@
 <!-- toc -->
-+++
-title = "On Java Object Relational Mapping"
-description = "ORM frameworks like MyBatis, Hibernate and others"
-+++
 
 > Currently, I mostly use *Hibernate*, i.e. writing Java code only without touching *SQL* directly. Though I do find that *MyBatis* is quite popular inside China. So I thought I must give it a go sometime.
 >

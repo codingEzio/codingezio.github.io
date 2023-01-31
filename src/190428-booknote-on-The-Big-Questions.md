@@ -1,8 +1,5 @@
+> Booknote on The Big Questions: A Short Introduction to Philosophy"
 <!-- toc -->
-+++
-title = "Booknote on The Big Questions"
-description = "A Short Introduction to Philosophy"
-+++
 
 ### Note
 

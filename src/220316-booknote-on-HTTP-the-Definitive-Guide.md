@@ -1,8 +1,5 @@
+> Booknote on HTTP: The Definitive Guide
 <!-- toc -->
-+++
-title = "Booknote on HTTP: The Definitive Guide"
-description = "Describes the WHY And the HOW of HTTP and Web Core Technologies"
-+++
 
 ### Resources
 

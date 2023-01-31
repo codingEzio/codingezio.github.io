@@ -1,8 +1,5 @@
+> Life Quirks in Programming
 <!-- toc -->
-+++
-title = "Life Quirks in Programming"
-description = "Blend Programming into Your Life"
-+++
 
 - Either of them take advantage of one another.
 - Refactoring ur source code **REGULARLY**.

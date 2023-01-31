@@ -1,8 +1,4 @@
 <!-- toc -->
-+++
-title = "On Message Queue"
-description = "Know, learn, build and teach"
-+++
 
 > Currently it's just a post with a bunch of links for leanring materials. The main thing I wanna achieve through this post is that not just knowing how to use Message Queues like *Kafka*, *RabbitMQ*, but also understanding how it works internally through writing an implementation of it.
 

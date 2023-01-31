@@ -1,8 +1,4 @@
 <!-- toc -->
-+++
-title = "On Water Heater"
-description = "Interesting to know about everyday appliances"
-+++
 
 > I just want to know more about the things I use in everyday life. Down below, I would try to digest the materials from an expert, and explain the process myself, and maybe grab some screenshots from the video or other places <small>(with attributes of course)</small>.
 

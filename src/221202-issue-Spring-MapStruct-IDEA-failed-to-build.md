@@ -1,8 +1,5 @@
+> Issue : Spring with MapStruct Failed to Build
 <!-- toc -->
-+++
-title = "Issue : Spring with MapStruct Failed to Build"
-description = "Issues when using MapStruct with Spring in IDEA"
-+++
 
 ### Rationale
 

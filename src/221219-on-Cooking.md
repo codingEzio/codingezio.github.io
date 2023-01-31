@@ -1,8 +1,4 @@
 <!-- toc -->
-+++
-title = "On Cooking"
-description = "Notes on learning to cook"
-+++
 
 ## Preparation
 

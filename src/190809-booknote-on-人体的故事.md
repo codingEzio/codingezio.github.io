@@ -1,8 +1,5 @@
+> Booknote on 人体的故事：进化、健康与疾病
 <!-- toc -->
-+++
-title = "Booknote on 人体的故事"
-description = "人体的故事：进化、健康与疾病"
-+++
 
 ### Resources
 

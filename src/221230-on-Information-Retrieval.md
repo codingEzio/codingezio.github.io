@@ -1,8 +1,4 @@
 <!-- toc -->
-+++
-title = "On Information Retrieval"
-description = "Know, learn, build and teach"
-+++
 
 > The main thing I wanna talk about is the sub-field under *Information Retrieval*, i.e. Search Engines like *ElasticSearch*. Here's an awesome [guide](https://github.com/codingEzio/og-search-engineering) that I wanna dive in and talk about which is created by the amazing team [*open-guides*](https://github.com/open-guides).
 

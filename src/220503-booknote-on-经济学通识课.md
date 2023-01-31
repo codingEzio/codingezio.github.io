@@ -1,8 +1,5 @@
+> Booknote on 经济学通识课
 <!-- toc -->
-+++
-title = "Booknote on 经济学通识课"
-description = "学会用经济学的眼光看世界，更好地追求富足快乐的人生"
-+++
 
 ### Resources
 

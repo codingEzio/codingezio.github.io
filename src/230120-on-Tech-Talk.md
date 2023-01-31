@@ -1,8 +1,4 @@
 <!-- toc -->
-+++
-title = "On Tech Talk"
-description = "Talks that broaden my vision"
-+++
 
 > I was going to use the phrase *dev talk*, but eventually I chose the phrase *Tech Talk* because [how it was used](https://developer.apple.com/tech-talks/) on the Apple Developer website.
 

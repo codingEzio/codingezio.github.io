@@ -1,8 +1,4 @@
 <!-- toc -->
-+++
-title = "Thoughts on Depression"
-description = "Notes on Depression"
-+++
 
 ### Focus
 

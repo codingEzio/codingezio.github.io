@@ -1,8 +1,4 @@
 <!-- toc -->
-+++
-title = "Algorithm Handbook"
-description = "Things that would help solving Algorithm problems"
-+++
 
 # Concepts
 

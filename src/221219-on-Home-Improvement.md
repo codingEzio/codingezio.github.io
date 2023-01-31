@@ -1,8 +1,4 @@
 <!-- toc -->
-+++
-title = "On Home Improvement"
-description = "Interesting ideas to implement or to watch"
-+++
 
 > Just a fun thing to do, thought I should log everything that related to it
 

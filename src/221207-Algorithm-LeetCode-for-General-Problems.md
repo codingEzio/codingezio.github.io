@@ -1,8 +1,5 @@
+> Algorithm - LeetCode for General Problems
 <!-- toc -->
-+++
-title = "Algorithm - LeetCode for General Problems"
-description = "Practing by solving Algorithm questions on LeetCode"
-+++
 
 ## Foreword
 

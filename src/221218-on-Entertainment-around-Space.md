@@ -1,8 +1,5 @@
+> Space, Physics and all that fascinating stuff
 <!-- toc -->
-+++
-title = "On Entertainment around Space"
-description = "Space, Physics and all that fascinating stuff"
-+++
 
 > Consider this post as public bookmarks, or a watch/read-later for the author <small>(i.e. myself)</small>. What I have in mind is that *anything you consume shall be converted or transformed into something*, and *no entertainment shall be wasted and just for a `wow!`*.
 

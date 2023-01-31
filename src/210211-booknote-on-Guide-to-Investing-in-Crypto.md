@@ -1,8 +1,6 @@
+> Booknote on Guide to Investing in Cryptocurrency
+>> Safe and Secure Way to Buy, Trade, and Mine Digital Currencies
 <!-- toc -->
-+++
-title = "Booknote on Guide to Investing in Cryptocurrency"
-description = "Safe and Secure Way to Buy, Trade, and Mine Digital Currencies"
-+++
 
 ### Resources
 

@@ -1,8 +1,4 @@
 <!-- toc -->
-+++
-title = "One to Infinity - Database"
-description = "On Database in Computer Science"
-+++
 
 ## Foreword
 

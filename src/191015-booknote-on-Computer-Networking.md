@@ -1,8 +1,6 @@
+> Booknote on Computer Networking Problems and Solutions
+>> An Innovative Approach To Building Resilient, Modern Networks
 <!-- toc -->
-+++
-title = "Booknote on Computer Networking Problems and Solutions"
-description = "An Innovative Approach To Building Resilient, Modern Networks"
-+++
 
 ### Resources
 

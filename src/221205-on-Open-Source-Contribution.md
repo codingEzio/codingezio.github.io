@@ -1,10 +1,4 @@
 <!-- toc -->
-+++
-title = "On Open Source Contribution"
-description = "Contribute to the Open Source Community"
-+++
-
-## How
 
 ### Git *Pull Request*
 

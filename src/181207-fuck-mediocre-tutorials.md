@@ -1,8 +1,5 @@
+> Fuck Mediocre Tutorials
 <!-- toc -->
-+++
-title = "Fuck Mediocre Tutorials"
-description = "Readers need Good Tutorials"
-+++
 
 - I LOVE writing documents.
 - I LOVE taking notes.

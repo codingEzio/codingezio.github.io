@@ -1,8 +1,4 @@
 <!-- toc -->
-+++
-title = "On Startup Apps"
-description = "Let apps automatically open when boot up"
-+++
 
 > Automatically open apps when boot up :) I'm not talking about the terminology [*Startup* company](https://en.wikipedia.org/wiki/Startup_company)
 

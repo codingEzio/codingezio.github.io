@@ -1,8 +1,5 @@
+> Booknote on Anesthesia: the Gift of Oblivion and The Mystery of Consciousness
 <!-- toc -->
-+++
-title = "Booknote on Anesthesia"
-description = "The Gift of Oblivion and The Mystery of Consciousness"
-+++
 
 ### Resources
 

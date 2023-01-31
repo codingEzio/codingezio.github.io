@@ -1,8 +1,5 @@
+> Digging down to the deepest level you could get
 <!-- toc -->
-+++
-title = "On Network Stack"
-description = "To the deepest level you could get"
-+++
 
 ## Intro
 

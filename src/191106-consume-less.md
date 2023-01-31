@@ -1,8 +1,6 @@
-<!-- toc -->
-+++
-title = "Consume Less"
-description = "Consume Less, Output More"
-+++
+> Consume Less, Output More
+
+-----
 
 Or should I say taking other people's advice
 

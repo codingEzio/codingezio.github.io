@@ -1,8 +1,5 @@
+> Booknote on Tribe of Mentors: Short Life Advice from the Best in the World
 <!-- toc -->
-+++
-title = "Booknote on Tribe of Mentors"
-description = "Short Life Advice from the Best in the World"
-+++
 
 ### Resources
 

@@ -1,8 +1,5 @@
+> Issue : Spring Swagger Failed to Start
 <!-- toc -->
-+++
-title = "Issue : Spring Swagger Failed to Start"
-description = "Workaround for the Springfox Swaggger to work properly"
-+++
 
 ### Step
 

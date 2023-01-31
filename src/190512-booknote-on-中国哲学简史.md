@@ -1,12 +1,8 @@
-<!-- toc -->
-+++
-title = "Booknote on 中国哲学简史"
-description = "A Short History of Chinese Philosophy"
-+++
+> Booknote on 中国哲学简史
 
 ### Note
 
-> No plans in motion to sort this mess out. Also did not and may never finish this book :/
+> No plans in motion to sort this mess out. I may never finish this book :/
 
 ### Resources
 

@@ -1,8 +1,5 @@
+> Booknote on Understanding MySQL Internals
 <!-- toc -->
-+++
-title = "Booknote on Understanding MySQL Internals"
-description = "Understanding MySQL Internals"
-+++
 
 > Unless you dive deep into the source code to do the debugging by yourself, all the optimizations could just be counted as *guesswork* <small>(a bit exaggerated for sure)</small>.
 

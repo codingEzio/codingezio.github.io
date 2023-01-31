@@ -1,8 +1,4 @@
 <!-- toc -->
-+++
-title = "Toolset - ffmpeg"
-description = "ffmpeg usage"
-+++
 
 > Either put these scripts into your shell configuration file like `.zshrc` or save it as `FILE.sh`. Note that all of these were only tested on macOS as of the moment.
 

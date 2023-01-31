@@ -1,13 +1,10 @@
+> Booknote on Database Internals
 <!-- toc -->
-+++
-title = "Booknote on Database Internals"
-description = "A deep-dive into How Distributed Data Systems Work"
-+++
 
 ### Resources
 
 - [Alex Petrov](https://www.goodreads.com/author/show/19007122)
-  - [Database Internals: A deep-dive into how distributed data systems work](https://www.goodreads.com/book/show/44647144)
+  - [Database Internals: A Deep-dive into How Distributed Data Systems Work](https://www.goodreads.com/book/show/44647144)
 
 -----
 

@@ -1,8 +1,5 @@
+> Booknote on Soft Skills: The Software Developer's Life Manual
 <!-- toc -->
-+++
-title = "Booknote on Soft Skills"
-description = "The Software Developer's Life Manual"
-+++
 
 ### Resources
 

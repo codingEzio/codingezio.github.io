@@ -1,8 +1,5 @@
+> Proper Computer Science courses to dive deep
 <!-- toc -->
-+++
-title = "MOOC on Computer Science"
-description = "Proper courses to learn stuff"
-+++
 
 > A list of the courses that I would like learn with books, instead of just understanding in a shallow sense.
 

@@ -1,10 +1,6 @@
 <!-- toc -->
-+++
-title = "Last Day of Your Life"
-description = "Deadlines Are a Thing, and You Need It"
-+++
 
-# Things Change Instantly Like a Lightning
+## Things Change Instantly Like a Lightning
 
 ### Like Who's Last Day?
 

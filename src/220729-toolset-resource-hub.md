@@ -1,8 +1,4 @@
 <!-- toc -->
-+++
-title = "Toolset - Resource Hub"
-description = "The resource hub for the toolset I've been using"
-+++
 
 ### TUI
 

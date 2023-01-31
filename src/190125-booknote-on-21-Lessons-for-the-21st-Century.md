@@ -1,8 +1,6 @@
+> Booknote on 21 Lessons for the 21st Century
+>> Urgent Issues As We Move Into The Uncharted Territory Of The Future
 <!-- toc -->
-+++
-title = "Booknote on 21 Lessons for the 21st Century"
-description = "Urgent Issues As We Move Into The Uncharted Territory Of The Future"
-+++
 
 ### Resources
 

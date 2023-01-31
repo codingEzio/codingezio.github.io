@@ -1,8 +1,5 @@
+> Thoughts on neuroenhancing stuff
 <!-- toc -->
-+++
-title = "Thoughts on Neuroenhancer"
-description = "Thoughts on neuroenhancing stuff"
-+++
 
 > At the end of the day, sleep is the most powerful thing you have in your hand
 

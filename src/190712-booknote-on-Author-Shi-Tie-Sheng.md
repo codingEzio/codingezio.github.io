@@ -1,8 +1,5 @@
+> Booknote on Books written by Shi Tiesheng
 <!-- toc -->
-+++
-title = "Booknote on Books written by Shi Tiesheng"
-description = "Books written by Shi Tiesheng"
-+++
 
 ### Resources
 

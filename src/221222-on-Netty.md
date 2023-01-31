@@ -1,8 +1,4 @@
 <!-- toc -->
-+++
-title = "On Netty"
-description = "What it is, why use it and other details"
-+++
 
 > I was going for an explanation of what Netty is, why choose it specifically and when to use it that people could easily understand even without prior knowledge to the Java concurrency ecosystem <small>(or as little as possible)</small>. Down below are my own understand of the whole thing, errors are expected.
 >

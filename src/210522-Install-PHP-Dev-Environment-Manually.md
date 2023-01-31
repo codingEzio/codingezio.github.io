@@ -1,9 +1,5 @@
+> The Usual LAMP stack, but manually installed
 <!-- toc -->
-+++
-title = "Install PHP Dev Environment Manually"
-description = "The Usual LAMP stack, but Installed Separately"
-+++
-
 
 > This post was written quite a while ago. Consider this as outdated before I make any edits to this so I could remove this line!
 

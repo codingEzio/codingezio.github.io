@@ -1,8 +1,4 @@
 <!-- toc -->
-+++
-title = "Thoughts on Books"
-description = "Notes on Books"
-+++
 
 ### *Reading*
 
@@ -16,8 +12,6 @@ description = "Notes on Books"
 - *Well*, what really happens is far from my past concerns about it.
     1. Some books are just *not worth it*.
     2. Some chapters in a book are just *need to be skipped*.
-
-----------
 
 ### Words to myself
 

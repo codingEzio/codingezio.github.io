@@ -1,8 +1,5 @@
+> Blog Post References
 <!-- toc -->
-+++
-title = "Blog Post References"
-description = "N/A"
-+++
 
 ## What This is
 

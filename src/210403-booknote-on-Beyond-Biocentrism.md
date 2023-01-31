@@ -1,8 +1,6 @@
+> Booknote on Beyond Biocentrism
+>> Rethinking Time, Space, Consciousness, and the Illusion of Death
 <!-- toc -->
-+++
-title = "Booknote on Beyond Biocentrism"
-description = "Rethinking Time, Space, Consciousness, and the Illusion of Death"
-+++
 
 ### Resources
 

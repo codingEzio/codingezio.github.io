@@ -1,8 +1,4 @@
 <!-- toc -->
-+++
-title = "Resources around Machine Learning"
-description = "Machine Learning and Deep Learning"
-+++
 
 > I wasn't qualified to write an article like `on TOPIC X`, though I am indeed very interested in it and believing they would be a foundamental element in the society of the future. Here are the relevant resources.
 

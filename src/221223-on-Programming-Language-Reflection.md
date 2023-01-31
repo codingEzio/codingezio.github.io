@@ -1,8 +1,4 @@
 <!-- toc -->
-+++
-title = "On Programming Language Reflection"
-description = "Making sense of it and use it effectively"
-+++
 
 > For the simplest case, it could be of use when you want to debug some stuff without using *debuggers* as they also require some kind of the learning curve <small>(though it's better to know them as well as they are much more powerful and non-invasive to your existing code)</small>.
 

@@ -1,8 +1,5 @@
+> Rant, yet, a great Starting Point for Me to Improve on
 <!-- toc -->
-+++
-title = "Rants on the Programming Tutorials"
-description = "Rant, yet, a Great Starting Point for Me to Improve on"
-+++
 
 > I do, truly, appreciate people who contributes their time into writing awesome/useful
 tutorials.

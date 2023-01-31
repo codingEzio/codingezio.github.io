@@ -1,8 +1,6 @@
+> Booknote on Ten Percent Happier
+>> Self-Help That Actually Works -- A True Story
 <!-- toc -->
-+++
-title = "Booknote on Ten Percent Happier"
-description = "Self-Help That Actually Works -- A True Story"
-+++
 
 ### Resources
 
@@ -12,7 +10,7 @@ description = "Self-Help That Actually Works -- A True Story"
 ### Meta Information
 
 - Is it worth the read: *trashy* and *extremly slow paced*
-- Current status: *abandoned* <small>(no more new notes would be added)</small>
+- Current status: *abandoned* <small>(new notes might be added after June 30, 2023)</small>
 
 -----
 

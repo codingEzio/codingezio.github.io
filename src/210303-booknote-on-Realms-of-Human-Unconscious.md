@@ -1,8 +1,5 @@
+> Booknote on Realms of the Human Unconscious: Observations from LSD Research
 <!-- toc -->
-+++
-title = "Booknote on Realms of the Human Unconscious"
-description = "Observations from LSD Research"
-+++
 
 ### Resources
 

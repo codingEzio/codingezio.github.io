@@ -1,8 +1,5 @@
-<!-- toc -->
-# About This Blog
 > What this blog is really all about
-
------
+<!-- toc -->
 
 ## Why
 

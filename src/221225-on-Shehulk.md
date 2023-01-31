@@ -1,8 +1,4 @@
 <!-- toc -->
-+++
-title = "On Shehulk"
-description = "An interesting TV show that I liked a lot"
-+++
 
 > I've already finished this show a few weeks ago. I just want to document some interesting things.
 

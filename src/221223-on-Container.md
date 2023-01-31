@@ -1,8 +1,4 @@
 <!-- toc -->
-+++
-title = "On Container"
-description = "Thoughts, notes and implementations"
-+++
 
 > Draft only, further rewrote needed
 

@@ -1,8 +1,6 @@
+> Booknote on Radical Abundance
+>> How a Revolution in Nanotechnology Will Change Civilization
 <!-- toc -->
-+++
-title = "Booknote on Radical Abundance"
-description = "How a Revolution in Nanotechnology Will Change Civilization"
-+++
 
 ### Resources
 

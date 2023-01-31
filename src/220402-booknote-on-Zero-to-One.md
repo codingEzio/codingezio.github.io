@@ -1,8 +1,5 @@
+> Booknote on Zero to One
 <!-- toc -->
-+++
-title = "Booknote on Zero to One"
-description = "Notes on Startups, or How to Build the Future"
-+++
 
 ### Resources
 

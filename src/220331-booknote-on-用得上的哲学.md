@@ -1,8 +1,5 @@
+> Booknote on 用得上的哲学
 <!-- toc -->
-+++
-title = "Booknote on 用得上的哲学"
-description = "破解日常难题的99种思考方法"
-+++
 
 ### Resources
 

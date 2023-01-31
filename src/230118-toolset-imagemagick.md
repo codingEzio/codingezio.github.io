@@ -1,8 +1,4 @@
 <!-- toc -->
-+++
-title = "Toolset - imagemagick"
-description = "imagemagick usage"
-+++
 
 > Suppose you're on macOS
 

@@ -1,8 +1,4 @@
 <!-- toc -->
-+++
-title = "On Physical Archiving"
-description = "More than putting files on the cloud"
-+++
 
 > The type of medium you could touch and feel :)
 

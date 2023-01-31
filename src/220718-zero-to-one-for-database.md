@@ -1,8 +1,4 @@
 <!-- toc -->
-+++
-title = "Zero to One: on Database"
-description = "Zero to One: on Database"
-+++
 
 ### Before Database
 

@@ -1,8 +1,4 @@
 <!-- toc -->
-+++
-title = "Toolset - grep"
-description = "grep usage"
-+++
 
 ### Find All Occurrences
 

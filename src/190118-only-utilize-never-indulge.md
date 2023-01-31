@@ -1,8 +1,5 @@
+> Always Utilize, Never Indulge
 <!-- toc -->
-+++
-title = "Always Utilize, Never Indulge"
-description = "Not Being Enslaved by Anything"
-+++
 
 ### For .. *culture* stuff
 

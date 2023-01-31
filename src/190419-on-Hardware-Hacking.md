@@ -1,8 +1,5 @@
+> Thoughts and booknotes on Hacking Hardware
 <!-- toc -->
-+++
-title = "On Hardware Hacking"
-description = "Thoughts and booknotes on Hacking Hardware"
-+++
 
 ### Note
 

@@ -1,8 +1,4 @@
 <!-- toc -->
-+++
-title = "My Translation for Videos (length from 00 to 10 minutes)"
-description = "Video translations from English to Chinese"
-+++
 
 ## Why 为何
 

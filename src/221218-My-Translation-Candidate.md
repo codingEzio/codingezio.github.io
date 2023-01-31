@@ -1,9 +1,4 @@
 <!-- toc -->
-+++
-title = "My Translation Candidates"
-description = "Video translations from English to Chinese"
-+++
-
 
 ## Why 为何
 

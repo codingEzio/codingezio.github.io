@@ -1,8 +1,5 @@
+> Notes and resources on learning German
 <!-- toc -->
-+++
-title = "On Learning German"
-description = "Notes and resources on learning German"
-+++
 
 ## Note
 

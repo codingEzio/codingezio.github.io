@@ -1,12 +1,9 @@
+> Booknote on Hunting Girls: Sexual Violence from The Hunger Games to Campus Rape
 <!-- toc -->
-+++
-title = "Booknote on Hunting Girls"
-description = "Sexual Violence from The Hunger Games to Campus Rape"
-+++
 
 ### Note
 
-> This is a really hard topic to talk about. Before I'm adding any in-depth analysis and more notes on this, I just want to offer a very simple opinion of my own, that is, *if you were to defend the perpetrator from events like Tangshan restaurant attack, you shall and would go to hell and being cut into pieces*.
+> This is a really hard topic to talk about. Before I'm adding any in-depth analysis and more notes on this, I just want to offer a very simple opinion of my own, that is, *if you were to defend the perpetrator from events like Tangshan restaurant attack, you shall and would go to hell and being cut into millions of pieces*.
 
 ### Resources
 

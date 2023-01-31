@@ -1,8 +1,5 @@
+> Booknote on Microservice Patterns: With Examples in Java
 <!-- toc -->
-+++
-title = "Booknote on Microservice Patterns"
-description = "Microservices Patterns: With examples in Java"
-+++
 
 ### Resources
 

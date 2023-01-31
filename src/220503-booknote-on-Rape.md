@@ -1,8 +1,5 @@
+> Booknote on On Rape
 <!-- toc -->
-+++
-title = "Booknote on On Rape"
-description = "Time to rethink rape. Centuries of different approaches have got us nowhere."
-+++
 
 ### Resources
 

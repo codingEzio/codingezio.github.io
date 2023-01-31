@@ -1,13 +1,11 @@
+> Booknote on Disappearing Cryptography
+>> Information Hiding: Steganography and Watermarking
 <!-- toc -->
-+++
-title = "Booknote on Information Hiding"
-description = "Disappearing Cryptography: Information Hiding : Steganography & Watermarking"
-+++
 
 ### Resources
 
 - [Peter Wayner](https://en.wikipedia.org/wiki/Peter_Wayner)
-  - [Disappearing Cryptography <small>(3rd Edition)</small>](https://www.elsevier.com/books/disappearing-cryptography/wayner/978-0-12-374479-1)
+  - [Disappearing Cryptography<small>(3rd Edition)</small>](https://www.elsevier.com/books/disappearing-cryptography/wayner/978-0-12-374479-1)
 
 ### Note
 

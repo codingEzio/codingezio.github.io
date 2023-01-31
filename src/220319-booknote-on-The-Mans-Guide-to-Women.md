@@ -1,8 +1,5 @@
+> Booknote on The Man's Guide to Women
 <!-- toc -->
-+++
-title = "Booknote on The Man's Guide to Women"
-description = " What do women really want in a man?"
-+++
 
 ### Resources
 
