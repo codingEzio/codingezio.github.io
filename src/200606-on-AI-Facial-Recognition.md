@@ -1,8 +1,5 @@
+> On AI - Facial Recognition
 <!-- toc -->
-+++
-title = "On AI - Facial Recognition"
-description = "Fuck1ng with B1g Br0ther"
-+++
 
 > Would try extract more notes from the first article I listed here
 

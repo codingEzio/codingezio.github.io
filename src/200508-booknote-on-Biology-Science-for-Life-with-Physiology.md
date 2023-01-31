@@ -1,8 +1,5 @@
+> Booknote on Biology: Science for Life with Physiology
 <!-- toc -->
-+++
-title = "Booknote on Biology Science with Physiology"
-description = "Biology: Science for Life with Physiology"
-+++
 
 ### Resources
 

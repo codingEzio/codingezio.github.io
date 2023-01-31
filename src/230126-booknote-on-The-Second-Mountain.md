@@ -1,8 +1,5 @@
+> Booknote on The Second Mountain: The Quest for a Moral Life
 <!-- toc -->
-+++
-title = "Booknote on The Second Mountain"
-description = "The Second Mountain - The Quest for a Moral Life"
-+++
 
 > Switching the perspective to a higher level, not just thinking as a programmer.
 

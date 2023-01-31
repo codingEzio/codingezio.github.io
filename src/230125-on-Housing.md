@@ -1,8 +1,4 @@
 <!-- toc -->
-+++
-title = "On Housing"
-description = "Thoughts, notes and observations"
-+++
 
 ## Context
 

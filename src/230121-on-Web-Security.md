@@ -1,8 +1,4 @@
 <!-- toc -->
-+++
-title = "On Web Security"
-description = "Thoughts and notes on Web Security"
-+++
 
 > Just an overview, not really a grand topic that I want to explore at the moment.
 

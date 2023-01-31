@@ -1,8 +1,6 @@
+> Booknote on On Gaia
+>> Investigation of the Relationship Between Life and Earth
 <!-- toc -->
-+++
-title = "Booknote on On Gaia"
-description = "Investigation of the Relationship Between Life and Earth"
-+++
 
 ### Resources
 

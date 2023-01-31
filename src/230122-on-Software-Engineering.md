@@ -1,8 +1,4 @@
 <!-- toc -->
-+++
-title = "On Software Engineering"
-description = "Go beyond the programming part"
-+++
 
 > Coding is barely a small part in the process of delivering the final product. If you as a programmer really want to devote your life to this field, you shall have more than a strong foundation of CS knowledge and programming skills.
 

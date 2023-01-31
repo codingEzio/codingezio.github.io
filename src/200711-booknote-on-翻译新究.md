@@ -1,8 +1,5 @@
+> Booknote on 翻译新究
 <!-- toc -->
-+++
-title = "Booknote on 翻译新究"
-description = "翻译家思果先生再积十年之功"
-+++
 
 ### Resources
 

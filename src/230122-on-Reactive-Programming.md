@@ -1,8 +1,4 @@
 <!-- toc -->
-+++
-title = "On Reactive Programming"
-description = "Thoughts and notes on Reactive Programming"
-+++
 
 > Just an overview, not really a grand topic that I want to explore at the moment.
 

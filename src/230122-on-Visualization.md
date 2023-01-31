@@ -1,8 +1,4 @@
 <!-- toc -->
-+++
-title = "On Visualization"
-description = "Thoughts and notes on Building Visualizations"
-+++
 
 > Data + Idea + Right Chart= <small>(Probably)</small>Good Visualization
 

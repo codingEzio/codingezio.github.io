@@ -1,8 +1,4 @@
 <!-- toc -->
-+++
-title = "Read Essay on Four Thousand Weeks"
-description = "Thoughts and notes on the essay"
-+++
 
 > See [*Four Thousand Weeks*](https://leebyron.com/4000/). It's easy for me to read the original post, write down draft notes about it. But, it could become unbelievely difficult once I want to write one that is easily digestable by others and no mental gymnastics needs to be done. Anyway, let's try this. For things that appeared in the post but I did not talk about, that's because I though I wasn't able to give a thoughtful summary or a good actionable expression.
 

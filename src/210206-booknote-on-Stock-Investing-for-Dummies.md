@@ -1,8 +1,5 @@
+> Booknote on Stock Investing for Dummies
 <!-- toc -->
-+++
-title = "Booknote on Stock Investing for Dummies"
-description = "Covers all the proven tactics and strategies"
-+++
 
 ### Resources
 

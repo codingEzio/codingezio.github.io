@@ -1,8 +1,5 @@
+> Logging what effects do pregnancy have on women
 <!-- toc -->
-+++
-title = "On Pregnancy"
-description = "Logging about what effects do pregnancy have on women"
-+++
 
 ## Context
 

@@ -1,8 +1,5 @@
+> Common sense for myself but might not for the other people
 <!-- toc -->
-+++
-title = "Common Sense for Me but Might Not Others"
-description = "A collection of links"
-+++
 
 > A tiny archive that is loosely focused on the societal analysis/opinion. The content here is like an atom in a water drop in my knowledge ocean, so don't worry about my own perspective or something. Also, I try to avoid any quotations in this post as it's highly contexual based your own mindset, past experiences, education level and so on.
 

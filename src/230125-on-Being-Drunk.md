@@ -1,8 +1,5 @@
+> Thoughts and observations about the state of being drunk
 <!-- toc -->
-+++
-title = "On Being Drunk"
-description = "Thoughts and observations"
-+++
 
 ## The Downside
 

@@ -1,8 +1,4 @@
 <!-- toc -->
-+++
-title = "On Authentication"
-description = "Thoughts and notes on Application Authentication"
-+++
 
 > Just an overview, not really a grand topic that I want to explore at the moment.
 

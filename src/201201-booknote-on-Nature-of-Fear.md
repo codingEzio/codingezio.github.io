@@ -1,8 +1,5 @@
+> Booknote on The Nature of Fear: Survival Lessons from the Wild
 <!-- toc -->
-+++
-title = "Booknote on The Nature of Fear"
-description = "Survival Lessons from the Wild"
-+++
 
 ### Resources
 

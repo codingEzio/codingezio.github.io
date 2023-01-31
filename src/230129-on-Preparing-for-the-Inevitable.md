@@ -1,5 +1,5 @@
-<!-- toc -->
 > Do these as soon as your parents reach 40 or so. This post would be regularly updated to remind me to be grateful.
+<!-- toc -->
 
 ## Issue
 
