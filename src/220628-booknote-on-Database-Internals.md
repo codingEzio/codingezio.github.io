@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Booknote on Database Internals"
 description = "A deep-dive into How Distributed Data Systems Work"

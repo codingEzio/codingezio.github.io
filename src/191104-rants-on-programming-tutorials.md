@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Rants on the Programming Tutorials"
 description = "Rant, yet, a Great Starting Point for Me to Improve on"

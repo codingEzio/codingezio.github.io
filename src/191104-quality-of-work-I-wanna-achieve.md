@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "The Quality of Work I Wanna Achieve"
 description = "Strive for Things like Clarity, Efficiency and so on"

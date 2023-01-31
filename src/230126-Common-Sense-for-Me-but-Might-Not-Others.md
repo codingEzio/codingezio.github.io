@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Common Sense for Me but Might Not Others"
 description = "A collection of links"

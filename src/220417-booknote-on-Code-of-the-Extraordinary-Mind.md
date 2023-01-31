@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Booknote on The Code of the Extraordinary Mind"
 description = "Unconventional Laws to Redefine Your Life and Succeed On Your Own Terms"

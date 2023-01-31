@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "On Ecosystem Simulation"
 description = "Simulating real-life ecosystem or much more"

@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "On Entertainment around Space"
 description = "Space, Physics and all that fascinating stuff"

@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Life Quirks in Programming"
 description = "Blend Programming into Your Life"

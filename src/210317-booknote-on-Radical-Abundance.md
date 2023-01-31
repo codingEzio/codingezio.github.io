@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Booknote on Radical Abundance"
 description = "How a Revolution in Nanotechnology Will Change Civilization"

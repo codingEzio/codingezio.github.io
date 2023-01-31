@@ -1,3 +1,4 @@
+<!-- toc -->
 # Thoughts on Blogging Platforms
 
 -----

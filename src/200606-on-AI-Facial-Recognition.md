@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "On AI - Facial Recognition"
 description = "Fuck1ng with B1g Br0ther"

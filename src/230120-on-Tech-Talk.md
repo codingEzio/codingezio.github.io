@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "On Tech Talk"
 description = "Talks that broaden my vision"

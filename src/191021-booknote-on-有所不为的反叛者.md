@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Booknote on 有所不为的反叛者"
 description = "有所不为的反叛者：批判、怀疑与想象力"

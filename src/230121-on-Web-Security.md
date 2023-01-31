@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "On Web Security"
 description = "Thoughts and notes on Web Security"

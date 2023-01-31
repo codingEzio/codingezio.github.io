@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Booknote on Solaris"
 description = "A classic work of science fiction by Stanislaw Lem"

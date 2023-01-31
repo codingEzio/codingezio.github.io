@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "On Water Heater"
 description = "Interesting to know about everyday appliances"

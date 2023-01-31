@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "On Video Technology"
 description = "Thoughts and notes on Video Technology"

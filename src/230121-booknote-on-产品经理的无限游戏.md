@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Booknote on 产品经理的无限游戏"
 description = "Thoughts and notes the book 产品经理的无限游戏"

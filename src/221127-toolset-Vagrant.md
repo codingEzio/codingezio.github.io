@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Toolset - Vagrant"
 description = "Thoughts and notes on Vagrant"

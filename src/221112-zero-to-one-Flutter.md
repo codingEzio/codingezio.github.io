@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Zero to One - Flutter"
 description = "Notes for my journey of learning Flutter"

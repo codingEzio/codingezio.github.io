@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Booknote on The Big Questions"
 description = "A Short Introduction to Philosophy"

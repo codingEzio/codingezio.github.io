@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Booknote on SOS Reduce Climate Change"
 description = "What you can do to reduce climate change"

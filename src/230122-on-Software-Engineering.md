@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "On Software Engineering"
 description = "Go beyond the programming part"

@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Booknote on Germany Culture Smart"
 description = "Essential Guide to Customs & Culture"

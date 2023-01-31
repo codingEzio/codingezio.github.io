@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Booknote on Irrational Man"
 description = "A Study in Existential Philosophy"

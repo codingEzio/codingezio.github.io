@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Booknote on Operating System Concepts Essentials"
 description = "The Concepts that Go Into Designing An Operating System"

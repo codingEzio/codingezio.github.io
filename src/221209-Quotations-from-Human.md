@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Quotations from Human"
 description = "No more categorization, just logging it"

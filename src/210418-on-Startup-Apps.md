@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "On Startup Apps"
 description = "Let apps automatically open when boot up"

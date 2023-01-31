@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Thinking Outside of the Box"
 description = "Thinking from all directions"

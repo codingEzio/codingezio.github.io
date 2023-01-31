@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "On Information Retrieval"
 description = "Know, learn, build and teach"

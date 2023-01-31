@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Booknote on Every Day I Write the Book"
 description = "Notes on Style"

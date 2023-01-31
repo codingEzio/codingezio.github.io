@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Toolset - adb"
 description = "adb usage"

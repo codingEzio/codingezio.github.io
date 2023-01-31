@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "On Diabetes"
 description = "Thoughts and observations"

@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Microservice 00 - Idea"
 description = "What is it, really?"

@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Booknote on Life 3.0"
 description = "Being Human in the Age of Artificial Intelligence"

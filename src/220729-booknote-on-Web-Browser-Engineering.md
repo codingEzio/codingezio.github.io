@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Booknote on Web Browser Engineering"
 description = "Building a Basic but Complete Web Browser"

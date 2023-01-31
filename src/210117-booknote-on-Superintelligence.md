@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Booknote on Superintelligence: Paths, Dangers, Strategies"
 description = "Superintelligence: Paths, Dangers, Strategies"

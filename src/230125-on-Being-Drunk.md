@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "On Being Drunk"
 description = "Thoughts and observations"

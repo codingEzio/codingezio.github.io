@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "On Container Orchestration"
 description = "Thoughts, notes and implementations"

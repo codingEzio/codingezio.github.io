@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "On PC Build"
 description = "Build a PC based on your needs"

@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Booknote on Algorithms to Live By"
 description = "The Computer Science of Human Decisions"

@@ -1,8 +1,4 @@
-+++
-title = "On Prepare for the Inevitable"
-description = "Mainly focused on the death of a parent"
-+++
-
+<!-- toc -->
 > Do these as soon as your parents reach 40 or so. This post would be regularly updated to remind me to be grateful.
 
 ## Issue

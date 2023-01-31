@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Toolset - VS Code"
 description = "VS Code usage"

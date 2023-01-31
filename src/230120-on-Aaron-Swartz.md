@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "On Aaron Swartz"
 description = "A Hero"

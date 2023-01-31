@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Booknote on Other Minds"
 description = "The Octopus, the Sea, and the Deep Origins of Consciousness"

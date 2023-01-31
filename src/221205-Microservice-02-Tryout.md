@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Microservice 02 - Tryout"
 description = "Get familiar with the whole ecosystem and practical usage"

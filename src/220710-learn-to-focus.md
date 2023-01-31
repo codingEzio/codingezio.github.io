@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Learn to Focus"
 description = "Focus on the Right Thing"

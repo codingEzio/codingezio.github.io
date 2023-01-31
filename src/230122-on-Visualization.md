@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "On Visualization"
 description = "Thoughts and notes on Building Visualizations"

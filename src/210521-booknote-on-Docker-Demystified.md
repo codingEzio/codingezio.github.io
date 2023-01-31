@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Booknote on Docker Demystified"
 description = "Learn How to Develop and Deploy Applications Using Docker"

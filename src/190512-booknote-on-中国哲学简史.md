@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Booknote on 中国哲学简史"
 description = "A Short History of Chinese Philosophy"

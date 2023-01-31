@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Booknote on Ten Percent Happier"
 description = "Self-Help That Actually Works -- A True Story"

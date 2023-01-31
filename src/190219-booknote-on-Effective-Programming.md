@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Booknote on Effective Programming"
 description = "Effective Programming: More Than Writing Code"

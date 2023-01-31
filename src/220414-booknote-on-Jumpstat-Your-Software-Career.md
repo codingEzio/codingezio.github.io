@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Booknote on Jumpstart Your Software Career"
 description = "Take Control of Your Software Career As Early As You Could"

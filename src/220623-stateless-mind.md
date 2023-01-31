@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Stateless Mind"
 description = "Be Water, At the Same time, Be Stone"

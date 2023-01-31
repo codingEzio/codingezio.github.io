@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "On Netty"
 description = "What it is, why use it and other details"

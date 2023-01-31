@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "On Anxiety towards AI"
 description = "Calm down and live with it"

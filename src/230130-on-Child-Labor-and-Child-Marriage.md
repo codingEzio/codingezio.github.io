@@ -1,8 +1,4 @@
-+++
-title = "On Child Labor and Child Marriage"
-description = "Rage"
-+++
-
+<!-- toc -->
 > To be in a healthy sense of **rage** for myself. I believe we all know the real underlying reason why these motherfuckingly clusterfucked thing happen :)
 
 ## Child Labor

@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Booknote on Picturing the Woman-Child"
 description = "Fashion, Feminism and the Female Gaze"

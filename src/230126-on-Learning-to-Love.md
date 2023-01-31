@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "On Learning to Love"
 description = "A grand topic to explore"

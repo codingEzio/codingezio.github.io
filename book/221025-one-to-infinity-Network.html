@@ -141,7 +141,69 @@
 
                 <div id="content" class="content">
                     <main>
-                        <p>+++
+                        <ul>
+<li><a href="#foreword">Foreword</a>
+<ul>
+<li><a href="#why">Why</a></li>
+<li><a href="#what">What</a></li>
+<li><a href="#how">How</a></li>
+</ul>
+</li>
+<li><a href="#content">Content</a>
+<ul>
+<li><a href="#%E6%8A%BD%E8%B1%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0-model-and-implementation">抽象与实现 Model and Implementation</a></li>
+<li><a href="#%E8%B6%A3%E4%BA%8B%E4%B9%8B%E6%B5%8F%E8%A7%88%E5%99%A8%E8%AE%BF%E8%B0%B7%E6%AD%8C-when-you-visit-google">趣事之浏览器访谷歌 When You Visit Google</a></li>
+<li><a href="#%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90-domain-name-system-dns">域名解析 Domain Name System (DNS)</a></li>
+<li><a href="#socket-%E4%B8%8E-websocket">Socket 与 WebSocket</a></li>
+<li><a href="#%E7%8A%B6%E6%80%81%E7%A0%81%E5%90%AB%E4%B9%89-http-status-code">状态码含义 HTTP Status Code</a>
+<ul>
+<li><a href="#%E5%A4%A7%E7%B1%BB%E5%88%AB">大类别</a></li>
+<li><a href="#%E5%B8%B8%E8%A7%81%E7%A0%81">常见码</a></li>
+</ul>
+</li>
+<li><a href="#get-%E4%B8%8E-post">GET 与 POST</a></li>
+<li><a href="#%E7%AB%AF%E6%9C%8D%E8%AF%B7%E6%B1%82-http-request">端服请求 HTTP Request</a></li>
+<li><a href="#%E8%AF%B7%E6%B1%82%E5%A4%B4%E9%83%A8-http-header">请求头部 HTTP Header</a></li>
+<li><a href="#%E8%B6%85%E6%96%87%E4%BC%A0%E8%BE%93%E4%B9%8B%E5%8F%B2-history-of-http">超文传输之史 History of HTTP</a></li>
+<li><a href="#%E9%95%BF%E7%9F%AD%E8%BF%9E%E6%8E%A5-tcp-polling-vs-long-polling">长短连接 TCP Polling vs Long Polling</a></li>
+<li><a href="#%E4%BC%A0%E5%8D%8F%E5%8F%AF%E9%9D%A0%E5%A4%A7pk-tcp-vs-udp">传协可靠大PK TCP vs UDP</a></li>
+<li><a href="#%E4%BA%92%E8%81%94%E7%BD%91%E6%8E%A7%E5%88%B6%E6%B6%88%E6%81%AF%E5%8D%8F%E8%AE%AE-internet-control-message-protocol-icmp">互联网控制消息协议 Internet Control Message Protocol (ICMP)</a></li>
+<li><a href="#%E8%B7%A8%E7%AB%99%E8%84%9A%E6%9C%AC%E6%94%BB%E5%87%BB-cross-site-scripting-xss">跨站脚本攻击 Cross-Site Scripting (XSS)</a></li>
+<li><a href="#%E8%B7%A8%E7%AB%99%E8%AF%B7%E6%B1%82%E4%BC%AA%E9%80%A0-cross-site-request-forgery">跨站请求伪造 Cross-Site Request Forgery</a></li>
+<li><a href="#%E5%88%86%E5%B8%83%E5%BC%8F%E6%8B%92%E7%BB%9D%E6%9C%8D%E5%8A%A1-distributed-denial-of-service-ddos">分布式拒绝服务 Distributed Denial of Service (DDoS)</a></li>
+<li><a href="#%E5%AF%B9%E7%A7%B0%E4%B8%8E%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86-symmetric-and-asymmetric-encryption">对称与非对称加密 Symmetric and Asymmetric Encryption</a></li>
+<li><a href="#https-%E5%A6%82%E4%BD%95%E8%BF%90%E4%BD%9C">HTTPS 如何运作</a></li>
+<li><a href="#cookie-%E4%B8%8E-session">Cookie 与 Session</a>
+<ul>
+<li><a href="#cookie">Cookie</a></li>
+<li><a href="#session">Session</a></li>
+</ul>
+</li>
+<li><a href="#tcp-%E4%BB%8E%E7%9B%B8%E8%AF%86%E5%88%B0%E7%A6%BB%E5%88%AB">TCP 从相识到离别</a>
+<ul>
+<li><a href="#%E6%8F%A1%E6%89%8B-">握手 🤝🤝🤝</a></li>
+<li><a href="#%E6%8C%A5%E6%89%8B-">挥手 🖐🖐🖐🖐</a></li>
+</ul>
+</li>
+<li><a href="#keep-alive-%E4%BF%9D%E6%B4%BB">Keep-Alive 保活</a></li>
+<li><a href="#tcp-packet-structure-%E6%8A%A5%E6%96%87%E7%BB%93%E6%9E%84">TCP Packet Structure 报文结构</a>
+<ul>
+<li><a href="#%E7%AE%80%E8%BF%B0">简述</a></li>
+<li><a href="#%E8%AF%A6%E8%BF%B0">详述</a></li>
+</ul>
+</li>
+<li><a href="#tcp-ensure-reliability-%E5%8F%AF%E9%9D%A0%E5%BA%A6%E4%BF%9D%E8%AF%81">TCP Ensure Reliability 可靠度保证</a></li>
+<li><a href="#tcp-flow-control-%E6%B5%81%E9%87%8F%E6%8E%A7%E5%88%B6">TCP Flow Control 流量控制</a></li>
+<li><a href="#tcp-congestion-control-%E6%8B%A5%E5%A1%9E%E6%8E%A7%E5%88%B6">TCP Congestion Control 拥塞控制</a></li>
+<li><a href="#tcp-retransmission-%E9%87%8D%E4%BC%A0">TCP Retransmission 重传</a>
+<ul>
+<li><a href="#%E8%A7%A6%E5%8F%91%E6%9C%BA%E5%88%B6">触发机制</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>+++
 title = &quot;One to Infinity - Network&quot;
 description = &quot;On Network in Computer Science&quot;
 +++</p>

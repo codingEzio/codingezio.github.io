@@ -1,7 +1,4 @@
-+++
-title = "On ISIS and Taliban"
-description = "Y"
-+++
+<!-- toc -->
 
 ## Context
 

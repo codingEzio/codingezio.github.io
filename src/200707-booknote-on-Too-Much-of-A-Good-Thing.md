@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Booknote on Too Much of a Good Thing"
 description = "How Four Key Survival Traits Are Now Killing Us"

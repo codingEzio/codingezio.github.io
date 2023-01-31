@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "On Personal Knowledge Management"
 description = "Methodology, tooling etc."

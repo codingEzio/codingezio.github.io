@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "On Home Improvement"
 description = "Interesting ideas to implement or to watch"

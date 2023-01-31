@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Read Essay on Four Thousand Weeks"
 description = "Thoughts and notes on the essay"

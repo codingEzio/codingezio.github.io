@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "On Java Virtual Machine"
 description = "All things that related to JVM, especially Hotspot"

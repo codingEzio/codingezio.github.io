@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Find Your Identity"
 description = "Labeling does help.. Doesn't it?"

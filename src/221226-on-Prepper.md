@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "On Prepper"
 description = "Prepare for anything"

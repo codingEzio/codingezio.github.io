@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "On Visual Art"
 description = "Movies, TV Shows and Documentaries"

@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Install PHP Dev Environment Manually"
 description = "The Usual LAMP stack, but Installed Separately"

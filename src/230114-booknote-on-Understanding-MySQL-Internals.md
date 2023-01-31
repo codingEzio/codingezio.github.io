@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Booknote on Understanding MySQL Internals"
 description = "Understanding MySQL Internals"

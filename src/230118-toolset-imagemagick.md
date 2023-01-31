@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Toolset - imagemagick"
 description = "imagemagick usage"

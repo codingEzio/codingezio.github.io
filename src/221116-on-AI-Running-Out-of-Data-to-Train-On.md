@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "On AI - Running Out of Data to Train On"
 description = "Will we run out of dataset to train for AI?"

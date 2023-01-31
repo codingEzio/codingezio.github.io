@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "On System Design"
 description = "I wish I knew about this when I started learning to program"

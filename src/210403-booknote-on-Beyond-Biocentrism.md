@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Booknote on Beyond Biocentrism"
 description = "Rethinking Time, Space, Consciousness, and the Illusion of Death"

@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Thoughts on Neuroenhancer"
 description = "Thoughts on neuroenhancing stuff"

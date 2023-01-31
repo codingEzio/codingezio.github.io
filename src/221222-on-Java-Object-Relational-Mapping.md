@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "On Java Object Relational Mapping"
 description = "ORM frameworks like MyBatis, Hibernate and others"

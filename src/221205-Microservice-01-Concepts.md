@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Microservice 01 - Concepts"
 description = "The WHY for Microservices and demystified some concepts"

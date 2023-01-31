@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "On Pregnancy"
 description = "Logging about what effects do pregnancy have on women"

@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Resources around Machine Learning"
 description = "Machine Learning and Deep Learning"

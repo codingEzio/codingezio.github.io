@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "MOOC on Computer Science"
 description = "Proper courses to learn stuff"

@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "On Automobile"
 description = "Diving deep about stuff related to automobiles"

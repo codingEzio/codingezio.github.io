@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Issue : node-sass failed to compile"
 description = "Failed to run 'npm install' because of 'node-sass'"

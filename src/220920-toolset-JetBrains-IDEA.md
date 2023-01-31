@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Toolset - JetBrains IDEA"
 description = "JetBrains IDEA usage"

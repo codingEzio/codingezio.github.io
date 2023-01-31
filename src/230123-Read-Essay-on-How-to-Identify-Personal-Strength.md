@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Read Essay on How to Identify Personal Strength"
 description = "Thoughts and notes on the essay"

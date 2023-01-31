@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Booknote on The Millionaire Fastlane"
 description = "Crack the Code to Wealth and Live Rich for a Lifetime!"

@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Booknote on I Am A Strange Loop"
 description = "An Endlessly Thought-provoking Book"

@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Toolset - Docker"
 description = "Thoughts and notes on Docker"

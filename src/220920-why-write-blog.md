@@ -1,4 +1,5 @@
 <!-- toc -->
+<!-- toc -->
 
 # Why Write Blog
 

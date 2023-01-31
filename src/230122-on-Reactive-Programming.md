@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "On Reactive Programming"
 description = "Thoughts and notes on Reactive Programming"

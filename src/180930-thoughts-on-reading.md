@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Thoughts on Reading"
 description = "Thoughts on Reading"

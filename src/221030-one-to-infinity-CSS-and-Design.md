@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "On CSS, Layout and Design"
 description = "Notes on learning CSS to build amazing things"

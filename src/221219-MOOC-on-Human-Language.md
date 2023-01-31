@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "MOOC on Human Language"
 description = "Things like language courses, test prep and so on"

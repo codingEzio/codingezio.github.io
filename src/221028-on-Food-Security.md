@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "On Food Security"
 description = "Food production in the future"

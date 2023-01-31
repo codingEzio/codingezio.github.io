@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Blog built by Zola"
 description = "Use Zola as my static site generator (blog)"

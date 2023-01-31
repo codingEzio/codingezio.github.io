@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Booknote on 超级学霸"
 description = "超级学霸：受用终身的速效学习法"

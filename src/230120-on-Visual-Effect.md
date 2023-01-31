@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "On Visual Effect"
 description = "Interesting field to explore"

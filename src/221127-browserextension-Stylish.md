@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Browser Extension - Stylish"
 description = "Tweaking CSS using the Stylish extension"

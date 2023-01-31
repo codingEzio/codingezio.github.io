@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Booknote on Food"
 description = "A consumer's guide to the food system, from local to global"

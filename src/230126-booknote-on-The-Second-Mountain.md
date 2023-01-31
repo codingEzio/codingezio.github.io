@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Booknote on The Second Mountain"
 description = "The Second Mountain - The Quest for a Moral Life"

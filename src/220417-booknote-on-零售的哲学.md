@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Booknote on 零售的哲学"
 description = "零售的哲学：7-Eleven便利店创始人自述"

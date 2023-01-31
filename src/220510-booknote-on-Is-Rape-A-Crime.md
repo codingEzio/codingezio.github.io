@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Booknote on Is Rape A Crime"
 description = "A Memoir, an Investigation, and a Manifesto"

@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "On Hardware Hacking"
 description = "Thoughts and booknotes on Hacking Hardware"

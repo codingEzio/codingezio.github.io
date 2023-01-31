@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Booknote on Realms of the Human Unconscious"
 description = "Observations from LSD Research"

@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "On Scale"
 description = "From astronomical to minuscule, visualized"

@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Practice List for LeetCode"
 description = "A rough list with around 90 questions from LeetCode"

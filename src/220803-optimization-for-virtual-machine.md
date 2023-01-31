@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Optimization for Virtual Machine"
 description = "Optimizing Virtual Machines to Achieve a Balance"

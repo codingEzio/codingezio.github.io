@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "My Own Information Universe"
 description = "Thoughts from interesting and thoughtful human beings"

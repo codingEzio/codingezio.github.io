@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "On Physical Archiving"
 description = "More than putting files on the cloud"

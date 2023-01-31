@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "On Everything as Code"
 description = "Automation for [some software term] as code"

@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Blog Post References"
 description = "N/A"

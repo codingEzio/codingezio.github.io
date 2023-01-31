@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Booknote on Books written by Shi Tiesheng"
 description = "Books written by Shi Tiesheng"

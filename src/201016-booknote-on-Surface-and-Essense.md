@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Booknote on Surfaces and Essences"
 description = "Analogy as the Fuel and Fire of Thinking"

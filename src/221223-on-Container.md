@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "On Container"
 description = "Thoughts, notes and implementations"

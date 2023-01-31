@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "On Version Control"
 description = "Notes on Version Control"

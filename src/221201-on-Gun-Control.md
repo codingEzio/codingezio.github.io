@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "On Gun Control"
 description = "Gun control, school shooting and related topics"

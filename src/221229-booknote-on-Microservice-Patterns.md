@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Booknote on Microservice Patterns"
 description = "Microservices Patterns: With examples in Java"

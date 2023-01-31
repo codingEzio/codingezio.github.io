@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Booknote on Java高并发编程详解：多线程与架构设计"
 description = "Y"

@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "On Message Queue"
 description = "Know, learn, build and teach"

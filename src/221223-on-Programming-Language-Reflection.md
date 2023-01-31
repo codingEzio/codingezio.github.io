@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "On Programming Language Reflection"
 description = "Making sense of it and use it effectively"

@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Booknote on Stock Market 101"
 description = "Essential Guide to the Stock Market"

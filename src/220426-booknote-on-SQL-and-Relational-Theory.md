@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Booknote on SQL and Relational Theory"
 description = "How to Write Accurate SQL Code"

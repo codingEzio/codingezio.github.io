@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Booknote on Information Hiding"
 description = "Disappearing Cryptography: Information Hiding : Steganography & Watermarking"

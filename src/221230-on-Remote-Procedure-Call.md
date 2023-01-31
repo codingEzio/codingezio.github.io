@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "On Remote Procedure Call"
 description = "Know, learn, build and teach"

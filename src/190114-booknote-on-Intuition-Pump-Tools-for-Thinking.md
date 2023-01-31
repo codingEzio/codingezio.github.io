@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Booknote on Intuition Pumps and Tools for Thinking"
 description = "Intuition Pumps And Other Tools for Thinking"

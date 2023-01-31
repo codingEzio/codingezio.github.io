@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Issue : Spring Devtools Not Reloading"
 description = "Fix IDE settings for auto-reloading"

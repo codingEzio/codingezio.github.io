@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Consume Less"
 description = "Consume Less, Output More"

@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Toolset - find"
 description = "find usage"

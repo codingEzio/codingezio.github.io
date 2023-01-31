@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Toolset - grep"
 description = "grep usage"

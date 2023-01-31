@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Last Day of Your Life"
 description = "Deadlines Are a Thing, and You Need It"

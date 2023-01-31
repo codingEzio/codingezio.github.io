@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "On JSON Web Token"
 description = "Notes on JSON Web Token"

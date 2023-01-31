@@ -1,3 +1,4 @@
+<!-- toc -->
 +++
 title = "Booknote on Zero to One"
 description = "Notes on Startups, or How to Build the Future"
