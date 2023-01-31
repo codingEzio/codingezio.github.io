@@ -1,9 +1,5 @@
 <!-- toc -->
-+++
-title = "On Eating"
-description = "Notes on eating well and smart"
-+++
-
+> Notes on eating well and smart
 
 ### Resources
 

@@ -1,8 +1,4 @@
 <!-- toc -->
-+++
-title = "Toolset - brew"
-description = "brew usage"
-+++
 
 ### The Commands I used the Most
 

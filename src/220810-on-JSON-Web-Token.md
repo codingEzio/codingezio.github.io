@@ -1,8 +1,5 @@
+> JWT: JSON Web Token
 <!-- toc -->
-+++
-title = "On JSON Web Token"
-description = "Notes on JSON Web Token"
-+++
 
 ### Concepts and Terminology
 

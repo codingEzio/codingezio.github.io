@@ -1,15 +1,9 @@
 <!-- toc -->
-+++
-title = "Issue : Unable to Downgrade Flutter Properly"
-description = "As of November 2022, it's really hard to downgrade from 3 to 2"
-+++
-
-
-> Of course, this essay assumes you already have a Flutter 3 installed on your machine
+> Issue : Unable to Downgrade Flutter Properly
 
 ### Steps
 
-> Reference to [Downgrade Flutter 3.0 to 2.10](https://www.youtube.com/watch?v=icY9x4qsFeY)
+> You should already have Flutter 3 installed on your machine. Tribute to [Downgrade Flutter 3.0 to 2.10](https://www.youtube.com/watch?v=icY9x4qsFeY)
 
 ```bash
 # The printed result were all based on my own machine (not universal!)

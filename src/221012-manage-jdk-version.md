@@ -1,8 +1,4 @@
 <!-- toc -->
-+++
-title = "Manage JDK Versions on macOS"
-description = "When you have multiple versions of JDK on your machine"
-+++
 
 ### Why
 

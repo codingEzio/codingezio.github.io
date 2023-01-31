@@ -1,8 +1,4 @@
 <!-- toc -->
-+++
-title = "Toolset - find"
-description = "find usage"
-+++
 
 ### Find Files and Pick X of Them From the Result List
 

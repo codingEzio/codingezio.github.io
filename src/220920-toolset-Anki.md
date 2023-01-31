@@ -1,12 +1,8 @@
 <!-- toc -->
-+++
-title = "Toolset - Anki"
-description = "Anki usage"
-+++
 
 ### What is Anki
 
-- Spaced repetition implemented accessibly for the mass
+> Spaced repetition implemented accessibly for the mass
 
 ### Tweaking
 

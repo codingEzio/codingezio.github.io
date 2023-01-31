@@ -1,8 +1,5 @@
 <!-- toc -->
-+++
-title = "Toolset - Vagrant"
-description = "Thoughts and notes on Vagrant"
-+++
+> Thoughts and notes on Vagrant
 
 ### Choose the Right System
 

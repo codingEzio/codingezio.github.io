@@ -1,8 +1,4 @@
 <!-- toc -->
-+++
-title = "What I Strive for"
-description = "What I Want to Achieve"
-+++
 
 ### Making complex things simpler
 

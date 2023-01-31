@@ -1,8 +1,5 @@
+> Booknote on 演讲的力量：如何让公众表达变成影响力
 <!-- toc -->
-+++
-title = "Booknote on 演讲的力量"
-description = "如何让公众表达变成影响力"
-+++
 
 ### Resources
 

@@ -1,8 +1,5 @@
 <!-- toc -->
-+++
-title = "Toolset - Docker"
-description = "Thoughts and notes on Docker"
-+++
+> Thoughts and notes on Docker
 
 ### Foreword
 

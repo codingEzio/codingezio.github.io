@@ -1,8 +1,4 @@
 <!-- toc -->
-+++
-title = "On AI - Running Out of Data to Train On"
-description = "Will we run out of dataset to train for AI?"
-+++
 
 - Source: [https://www.lesswrong.com/posts/Couhhp4pPHbbhJ2Mg/will-we-run-out-of-ml-data-evidence-from-projecting-dataset](https://www.lesswrong.com/posts/Couhhp4pPHbbhJ2Mg/will-we-run-out-of-ml-data-evidence-from-projecting-dataset)
 - Will we run out of ML data? Evidence from projecting dataset size trends

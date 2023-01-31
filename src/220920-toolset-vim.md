@@ -1,8 +1,4 @@
 <!-- toc -->
-+++
-title = "Toolset - Vim"
-description = "Vim usage"
-+++
 
 ### Enable
 

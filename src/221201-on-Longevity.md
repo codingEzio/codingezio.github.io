@@ -1,8 +1,5 @@
 <!-- toc -->
-+++
-title = "On Longevity"
-description = "Anti-aging on the technological aspect"
-+++
+> Anti-aging on the technological aspect
 
 ## What This Is
 

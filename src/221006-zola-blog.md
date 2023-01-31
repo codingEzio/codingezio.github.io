@@ -1,8 +1,5 @@
 <!-- toc -->
-+++
-title = "Blog built by Zola"
-description = "Use Zola as my static site generator (blog)"
-+++
+> Steps of using Zola for my blog hosted on Github Pages
 
 ## Init
 

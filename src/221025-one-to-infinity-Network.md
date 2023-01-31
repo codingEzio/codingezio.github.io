@@ -1,8 +1,4 @@
 <!-- toc -->
-+++
-title = "One to Infinity - Network"
-description = "On Network in Computer Science"
-+++
 
 ## Foreword
 

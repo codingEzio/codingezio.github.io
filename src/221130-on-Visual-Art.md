@@ -1,8 +1,5 @@
 <!-- toc -->
-+++
-title = "On Visual Art"
-description = "Movies, TV Shows and Documentaries"
-+++
+> Movies, TV Shows and Documentaries
 
 ## Meta Information
 

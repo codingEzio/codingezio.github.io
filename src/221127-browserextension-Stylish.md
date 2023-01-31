@@ -1,8 +1,5 @@
 <!-- toc -->
-+++
-title = "Browser Extension - Stylish"
-description = "Tweaking CSS using the Stylish extension"
-+++
+> Tweaking CSS using the Stylish extension
 
 ## The WHY
 

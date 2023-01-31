@@ -1,8 +1,5 @@
+> Just `git` at the moment. Though I might explore other alternatives in the future.
 <!-- toc -->
-+++
-title = "On Version Control"
-description = "Notes on Version Control"
-+++
 
 ### Get
 

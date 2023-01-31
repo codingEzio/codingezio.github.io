@@ -1,8 +1,4 @@
 <!-- toc -->
-+++
-title = "On HATEOAS and HAL"
-description = "Notes on HATEOAS and HAL"
-+++
 
 ## Concepts
 
