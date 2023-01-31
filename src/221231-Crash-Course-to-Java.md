@@ -346,7 +346,7 @@ catch (IOException exception) {
 
 ### Snippet 19 Reflection
 
-- N/A
+> See my another post: [*On Programming Language Reflection*](https://codingezio.github.io/221223-on-Programming-Language-Reflection.html)
 
 ### Snippet 20 Generics
 
