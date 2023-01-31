@@ -1,5 +1,5 @@
-<!-- toc -->
 > Steps of using Zola for my blog hosted on Github Pages
+<!-- toc -->
 
 ## Init
 
