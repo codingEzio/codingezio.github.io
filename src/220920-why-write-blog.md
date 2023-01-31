@@ -1,8 +1,10 @@
+<!-- toc -->
+
 # Why Write Blog
 
 -----
 
-### Why Write This Blog
+### The Reason
 
 - Improve thinking process
 - An external storage for my brain
@@ -16,7 +18,7 @@
 - 有上下文，但又不失实践度 <small>(既要简述此技术，但也不能脱离实际)</small>
 - 有实践度，但又保技术之美 <small>(既要以实例展开，但亦保广度及之美)</small>
 
-### Quality of the Posts
+### Quality Control
 
 - Note that some of the low-quality posts would still be retained
     > It is still a way of showing progress has been made, yeah?
