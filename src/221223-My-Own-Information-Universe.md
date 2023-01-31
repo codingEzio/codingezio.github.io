@@ -1,5 +1,4 @@
 > My Own Information Universe
-<!-- toc -->
 
 > Note that this post is more like public bookmarks for myself. It seemed that merely saving these as bookmarks weren't enough, whether they are which were saved in the browser, or services like [Raindrop.io](https://raindrop.io/). For me, I loves to categorize and minimize stuff, but that weren't an easy task for me as I need to archive every single one that I might need in the future, yet not too much to cause that *paralyzation* caused by Information Overload. Also, I did tried convert all these to *RSS*, unfortunately it became be very hard to get all the old posts which defeats the entire purpose of aggregating them together.
 >
@@ -90,9 +89,15 @@
 
 ## And More
 
-### Misc
+### Tooling
+
+#### AI-powered
 
 - [Future Tools](https://www.futuretools.io/)
+- [ChatGPT, AI and GPT-3 Apps and Use Cases](https://gpt3demo.com/)
+
+#### Misc
+
 - [Free for Developers](https://free-for.dev/)
 - [小众软件](https://www.appinn.com/)
 
