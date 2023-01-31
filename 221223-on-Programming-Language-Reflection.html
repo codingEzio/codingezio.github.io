@@ -141,14 +141,21 @@
 
                 <div id="content" class="content">
                     <main>
-                        <ul>
+                        <blockquote>
+<p>On Programming Language Reflection</p>
+</blockquote>
+<ul>
 <li><a href="#resources">Resources</a>
 <ul>
 <li><a href="#learning-materials">Learning Materials</a></li>
 <li><a href="#references-for-references">References for References</a></li>
 </ul>
 </li>
-<li><a href="#examples-put-into-use">Examples Put into Use</a></li>
+<li><a href="#notes">Notes</a>
+<ul>
+<li><a href="#definition--capability">Definition | Capability</a></li>
+</ul>
+</li>
 </ul>
 <blockquote>
 <p>For the simplest case, it could be of use when you want to debug some stuff without using <em>debuggers</em> as they also require some kind of the learning curve <small>(though it's better to know them as well as they are much more powerful and non-invasive to your existing code)</small>.</p>
@@ -156,15 +163,24 @@
 <h2 id="resources"><a class="header" href="#resources">Resources</a></h2>
 <h3 id="learning-materials"><a class="header" href="#learning-materials">Learning Materials</a></h3>
 <ul>
+<li><a href="https://softwareengineering.stackexchange.com/questions/123956/why-should-i-use-reflection">java - Why should I use reflection?</a></li>
+<li><a href="https://stackoverflow.com/questions/37628/what-is-reflection-and-why-is-it-useful">java - What is reflection and why is it useful?</a></li>
 <li><a href="https://www.digitalocean.com/community/tutorials/java-reflection-example-tutorial">Java Reflection Example Tutorial on <em>DigitalOcean</em></a></li>
 </ul>
 <h3 id="references-for-references"><a class="header" href="#references-for-references">References for References</a></h3>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Reflective_programming">Reflective programming on <em>Wikipedia</em></a></li>
 </ul>
-<h2 id="examples-put-into-use"><a class="header" href="#examples-put-into-use">Examples Put into Use</a></h2>
+<h2 id="notes"><a class="header" href="#notes">Notes</a></h2>
+<h3 id="definition--capability"><a class="header" href="#definition--capability">Definition | Capability</a></h3>
 <ul>
-<li>N/A</li>
+<li>It could inspect other code where it's in or itself</li>
+<li>It could inspect and call like classes, methods and so on at runtime</li>
+<li>It uses the code of your program as data <small>(to feed to another)</small></li>
+<li>It could be used to marshalling or unmarshalling to other formats</li>
+<li>It was considered <em>slow</em></li>
+<li>It was recommended <em>not to use</em></li>
+<li>It was <em>rarely used</em> <small>(in the usual business logic)</small></li>
 </ul>
 
                     </main>
