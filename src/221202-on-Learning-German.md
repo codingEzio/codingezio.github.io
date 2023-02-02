@@ -13,6 +13,10 @@
 
 ## Resources
 
+### Tooling
+
+- [*YouGlish*: Improve German Pronunciation using YouTube](https://youglish.com/german)
+
 ### Text
 
 - [A Review of German Grammar](https://www.dartmouth.edu/~deutsch/Grammatik/Grammatik.html)
@@ -24,11 +28,8 @@
 > - It has to be the topics that you are extremely passionate about
 > - Its content shall overlap with your field as you could understand even without translations or transcriptions
 
-#### Actively Watching
+#### from Youtube
 
 - [Programmieren lernen - YouTube](https://www.youtube.com/@Programmierenlernen/videos)
-
-#### Should be in Blacklist Though I still Watch on
-
 - [Easy German - YouTube](https://www.youtube.com/@EasyGerman/videos)
 - [Learn German with GermanPod101.com - YouTube](https://www.youtube.com/@Germanpod101/videos)

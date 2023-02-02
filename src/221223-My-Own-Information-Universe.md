@@ -1,5 +1,7 @@
 > My Own Information Universe
 
+## Prologue
+
 > Note that this post is more like public bookmarks for myself. It seemed that merely saving these as bookmarks weren't enough, whether they are which were saved in the browser, or services like [Raindrop.io](https://raindrop.io/). For me, I loves to categorize and minimize stuff, but that weren't an easy task for me as I need to archive every single one that I might need in the future, yet not too much to cause that *paralyzation* caused by Information Overload. Also, I did tried convert all these to *RSS*, unfortunately it became be very hard to get all the old posts which defeats the entire purpose of aggregating them together.
 >
 > I need an app to grab all that old posts and provide reasonable options to change the font size and such. Well, ***I found none*** at the moment. *NetNewsWire* is an excellent tool to grab the sweet *RSS* feed, but the limitation of *RSS* itself stopped me from using it. I either read all of them by opening a bunch of links in the browser, or consuming them in a hub that has all that inside.
@@ -7,7 +9,7 @@
 > So what's the answer?
 >> Lol, I still do not have one yet. Though it seemed that writing on the topics that I was interested in into one or many posts did help a bit, not only I enjoy through the whole process but also actively produce stuff from them instead of the usual [read-never](https://www.wired.com/story/returning-to-reading/) for morden humans.
 
-## Blog
+## Resource
 
 > Blogs are **powerful**, just as books are.
 >> They are *non-self minds* <br/>
@@ -23,14 +25,9 @@
 - [Hackery, Math & Design](https://acko.net/)
 - [Accidentally in Code](https://cate.blog/)
 - [Brian Lui's blog](https://brianlui.dog/)
-- [冰霜之地 HalfFrost](https://halfrost.com/archives/)
 - [酷壳 CoolShell](https://coolshell.cn/featured)
 - [BMPI.dev](https://www.bmpi.dev/about/)
-- [MindLevelup](https://mindlevelup.wordpress.com/mindlevelup-the-book/introduction/)
 - [Julia Evans](https://jvns.ca/)
-- [Be Well Tuned](http://bewelltuned.com/)
-- [Slate Star Codex](https://slatestarcodex.com/archives/)
-- [Radimentary](https://radimentary.wordpress.com/about/)
 - [thesephist](https://thesephist.com/posts/)
 - [Cassie Evans's Blog](https://www.cassie.codes/)
 - [Thicket Forte](https://thicketforte.com/)
@@ -44,9 +41,10 @@
 - [Reimu's blog](https://blog.k8s.li/)
 - [Erica Sadun](https://ericasadun.com/)
 - [inessential: weblog](https://inessential.com/)
-- [当然我在扯淡](http://www.yinwang.org/)
 - [Owen的博客](https://www.owenyoung.com/)
 - [Life Architect](https://lifearchitect.ai/about-alan/)
+- [当然我在扯淡](http://www.yinwang.org/)
+- [冰霜之地 HalfFrost](https://halfrost.com/archives/)
 
 ### 二
 
@@ -56,6 +54,11 @@
 - [透明盒子计划](https://clearbox.substack.com/archive)
 - [困而学之](https://caminodetexas.substack.com/archive)
 - [潮流周刊](https://weekly.tw93.fun/posts/01-%E5%AE%89%E5%90%89%E9%BB%84%E6%98%8F)
+- [Be Well Tuned](http://bewelltuned.com/)
+- [Slate Star Codex](https://slatestarcodex.com/archives/)
+- [MindLevelup](https://mindlevelup.wordpress.com/mindlevelup-the-book/introduction/)
+- [Radimentary](https://radimentary.wordpress.com/about/)
+- [The Highest of The Mountains](https://www.thehighestofthemountains.com/about.php#h5o-9)
 
 ### 三
 
@@ -70,7 +73,6 @@
 
 - [Tom Goldstein - Projects](https://www.cs.umd.edu/~tomg/project/)
 - [Knight Lab Studio](https://studio.knightlab.com/)
-- [The Highest of The Mountains](https://www.thehighestofthemountains.com/about.php#h5o-9)
 
 ### 二
 
@@ -82,44 +84,51 @@
 
 ### 三
 
-- [Twitter Threads <small>(Hand-picked and Categorized)</small>](https://awesomethread.com/categories/all)
-- [Product Hunt | Discussion](https://www.producthunt.com/discussions)
+- [Twitter Threads](https://awesomethread.com/categories/all)
+- [Product Hunt Discussion](https://www.producthunt.com/discussions)
+- [SciURLs](https://sciurls.com/)
+- [DevURLs](https://devurls.com/)
+- [MathURLs](https://mathurls.com/)
+- [PhysURLs](https://physurls.com/)
+
+### 四
+
+- [Hammertime Series](https://www.lesswrong.com/s/qRxTKm7DAftSuTGvj)
+- [Ask HN: Best Lecture Series You've Seen](https://news.ycombinator.com/item?id=34591291)
 
 -----
 
-## And More
+## Tooling
 
-### Tooling
-
-#### AI-powered
-
-- [Future Tools](https://www.futuretools.io/)
-- [ChatGPT, AI and GPT-3 Apps and Use Cases](https://gpt3demo.com/)
-
-#### Misc
+> For AI-oriented tooling, see my [another post](https://codingezio.github.io/230202-on-AI-Tooling.html)
 
 - [Free for Developers](https://free-for.dev/)
 - [小众软件](https://www.appinn.com/)
 
-### Interview-prep Oriented
+-----
 
-#### Text
+## Interview-prep Oriented
 
-##### Currently In Use
+### Text
+
+#### Currently In Use
 
 > These mark the making of **my own knowledge map** as I found tons of *bad* analogies and explanations inside, yet, there were also no short of good insight for me to learn from. They were of great help to me, but eventually, however detailed and easy their explanations be, they could only serves as a *Table of Contents* for the person reading it.
 
 - [Java 全栈体系](https://pdai.tech/) ⭐️⭐️⭐️
 - [Java 进阶之路](https://tobebetterjavaer.com/) ⭐️⭐️
 - [Java 学习指南](https://javaguide.cn/) ⭐️
+- [mall 学习教程](https://www.macrozheng.com/)
 
-##### New
+#### New
 
-> Having an even wider span of knowledge notes
+> An even wider span or higher level of knowledge base
 
 - [Mess Around Software System Design](https://eric-zhang-seattle.gitbook.io/mess-around/)
+- [Ledge DevOps 知识平台](https://devops.phodal.com/home)
+- [大厂项目复盘](https://www.yuque.com/wikidesign/ykf0s9)
 
-#### Video
+### Video
 
 > I almost never watch videos to learn as it's too inefficient and slow. Though I thought I should keep a backup in case someday the content inside might be of help 😊.
 
