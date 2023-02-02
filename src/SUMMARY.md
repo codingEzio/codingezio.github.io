@@ -192,7 +192,7 @@
 - [201016 Booknote on Surface and Essense](./201016-booknote-on-Surface-and-Essense.md)
 - [200711 Booknote on 翻译新究](./200711-booknote-on-翻译新究.md)
 - [200707 Booknote on Too Much of A Good Thing](./200707-booknote-on-Too-Much-of-A-Good-Thing.md)
-- [200606 ](./200606-on-AI-Facial-Recognition.md)
+- [200606](./200606-on-AI-Facial-Recognition.md)
 - [200508 Booknote on Biology](./200508-booknote-on-Biology-Science-for-Life-with-Physiology.md)
 - [200215 Booknote on Author Lu Xun](./200215-booknote-on-Author-Lu-Xun.md)
 - [191106 Consume Less](./191106-consume-less.md)
