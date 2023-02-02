@@ -59,6 +59,7 @@
 - [MindLevelup](https://mindlevelup.wordpress.com/mindlevelup-the-book/introduction/)
 - [Radimentary](https://radimentary.wordpress.com/about/)
 - [The Highest of The Mountains](https://www.thehighestofthemountains.com/about.php#h5o-9)
+- [Illustrations by Liz Fosslien](https://www.fosslien.com/images)
 
 ### 三
 

@@ -1,12 +1,39 @@
-<!-- toc -->
 > Notes on eating well and smart
+<!-- toc -->
+
+## 阅文
+
+### Resources
+
+- [吃食物，不要吃食品](https://bookzone.cwgv.com.tw/article/678)
+- [健康飲食金字塔](https://www.chp.gov.hk/files/her/exn_nutp_025b_tc.pdf)
+
+### Notes
+
+#### 吃的四大原則
+
+- 吃「食物」，不吃「食品」
+- 多「植物」，少「動物」
+- 天然「調味」，少「煎炸」
+- 生吃「蔬菜」，吃「水果」
+
+#### 逐個解析「吃的四大原則」
+
+- 只吃自然產生的，避免有任何人類加工的
+- 主吃植物，并以「豆类、坚果、种子」为辅
+- 用天然调味料，不以涉及「油盐糖」式烹饪
+- 生蔬菜，所保有的营养物质较全 (depends)
+
+-----
+
+## 阅书
 
 ### Resources
 
 - [健康与美味兼得，我这样减少美食的卡路里 - 少数派](https://sspai.com/post/62832)
 - 书籍 [碱性法则：1921年发源于奥地利的14天减龄方案](https://www.goodreads.com/book/show/49643003) by 史蒂芬•多明尼克 (Stephan Domeni)
 
-### 书籍笔记「碱性法则」
+### Booknotes on *碱性法则*
 
 #### 简介碱性
 
