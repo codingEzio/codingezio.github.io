@@ -1,7 +1,7 @@
 > Resources that I need to digest and extract the ideas from
 <!-- toc -->
 
-> Eventually, these would be merged into dedicated topics like *Curated Life Advice*
+> Eventually, these would be merged into posts like [230202 Curated Life Advice](https://codingezio.github.io/230202-Curated-Life-Advice.html), or to each of their own topics
 
 ## Discussion
 
