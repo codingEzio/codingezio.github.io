@@ -7,7 +7,7 @@
 # Content
 
 - [230202 Curated Life Advice](./230202-Curated-Life-Advice.md)
-- [230202 On Layoff](./230202-on-Layoff.md)
+- [230202 On Layoff](./230202-On-Layoff.md)
 - [230202 On AI Tooling](./230202-on-AI-Tooling.md)
 - [230131 Uncategorized Shell Tasks](./230131-uncategorized-shell-tasks.md)
 - [230131 Self-Hosted Blog for Mdbook](./230131-self-hosted-blog-for-mdbook.md)
