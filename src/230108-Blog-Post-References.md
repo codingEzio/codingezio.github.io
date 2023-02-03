@@ -4,11 +4,13 @@
 ## What This is
 
 - All the relevant info collected for writing and updating blog posts.
-- I don't always have the time and energy to finish one off with extremely high quality
+- I don't always have the time and energy to finish one off with extremely high quality.
 - I will leave the references here for the moment for future processing.
 - All would eventually be turned into new posts or being incorporated into the old posts.
 
 -----
+
+> These images *might* be out of sync
 
 <img src="/202301/20230108-references-for-posts-part1.png" alt="An illustration of the overview of the references - part one" width="80%" height="auto" />
 <img src="/202301/20230108-references-for-posts-part2.png" alt="An illustration of the overview of the references - part two" width="90%" height="auto" />
@@ -355,5 +357,9 @@
 
 - [Bootiful Azure: Object Storage Service (5/6)](https://spring.io/blog/2019/01/17/bootiful-azure-object-storage-service-5-6)
 - [Can someone explain NAS to me? : hardware](https://old.reddit.com/r/hardware/comments/1p1nnk/can_someone_explain_nas_to_me/)
+
+## Terminology
+
+- [ELI5: What are handlers, function handlers, and handles?](https://old.reddit.com/r/learnprogramming/comments/k9fudc/eli5_what_are_handlers_function_handlers_and/)
 
 -----

@@ -17,7 +17,6 @@
 - [Scaling Spring Boot with Message Queues and Kubernetes](https://learnk8s.io/blog/scaling-spring-boot-microservices) <small>([*repo*](https://github.com/learnk8s/spring-boot-k8s-hpa))</small>
 - [macrozheng/mall-swarm](https://github.com/macrozheng/mall-swarm) <sup>[preview](https://www.macrozheng.com/admin/#/home)
 
-
 ### The Course
 
 - [Distributed Systems Lecture Series](https://www.youtube.com/playlist?list=PLeKd45zvjcDFUEv_ohr_HdUFe97RItdiB) by [Martin Kleppmann](https://martin.kleppmann.com/)
@@ -27,3 +26,11 @@
 ## Notes
 
 - N/A
+
+-----
+
+## Archived Resources
+
+> Things that wouldn't be of use in the near future
+
+- [An In-Depth Analysis of Distributed Transaction Solutions](https://www.alibabacloud.com/blog/an-in-depth-analysis-of-distributed-transaction-solutions_597232)
