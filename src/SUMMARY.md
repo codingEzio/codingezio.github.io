@@ -1,11 +1,12 @@
-# Foreword
+# Prologue
 
 - [221204 About This Blog](./221204-about-this-blog.md)
 - [220920 Why Write Blog](./220920-why-write-blog.md)
-- [220623 Blogging Platforms](./220623-blogging-platforms.md)
+- [230205 Navigating My Blog](./230205-Navigating-My-Blog.md)
 
 # Content
 
+- [230205 On Self-Modification](./230205-on-Self-Modification.md)
 - [230203 On Driving License](./230203-on-Driving-License.md)
 - [230202 Curated Life Advice](./230202-Curated-Life-Advice.md)
 - [230202 On Layoff](./230202-On-Layoff.md)
@@ -145,7 +146,8 @@
 - [220702 New Language Features](./220702-new-language-features.md)
 - [220701 Fetching Videos Online](./220701-fetching-videos-online.md)
 - [220628 Booknote on Database Internals](./220628-booknote-on-Database-Internals.md)
-- [220623 Stateless Midn](./220623-stateless-mind.md)
+- [220623 Stateless Mind](./220623-stateless-mind.md)
+- [220623 On Blogging Platform](./220623-on-Blogging-Platform.md)
 - [220608 Booknote on Picturing Womanchild](./220608-booknote-on-Picturing-the-WomanChild.md)
 - [220604 Booknote on 斜杠青年](./220604-booknote-on-斜杠青年.md)
 - [220520 Booknote on Algorithms to Live](./220520-booknote-on-Algorithms-to-Live-By.md)
@@ -227,4 +229,5 @@
 - [180930 On Reading](./180930-thoughts-on-reading.md)
 - [180901 Neuroenhancer](./180901-Neuroenhancer.md)
 - [180731 Booknote on Author Liu Yu](./180731-booknote-on-Author-Liu-Yu.md)
+- [010101 Project Ideas](./010101-Project-Ideas.md)
 - [010101 Practice List for LeetCode](./010101-Practice-List-for-LeetCode.md)

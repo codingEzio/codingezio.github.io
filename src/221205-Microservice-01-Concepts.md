@@ -13,6 +13,8 @@
 
 ### What
 
+#### This
+
 - Something happened
   - Lots of requests, but a single machine is weak
     - lots of users coming in
@@ -25,6 +27,16 @@
       - customers! take this queue number and we'll call you
       - customers! once the number87 customer is finished, then it's you
       - customers!
+
+#### Or This
+
+> In the first principle, everything’s we do in the process of writing code is to emulate the human actions.
+>
+> People are hard to manage? Split them into small groups. Less effort for communication, easier resolve for conflicts and so on.
+>
+> How do people communicate with the work they have done (or simply relaying information)? Through the mouth uttering the sound.. Through languages, of course. The abstractions in computer science could be think of the Inter-Process Communication. By itself, it’s just an abstraction, a general name for mediums like Files, Sockets, Message Queue and so on.
+>
+> Too many customers in your front-desk (or counters)? Log their information (who, when, urgency, what needs to be done and so on), process them (this could be think as the Message Queue IPC in a narrow sense).
 
 ### Why we build applications
 
