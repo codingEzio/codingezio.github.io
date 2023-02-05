@@ -13,9 +13,19 @@
 
 ### for *Creator*
 
-- [AIVA - The AI composing emotional soundtrack music](https://www.aiva.ai/)
-- [ElevenLabs || Prime Voice AI](https://beta.elevenlabs.io/)
+| PRODUCT | WHAT IT DOES |
+| :--- | :--- |
+| [AIVA](https://www.aiva.ai/) | *compose emotional music* |
+| [ElevenLabs](https://beta.elevenlabs.io/) | *text to speech* |
 
 ### for *Learner*
 
-- [MathGPT · Streamlit](https://mathgpt.streamlit.app/)
+| PRODUCT | WHAT IT DOES |
+| :--- | :--- |
+| [MathGPT](https://mathgpt.streamlit.app/) | *text to math solution* and *plot* |
+
+### for *Developer*
+
+| PRODUCT | WHAT IT DOES |
+| :--- | :--- |
+| [Bink](https://usebink.com)|  text to SQL|
