@@ -11,6 +11,7 @@
 ### Preparation for the *AI* Tsunami
 
 - [Dr Ray Kurzweil: 2022-2023 Updates](https://lifearchitect.ai/kurzweil/)
+- [Fun with +12 OOMs of Compute](https://www.lesswrong.com/posts/rzqACeBGycZtqCfaX/fun-with-12-ooms-of-compute#OmegaStar_)
 
 #### Ideas and Thoughts from *Twitter*
 
