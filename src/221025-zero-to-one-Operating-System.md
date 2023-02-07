@@ -20,12 +20,6 @@
 - [操作系统常见面试题总结](https://javaguide.cn/cs-basics/operating-system/operating-system-basic-questions-01.html)
 - 以及众多其他网站，如 [*Reddit*](http://reddit.com/), [*StackOverflow*](http://stackoverflow.com/), [*IBM*](https://www.ibm.com/docs/en/rhapsody/9.0.0?topic=reference-frameworks-operating-systems) 等等
 
-#### Beyond Interview Prep
-
-- [Beej's Guide to Unix IPC](https://beej.us/guide/bgipc/) <sup>[src](https://github.com/beejjorgensen/bgipc)</sup>
-- [Beej's Guide to Network Programming](https://beej.us/guide/bgnet/) <sup>[src](https://github.com/beejjorgensen/bgnet)</sup>
--
-
 ### How
 
 1. 阅读他人总结好的

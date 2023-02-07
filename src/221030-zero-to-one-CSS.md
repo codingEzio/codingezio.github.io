@@ -1,5 +1,5 @@
-<!-- toc -->
 > Notes on learning CSS to build amazing things
+<!-- toc -->
 
 ## Resources
 

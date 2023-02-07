@@ -1,9 +1,8 @@
-<!-- toc -->
 > Issue : Unable to Downgrade Flutter Properly
 
 ### Steps
 
-> You should already have Flutter 3 installed on your machine. Tribute to [Downgrade Flutter 3.0 to 2.10](https://www.youtube.com/watch?v=icY9x4qsFeY)
+> I assume you've already got Flutter 3 installed. References: [Downgrade Flutter 3.0 to 2.10](https://www.youtube.com/watch?v=icY9x4qsFeY)
 
 ```bash
 # The printed result were all based on my own machine (not universal!)
