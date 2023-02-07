@@ -2,12 +2,18 @@
 
 ## Prologue
 
+### Part One
+
 > Note that this post is more like public bookmarks for myself. It seemed that merely saving these as bookmarks weren't enough, whether they are which were saved in the browser, or services like [Raindrop.io](https://raindrop.io/). For me, I loves to categorize and minimize stuff, but that weren't an easy task for me as I need to archive every single one that I might need in the future, yet not too much to cause that *paralyzation* caused by Information Overload. Also, I did tried convert all these to *RSS*, unfortunately it became be very hard to get all the old posts which defeats the entire purpose of aggregating them together.
 >
 > I need an app to grab all that old posts and provide reasonable options to change the font size and such. Well, ***I found none*** at the moment. *NetNewsWire* is an excellent tool to grab the sweet *RSS* feed, but the limitation of *RSS* itself stopped me from using it. I either read all of them by opening a bunch of links in the browser, or consuming them in a hub that has all that inside.
 >
 > So what's the answer?
 >> Lol, I still do not have one yet. Though it seemed that writing on the topics that I was interested in into one or many posts did help a bit, not only I enjoy through the whole process but also actively produce stuff from them instead of the usual [read-never](https://www.wired.com/story/returning-to-reading/) for morden humans.
+
+### Part Two
+
+> The mere thought of not being able to *read* or *enjoy* them all makes me feel unwell. Anyway, keep going :)
 
 ## Resource
 
@@ -19,7 +25,6 @@
 ### 一
 
 - [Stephen Wolfram - *Publications*, *Writings* and *Speeches*](https://www.stephenwolfram.com/publications/)
-- [Naval](https://nav.al/archive)
 - [Po-Jen](https://www.coderbridge.com/@Po-Jen)
 - [GeekPlux](https://geekplux.com/posts)
 - [Hackery, Math & Design](https://acko.net/)
@@ -30,7 +35,6 @@
 - [Julia Evans](https://jvns.ca/)
 - [thesephist](https://thesephist.com/posts/)
 - [Cassie Evans's Blog](https://www.cassie.codes/)
-- [Thicket Forte](https://thicketforte.com/)
 - [Hakim El Hattab](https://hakim.se/)
 - [Peter Goldsborough](https://www.goldsborough.me/)
 - [大破进击](https://jesor.me/all/)
@@ -38,7 +42,6 @@
 - [Randy's Blog](https://lutaonan.com/)
 - [HuoJu's Blog](https://jhuo.ca/post/)
 - [Neel Nanda](https://www.neelnanda.io/)
-- [Reimu's blog](https://blog.k8s.li/)
 - [Erica Sadun](https://ericasadun.com/)
 - [inessential: weblog](https://inessential.com/)
 - [Owen的博客](https://www.owenyoung.com/)
@@ -48,6 +51,7 @@
 
 ### 二
 
+- [Naval](https://nav.al/archive)
 - [Something about Everything](https://www.zhihu.com/column/somethingabouteverything)
 - [别处Elsewhere](https://www.zhihu.com/column/elsewhere)
 - [困而学之](https://caminodetexas.substack.com/archive)
@@ -65,6 +69,12 @@
 
 - [ByteByteGo](https://blog.bytebytego.com/archive)
 - [Dineshchandgr](https://dineshchandgr.medium.com/) </small>(potential $5 paywall)</small>
+
+### 四
+
+- [一大加贝](https://tianheg.xyz/now/)
+- [Reimu's blog](https://blog.k8s.li/)
+- [Thicket Forte](https://thicketforte.com/)
 
 -----
 
@@ -135,3 +145,33 @@
 
 - playlist [Code Learning](https://www.youtube.com/@codelearning5921/playlists)
 - playlist [IT技术](https://www.youtube.com/playlist?list=PLHpfx416EzLPcj1JItKYftQDv8ghtoiXQ)
+
+-----
+
+## Community
+
+### Chinese Apps
+
+> Just saving for future reference as I mostly go for **books** and communities like *StackOverflow*, *Reddit* for answers I needed
+
+- [知乎](https://zhihu.com/): *browse with intentions* then you are good
+- [小红书](https://www.xiaohongshu.com/): *life travia* like [*Life Pro Tips*](https://old.reddit.com/r/LifeProTips/)
+- [即刻](https://www.okjike.com/): *inbetween Douban and Twitter*
+
+### Specifically *Reddit*
+
+> To be honest, unless you are browsing with *some kinds of clear goals*, you are still wasting your life no matter how high the quality those posts are
+
+#### For *Explanation*
+
+- [Explain Like I'm Five](https://old.reddit.com/r/explainlikeimfive/)
+
+#### For *Broaden Perspective*
+
+- [Futurology](https://old.reddit.com/r/Futurology/)
+- [InternetIsBeautiful](https://old.reddit.com/r/InternetIsBeautiful/)
+
+#### For *Illustration*
+
+- [Infographics](https://old.reddit.com/r/Infographics/)
+- [Cool Guides](https://old.reddit.com/r/coolguides/)

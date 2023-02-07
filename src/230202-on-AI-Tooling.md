@@ -29,3 +29,9 @@
 | PRODUCT | WHAT IT DOES |
 | :--- | :--- |
 | [Bink](https://usebink.com)|  text to SQL|
+
+### for .. *Anyone*
+
+| PRODUCT | WHAT IT DOES |
+| :--- | :--- |
+| [Rationale](https://rationale.jina.ai/) | *decision-making* |
