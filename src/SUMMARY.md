@@ -6,6 +6,8 @@
 
 # Content
 
+- [230209 On Society](./230209-on-Society.md)
+- [230209 On AI Preparation for the *AI* Tsunami](./230209-on-AI-Prepare-for-the-AI-Tsunami.md)
 - [230209 Random Pictures on the Internet](./230209-Random-Pictures-on-the-Internet.md)
 - [230207 One to Infinity OS](./230207-one-to-infinity-Operating-System.md)
 - [230205 On Self-Modification](./230205-on-Self-Modification.md)

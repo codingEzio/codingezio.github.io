@@ -94,6 +94,7 @@
 - [Longreads](https://longreads.com/)
 - [LessWrong](https://www.lesswrong.com/)
 - [Harvard Business Review](https://hbr.org/)
+- [Current Market Valuation](https://www.currentmarketvaluation.com/)
 
 ### 三
 

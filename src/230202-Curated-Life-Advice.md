@@ -217,3 +217,13 @@
 > #TODO Extract core ideas and say them in my own words
 >
 > 「但另一個角度來說，這也算是一種傲慢，一種「認為自己很爛」的傲慢，誰有資格定論自己很爛？搞不好事實上自己沒那麼爛；就算自己真的並不怎麼樣，但經驗總是有參考價值，只要分享出去，總是能夠幫助到一些人。」
+
+### [一个人怎么创造销量接近 200 万份的独立游戏](https://twitter.com/nishuang/status/1563282903890821124) <sup>[src](https://www.youtube.com/watch?v=KNC_kUPIYDg)</sup>
+
+- 只做最核心的事。极端聚焦，坚决不做任何“也许不错”的事
+- 公开开发，在社区里获取反馈，和未来粉丝一起推进
+- 产品本身有特色
+
+### [辅修专业](https://twitter.com/rooster19140101/status/1547637295712309251)
+
+> 我快退休了，每天主要工作还是 coding. 以我多年的经验来看，***有***某种***专业背景***的程序员很是抢手。其年资也很重要。学computer science 的同学们最好**辅修**，或**进修一门感兴趣的专业** <small>(***多面手***)</small>。不然很容易沦落为general labor.

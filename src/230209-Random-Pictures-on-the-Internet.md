@@ -23,7 +23,7 @@
 
 | [en_us](https://www.facebook.com/alliesacademy/posts/2620480108247888)             |  [zh_cn](https://twitter.com/translate_cn/status/1494303638990168064) |
 |:-------------------------:|:-------------------------:|
-| <img src="./202302/20230209-intersectionality-discrimination-privilege-enus.jpg" alt="Illustration of Intersectionality where power intersects which is also related to discrimination and priviledge" width="100%" height="70%" />  | <img src="./202302/20230209-intersectionality-discrimination-privilege-zhcn.jpg" alt="Illustration of Intersectionality where power intersects which is also related to discrimination and priviledge" width="100%" height="70%" /> |
+| <img src="./202302/20230209-intersectionality-discrimination-privilege-enus.jpg" alt="Illustration of Intersectionality where power intersects which is also related to discrimination and priviledge" width="50%" height="70%" />  | <img src="./202302/20230209-intersectionality-discrimination-privilege-zhcn.jpg" alt="Illustration of Intersectionality where power intersects which is also related to discrimination and priviledge" width="50%" height="70%" /> |
 
 ### pic002 [The Arecibo Message](https://en.wikipedia.org/wiki/Arecibo_message)
 
@@ -47,7 +47,7 @@
 
 | Detailed |  Simplified |
 |:-------------------------:|:-------------------------:|
-| <img src="./202302/20230209-societal-issues-versus-the-mass-detailed.jpeg" alt="Illustration of societal issues versus the mass - detailed" width="100%" height="70%" />  | <img src="./202302/20230209-societal-issues-versus-the-mass-simplified.jpg" alt="Illustration of societal issues versus the mass - simplified" width="100%" height="70%"  /> |
+| <img src="./202302/20230209-societal-issues-versus-the-mass-detailed.jpeg" alt="Illustration of societal issues versus the mass - detailed" width="50%" height="70%" />  | <img src="./202302/20230209-societal-issues-versus-the-mass-simplified.jpg" alt="Illustration of societal issues versus the mass - simplified" width="50%" height="70%"  /> |
 
 ## Quotation
 

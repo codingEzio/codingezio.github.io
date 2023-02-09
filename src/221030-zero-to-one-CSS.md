@@ -1,74 +1,52 @@
 > Notes on learning CSS to build amazing things
 <!-- toc -->
 
-## Resources
-
-> Read, practice and write blog about it!
-
-- Book
-  - [CSS Mine: Dig into Web UI Development](https://cssmine.com/ebook/intro)
-- Reference
-  - [Dribble](https://dribbble.com/shots/popular)
-  - [CSS Reference](https://tympanus.net/codrops/css_reference/)
-- Tutorial
-  - [A Complete Guide to CSS Grid | CSS-Tricks - CSS-Tricks](https://css-tricks.com/snippets/css/complete-guide-grid/)
-  - [A Complete Guide to Flexbox | CSS-Tricks - CSS-Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-  - [A Complete Guide to CSS Concepts and Fundamentals](https://www.taniarascia.com/overview-of-css-concepts/)
-- Examples to learn from
-  - [Flexbox Patterns - Intro](https://flexboxpatterns.com/)
-  - [CSS Code Examples](https://freefrontend.com/css-code-examples/#sitemap-layouts)
-  - [JavaScript Code Examples](https://freefrontend.com/javascript-code-examples/)
-- Snippets to use
-  - [A collection of popular layouts and patterns made with CSS - CSS Layout](https://csslayout.io/)
-  - [Free Open Source Tailwind CSS Components | HyperUI](https://www.hyperui.dev/)
-
 ## Thoughts
-
-#### Foreword
 
 > Watched a lot of CSS videos, done a lot exercises on websites like *w3school*, still have no idea to build a functional layout.
 >
 > Of course, I could just copy a template that looks familiar to my liking or the website I'm gonna build. But still, if you haven't got the foundations built, you wouldn't where to start modifying, especially you want to use some modern frameworks like *Bulma* or *Tailwind*.
 >
-> I said to myself I'm gonna be a *Backend Developer*. Well, it's better know it all, right? It's an amazing feeling when you got the whole development process <small>(also known as *Fullstack*)</small> at your hand.
+> I said to myself I'm gonna be a *Backend Developer*. Well, it's better know it all, right? It's an amazing feeling when you have the whole development process <small>(also known as *Fullstack*)</small> under your control.
 >
 > Sidenote
 >> When I say *modern*, it means it's *new* and *interesting*
-BootStrap is still amazing (so I heard) though.
+BootStrap is still relevant (so I heard) I guess in this case.
 
-## Notes
+## Basics
 
-#### Concept
+### Semantic
 
 - The HTML will always have some types of styling attached to them
 
- > It's called *User Agent Styles*. Why? Because *HTML* is just like *Markdown*, they are markup languages. It means it was merely texts, and the actual styling must be done by the software (whether it's renderer for the *Markdown* or the *Browser* for rendering HTML code).
+  > It's called *User Agent Styles*. Why? Because *HTML* is just like *Markdown*, they are markup languages. It means it was merely texts, and the actual styling must be done by the software (whether it's renderer for the *Markdown* or the *Browser* for rendering HTML code).
 
 - Specificity
 
- > Based my experience, more clearer path wins. Or you could just debug them using the developer console.
+  > Based my experience, more clearer path wins. Or you could just debug them using the developer console.
 
-- Font
+### Font
 
- > Keywords: `monospace`, `sans` and `sans-serif`
+> Keyword: `monospace`, `sans` and `sans-serif`
 
- ```css
- /* These were the built-in fonts for OSs below if not being tampered */
+```css
+/* These were the built-in fonts for OSs below if not being tampered */
 
- .for-windows {
+.for-windows {
   font-family: Arial, Lucida, Impact, Times New Roman, Courier New, Tahoma, Comic Sans, Verdana, Georgia, Garamond;
- }
+}
 
- .for-macos {
+.for-macos {
   font-family: Helvetica, Futura, Bodoni, Times, Palatino, Courier, Gill Sans, Geneva, Baskerville, Andale Mono;
- }
- ```
+}
+```
 
-- Layout Model
+### Layout Model
 
-- Three types of them
-    1. Dumb built-in methods like `position` and such
-    2. Newly introduced *CSS Flexbox* and *CSS Grid*
+> Three types of them
+
+1. Dumb built-in methods like `position` and such
+2. Newly introduced *CSS Flexbox* and *CSS Grid*
 
     > More methods dedicated to the layout are available to you
 
@@ -83,60 +61,64 @@ BootStrap is still amazing (so I heard) though.
     }
     ```
 
-    3. Frameworks like *Bootstrap* because back then we do not have things like *Flexbox*
+3. Frameworks like *Bootstrap* as we do not have things like *Flexbox* back then
 
-- Variable
+### Variable
 
-  ```css
-  /* Global and Local Variable */
-  :root {
-    --global-variable-color: red;
-  }
+```css
+/* Global and Local Variable */
+:root {
+  --global-variable-color: red;
+}
 
-  .whatever {
-    --non-global-color: white;
+.whatever {
+  --non-global-color: white;
 
-    color:            var(--global-variable-color);
-    background-color: var(--non-global-color);
-  }
-
-
-  /* Inline Declaration */
-  .btn {
-    padding: 2rem 4rem;
-
-    font-size: var(--button-size, 0.6em);
-
-    background: transparent;
-    border: 2px solid var(--color, black);
-    border-radius: 2px;
-  }
-
-  .btn.special-button {
-    --color: red;
-    --button-size: 1.2em;
-  }
+  color:            var(--global-variable-color);
+  background-color: var(--non-global-color);
+}
 
 
-  /* Calculation */
-  .header {
-    --space: calc(16px * 2);
+/* Inline Declaration */
+.btn {
+  padding: 2rem 4rem;
 
-    font-size: var(--space);
-  }
+  font-size: var(--button-size, 0.6em);
+
+  background: transparent;
+  border: 2px solid var(--color, black);
+  border-radius: 2px;
+}
+
+.btn.special-button {
+  --color: red;
+  --button-size: 1.2em;
+}
 
 
-  /* Inheritence */
-  div {
-    --ft-size: 17px;
-  }
+/* Calculation */
+.header {
+  --space: calc(16px * 2);
 
-  div.footer {
-    font-size: var(--ft-size);
-  }
-  ```
+  font-size: var(--space);
+}
 
-## Practice
+
+/* Inheritence */
+div {
+  --ft-size: 17px;
+}
+
+div.footer {
+  font-size: var(--ft-size);
+}
+```
+
+-----
+
+## Tiny Projects
+
+### Components
 
 > On [*CodePen*](https://codepen.io/)
 
@@ -147,25 +129,63 @@ BootStrap is still amazing (so I heard) though.
 5. [CSS Variable > Theme Switch](https://codepen.io/techmale/pen/rNKeKdp)
 6. [CSS Variable > Color Preview](https://codepen.io/techmale/pen/OJENwBO)
 7. [CSS Layout > Music Player](https://codepen.io/techmale/pen/eYKzGPG)
-8. Random snippet from my React project <small>(with *TailwindCSS*)</small>
 
-    > Display all the images in the same size ()
+### Code Excerpt
 
-    ```css
-    <motion.div
-        whileHover={{ scale: 1.2 }}
-        className="w-40 h-40 -mt-8 drop-shadow-2xl"
-      >
-      <img
-        whileHover={{ scale: 1.07 }}
-        src={item?.imageURL}
-        alt="Random"
+- One from my React project <small>(using *TailwindCSS*)</small>
 
-        /**
-          object-contain    crop while retain all the details
-          object-cover      crop while might crop out details (pleasing to me)
-        */
-        className="w-full h-full object-contain"
-      />
-    </motion.div>
-    ```
+  ```css
+  <motion.div
+      whileHover={{ scale: 1.2 }}
+      className="w-40 h-40 -mt-8 drop-shadow-2xl"
+    >
+    <img
+      whileHover={{ scale: 1.07 }}
+      src={item?.imageURL}
+      alt="Random"
+
+      /**
+        object-contain    crop while retain all the details
+        object-cover      crop while might crop out details (pleasing to me)
+      */
+      className="w-full h-full object-contain"
+    />
+  </motion.div>
+  ```
+
+-----
+
+## Resources
+
+### Book
+
+- [CSS Mine: Dig into Web UI Development](https://cssmine.com/ebook/intro)
+
+### Reference
+
+- [Dribble](https://dribbble.com/shots/popular)
+- [CSS Reference](https://tympanus.net/codrops/css_reference/)
+
+### Tutorial
+
+- [A Complete Guide to CSS Grid | CSS-Tricks - CSS-Tricks](https://css-tricks.com/snippets/css/complete-guide-grid/)
+- [A Complete Guide to Flexbox | CSS-Tricks - CSS-Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+- [A Complete Guide to CSS Concepts and Fundamentals](https://www.taniarascia.com/overview-of-css-concepts/)
+
+### Examples to Learn
+
+- [Flexbox Patterns - Intro](https://flexboxpatterns.com/)
+- [CSS Code Examples](https://freefrontend.com/css-code-examples/#sitemap-layouts)
+- [JavaScript Code Examples](https://freefrontend.com/javascript-code-examples/)
+- [Landingfolio - Landing Page Design Inspiration](https://www.landingfolio.com/)
+
+### Snippets to Use
+
+- [A collection of popular layouts and patterns made with CSS - CSS Layout](https://csslayout.io/)
+- [Free Open Source Tailwind CSS Components | HyperUI](https://www.hyperui.dev/)
+
+-----
+
+## Good to Have
+
+- [Tilt-to-read](https://codepen.io/ninivert/full/JEPzxO) <sup>[src](https://codepen.io/ninivert/pen/JEPzxO)</sup>
