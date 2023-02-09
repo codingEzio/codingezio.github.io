@@ -5,6 +5,8 @@
 
 ### Why
 
+> A well-put explanation by [硅谷王川 Chuan @Svwang1](https://twitter.com/Svwang1/status/1586093468450836483)
+
 - Scalable
 - Portable
 - Traceable
@@ -30,6 +32,7 @@
 | Documentation | Markdown, Asciidoc |
 | Comment | Github Copilot |
 | UI | Flutter |
+| Real-world Contract | Solidity<small>(-ish)</small> |
 
 ### Detailed Explanation
 

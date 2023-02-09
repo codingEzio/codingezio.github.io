@@ -1,5 +1,15 @@
 <!-- toc -->
 
+## Notes
+
+### [What *ChatGPT* is Really All About](https://twitter.com/thecat/status/1599918939081179136)
+
+> "Language models don't actually understand the world, they understand relationships between lexemes, they aren't intelligent in the same way that a motion picture isn't really moving."
+>
+> Mine: *The lexemes were produced by humans. Suppose all the world knowledge were stored in a library, ChatGPT is the one who read them all and give you <small>(at least)</small> a reasonable gist of the book.*
+
+## Resources
+
 ### Topics around *ChatGPT*
 
 > that I want to dive in
@@ -19,6 +29,7 @@
 - [硅谷王川: GPT-4 明年二季度 / OpenAI 的算力赶上人脑](https://twitter.com/Svwang1/status/1605371548394610688)
 - [Sterling Crispin: AI Model PaLM more powerful then OpenAI](https://twitter.com/sterlingcrispin/status/1606064292926615552)
 - [kevinzhow: 近乎无限的获得这种智力资源 / 人类是无法面对这次浪潮的](https://twitter.com/kevinzhow/status/1600029430562230272)
+- [Steam & Magic @xuwenhao: 推演 ChatGPT 之后会发生什么](https://twitter.com/xuwenhao/status/1618438401937768448)
 
 ### For the Outsiders to Enjoy
 

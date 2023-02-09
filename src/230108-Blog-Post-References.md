@@ -86,6 +86,7 @@
 
 ## Overview
 
+- [Redis Explained](https://architecturenotes.co/redis/)
 - [Zero to Master - Part 1](https://www.openmymind.net/2011/11/8/Redis-Zero-To-Master-In-30-Minutes-Part-1/)
 - [Zero to Master - Part 2](https://www.openmymind.net/2011/11/8/Redis-Zero-To-Master-In-30-Minutes-Part-2/)
 

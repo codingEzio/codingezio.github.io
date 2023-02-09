@@ -6,6 +6,7 @@
 
 # Content
 
+- [230209 Random Pictures on the Internet](./230209-Random-Pictures-on-the-Internet.md)
 - [230207 One to Infinity OS](./230207-one-to-infinity-Operating-System.md)
 - [230205 On Self-Modification](./230205-on-Self-Modification.md)
 - [230203 On Driving License](./230203-on-Driving-License.md)
@@ -24,7 +25,7 @@
 - [230126 Booknote on Second Mountain](./230126-booknote-on-The-Second-Mountain.md)
 - [230125 On Housing](./230125-on-Housing.md)
 - [230125 On Diabetes](./230125-on-Diabetes.md)
-- [230125 On Being Drunk](./230125-on-Being-Drunk.md)
+- [230125 On Alcoholic Beverage](./230125-on-Alcoholic-Beverage.md)
 - [230124 On Everything as Code](./230124-on-Everything-as-Code.md)
 - [230123 Read Essay on Identify Personal Strenth](./230123-Read-Essay-on-How-to-Identify-Personal-Strength.md)
 - [230123 Read Essay on Four Thousand Weeks](./230123-Read-Essay-on-Four-Thousand-Weeks.md)
@@ -75,7 +76,7 @@
 - [221218 On Entertainment around Space](./221218-on-Entertainment-around-Space.md)
 - [221218 My Translation Candidate](./221218-My-Translation-Candidate.md)
 - [221216 On Functional Programming](./221216-on-Functional-Programming.md)
-- [221209 Quotations from Human](./221209-Quotations-from-Human.md)
+- [221209 Random Quotations on the Internet](./221209-Random-Quotations-on-the-Internet.md)
 - [221207 Algorithm LeetCode for SQL Problems](./221207-Algorithm-LeetCode-for-SQL-Problems.md)
 - [221207 Algorithm LeetCode for General Algorithms](./221207-Algorithm-LeetCode-for-General-Problems.md)
 - [221207 Algorithm Learn with AI](./221207-Algorithm-learn-with-AI.md)
@@ -95,6 +96,7 @@
 - [221204 My Translation for Video 10~30 (min)](./221204-My-Translation-for-Video-010min-to-030min.md)
 - [221204 My Translation for Video 00~10 (min)](./221204-My-Translation-for-Video-000min-to-010min.md)
 - [221202 On Presentation](./221202-on-Presentation.md)
+- [221202 On Learning English](./221202-on-Learning-English.md)
 - [221202 On Learning German](./221202-on-Learning-German.md)
 - [221202 Issue Spring Swagger Failed to Start](./221202-issue-Spring-Swagger-failed-to-start.md)
 - [221202 Issue Spring MapStruct IDEA Failed to Build](./221202-issue-Spring-MapStruct-IDEA-failed-to-build.md)

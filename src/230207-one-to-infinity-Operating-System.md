@@ -12,3 +12,4 @@
 
 - [cfenollosa/os-tutorial: Create an OS from scratch](https://github.com/cfenollosa/os-tutorial)
 - [chenyukang/Panda: A hobby OS](https://github.com/chenyukang/Panda)
+- [OSDev Wiki](https://wiki.osdev.org/Expanded_Main_Page)

@@ -4,6 +4,7 @@
 ## Resource Hub
 
 - [Future Tools](https://www.futuretools.io/)
+- [Futurepedia](https://www.futurepedia.io/)
 - [ChatGPT, AI and GPT-3 Apps and Use Cases](https://gpt3demo.com/)
 - [hades217/awesome-ai](https://github.com/hades217/awesome-ai)
 
@@ -34,4 +35,7 @@
 
 | PRODUCT | WHAT IT DOES |
 | :--- | :--- |
+| [ChatGPT](https://chat.openai.com/) | Check it yourself |
+| [Perplexity AI](https://www.perplexity.ai/) | An Alternative to *ChatGPT*! |
 | [Rationale](https://rationale.jina.ai/) | *decision-making* |
+| [Chat Simplifier](https://chat-simplifier.imzbb.cc/) | *simpify your WeChat group discussions*

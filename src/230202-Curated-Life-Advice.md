@@ -62,7 +62,7 @@
 - When they abandon their morality, keep yours.
 - Madness in the crowd is not an excuse for personal degeneration.
 
-### [人生的经验分享](https://twitter.com/luoleiorg/status/1521171023965474822)
+### [人生的信念与经验](https://twitter.com/OdysseysEth/status/1573111877991006208) <sup>[screenshot](https://twitter.com/luoleiorg/status/1521171023965474822)</sup>
 
 - You can't succeed by doing what others are doing
 - Level of You: avg(5_people, interacted_the_most)
@@ -146,6 +146,12 @@
 
 ## On *Career*
 
+### [卷](https://twitter.com/yuanotes/status/1549776998322827264)
+
+- 国内其实一点都不卷，
+- 各个企业的管理层，压根就不看哈佛商业评论、不看书 == 菜鸡互啄，接受一点信息就是看微信公众号二手评论。
+- In short, 你所谓的「卷」非「卷」
+
 ### [Things I’ve Learned as a Software Engineer](https://www.simplethread.com/20-things-ive-learned-in-my-20-years-as-a-software-engineer/)
 
 - 持续学习：学并教
@@ -205,3 +211,9 @@
   - 高技术门槛的
   - 有创造力的
   - 有颠覆性的
+
+### [寫了超過十萬字才發現，個人品牌的重要性被我低估了](https://leafwind.tw/2020/12/24/underestimated-personal-brand/)
+
+> #TODO Extract core ideas and say them in my own words
+>
+> 「但另一個角度來說，這也算是一種傲慢，一種「認為自己很爛」的傲慢，誰有資格定論自己很爛？搞不好事實上自己沒那麼爛；就算自己真的並不怎麼樣，但經驗總是有參考價值，只要分享出去，總是能夠幫助到一些人。」

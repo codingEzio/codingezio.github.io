@@ -23,3 +23,9 @@
 
 - [Do you prefer to Build Your Own Auth, or Use Some Library or Provider (e.g. Auth0)](https://old.reddit.com/r/webdev/comments/vmoccf/do_you_prefer_to_build_your_own_auth_or_use_some/)
 - [What is Auth0 and How Does it Work](https://old.reddit.com/r/explainlikeimfive/comments/pfus5n/eli5_what_is_auth0_and_how_does_it_work/)
+
+-----
+
+## Good to Have
+
+- [An Alternative to *Auth0*: Zitadel](https://github.com/zitadel/zitadel)

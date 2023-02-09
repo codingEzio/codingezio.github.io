@@ -64,11 +64,12 @@
 - [Radimentary](https://radimentary.wordpress.com/about/)
 - [The Highest of The Mountains](https://www.thehighestofthemountains.com/about.php#h5o-9)
 - [Illustrations by Liz Fosslien](https://www.fosslien.com/images)
+- [ByteByteGo](https://blog.bytebytego.com/archive)
 
 ### 三
 
-- [ByteByteGo](https://blog.bytebytego.com/archive)
-- [Dineshchandgr](https://dineshchandgr.medium.com/) </small>(potential $5 paywall)</small>
+- [Dineshchandgr](https://dineshchandgr.medium.com/) </small>(paywall $5/m)</small>
+- [System Design & Software Architectures Explained](https://architecturenotes.co/) </small>(paywall $9/m)</small>
 
 ### 四
 
@@ -92,6 +93,7 @@
 - [Nautilus](https://nautil.us/)
 - [Longreads](https://longreads.com/)
 - [LessWrong](https://www.lesswrong.com/)
+- [Harvard Business Review](https://hbr.org/)
 
 ### 三
 

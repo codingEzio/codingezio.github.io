@@ -32,6 +32,10 @@
 - Not in a normal level of insulin that the body should have
 - Could cause a whole bunch of worse problems like Hypertension<sup>Type 2</sup>
 
+## Tips Derived from Real-world Observations
+
+- [饭后即测血糖，更具参考价值的 metric](https://twitter.com/OraclMachine/status/1612641009737043969)
+
 -----
 
 ## References

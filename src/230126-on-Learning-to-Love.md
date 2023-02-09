@@ -39,11 +39,18 @@
 - Consider it requires Continuous Learning
 - Consider it's a Learning Experience for the *Self*
 
+### Apology
+
+1. Apologize early
+2. Recap where you did wrong
+3. Promise How you're gonna make it right from now on
+
 ### Continuous Learning
 
 | RESOURCE | NOTES |
 | :--- | :--- |
-| [我們一定得談戀愛嗎?](https://www.youtube.com/watch?v=bHVKaLFjUo0) on [文森說書](https://www.youtube.com/@vincent_reading/videos) | 👈 Not really a good title<br/>👉 Love despite faults, basically |
+| [我們一定得談戀愛嗎?](https://www.youtube.com/watch?v=bHVKaLFjUo0) on [文森說書](https://www.youtube.com/@vincent_reading/videos) | 👈 Not really a good title<br/>👉 [Love despite faults](https://www.goodreads.com/quotes/267314-you-don-t-love-because-you-love-despite-not-for-the#:~:text=despite%20the%20faults), basically |
+| [異男生態觀察：為什麼我們常常在人際關係上卡住?](https://www.youtube.com/watch?v=WYnjNQSFsIQ) | [*图片链接*](https://twitter.com/case32bfk/status/1542895935394844672)<br/><img src="./202302/20230209-learn-to-love.png" alt="Illustration of sarcasm about whether the knowledge is useful depends on who holds it" width="60%" height="50%" /> |
 
 ----
 
@@ -53,12 +60,12 @@
 
 > Unless you have an idea about what *Feminism* really is **all about** or **strives for**, you don't know shit about *How to Love*.
 
-#### Slang
+#### Slang/Slur
 
-> It all comes down to *Gene* that you inherited from *X* million years ago. And fuck everyone that promotes and actively using slangs like this <small>(it's normally a two or three-character word said mostly by males)</small>
+> Fuck everyone that promotes and actively using slangs like [this](https://zh.wikipedia.org/wiki/Category:%E5%AF%B9%E5%A5%B3%E6%80%A7%E7%9A%84%E8%B4%AC%E7%A7%B0) <small>(it's normally a two or three-character word said mostly by males)</small>
 
-- 字字
-- 字字字
+- 🖕🖕
+- 🖕🖕🖕
 
 -----
 
@@ -72,6 +79,8 @@
 
 ### Anything Else
 
-- [Quote by William Faulkner: "You don’t love because .. despite the faults"](https://www.goodreads.com/quotes/267314-you-don-t-love-because-you-love-despite-not-for-the#:~:text=despite%20the%20faults)
-- [分類:對女性的貶稱](https://zh.wikipedia.org/wiki/Category:%E5%AF%B9%E5%A5%B3%E6%80%A7%E7%9A%84%E8%B4%AC%E7%A7%B0)
-- [分類:女性貶抑](https://zh.wikipedia.org/wiki/Category:%E5%A5%B3%E6%80%A7%E8%B2%B6%E6%8A%91)
+- [暴躁涤纶 @ZizekButler - 拉康说，爱就是互相交换对方的匮乏](https://twitter.com/ZizekButler/status/1613357022938009600)
+
+-----
+
+> [Esdomera](https://www.etsy.com/shop/Esdomera)

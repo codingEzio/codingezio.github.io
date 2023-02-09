@@ -1,7 +1,10 @@
 > Crash Course to Java
+>> Essential concepts you need to know
 <!-- toc -->
 
 # Notes
+
+> Do please also check out the references listed down below
 
 ## Basics
 
@@ -338,7 +341,10 @@ catch (IOException exception) {
 
 ### Snippet 17 Serialization
 
-- N/A
+#### Overview
+
+Language objects to Bytes \| Bytes to Language objects
+Architecture-independent <small>(0/1)</small> |
 
 ### Snippet 18 Annotation
 
