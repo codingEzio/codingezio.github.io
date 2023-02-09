@@ -10,15 +10,6 @@
 
 -----
 
-> These images *might* be out of sync
-
-<img src="/202301/20230108-references-for-posts-part1.png" alt="An illustration of the overview of the references - part one" width="80%" height="auto" />
-<img src="/202301/20230108-references-for-posts-part2.png" alt="An illustration of the overview of the references - part two" width="90%" height="auto" />
-<img src="/202301/20230108-references-for-posts-part3.png" alt="An illustration of the overview of the references - part three" width="90%" height="auto" />
-<img src="/202301/20230108-references-for-posts-part4.png" alt="An illustration of the overview of the references - part four" width="90%" height="auto" />
-
------
-
 # RDBMS
 
 ## Storage Engine
