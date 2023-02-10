@@ -6,6 +6,7 @@
 
 # Content
 
+- [230209 On Web3](./230209-on-Web3.md)
 - [230209 On Society](./230209-on-Society.md)
 - [230209 On AI Preparation for the *AI* Tsunami](./230209-on-AI-Prepare-for-the-AI-Tsunami.md)
 - [230209 Random Pictures on the Internet](./230209-Random-Pictures-on-the-Internet.md)

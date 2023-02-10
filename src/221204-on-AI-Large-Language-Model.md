@@ -15,8 +15,6 @@
 - [A ChatGPT Story about ChatGPT Doom](https://www.lesswrong.com/posts/R4qcDeFdE2QzHLBFQ/a-chatgpt-story-about-chatgpt-doom)
 - [Everything I Understand about ChatGPT](https://gist.github.com/veekaybee/6f8885e9906aa9c5408ebe5c7e870698)
 
------
-
 ## Build Your Own LLM
 
 > The hardware: [Affordable GPUs for Data Scientists](https://medium.datadriveninvestor.com/an-affordable-gpu-for-data-scientists-db376450117)
@@ -30,3 +28,15 @@
 
 - [fauxpilot/fauxpilot: FauxPilot - an open-source GitHub Copilot server](https://github.com/fauxpilot/fauxpilot/tree/main)
 - [CodedotAl/gpt-code-clippy: An open source version of GitHub Copilot](https://github.com/CodedotAl/gpt-code-clippy/tree/camera-ready)
+
+-----
+
+## Make Full Use of It
+
+### Resource
+
+- [f/awesome-chatgpt-prompts](https://github.com/f/awesome-chatgpt-prompts)
+
+### My Own
+
+- N/A

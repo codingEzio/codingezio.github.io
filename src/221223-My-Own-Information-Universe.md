@@ -114,10 +114,17 @@
 
 ## Tooling
 
-> For AI-oriented tooling, see my [another post](https://codingezio.github.io/230202-on-AI-Tooling.html)
+### Audited
 
+- For AI-oriented tooling, see [*230202 On AI Tooling*](https://codingezio.github.io/230202-on-AI-Tooling.html)
 - [Free for Developers](https://free-for.dev/)
 - [小众软件](https://www.appinn.com/)
+
+### Not Audited Yet
+
+- [OneHack.Us - Awesome Collection Of Useful Websites](https://onehack.us/t/good-sites-awesome-collection-of-useful-websites/167476)
+- [OneHack.Us - Learn Anything On Anything](https://onehack.us/t/awesome-websites-learn-anything-on-anything/174612)
+- [OneHack.Us - Blogs on Various Fields](https://onehack.us/t/awesome-blogs-massive-resources-collection/174502) <small>(mostly programming)</small>
 
 -----
 
