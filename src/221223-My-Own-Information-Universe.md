@@ -168,7 +168,7 @@
 - [小红书](https://www.xiaohongshu.com/): *life travia* like [*Life Pro Tips*](https://old.reddit.com/r/LifeProTips/)
 - [即刻](https://www.okjike.com/): *inbetween Douban and Twitter*
 
-### Specifically *Reddit*
+### for *Reddit*
 
 > To be honest, unless you are browsing with *some kinds of clear goals*, you are still wasting your life no matter how high the quality those posts are
 
@@ -185,3 +185,15 @@
 
 - [Infographics](https://old.reddit.com/r/Infographics/)
 - [Cool Guides](https://old.reddit.com/r/coolguides/)
+
+### for *Twitter*
+
+> A way to let me be more consuming the information actively by *unfollow* then *access them individually here*, instead of just browsing through the timelines mindlessly :)
+
+#### N/A
+
+- N/A
+
+#### N/A
+
+- N/A
