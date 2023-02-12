@@ -17,3 +17,12 @@ for file in $(find . -name "*.md"); do
 
 done
 ```
+
+## Perform Commands in Every Directory
+
+> References: [`tldr for`](https://www.gnu.org/software/bash/manual/bash.html#Looping-Constructs)
+
+```bash
+for proj in */; do (code "$proj"; echo "Loop is executed") done
+for proj in */; do (cd "$proj" && git checkout -b dev; echo "Switched") done
+```

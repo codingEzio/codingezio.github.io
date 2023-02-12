@@ -1061,6 +1061,7 @@ by <a href="https://cs.pku.edu.cn/info/1082/1282.htm">肖臻</a></li>
 </tbody></table>
 </div><div style="break-before: page; page-break-before: always;"></div><ul>
 <li><a href="230131-uncategorized-shell-tasks.html#add-content-to-the-beginning-of-multiple-file">Add Content to the Beginning of Multiple File</a></li>
+<li><a href="230131-uncategorized-shell-tasks.html#perform-commands-in-every-directory">Perform Commands in Every Directory</a></li>
 </ul>
 <h2 id="add-content-to-the-beginning-of-multiple-file"><a class="header" href="#add-content-to-the-beginning-of-multiple-file">Add Content to the Beginning of <strong>Multiple</strong> File</a></h2>
 <blockquote>
@@ -1077,6 +1078,13 @@ for file in $(find . -name &quot;*.md&quot;); do
   mv $file.modified $file
 
 done
+</code></pre>
+<h2 id="perform-commands-in-every-directory"><a class="header" href="#perform-commands-in-every-directory">Perform Commands in Every Directory</a></h2>
+<blockquote>
+<p>References: <a href="https://www.gnu.org/software/bash/manual/bash.html#Looping-Constructs"><code>tldr for</code></a></p>
+</blockquote>
+<pre><code class="language-bash">for proj in */; do (code &quot;$proj&quot;; echo &quot;Loop is executed&quot;) done
+for proj in */; do (cd &quot;$proj&quot; &amp;&amp; git checkout -b dev; echo &quot;Switched&quot;) done
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><blockquote>
 <p>Steps of using Mdbook for my blog hosted on Github Pages</p>
@@ -21240,6 +21248,7 @@ It takes way longer, but it’s worth it.</p>
 <ul>
 <li><a href="010101-Project-Ideas.html#iteration-01">Iteration 01</a></li>
 <li><a href="010101-Project-Ideas.html#iteration-02">Iteration 02</a></li>
+<li><a href="010101-Project-Ideas.html#iteration-03">Iteration 03</a></li>
 </ul>
 </li>
 <li><a href="010101-Project-Ideas.html#synchronize-everything">Synchronize Everything</a></li>
@@ -21360,6 +21369,10 @@ It takes way longer, but it’s worth it.</p>
 <li>to Mdbook</li>
 </ul>
 </li>
+</ul>
+<h3 id="iteration-03"><a class="header" href="#iteration-03">Iteration 03</a></h3>
+<ul>
+<li>Name: <em>Make It Count</em></li>
 </ul>
 <hr />
 <h2 id="synchronize-everything"><a class="header" href="#synchronize-everything">Synchronize Everything</a></h2>
