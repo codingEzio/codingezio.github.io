@@ -159,6 +159,13 @@ for file in $(find . -name &quot;*.md&quot;); do
 
 done
 </code></pre>
+<h2 id="perform-commands-in-every-directory"><a class="header" href="#perform-commands-in-every-directory">Perform Commands in Every Directory</a></h2>
+<blockquote>
+<p>References: <a href="https://www.gnu.org/software/bash/manual/bash.html#Looping-Constructs"><code>tldr for</code></a></p>
+</blockquote>
+<pre><code class="language-bash">for proj in */; do (code &quot;$proj&quot;; echo &quot;Loop is executed&quot;) done
+for proj in */; do (cd &quot;$proj&quot; &amp;&amp; git checkout -b dev; echo &quot;Switched&quot;) done
+</code></pre>
 
                     </main>
 
