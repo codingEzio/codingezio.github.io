@@ -173,6 +173,16 @@ ON        P.PersonId = A.PersonId
 
 ```
 
+### [1757. 可回收且低脂的产品](https://leetcode.cn/problems/recyclable-and-low-fat-products/)
+
+```sql
+# Write your MySQL query statement below
+SELECT p.product_id
+FROM   products AS p
+WHERE  low_fats = 'Y' AND 
+       recyclable = 'Y'
+```
+
 #### [1795. 每个产品在不同商店的价格](https://leetcode.cn/problems/rearrange-products-table/)
 
 ```sql

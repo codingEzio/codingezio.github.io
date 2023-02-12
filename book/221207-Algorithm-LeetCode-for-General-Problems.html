@@ -210,6 +210,7 @@
 </li>
 <li><a href="#past-2000">Past 2000</a>
 <ul>
+<li><a href="#2011-final-value-of-variable-after-performing-operations">2011. Final Value of Variable After Performing Operations</a></li>
 <li><a href="#2185-counting-words-with-a-given-prefix">2185. Counting Words With a Given Prefix</a></li>
 <li><a href="#references">References</a>
 <ul>
@@ -1260,6 +1261,19 @@ class Solution:
 </code></pre>
 <hr />
 <h2 id="past-2000"><a class="header" href="#past-2000">Past 2000</a></h2>
+<h3 id="2011-final-value-of-variable-after-performing-operations"><a class="header" href="#2011-final-value-of-variable-after-performing-operations">2011. Final Value of Variable After Performing Operations</a></h3>
+<pre><code class="language-python">class Solution:
+    def finalValueAfterOperations(self, operations: List[str]) -&gt; int:
+        total = 0
+        
+        for elem in operations:
+            if &quot;+&quot; in elem:
+                total += 1
+            elif &quot;-&quot; in elem:
+                total -= 1
+                
+        return total
+</code></pre>
 <h3 id="2185-counting-words-with-a-given-prefix"><a class="header" href="#2185-counting-words-with-a-given-prefix">2185. Counting Words With a Given Prefix</a></h3>
 <pre><code class="language-python">class Solution:
     def prefixCount(self, words: List[str], pref: str) -&gt; int:

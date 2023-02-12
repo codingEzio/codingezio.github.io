@@ -1160,6 +1160,22 @@ class Solution:
 
 ## Past 2000
 
+### 2011. Final Value of Variable After Performing Operations 
+
+```python
+class Solution:
+    def finalValueAfterOperations(self, operations: List[str]) -> int:
+        total = 0
+        
+        for elem in operations:
+            if "+" in elem:
+                total += 1
+            elif "-" in elem:
+                total -= 1
+                
+        return total
+```
+
 ### 2185. Counting Words With a Given Prefix
 
 ```python

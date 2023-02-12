@@ -174,7 +174,11 @@
 <li><a href="#1141-%E6%9F%A5%E8%AF%A2%E8%BF%9130%E5%A4%A9%E6%B4%BB%E8%B7%83%E7%94%A8%E6%88%B7%E6%95%B0">1141. 查询近30天活跃用户数</a></li>
 <li><a href="#1179-%E9%87%8D%E6%96%B0%E6%A0%BC%E5%BC%8F%E5%8C%96%E9%83%A8%E9%97%A8%E8%A1%A8">1179. 重新格式化部门表</a></li>
 <li><a href="#1484-%E6%8C%89%E6%97%A5%E6%9C%9F%E5%88%86%E7%BB%84%E9%94%80%E5%94%AE%E4%BA%A7%E5%93%81">1484. 按日期分组销售产品</a></li>
+<li><a href="#1757-%E5%8F%AF%E5%9B%9E%E6%94%B6%E4%B8%94%E4%BD%8E%E8%84%82%E7%9A%84%E4%BA%A7%E5%93%81">1757. 可回收且低脂的产品</a>
+<ul>
 <li><a href="#1795-%E6%AF%8F%E4%B8%AA%E4%BA%A7%E5%93%81%E5%9C%A8%E4%B8%8D%E5%90%8C%E5%95%86%E5%BA%97%E7%9A%84%E4%BB%B7%E6%A0%BC">1795. 每个产品在不同商店的价格</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -284,6 +288,13 @@ ON        P.PersonId = A.PersonId
 <h4 id="1484-按日期分组销售产品"><a class="header" href="#1484-按日期分组销售产品"><a href="https://leetcode.cn/problems/group-sold-products-by-the-date/">1484. 按日期分组销售产品</a></a></h4>
 <pre><code class="language-sql"># placeholder
 
+</code></pre>
+<h3 id="1757-可回收且低脂的产品"><a class="header" href="#1757-可回收且低脂的产品"><a href="https://leetcode.cn/problems/recyclable-and-low-fat-products/">1757. 可回收且低脂的产品</a></a></h3>
+<pre><code class="language-sql"># Write your MySQL query statement below
+SELECT p.product_id
+FROM   products AS p
+WHERE  low_fats = 'Y' AND 
+       recyclable = 'Y'
 </code></pre>
 <h4 id="1795-每个产品在不同商店的价格"><a class="header" href="#1795-每个产品在不同商店的价格"><a href="https://leetcode.cn/problems/rearrange-products-table/">1795. 每个产品在不同商店的价格</a></a></h4>
 <pre><code class="language-sql"># placeholder
