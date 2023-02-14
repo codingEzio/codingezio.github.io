@@ -1193,6 +1193,20 @@ class Solution:
         return amountMatched
 ```
 
+### 2469. Convert the Temperature
+
+```python
+class Solution:
+    def convertTemperature(self, celsius: float) -> List[float]:
+        C = celsius
+        K, F = 0, 0
+        
+        K = C + 273.15
+        F = C * 1.8 + 32.00
+        
+        return (K, F)
+```
+
 -----
 
 ### References
