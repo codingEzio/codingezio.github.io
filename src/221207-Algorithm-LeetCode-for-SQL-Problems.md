@@ -173,6 +173,20 @@ ON        P.PersonId = A.PersonId
 
 ```
 
+### [1527. 患某种疾病的患者 - 力扣（LeetCode）](https://leetcode.cn/problems/patients-with-a-condition/)
+
+```sql
+# Write your MySQL query statement below
+SELECT 
+    patient_id, patient_name, conditions
+FROM 
+    Patients
+WHERE
+    conditions LIKE "DIAB1%"
+    OR
+    conditions LIKE "% DIAB1%"
+```
+
 ### [1741. 查找每个员工花费的总时间](https://leetcode.cn/problems/find-total-time-spent-by-each-employee/)
 
 ```sql
