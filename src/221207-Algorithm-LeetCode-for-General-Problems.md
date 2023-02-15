@@ -997,6 +997,29 @@ class Solution:
         self.inorderTraversal(node.right, aggregator)
 ```
 
+### 0234. Palindrome Linked List
+
+```python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def isPalindrome(self, head: Optional[ListNode]) -> bool:
+        res = []
+        another_head = head
+        
+        # It’s quite slow though (beats 8% only)
+        while another_head is not None:
+            res.append(another_head.val)
+            another_head = another_head.next
+        
+        # This is the only line that matters, as it compares
+        # with itself with the reversed version.
+        return res == res[::-1]
+```
+
 ### 0238. Product of Array Except Self
 
 ```python
@@ -1069,6 +1092,37 @@ class Solution:
         Do not return anything, modify nums in-place instead.
         """
         pass
+```
+
+### 0338. Counting Bits
+
+```python
+class Solution:
+    def countBits(self, n: int) -> List[int]:
+        # Given 3, the nums shall be [0, 1, 2, 3] (N+1)
+        # What we want is get their bins and check the 1s
+
+        # We could preallocate it with None(s) or something
+        # but that would not be necessary as `append` would
+        # suffice.
+        res = []
+
+        res.append(0)
+
+        # For odd numbers (just add one based on the previous even number)
+        #   1    2   3     4    5
+        #   1,  10, 11,   100, 101
+        #   1, {10, 11}, {100, 101}
+        # For even numbers (power of 2 -> 1, no? use the one based on odd nums)
+        #   2    3     4   5   6     7 
+        #  {10} {11} {100}   {110} {111}
+        for i in range(1, n+1):
+            if i % 2 == 1:
+                res.append(res[i-1] + 1)
+            elif i % 2 == 0:
+                res.append(res[i//2])
+
+        return res
 ```
 
 ### 0347. Top K Frequent Elements
