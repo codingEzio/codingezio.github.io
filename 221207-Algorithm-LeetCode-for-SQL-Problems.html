@@ -253,6 +253,17 @@ ON        P.PersonId = A.PersonId
 <pre><code class="language-sql"># placeholder
 
 </code></pre>
+<h3 id="1527-患某种疾病的患者---力扣leetcode"><a class="header" href="#1527-患某种疾病的患者---力扣leetcode"><a href="https://leetcode.cn/problems/patients-with-a-condition/">1527. 患某种疾病的患者 - 力扣（LeetCode）</a></a></h3>
+<pre><code class="language-sql"># Write your MySQL query statement below
+SELECT 
+    patient_id, patient_name, conditions
+FROM 
+    Patients
+WHERE
+    conditions LIKE &quot;DIAB1%&quot;
+    OR
+    conditions LIKE &quot;% DIAB1%&quot;
+</code></pre>
 <h3 id="1741-查找每个员工花费的总时间"><a class="header" href="#1741-查找每个员工花费的总时间"><a href="https://leetcode.cn/problems/find-total-time-spent-by-each-employee/">1741. 查找每个员工花费的总时间</a></a></h3>
 <pre><code class="language-sql"># Write your MySQL query statement below
 SELECT 
