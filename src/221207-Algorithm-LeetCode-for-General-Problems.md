@@ -673,20 +673,6 @@ class Solution:
         return max(L, R) + 1
 ```
 
-### 0124. Binary Tree Maximum Path Sum
-
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def maxPathSum(self, root: TreeNode) -> int:
-        pass
-```
-
 ### 0125. Valid Palindrome
 
 ```java
@@ -965,7 +951,7 @@ class Solution:
 
 ### 0208. Implement Trie (Prefix Tree)
 
-```x
+```python
 ```
 
 ### 0217. Contains Duplicate
@@ -1127,17 +1113,6 @@ class Solution {
         return true;
     }
 }
-```
-
-### 0283. Move Zeros
-
-```python
-class Solution:
-    def moveZeroes(self, nums: List[int]) -> None:
-        """
-        Do not return anything, modify nums in-place instead.
-        """
-        pass
 ```
 
 ### 0338. Counting Bits
@@ -1319,6 +1294,7 @@ class Solution:
 #### Good to Have
 
 - [Grind 75 - A better Blind 75 you can customize, by the author of Blind 75](https://www.techinterviewhandbook.org/grind75)
+- [Algorithms Lab <small>(HackMD)</small>](https://hackmd.io/@arthurzllu/SkZBc7GoI) by [Zheng-Liang Lu](https://hackmd.io/@arthurzllu)
 
 -----
 

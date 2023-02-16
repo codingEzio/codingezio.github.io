@@ -9,18 +9,21 @@
 
 ### Resources
 
-#### YouTube
+#### By [melodysheep](https://www.youtube.com/@melodysheep/videos)
 
-##### By [melodysheep](https://www.youtube.com/@melodysheep/videos)
-
+- [x] [THE SIGHTS OF SPACE: A Voyage to Spectacular Alien Worlds](https://www.youtube.com/watch?v=HTHj_pvEYYE)
 - [x] [In the Blink of an Eye: Space in an Instant](https://www.youtube.com/watch?v=fdQyD8B_odY)
 - [x] [TIMELAPSE OF THE FUTURE: A Journey to the End of Time](https://www.youtube.com/watch?v=uD4izuDMUQA)
-- [ ] [THE SIGHTS OF SPACE: A Voyage to Spectacular Alien Worlds](https://www.youtube.com/watch?v=HTHj_pvEYYE)
 - [x] [LIFE BEYOND 1. Alien life, deep time, and our place in cosmic history](https://www.youtube.com/watch?v=SUelbSa-OkA)
 - [x] [LIFE BEYOND 2: The Museum of Alien Life](https://www.youtube.com/watch?v=ThDYazipjSI)
 - [ ] [LIFE BEYOND 3: In Search of Giants. The Hunt for Intelligent Alien Life](https://www.youtube.com/watch?v=saWNMPL5ygk)
 
-##### By [PBS Space Time](https://www.youtube.com/@pbsspacetime/videos)
+#### By [LEMMiNO](https://www.youtube.com/@LEMMiNO/videos)
+
+- [x] [Bygone Visions of Cosmic Neighbors](https://www.youtube.com/watch?v=LhfCietvDZo)
+- [x] [Consumed by the Apocalypse](https://www.youtube.com/watch?v=nx2-4l4s4Nw)
+
+#### By [PBS Space Time](https://www.youtube.com/@pbsspacetime/videos)
 
 - [x] [Why Is 1/137 One of the Greatest Unsolved Problems In Physics?](https://www.youtube.com/watch?v=RCSSgxV9qNw)
 - [x] [Where Is The Center of The Universe?](https://www.youtube.com/watch?v=BOLHtIWLkHg)
@@ -31,4 +34,4 @@
 - [ ] [How To Build The Universe in a Computer](https://www.youtube.com/watch?v=D-wzdsSiemU)
 - [ ] [First Detection of Light from Behind a Black Hole](https://www.youtube.com/watch?v=I9y62qoTsic)
 - [ ] [How Quantum Entanglement Creates Entropy](https://www.youtube.com/watch?v=vgYQglmYU-8)
-- [ ] [Can Space Be Infinitely Divided?](https://www.youtube.com/watch?v=snp-GvNgUt4)
+- [x] [Can Space Be Infinitely Divided?](https://www.youtube.com/watch?v=snp-GvNgUt4)
