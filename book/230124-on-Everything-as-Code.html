@@ -145,29 +145,30 @@
 <p>[some software term] as code = Automation</p>
 </blockquote>
 <ul>
-<li><a href="#notes">Notes</a>
+<li><a href="#prologue">Prologue</a>
 <ul>
 <li><a href="#why">Why</a></li>
 <li><a href="#overview">Overview</a></li>
-<li><a href="#detailed-explanation">Detailed Explanation</a>
-<ul>
-<li><a href="#eli5-%E4%BB%80%E4%B9%88%E6%98%AF-terraform-%E5%B0%9A%E5%AE%9E%E6%93%8D">ELI5 什么是 Terraform (尚实操)</a></li>
 </ul>
 </li>
+<li><a href="#demystification">Demystification</a>
+<ul>
+<li><a href="#terraform-and-ansible">Terraform and Ansible</a></li>
+<li><a href="#ansible-and-puppet">Ansible and Puppet</a></li>
 </ul>
 </li>
 <li><a href="#references">References</a>
 <ul>
-<li><a href="#%E4%B8%80">一</a></li>
-<li><a href="#%E4%BA%8C">二</a></li>
-<li><a href="#%E4%B8%89">三</a></li>
+<li><a href="#confusion">Confusion</a></li>
+<li><a href="#experiment">Experiment</a></li>
+<li><a href="#concept">Concept</a></li>
 </ul>
 </li>
 </ul>
-<h2 id="notes"><a class="header" href="#notes">Notes</a></h2>
+<h2 id="prologue"><a class="header" href="#prologue">Prologue</a></h2>
 <h3 id="why"><a class="header" href="#why">Why</a></h3>
 <blockquote>
-<p>A well-put explanation by <a href="https://twitter.com/Svwang1/status/1586093468450836483">硅谷王川 Chuan @Svwang1</a></p>
+<p>A well-put explanation by</p>
 </blockquote>
 <ul>
 <li>Scalable</li>
@@ -178,29 +179,32 @@
 <li>Shared Understanding</li>
 </ul>
 <h3 id="overview"><a class="header" href="#overview">Overview</a></h3>
+<blockquote>
+<p><code>✅</code>: <em>familiar with it</em>, <code>🧐</code>: <em>needed to learn more</em></p>
+</blockquote>
 <div class="table-wrapper"><table><thead><tr><th style="text-align: left"><em>EVERYTHING</em></th><th style="text-align: left">PROJ</th></tr></thead><tbody>
-<tr><td style="text-align: left">Build</td><td style="text-align: left">Maven, Gradle, Webpack, Make</td></tr>
-<tr><td style="text-align: left">Test</td><td style="text-align: left">JUnit, Selenium</td></tr>
-<tr><td style="text-align: left">Pipeline</td><td style="text-align: left">Jenkins, Github Actions</td></tr>
-<tr><td style="text-align: left">Infrastructure</td><td style="text-align: left">Terraform</td></tr>
-<tr><td style="text-align: left">Database</td><td style="text-align: left">SQL Schema</td></tr>
-<tr><td style="text-align: left">Presentation</td><td style="text-align: left">Marp</td></tr>
-<tr><td style="text-align: left">Diagram</td><td style="text-align: left">Mermaid</td></tr>
-<tr><td style="text-align: left">Environment</td><td style="text-align: left">Vagrant, Docker</td></tr>
-<tr><td style="text-align: left">Architecture</td><td style="text-align: left">Structurizr</td></tr>
-<tr><td style="text-align: left">Configuration</td><td style="text-align: left">Ansible, Chef, Puppet</td></tr>
-<tr><td style="text-align: left">3D CAD Model</td><td style="text-align: left">OpenSCAD</td></tr>
-<tr><td style="text-align: left">Documentation</td><td style="text-align: left">Markdown, Asciidoc</td></tr>
-<tr><td style="text-align: left">Comment</td><td style="text-align: left">Github Copilot</td></tr>
-<tr><td style="text-align: left">UI</td><td style="text-align: left">Flutter</td></tr>
-<tr><td style="text-align: left">Real-world Contract</td><td style="text-align: left">Solidity<small>(-ish)</small></td></tr>
+<tr><td style="text-align: left">Build</td><td style="text-align: left">✅ Maven, 🧐 Gradle, 🧐 Webpack, 🧐 Make</td></tr>
+<tr><td style="text-align: left">Test</td><td style="text-align: left">🧐 JUnit, 🧐 Selenium</td></tr>
+<tr><td style="text-align: left">Pipeline</td><td style="text-align: left">🧐 Jenkins, ✅ Github Actions</td></tr>
+<tr><td style="text-align: left">Infrastructure</td><td style="text-align: left">🧐 Terraform</td></tr>
+<tr><td style="text-align: left">Database</td><td style="text-align: left">✅ SQL Schema</td></tr>
+<tr><td style="text-align: left">Presentation</td><td style="text-align: left">✅ <a href="https://marp.app/">Marp</a></td></tr>
+<tr><td style="text-align: left">Diagram</td><td style="text-align: left">🧐 <a href="https://mermaid.js.org">Mermaid</a></td></tr>
+<tr><td style="text-align: left">Environment</td><td style="text-align: left">✅ Vagrant, ✅ Docker</td></tr>
+<tr><td style="text-align: left">Architecture</td><td style="text-align: left">✅ <a href="https://github.com/structurizr">Structurizr</a></td></tr>
+<tr><td style="text-align: left">Configuration</td><td style="text-align: left">🧐 <a href="https://www.ansible.com/overview/how-ansible-works">Ansible</a>, 🧐 <a href="https://www.puppet.com/docs/puppetdb/7/overview.html">Puppet</a>, 🧐 <a href="https://www.chef.io/products/chef-infra">Chef</a></td></tr>
+<tr><td style="text-align: left">3D CAD Model</td><td style="text-align: left">✅ <a href="https://openscad.org/">OpenSCAD</a></td></tr>
+<tr><td style="text-align: left">Documentation</td><td style="text-align: left">✅ Markdown, 🧐 Asciidoc</td></tr>
+<tr><td style="text-align: left">Comment</td><td style="text-align: left">✅ <a href="https://github.com/features/copilot">Github Copilot</a></td></tr>
+<tr><td style="text-align: left">UI</td><td style="text-align: left">🧐 <a href="https://docs.flutter.dev/get-started/flutter-for/declarative">Flutter</a></td></tr>
+<tr><td style="text-align: left">Real-world Contract</td><td style="text-align: left">🧐 <a href="https://docs.soliditylang.org/en/v0.8.18/">Solidity</a></td></tr>
 </tbody></table>
 </div>
-<h3 id="detailed-explanation"><a class="header" href="#detailed-explanation">Detailed Explanation</a></h3>
-<h4 id="eli5-什么是-terraform-尚实操"><a class="header" href="#eli5-什么是-terraform-尚实操">ELI5 什么是 Terraform (尚实操)</a></h4>
+<h2 id="demystification"><a class="header" href="#demystification">Demystification</a></h2>
 <blockquote>
-<p><a href="https://old.reddit.com/r/explainlikeimfive/comments/hfkmya/eli5what_is_the_purpose_of_terraform_computer/">Purpose of Terraform</a> and <a href="https://old.reddit.com/r/Terraform/comments/qlm3ew/newbie_questions_about_cicd_and_how_terraforms/">Terraform's place in CI/CD</a></p>
+<p>Inline refereces were strongly recommended to read!</p>
 </blockquote>
+<h3 id="terraform-and-ansible"><a class="header" href="#terraform-and-ansible"><em>Terraform</em> and <em>Ansible</em></a></h3>
 <ul>
 <li>Infrastructure as Code</li>
 <li>自动化 数记/跟踪 你的基础架构</li>
@@ -211,30 +215,49 @@
 <li>管理架构下的 resource</li>
 <li>如需 scale up, apply one-machine-config to ALL</li>
 </ul>
+<h3 id="ansible-and-puppet"><a class="header" href="#ansible-and-puppet"><em>Ansible</em> and <em>Puppet</em></a></h3>
+<blockquote>
+<p>Summary: use cli X to <strong>deploy</strong> with the <strong>config</strong> (its X format)</p>
+</blockquote>
+<ul>
+<li>Yes, it's Configuration Management</li>
+<li>Yes, it's Configuration Management for <a href="https://old.reddit.com/r/sysadmin/comments/1dfft0/puppet_what_do_you_use_it_for/">OS and Apps</a></li>
+<li>Yes, it's Configuration Management but it needs to be ran :)</li>
+<li>So just choose one that <a href="https://old.reddit.com/r/sysadmin/comments/2k3ggs/puppet_should_i_use_it/">feels good and suits you</a></li>
+<li>So the <em>config management</em> is coupled with <em>deploy with that config</em></li>
+<li><em>Ansible</em> turns those manual deployment into <em>one cli with a <code>yaml</code> file</em>, like:
+<ul>
+<li>Downloading the software</li>
+<li>Copy the configuration</li>
+<li>Start up the service</li>
+<li>Check the status</li>
+</ul>
+</li>
+</ul>
 <hr />
 <h2 id="references"><a class="header" href="#references">References</a></h2>
-<h3 id="一"><a class="header" href="#一">一</a></h3>
+<h3 id="confusion"><a class="header" href="#confusion">Confusion</a></h3>
 <ul>
-<li><a href="https://hackernoon.com/everything-as-code-explained-0ibg32a3">What is Everything-as-Code? Examining the Explosion of &quot;as Code&quot; Buzzwords | HackerNoon</a></li>
-<li><a href="https://www.jedi.be/blog/2022/02/23/trends-and-inventory-of-50-as-code-concepts/"><strong>In-depth Research and Trends Analyzed from 50+ Different Concepts as Code</strong></a></li>
+<li><a href="https://old.reddit.com/r/explainlikeimfive/comments/hfkmya/eli5what_is_the_purpose_of_terraform_computer/">Purpose of Terraform</a></li>
+<li><a href="https://old.reddit.com/r/Terraform/comments/qlm3ew/newbie_questions_about_cicd_and_how_terraforms/">Terraform's place in CI/CD</a></li>
+<li><a href="https://www.redhat.com/en/topics/automation/ansible-vs-terraform">Ansible vs. Terraform, Clarified</a></li>
+<li><a href="https://old.reddit.com/r/devops/comments/q9s2vq/cant_justify_terraform_an_ansible_perspective/">Can’t Justify Terraform (An Ansible perspective)</a></li>
+<li><a href="https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_intro.html">Ansible Playbooks</a></li>
 </ul>
-<h3 id="二"><a class="header" href="#二">二</a></h3>
+<h3 id="experiment"><a class="header" href="#experiment">Experiment</a></h3>
 <ul>
-<li><a href="https://renenyffenegger.ch/notes/development/as-code/index">X as code</a></li>
-<li><a href="https://github.com/lreimer/everything-as-code">lreimer/everything-as-code: Everything-as-code. A Polyglot Experiment.</a></li>
+<li><a href="https://github.com/lreimer/everything-as-code">lreimer/everything-as-code: A Polyglot Experiment</a></li>
+</ul>
+<h3 id="concept"><a class="header" href="#concept">Concept</a></h3>
+<ul>
+<li><a href="https://www.jedi.be/blog/2022/02/23/trends-and-inventory-of-50-as-code-concepts/"><strong>In-depth Research and Trends about X as Code</strong></a></li>
 <li><a href="https://openpracticelibrary.com/practice/everything-as-code/">Everything-as-Code</a></li>
-<li><a href="https://www.redhat.com/en/topics/automation/ansible-vs-terraform">Ansible vs. Terraform, clarified</a></li>
-<li><a href="https://old.reddit.com/r/devops/comments/q9s2vq/cant_justify_terraform_an_ansible_perspective/">Can’t Justify Terraform (An Ansible perspective) : devops</a></li>
+<li><a href="https://renenyffenegger.ch/notes/development/as-code/index">X as code</a></li>
+<li><a href="https://twitter.com/Svwang1/status/1586093468450836483">软件化的几个基本特点</a> by <a href="https://chuan.us/">硅谷王川</a></li>
+<li><a href="https://hackernoon.com/everything-as-code-explained-0ibg32a3">What is Everything-as-Code? Examining the Explosion of &quot;as Code&quot; Buzzwords | HackerNoon</a></li>
 <li><a href="https://octopus.com/blog/what-is-everything-as-code#other-examples-of-everything-as-code">What is Everything as Code? - Octopus Deploy</a></li>
 <li><a href="https://quadralogics.com/research/XAsCode.html">Understanding X as A Code</a></li>
 <li><a href="https://www.writethedocs.org/guide/docs-as-code/">Docs as Code — Write the Docs</a></li>
-<li><a href="https://docs.flutter.dev/get-started/flutter-for/declarative">Introduction to Declarative UI | Flutter</a></li>
-</ul>
-<h3 id="三"><a class="header" href="#三">三</a></h3>
-<ul>
-<li><a href="https://marp.app/">Marp: Markdown Presentation Ecosystem</a></li>
-<li><a href="https://mermaid.js.org/#/">Mermaid | Diagramming and charting tool</a>- <a href="https://github.com/structurizr">Structurizr - C4 Models as Code</a></li>
-<li><a href="https://openscad.org/">OpenSCAD - The Programmers Solid 3D CAD Modeller</a></li>
 </ul>
 
                     </main>
