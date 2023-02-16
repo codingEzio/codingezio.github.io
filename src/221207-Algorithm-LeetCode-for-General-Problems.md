@@ -263,6 +263,47 @@ class Solution:
         return dummy.next
 ```
 
+### 0020. Valid Parentheses
+
+```java
+class Solution {
+    public boolean isValid(String s) {
+        // Possible scenarios
+        //  Sole Pair               []
+        //  Multiple Pairs          []()
+        //  Nested Sole Pair        [()]
+        //  Nested Multiple Pair    [()]{}
+
+        // Ways of tackling this
+        //  Check if it's ( [ {     Save
+        //  Check if it's ) ] }     Pop if matched or False
+
+        Stack<Character> stackToCompare = new Stack<>();
+
+        for (char c : s.toCharArary()) {
+            if (c == '(' || c == '[' || c == '{') {
+                stackToCompare.push(c);
+            } else {
+                if (!stackToCompare.isEmpty() || stackToCompare.peek() == getCompanion(c)) {
+                    stackToCompare.pop();
+                } else {
+                    return false;
+                }
+            }
+        }
+
+        // It shall not have any left-overs (unless it's something like '{')
+        return stackToCompare.isEmpty();
+    }
+
+    public Character getCompanion(char partPair) {
+        if (partPair == ')') return '(';
+        if (partPair == ']') return '[';
+        return '{';
+    }
+}
+```
+
 ### 0021. Merge Two Sorted Lists
 
 ```python
@@ -922,6 +963,11 @@ class Solution:
         return dummy.next
 ```
 
+### 0208. Implement Trie (Prefix Tree)
+
+```x
+```
+
 ### 0217. Contains Duplicate
 
 ```java
@@ -1009,12 +1055,12 @@ class Solution:
     def isPalindrome(self, head: Optional[ListNode]) -> bool:
         res = []
         another_head = head
-        
+
         # It’s quite slow though (beats 8% only)
         while another_head is not None:
             res.append(another_head.val)
             another_head = another_head.next
-        
+
         # This is the only line that matters, as it compares
         # with itself with the reversed version.
         return res == res[::-1]
@@ -1114,7 +1160,7 @@ class Solution:
         #   1,  10, 11,   100, 101
         #   1, {10, 11}, {100, 101}
         # For even numbers (power of 2 -> 1, no? use the one based on odd nums)
-        #   2    3     4   5   6     7 
+        #   2    3     4   5   6     7
         #  {10} {11} {100}   {110} {111}
         for i in range(1, n+1):
             if i % 2 == 1:
@@ -1214,19 +1260,19 @@ class Solution:
 
 ## Past 2000
 
-### 2011. Final Value of Variable After Performing Operations 
+### 2011. Final Value of Variable After Performing Operations
 
 ```python
 class Solution:
     def finalValueAfterOperations(self, operations: List[str]) -> int:
         total = 0
-        
+
         for elem in operations:
             if "+" in elem:
                 total += 1
             elif "-" in elem:
                 total -= 1
-                
+
         return total
 ```
 
@@ -1254,10 +1300,10 @@ class Solution:
     def convertTemperature(self, celsius: float) -> List[float]:
         C = celsius
         K, F = 0, 0
-        
+
         K = C + 273.15
         F = C * 1.8 + 32.00
-        
+
         return (K, F)
 ```
 

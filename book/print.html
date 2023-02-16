@@ -4599,33 +4599,53 @@ They are <em>watchers of the future</em></p>
 <li>N/A</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><ul>
-<li><a href="221222-on-Web-Server.html#before-we-begin">Before We Begin</a></li>
-<li><a href="221222-on-Web-Server.html#concepts">Concepts</a></li>
-<li><a href="221222-on-Web-Server.html#usage">Usage</a></li>
+<li><a href="221222-on-Web-Server.html#prologue">Prologue</a>
+<ul>
+<li><a href="221222-on-Web-Server.html#choice">Choice</a></li>
+</ul>
+</li>
+<li><a href="221222-on-Web-Server.html#na">N/A</a>
+<ul>
+<li><a href="221222-on-Web-Server.html#na-1">N/A</a></li>
+</ul>
+</li>
+<li><a href="221222-on-Web-Server.html#na-2">N/A</a>
+<ul>
+<li><a href="221222-on-Web-Server.html#na-3">N/A</a></li>
+</ul>
+</li>
 <li><a href="221222-on-Web-Server.html#references">References</a>
 <ul>
 <li><a href="221222-on-Web-Server.html#learning-materials">Learning Materials</a></li>
-<li><a href="221222-on-Web-Server.html#source-code">Source Code</a></li>
-<li><a href="221222-on-Web-Server.html#directly-inspired">Directly Inspired</a></li>
-<li><a href="221222-on-Web-Server.html#terminology">Terminology</a></li>
-<li><a href="221222-on-Web-Server.html#references-for-references">References for References</a></li>
+<li><a href="221222-on-Web-Server.html#demystification">Demystification</a></li>
+<li><a href="221222-on-Web-Server.html#diving-deep-into-the-source">Diving Deep into the Source</a></li>
 </ul>
 </li>
 </ul>
-<h2 id="before-we-begin"><a class="header" href="#before-we-begin">Before We Begin</a></h2>
+<h2 id="prologue-2"><a class="header" href="#prologue-2">Prologue</a></h2>
 <blockquote>
-<p>This is for fun</p>
+<p>These were just speculation and guesswork 🤒</p>
 </blockquote>
-<h2 id="concepts-1"><a class="header" href="#concepts-1">Concepts</a></h2>
+<h3 id="choice"><a class="header" href="#choice">Choice</a></h3>
 <ul>
-<li><input disabled="" type="checkbox"/>
-TODO</li>
-</ul>
-<h2 id="usage-1"><a class="header" href="#usage-1">Usage</a></h2>
+<li>There were <strong>tons</strong> of alternatives to <em>Nginx</em> and <em>Apache</em>, it's just that they were <em>famous</em> and <em>widely used</em></li>
+<li>You gotta understand the WHY for needing <em>A SERVER</em></li>
+<li>You could even just use code <small>(e.g. Express.js)</small> instead of a dedicated server</li>
+<li>The lines were blurry if you weren't sure what you actually need
+<blockquote>
+<p>Consider this list as an inexact hierarchy of servers. Servering stuff is <em>easy</em>, yet you normally need more advanced features like <em>Load Balancing</em>. And those advanced stuff were done way better in the group of higher level softwares/servers.</p>
+</blockquote>
 <ul>
-<li><input disabled="" type="checkbox"/>
-TODO</li>
+<li>Using <a href="https://expressjs.com/"><em>Express.js</em></a> to start one counts as a server</li>
+<li>Using <a href="https://gunicorn.org/"><em>Gunicorn</em></a> counts as a server as well</li>
+<li>Using <a href="https://docs.nginx.com/nginx/admin-guide/web-server/"><em>Nginx</em></a> could definitely be counted as one as well</li>
 </ul>
+</li>
+</ul>
+<h2 id="na-8"><a class="header" href="#na-8">N/A</a></h2>
+<h3 id="na-9"><a class="header" href="#na-9">N/A</a></h3>
+<h2 id="na-10"><a class="header" href="#na-10">N/A</a></h2>
+<h3 id="na-11"><a class="header" href="#na-11">N/A</a></h3>
 <hr />
 <h2 id="references-12"><a class="header" href="#references-12">References</a></h2>
 <h3 id="learning-materials-3"><a class="header" href="#learning-materials-3">Learning Materials</a></h3>
@@ -4634,24 +4654,17 @@ TODO</li>
 <li><a href="https://pdai.tech/md/framework/tomcat/tomcat-x-design-web-container.html">Tomcat - 如何设计一个简单的web容器</a></li>
 <li><a href="https://iximiuz.com/en/posts/writing-web-server-in-python-sockets/">Writing Web Server in Python: sockets</a></li>
 </ul>
-<h3 id="source-code"><a class="header" href="#source-code">Source Code</a></h3>
-<ul>
-<li><a href="https://github.com/nginx/nginx">nginx/nginx</a></li>
-<li><a href="https://github.com/apache/tomcat/tree/main">apache/tomcat</a></li>
-</ul>
-<h3 id="directly-inspired"><a class="header" href="#directly-inspired">Directly Inspired</a></h3>
-<ul>
-<li>N/A</li>
-</ul>
-<h3 id="terminology-2"><a class="header" href="#terminology-2">Terminology</a></h3>
+<h3 id="demystification-1"><a class="header" href="#demystification-1">Demystification</a></h3>
 <ul>
 <li><a href="https://old.reddit.com/r/nginx/comments/mvatwk/what_is_nginx_explain_to_me_like_im_5_because_im/">What is Nginx? Explain to Me Like I'm 5 Because I'm Clueless!</a></li>
 <li><a href="https://old.reddit.com/r/django/comments/b0ug27/eli5_what_is_gunicorn_and_nginx/">What is Gunicorn and Nginx?</a></li>
 <li><a href="https://stackoverflow.com/questions/55414498/is-tomcat-apache-or-other-web-server-javaee">Is Tomcat = Apache (or other web server) + JavaEE</a></li>
 <li><a href="https://stackoverflow.com/questions/224664/whats-the-difference-between-a-proxy-server-and-a-reverse-proxy-server">What's the Difference between A Proxy Server and A Reverse Proxy Server?</a></li>
 </ul>
-<h3 id="references-for-references-1"><a class="header" href="#references-for-references-1">References for References</a></h3>
+<h3 id="diving-deep-into-the-source"><a class="header" href="#diving-deep-into-the-source">Diving Deep into the Source</a></h3>
 <ul>
+<li><a href="https://github.com/nginx/nginx">nginx/nginx</a></li>
+<li><a href="https://github.com/apache/tomcat/tree/main">apache/tomcat</a></li>
 <li><a href="https://taodaling.github.io/blog/2020/07/16/nginx%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/">Nginx源码分析 | Daltao's blog!</a></li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><ul>
@@ -4745,7 +4758,7 @@ TODO</li>
 <li>N/A</li>
 </ul>
 <hr />
-<h1 id="usage-2"><a class="header" href="#usage-2">Usage</a></h1>
+<h1 id="usage-1"><a class="header" href="#usage-1">Usage</a></h1>
 <h2 id="environment-preparation"><a class="header" href="#environment-preparation">Environment Preparation</a></h2>
 <blockquote>
 <p>Suppose you already have Docker installed. For me, it's Docker in VM. To be more exact, it's Installing Docker inside a VM, which is managed by Vagrant, then I edit the relevant config file <code>Vagrantfile</code> in order to expose the ports which is already available inside the VM to the host <small>(port mapping: Docker -&gt; VM -&gt; Host)</small>.</p>
@@ -4791,7 +4804,7 @@ docker exec -it redis616-dev bash            # run `bash` into the container
 <blockquote>
 <p>When being in use with code, consider it as a fast database backend with nice APIs <small>(e.g. <code>SADD HSET LPUSH ZADD</code>)</small> and free naming convensions <small>(e.g. <code>job:github:0001</code></small></p>
 </blockquote>
-<h3 id="na-8"><a class="header" href="#na-8">N/A</a></h3>
+<h3 id="na-12"><a class="header" href="#na-12">N/A</a></h3>
 <ul>
 <li>N/A</li>
 </ul>
@@ -4804,11 +4817,11 @@ docker exec -it redis616-dev bash            # run `bash` into the container
 <li><a href="https://pdai.tech/md/db/nosql-redis/db-redis-x-cache.html">Redis 缓存问题：一致性, 穿击, 穿透, 雪崩, 污染等</a></li>
 <li><a href="https://tobebetterjavaer.com/sidebar/sanfene/redis.html">Redis 概览</a></li>
 </ul>
-<h2 id="directly-inspired-1"><a class="header" href="#directly-inspired-1">Directly Inspired</a></h2>
+<h2 id="directly-inspired"><a class="header" href="#directly-inspired">Directly Inspired</a></h2>
 <ul>
 <li>N/A</li>
 </ul>
-<h2 id="references-for-references-2"><a class="header" href="#references-for-references-2">References for References</a></h2>
+<h2 id="references-for-references-1"><a class="header" href="#references-for-references-1">References for References</a></h2>
 <blockquote>
 <p>A snippet of how I use it with Django (a few years ago)</p>
 </blockquote>
@@ -4840,7 +4853,7 @@ docker exec -it redis616-dev bash            # run `bash` into the container
 <p>I was going for an explanation of what Netty is, why choose it specifically and when to use it that people could easily understand even without prior knowledge to the Java concurrency ecosystem <small>(or as little as possible)</small>. Down below are my own understand of the whole thing, errors are expected.</p>
 <p>And I think some of my confusions might be derived from <em>inadequate understanding of web servers</em> and <em>only heard of Nginx and Apache, thought there were no alternatives</em>.</p>
 </blockquote>
-<h2 id="before-we-begin-1"><a class="header" href="#before-we-begin-1">Before We Begin</a></h2>
+<h2 id="before-we-begin"><a class="header" href="#before-we-begin">Before We Begin</a></h2>
 <blockquote>
 <p>I do know a little bit of Django and Tornado before diving into the Java/Spring ecosystem. Both of them are web frameworks which have different capabilities, while they allow you writing code for things like the view template engine for user interaction, controller and models for the actual work, they also could serve the code by themselves which could be put directly onto the cloud <small>(not recommended for production, but it could)</small>.</p>
 <p>The name for the capability of <em>serving the code</em> are normally called as <em>Application Server</em>, which is just a normal web server <small>(receive request -&gt; handle -&gt; return response)</small> with much more capabilities <small>(not just serving static resources, but could also executing code)</small>. They themselves &quot;eliminate&quot; the need for the core functionalities of actual web servers like <em>Nginx</em>, which now could serve as a mere <em>proxy</em>.</p>
@@ -4854,12 +4867,12 @@ docker exec -it redis616-dev bash            # run `bash` into the container
 <li>It does the actual work and <a href="https://en.wikipedia.org/wiki/Netty_(software)">implementation for Transport Protocols</a></li>
 <li>It was built on <em>NIO</em> <small>(N: Non-Blocking)</small> which is just I/O done asynchronously</li>
 </ul>
-<h2 id="concepts-2"><a class="header" href="#concepts-2">Concepts</a></h2>
+<h2 id="concepts-1"><a class="header" href="#concepts-1">Concepts</a></h2>
 <ul>
 <li><input disabled="" type="checkbox"/>
 TODO</li>
 </ul>
-<h2 id="usage-3"><a class="header" href="#usage-3">Usage</a></h2>
+<h2 id="usage-2"><a class="header" href="#usage-2">Usage</a></h2>
 <ul>
 <li><input disabled="" type="checkbox"/>
 TODO</li>
@@ -4871,14 +4884,14 @@ TODO</li>
 <li><a href="https://github.com/sanshengshui/netty-learning-example">sanshengshui/netty-learning-example: Netty实践学习案例</a></li>
 <li><a href="https://www.baeldung.com/netty">Introduction to Netty</a></li>
 </ul>
-<h3 id="directly-inspired-2"><a class="header" href="#directly-inspired-2">Directly Inspired</a></h3>
+<h3 id="directly-inspired-1"><a class="header" href="#directly-inspired-1">Directly Inspired</a></h3>
 <ul>
 <li><a href="https://github.com/kgusarov/spring-boot-netty">kgusarov/spring-boot-netty: Spring Boot integration with Netty</a></li>
 <li><a href="https://stackoverflow.com/questions/6247735/is-tornado-a-replacement-to-django-or-are-they-complementary-to-each-other">Is Tornado a replacement to Django or are they complementary to each other</a></li>
 <li><a href="https://vicxu.medium.com/web-server-and-application-server-5a6d9c940eff">淺談 Web Server and Application Server | by vic</a></li>
 <li><a href="https://www.tornadoweb.org/en/stable/">Tornado Web Server — Tornado 6.2 documentation</a></li>
 </ul>
-<h3 id="references-for-references-3"><a class="header" href="#references-for-references-3">References for References</a></h3>
+<h3 id="references-for-references-2"><a class="header" href="#references-for-references-2">References for References</a></h3>
 <ul>
 <li><a href="https://stackoverflow.com/a/56806022/6273859">Spring webFlux differrences when Netty vs Tomcat is used under the hood</a></li>
 <li><a href="https://stackoverflow.com/questions/5385407/whats-the-difference-between-jetty-and-netty">java - What's the difference between Jetty and Netty</a></li>
@@ -4893,12 +4906,12 @@ TODO</li>
 <p>Currently, I mostly use <em>Hibernate</em>, i.e. writing Java code only without touching <em>SQL</em> directly. Though I do find that <em>MyBatis</em> is quite popular inside China. So I thought I must give it a go sometime.</p>
 <p>The first thing I need to convince myself would be <em>XML is indeed a not-so-bad way to handle the SQL statements</em>. Is it trying to achieve <em>de-coupling</em> <small>(changes needed for SQL, modify the <em>XML</em> file without rebuilding the application as for the annotations in the Java code)</small>? Well, that <a href="https://softwareengineering.stackexchange.com/q/151133/423884">does convinces me</a> a little bit.</p>
 </blockquote>
-<h2 id="concepts-3"><a class="header" href="#concepts-3">Concepts</a></h2>
+<h2 id="concepts-2"><a class="header" href="#concepts-2">Concepts</a></h2>
 <ul>
 <li><input disabled="" type="checkbox"/>
 TODO</li>
 </ul>
-<h2 id="usage-4"><a class="header" href="#usage-4">Usage</a></h2>
+<h2 id="usage-3"><a class="header" href="#usage-3">Usage</a></h2>
 <ul>
 <li><input disabled="" type="checkbox"/>
 TODO</li>
@@ -5002,7 +5015,7 @@ On it</li>
 </ul>
 </li>
 </ul>
-<h2 id="before-we-begin-2"><a class="header" href="#before-we-begin-2">Before We Begin</a></h2>
+<h2 id="before-we-begin-1"><a class="header" href="#before-we-begin-1">Before We Begin</a></h2>
 <h3 id="references-16"><a class="header" href="#references-16">References</a></h3>
 <blockquote>
 <p>These were the core references, while it's also the learning materials. Any other references would be at the bottom of this post. If some of the content do not have the relevant references down below, it means I'm following what the book says.</p>
@@ -5017,7 +5030,7 @@ On it</li>
 <p>Even blogs like <a href="https://javaguide.cn">Java Guide</a> or <a href="https://tobebetterjavaer.com/">To Be a Better Programmer</a> are just compiling a lot of loosely-related concepts, interview problems, while providing little to none or simple awful <small>(meh)</small> examples/analogies for the readers to understand them better.</p>
 <p>I am still a bit far from converting what I learnt to a better structured knowledge vault. Working on it though!</p>
 </blockquote>
-<h2 id="concepts-4"><a class="header" href="#concepts-4">Concepts</a></h2>
+<h2 id="concepts-3"><a class="header" href="#concepts-3">Concepts</a></h2>
 <h3 id="structure-1"><a class="header" href="#structure-1">Structure</a></h3>
 <ul>
 <li>Java language itself</li>
@@ -5081,7 +5094,7 @@ On it</li>
 <blockquote>
 <p>Context: I'm on <em>macOS Monterey</em> <small>(12.6.2)</small> and the Linux I'm using is <em>Ubuntu 20.04 focal</em> <small>(kernel: <code>x86_64 Linux 5.4.0-135-generic</code>)</small>. <strong>Simply sticking to Linux for compiling such things would save you a lot of time.</strong></p>
 </blockquote>
-<h4 id="source-code-1"><a class="header" href="#source-code-1"><a href="https://github.com/openjdk/jdk">Source Code</a></a></h4>
+<h4 id="source-code"><a class="header" href="#source-code"><a href="https://github.com/openjdk/jdk">Source Code</a></a></h4>
 <h5 id="get"><a class="header" href="#get">Get</a></h5>
 <blockquote>
 <p>Your local absolute path shall <strong>not</strong> include any <em>spaces</em> or <em>non-Latin characters</em></p>
@@ -5789,6 +5802,7 @@ WHERE  low_fats = 'Y' AND
 <li><a href="221207-Algorithm-LeetCode-for-General-Problems.html#0013-3sum">0013. 3Sum</a></li>
 <li><a href="221207-Algorithm-LeetCode-for-General-Problems.html#0014-longest-common-prefix">0014. Longest Common Prefix</a></li>
 <li><a href="221207-Algorithm-LeetCode-for-General-Problems.html#0019-remove-nth-node-from-end-of-list">0019. Remove Nth Node From End of List</a></li>
+<li><a href="221207-Algorithm-LeetCode-for-General-Problems.html#0020-valid-parentheses">0020. Valid Parentheses</a></li>
 <li><a href="221207-Algorithm-LeetCode-for-General-Problems.html#0021-merge-two-sorted-lists">0021. Merge Two Sorted Lists</a></li>
 <li><a href="221207-Algorithm-LeetCode-for-General-Problems.html#0023-merge-k-sorted-linked-list">0023. Merge K Sorted Linked List</a></li>
 <li><a href="221207-Algorithm-LeetCode-for-General-Problems.html#0043-multiply-strings">0043. Multiply Strings</a></li>
@@ -5810,6 +5824,7 @@ WHERE  low_fats = 'Y' AND
 <li><a href="221207-Algorithm-LeetCode-for-General-Problems.html#0160-intersection-of-two-linked-lists">0160. Intersection of Two Linked Lists</a></li>
 <li><a href="221207-Algorithm-LeetCode-for-General-Problems.html#0169-majority-element">0169. Majority Element</a></li>
 <li><a href="221207-Algorithm-LeetCode-for-General-Problems.html#0206-reverse-linked-list">0206. Reverse Linked List</a></li>
+<li><a href="221207-Algorithm-LeetCode-for-General-Problems.html#0208-implement-trie-prefix-tree">0208. Implement Trie (Prefix Tree)</a></li>
 <li><a href="221207-Algorithm-LeetCode-for-General-Problems.html#0217-contains-duplicate">0217. Contains Duplicate</a></li>
 <li><a href="221207-Algorithm-LeetCode-for-General-Problems.html#0226-invert-binary-tree">0226. Invert Binary Tree</a></li>
 <li><a href="221207-Algorithm-LeetCode-for-General-Problems.html#0230-kth-smallest-element-in-a-bst">0230. Kth Smallest Element in a BST</a></li>
@@ -6077,6 +6092,44 @@ class Solution:
         L.next = L.next.next
 
         return dummy.next
+</code></pre>
+<h3 id="0020-valid-parentheses"><a class="header" href="#0020-valid-parentheses">0020. Valid Parentheses</a></h3>
+<pre><code class="language-java">class Solution {
+    public boolean isValid(String s) {
+        // Possible scenarios
+        //  Sole Pair               []
+        //  Multiple Pairs          []()
+        //  Nested Sole Pair        [()]
+        //  Nested Multiple Pair    [()]{}
+
+        // Ways of tackling this
+        //  Check if it's ( [ {     Save
+        //  Check if it's ) ] }     Pop if matched or False
+
+        Stack&lt;Character&gt; stackToCompare = new Stack&lt;&gt;();
+
+        for (char c : s.toCharArary()) {
+            if (c == '(' || c == '[' || c == '{') {
+                stackToCompare.push(c);
+            } else {
+                if (!stackToCompare.isEmpty() || stackToCompare.peek() == getCompanion(c)) {
+                    stackToCompare.pop();
+                } else {
+                    return false;
+                }
+            }
+        }
+
+        // It shall not have any left-overs (unless it's something like '{')
+        return stackToCompare.isEmpty();
+    }
+
+    public Character getCompanion(char partPair) {
+        if (partPair == ')') return '(';
+        if (partPair == ']') return '[';
+        return '{';
+    }
+}
 </code></pre>
 <h3 id="0021-merge-two-sorted-lists"><a class="header" href="#0021-merge-two-sorted-lists">0021. Merge Two Sorted Lists</a></h3>
 <pre><code class="language-python"># Definition for singly-linked list.
@@ -6672,6 +6725,8 @@ class Solution:
 
         return dummy.next
 </code></pre>
+<h3 id="0208-implement-trie-prefix-tree"><a class="header" href="#0208-implement-trie-prefix-tree">0208. Implement Trie (Prefix Tree)</a></h3>
+<pre><code class="language-x"></code></pre>
 <h3 id="0217-contains-duplicate"><a class="header" href="#0217-contains-duplicate">0217. Contains Duplicate</a></h3>
 <pre><code class="language-java">class Solution {
     public boolean containsDuplicate(int[] nums) {
@@ -6748,12 +6803,12 @@ class Solution:
     def isPalindrome(self, head: Optional[ListNode]) -&gt; bool:
         res = []
         another_head = head
-        
+
         # It’s quite slow though (beats 8% only)
         while another_head is not None:
             res.append(another_head.val)
             another_head = another_head.next
-        
+
         # This is the only line that matters, as it compares
         # with itself with the reversed version.
         return res == res[::-1]
@@ -6841,7 +6896,7 @@ class Solution:
         #   1,  10, 11,   100, 101
         #   1, {10, 11}, {100, 101}
         # For even numbers (power of 2 -&gt; 1, no? use the one based on odd nums)
-        #   2    3     4   5   6     7 
+        #   2    3     4   5   6     7
         #  {10} {11} {100}   {110} {111}
         for i in range(1, n+1):
             if i % 2 == 1:
@@ -6930,13 +6985,13 @@ class Solution:
 <pre><code class="language-python">class Solution:
     def finalValueAfterOperations(self, operations: List[str]) -&gt; int:
         total = 0
-        
+
         for elem in operations:
             if &quot;+&quot; in elem:
                 total += 1
             elif &quot;-&quot; in elem:
                 total -= 1
-                
+
         return total
 </code></pre>
 <h3 id="2185-counting-words-with-a-given-prefix"><a class="header" href="#2185-counting-words-with-a-given-prefix">2185. Counting Words With a Given Prefix</a></h3>
@@ -6958,10 +7013,10 @@ class Solution:
     def convertTemperature(self, celsius: float) -&gt; List[float]:
         C = celsius
         K, F = 0, 0
-        
+
         K = C + 273.15
         F = C * 1.8 + 32.00
-        
+
         return (K, F)
 </code></pre>
 <hr />
@@ -7715,7 +7770,7 @@ Linear algebra, including vector spaces, linear transformations, and matrix oper
 </li>
 </ul>
 <h2 id="simple-introduction"><a class="header" href="#simple-introduction">Simple Introduction</a></h2>
-<h3 id="before-we-begin-3"><a class="header" href="#before-we-begin-3">Before We Begin</a></h3>
+<h3 id="before-we-begin-2"><a class="header" href="#before-we-begin-2">Before We Begin</a></h3>
 <blockquote>
 <p>Whether it's <em>Distributed System</em> or <em>Microservices</em>, it's all basically the same thing. They were just abstractions to describe certain things.</p>
 <blockquote>
@@ -8405,7 +8460,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 <p>Movies, TV Shows and Documentaries</p>
 </blockquote>
 <h2 id="meta-information"><a class="header" href="#meta-information">Meta Information</a></h2>
-<h3 id="terminology-3"><a class="header" href="#terminology-3">Terminology</a></h3>
+<h3 id="terminology-2"><a class="header" href="#terminology-2">Terminology</a></h3>
 <blockquote>
 <p>I want to a find a word that encompassing both the film and the tv shows. As it turns out, there were <em>none</em>. They were either inaccurate or not universally accepted by the mass <small>(therefore <em>ambiguity</em> which I tried to avoid)</small></p>
 </blockquote>
@@ -8479,7 +8534,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 <blockquote>
 <p>Skipped at the moment because of my own time allocation</p>
 </blockquote>
-<h3 id="usage-5"><a class="header" href="#usage-5">Usage</a></h3>
+<h3 id="usage-4"><a class="header" href="#usage-4">Usage</a></h3>
 <h4 id="you-should-know"><a class="header" href="#you-should-know">You Should Know</a></h4>
 <ul>
 <li>You shall be in a directory that is for initializing and installing systems from <em>Vagrant</em></li>
@@ -8558,7 +8613,7 @@ vagrant ssh
 # Change the default password of root in order to install packages and such
 sudo passwd root
 </code></pre>
-<h4 id="usage-6"><a class="header" href="#usage-6">Usage</a></h4>
+<h4 id="usage-5"><a class="header" href="#usage-5">Usage</a></h4>
 <ul>
 <li>
 <p>Installing packages you like</p>
@@ -8766,7 +8821,7 @@ skip-name-resolve
 <li>For <em>Chrome</em>, go to <a href="https://chrome.google.com/webstore/detail/stylish-custom-themes-for/fjnbnpbmkenffdnngjfgmeleoegfcffe?hl=en">here</a></li>
 <li>For <em>Firefox</em>, go to <a href="https://addons.mozilla.org/en-US/firefox/addon/stylish/">here</a></li>
 </ul>
-<h2 id="usage-7"><a class="header" href="#usage-7">Usage</a></h2>
+<h2 id="usage-6"><a class="header" href="#usage-6">Usage</a></h2>
 <blockquote>
 <p>Please note that I heavily use different fonts in my system in order to achieve the tweaks I made. So.. you could either ignore them (as there were tweaks more than the font-related styling) or go to install them.</p>
 </blockquote>
@@ -10724,7 +10779,7 @@ brew deps --tree --installed
 [core]
     quotepath = false
 </code></pre>
-<h3 id="usage-8"><a class="header" href="#usage-8">Usage</a></h3>
+<h3 id="usage-7"><a class="header" href="#usage-7">Usage</a></h3>
 <h4 id="branch"><a class="header" href="#branch">Branch</a></h4>
 <blockquote>
 <p>The commands I usually use</p>
@@ -10879,7 +10934,7 @@ git reset --hard HEAD~N    # Remove all N commits
 </li>
 <li><a href="220814-on-HATEOAS-with-HAL.html#resources">Resources</a></li>
 </ul>
-<h2 id="concepts-5"><a class="header" href="#concepts-5">Concepts</a></h2>
+<h2 id="concepts-4"><a class="header" href="#concepts-4">Concepts</a></h2>
 <h4 id="abbreviation"><a class="header" href="#abbreviation">Abbreviation</a></h4>
 <ul>
 <li>HAL: <em>H</em>yer <em>A</em>pplcation <em>L</em>anguage</li>
@@ -12372,7 +12427,7 @@ a full networking stack;</li>
 </ul>
 </li>
 </ul>
-<h1 id="concepts-6"><a class="header" href="#concepts-6">Concepts</a></h1>
+<h1 id="concepts-5"><a class="header" href="#concepts-5">Concepts</a></h1>
 <h2 id="fucking-terminology"><a class="header" href="#fucking-terminology">Fucking Terminology</a></h2>
 <h3 id="in-non-decreasing-order"><a class="header" href="#in-non-decreasing-order">In <em><strong>Non-decreasing</strong></em> Order</a></h3>
 <blockquote>
@@ -12738,7 +12793,7 @@ youtube-dl \
 </li>
 </ul>
 <hr />
-<h2 id="concepts-7"><a class="header" href="#concepts-7">Concepts</a></h2>
+<h2 id="concepts-6"><a class="header" href="#concepts-6">Concepts</a></h2>
 <ul>
 <li>
 <p>Horizontal Scaling</p>
@@ -13506,7 +13561,7 @@ youtube-dl \
 </li>
 </ul>
 <h3 id="notes-21"><a class="header" href="#notes-21">Notes</a></h3>
-<h4 id="concepts-8"><a class="header" href="#concepts-8">Concepts</a></h4>
+<h4 id="concepts-7"><a class="header" href="#concepts-7">Concepts</a></h4>
 <blockquote>
 <p>对计算机来说每一个任务就是一个进程（Process），在每一个进程内部至少要有一个线程（Thread）是在运行中，有时线程也称为轻量级的进程。</p>
 <ul>
@@ -13847,7 +13902,7 @@ Finally, I say, “Did you find that in my bedroom?” And the detective holding
 </li>
 </ul>
 <h3 id="notes-26"><a class="header" href="#notes-26">Notes</a></h3>
-<h4 id="terminology-4"><a class="header" href="#terminology-4">Terminology</a></h4>
+<h4 id="terminology-3"><a class="header" href="#terminology-3">Terminology</a></h4>
 <blockquote>
 <p>The truth is, a relation is not a table, a tuple is not a row, and an attribute is not a column. And while it might be acceptable to pretend otherwise in informal contexts—indeed, I often do so myself—I would argue that it’s acceptable only if all parties involved understand that those more user friendly terms are just an approximation to the truth and fail overall to capture the essence of what’s really going on.</p>
 </blockquote>
@@ -15335,7 +15390,7 @@ LoadModule php7_module /usr/libexec/apache2/libphp7.so
 </code></pre>
 </li>
 </ul>
-<h1 id="usage-9"><a class="header" href="#usage-9">Usage</a></h1>
+<h1 id="usage-8"><a class="header" href="#usage-8">Usage</a></h1>
 <h3 id="apache-2"><a class="header" href="#apache-2">Apache</a></h3>
 <ul>
 <li>
