@@ -2,14 +2,14 @@
 >> Information Hiding: Steganography and Watermarking
 <!-- toc -->
 
-### Resources
+## Resources
 
 - [Peter Wayner](https://en.wikipedia.org/wiki/Peter_Wayner)
   - [Disappearing Cryptography<small>(3rd Edition)</small>](https://www.elsevier.com/books/disappearing-cryptography/wayner/978-0-12-374479-1)
 
-### Note
+## Note
 
-#### What This Book is All About
+### What This Book is All About
 
 > For the most part, this book is about having fun with information (and making information disappear). But knowledge is power and people in power want to increase their control.
 >

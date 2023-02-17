@@ -231,7 +231,7 @@
 - [181125 Life Quirks in Programming](./181125-life-quirks-in-programming.md)
 - [181116 Booknote on Irrational Man](./181116-booknote-on-Irrational-Man.md)
 - [181101 Booknote on Life 3.0](./181101-booknote-on-Life-3-Being-Human-in-the-Age-of-AI.md)
-- [181031 Booknote on Information Hiding](./181031-booknote-on-Information-Hiding.md)
+- [181031 Booknote on Disappearing Cryptography](./181031-booknote-on-Disappearing-Cryptography.md)
 - [180930 On Reading](./180930-thoughts-on-reading.md)
 - [180901 Neuroenhancer](./180901-Neuroenhancer.md)
 - [180731 Booknote on Author Liu Yu](./180731-booknote-on-Author-Liu-Yu.md)
