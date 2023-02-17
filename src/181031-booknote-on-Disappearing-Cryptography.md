@@ -9,11 +9,13 @@
 
 ## Note
 
-### What This Book is All About
+### Having Fun with Information
 
 > For the most part, this book is about having fun with information (and making information disappear). But knowledge is power and people in power want to increase their control.
 >
 > The final chapter is an essay devoted to some of the political questions that lie just below the surface of all of these morphing bits.
+
+### Versus *Cryptography*
 
 > Traditional cryptography succeeds by locking up a message in a mathematical safe.
 >
