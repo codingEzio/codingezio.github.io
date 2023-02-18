@@ -1,7 +1,7 @@
 > Some dumb ideas of my own
 <!-- toc -->
 
-## Project Extraction
+## P :: Project Extraction
 
 ### Iteration 01
 
@@ -71,12 +71,12 @@
 
 -----
 
-## Synchronize Everything
+## P :: Synchronize Everything
 
 - You got an app that you love to use (on iOS, Android)
 - You want the data inside those apps to be kept in sync so that you could access them on your computer (Web) as well
 
-## Tabify
+## P :: Tabify
 
 - A website that allows you do multiple things all in one (iframe-level isolation, not quite iframe)
 - The website shall allow you do as much as possible (resources being used can be thought about later)
@@ -84,7 +84,7 @@
   - Read PDFs
   - Access terminal (can be routed via the local one like gotty or a WebAssembly one)
 
-## Incremental Code (codeinr.com)
+## P :: Incremental Code (codeinr.com)
 
 - A website that allows people to upload their tutorials
 - The tutorial is often a small snippet (can be long as well, but one single file is preferred, and might be enforced as well)
@@ -93,14 +93,14 @@
   >
   > The rational is like this: a few people writes tutorials. Some of them use illustrations. And a small bit of them use step-by-step illustrations. And... not all of them are doing a great job about those so-called step-by-step illustrations. The most two important thing I could think of is that, almost all of them are pictures instead of texts (that leaves even if you want to do it yourself in the simple way, you'll have to turn those procedures into pictures as websites like LeetCode.cn only allow pictures as steps instead of code.); And another thing is, there was a centralized place for people to write those
 
-## LeetCode, randomized
+## P :: LeetCode, randomized
 
 - Lucky (essential) algorithm
 - When I cannot get too much satisfaction from a task, I would add the random factor to it.
 - The candidates should be essential (e.g. for the interview), but of course, the users must be able to add their own favorites.
 - The ‘add’ feature shall be simple (users only need to provide the serial number or the name of the question, but of course, it’s okay for users to add the question link by themselves as long as we do a validation of the URL)
 
-## Log Me / Everything
+## P :: Log Me / Everything
 
 - An app logging everything you do
 - The app includes a built-in web browser (WebView, at least for Android), which you could do almost everything (since everything are web apps now) (suppose the things you do in the built-in web browser can be logged, and, the login process for websites that require you to log in)
@@ -108,7 +108,7 @@
 - it’s an app that has almost everything you do (well.. it occurs to me that the thing I’m trying to build/describe is kinda like a second WeChat or Alipay..)
 - If some jobs cannot be done inside the app, you can click a kind of start button inside the app, then click the end after you finish that task (= you did X from time ONE to time TWO)
 
-## Help Me Understand the Architecture
+## P :: Help Me Understand the Architecture
 
 - Target the projects that were complex (Microservices most likely)
   - Pre-build components/widgets like Service Discovery, Circuit Breaker
@@ -117,7 +117,7 @@
 - Simply put
   - A drawing tool that specifically targeted Microservices
 
-## Can I Use This Port
+## P :: Can I Use This Port
 
 - Specifically designed for people who's gonna design libraries that would be used by someone else yet want to avoid port collisions
   - It is a trivial task and it's really a rare occasion
@@ -127,3 +127,9 @@
   - 443 for HTTPS
   - 21 for SSH
 - RESTful service that only accepts Integers
+
+-----
+
+## Beyond My Own
+
+- [Project ideas](https://louisabraham.github.io/project-ideas) by [Louis Abraham](https://louisabraham.github.io/)
