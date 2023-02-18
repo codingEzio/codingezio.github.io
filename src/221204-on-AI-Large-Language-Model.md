@@ -15,6 +15,14 @@
 - [A ChatGPT Story about ChatGPT Doom](https://www.lesswrong.com/posts/R4qcDeFdE2QzHLBFQ/a-chatgpt-story-about-chatgpt-doom)
 - [Everything I Understand about ChatGPT](https://gist.github.com/veekaybee/6f8885e9906aa9c5408ebe5c7e870698)
 
+### Lengthy Discussion around the *New Bing*
+
+> Note to self and the others: it was powered by *ChatGPT* as of the article was written <small>(timestamp: Feb 18, 2023)</small>
+
+- [Sydney (Bing GPT) is scarily similar to Samantha from the movie "Her" (2013) : singularity](https://old.reddit.com/r/singularity/comments/113016w/sydney_bing_gpt_is_scarily_similar_to_samantha/)
+
+  > Don't mind the title, the discussions under this post are of extremely high quality
+
 ## Build Your Own LLM
 
 > The hardware: [Affordable GPUs for Data Scientists](https://medium.datadriveninvestor.com/an-affordable-gpu-for-data-scientists-db376450117)

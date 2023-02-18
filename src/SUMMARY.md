@@ -6,6 +6,9 @@
 
 # Content
 
+- [230218 On Program Performance and Reliability](./230218-on-Program-Performance-and-Reliability.md)
+- [230218 On Video Editing](./230218-on-Video-Editing.md)
+- [230218 On Office Suite](./230218-on-Office-Suite.md)
 - [230217 On Open Source License](./230217-on-Open-Source-License.md)
 - [230217 ELI5 React on Do Something](./230217-ELI5-React-on-Do-Something.md)
 - [230217 On Generic Programming](./230217-on-Generic-Programming.md)
@@ -153,7 +156,7 @@
 - [220717 Toolset grep](./220717-toolset-grep.md)
 - [220710 Learn to Focus](./220710-learn-to-focus.md)
 - [220710 Last Day of Your Life](./220710-last-day-of-your-life.md)
-- [220702 New Language Features](./220702-new-language-features.md)
+- [220702 Programming Language Proposals](./220702-programming-language-proposals.md)
 - [220701 Fetching Videos Online](./220701-fetching-videos-online.md)
 - [220628 Booknote on Database Internals](./220628-booknote-on-Database-Internals.md)
 - [220623 Stateless Mind](./220623-stateless-mind.md)

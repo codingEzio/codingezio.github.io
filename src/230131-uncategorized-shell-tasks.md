@@ -1,5 +1,34 @@
 <!-- toc -->
 
+## Checking The Number of Lines of Code in A Project
+
+### Java/Spring
+
+```bash
+wl `fd -e java` | sort
+wl `fd -e java | grep -vi "example\|model\|mapper\|dto\|dao"` | sort
+```
+
+### Python/Django
+
+```bash
+wl `fd -e py` | sort -n
+wl `fd -e py | grep -vi "migration\|test\|init"` | sort
+```
+
+### C++
+
+```bash
+wc -l `fd -e cpp -e h` | sort
+```
+
+### React
+
+```bash
+wc -l `fd -e js` | sort
+wc -l `fd -e js --full-path src/components/` | sort
+```
+
 ## Add Content to the Beginning of **Multiple** File
 
 > References: [add multiple lines to the beginning of many files in linux](https://stackoverflow.com/a/43460416/6273859)
