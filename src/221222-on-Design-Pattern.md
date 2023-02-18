@@ -18,4 +18,8 @@
 
 ## Notes
 
-- [ ] On it
+> On it
+
+## Beyond
+
+- [Design and Performance Patterns](https://www.patterns.dev/posts/): went beyond just the design patterns <small>(high+low level)</small>

@@ -1,4 +1,5 @@
 > My Own Information Universe
+<!-- toc -->
 
 ## Prologue
 
@@ -73,9 +74,15 @@
 
 ### 四
 
-- [一大加贝](https://tianheg.xyz/now/)
 - [Reimu's blog](https://blog.k8s.li/)
 - [Thicket Forte](https://thicketforte.com/)
+
+### 五
+
+> It seemed that a *he* <sup>(一大加贝)</sup> added my blog to his section named `/links/` under his blog. Skimed 一大加贝's blog posts, seemed pretty interesting. Would allocate <small>(low priority)</small> a time slot in the near future, so I could learn a bit from people who also have a *similar* <small>(it seemed 一大加贝 does)</small> mindset/vision/way-of-thinking as me.
+
+- 一大加贝 [/about](https://tianheg.xyz/about/): *who 一大加贝 is and how to navigate 一大加贝's blog*
+- 一大加贝 [/links](https://tianheg.xyz/links/): *blogs that considered interesting to 一大加贝*
 
 -----
 
@@ -140,6 +147,7 @@
 - [Java 进阶之路](https://tobebetterjavaer.com/) ⭐️⭐️
 - [Java 学习指南](https://javaguide.cn/) ⭐️
 - [mall 学习教程](https://www.macrozheng.com/)
+- [limboy's 的前端学习路线](https://limboy.me/posts/frontend-learning/)
 
 #### New
 
