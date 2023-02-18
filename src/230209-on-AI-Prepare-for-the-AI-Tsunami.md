@@ -46,6 +46,7 @@
 
 - [Dr Alan D. Thompson](https://www.youtube.com/@DrAlanDThompson/videos) <small>(testing and talking about tons of different models)</small>
 - [Two Minute Papers](https://www.youtube.com/@TwoMinutePapers/videos) <small>(actual demonstrations of different amazing ~breakthroughs)</small>
+- [koiboi](https://www.youtube.com/@lewingtonn/videos)
 
 ### Tooling
 

@@ -19,6 +19,7 @@
 
 ### Videos 视频
 
+- [consuming content to make my brain go quiet](https://youtu.be/pnGxNUtZ_a4)
 - [Why The US Military is Studying UFOs](https://www.youtube.com/watch?v=wQSxY7TR6mI)
 - [ONE SPECIES - A stirring take on climate change from Isaac Asimov](https://www.youtube.com/watch?v=DKTg9RpTLMM)
 - [The REAL Fight over AI Art](https://www.youtube.com/watch?v=NiJeB2NJy1A)

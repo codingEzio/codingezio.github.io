@@ -15,17 +15,22 @@
 - [A ChatGPT Story about ChatGPT Doom](https://www.lesswrong.com/posts/R4qcDeFdE2QzHLBFQ/a-chatgpt-story-about-chatgpt-doom)
 - [Everything I Understand about ChatGPT](https://gist.github.com/veekaybee/6f8885e9906aa9c5408ebe5c7e870698)
 
-### Lengthy Discussion around the *New Bing*
+-----
 
-> Note to self and the others: it was powered by *ChatGPT* as of the article was written <small>(timestamp: Feb 18, 2023)</small>
+## Lengthy Discussion around the *ChatGPT*/*BingGPT* or *LLMs* in general
 
-- [Sydney (Bing GPT) is scarily similar to Samantha from the movie "Her" (2013) : singularity](https://old.reddit.com/r/singularity/comments/113016w/sydney_bing_gpt_is_scarily_similar_to_samantha/)
+> Note to self and the others: it was powered by *ChatGPT* as of the article was written <small>(timestamp: Feb 18, 2023)</small>. Also, don't mind the titles, the discussions under this post are of extremely high quality
 
-  > Don't mind the title, the discussions under this post are of extremely high quality
+- [Sydney (Bing GPT) is scarily similar to Samantha from the movie "Her" (2013) | /r/Singularity](https://old.reddit.com/r/singularity/comments/113016w/sydney_bing_gpt_is_scarily_similar_to_samantha/)
+- [Are Large Language Models sentient? What do we really mean when we ask that question? | /r/Futurology](https://old.reddit.com/r/Futurology/comments/vb1dt2/are_large_language_models_sentient_what_do_we/)
+- [[D] Do large language models understand us? : MachineLearning](https://old.reddit.com/r/MachineLearning/comments/riqxrq/d_do_large_language_models_understand_us/)
+
+-----
 
 ## Build Your Own LLM
 
-> The hardware: [Affordable GPUs for Data Scientists](https://medium.datadriveninvestor.com/an-affordable-gpu-for-data-scientists-db376450117)
+- [Affordable GPUs for Data Scientists](https://medium.datadriveninvestor.com/an-affordable-gpu-for-data-scientists-db376450117)
+- [Stable Diffusion: The Ultimate GPU Guide](https://www.youtube.com/watch?v=H-6DXU967bU)
 
 ### General Tasks
 
