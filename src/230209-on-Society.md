@@ -1,4 +1,5 @@
 > To imagine that someone would become so triggered when they read this post makes me feel good. Hmm, which one is my own standpoint/stand? Well, mine is based on the thoughts from the [8 billion](https://www.worldometers.info/world-population/) people and constantly changing 🤡, in a good way.
+<!-- toc -->
 
 ### [争论](https://twitter.com/kumato21/status/1557021968708165638)
 

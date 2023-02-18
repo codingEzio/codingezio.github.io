@@ -1,6 +1,6 @@
 > This post centers around *DO x for x times WHEN lifecycle-x* in React.js
 >> by comparing ways of doing it, both the functional and the class-based one
-
+<!-- toc -->
 
 ## Prologue
 

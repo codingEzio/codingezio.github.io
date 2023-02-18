@@ -1,4 +1,5 @@
 > As I forked some projects that seemed interesting to me, I want to know what things I could do and could not do. I do not have the time to read those lengthy explanations, so I'll leave the notes here for future references.
+<!-- toc -->
 
 ## GPL
 

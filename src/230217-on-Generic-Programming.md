@@ -1,5 +1,6 @@
 > Code that could work with **different types** of data **without repeating** code
-> e.g. Template in *C++*, Generics in *Java*
+>> e.g. Template in *C++*, Generics in *Java*
+<!-- toc -->
 
 ## Prologue
 
