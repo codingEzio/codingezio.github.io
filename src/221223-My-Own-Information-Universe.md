@@ -168,15 +168,15 @@
 
 ## Community
 
-### Chinese Apps
+### Chinese *Apps*
 
 > Just saving for future reference as I mostly go for **books** and communities like *StackOverflow*, *Reddit* for answers I needed
 
 - [知乎](https://zhihu.com/): *browse with intentions* then you are good
 - [小红书](https://www.xiaohongshu.com/): *life travia* like [*Life Pro Tips*](https://old.reddit.com/r/LifeProTips/)
-- [即刻](https://www.okjike.com/): *inbetween Douban and Twitter*
+- [即刻](https://www.okjike.com/): *Douban and Twitter* mixed
 
-### for *Reddit*
+### *Reddit*
 
 > To be honest, unless you are browsing with *some kinds of clear goals*, you are still wasting your life no matter how high the quality those posts are
 
@@ -184,10 +184,15 @@
 
 - [Explain Like I'm Five](https://old.reddit.com/r/explainlikeimfive/)
 
-#### For *Broaden Perspective*
+#### For *Future*
 
 - [Futurology](https://old.reddit.com/r/Futurology/)
+- [Singularity](https://old.reddit.com/r/singularity/)
+
+#### For *Broaden Perspective*
+
 - [InternetIsBeautiful](https://old.reddit.com/r/InternetIsBeautiful/)
+- [Programming](https://old.reddit.com/r/programming/)
 
 #### For *Illustration*
 

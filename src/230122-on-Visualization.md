@@ -14,6 +14,17 @@
 - [From Data to Viz](https://www.data-to-viz.com/)
 - [The Data Visualisation Catalogue](https://datavizcatalogue.com/search.html)
 
+## Projects
+
+> that seemed really interesting as fuck!
+
+- [Code Galaxies](https://anvaka.github.io/) <sup>[source](https://github.com/anvaka/pm)</sup>: Explore programming libraries from various languages
+- [Pixel Chart](https://anvaka.github.io/pixchart/) <sup>[source](https://github.com/anvaka/pixchart)</sup>: Turn an image into splashs of colors in the form of a histogram
+- [City Roads](https://anvaka.github.io/city-roads/) <sup>[source](https://github.com/anvaka/city-roads)</sup>: Map with only roads in the form of lines
+- [Similar reddits](https://anvaka.github.io/redsim/) <sup>[source](https://github.com/anvaka/redsim)</sup>: People who read this `/r/X` also read that `/r/Y`
+- [Sayit](https://anvaka.github.io/sayit/) <sup>[source](https://github.com/anvaka/sayit)</sup>: A network graph of related subreddits
+- [Map of Reddit](https://anvaka.github.io/map-of-reddit/) <sup>[source](https://github.com/anvaka/map-of-reddit)</sup>: Show the relations between the subreddits in the form of a map
+
 -----
 
 ## References

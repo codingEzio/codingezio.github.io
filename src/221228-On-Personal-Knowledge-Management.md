@@ -41,3 +41,4 @@
 
 - [Stop Procrastinating With Note-Taking Apps Like Obsidian, Roam, Logseq](https://www.youtube.com/watch?v=baKCC2uTbRc)
 - [Dead Simple Task Management in Obsidian, Roam Research, and Logseq](https://www.youtube.com/watch?v=cAbf1Hy4P4A)
+- [Are you sometimes tired of Notion? : Notion](https://old.reddit.com/r/Notion/comments/kj3vda/are_you_sometimes_tired_of_notion/)
