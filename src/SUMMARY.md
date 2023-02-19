@@ -6,6 +6,7 @@
 
 # Content
 
+- [230219 On Ukulele](./230219-on-Ukulele.md)
 - [230219 Booknote on Elegant Puzzle](./230219-booknote-on-An-Elegant-Puzzle.md)
 - [230219 Recharge My Mind](./230219-Recharge-My-Mind.md)
 - [230219 On Offline-first Application](./230219-on-Offline-First-Application.md)
