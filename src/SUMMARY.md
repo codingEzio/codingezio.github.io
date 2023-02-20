@@ -6,6 +6,10 @@
 
 # Content
 
+- [230220 On Block](./230220-on-Block.md)
+- [230220 Learning Everything like Code](./230220-Learn-Everything-Code.md)
+- [230220 Learning Everything like Country](./230220-Learn-Everything-Country.md)
+- [230220 On AI Feminism](./230220-on-AI-Feminism.md)
 - [230219 On Ukulele](./230219-on-Ukulele.md)
 - [230219 Booknote on Elegant Puzzle](./230219-booknote-on-An-Elegant-Puzzle.md)
 - [230219 Recharge My Mind](./230219-Recharge-My-Mind.md)
@@ -215,7 +219,7 @@
 - [201016 Booknote on Surface and Essense](./201016-booknote-on-Surface-and-Essense.md)
 - [200711 Booknote on 翻译新究](./200711-booknote-on-翻译新究.md)
 - [200707 Booknote on Too Much of A Good Thing](./200707-booknote-on-Too-Much-of-A-Good-Thing.md)
-- [200606](./200606-on-AI-Facial-Recognition.md)
+- [200606 On AI Facial Recognition](./200606-on-AI-Facial-Recognition.md)
 - [200508 Booknote on Biology](./200508-booknote-on-Biology-Science-for-Life-with-Physiology.md)
 - [200215 Booknote on Author Lu Xun](./200215-booknote-on-Author-Lu-Xun.md)
 - [191106 Consume Less](./191106-consume-less.md)

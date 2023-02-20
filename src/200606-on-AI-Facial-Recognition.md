@@ -6,6 +6,7 @@
 ## What Are At Stake
 
 - [The Secretive Company That Might End Privacy as We Know It](https://web.archive.org/web/20200415055010/https://www.nytimes.com/2020/01/18/technology/clearview-privacy-facial-recognition.html)
+- [This Facial Recognition Tool Could Be the End of Privacy](https://www.youtube.com/watch?v=Azg_5bKRtrs)
 
 ## Possible Solutions
 

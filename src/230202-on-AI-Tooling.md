@@ -31,7 +31,13 @@
 | :--- | :--- |
 | [Bink](https://usebink.com)|  text to SQL|
 
-### for .. *Anyone*
+### for **the** *Data*
+
+| PRODUCT | WHAT IT DOES |
+| :--- | :--- |
+| [`sou.best`](https://chat.openai.com/) | 专业社交搜索 |
+
+### Anything Else
 
 | PRODUCT | WHAT IT DOES |
 | :--- | :--- |

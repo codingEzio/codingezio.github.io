@@ -20,3 +20,7 @@ I come back to this song, everytime i have the feeling of a growing dark hole in
 
 > Man, I listen to this song almost every day, especially when I'm close to falling asleep. and it makes me cry like a child. sometimes when I listen to her makes me wonder how shitty my life is. I'm dying and no one is noticing.
 >> (reply) *same boat as u. life is futile, but fellowship is a bright light in an otherwise dauntingly sad reality. i love u❤️. my name is anthony*
+
+### [Devs' Unique Approach To Sci-Fi](https://www.youtube.com/watch?v=HDsrBQKNRNI)
+
+> "Watching a film is like taking part in a controlled dream." --Stanley Kubrick

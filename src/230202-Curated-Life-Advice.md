@@ -227,3 +227,7 @@
 ### [辅修专业](https://twitter.com/rooster19140101/status/1547637295712309251)
 
 > 我快退休了，每天主要工作还是 coding. 以我多年的经验来看，***有***某种***专业背景***的程序员很是抢手。其年资也很重要。学computer science 的同学们最好**辅修**，或**进修一门感兴趣的专业** <small>(***多面手***)</small>。不然很容易沦落为general labor.
+
+### [入行 14 年，我还是觉得编程很难](https://www.piglei.com/articles/programming-is-still-hard-after-14-years/)
+
+> #TODO Urgent
