@@ -12,7 +12,9 @@
       "u",
       "img",
       "sup",
-      "sub"
+      "sub",
+      "p",
+      "br"
     ]
   },
   "heading-style": {
@@ -21,5 +23,6 @@
   "line-length": false,
   "heading-increment": false,
   "single-h1": false,
-  "no-duplicate-header": false
+  "no-duplicate-header": false,
+  "no-blanks-blockquote": false
 }
