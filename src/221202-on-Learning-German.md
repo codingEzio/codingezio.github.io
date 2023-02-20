@@ -9,19 +9,27 @@
 >
 > - Tons of Listening, and maybe in higher speed like `x1.5`
 > - Tons of Reading
-> - etc.
+> - ..
 
 ## Resources
 
-### Tooling
+### Speaking
 
 - [*YouGlish*: Improve German Pronunciation using YouTube](https://youglish.com/german)
 
-### Text
+### Dictionary
 
+- [LEO](https://dict.leo.org/german-english/) <small>(general purposes)</small>
+- [Linguee](https://www.linguee.com/english-german) <small>(general purposes)</small>
+- [OpenThesaurus](https://www.openthesaurus.de/) <small>(thesaurus)</small>
+
+### Grammar
+
+- [Your Daily German](https://yourdailygerman.com/learn-german-online-course/)
+- [Grammatik der deutschen Sprache](https://www.vistawide.com/german/grammar/german_grammar.htm)
 - [A Review of German Grammar](https://www.dartmouth.edu/~deutsch/Grammatik/Grammatik.html)
 
-### Video
+### Listening
 
 > Thoughts
 >
