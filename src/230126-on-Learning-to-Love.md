@@ -52,7 +52,7 @@
 | [我們一定得談戀愛嗎?](https://www.youtube.com/watch?v=bHVKaLFjUo0) on [文森說書](https://www.youtube.com/@vincent_reading/videos) | 👈 Not really a good title<br/>👉 [Love despite faults](https://www.goodreads.com/quotes/267314-you-don-t-love-because-you-love-despite-not-for-the#:~:text=despite%20the%20faults), basically |
 | [異男生態觀察：為什麼我們常常在人際關係上卡住?](https://www.youtube.com/watch?v=WYnjNQSFsIQ) | [*图片链接*](https://twitter.com/case32bfk/status/1542895935394844672)<br/><img src="./202302/20230209-learn-to-love.png" alt="Illustration of sarcasm about whether the knowledge is useful depends on who holds it" width="60%" height="50%" /> |
 
-----
+-----
 
 ### Rant
 

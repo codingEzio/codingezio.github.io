@@ -27,4 +27,3 @@
 - JS Party
 - The Sisyphus 55
 - Making Sense (Sam Harris)
-

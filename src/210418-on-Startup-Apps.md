@@ -15,7 +15,7 @@
 
 > By moving shortcuts [<small>(How to Access the Windows 10 Startup Folder)</small>](https://web.archive.org/web/20200820140228/https://helpdeskgeek.com/windows-10/how-to-access-the-windows-10-startup-folder/)
 
-1. Find the folder
+- Find the folder
 
   ```bash
   # ALl Users versus Current User
@@ -29,4 +29,4 @@
   C:\Users\USER_NAME\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
   ```
 
-2. Copy the shortcut of your application into the folder just opened
+- Then copy the shortcut of your application into the folder just opened

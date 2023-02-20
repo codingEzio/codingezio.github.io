@@ -49,4 +49,4 @@
 
 > I do not have a proper summarization for it, so here's a [quote](https://gotocon.com/aboutjaoo/) from [gotocon.com](https://gotocon.com).
 >
-> <q>*The target audience for GOTO conferences are software developers, IT architects and project managers. GOTO Aarhus is an annual event in Denmark which attracts more than 1300 participants and the first GOTO Copenhagen will be launched May, 2011.*</q>
+> *The target audience for GOTO conferences are software developers, IT architects and project managers. GOTO Aarhus is an annual event in Denmark which attracts more than 1300 participants and the first GOTO Copenhagen will be launched May, 2011.*

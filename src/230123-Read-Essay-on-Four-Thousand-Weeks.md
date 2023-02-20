@@ -9,6 +9,7 @@ yet 1 week feels so limited (time set in stone, yet more tasks)
 
 productivity technique does work
 but you are almost never be able to get everything under control, e.g.
+
 - flood of emails contained
 - todo-lists that stopped getting longer
 - all the obligations at work being met
@@ -26,12 +27,13 @@ first, embrace 'limited time, infinite tasks, leave behind some'
 stop and consider things, rationally, and confront the limitations
 
 tough choices need to be made
+
 - which people to disappoint
 - which cherish ambitions to abandon
 - which roles to fail at
 
 and yes,
-you would miss out on almost EVERY experience that this world has to offer 
+you would miss out on almost EVERY experience that this world has to offer
 you would miss out on A LARGE PART of things you wanna do yet has no time
 
 now, they are almost equivalent
@@ -72,8 +74,8 @@ not a trigger for stressful emotions or deadlines
 
 - for me, the reaction of *I need to do something!!* arises when I'm anxious
 - a timer
-  - sit 
-  - and do nothing 
+  - sit
+  - and do nothing
   - and think nothing
   - once you notice you're doing/thinking something, *stop*
   - are you critizing yourself for it? *stop* as well

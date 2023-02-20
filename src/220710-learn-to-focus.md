@@ -11,9 +11,11 @@
 ## If You *Code*
 
 ### Understand
+
 - The origin of why this technology arises
 - Why use this instead of the alternative
 - The core logic behind the program you coded
 
 ### And maybe
+
 - Why exactly this one under the *infrastructure*

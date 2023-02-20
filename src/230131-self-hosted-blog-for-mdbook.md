@@ -15,10 +15,9 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 cargo install mdbook
 ```
 
-
 ### Configuration for Local
 
-#### Init 
+#### Init
 
 ```bash
 mdbook init
@@ -76,7 +75,6 @@ mdbook build
 git add ./ && git commit -m "mdbook: COMMIT MESSAGE"
 ```
 
-
 -----
 
 ## References
@@ -85,9 +83,9 @@ git add ./ && git commit -m "mdbook: COMMIT MESSAGE"
 
 - [Getting Start - Rust](https://www.rust-lang.org/learn/get-started)
 - mdBook Documentation
-    - [Installation](https://rust-lang.github.io/mdBook/guide/installation.html)
-    - [Creating a Book](https://rust-lang.github.io/mdBook/guide/creating.html)
-    - [Continuous Integration](https://rust-lang.github.io/mdBook/continuous-integration.html)
+  - [Installation](https://rust-lang.github.io/mdBook/guide/installation.html)
+  - [Creating a Book](https://rust-lang.github.io/mdBook/guide/creating.html)
+  - [Continuous Integration](https://rust-lang.github.io/mdBook/continuous-integration.html)
 - [Automated Deployment: GitHub Actions · rust-lang/mdBook Wiki](https://github.com/rust-lang/mdBook/wiki/Automated-Deployment%3A-GitHub-Actions#jamesivesgithub-pages-deploy-action)
 
 ### Beyond
