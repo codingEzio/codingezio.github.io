@@ -320,3 +320,10 @@
 - 分类按限 `INDEX`, `PRIMARY`, `UNIQUE`, 多段作索
 - 分类按储
 - 实现
+
+### 何为 Database Migration
+
+> [What's data/database migration? : node](https://old.reddit.com/r/node/comments/90fo0t/whats_datadatabase_migration/)
+
+- 一「计」后悔药
+- 一「法」跟随需求的进步
