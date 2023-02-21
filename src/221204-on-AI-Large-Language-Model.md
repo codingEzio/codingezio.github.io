@@ -26,6 +26,7 @@
 - [Sydney (Bing GPT) is scarily similar to Samantha from the movie "Her" (2013) | /r/Singularity](https://old.reddit.com/r/singularity/comments/113016w/sydney_bing_gpt_is_scarily_similar_to_samantha/)
 - [Are Large Language Models sentient? What do we really mean when we ask that question? | /r/Futurology](https://old.reddit.com/r/Futurology/comments/vb1dt2/are_large_language_models_sentient_what_do_we/)
 - [[D] Do large language models understand us? : MachineLearning](https://old.reddit.com/r/MachineLearning/comments/riqxrq/d_do_large_language_models_understand_us/)
+- [CheatGPT on Hacker News](https://news.ycombinator.com/item?id=34871903): both the *comments* and *articles* were of high quality
 
 -----
 
@@ -35,6 +36,7 @@
 
 - [Affordable GPUs for Data Scientists](https://medium.datadriveninvestor.com/an-affordable-gpu-for-data-scientists-db376450117)
 - [Stable Diffusion: The Ultimate GPU Guide](https://www.youtube.com/watch?v=H-6DXU967bU)
+- How It Could Be More Accessible: [Running Large Language Models Like ChatGPT on a Single GPU](https://news.ycombinator.com/item?id=34869960) <sup>[source](https://github.com/Ying1123/FlexGen)</sup>
 
 ### Model
 

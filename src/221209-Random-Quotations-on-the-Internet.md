@@ -24,3 +24,35 @@ I come back to this song, everytime i have the feeling of a growing dark hole in
 ### [Devs' Unique Approach To Sci-Fi](https://www.youtube.com/watch?v=HDsrBQKNRNI)
 
 > "Watching a film is like taking part in a controlled dream." --Stanley Kubrick
+
+### [Ask HN: I Need to Talk to Someone](https://news.ycombinator.com/item?id=34869326)
+
+> [neom](https://news.ycombinator.com/user?id=neom)
+>
+> It's a difficult position. Many of us are teetering on the edge. I couldn't support my wife and I while she continued what she was working on, I had to move home with my parents while she continued on her own so at least one of us could move forward. I felt ashamed, unless, hopeless. We spent over 6 months apart, but our marriage survived, and so did I.
+>
+>This really helped me:
+
+> When despair for the world grows in me
+>
+> and I wake in the night at the least sound
+>
+> in fear of what my life and my children’s lives may be,
+>
+> I go and lie down where the wood drake rests in his beauty on the water,
+>
+> and the great heron feeds.
+>
+> I come into the peace of wild things
+>
+> who do not tax their lives with forethought of grief.
+>
+> I come into the presence of still water.
+>
+> And I feel above me the day-blind stars waiting with their light.
+>
+> For a time I rest in the grace of the world, and am free.
+>
+> -- Wendell Berry
+
+> Get out into nature for a day, leave your phone at home, observe reality, walk. The world is mighty, and so are you. :)

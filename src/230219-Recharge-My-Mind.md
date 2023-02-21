@@ -10,7 +10,7 @@
 
 ## Aim for *Exploration*
 
-> For us to explore .. on the couch 🥔
+> For us.. the Couch Potatoes 🥔
 
 - [shiey](https://www.youtube.com/@shiey/videos): *Climbing*, *Train-surfing*
 - [Steve Wallis](https://www.youtube.com/@campingwithsteve/videos): *Camping*

@@ -1,4 +1,4 @@
-> You are definitely doing it for **a reason**, whether to *prevent potential crashing/failing* or try to *pinpoint the problems* that you've faced at this very moment.
+> You are definitely doing it for **a reason**, whether to *prevent potential crashing/failing* or try to *pinpoint the problems* that you're facing at this very moment.
 <!-- toc -->
 
 ## Prologue
