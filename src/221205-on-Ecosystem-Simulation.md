@@ -1,4 +1,4 @@
-> Simulating real-life ecosystem or much more
+> Simulating real-life ecosystem and much more
 <!-- toc -->
 
 ## Why
@@ -23,13 +23,20 @@
 
 ### from *Youtube*
 
-- Search Result
-  - [Ecosystem Simulation](https://www.youtube.com/results?search_query=ecosystem+simulation)
-- Playlist
-  - [Evolution](https://www.youtube.com/playlist?list=PLKortajF2dPBWMIS6KF4RLtQiG6KQrTdB) by [Primer](https://www.youtube.com/@PrimerBlobs)
-- Video
-  - [Eco-Simulator: An Artificial Life Simulation Program](https://www.youtube.com/watch?v=tDqDRze9cmk)
-  - [Coding Adventure: Simulating an Ecosystem](https://www.youtube.com/watch?v=r_It_X7v-1E)
+> Kinda irrelevant but [Math's Fundamental Flaw](https://www.youtube.com/watch?v=HeQX2HjkcNo)
+
+#### Search Result
+
+- [Ecosystem Simulation](https://www.youtube.com/results?search_query=ecosystem+simulation)
+
+#### Playlist
+
+- [Evolution](https://www.youtube.com/playlist?list=PLKortajF2dPBWMIS6KF4RLtQiG6KQrTdB) by [Primer](https://www.youtube.com/@PrimerBlobs)
+
+#### Video
+
+- [Eco-Simulator: An Artificial Life Simulation Program](https://www.youtube.com/watch?v=tDqDRze9cmk)
+- [Coding Adventure: Simulating an Ecosystem](https://www.youtube.com/watch?v=r_It_X7v-1E)
 
 ### from *Github*
 

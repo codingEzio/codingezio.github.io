@@ -1,4 +1,5 @@
 > My Own Information Universe
+>> I'm still trying to find a way for myself to spend less time on websites like *YouTube* 🤒
 <!-- toc -->
 
 ## Prologue

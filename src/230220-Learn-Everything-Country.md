@@ -19,3 +19,7 @@
 ### Nigeria
 
 - [Nigeria Election: Why Peter Obi could Win](https://www.youtube.com/watch?v=BcQ_0l-AKOw)
+
+### Rwanda
+
+- [Rwanda: The Price of Success | DW Documentary](https://www.youtube.com/watch?v=L3ZfAvJqSl8&t=339s)
