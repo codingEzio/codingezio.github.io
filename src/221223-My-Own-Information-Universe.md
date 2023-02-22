@@ -163,6 +163,7 @@
 
 - [Mess Around Software System Design](https://eric-zhang-seattle.gitbook.io/mess-around/)
 - [Ledge DevOps 知识平台](https://devops.phodal.com/home)
+- [互联网基础架构设计原理和实践](https://isno.github.io/)
 - [大厂项目复盘](https://www.yuque.com/wikidesign/ykf0s9)
 
 ### Video

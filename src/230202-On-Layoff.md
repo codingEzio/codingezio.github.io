@@ -6,6 +6,7 @@
 ## Discussion
 
 - [为什么最近国外科技公司裁员消息那么多😶‍🌫️ - V2EX](https://www.v2ex.com/t/910414?p=1)
+- [两个娃的程序员心理历程：不要被外界影响 - V2EX](https://www.v2ex.com/t/917906)
 
 ## Analysis
 

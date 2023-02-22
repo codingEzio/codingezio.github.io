@@ -1,7 +1,7 @@
 > Thoughts and notes on ChatGPT and beyond 🚀
 <!-- toc -->
 
-## Notes on ChatGPT
+## Notes on LLM
 
 ### [What *ChatGPT* is Really All About](https://twitter.com/thecat/status/1599918939081179136)
 
@@ -10,7 +10,7 @@
 > Mine: *The lexemes were produced by humans. Suppose all the world knowledge were stored in a library, ChatGPT is the one who read them all and give you <small>(at least)</small> a reasonable gist of the book.*
 >> Update on Feb 22, 2023: this is oversimplified and stupid
 
-### Topics around *ChatGPT*
+### More Discussions around *ChatGPT* or other LLMs
 
 - [Is it OK to generate parts of a research paper using a large language model such as ChatGPT?](https://academia.stackexchange.com/questions/191197/is-it-ok-to-generate-parts-of-a-research-paper-using-a-large-language-model-such)
 - [A ChatGPT Story about ChatGPT Doom](https://www.lesswrong.com/posts/R4qcDeFdE2QzHLBFQ/a-chatgpt-story-about-chatgpt-doom)
