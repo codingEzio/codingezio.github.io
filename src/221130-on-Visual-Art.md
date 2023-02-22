@@ -42,3 +42,7 @@
 ### Devs
 
 - [Devs Clip - The Box Contains Everything](https://www.youtube.com/watch?v=yYYE79U7Fts)
+
+### Interstellar
+
+- [Interstellar <small>(mashup)</small>](https://www.youtube.com/watch?v=m2Cf9KSDwJM) made by [ErenTroy](https://www.youtube.com/@ErenTroy2002/videos)

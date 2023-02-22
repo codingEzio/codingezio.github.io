@@ -16,6 +16,8 @@
 ### Part Two
 
 > The mere thought of not being able to *read* or *enjoy* them all makes me feel unwell. Anyway, keep going :)
+>
+> Also, this list would grow even faster as I'm learning more topics. Though I would do as best as I could to get the numbers down, there only **limited** time, still.
 
 ## Resource
 
@@ -70,6 +72,9 @@
 
 ### 三
 
+> It seemed that were indeed some *really good* articles on [*Medium*](https://medium.com/membership), not just the *endless clickbaity articles* and *shitty opinions*, eh?
+>> Status: *`haven't subscribed yet`*
+
 - [Dineshchandgr](https://dineshchandgr.medium.com/) </small>(paywall $5/m)</small>
 - [System Design & Software Architectures Explained](https://architecturenotes.co/) </small>(paywall $9/m)</small>
 
@@ -93,6 +98,7 @@
 
 - [Tom Goldstein - Projects](https://www.cs.umd.edu/~tomg/project/)
 - [Knight Lab Studio](https://studio.knightlab.com/)
+- [DesignBoom Magazine](https://www.designboom.com/)
 
 ### 二
 
@@ -106,8 +112,9 @@
 
 ### 三
 
-- [Twitter Threads](https://awesomethread.com/categories/all)
 - [Product Hunt Discussion](https://www.producthunt.com/discussions)
+- [Hugging Face – Blog](https://huggingface.co/blog)
+- [Twitter Threads](https://awesomethread.com/categories/all)
 - [SciURLs](https://sciurls.com/)
 - [DevURLs](https://devurls.com/)
 - [MathURLs](https://mathurls.com/)

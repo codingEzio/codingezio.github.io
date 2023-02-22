@@ -6,6 +6,8 @@
 
 # Content
 
+- [230222 On Alternative Phone Number](./230222-Alternative-Phone-Number.md)
+- [230222 On Time Tracking](./230222-on-Time-Tracking.md)
 - [230220 On Block](./230220-on-Block.md)
 - [230220 Learning Everything like Code](./230220-Learn-Everything-Code.md)
 - [230220 Learning Everything like Country](./230220-Learn-Everything-Country.md)

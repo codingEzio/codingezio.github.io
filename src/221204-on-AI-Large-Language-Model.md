@@ -15,6 +15,7 @@
 - [A ChatGPT Story about ChatGPT Doom](https://www.lesswrong.com/posts/R4qcDeFdE2QzHLBFQ/a-chatgpt-story-about-chatgpt-doom)
 - [Everything I Understand about ChatGPT](https://gist.github.com/veekaybee/6f8885e9906aa9c5408ebe5c7e870698)
 - [What is ChatGPT doing...and why does it work? - YouTube](https://www.youtube.com/watch?v=flXrLGPY3SU)
+- [ChatGPT Is a Blurry JPEG of the Web | annotated by Eric](https://readwise.io/reader/shared/01gry4pcabx8kh4k1pkpf2e2pe/)
 - [从这个角度来看google这回是很难了 | 一亩三分地](https://www.1point3acres.com/bbs/thread-968018-1-1.html) <small>(Microsoft 与 Google 在「搜索」上的博弈)</small>
 
 -----

@@ -19,6 +19,20 @@
 - [starzq.eth: ChatGPT 对人才需求带来的变化、应对措施和机会点](https://twitter.com/starzqeth/status/1622583053498585088)
 - [kevinzhow: 近乎无限的获得这种智力资源 / 人类是无法面对这次浪潮的](https://twitter.com/kevinzhow/status/1600029430562230272)
 
+### Demoncratization of AI
+
+> The *ChatGPT-level* <small>(an inaccurate analogy of course)</small> AI in affordable prices
+
+### Azure
+
+- [Microsoft launches Azure OpenAI service with ChatGPT coming soon - The Verge](https://www.theverge.com/2023/1/17/23558530/microsoft-azure-openai-chatgpt-service-launch)
+- [General Availability of Azure OpenAI Service expands access to large, advanced AI models with added enterprise benefits | Azure Blog and Updates | Microsoft Azure](https://azure.microsoft.com/en-us/blog/general-availability-of-azure-openai-service-expands-access-to-large-advanced-ai-models-with-added-enterprise-benefits/)
+
+### AWS <small>(*A*mazon *W*eb *S*ervices)</small>
+
+- [Hugging Face and AWS partner to Make AI More Accessible](https://huggingface.co/blog/aws-partnership)
+- [AWS and Hugging Face collaborate to make generative AI more accessible and cost efficient | AWS Machine Learning Blog](https://aws.amazon.com/blogs/machine-learning/aws-and-hugging-face-collaborate-to-make-generative-ai-more-accessible-and-cost-efficient/)
+
 -----
 
 ## Notes
