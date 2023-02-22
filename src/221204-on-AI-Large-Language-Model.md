@@ -8,6 +8,7 @@
 > "Language models don't actually understand the world, they understand relationships between lexemes, they aren't intelligent in the same way that a motion picture isn't really moving."
 >
 > Mine: *The lexemes were produced by humans. Suppose all the world knowledge were stored in a library, ChatGPT is the one who read them all and give you <small>(at least)</small> a reasonable gist of the book.*
+>> Update on Feb 22, 2023: this is oversimplified and stupid
 
 ### Topics around *ChatGPT*
 
@@ -17,6 +18,7 @@
 - [What is ChatGPT doing...and why does it work? - YouTube](https://www.youtube.com/watch?v=flXrLGPY3SU)
 - [ChatGPT Is a Blurry JPEG of the Web | annotated by Eric](https://readwise.io/reader/shared/01gry4pcabx8kh4k1pkpf2e2pe/)
 - [从这个角度来看google这回是很难了 | 一亩三分地](https://www.1point3acres.com/bbs/thread-968018-1-1.html) <small>(Microsoft 与 Google 在「搜索」上的博弈)</small>
+- [How GPT3 Works - Visualizations and Animations](https://jalammar.github.io/how-gpt3-works-visualizations-animations/)
 
 -----
 

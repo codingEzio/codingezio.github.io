@@ -1,4 +1,4 @@
-s> The *Internet* is a tool. Focus on the real important thing.
+> The *Internet* is a tool. Focus on the real important thing.
 
 ## Prologue
 
