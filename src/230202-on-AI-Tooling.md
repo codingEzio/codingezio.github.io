@@ -7,6 +7,8 @@
 - [Futurepedia](https://www.futurepedia.io/)
 - [ChatGPT, AI and GPT-3 Apps and Use Cases](https://gpt3demo.com/)
 - [hades217/awesome-ai](https://github.com/hades217/awesome-ai)
+- [ChatGPT 使用资源聚合盘点 - 少数派](https://sspai.com/post/78399)
+- [AI 工具合辑盘点 - 少数派](https://sspai.com/post/78410)
 
 ## Product
 
