@@ -29,6 +29,7 @@
 ### 一
 
 - [Stephen Wolfram - *Publications*, *Writings* and *Speeches*](https://www.stephenwolfram.com/publications/)
+- [Steve Pavlina](https://stevepavlina.com/about/)
 - [Po-Jen](https://www.coderbridge.com/@Po-Jen)
 - [GeekPlux](https://geekplux.com/posts)
 - [Hackery, Math & Design](https://acko.net/)
