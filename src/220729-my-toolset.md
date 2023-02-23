@@ -1,5 +1,7 @@
 <!-- toc -->
 
+## Tools I've Been Using
+
 ### TUI
 
 #### Database Utility
@@ -21,3 +23,10 @@
 
 - Sublime Text: [Colorsublime](https://colorsublime.github.io/)
 - VS Code: [VS Code Themes](https://vscodethemes.com/)
+
+-----
+
+## Beyond
+
+- [Free for Developers](https://free-for.dev/)
+- [Free Developer Stuff](https://freestuff.dev/)
