@@ -9,12 +9,12 @@
 ## 二
 
 - [arxiv\_daily](https://old.reddit.com/r/arxiv_daily/)
-- [Two Minute Papers](https://www.youtube.com/@TwoMinutePapers/videos) <small>(video description)
+- [Two Minute Papers](https://www.youtube.com/@TwoMinutePapers/videos) <small>(video description)</small>
 
 ## 三
 
-- [The latest in Machine Learning | Papers With Code](https://paperswithcode.com/)
-- [Models - Hugging Face](https://huggingface.co/models)
+- [Papers With Code](https://paperswithcode.com/)
+- [Hugging Face](https://huggingface.co/models)
 
 -----
 
@@ -22,4 +22,4 @@
 
 > Recommended by others / Probably worth a read
 
-- [[2302.04761] Toolformer: Language Models Can Teach Themselves to Use Tools](https://arxiv.org/abs/2302.04761)
+- [2302.04761 Toolformer: Language Models Can Teach Themselves to Use Tools](https://arxiv.org/abs/2302.04761)
