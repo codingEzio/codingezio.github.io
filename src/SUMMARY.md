@@ -201,6 +201,7 @@
 - [210704 Zero to One PowerShell](./210704-zero-to-one-PowerShell.md)
 - [210522 Install PHP Dev Environment](./210522-Install-PHP-Dev-Environment-Manually.md)
 - [210521 Booknote on Docker Demystified](./210521-booknote-on-Docker-Demystified.md)
+- [210502 On Labeling](./210502-on-Labeling.md)
 - [210501 Booknote on Becoming Fluent](./210501-booknote-on-Becoming-Fluent.md)
 - [210418 Toolset adb](./210418-toolset-adb.md)
 - [210418 On VPS](./210418-on-VPS.md)
