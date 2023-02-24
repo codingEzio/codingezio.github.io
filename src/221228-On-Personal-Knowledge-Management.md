@@ -22,13 +22,23 @@
 
 > Think of it like *Mind Map* <sup>[思维导图](https://zh.wikipedia.org/zh-sg/%E5%BF%83%E6%99%BA%E5%9B%BE)</sup> but the nodes are various types of mediums and the connections are much more diverse and free. By the way, these were all paid to use <small>(in some way or another) (monthly fee were all set around $10)</small>.
 
-- [Heptabase](https://heptabase.com/)
-- [Supernotes](https://supernotes.app/pricing/)
-- [Scrintal](https://www.scrintal.com/)
+- [*Heptabase*](https://heptabase.com/)
+- [*Supernotes*](https://supernotes.app/pricing/)
+- [*Scrintal*](https://www.scrintal.com/)
 
 ### Not Sure How to Categorize
 
 - [Obsidian](https://obsidian.md/pricing)
+
+### Already Did
+
+#### [*Flomo*](https://flomoapp.com)
+
+> Old notes
+
+- It's just a tool
+- It helps to produce OTHER things
+- It shall not become a repository for notes
 
 ## Resources
 
@@ -39,6 +49,6 @@
 
 ### Review
 
-- [Stop Procrastinating With Note-Taking Apps Like Obsidian, Roam, Logseq](https://www.youtube.com/watch?v=baKCC2uTbRc)
-- [Dead Simple Task Management in Obsidian, Roam Research, and Logseq](https://www.youtube.com/watch?v=cAbf1Hy4P4A)
-- [Are you sometimes tired of Notion? : Notion](https://old.reddit.com/r/Notion/comments/kj3vda/are_you_sometimes_tired_of_notion/)
+- [Stop Procrastinating With Note-Taking Apps Like *Obsidian*, *Roam*, *Logseq*](https://www.youtube.com/watch?v=baKCC2uTbRc)
+- [Dead Simple Task Management in *Obsidian*, *Roam Research*, and *Logseq*](https://www.youtube.com/watch?v=cAbf1Hy4P4A)
+- [Are you sometimes tired of *Notion*?](https://old.reddit.com/r/Notion/comments/kj3vda/are_you_sometimes_tired_of_notion/)

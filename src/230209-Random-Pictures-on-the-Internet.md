@@ -71,6 +71,20 @@
   <img src="./202302/20230209-societal-issues-versus-the-mass-simplified.jpg" alt="Illustration of societal issues versus the mass - simplified" width="80%" height="70%" />
 </p>
 
+## Wake-up Call
+
+### pic001 最惨的噩梦
+
+<p align="center">
+  <img src="./202302/20230224-worst-nightmare-repeat-40years.jpeg" alt="Illustration of showing the mundane life were actually like a nightmare people didn't even see it" width="80%" height="70%" />
+</p>
+
+### pic002 How to Finish
+
+<p align="center">
+  <img src="./202302/20230224-how-to-actually-finish-accomplish-things.jpg" alt="Illustration of showing the actual useful guidelines on how to accomplish things" width="80%" height="70%" />
+</p>
+
 ## Quotation
 
 ### pic001 [For the Evil to Succeed](https://twitter.com/Be_Waterman/status/1543000962293305344)
