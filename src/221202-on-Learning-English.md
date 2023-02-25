@@ -1,13 +1,9 @@
 > Notes and resources on learning English
 <!-- toc -->
 
-## Note
+## Prologue
 
 > I've already went beyond the beginner stage, so I'll just save some other resources.
-
-### Random Thoughts
-
-> N/A
 
 ### Measurable Metric to Reach
 
@@ -25,3 +21,9 @@
 ### Went Beyond English-learning only Discussion
 
 - [Hao Chen @haoel - Chinglish 与 教育系统 KPI 导向](https://twitter.com/haoel/status/1566737560306475008)
+
+## Notes
+
+### Why You Should Learn *Another* Language
+
+> [ref](https://twitter.com/JmPotat0/status/1627010966687993856) 想要学习其他语言的一个强烈动机其实来自于某一天突然发现的事实：如果这辈子只会母语，那么就几乎相当于失去了对所有语言制成文化、书籍、资料、电影等信息的“访问权”。诚然有“翻译”这个桥梁，但它能起作用的资源是有限的，如果不亲自拥有语言这把钥匙，对知识的汲取自由只是一场局限于母语的幻觉。

@@ -6,6 +6,8 @@
 
 # Content
 
+- [230225 On Digital Archiving](./230225-on-Digital-Archiving.md)
+- [230225 On UI Design](./230225-on-UI-Design.md)
 - [230222 On Advertisement](./230222-on-Advertisement.md)
 - [230222 On Alternative Phone Number](./230222-Alternative-Phone-Number.md)
 - [230222 On Time Tracking](./230222-on-Time-Tracking.md)

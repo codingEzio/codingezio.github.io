@@ -30,6 +30,10 @@
 
 > 为什么雪崩的时候所有雪花一起落，为什么沙堆崩塌的时候所有沙粒一起滚，为什么你们上班下班睡觉起床时间都不约而同在一个区间里啊，一天三餐、上下班、用电高峰、流量使用时间集中，会带来多大的困扰和负担你知道吗，是不是有境外势力的指使有意约好的？
 
+### [大清](https://twitter.com/tinyfool/status/1602117426401148928)
+
+> 今天站在历史的理解的角度，我们如果确知大清的时候，西方什么样子，可能会感慨，那时候落后的不是一点半点。但是过了40年，看今天我们和世界的差距，也许也会得出一个更客观的观点，也落后了不是一点半点。芯片，chatgpt等等，今天很多人可能还理解不了真正的差异在哪里。
+
 ### [「千年」文化沉淀下的「科学」](https://twitter.com/waylybaye/status/1620340913150246914)
 
 > [易中天与柳传志的对话](https://twitter.com/naochashu/status/1408389700411219974)
@@ -52,3 +56,27 @@
 > [ref](https://twitter.com/david1998lin/status/1620475630776381440) 水利工程(运河、都江堰)、地动仪、浑天仪、节气、各种古建、中医、经文、诗作，能体现中国古人在地质学、天文学、气象学、建筑学、美学、医学、哲学、文学方面的建树，其中工程类学科的建树也间接证明古人在数学、物理学和植物学方面的造诣。但感觉大多是工程需求推动理论发展，少有理论界自主发展的。
 
 > [ref](https://twitter.com/scott_xbot/status/1620541913953873921) 中国几千年沉淀下来的都是帝王之术，也就是说在中国科学要给政治让路，导致有时候科学并不能说真话，比如黄河流域的文物科学测定是公元前 1500 年前，但是为了营造中国有 5000 年的历史硬是说成是公元前 3000 年。还有疫情期间各种为了贴合政治需求的各种缺智力言论等
+
+### [为*唐山伤害女性事件*发声](https://twitter.com/KooPeben/status/1535419955881160704)
+
+> #TODO To be summarized
+
+### 论 [跨性别女性参加选美比赛](https://twitter.com/lngoldo/status/1590564929933021187)
+
+> #TODO To be summarized
+
+### [內衣廣告](https://twitter.com/sanzhao41/status/1625820789672153088)
+
+> #TODO To be summarized
+
+### [「狗头萝莉」事件](https://twitter.com/aibeiai/status/1622239429325889537)
+
+> #TODO To be summarized
+
+### [「鸡蛋姬」事件](https://twitter.com/whyyoutouzhele/status/1627478647606022146)
+
+> #TODO To be summarized
+
+### [中国种族歧视的自由](https://twitter.com/torontobigface/status/1624803707463569408)
+
+> #TODO To be summarized

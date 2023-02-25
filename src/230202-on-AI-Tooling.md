@@ -6,6 +6,7 @@
 - [Future Tools](https://www.futuretools.io/)
 - [Futurepedia](https://www.futurepedia.io/)
 - [ChatGPT, AI and GPT-3 Apps and Use Cases](https://gpt3demo.com/)
+- [FlowGPT: Amplify Your Workflow with Best Prompts](https://flowgpt.com/)
 - [hades217/awesome-ai](https://github.com/hades217/awesome-ai)
 - [ChatGPT 使用资源聚合盘点 - 少数派](https://sspai.com/post/78399)
 - [AI 工具合辑盘点 - 少数派](https://sspai.com/post/78410)
@@ -39,6 +40,14 @@
 | :--- | :--- |
 | [`sou.best`](https://chat.openai.com/) | 专业社交搜索 |
 
+### for *Architect*
+
+| PRODUCT | WHAT IT DOES |
+| :--- | :--- |
+| [Interior AI](https://interiorai.com/) <small>([alternative](https://twitter.com/nutlope/status/1628238311109140481))</small> | No more *3D software*, just upload and generate |
+| [Arco AI](https://arko.ai/) | Generate renderings for [*Sketchup®*](https://www.sketchup.com/), [Revit®](https://www.autodesk.com/products/revit/overview) and [*Rhino3D®*](https://www.rhino3d.com/) |
+
+
 ### Anything Else
 
 | PRODUCT | WHAT IT DOES |
@@ -47,3 +56,4 @@
 | [Perplexity AI](https://www.perplexity.ai/) | An Alternative to *ChatGPT*! |
 | [Rationale](https://rationale.jina.ai/) | *decision-making* |
 | [Chat Simplifier](https://chat-simplifier.imzbb.cc/) | *simpify your WeChat group discussions*
+

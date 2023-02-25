@@ -13,6 +13,7 @@
 
 - [Microsoft Designer](https://designer.microsoft.com/): *creating stunning designs in a flash that were powered by AI*
 - [Microsoft Create](https://create.microsoft.com/en-us): *finding free templates for various Office Suite related tools*
+- [Presentation Software | Basic to Beautiful in Minutes with Beautiful.ai](https://www.beautiful.ai/)
 
 ### Thoughts
 

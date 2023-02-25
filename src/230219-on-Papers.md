@@ -23,3 +23,4 @@
 > Recommended by others / Probably worth a read
 
 - [2302.04761 Toolformer: Language Models Can Teach Themselves to Use Tools](https://arxiv.org/abs/2302.04761)
+- [2302.00923 Multimodal Chain-of-Thought Reasoning in Language Models](https://arxiv.org/abs/2302.00923)

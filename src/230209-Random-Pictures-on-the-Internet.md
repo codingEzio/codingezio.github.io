@@ -71,6 +71,12 @@
   <img src="./202302/20230209-societal-issues-versus-the-mass-simplified.jpg" alt="Illustration of societal issues versus the mass - simplified" width="80%" height="70%" />
 </p>
 
+### pic005 [微信之封闭](https://twitter.com/Oahiuz/status/1626913331784175617)
+
+<p align="center">
+  <img src="./202302/20230225-sarcasm-wechat.jpg" alt="Illustration of a sarcasm about issues WeChat has" width="80%" height="70%" />
+</p>
+
 ## Wake-up Call
 
 ### pic001 最惨的噩梦
@@ -93,10 +99,16 @@
   <img src="./202302/20230209-why-evil-usually-succeed.jpg" alt="Illustration of a quotation that how evil succeeds" width="80%" height="50%" />
 </p>
 
-### pic002 [每个人都搞糟了](https://mp.weixin.qq.com/s/23fMSsSnOoYz4HEEvAJ9cA) <small>([context](https://www.ted.com/talks/anne_lamott_12_truths_i_learned_from_life_and_writing))</small>
+### pic002 [每个人都搞砸了](https://mp.weixin.qq.com/s/23fMSsSnOoYz4HEEvAJ9cA) <small>([context](https://www.ted.com/talks/anne_lamott_12_truths_i_learned_from_life_and_writing))</small>
 
 <p align="center">
   <img src="./202302/20230209-everyone-is-messed-up.jpeg" alt="Illustration of the full quotation from an article that says everyone is messed up on the inside yet keep going fearlessly" width="80%" height="50%" />
+</p>
+
+### pic003 [<small>(内地)</small>与 Github 脱钩](https://twitter.com/tinyfool/status/1527108880592826369)
+
+<p align="center">
+  <img src="./202302/20230225-what-true-open-source-means-and-cn.jpg" alt="Illustration of what it means for mainland China to block Github open source community" width="80%" height="50%" />
 </p>
 
 ## Humor
@@ -145,6 +157,12 @@
   <img src="./202302/20230209-english-spatial-adverbs.jpg" alt="Illustration of English spatial adverbs" width="80%" height="50%" />
 </p>
 
+### pic007 [全球流动：世界互联互通的纽带](https://twitter.com/jefflijun/status/1627489840332693510)
+
+<p align="center">
+  <img src="./202302/20230225-globalism.png" alt="Illustration of why globalism is essential" width="80%" height="50%" />
+</p>
+
 ## Guide
 
 ### pic001 Quick Gudie for *Fight the Landlord* Poker
@@ -176,6 +194,14 @@
 </p>
 
 -----
+
+## Portrait
+
+### pic001 [Volodymyr Zelenskyy and Joe Biden](https://twitter.com/Tanxinbuzu/status/1627942380807819264)
+
+<p align="center">
+  <img src="./202302/20230225-Volodymyr-Zelenskyy-and-Joe-Biden.jpg" alt="Illustration of a portrait that Volodymyr Zelenskyy walking with Joe Biden" width="80%" height="50%" />
+</p>
 
 ## Beyond
 

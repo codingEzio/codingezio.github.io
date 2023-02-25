@@ -19,6 +19,9 @@
 - [ChatGPT Is a Blurry JPEG of the Web | annotated by Eric](https://readwise.io/reader/shared/01gry4pcabx8kh4k1pkpf2e2pe/)
 - [从这个角度来看google这回是很难了 | 一亩三分地](https://www.1point3acres.com/bbs/thread-968018-1-1.html) <small>(Microsoft 与 Google 在「搜索」上的博弈)</small>
 - [How GPT3 Works - Visualizations and Animations](https://jalammar.github.io/how-gpt3-works-visualizations-animations/)
+- [virushuo @huoju@m.devep.net on Twitter: "一点个人想法 ..."](https://twitter.com/virushuo/status/1628776613516128256) <small>(discussions around training LLMs on personal PC)</small>
+- [Yann LeCun @ylecun - "Large Language Model is an off-ramp."](https://twitter.com/ylecun/status/1621805604900585472) <small>(people seemed to be so triggered which is so fucking weird)</small>
+- [Wolfram|Alpha as the Way to Bring Computational Knowledge Superpowers to ChatGPT](https://writings.stephenwolfram.com/2023/01/wolframalpha-as-the-way-to-bring-computational-knowledge-superpowers-to-chatgpt/)
 
 -----
 
@@ -47,6 +50,7 @@
 
 - [yandex/YaLM-100B: Pretrained language model with 100B parameters](https://github.com/yandex/YaLM-100B/tree/main)
 - [EleutherAI/gpt-neo: An implementation of model & data parallel GPT3-like models](https://github.com/EleutherAI/gpt-neo)
+- [LLaMA: Open and Efficient Foundation Language Models - Meta Research](https://research.facebook.com/publications/llama-open-and-efficient-foundation-language-models/)
 
 #### Specifically for Code Completion
 
@@ -59,9 +63,11 @@
 
 ### API
 
+- [OpenAI API](https://platform.openai.com/docs/quickstart/build-your-application)
 - [bytemate/chatapi-single: Simple and powerful ChatGPT-API-Server](https://github.com/bytemate/chatapi-single)
 - [LangChain 0.0.89](https://langchain.readthedocs.io/en/latest/getting_started/getting_started.html)
 - [LlamaIndex](https://gpt-index.readthedocs.io/en/latest/)
+- [microsoft/prompt-engine](https://github.com/microsoft/prompt-engine)
 
 ### Prompt
 
