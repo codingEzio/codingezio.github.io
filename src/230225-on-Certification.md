@@ -3,7 +3,6 @@
 
 > Currently in the stage of collecting resources, haven't vetted all of them yet. And the categorization might not be very accurate!
 
-
 ## for *Project Management*
 
 - [PMI® Certifications](https://www.pmi.org/certifications)
@@ -35,3 +34,9 @@
 - [SolarWinds Certified Professional Program | Success Center](https://support.solarwinds.com/solarwinds-certified-professional-program)
 - [Aruba Certified Mobility Associate (ACMA) | Aruba](https://www.arubanetworks.com/support-services/training-services/certified-mobility-associate/)
 - [VMware Certified Technical Associate - Data Center Virtualization 2023](https://www.vmware.com/learning/certification/vcta-dcv.html)
+
+-----
+
+## Recommended by Others
+
+- [程序员有哪些含金量高的证书可以考？ - IM Geek开发者社区](https://web.archive.org/web/20230225042324/https://www.imgeek.net/article/825359914)
