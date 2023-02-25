@@ -70,6 +70,7 @@
 - [The Highest of The Mountains](https://www.thehighestofthemountains.com/about.php#h5o-9)
 - [Illustrations by Liz Fosslien](https://www.fosslien.com/images)
 - [ByteByteGo](https://blog.bytebytego.com/archive)
+- [Last Week in AI](https://lastweekin.ai/archive?sort=new)
 
 ### 三
 

@@ -1,4 +1,5 @@
 > Thoughts and notes on ChatGPT and beyond 🚀
+>> I'd intentionally limit the content and the links here, not just because I'm a newbie to Machine Learning but also the very act of keeping a ton of links do nothing to help you learn.
 <!-- toc -->
 
 ## Notes on LLM
