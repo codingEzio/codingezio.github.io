@@ -6,6 +6,7 @@
 
 # Content
 
+- [230225 On Certification](./230225-on-Certification.md)
 - [230225 On Digital Archiving](./230225-on-Digital-Archiving.md)
 - [230225 On UI Design](./230225-on-UI-Design.md)
 - [230222 On Advertisement](./230222-on-Advertisement.md)
