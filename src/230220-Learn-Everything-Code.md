@@ -25,15 +25,17 @@
 
 ### Y
 
-- [feross/awesome-mad-science: Delightful npm packages that make you say "wow, didn't know that was possible!"](https://github.com/feross/awesome-mad-science)
-- [mislavcimpersak/awesome-dev-fun: A curated list of awesome fun libs/packages/languages that have no real purpose but to make a developer chuckle.](https://github.com/mislavcimpersak/awesome-dev-fun)
+- [akullpp/awesome-java](https://github.com/akullpp/awesome-java)
+- [vuejs/awesome-vue](https://github.com/vuejs/awesome-vue)
+- [Cyanhall/awesome-vue](https://github.com/Cyanhall/awesome-vue/)
+- [enaqx/awesome-react](https://github.com/enaqx/awesome-react)
 
 ### Z
 
+- [feross/awesome-mad-science: Delightful npm packages that make you say "wow, didn't know that was possible!"](https://github.com/feross/awesome-mad-science)
+- [mislavcimpersak/awesome-dev-fun: A curated list of awesome fun libs/packages/languages that have no real purpose but to make a developer chuckle.](https://github.com/mislavcimpersak/awesome-dev-fun)
+
+### Zz
+
 - *Node.js*:  [haixiangyan/make-wheels](https://github.com/haixiangyan/make-wheels) 带你造 10 个实用的 npm 库 📦
 - *Java*: [houbb/heaven](https://github.com/houbb/heaven)
-
-## Frontend Oriented
-
-- [vuejs/awesome-vue](https://github.com/vuejs/awesome-vue)
-- [Cyanhall/awesome-vue](https://github.com/Cyanhall/awesome-vue/)
