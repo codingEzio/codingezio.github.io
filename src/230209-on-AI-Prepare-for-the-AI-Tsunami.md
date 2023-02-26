@@ -1,6 +1,6 @@
 <!-- toc -->
 
-## Resources
+## General Discussion
 
 > Gradually turning these into actionable and easy-to-digest notes/guidelines.
 
@@ -55,6 +55,10 @@
 -----
 
 ## Good to Have
+
+### for *Art*
+
+- [AI generated art - Etsy](https://www.etsy.com/search?q=ai+generated+art&explicit=1&spelling_correction_show_original=air+generated+art)
 
 ### Video
 
