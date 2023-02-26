@@ -1,4 +1,5 @@
 > What this blog is really all about
+>> Updated on Feb 26, 2023: I might nuke this blog in the near future (reduce post count by merging)
 <!-- toc -->
 
 ## Why
