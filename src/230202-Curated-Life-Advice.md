@@ -1,9 +1,13 @@
-> 这些建议本为抽象。此博文是进行再次的深层分析，取之共有的核心
+> 这些建议本就为高阶抽象。此博文选择对其再次深层分析，取出共有核心
 <!-- toc -->
 
-> 为使大脑减少不必要的抽象思考，以下皆为「正确的」、「肯定的」陈述句
+> 为使大脑减少不必要的抽象思考，以下多是「客观正确的」、「肯定的」陈述句
 
 ## On *Life* <small>(philosophically)</small>
+
+### [How to Play Long Term Games](https://twitter.com/swyx/status/1281424520100737025)
+
+> #TODO Extract core ideas and say them in my own words
 
 ### [Pre-conditioned Consciousness](https://twitter.com/naval/status/1476427640856727554)
 
@@ -236,4 +240,4 @@
 
 ### [入行 14 年，我还是觉得编程很难](https://www.piglei.com/articles/programming-is-still-hard-after-14-years/)
 
-> #TODO Urgent
+> #TODO Extract core ideas and say them in my own words

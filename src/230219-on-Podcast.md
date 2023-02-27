@@ -1,3 +1,5 @@
+> For too long I have considered *Podcast* as a kinda-scared source of information to consume. That would stop being true for myself from now on.
+>> Simply put, **content first**, and no more biases torwards particular types of mediums.
 <!-- toc -->
 
 ## Archive
