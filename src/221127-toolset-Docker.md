@@ -36,6 +36,10 @@
   brew services start docker
 
   brew install colima
+
+  # Do please change the config if you plan to start a bunch of
+  # services, or, simply put, you wanna use 'docker-compose' :)
+  colima stop && colima start --cpu 6 --memory 9 --disk 60
   ```
 
 - [Authentication](https://stackoverflow.com/a/72888813/6273859)
