@@ -22,6 +22,12 @@
 | [AIVA](https://www.aiva.ai/) | *compose emotional music* |
 | [ElevenLabs](https://beta.elevenlabs.io/) | *text to speech* |
 
+### for *Designer*
+
+| PRODUCT | WHAT IT DOES |
+| :--- | :--- |
+| [Mokker AI](https://mokker.ai/) | *Background Replacement* like shooting AD for a product |
+
 ### for *Learner*
 
 | PRODUCT | WHAT IT DOES |
@@ -47,13 +53,11 @@
 | [Interior AI](https://interiorai.com/) <small>([alternative](https://twitter.com/nutlope/status/1628238311109140481))</small> | No more *3D software*, just upload and generate |
 | [Arco AI](https://arko.ai/) | Generate renderings for [*Sketchup®*](https://www.sketchup.com/), [Revit®](https://www.autodesk.com/products/revit/overview) and [*Rhino3D®*](https://www.rhino3d.com/) |
 
-
 ### Anything Else
 
 | PRODUCT | WHAT IT DOES |
 | :--- | :--- |
-| [ChatGPT](https://chat.openai.com/) | Check it yourself |
+| [ChatGPT](https://chat.openai.com/) | Capable of *all* kinds of tasks |
 | [Perplexity AI](https://www.perplexity.ai/) | An Alternative to *ChatGPT*! |
 | [Rationale](https://rationale.jina.ai/) | *decision-making* |
 | [Chat Simplifier](https://chat-simplifier.imzbb.cc/) | *simpify your WeChat group discussions*
-

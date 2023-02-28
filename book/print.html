@@ -2205,6 +2205,7 @@ by <a href="https://cs.pku.edu.cn/info/1082/1282.htm">肖臻</a></li>
 <li><a href="230202-on-AI-Tooling.html#product">Product</a>
 <ul>
 <li><a href="230202-on-AI-Tooling.html#for-creator">for Creator</a></li>
+<li><a href="230202-on-AI-Tooling.html#for-designer">for Designer</a></li>
 <li><a href="230202-on-AI-Tooling.html#for-learner">for Learner</a></li>
 <li><a href="230202-on-AI-Tooling.html#for-developer">for Developer</a></li>
 <li><a href="230202-on-AI-Tooling.html#for-the-data">for the Data</a></li>
@@ -2233,6 +2234,11 @@ by <a href="https://cs.pku.edu.cn/info/1082/1282.htm">肖臻</a></li>
 <tr><td style="text-align: left"><a href="https://beta.elevenlabs.io/">ElevenLabs</a></td><td style="text-align: left"><em>text to speech</em></td></tr>
 </tbody></table>
 </div>
+<h3 id="for-designer"><a class="header" href="#for-designer">for <em>Designer</em></a></h3>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">PRODUCT</th><th style="text-align: left">WHAT IT DOES</th></tr></thead><tbody>
+<tr><td style="text-align: left"><a href="https://mokker.ai/">Mokker AI</a></td><td style="text-align: left"><em>Background Replacement</em> like shooting AD for a product</td></tr>
+</tbody></table>
+</div>
 <h3 id="for-learner"><a class="header" href="#for-learner">for <em>Learner</em></a></h3>
 <div class="table-wrapper"><table><thead><tr><th style="text-align: left">PRODUCT</th><th style="text-align: left">WHAT IT DOES</th></tr></thead><tbody>
 <tr><td style="text-align: left"><a href="https://mathgpt.streamlit.app/">MathGPT</a></td><td style="text-align: left"><em>text to math solution</em> and <em>plot</em></td></tr>
@@ -2256,7 +2262,7 @@ by <a href="https://cs.pku.edu.cn/info/1082/1282.htm">肖臻</a></li>
 </div>
 <h3 id="anything-else"><a class="header" href="#anything-else">Anything Else</a></h3>
 <div class="table-wrapper"><table><thead><tr><th style="text-align: left">PRODUCT</th><th style="text-align: left">WHAT IT DOES</th></tr></thead><tbody>
-<tr><td style="text-align: left"><a href="https://chat.openai.com/">ChatGPT</a></td><td style="text-align: left">Check it yourself</td></tr>
+<tr><td style="text-align: left"><a href="https://chat.openai.com/">ChatGPT</a></td><td style="text-align: left">Capable of <em>all</em> kinds of tasks</td></tr>
 <tr><td style="text-align: left"><a href="https://www.perplexity.ai/">Perplexity AI</a></td><td style="text-align: left">An Alternative to <em>ChatGPT</em>!</td></tr>
 <tr><td style="text-align: left"><a href="https://rationale.jina.ai/">Rationale</a></td><td style="text-align: left"><em>decision-making</em></td></tr>
 <tr><td style="text-align: left"><a href="https://chat-simplifier.imzbb.cc/">Chat Simplifier</a></td><td style="text-align: left"><em>simpify your WeChat group discussions</em></td></tr>
@@ -10116,10 +10122,19 @@ vagrant snapshot delete  THE_SNAPSHOT_NAME
 </code></pre>
 </li>
 </ul>
-<div style="break-before: page; page-break-before: always;"></div><ul>
-<li><a href="221127-toolset-Docker.html#foreword">Foreword</a></li>
-<li><a href="221127-toolset-Docker.html#installation">Installation</a>
+<div style="break-before: page; page-break-before: always;"></div><blockquote>
+<p>Thoughts and notes on Docker</p>
+</blockquote>
 <ul>
+<li><a href="221127-toolset-Docker.html#foreword">Foreword</a></li>
+<li><a href="221127-toolset-Docker.html#installation--configuration">Installation &amp; Configuration</a>
+<ul>
+<li><a href="221127-toolset-Docker.html#macos">macOS</a>
+<ul>
+<li><a href="221127-toolset-Docker.html#rant">Rant</a></li>
+<li><a href="221127-toolset-Docker.html#notes">Notes</a></li>
+</ul>
+</li>
 <li><a href="221127-toolset-Docker.html#centos">CentOS</a></li>
 <li><a href="221127-toolset-Docker.html#ubuntu">Ubuntu</a></li>
 </ul>
@@ -10130,15 +10145,12 @@ vagrant snapshot delete  THE_SNAPSHOT_NAME
 </ul>
 </li>
 </ul>
+<h2 id="foreword-6"><a class="header" href="#foreword-6">Foreword</a></h2>
 <blockquote>
-<p>Thoughts and notes on Docker</p>
-</blockquote>
-<h3 id="foreword-6"><a class="header" href="#foreword-6">Foreword</a></h3>
-<blockquote>
-<p>Recently I switched from <em>Docker for macOS</em> to <em><strong>Docker in VM</strong></em> (managed by <strong>Vagrant</strong>), so I though I should do a write up for the whole process and caveats.</p>
+<p>Platforms other than Linux like <em>macOS</em> and <em>Windows</em> would experience all kinds of different problems. If you do not want too much hassle, better to do this whole thing inside Linux only :)</p>
 <p>And, I'm <strong>not</strong> going to make the installation more uniform (similar logic for an easier transfer effort) before I have more time to refine this.</p>
 </blockquote>
-<h3 id="installation-1"><a class="header" href="#installation-1">Installation</a></h3>
+<h2 id="installation--configuration"><a class="header" href="#installation--configuration">Installation &amp; Configuration</a></h2>
 <blockquote>
 <p>I Assume You Already Have</p>
 <ul>
@@ -10146,7 +10158,63 @@ vagrant snapshot delete  THE_SNAPSHOT_NAME
 <li><strong>Gained</strong> the <em>access to root</em> in your VM in order to run <code>sudo</code></li>
 </ul>
 </blockquote>
-<h4 id="centos"><a class="header" href="#centos"><a href="https://app.vagrantup.com/centos/boxes/7">CentOS</a></a></h4>
+<h3 id="macos-1"><a class="header" href="#macos-1">macOS</a></h3>
+<h4 id="rant-3"><a class="header" href="#rant-3">Rant</a></h4>
+<blockquote>
+<p>Hmm, in the default setting <small>(like using the binary <code>docker</code> with the GUI <em>Docker Desktop</em></small>), you couldn't run it as daemon, which some apps like <code>docker-maven-plugin</code> won't be able to work properly.</p>
+<p>Changes made to <em>Docker Desktop</em> did not work (<a href="https://docs.docker.com/engine/reference/commandline/dockerd/">add something like <code>tcp://MY_HOST_LAN_IP:2375</code></a> and relaunch), and the process is painfully slow <small>(more than 2 minutes, context: i7 + 16GB RAM)</small> and buggy <small>(no longer be able to start up <em>Docker Desktop</em> any more even though I tried to revert the setting back!)</small>. Anyway, it was <strong>slow</strong> to me before I encounter issues like this. So it's time to switch to something lighter and easy to use!</p>
+</blockquote>
+<h4 id="notes-19"><a class="header" href="#notes-19">Notes</a></h4>
+<blockquote>
+<p>Docker Desktop serves almost <em>nothing</em> if all you do is meddling with images and containers, and were <strong>confortable with the terminal</strong>. It merely provides you <em>a</em> good-looking <em>UI</em> for you to do the same thing.</p>
+<p>The alternative I found is <em>colima</em> <small>(<strong>C</strong>ontainers <strong>o</strong>n <strong>Li</strong>nux on <strong>Ma</strong>c)</small>. Here's the whole processs of getting a MySQL container working <small>(as an example)</small> 😊</p>
+</blockquote>
+<ul>
+<li>
+<p>Necessary Tooling</p>
+<pre><code class="language-bash">brew install docker
+brew services start docker
+
+brew install colima
+</code></pre>
+</li>
+<li>
+<p><a href="https://stackoverflow.com/a/72888813/6273859">Authentication</a></p>
+<blockquote>
+<p>Install <code>brew install docker-credential-helper</code><br/>then edit <code>~/.docker/config.json</code> to something like this, finally, authenticate with your <em>Docker</em> credentials by running <code>docker login -u DOCKER_USERNAME</code></p>
+</blockquote>
+<pre><code class="language-json">{
+    &quot;auths&quot;: {
+        &quot;https://index.docker.io/v1/&quot;: {}
+    },
+    &quot;credsStore&quot;: &quot;osxkeychain&quot;,
+    &quot;currentContext&quot;: &quot;colima&quot;,
+    &quot;experimental&quot;: &quot;enabled&quot;
+}
+</code></pre>
+</li>
+<li>
+<p>Tryout</p>
+<pre><code class="language-bash"># Run
+docker run --name mysql8-mall \
+  --publish 3306:3306 \
+  --env MYSQL_ROOT_PASSWORD=password \
+  --volume /tmp:/mydata \
+  --detach \
+  mysql:8
+
+# Check
+docker logs mysql8-mall
+</code></pre>
+</li>
+<li>
+<p>Beyond</p>
+<blockquote>
+<p><a href="https://opensource.com/article/22/9/docker-desktop-colima">How I switched from Docker Desktop to Colima</a></p>
+</blockquote>
+</li>
+</ul>
+<h3 id="centos"><a class="header" href="#centos"><a href="https://app.vagrantup.com/centos/boxes/7">CentOS</a></a></h3>
 <blockquote>
 <p>Thanks to <a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-centos-7">How To Install and Use Docker on CentOS 7 | DigitalOcean</a> and <a href="https://stackoverflow.com/a/71985088/6273859"><strong>this</strong></a></p>
 </blockquote>
@@ -10174,7 +10242,7 @@ sudo systemctl enable docker
 # Test if it works as expected
 sudo docker run hello-world
 </code></pre>
-<h4 id="ubuntu"><a class="header" href="#ubuntu"><a href="https://app.vagrantup.com/ubuntu/boxes/focal64">Ubuntu</a></a></h4>
+<h3 id="ubuntu"><a class="header" href="#ubuntu"><a href="https://app.vagrantup.com/ubuntu/boxes/focal64">Ubuntu</a></a></h3>
 <blockquote>
 <p>Thanks to <a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04">How To Install and Use Docker on Ubuntu 20.04 | DigitalOcean</a></p>
 </blockquote>
@@ -10199,8 +10267,8 @@ sudo systemctl enable docker
 # Test if it works as expected
 sudo docker run hello-world
 </code></pre>
-<h3 id="practical-usage"><a class="header" href="#practical-usage">Practical Usage</a></h3>
-<h4 id="mysql"><a class="header" href="#mysql">MySQL</a></h4>
+<h2 id="practical-usage"><a class="header" href="#practical-usage">Practical Usage</a></h2>
+<h3 id="mysql"><a class="header" href="#mysql">MySQL</a></h3>
 <pre><code class="language-bash"># The base to modify on
 sudo docker pull mysql:8.0
 sudo docker images | grep mysql
@@ -10268,7 +10336,7 @@ skip-name-resolve
 <p>I spent quite a lot of time reading stuff online. Longform articles like <a href="https://aeon.co">Aeon.co</a>, technical documentations or just anything else.</p>
 <p>And most of the time, the font that were chosed by the developer of the website were just terrible to say the least, and there were also something like annoying <em>cookie banners</em>. Well, I need to tool that just do that!</p>
 </blockquote>
-<h2 id="installation-2"><a class="header" href="#installation-2">Installation</a></h2>
+<h2 id="installation-1"><a class="header" href="#installation-1">Installation</a></h2>
 <blockquote>
 <p>For now, I would just pick the most commonly used browsers</p>
 </blockquote>
@@ -10356,7 +10424,7 @@ skip-name-resolve
 <li><a href="https://bookzone.cwgv.com.tw/article/678">吃食物，不要吃食品</a></li>
 <li><a href="https://www.chp.gov.hk/files/her/exn_nutp_025b_tc.pdf">健康飲食金字塔</a></li>
 </ul>
-<h3 id="notes-19"><a class="header" href="#notes-19">Notes</a></h3>
+<h3 id="notes-20"><a class="header" href="#notes-20">Notes</a></h3>
 <h4 id="吃的四大原則"><a class="header" href="#吃的四大原則">吃的四大原則</a></h4>
 <ul>
 <li>吃「食物」，不吃「食品」</li>
@@ -12014,7 +12082,7 @@ git push        # p.s. You might need to add additional arguments
 </ul>
 </li>
 </ul>
-<h3 id="notes-20"><a class="header" href="#notes-20">Notes</a></h3>
+<h3 id="notes-21"><a class="header" href="#notes-21">Notes</a></h3>
 <h4 id="作"><a class="header" href="#作">作</a></h4>
 <blockquote>
 <p>I studied everything from finance to Internet programming to more autobiographies of the rich.</p>
@@ -12310,7 +12378,7 @@ git reset --hard HEAD~N    # Remove all N commits
 </ul>
 </li>
 </ul>
-<h3 id="notes-21"><a class="header" href="#notes-21">Notes</a></h3>
+<h3 id="notes-22"><a class="header" href="#notes-22">Notes</a></h3>
 <h4 id="演讲-the-why"><a class="header" href="#演讲-the-why">演讲 the WHY</a></h4>
 <blockquote>
 <p>改变人们对这个世界的认识的任何东西都可以被称为“思想”。如果你能在人们的内心唤起某种有力的思想，你就做了一件非常奇妙的事情，给了他们一份珍贵的礼物。事实上，你的思想成了他们生命中重要的一部分。</p>
@@ -13415,7 +13483,7 @@ public interface .. extends CrudRepository&lt;Car, Long&gt; { }
 </ul>
 </li>
 </ul>
-<h3 id="notes-22"><a class="header" href="#notes-22">Notes</a></h3>
+<h3 id="notes-23"><a class="header" href="#notes-23">Notes</a></h3>
 <blockquote>
 <p>What’s amazing is that, despite the scale and the pace and the complexity, there is still room to contribute.</p>
 <blockquote>
@@ -14825,7 +14893,7 @@ youtube-dl \
 </ul>
 </li>
 </ul>
-<h3 id="notes-23"><a class="header" href="#notes-23">Notes</a></h3>
+<h3 id="notes-24"><a class="header" href="#notes-24">Notes</a></h3>
 <blockquote>
 <p>绝大多数人哀叹的无可奈何，也根本触及不到大自然和社会设定的上限。</p>
 </blockquote>
@@ -14951,7 +15019,7 @@ youtube-dl \
 </ul>
 </li>
 </ul>
-<h3 id="notes-24"><a class="header" href="#notes-24">Notes</a></h3>
+<h3 id="notes-25"><a class="header" href="#notes-25">Notes</a></h3>
 <h4 id="优择"><a class="header" href="#优择">优择</a></h4>
 <blockquote>
 <p>How do you make an <em>informed decision</em> when the very <em>act of informing it jeopardizes</em> the outcome?</p>
@@ -15055,7 +15123,7 @@ youtube-dl \
 </ul>
 </li>
 </ul>
-<h3 id="notes-25"><a class="header" href="#notes-25">Notes</a></h3>
+<h3 id="notes-26"><a class="header" href="#notes-26">Notes</a></h3>
 <h4 id="concepts-7"><a class="header" href="#concepts-7">Concepts</a></h4>
 <blockquote>
 <p>对计算机来说每一个任务就是一个进程（Process），在每一个进程内部至少要有一个线程（Thread）是在运行中，有时线程也称为轻量级的进程。</p>
@@ -15099,7 +15167,7 @@ youtube-dl \
 </ul>
 </li>
 </ul>
-<h3 id="notes-26"><a class="header" href="#notes-26">Notes</a></h3>
+<h3 id="notes-27"><a class="header" href="#notes-27">Notes</a></h3>
 <h4 id="a-poem"><a class="header" href="#a-poem">A Poem</a></h4>
 <blockquote>
 <p>Tonight I think</p>
@@ -15261,7 +15329,7 @@ Finally, I say, “Did you find that in my bedroom?” And the detective holding
 </ul>
 </li>
 </ul>
-<h3 id="notes-27"><a class="header" href="#notes-27">Notes</a></h3>
+<h3 id="notes-28"><a class="header" href="#notes-28">Notes</a></h3>
 <blockquote>
 <p>正如英国经济学家艾尔弗雷德·马歇尔（Alfred Marshall）曾经说的，经济学家需要&quot;冷静的头脑，善良的心地&quot;。完全正确！要像科学家那样描述世界，但同时对周遭人类的悲惨命运抱有同情，并努力做出一些改变。</p>
 </blockquote>
@@ -15314,7 +15382,7 @@ Finally, I say, “Did you find that in my bedroom?” And the detective holding
 </ul>
 </li>
 </ul>
-<h3 id="notes-28"><a class="header" href="#notes-28">Notes</a></h3>
+<h3 id="notes-29"><a class="header" href="#notes-29">Notes</a></h3>
 <blockquote>
 <p>'Marriage is for women the commonest mode of livelihood, and the total amount of undesired sex endured by women is probably greater in marriage than in prostitution'. (Bertrand Russell, Marriage and Morals, 1929, p. 143.)</p>
 <p>Is this still true in the 21st century? 无法理智思考的人会尝试直接回答 <em>Yes</em> or <em>No</em>。我多么希望这种问题真的有这么简单！</p>
@@ -15340,7 +15408,7 @@ Finally, I say, “Did you find that in my bedroom?” And the detective holding
 </ul>
 </li>
 </ul>
-<h3 id="notes-29"><a class="header" href="#notes-29">Notes</a></h3>
+<h3 id="notes-30"><a class="header" href="#notes-30">Notes</a></h3>
 <h4 id="definition-2"><a class="header" href="#definition-2">Definition</a></h4>
 <blockquote>
 <p>An Operating System is</p>
@@ -15396,7 +15464,7 @@ Finally, I say, “Did you find that in my bedroom?” And the detective holding
 </ul>
 </li>
 </ul>
-<h3 id="notes-30"><a class="header" href="#notes-30">Notes</a></h3>
+<h3 id="notes-31"><a class="header" href="#notes-31">Notes</a></h3>
 <h4 id="terminology-3"><a class="header" href="#terminology-3">Terminology</a></h4>
 <blockquote>
 <p>The truth is, a relation is not a table, a tuple is not a row, and an attribute is not a column. And while it might be acceptable to pretend otherwise in informal contexts—indeed, I often do so myself—I would argue that it’s acceptable only if all parties involved understand that those more user friendly terms are just an approximation to the truth and fail overall to capture the essence of what’s really going on.</p>
@@ -15458,7 +15526,7 @@ second, queries aren’t the only context in which such expressions are used any
 </ul>
 </li>
 </ul>
-<h3 id="notes-31"><a class="header" href="#notes-31">Notes</a></h3>
+<h3 id="notes-32"><a class="header" href="#notes-32">Notes</a></h3>
 <h4 id="耕耘与技术"><a class="header" href="#耕耘与技术">耕耘与技术</a></h4>
 <blockquote>
 <p>变得更擅长学习，取得好成绩并非不可能之事。其中的秘密在于，你的努力必须是勤奋学习和学习技巧的完美结合。</p>
@@ -15563,7 +15631,7 @@ second, queries aren’t the only context in which such expressions are used any
 </ul>
 </li>
 </ul>
-<h3 id="notes-32"><a class="header" href="#notes-32">Notes</a></h3>
+<h3 id="notes-33"><a class="header" href="#notes-33">Notes</a></h3>
 <h4 id="于人"><a class="header" href="#于人">于人</a></h4>
 <blockquote>
 <p>我做任何事都不会半途而废，总是坚持以这样的性格全身心地投入，竭尽全力地度过每一天。即使是被外界定论为“不可能”的事，我也能不畏艰难、勇敢地发起挑战——我的职业生涯反复上演着这一过程，而这些经历也成就了我的今天。</p>
@@ -15663,7 +15731,7 @@ second, queries aren’t the only context in which such expressions are used any
 </ul>
 </li>
 </ul>
-<h3 id="notes-33"><a class="header" href="#notes-33">Notes</a></h3>
+<h3 id="notes-34"><a class="header" href="#notes-34">Notes</a></h3>
 <h4 id="被告知该怎样"><a class="header" href="#被告知该怎样">被告知该怎样</a></h4>
 <blockquote>
 <p>We’re all swimming in a massive sea of human beliefs, ideas, and practices. Some are beautiful and bring joy; others are unnecessary, limiting, and sometimes even crippling. A fish is the last to see that it’s swimming in a substance called water.</p>
@@ -15759,7 +15827,7 @@ second, queries aren’t the only context in which such expressions are used any
 </ul>
 </li>
 </ul>
-<h3 id="notes-34"><a class="header" href="#notes-34">Notes</a></h3>
+<h3 id="notes-35"><a class="header" href="#notes-35">Notes</a></h3>
 <h4 id="荐"><a class="header" href="#荐">荐</a></h4>
 <blockquote>
 <p>The best way to learn something is to jump right in and start doing, before you even know what you’re doing. If you can gain enough knowledge about a subject to start playing around, you can tap into the powerful creative and curious nature of your own mind.</p>
@@ -15825,7 +15893,7 @@ second, queries aren’t the only context in which such expressions are used any
 </ul>
 </li>
 </ul>
-<h3 id="notes-35"><a class="header" href="#notes-35">Notes</a></h3>
+<h3 id="notes-36"><a class="header" href="#notes-36">Notes</a></h3>
 <h4 id="荐-1"><a class="header" href="#荐-1">荐</a></h4>
 <blockquote>
 <p>Working on real-world software projects, going to networking events, and studying your ass off just to stay current.</p>
@@ -15876,7 +15944,7 @@ second, queries aren’t the only context in which such expressions are used any
 </ul>
 </li>
 </ul>
-<h3 id="notes-36"><a class="header" href="#notes-36">Notes</a></h3>
+<h3 id="notes-37"><a class="header" href="#notes-37">Notes</a></h3>
 <blockquote>
 <p>Every innovation is <em>new</em> and <em>unique</em>, <em>no authority</em> can <em>prescribe</em> in concrete <em>terms</em> how to <em>be innovative</em>.</p>
 </blockquote>
@@ -15905,7 +15973,7 @@ second, queries aren’t the only context in which such expressions are used any
 </ul>
 </li>
 </ul>
-<h3 id="notes-37"><a class="header" href="#notes-37">Notes</a></h3>
+<h3 id="notes-38"><a class="header" href="#notes-38">Notes</a></h3>
 <blockquote>
 <p>&quot;Be a good steward of your gifts. Protect your time. Feed your inner life. Avoid too much noise. Read good books, have good sentences in your ears. Be by yourself as often as you can. Walk. Take the phone off the hook. Work regular hours.&quot;</p>
 <p>-- by <a href="https://en.wikipedia.org/wiki/Jane_Kenyon">Jane Kenyon</a></p>
@@ -15933,7 +16001,7 @@ look carefully you can find problems in all writers. And that should give you gr
 </ul>
 </li>
 </ul>
-<h3 id="notes-38"><a class="header" href="#notes-38">Notes</a></h3>
+<h3 id="notes-39"><a class="header" href="#notes-39">Notes</a></h3>
 <blockquote>
 <p>我们在讨论哲学时，尽量做到</p>
 <ul>
@@ -16004,7 +16072,7 @@ look carefully you can find problems in all writers. And that should give you gr
 <li>Current status: <em>C</em> <small>(DD)</small></li>
 </ul>
 <hr />
-<h2 id="notes-39"><a class="header" href="#notes-39">Notes</a></h2>
+<h2 id="notes-40"><a class="header" href="#notes-40">Notes</a></h2>
 <h3 id="preface-1"><a class="header" href="#preface-1">Preface</a></h3>
 <blockquote>
 <p>N/A</p>
@@ -16059,7 +16127,7 @@ look carefully you can find problems in all writers. And that should give you gr
 </ul>
 </li>
 </ul>
-<h3 id="notes-40"><a class="header" href="#notes-40">Notes</a></h3>
+<h3 id="notes-41"><a class="header" href="#notes-41">Notes</a></h3>
 <h4 id="始-1"><a class="header" href="#始-1">始</a></h4>
 <blockquote>
 <p>Mainly I was interested in what their lives were like now, from the moment they got up until they went to bed.</p>
@@ -16130,7 +16198,7 @@ look carefully you can find problems in all writers. And that should give you gr
 </ul>
 </li>
 </ul>
-<h3 id="notes-41"><a class="header" href="#notes-41">Notes</a></h3>
+<h3 id="notes-42"><a class="header" href="#notes-42">Notes</a></h3>
 <h4 id="http-server"><a class="header" href="#http-server">HTTP Server</a></h4>
 <ul>
 <li>Web content lives on web servers</li>
@@ -16398,7 +16466,7 @@ look carefully you can find problems in all writers. And that should give you gr
 <li>Current status: <em>C</em> <small>(DD)</small></li>
 </ul>
 <hr />
-<h2 id="notes-42"><a class="header" href="#notes-42">Notes</a></h2>
+<h2 id="notes-43"><a class="header" href="#notes-43">Notes</a></h2>
 <h3 id="preface-2"><a class="header" href="#preface-2">Preface</a></h3>
 <blockquote>
 <p>N/A</p>
@@ -16480,7 +16548,7 @@ look carefully you can find problems in all writers. And that should give you gr
 <li>Current status: <em>C</em> <small>(DD)</small></li>
 </ul>
 <hr />
-<h2 id="notes-43"><a class="header" href="#notes-43">Notes</a></h2>
+<h2 id="notes-44"><a class="header" href="#notes-44">Notes</a></h2>
 <h3 id="preface-3"><a class="header" href="#preface-3">Preface</a></h3>
 <blockquote>
 <p>N/A</p>
@@ -16518,7 +16586,7 @@ look carefully you can find problems in all writers. And that should give you gr
 </ul>
 </li>
 </ul>
-<h3 id="notes-44"><a class="header" href="#notes-44">Notes</a></h3>
+<h3 id="notes-45"><a class="header" href="#notes-45">Notes</a></h3>
 <blockquote>
 <p>X</p>
 </blockquote>
@@ -16652,7 +16720,7 @@ wget https://psysh.org/psysh &amp;&amp; chmod +x psych
 ./psych
 </code></pre>
 <hr />
-<h2 id="installation-3"><a class="header" href="#installation-3">Installation</a></h2>
+<h2 id="installation-2"><a class="header" href="#installation-2">Installation</a></h2>
 <blockquote>
 <p>You might need to {re-launch your terminal, <code>source ~/.SHELLrc</code>} and might need to run them as administrator.</p>
 <blockquote>
@@ -17051,7 +17119,7 @@ httpd -V    build parameters of httpd
 <li>Current status: <em>C</em> <small>(DD)</small></li>
 </ul>
 <hr />
-<h2 id="notes-45"><a class="header" href="#notes-45">Notes</a></h2>
+<h2 id="notes-46"><a class="header" href="#notes-46">Notes</a></h2>
 <h3 id="preface-4"><a class="header" href="#preface-4">Preface</a></h3>
 <blockquote>
 <p>N/A</p>
@@ -17173,7 +17241,7 @@ Autopilot 无法被直接干预，但若有能力在 perceive 这个 process 结
 <li>Current status: <em>C</em> <small>(DD)</small></li>
 </ul>
 <hr />
-<h2 id="notes-46"><a class="header" href="#notes-46">Notes</a></h2>
+<h2 id="notes-47"><a class="header" href="#notes-47">Notes</a></h2>
 <h3 id="preface-5"><a class="header" href="#preface-5">Preface</a></h3>
 <blockquote>
 <p>N/A</p>
@@ -17302,7 +17370,7 @@ systemctl reload sshd
 <blockquote>
 <p>Automatically open apps when boot up :) I'm not talking about the terminology <a href="https://en.wikipedia.org/wiki/Startup_company"><em>Startup</em> company</a></p>
 </blockquote>
-<h2 id="macos-1"><a class="header" href="#macos-1">macOS</a></h2>
+<h2 id="macos-2"><a class="header" href="#macos-2">macOS</a></h2>
 <blockquote>
 <p>By GUI (macOS Monterey 12.6.2)</p>
 </blockquote>
@@ -17427,7 +17495,7 @@ C:\Users\USER_NAME\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 <li>Current status: <em>C</em> <small>(DD)</small></li>
 </ul>
 <hr />
-<h2 id="notes-47"><a class="header" href="#notes-47">Notes</a></h2>
+<h2 id="notes-48"><a class="header" href="#notes-48">Notes</a></h2>
 <h3 id="preface-6"><a class="header" href="#preface-6">Preface</a></h3>
 <blockquote>
 <p>N/A</p>
@@ -17511,7 +17579,7 @@ C:\Users\USER_NAME\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 <li>Current status: <em>abandoned</em> <small>(new notes might be added after June 30, 2023)</small></li>
 </ul>
 <hr />
-<h2 id="notes-48"><a class="header" href="#notes-48">Notes</a></h2>
+<h2 id="notes-49"><a class="header" href="#notes-49">Notes</a></h2>
 <h3 id="preface-7"><a class="header" href="#preface-7">Preface</a></h3>
 <blockquote>
 <p>It’s a fever swamp of urges, desires, and judgments. It’s fixated on the past and the future, to the detriment of the here and now. It’s what has us reaching into the fridge when we’re not hungry, losing our temper when we know it’s not really in our best interest, and pruning our inboxes when we’re ostensibly engaged in conversation with other human beings.</p>
@@ -17633,7 +17701,7 @@ C:\Users\USER_NAME\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 <li>Current status: <em>C</em> <small>(DD)</small></li>
 </ul>
 <hr />
-<h2 id="notes-49"><a class="header" href="#notes-49">Notes</a></h2>
+<h2 id="notes-50"><a class="header" href="#notes-50">Notes</a></h2>
 <h3 id="preface-8"><a class="header" href="#preface-8">Preface</a></h3>
 <blockquote>
 <p>N/A</p>
@@ -17715,7 +17783,7 @@ C:\Users\USER_NAME\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 <li>Current status: <em>C</em> <small>(DD)</small></li>
 </ul>
 <hr />
-<h2 id="notes-50"><a class="header" href="#notes-50">Notes</a></h2>
+<h2 id="notes-51"><a class="header" href="#notes-51">Notes</a></h2>
 <h3 id="preface-9"><a class="header" href="#preface-9">Preface</a></h3>
 <blockquote>
 <p>N/A</p>
@@ -17800,7 +17868,7 @@ C:\Users\USER_NAME\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 <li>Current status: <em>X</em> <small>(ready to add notes)</small></li>
 </ul>
 <hr />
-<h2 id="notes-51"><a class="header" href="#notes-51">Notes</a></h2>
+<h2 id="notes-52"><a class="header" href="#notes-52">Notes</a></h2>
 <h3 id="preface-10"><a class="header" href="#preface-10">Preface</a></h3>
 <blockquote>
 <p>N/A</p>
@@ -17882,7 +17950,7 @@ C:\Users\USER_NAME\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 <li>Current status: <em>C</em> <small>(DD)</small></li>
 </ul>
 <hr />
-<h2 id="notes-52"><a class="header" href="#notes-52">Notes</a></h2>
+<h2 id="notes-53"><a class="header" href="#notes-53">Notes</a></h2>
 <h3 id="preface-11"><a class="header" href="#preface-11">Preface</a></h3>
 <blockquote>
 <p>N/A</p>
@@ -17964,7 +18032,7 @@ C:\Users\USER_NAME\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 <li>Current status: <em>C</em> <small>(DD)</small></li>
 </ul>
 <hr />
-<h2 id="notes-53"><a class="header" href="#notes-53">Notes</a></h2>
+<h2 id="notes-54"><a class="header" href="#notes-54">Notes</a></h2>
 <h3 id="preface-12"><a class="header" href="#preface-12">Preface</a></h3>
 <blockquote>
 <p>N/A</p>
@@ -18046,7 +18114,7 @@ C:\Users\USER_NAME\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 <li>Current status: <em>C</em> <small>(DD)</small></li>
 </ul>
 <hr />
-<h2 id="notes-54"><a class="header" href="#notes-54">Notes</a></h2>
+<h2 id="notes-55"><a class="header" href="#notes-55">Notes</a></h2>
 <h3 id="preface-13"><a class="header" href="#preface-13">Preface</a></h3>
 <blockquote>
 <p>N/A</p>
@@ -18128,7 +18196,7 @@ C:\Users\USER_NAME\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 <li>Current status: <em>C</em> <small>(DD)</small></li>
 </ul>
 <hr />
-<h2 id="notes-55"><a class="header" href="#notes-55">Notes</a></h2>
+<h2 id="notes-56"><a class="header" href="#notes-56">Notes</a></h2>
 <h3 id="preface-14"><a class="header" href="#preface-14">Preface</a></h3>
 <blockquote>
 <p>N/A</p>
@@ -18213,7 +18281,7 @@ C:\Users\USER_NAME\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 <li>Current status: <em>C</em> <small>(DD)</small></li>
 </ul>
 <hr />
-<h2 id="notes-56"><a class="header" href="#notes-56">Notes</a></h2>
+<h2 id="notes-57"><a class="header" href="#notes-57">Notes</a></h2>
 <h3 id="preface-15"><a class="header" href="#preface-15">Preface</a></h3>
 <blockquote>
 <p>N/A</p>
@@ -18298,7 +18366,7 @@ C:\Users\USER_NAME\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 <li>Current status: <em>C</em> <small>(DD)</small></li>
 </ul>
 <hr />
-<h2 id="notes-57"><a class="header" href="#notes-57">Notes</a></h2>
+<h2 id="notes-58"><a class="header" href="#notes-58">Notes</a></h2>
 <h3 id="preface-16"><a class="header" href="#preface-16">Preface</a></h3>
 <blockquote>
 <p>N/A</p>
@@ -18380,7 +18448,7 @@ C:\Users\USER_NAME\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 <li>Current status: <em>C</em> <small>(DD)</small></li>
 </ul>
 <hr />
-<h2 id="notes-58"><a class="header" href="#notes-58">Notes</a></h2>
+<h2 id="notes-59"><a class="header" href="#notes-59">Notes</a></h2>
 <h3 id="preface-17"><a class="header" href="#preface-17">Preface</a></h3>
 <blockquote>
 <p>N/A</p>
@@ -18462,7 +18530,7 @@ C:\Users\USER_NAME\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 <li>Current status: <em>C</em> <small>(DD)</small></li>
 </ul>
 <hr />
-<h2 id="notes-59"><a class="header" href="#notes-59">Notes</a></h2>
+<h2 id="notes-60"><a class="header" href="#notes-60">Notes</a></h2>
 <h3 id="preface-18"><a class="header" href="#preface-18">Preface</a></h3>
 <blockquote>
 <p>N/A</p>
@@ -18544,7 +18612,7 @@ C:\Users\USER_NAME\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 <li>Current status: <em>C</em> <small>(DD)</small></li>
 </ul>
 <hr />
-<h2 id="notes-60"><a class="header" href="#notes-60">Notes</a></h2>
+<h2 id="notes-61"><a class="header" href="#notes-61">Notes</a></h2>
 <h3 id="preface-19"><a class="header" href="#preface-19">Preface</a></h3>
 <blockquote>
 <p>N/A</p>
@@ -18626,7 +18694,7 @@ C:\Users\USER_NAME\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 <li>Current status: <em>C</em> <small>(DD)</small></li>
 </ul>
 <hr />
-<h2 id="notes-61"><a class="header" href="#notes-61">Notes</a></h2>
+<h2 id="notes-62"><a class="header" href="#notes-62">Notes</a></h2>
 <h3 id="preface-20"><a class="header" href="#preface-20">Preface</a></h3>
 <blockquote>
 <p>N/A</p>
@@ -18708,7 +18776,7 @@ C:\Users\USER_NAME\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 <li>Current status: <em>C</em> <small>(DD)</small></li>
 </ul>
 <hr />
-<h2 id="notes-62"><a class="header" href="#notes-62">Notes</a></h2>
+<h2 id="notes-63"><a class="header" href="#notes-63">Notes</a></h2>
 <h3 id="preface-21"><a class="header" href="#preface-21">Preface</a></h3>
 <blockquote>
 <p>N/A</p>
@@ -18781,7 +18849,7 @@ C:\Users\USER_NAME\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 </ul>
 </li>
 </ul>
-<h3 id="notes-63"><a class="header" href="#notes-63">Notes</a></h3>
+<h3 id="notes-64"><a class="header" href="#notes-64">Notes</a></h3>
 <h4 id="scientific-method"><a class="header" href="#scientific-method">Scientific Method</a></h4>
 <h5 id="why-16"><a class="header" href="#why-16">Why</a></h5>
 <blockquote>
@@ -19066,7 +19134,7 @@ tutorials.</p>
 <li>Current status: <em>C</em> <small>(DD)</small></li>
 </ul>
 <hr />
-<h2 id="notes-64"><a class="header" href="#notes-64">Notes</a></h2>
+<h2 id="notes-65"><a class="header" href="#notes-65">Notes</a></h2>
 <h3 id="preface-22"><a class="header" href="#preface-22">Preface</a></h3>
 <blockquote>
 <p>N/A</p>
@@ -19148,7 +19216,7 @@ tutorials.</p>
 <li>Current status: <em>C</em> <small>(DD)</small></li>
 </ul>
 <hr />
-<h2 id="notes-65"><a class="header" href="#notes-65">Notes</a></h2>
+<h2 id="notes-66"><a class="header" href="#notes-66">Notes</a></h2>
 <h3 id="preface-23"><a class="header" href="#preface-23">Preface</a></h3>
 <blockquote>
 <p>N/A</p>
@@ -19233,7 +19301,7 @@ tutorials.</p>
 <blockquote>
 <p>In many ways, understanding how the authors intend a book to be read is just as important of a guide to understanding how to use the material as understanding how the information is structured, or what question the book is trying to answer.</p>
 </blockquote>
-<h3 id="notes-66"><a class="header" href="#notes-66">Notes</a></h3>
+<h3 id="notes-67"><a class="header" href="#notes-67">Notes</a></h3>
 <blockquote>
 <p>N/A</p>
 </blockquote>
@@ -19323,7 +19391,7 @@ tutorials.</p>
 </ul>
 </li>
 </ul>
-<h3 id="notes-67"><a class="header" href="#notes-67">Notes</a></h3>
+<h3 id="notes-68"><a class="header" href="#notes-68">Notes</a></h3>
 <h4 id="视角-1"><a class="header" href="#视角-1">视角</a></h4>
 <blockquote>
 <p>Often taking the perpetrator’s side over their victim’s, popular sentiment too often has been that the men are the ones harmed by rape charges, that they have the most to lose, which assumes, of course, that their futures matter more than those of their victim’s.</p>
@@ -19394,7 +19462,7 @@ tutorials.</p>
 </ul>
 </li>
 </ul>
-<h3 id="notes-68"><a class="header" href="#notes-68">Notes</a></h3>
+<h3 id="notes-69"><a class="header" href="#notes-69">Notes</a></h3>
 <h4 id="引"><a class="header" href="#引">引</a></h4>
 <blockquote>
 <p>Despite its title, this book is not about me, but about the concept of &quot;I&quot;. It's thus about you, reader, every bit as much as it is about me. I could just as well have called it &quot;You Are a Strange Loop&quot;.</p>
@@ -19482,7 +19550,7 @@ tutorials.</p>
 </ul>
 </li>
 </ul>
-<h3 id="notes-69"><a class="header" href="#notes-69">Notes</a></h3>
+<h3 id="notes-70"><a class="header" href="#notes-70">Notes</a></h3>
 <p>Page 7</p>
 <p>哲学在中国文化中所占的地位，历来可以与宗教在其他文化中的地位相比。</p>
 <p>比如 &lt;四书&gt; (此为合称)
@@ -21414,7 +21482,7 @@ Somebody did.</p>
 </ul>
 </li>
 </ul>
-<h3 id="notes-70"><a class="header" href="#notes-70">Notes</a></h3>
+<h3 id="notes-71"><a class="header" href="#notes-71">Notes</a></h3>
 <h4 id="intro-2"><a class="header" href="#intro-2">Intro</a></h4>
 <blockquote>
 <p>当初入大学的学生们问及有关生活意义和宇宙本性的问题时，回答这些问题的应当是哲学。但许多学生由于没有受过严格思维的训练，却又急于得到一个答案，于是就会诉诸一些廉价的替代品，即那些自我帮助的通俗哲学、舶来的怪异宗教、极端的政治等。</p>
@@ -22052,7 +22120,7 @@ There are four such answers worth mentioning: thinking of one’s children as th
 <ul>
 <li><a href="https://www.goodreads.com/book/show/30804383-the-hardware-hacker">The Hardware Hacker: Adventures in Making and Breaking Hardware by Andrew Huang | Goodreads</a></li>
 </ul>
-<h3 id="notes-71"><a class="header" href="#notes-71">Notes</a></h3>
+<h3 id="notes-72"><a class="header" href="#notes-72">Notes</a></h3>
 <h4 id="background-information"><a class="header" href="#background-information">Background Information</a></h4>
 <blockquote>
 <p>I lived in Shenzhen for a month. I deliberately picked neighborhoods with no English speakers and forced myself to learn the language and customs to survive. (Although I’m ethnically Chinese, my parents prioritized accent-free fluency in English over learning Chinese.)</p>
@@ -22152,7 +22220,7 @@ There are four such answers worth mentioning: thinking of one’s children as th
 </ul>
 </li>
 </ul>
-<h3 id="notes-72"><a class="header" href="#notes-72">Notes</a></h3>
+<h3 id="notes-73"><a class="header" href="#notes-73">Notes</a></h3>
 <h4 id="ayy"><a class="header" href="#ayy">Ayy</a></h4>
 <blockquote>
 <p>Honestly, I’d prefer that people spend their time discovering what problems they love and find interesting, first, and researching the hell out of those problems.</p>
@@ -22301,7 +22369,7 @@ There are four such answers worth mentioning: thinking of one’s children as th
 </ul>
 </li>
 </ul>
-<h3 id="notes-73"><a class="header" href="#notes-73">Notes</a></h3>
+<h3 id="notes-74"><a class="header" href="#notes-74">Notes</a></h3>
 <h4 id="premise-brought-up-by-the-author"><a class="header" href="#premise-brought-up-by-the-author">Premise Brought Up by the Author</a></h4>
 <blockquote>
 <p>Much of the book discusses the shortcomings of the liberal world view and of the democratic system. I do so not because I believe liberal democracy is uniquely problematic, but rather because I think it is the most successful and most versatile political model humans have so far developed for dealing with the challenges of the modern world.</p>
@@ -22421,7 +22489,7 @@ There are four such answers worth mentioning: thinking of one’s children as th
 </ul>
 </li>
 </ul>
-<h3 id="notes-74"><a class="header" href="#notes-74">Notes</a></h3>
+<h3 id="notes-75"><a class="header" href="#notes-75">Notes</a></h3>
 <blockquote>
 <p>Mapping the features of one complex thing onto the features of another complex thing that you already (think you) understand is a famously powerful thinking tool, but it is so powerful that it often leads thinkers astray when their imaginations get captured by a treacherous analogy.</p>
 <p>This is part of the reason why almost all coding tutorials are <em>complete shit</em>. Broadly speaking, almost all the teaching process.</p>
@@ -22618,7 +22686,7 @@ It takes way longer, but it’s worth it.</p>
 </ul>
 </li>
 </ul>
-<h3 id="notes-75"><a class="header" href="#notes-75">Notes</a></h3>
+<h3 id="notes-76"><a class="header" href="#notes-76">Notes</a></h3>
 <h4 id="引-1"><a class="header" href="#引-1">引</a></h4>
 <blockquote>
 <p>We could wake up tomorrow morning dead—and without ever having touched the roots of our own existence.</p>
@@ -22660,7 +22728,7 @@ It takes way longer, but it’s worth it.</p>
 </ul>
 </li>
 </ul>
-<h3 id="notes-76"><a class="header" href="#notes-76">Notes</a></h3>
+<h3 id="notes-77"><a class="header" href="#notes-77">Notes</a></h3>
 <h4 id="引-2"><a class="header" href="#引-2">引</a></h4>
 <blockquote>
 <p>The question of how to define life is notoriously controversial.</p>
@@ -22827,7 +22895,7 @@ It takes way longer, but it’s worth it.</p>
 </ul>
 </li>
 </ul>
-<h3 id="notes-77"><a class="header" href="#notes-77">Notes</a></h3>
+<h3 id="notes-78"><a class="header" href="#notes-78">Notes</a></h3>
 <h4 id="identity-1"><a class="header" href="#identity-1">Identity</a></h4>
 <blockquote>
 <p>别人的人生是在不断做加法，他却在做减法。人的每一种身份都是一种自我绑架，唯有失去是通向自由之途。</p>

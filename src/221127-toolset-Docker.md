@@ -1,21 +1,78 @@
-<!-- toc -->
 > Thoughts and notes on Docker
+<!-- toc -->
 
-### Foreword
+## Foreword
 
-> Recently I switched from *Docker for macOS* to ***Docker in VM*** (managed by **Vagrant**), so I though I should do a write up for the whole process and caveats.
+> Platforms other than Linux like *macOS* and *Windows* would experience all kinds of different problems. If you do not want too much hassle, better to do this whole thing inside Linux only :)
 >
 > And, I'm **not** going to make the installation more uniform (similar logic for an easier transfer effort) before I have more time to refine this.
 >
 
-### Installation
+## Installation & Configuration
 
 > I Assume You Already Have
 >
 > - **Configured** the *proxies* to access the *normal* Internet
 > - **Gained** the *access to root* in your VM in order to run `sudo`
 
-#### [CentOS](https://app.vagrantup.com/centos/boxes/7)
+### macOS
+
+#### Rant
+
+> Hmm, in the default setting <small>(like using the binary `docker` with the GUI *Docker Desktop*</small>), you couldn't run it as daemon, which some apps like `docker-maven-plugin` won't be able to work properly.
+>
+> Changes made to *Docker Desktop* did not work ([add something like `tcp://MY_HOST_LAN_IP:2375`](https://docs.docker.com/engine/reference/commandline/dockerd/) and relaunch), and the process is painfully slow <small>(more than 2 minutes, context: i7 + 16GB RAM)</small> and buggy <small>(no longer be able to start up *Docker Desktop* any more even though I tried to revert the setting back!)</small>. Anyway, it was **slow** to me before I encounter issues like this. So it's time to switch to something lighter and easy to use!
+
+#### Notes
+
+> Docker Desktop serves almost *nothing* if all you do is meddling with images and containers, and were **confortable with the terminal**. It merely provides you *a* good-looking *UI* for you to do the same thing.
+>
+> The alternative I found is *colima* <small>(**C**ontainers **o**n **Li**nux on **Ma**c)</small>. Here's the whole processs of getting a MySQL container working <small>(as an example)</small> 😊
+
+- Necessary Tooling
+
+  ```bash
+  brew install docker
+  brew services start docker
+
+  brew install colima
+  ```
+
+- [Authentication](https://stackoverflow.com/a/72888813/6273859)
+
+  > Install `brew install docker-credential-helper`<br/>then edit `~/.docker/config.json` to something like this, finally, authenticate with your *Docker* credentials by running `docker login -u DOCKER_USERNAME`
+
+  ```json
+  {
+      "auths": {
+          "https://index.docker.io/v1/": {}
+      },
+      "credsStore": "osxkeychain",
+      "currentContext": "colima",
+      "experimental": "enabled"
+  }
+  ```
+
+- Tryout
+
+  ```bash
+  # Run
+  docker run --name mysql8-mall \
+    --publish 3306:3306 \
+    --env MYSQL_ROOT_PASSWORD=password \
+    --volume /tmp:/mydata \
+    --detach \
+    mysql:8
+
+  # Check
+  docker logs mysql8-mall
+  ```
+
+- Beyond
+
+  > [How I switched from Docker Desktop to Colima](https://opensource.com/article/22/9/docker-desktop-colima)
+
+### [CentOS](https://app.vagrantup.com/centos/boxes/7)
 
 > Thanks to [How To Install and Use Docker on CentOS 7 | DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-centos-7) and [**this**](https://stackoverflow.com/a/71985088/6273859)
 
@@ -45,7 +102,7 @@ sudo systemctl enable docker
 sudo docker run hello-world
 ```
 
-#### [Ubuntu](https://app.vagrantup.com/ubuntu/boxes/focal64)
+### [Ubuntu](https://app.vagrantup.com/ubuntu/boxes/focal64)
 
 > Thanks to [How To Install and Use Docker on Ubuntu 20.04 | DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04)
 
@@ -72,9 +129,9 @@ sudo systemctl enable docker
 sudo docker run hello-world
 ````
 
-### Practical Usage
+## Practical Usage
 
-#### MySQL
+### MySQL
 
 ```bash
 # The base to modify on
