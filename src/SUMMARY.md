@@ -146,7 +146,7 @@
 - [221028 On Time](./221028-on-Time.md)
 - [221028 On Food Security](./221028-on-Food-Security.md)
 - [221025 Zero to One OS](./221025-zero-to-one-Operating-System.md)
-- [221025 Zero to One Network](./221025-zero-to-one-Operating-System.md)
+- [221025 Zero to One Network](./221025-zero-to-one-Network.md)
 - [221012 Manage JDK Version](./221012-manage-jdk-version.md)
 - [221010 Issue node-sass Fail to Compile](./221010-issue-node-sass-fail-to-compile.md)
 - [221006 Self-Hosted Blog for Zola](./221006-self-hosted-blog-for-zola.md)
