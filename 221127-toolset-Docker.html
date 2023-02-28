@@ -142,10 +142,19 @@
 
                 <div id="content" class="content">
                     <main>
-                        <ul>
-<li><a href="#foreword">Foreword</a></li>
-<li><a href="#installation">Installation</a>
+                        <blockquote>
+<p>Thoughts and notes on Docker</p>
+</blockquote>
 <ul>
+<li><a href="#foreword">Foreword</a></li>
+<li><a href="#installation--configuration">Installation &amp; Configuration</a>
+<ul>
+<li><a href="#macos">macOS</a>
+<ul>
+<li><a href="#rant">Rant</a></li>
+<li><a href="#notes">Notes</a></li>
+</ul>
+</li>
 <li><a href="#centos">CentOS</a></li>
 <li><a href="#ubuntu">Ubuntu</a></li>
 </ul>
@@ -156,15 +165,12 @@
 </ul>
 </li>
 </ul>
+<h2 id="foreword"><a class="header" href="#foreword">Foreword</a></h2>
 <blockquote>
-<p>Thoughts and notes on Docker</p>
-</blockquote>
-<h3 id="foreword"><a class="header" href="#foreword">Foreword</a></h3>
-<blockquote>
-<p>Recently I switched from <em>Docker for macOS</em> to <em><strong>Docker in VM</strong></em> (managed by <strong>Vagrant</strong>), so I though I should do a write up for the whole process and caveats.</p>
+<p>Platforms other than Linux like <em>macOS</em> and <em>Windows</em> would experience all kinds of different problems. If you do not want too much hassle, better to do this whole thing inside Linux only :)</p>
 <p>And, I'm <strong>not</strong> going to make the installation more uniform (similar logic for an easier transfer effort) before I have more time to refine this.</p>
 </blockquote>
-<h3 id="installation"><a class="header" href="#installation">Installation</a></h3>
+<h2 id="installation--configuration"><a class="header" href="#installation--configuration">Installation &amp; Configuration</a></h2>
 <blockquote>
 <p>I Assume You Already Have</p>
 <ul>
@@ -172,7 +178,63 @@
 <li><strong>Gained</strong> the <em>access to root</em> in your VM in order to run <code>sudo</code></li>
 </ul>
 </blockquote>
-<h4 id="centos"><a class="header" href="#centos"><a href="https://app.vagrantup.com/centos/boxes/7">CentOS</a></a></h4>
+<h3 id="macos"><a class="header" href="#macos">macOS</a></h3>
+<h4 id="rant"><a class="header" href="#rant">Rant</a></h4>
+<blockquote>
+<p>Hmm, in the default setting <small>(like using the binary <code>docker</code> with the GUI <em>Docker Desktop</em></small>), you couldn't run it as daemon, which some apps like <code>docker-maven-plugin</code> won't be able to work properly.</p>
+<p>Changes made to <em>Docker Desktop</em> did not work (<a href="https://docs.docker.com/engine/reference/commandline/dockerd/">add something like <code>tcp://MY_HOST_LAN_IP:2375</code></a> and relaunch), and the process is painfully slow <small>(more than 2 minutes, context: i7 + 16GB RAM)</small> and buggy <small>(no longer be able to start up <em>Docker Desktop</em> any more even though I tried to revert the setting back!)</small>. Anyway, it was <strong>slow</strong> to me before I encounter issues like this. So it's time to switch to something lighter and easy to use!</p>
+</blockquote>
+<h4 id="notes"><a class="header" href="#notes">Notes</a></h4>
+<blockquote>
+<p>Docker Desktop serves almost <em>nothing</em> if all you do is meddling with images and containers, and were <strong>confortable with the terminal</strong>. It merely provides you <em>a</em> good-looking <em>UI</em> for you to do the same thing.</p>
+<p>The alternative I found is <em>colima</em> <small>(<strong>C</strong>ontainers <strong>o</strong>n <strong>Li</strong>nux on <strong>Ma</strong>c)</small>. Here's the whole processs of getting a MySQL container working <small>(as an example)</small> 😊</p>
+</blockquote>
+<ul>
+<li>
+<p>Necessary Tooling</p>
+<pre><code class="language-bash">brew install docker
+brew services start docker
+
+brew install colima
+</code></pre>
+</li>
+<li>
+<p><a href="https://stackoverflow.com/a/72888813/6273859">Authentication</a></p>
+<blockquote>
+<p>Install <code>brew install docker-credential-helper</code><br/>then edit <code>~/.docker/config.json</code> to something like this, finally, authenticate with your <em>Docker</em> credentials by running <code>docker login -u DOCKER_USERNAME</code></p>
+</blockquote>
+<pre><code class="language-json">{
+    &quot;auths&quot;: {
+        &quot;https://index.docker.io/v1/&quot;: {}
+    },
+    &quot;credsStore&quot;: &quot;osxkeychain&quot;,
+    &quot;currentContext&quot;: &quot;colima&quot;,
+    &quot;experimental&quot;: &quot;enabled&quot;
+}
+</code></pre>
+</li>
+<li>
+<p>Tryout</p>
+<pre><code class="language-bash"># Run
+docker run --name mysql8-mall \
+  --publish 3306:3306 \
+  --env MYSQL_ROOT_PASSWORD=password \
+  --volume /tmp:/mydata \
+  --detach \
+  mysql:8
+
+# Check
+docker logs mysql8-mall
+</code></pre>
+</li>
+<li>
+<p>Beyond</p>
+<blockquote>
+<p><a href="https://opensource.com/article/22/9/docker-desktop-colima">How I switched from Docker Desktop to Colima</a></p>
+</blockquote>
+</li>
+</ul>
+<h3 id="centos"><a class="header" href="#centos"><a href="https://app.vagrantup.com/centos/boxes/7">CentOS</a></a></h3>
 <blockquote>
 <p>Thanks to <a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-centos-7">How To Install and Use Docker on CentOS 7 | DigitalOcean</a> and <a href="https://stackoverflow.com/a/71985088/6273859"><strong>this</strong></a></p>
 </blockquote>
@@ -200,7 +262,7 @@ sudo systemctl enable docker
 # Test if it works as expected
 sudo docker run hello-world
 </code></pre>
-<h4 id="ubuntu"><a class="header" href="#ubuntu"><a href="https://app.vagrantup.com/ubuntu/boxes/focal64">Ubuntu</a></a></h4>
+<h3 id="ubuntu"><a class="header" href="#ubuntu"><a href="https://app.vagrantup.com/ubuntu/boxes/focal64">Ubuntu</a></a></h3>
 <blockquote>
 <p>Thanks to <a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04">How To Install and Use Docker on Ubuntu 20.04 | DigitalOcean</a></p>
 </blockquote>
@@ -225,8 +287,8 @@ sudo systemctl enable docker
 # Test if it works as expected
 sudo docker run hello-world
 </code></pre>
-<h3 id="practical-usage"><a class="header" href="#practical-usage">Practical Usage</a></h3>
-<h4 id="mysql"><a class="header" href="#mysql">MySQL</a></h4>
+<h2 id="practical-usage"><a class="header" href="#practical-usage">Practical Usage</a></h2>
+<h3 id="mysql"><a class="header" href="#mysql">MySQL</a></h3>
 <pre><code class="language-bash"># The base to modify on
 sudo docker pull mysql:8.0
 sudo docker images | grep mysql
