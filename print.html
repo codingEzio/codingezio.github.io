@@ -10177,6 +10177,10 @@ vagrant snapshot delete  THE_SNAPSHOT_NAME
 brew services start docker
 
 brew install colima
+
+# Do please change the config if you plan to start a bunch of
+# services, or, simply put, you wanna use 'docker-compose' :)
+colima stop &amp;&amp; colima start --cpu 6 --memory 9 --disk 60
 </code></pre>
 </li>
 <li>
