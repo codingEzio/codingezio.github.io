@@ -8,19 +8,21 @@
 
 -----
 
+## Quick Charge
+
+- [3 Types of Identity Crisis (and how to deal with them)](https://www.youtube.com/watch?v=if5YMnNKcNw)
+- [After Life – An Answer to Nihilism](https://www.youtube.com/watch?v=SIPRRWT_SbQ)
+- [The Philosophy of Mr. Nobody – How To Make Meaningful Choices](https://www.youtube.com/watch?v=ANUunK6kiqU)
+- [Arrival | Facing the Fear of Existence](https://www.youtube.com/watch?v=2ZpPMuvoaok)
+
+-----
+
 ## Aim for *Exploration*
 
 > For us.. the Couch Potatoes 🥔
 
 - [shiey](https://www.youtube.com/@shiey/videos): *Climbing*, *Train-surfing*
 - [Steve Wallis](https://www.youtube.com/@campingwithsteve/videos): *Camping*
-
-## Aim for *Epicness*
-
-### [*Flashback FM*](https://www.youtube.com/@flashbackfm)
-
-- [Zack Snyder's Justice League](https://www.youtube.com/playlist?list=PLrT4uvwaf6uwabOR-yIKcP0yzyyY3QSY8)
-- [Man of Steel](https://www.youtube.com/playlist?list=PLrT4uvwaf6uwYR3oKhgUnX-sXMzdjNJqs)
 
 ## Aim for *Grandiosity*
 
