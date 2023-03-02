@@ -69,6 +69,7 @@
 - [LangChain 0.0.89](https://langchain.readthedocs.io/en/latest/getting_started/getting_started.html)
 - [LlamaIndex](https://gpt-index.readthedocs.io/en/latest/)
 - [microsoft/prompt-engine](https://github.com/microsoft/prompt-engine)
+- Official ChatGPT API! [*Introducing ChatGPT and Whisper APIs*](https://openai.com/blog/introducing-chatgpt-and-whisper-apis)
 
 ### Prompt
 
