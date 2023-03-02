@@ -20,6 +20,10 @@
 - [starzq.eth: ChatGPT 对人才需求带来的变化、应对措施和机会点](https://twitter.com/starzqeth/status/1622583053498585088)
 - [kevinzhow: 近乎无限的获得这种智力资源 / 人类是无法面对这次浪潮的](https://twitter.com/kevinzhow/status/1600029430562230272)
 
+### from *Reddit*
+
+- [The Implications of ChatGPT’s API Cost : singularity](https://old.reddit.com/r/singularity/comments/11fn0td/the_implications_of_chatgpts_api_cost/)
+
 ### Demoncratization of AI
 
 > The *ChatGPT-level* <small>(an inaccurate analogy of course)</small> AI in affordable prices
