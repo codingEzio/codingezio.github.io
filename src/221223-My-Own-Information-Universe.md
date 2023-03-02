@@ -101,6 +101,7 @@
 - [Tom Goldstein - Projects](https://www.cs.umd.edu/~tomg/project/)
 - [Knight Lab Studio](https://studio.knightlab.com/)
 - [DesignBoom Magazine](https://www.designboom.com/)
+- [World News | BreachForums](https://breached.vc/Forum-World-News)
 
 ### 二
 
@@ -124,7 +125,8 @@
 
 ### 四
 
-- [Hammertime Series](https://www.lesswrong.com/s/qRxTKm7DAftSuTGvj)
+- [LessWrong -> Rationality: A-Z](https://www.lesswrong.com/rationality#e6WsPsivzBifrWHeA)
+- [LessWrong -> Hammertime Series](https://www.lesswrong.com/s/qRxTKm7DAftSuTGvj)
 - [Ask HN: Best Lecture Series You've Seen](https://news.ycombinator.com/item?id=34591291)
 
 -----

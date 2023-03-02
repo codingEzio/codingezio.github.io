@@ -7,6 +7,7 @@
 ### Longform essay
 
 - [Dr Ray Kurzweil: 2022-2023 Updates](https://lifearchitect.ai/kurzweil/)
+- [OpenAI's Foundry leaked pricing says a lot – if you know how to read it](https://cognitiverevolution.substack.com/p/openais-foundry-leaked-pricing-says) <small>(context for future reference: 230302 with ChatGPT)</small>
 - [Fun with +12 OOMs of Compute](https://www.lesswrong.com/posts/rzqACeBGycZtqCfaX/fun-with-12-ooms-of-compute#OmegaStar_)
 
 ### Ideas and Thoughts from *Twitter*
