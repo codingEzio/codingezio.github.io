@@ -10,6 +10,7 @@
 ### Put On the Wall
 
 - [Vermeer's girl With a Pearl Earring Vermeer](https://www.etsy.com/listing/1079598754/vermeers-girl-with-a-pearl-earring)
+- [The Truth about Switching to a Projector! \[120” 4K Laser Ultra Short Throw\]](https://www.youtube.com/watch?v=nu2OZq8A-AI)
 
 ## Resources
 

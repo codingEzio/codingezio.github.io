@@ -263,5 +263,6 @@
 - [180930 On Reading](./180930-thoughts-on-reading.md)
 - [180901 Neuroenhancer](./180901-Neuroenhancer.md)
 - [180731 Booknote on Author Liu Yu](./180731-booknote-on-Author-Liu-Yu.md)
-- [010101 Project Ideas](./010101-Project-Ideas.md)
-- [010101 Practice List for LeetCode](./010101-Practice-List-for-LeetCode.md)
+- [010102 Project Ideas](./010101-Project-Ideas.md)
+- [010101 LeetCode Practice List](./010101-LeetCode-Practice-List.md)
+- [010101 Interview Guideline](./010101-Interview-Guideline.md)
