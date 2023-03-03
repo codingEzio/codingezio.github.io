@@ -13,9 +13,10 @@
 
 ## Resources
 
-### Speaking
+### Extensions
 
 - [*YouGlish*: Improve German Pronunciation using YouTube](https://youglish.com/german)
+- [Language Reactor](https://www.languagereactor.com/)
 
 ### Dictionary
 
