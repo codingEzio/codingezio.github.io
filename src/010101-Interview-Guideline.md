@@ -1,21 +1,10 @@
 > I've already got loads of to-knows in other posts, so this one shall serve as a way for me to **focus** on the essential things while also allowing me having a **quick glance** at the whole picture.
-<!-- toc -->
-
-## 算法脉络
-
-> 基数构+排序+常, 领域类(密据布荐衡)
-
-| 🤔 | 🍵 |
-| :---: | :---: |
-| ***判断*** | 心定问题类型和解法 |
-| ***写前*** | 告知你的假设和方案 |
-| ***思路*** | 宏构，寻复优, 知复杂度 |
-| ***沟通*** | 持续讲解，应用DP-函数模块化 |
-| ***尾声*** | 通读主测, 念边case，明取舍 |
 
 ## 准备思路
 
 ### Foundation
+
+#### 脉络
 
 | 🤔 | 🍵 |
 | :---: | :---: |
@@ -23,6 +12,24 @@
 | ***框架*** | 转化商需，复杂度理 <small>(如MS)</small> |
 | ***系统*** | Foundation, Concurrency |
 | ***面试*** | 个人介绍, 项目+技术, 反问 |
+
+#### 实资
+
+> Probably would be narrowed down even further in the near future
+
+| 👁 | 🤩 |
+| :---: | :--- |
+| ***语基*** | [我](https://codingezio.github.io/221231-Crash-Course-to-Java.html), [简](https://javaguide.cn/java/basis/java-basic-questions-03.html), [全](https://pdai.tech/md/java/basic/java-basic-oop.html) |
+| ***虚拟*** | [我](https://codingezio.github.io/221221-on-Java-Virtual-Machine.html), [简](https://javaguide.cn/java/jvm/memory-area.html), [全](https://pdai.tech/md/java/jvm/java-jvm-x-overview.html)  |
+| ***源码*** | [简](https://javaguide.cn/java/collection/java-collection-questions-01.html), [全](https://pdai.tech/md/java/collection/java-collection-all.html) |
+| ***数库*** | [我](https://codingezio.github.io/220718-zero-to-one-for-database.html), [详](https://dunwu.github.io/db-tutorial/pages/9bb28f/), [全](https://pdai.tech/md/db/sql/sql-db.html) |
+| ***系统*** | [我](https://codingezio.github.io/221025-zero-to-one-Operating-System.html) <small>([书](https://pages.cs.wisc.edu/~remzi/OSTEP/))</small> |
+| ***并发*** | [我](https://codingezio.github.io/221221-on-Java-Concurrency.html), [简](https://javaguide.cn/java/concurrent/java-concurrent-questions-01.html), [全](https://pdai.tech/md/java/thread/java-thread-x-overview.html) |
+| ***算法*** | [我](https://codingezio.github.io/221207-Algorithm-LeetCode-for-General-Problems.html), [络](https://pdai.tech/md/algorithm/alg-basic-overview.html), [域](https://pdai.tech/md/algorithm/alg-domain-overview.html) |
+| ***商需*** | [我](https://codingezio.github.io/221205-Microservice-00-Idea.html), [络](https://icyfenix.cn/exploration/guide/quick-start.html), [全](https://pdai.tech/md/arch/arch-x-overview.html) |
+| ***框架*** | [框](https://mp.weixin.qq.com/s?__biz=MzkwODE5ODM0Ng==&mid=2247490674&idx=1&sn=182bf57335ac29019eb2b9497f2ff22f&chksm=c0ccf4d7f7bb7dc15e163fbed2623f61465638ae3caba239b41547d4f686b7fe7a1d5f1d2e8b&scene=178&cur_album_id=2041709347461709827#rd), [全](https://pdai.tech/md/spring/spring.html) |
+| ***网络*** | [我](https://codingezio.github.io/221025-zero-to-one-Network.html) <small>([书](https://www.sciencedirect.com/book/9780128110270/the-illustrated-network))</small>  |
+| ***设模*** | [速](https://java-design-patterns.com/patterns/), [络](https://pdai.tech/md/dev-spec/pattern/1_overview.html) ,[广](https://www.patterns.dev/posts/#performance-patterns) |
 
 ### Guideline
 
@@ -39,11 +46,25 @@
 > From my perspective, you shouldn't need too much time to prep these questions as long as you are a person with *Strong CS Foundations* <small>(which we normally called as *八股文*. You should and must know them to be able to become a great developer in the future as it's not always about *CRUD*s)</small>, and you like *digging deep with the issues you encountered/stumbled upon while building projects* <small>(i.e. *StackOverflow* is your starting point to a broader ocean of knowledge instead of the destination)</small>. *But*, these could serve as something you could focus on <small>(which higher level or in the foundational sense the questions belong to)</small> and something else you should know in the enterprise-level development.
 >
 > Simple put, get the foundation right and sound, dig deep to the source in daily life, well then, **now** you could add some sauce using these for references 😀
+>
+> There was a blurry line between a crash course and interview questions for the first two sources.
 
 - [Java 全栈知识点问题汇总 (上)](https://pdai.tech/md/interview/x-interview.html)
 - [Java 全栈知识点问题汇总 (下)](https://pdai.tech/md/interview/x-interview-2.html)
 - [Frontend Interview - lgwebdream](https://github.com/lgwebdream/FE-Interview/)
 - [Frontend Interview - evestorm](https://github.com/evestorm/front-end-interview/)
+
+## 算法
+
+> 基数构+排序+常, 领域类(密据布荐衡)
+
+| 🤔 | 🍵 |
+| :---: | :---: |
+| ***判断*** | 心定问题类型和解法 |
+| ***写前*** | 告知你的假设和方案 |
+| ***思路*** | 宏构，寻复优, 知复杂度 |
+| ***沟通*** | 持续讲解，应用DP-函数模块化 |
+| ***尾声*** | 通读主测, 念边case，明取舍 |
 
 ## 项目指南
 

@@ -1,4 +1,5 @@
-> A rough list with around 90 questions from LeetCode
+> An list with around 90 questions from LeetCode
+>> See also [221207 Algorithm LeetCode for General Algorithms](https://codingezio.github.io/221207-Algorithm-LeetCode-for-General-Problems.html)
 <!-- toc -->
 
 ## 01. 数组

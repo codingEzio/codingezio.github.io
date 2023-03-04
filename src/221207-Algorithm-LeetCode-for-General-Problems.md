@@ -1,4 +1,5 @@
 > Algorithm - LeetCode for General Problems
+>> See also [010101 Algorithm LeetCode Practice List](https://codingezio.github.io/010101-Algorithm-LeetCode-Practice-List.html)
 <!-- toc -->
 
 ## Foreword
@@ -1295,6 +1296,7 @@ class Solution:
 
 - [Grind 75 - A better Blind 75 you can customize, by the author of Blind 75](https://www.techinterviewhandbook.org/grind75)
 - [Algorithms Lab <small>(HackMD)</small>](https://hackmd.io/@arthurzllu/SkZBc7GoI) by [Zheng-Liang Lu](https://hackmd.io/@arthurzllu)
+- [算法通关手册](https://algo.itcharge.cn/)
 
 -----
 

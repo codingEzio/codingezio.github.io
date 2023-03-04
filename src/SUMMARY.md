@@ -6,6 +6,7 @@
 
 # Content
 
+- [230304 On Digital Immigration](./230304-on-Digital-Immigration.md)
 - [230302 Tools that were Probably of Use](./230302-Tools-that-were-Probably-of-Use.md)
 - [230301 Booknote on A Return to Love](./230301-booknote-on-A-Return-to-Love.md)
 - [230226 On Running](./230226-on-Running.md)
@@ -263,6 +264,6 @@
 - [180930 On Reading](./180930-thoughts-on-reading.md)
 - [180901 Neuroenhancer](./180901-Neuroenhancer.md)
 - [180731 Booknote on Author Liu Yu](./180731-booknote-on-Author-Liu-Yu.md)
-- [010102 Project Ideas](./010101-Project-Ideas.md)
-- [010101 LeetCode Practice List](./010101-LeetCode-Practice-List.md)
+- [010102 Project Ideas](./010102-Project-Ideas.md)
+- [010101 Algorithm LeetCode Practice List](./010101-Algorithm-LeetCode-Practice-List.md)
 - [010101 Interview Guideline](./010101-Interview-Guideline.md)
