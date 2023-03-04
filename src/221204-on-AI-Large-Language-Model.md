@@ -73,4 +73,5 @@
 
 ### Prompt
 
+- [ChatGPT 中文调教指南](https://chatguide.plexpt.com/)
 - [f/awesome-chatgpt-prompts](https://github.com/f/awesome-chatgpt-prompts)
