@@ -20,17 +20,17 @@
 | 👁 | 🤩 | 🫵 |
 | :---: | :--- | :--- |
 | ***语基*** | [我](https://codingezio.github.io/221231-Crash-Course-to-Java.html), [简](https://javaguide.cn/java/basis/java-basic-questions-03.html), [全](https://pdai.tech/md/java/basic/java-basic-oop.html) | [造](https://github.com/DanijelAskov/microjava-compiler) |
-| ***虚拟*** | [我](https://codingezio.github.io/221221-on-Java-Virtual-Machine.html), [简](https://javaguide.cn/java/jvm/memory-area.html), [全](https://pdai.tech/md/java/jvm/java-jvm-x-overview.html) | [造](https://github.com/gkbrk/python-jvm-interpreter) |
+| ***框架*** | [框](https://mp.weixin.qq.com/s?__biz=MzkwODE5ODM0Ng==&mid=2247490674&idx=1&sn=182bf57335ac29019eb2b9497f2ff22f&chksm=c0ccf4d7f7bb7dc15e163fbed2623f61465638ae3caba239b41547d4f686b7fe7a1d5f1d2e8b&scene=178&cur_album_id=2041709347461709827#rd), [全](https://pdai.tech/md/spring/spring.html) | [造](https://pomb.us/build-your-own-react/) |
 | ***集源*** | [简](https://javaguide.cn/java/collection/java-collection-questions-01.html), [全](https://pdai.tech/md/java/collection/java-collection-all.html) |
 | ***数库*** | [我](https://codingezio.github.io/220718-zero-to-one-for-database.html), [详](https://dunwu.github.io/db-tutorial/pages/9bb28f/), [全](https://pdai.tech/md/db/sql/sql-db.html) | [造](https://cstack.github.io/db_tutorial/), [造](https://jeffknupp.com/blog/2014/09/01/what-is-a-nosql-database-learn-by-writing-one-in-python/) |
-| ***系统*** | [我](https://codingezio.github.io/221025-zero-to-one-Operating-System.html) <small>([书](https://pages.cs.wisc.edu/~remzi/OSTEP/))</small> | [造](https://github.com/cfenollosa/os-tutorial) |
-| ***并发*** | [我](https://codingezio.github.io/221221-on-Java-Concurrency.html), [简](https://javaguide.cn/java/concurrent/java-concurrent-questions-01.html), [全](https://pdai.tech/md/java/thread/java-thread-x-overview.html) |
-| ***算法*** | [我](https://codingezio.github.io/221207-Algorithm-LeetCode-for-General-Problems.html), [络](https://pdai.tech/md/algorithm/alg-basic-overview.html), [域](https://pdai.tech/md/algorithm/alg-domain-overview.html) |
 | ***商需*** | [我](https://codingezio.github.io/221205-Microservice-00-Idea.html), [络](https://icyfenix.cn/exploration/guide/quick-start.html), [全](https://pdai.tech/md/arch/arch-x-overview.html) | [队](https://github.com/vitorluis/SimpleMQ), [衡](https://github.com/kasvith/simplelb), [分](https://github.com/leandromoreira/cdn-up-and-running/)
-| ***框架*** | [框](https://mp.weixin.qq.com/s?__biz=MzkwODE5ODM0Ng==&mid=2247490674&idx=1&sn=182bf57335ac29019eb2b9497f2ff22f&chksm=c0ccf4d7f7bb7dc15e163fbed2623f61465638ae3caba239b41547d4f686b7fe7a1d5f1d2e8b&scene=178&cur_album_id=2041709347461709827#rd), [全](https://pdai.tech/md/spring/spring.html) | [造](https://pomb.us/build-your-own-react/) |
+| ***并发*** | [我](https://codingezio.github.io/221221-on-Java-Concurrency.html), [简](https://javaguide.cn/java/concurrent/java-concurrent-questions-01.html), [全](https://pdai.tech/md/java/thread/java-thread-x-overview.html) |
+| ***虚拟*** | [我](https://codingezio.github.io/221221-on-Java-Virtual-Machine.html), [简](https://javaguide.cn/java/jvm/memory-area.html), [全](https://pdai.tech/md/java/jvm/java-jvm-x-overview.html) | [造](https://github.com/gkbrk/python-jvm-interpreter) |
 | ***网络*** | [我](https://codingezio.github.io/221025-zero-to-one-Network.html) <small>([书](https://www.sciencedirect.com/book/9780128110270/the-illustrated-network))</small> | [造](https://github.com/jvns/teeceepee) |
-| ***设模*** | [速](https://java-design-patterns.com/patterns/), [络](https://pdai.tech/md/dev-spec/pattern/1_overview.html) ,[广](https://www.patterns.dev/posts/#performance-patterns) |
+| ***算法*** | [我](https://codingezio.github.io/221207-Algorithm-LeetCode-for-General-Problems.html), [络](https://pdai.tech/md/algorithm/alg-basic-overview.html), [域](https://pdai.tech/md/algorithm/alg-domain-overview.html) |
+| ***系统*** | [我](https://codingezio.github.io/221025-zero-to-one-Operating-System.html) <small>([书](https://pages.cs.wisc.edu/~remzi/OSTEP/))</small> | [造](https://github.com/cfenollosa/os-tutorial) |
 | ***造具*** | [容](https://blog.lizzie.io/linux-containers-in-500-loc.html), [虚](https://www.jmeiners.com/lc3-vm/), [版](https://wyag.thb.lt/), [文](https://viewsourcecode.org/snaptoken/kilo/index.html) |
+| ***设模*** | [速](https://java-design-patterns.com/patterns/), [络](https://pdai.tech/md/dev-spec/pattern/1_overview.html) ,[广](https://www.patterns.dev/posts/#performance-patterns) |
 
 ### Guideline
 

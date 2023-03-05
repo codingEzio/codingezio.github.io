@@ -14,12 +14,6 @@
 
 - [Design Patterns for Humans](https://github.com/codingEzio/design-patterns-for-humans) <small>(个人翻译)</small>
 - [Java Design Pattern Catalog](https://java-design-patterns.com/patterns/)
-- [Design Patterns in the Spring Framework](https://www.baeldung.com/spring-framework-design-patterns)
+- [Design and Performance Patterns](https://www.patterns.dev/posts/)
 
 ## Notes
-
-> On it
-
-## Beyond
-
-- [Design and Performance Patterns](https://www.patterns.dev/posts/): went beyond just the design patterns <small>(high+low level)</small>
