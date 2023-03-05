@@ -1,5 +1,6 @@
 > My Own Information Universe
->> I'm still trying to find a way for myself to spend less time on websites like *YouTube* 🤒
+>> edited on 230221: Still trying to spend less time on websites like *YouTube* 🤒<br/>
+>> edited on 230305: A huge overhaul is on the way 😁
 <!-- toc -->
 
 ## Prologue
