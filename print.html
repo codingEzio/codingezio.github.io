@@ -71,10 +71,12 @@
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
             var html = document.querySelector('html');
-            var sidebar = 'hidden';
+            var sidebar = null;
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
             }
             html.classList.remove('sidebar-visible');
             html.classList.add("sidebar-" + sidebar);
@@ -6360,29 +6362,55 @@ TODO</li>
 <li><a href="https://tobebetterjavaer.com/sidebar/sanfene/mybatis.html#_4-%E5%9C%A8mapper%E4%B8%AD%E5%A6%82%E4%BD%95%E4%BC%A0%E9%80%92%E5%A4%9A%E4%B8%AA%E5%8F%82%E6%95%B0">MyBatis 必看</a></li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><ul>
-<li><a href="221222-on-Design-Pattern.html#foreword">Foreword</a>
+<li><a href="221222-on-Design-Pattern.html#notes">Notes</a>
 <ul>
-<li><a href="221222-on-Design-Pattern.html#structure">Structure</a></li>
-<li><a href="221222-on-Design-Pattern.html#resource">Resource</a></li>
+<li><a href="221222-on-Design-Pattern.html#what-it-is">What It Is</a></li>
+<li><a href="221222-on-Design-Pattern.html#what-i-think-it-is">What I Think It Is</a></li>
+<li><a href="221222-on-Design-Pattern.html#types-of-design-pattern">Types of Design Pattern</a></li>
 </ul>
 </li>
-<li><a href="221222-on-Design-Pattern.html#notes">Notes</a></li>
+<li><a href="221222-on-Design-Pattern.html#chatgpt">ChatGPT</a></li>
+<li><a href="221222-on-Design-Pattern.html#reference">Reference</a></li>
 </ul>
-<h2 id="foreword-2"><a class="header" href="#foreword-2">Foreword</a></h2>
-<h3 id="structure"><a class="header" href="#structure">Structure</a></h3>
-<div class="table-wrapper"><table><thead><tr><th style="text-align: left">STARTING POINT</th><th style="text-align: left">EXPLANATION</th></tr></thead><tbody>
-<tr><td style="text-align: left">What it is</td><td style="text-align: left">Brief explanation of what it brings to the table and the <em>why</em></td></tr>
-<tr><td style="text-align: left">How it looks like</td><td style="text-align: left">Code examples</td></tr>
-<tr><td style="text-align: left">How it was used in practice</td><td style="text-align: left">Go beyond the simple examples, to the production level</td></tr>
-</tbody></table>
-</div>
-<h3 id="resource-9"><a class="header" href="#resource-9">Resource</a></h3>
+<h2 id="notes-15"><a class="header" href="#notes-15">Notes</a></h2>
+<h3 id="what-it-is"><a class="header" href="#what-it-is">What It Is</a></h3>
+<blockquote>
+<p>Words that were marked with something like <code>THIS</code> were the thing you gotta know for each design patterns you are learning or gonna use.</p>
+<p>Design Pattern is trying to provide a <em>semi</em> <small>(not perfect == <code>tradeoff</code>)</small> solution <small>(<code>implementation</code>)</small> to a <code>problem</code> encountered <small>(<code>context</code>)</small> during various stages of development, while at the same time, create a bunch un-fucking-necessary <code>terminologies</code>.</p>
+</blockquote>
+<h3 id="what-i-think-it-is"><a class="header" href="#what-i-think-it-is">What I Think It Is</a></h3>
+<blockquote>
+<p><em>Ways</em> of doing things. You could even name your way as something <em>Laugh-Out-Loud</em> (LOL) like <em>Model-View-Controller</em> (MVC). Again, it's just a fucking abstraction. Learn it under relevant context then you'd be good.</p>
+</blockquote>
+<h3 id="types-of-design-pattern"><a class="header" href="#types-of-design-pattern">Types of Design Pattern</a></h3>
 <ul>
+<li>Creational</li>
+<li>Structural</li>
+<li>Behavioral</li>
+<li>Architectural</li>
+</ul>
+<hr />
+<h2 id="chatgpt"><a class="header" href="#chatgpt"><em>ChatGPT</em></a></h2>
+<blockquote>
+<p>All the <em>main</em> prompts I used to help me learn more about <em>Design Pattern</em></p>
+</blockquote>
+<ul>
+<li><code>What are the essentials of Design Pattern?</code></li>
+<li><code>What are the essential design patterns to know? 15 at most.</code><br/><code>Recommend two set, one for frontend dev, one for java backend developer</code>
+<ul>
+<li><code>What about essential types of patterns for both devs?</code></li>
+</ul>
+</li>
+<li>x</li>
+</ul>
+<h2 id="reference-1"><a class="header" href="#reference-1">Reference</a></h2>
+<ul>
+<li><em>My Brain</em></li>
+<li><em>ChatGPT</em> <small>(~= brains of other people on earth)</small></li>
 <li><a href="https://github.com/codingEzio/design-patterns-for-humans">Design Patterns for Humans</a> <small>(个人翻译)</small></li>
 <li><a href="https://java-design-patterns.com/patterns/">Java Design Pattern Catalog</a></li>
 <li><a href="https://www.patterns.dev/posts/">Design and Performance Patterns</a></li>
 </ul>
-<h2 id="notes-15"><a class="header" href="#notes-15">Notes</a></h2>
 <div style="break-before: page; page-break-before: always;"></div><ul>
 <li><a href="221221-on-Water-Heater.html#how-tankless-water-heaters-work">How Tankless Water Heaters Work</a>
 <ul>
@@ -6465,7 +6493,7 @@ TODO</li>
 <p>I am still a bit far from converting what I learnt to a better structured knowledge vault. Working on it though!</p>
 </blockquote>
 <h2 id="concepts-3"><a class="header" href="#concepts-3">Concepts</a></h2>
-<h3 id="structure-1"><a class="header" href="#structure-1">Structure</a></h3>
+<h3 id="structure"><a class="header" href="#structure">Structure</a></h3>
 <ul>
 <li>Java language itself</li>
 <li>JVM implementations like Hotspot</li>
@@ -6698,7 +6726,7 @@ TODO</li>
 </li>
 </ul>
 <h2 id="basics-3"><a class="header" href="#basics-3">Basics</a></h2>
-<h3 id="resource-10"><a class="header" href="#resource-10">Resource</a></h3>
+<h3 id="resource-9"><a class="header" href="#resource-9">Resource</a></h3>
 <ul>
 <li><a href="https://cook.aiurs.co/">程序员做饭指南</a> <sup><a href="https://github.com/Anduin2017/HowToCook">src</a></sup>：做饭方法论，以及常见食谱</li>
 <li><a href="https://www.bilibili.com/video/BV1ML411w7zY/">厨房小白该如何选择厨具</a></li>
@@ -7124,7 +7152,7 @@ I came back after my miscarriages.</p>
 </ul>
 </li>
 </ul>
-<h2 id="foreword-3"><a class="header" href="#foreword-3">Foreword</a></h2>
+<h2 id="foreword-2"><a class="header" href="#foreword-2">Foreword</a></h2>
 <h3 id="why-6"><a class="header" href="#why-6">Why</a></h3>
 <ul>
 <li>Review what I've learnt from solving these SQL problems</li>
@@ -7355,7 +7383,7 @@ WHERE  low_fats = 'Y' AND
 </ul>
 </li>
 </ul>
-<h2 id="foreword-4"><a class="header" href="#foreword-4">Foreword</a></h2>
+<h2 id="foreword-3"><a class="header" href="#foreword-3">Foreword</a></h2>
 <h3 id="why-7"><a class="header" href="#why-7">Why</a></h3>
 <blockquote>
 <p>Do note that the solutions below aim towards the esay-to-understand aspect. Some of them are comparably slow than the most popular solutions.</p>
@@ -8539,7 +8567,7 @@ class Solution:
 </ul>
 </li>
 </ul>
-<h3 id="foreword-5"><a class="header" href="#foreword-5">Foreword</a></h3>
+<h3 id="foreword-4"><a class="header" href="#foreword-4">Foreword</a></h3>
 <blockquote>
 <p>This is a complete rewrite from the one I wrote on Sepetember 12, 2022. The current one is powered by the ChatGPT which is developed by the OpenAI.</p>
 <p>Also, unless I specifically mentioned the ChatGPT. All of the content here were written by myself <small>(just want to reserve the last remaining ingenuity of the <em>self</em>)</small>.</p>
@@ -9239,7 +9267,7 @@ Linear algebra, including vector spaces, linear transformations, and matrix oper
 </blockquote>
 </blockquote>
 <h3 id="conceptually-2"><a class="header" href="#conceptually-2">Conceptually</a></h3>
-<h4 id="what-it-is"><a class="header" href="#what-it-is">What It Is</a></h4>
+<h4 id="what-it-is-1"><a class="header" href="#what-it-is-1">What It Is</a></h4>
 <ul>
 <li>It's basically <em>divide and conquer</em></li>
 <li>Almost all applications were built by these parts
@@ -10217,7 +10245,7 @@ vagrant snapshot delete  THE_SNAPSHOT_NAME
 </ul>
 </li>
 </ul>
-<h2 id="foreword-6"><a class="header" href="#foreword-6">Foreword</a></h2>
+<h2 id="foreword-5"><a class="header" href="#foreword-5">Foreword</a></h2>
 <blockquote>
 <p>Platforms other than Linux like <em>macOS</em> and <em>Windows</em> would experience all kinds of different problems. If you do not want too much hassle, better to do this whole thing inside Linux only :)</p>
 <p>And, I'm <strong>not</strong> going to make the installation more uniform (similar logic for an easier transfer effort) before I have more time to refine this.</p>
@@ -11257,7 +11285,7 @@ div.footer {
 <ul>
 <li><a href="https://cssmine.com/ebook/intro">CSS Mine: Dig into Web UI Development</a></li>
 </ul>
-<h3 id="reference-1"><a class="header" href="#reference-1">Reference</a></h3>
+<h3 id="reference-2"><a class="header" href="#reference-2">Reference</a></h3>
 <ul>
 <li><a href="https://dribbble.com/shots/popular">Dribble</a></li>
 <li><a href="https://tympanus.net/codrops/css_reference/">CSS Reference</a></li>
@@ -11391,7 +11419,7 @@ Less meat (+ some sea weed which neg the emmission), better environ</p>
 <blockquote>
 <p>Understanding the Underlying Mechanism</p>
 </blockquote>
-<h2 id="foreword-7"><a class="header" href="#foreword-7">Foreword</a></h2>
+<h2 id="foreword-6"><a class="header" href="#foreword-6">Foreword</a></h2>
 <blockquote>
 <p>Currently this post serves as materials for interview prep, eventually it would be turned into a post digs even more deep and explores more topics.</p>
 </blockquote>
@@ -11687,7 +11715,7 @@ Less meat (+ some sea weed which neg the emmission), better environ</p>
 </ul>
 </li>
 </ul>
-<h2 id="foreword-8"><a class="header" href="#foreword-8">Foreword</a></h2>
+<h2 id="foreword-7"><a class="header" href="#foreword-7">Foreword</a></h2>
 <h3 id="why-14"><a class="header" href="#why-14">Why</a></h3>
 <blockquote>
 <p>知其本，惑消烬</p>
@@ -12167,7 +12195,7 @@ sdk use java 11.0.16-amzn
 <blockquote>
 <p>Issue : node-sass failed to compile</p>
 </blockquote>
-<h3 id="reference-2"><a class="header" href="#reference-2">Reference</a></h3>
+<h3 id="reference-3"><a class="header" href="#reference-3">Reference</a></h3>
 <ul>
 <li><a href="https://github.com/nvm-sh/nvm#install--update-script">Install nvm</a></li>
 <li><a href="https://stackoverflow.com/questions/34203626/nodejs-osx-error-building-node-sass/37299602#37299602">NodeJS OSX error building node-sass</a></li>
@@ -12801,7 +12829,7 @@ git reset --hard HEAD~N    # Remove all N commits
 <li>It's another <strong>authentication method</strong> like username with password</li>
 <li>It's <strong>created and sent</strong> to the user <strong>after being auth-ed</strong> using username with password</li>
 </ul>
-<h5 id="structure-2"><a class="header" href="#structure-2">Structure</a></h5>
+<h5 id="structure-1"><a class="header" href="#structure-1">Structure</a></h5>
 <blockquote>
 <p><code>xxxxx</code> <strong>.</strong> <code>yyyyy</code> <strong>.</strong> <code>zzzzz</code> <small>(no spaces in the actual token) </small></p>
 </blockquote>
@@ -14157,7 +14185,7 @@ a full networking stack;</li>
 </blockquote>
 <hr />
 <h1 id="part-two-1"><a class="header" href="#part-two-1">Part Two</a></h1>
-<h2 id="foreword-9"><a class="header" href="#foreword-9">Foreword</a></h2>
+<h2 id="foreword-8"><a class="header" href="#foreword-8">Foreword</a></h2>
 <h3 id="origin-1"><a class="header" href="#origin-1">Origin</a></h3>
 <blockquote>
 <p>此篇为以下两篇博文的<em>延伸</em> (哪些概念值得去关注，当你会了基本语法和概念)</p>
@@ -17724,7 +17752,7 @@ C:\Users\USER_NAME\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 <li><a href="https://en.wikipedia.org/wiki/Acid-free_paper">Acid-free Paper</a></li>
 </ul>
 <hr />
-<h2 id="reference-3"><a class="header" href="#reference-3">Reference</a></h2>
+<h2 id="reference-4"><a class="header" href="#reference-4">Reference</a></h2>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Paper_data_storage">Paper Data Storage</a></li>
 </ul>
@@ -19573,7 +19601,7 @@ tutorials.</p>
 </ul>
 </li>
 </ul>
-<h3 id="foreword-10"><a class="header" href="#foreword-10">Foreword</a></h3>
+<h3 id="foreword-9"><a class="header" href="#foreword-9">Foreword</a></h3>
 <blockquote>
 <p>Instead of focusing on models or protocols, this book follows a distinct pattern.</p>
 <p>To truly understand computer networks, you need to ask and answer three questions: What is the problem? What are the possible solutions? What do these solutions look like when they are implemented?</p>

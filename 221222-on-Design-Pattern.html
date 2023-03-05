@@ -70,10 +70,12 @@
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
             var html = document.querySelector('html');
-            var sidebar = 'hidden';
+            var sidebar = null;
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
             }
             html.classList.remove('sidebar-visible');
             html.classList.add("sidebar-" + sidebar);
@@ -143,29 +145,55 @@
                 <div id="content" class="content">
                     <main>
                         <ul>
-<li><a href="#foreword">Foreword</a>
+<li><a href="#notes">Notes</a>
 <ul>
-<li><a href="#structure">Structure</a></li>
-<li><a href="#resource">Resource</a></li>
+<li><a href="#what-it-is">What It Is</a></li>
+<li><a href="#what-i-think-it-is">What I Think It Is</a></li>
+<li><a href="#types-of-design-pattern">Types of Design Pattern</a></li>
 </ul>
 </li>
-<li><a href="#notes">Notes</a></li>
+<li><a href="#chatgpt">ChatGPT</a></li>
+<li><a href="#reference">Reference</a></li>
 </ul>
-<h2 id="foreword"><a class="header" href="#foreword">Foreword</a></h2>
-<h3 id="structure"><a class="header" href="#structure">Structure</a></h3>
-<div class="table-wrapper"><table><thead><tr><th style="text-align: left">STARTING POINT</th><th style="text-align: left">EXPLANATION</th></tr></thead><tbody>
-<tr><td style="text-align: left">What it is</td><td style="text-align: left">Brief explanation of what it brings to the table and the <em>why</em></td></tr>
-<tr><td style="text-align: left">How it looks like</td><td style="text-align: left">Code examples</td></tr>
-<tr><td style="text-align: left">How it was used in practice</td><td style="text-align: left">Go beyond the simple examples, to the production level</td></tr>
-</tbody></table>
-</div>
-<h3 id="resource"><a class="header" href="#resource">Resource</a></h3>
+<h2 id="notes"><a class="header" href="#notes">Notes</a></h2>
+<h3 id="what-it-is"><a class="header" href="#what-it-is">What It Is</a></h3>
+<blockquote>
+<p>Words that were marked with something like <code>THIS</code> were the thing you gotta know for each design patterns you are learning or gonna use.</p>
+<p>Design Pattern is trying to provide a <em>semi</em> <small>(not perfect == <code>tradeoff</code>)</small> solution <small>(<code>implementation</code>)</small> to a <code>problem</code> encountered <small>(<code>context</code>)</small> during various stages of development, while at the same time, create a bunch un-fucking-necessary <code>terminologies</code>.</p>
+</blockquote>
+<h3 id="what-i-think-it-is"><a class="header" href="#what-i-think-it-is">What I Think It Is</a></h3>
+<blockquote>
+<p><em>Ways</em> of doing things. You could even name your way as something <em>Laugh-Out-Loud</em> (LOL) like <em>Model-View-Controller</em> (MVC). Again, it's just a fucking abstraction. Learn it under relevant context then you'd be good.</p>
+</blockquote>
+<h3 id="types-of-design-pattern"><a class="header" href="#types-of-design-pattern">Types of Design Pattern</a></h3>
 <ul>
+<li>Creational</li>
+<li>Structural</li>
+<li>Behavioral</li>
+<li>Architectural</li>
+</ul>
+<hr />
+<h2 id="chatgpt"><a class="header" href="#chatgpt"><em>ChatGPT</em></a></h2>
+<blockquote>
+<p>All the <em>main</em> prompts I used to help me learn more about <em>Design Pattern</em></p>
+</blockquote>
+<ul>
+<li><code>What are the essentials of Design Pattern?</code></li>
+<li><code>What are the essential design patterns to know? 15 at most.</code><br/><code>Recommend two set, one for frontend dev, one for java backend developer</code>
+<ul>
+<li><code>What about essential types of patterns for both devs?</code></li>
+</ul>
+</li>
+<li>x</li>
+</ul>
+<h2 id="reference"><a class="header" href="#reference">Reference</a></h2>
+<ul>
+<li><em>My Brain</em></li>
+<li><em>ChatGPT</em> <small>(~= brains of other people on earth)</small></li>
 <li><a href="https://github.com/codingEzio/design-patterns-for-humans">Design Patterns for Humans</a> <small>(个人翻译)</small></li>
 <li><a href="https://java-design-patterns.com/patterns/">Java Design Pattern Catalog</a></li>
 <li><a href="https://www.patterns.dev/posts/">Design and Performance Patterns</a></li>
 </ul>
-<h2 id="notes"><a class="header" href="#notes">Notes</a></h2>
 
                     </main>
 
