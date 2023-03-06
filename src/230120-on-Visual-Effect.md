@@ -8,7 +8,11 @@
 - [The Secrets of Photorealism](https://www.youtube.com/watch?v=Z8AAX-ENWvQ)
 - [Why THIS is the Future of Imagery](https://www.youtube.com/watch?v=YX5AoaWrowY)
 
-## Tooling
+## Resource
+
+### Hands-on
+
+- [Create a Room Portfolio with Three.js and Blender](https://www.youtube.com/watch?v=rxTb9ys834w)
 
 ### What I Want to Get More Familar with
 
