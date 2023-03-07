@@ -19,6 +19,10 @@
 - Behavioral
 - Architectural
 
+### N/A
+
+- N/A
+
 -----
 
 ## *ChatGPT*
@@ -28,7 +32,7 @@
 - `What are the essentials of Design Pattern?`
 - `What are the essential design patterns to know? 15 at most.`<br/>`Recommend two set, one for frontend dev, one for java backend developer`
   - `What about essential types of patterns for both devs?`
-- x
+- N/A
 
 ## Reference
 

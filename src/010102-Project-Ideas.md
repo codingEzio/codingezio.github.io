@@ -1,19 +1,32 @@
 > Some dumb ideas of my own
 <!-- toc -->
 
-## P :: Finish Task Like It's Your Last Day/Hour
+## P :: Deadline Helper
 
-> Fucking hell, I felt like *Github Copilot* is really stripping my autonomy to think and write..
+> Finish Task Like It's Your Last Day/Hour
+>
+> Fucking hell, I felt like *Github Copilot* is really stripping my autonomy to think and write.. So I rewrote the whole thing.
 
-- Context
-  - I am person who is easily distracted
-  - I am person who is easily overwhelmed
-  -
+### Context
+
+- Having trouble focus the tasks at hand
+- Having trouble finishing the tasks in time
+- Limited time
+- High expectations
+- TBD
+
+### Proposed Solution
+
+#### Idea
+
+- N/A
+
+#### Implementation
 
 - Input
   - time available (start date time, end date time)
   - how many productive hours you usually got during this period
-  -
+  - *one* task
 
 ## P :: Project Extraction
 
