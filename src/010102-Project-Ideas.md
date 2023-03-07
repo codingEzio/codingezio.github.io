@@ -1,6 +1,20 @@
 > Some dumb ideas of my own
 <!-- toc -->
 
+## P :: Finish Task Like It's Your Last Day/Hour
+
+> Fucking hell, I felt like *Github Copilot* is really stripping my autonomy to think and write..
+
+- Context
+  - I am person who is easily distracted
+  - I am person who is easily overwhelmed
+  -
+
+- Input
+  - time available (start date time, end date time)
+  - how many productive hours you usually got during this period
+  -
+
 ## P :: Project Extraction
 
 ### Iteration 01

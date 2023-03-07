@@ -23,6 +23,7 @@
 - [virushuo @huoju@m.devep.net on Twitter: "一点个人想法 ..."](https://twitter.com/virushuo/status/1628776613516128256) <small>(discussions around training LLMs on personal PC)</small>
 - [Yann LeCun @ylecun - "Large Language Model is an off-ramp."](https://twitter.com/ylecun/status/1621805604900585472) <small>(people seemed to be so triggered which is so fucking weird)</small>
 - [Wolfram|Alpha as the Way to Bring Computational Knowledge Superpowers to ChatGPT](https://writings.stephenwolfram.com/2023/01/wolframalpha-as-the-way-to-bring-computational-knowledge-superpowers-to-chatgpt/)
+- [I built a Lenny chatbot using GPT-3. Here’s how to build your own.](https://www.lennysnewsletter.com/p/i-built-a-lenny-chatbot-using-gpt)
 
 -----
 
@@ -75,3 +76,11 @@
 
 - [ChatGPT 中文调教指南](https://chatguide.plexpt.com/)
 - [f/awesome-chatgpt-prompts](https://github.com/f/awesome-chatgpt-prompts)
+
+### Calculating API Cost
+
+- [What are tokens and how to count them? | OpenAI Help Center](https://help.openai.com/en/articles/4936856-what-are-tokens-and-how-to-count-them)
+- [OpenAI API Tokenizer](https://platform.openai.com/tokenizer)
+- [gpt-3-encoder - npm](https://www.npmjs.com/package/gpt-3-encoder)
+- [OpenAI Pricing Calculator](https://www.gptcostcalculator.com/)
+- [gpt\_index/TokenPredictor.ipynb at main · jerryjliu/gpt\_index](https://github.com/jerryjliu/gpt_index/blob/main/examples/cost_analysis/TokenPredictor.ipynb)
