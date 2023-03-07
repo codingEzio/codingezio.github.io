@@ -1,5 +1,7 @@
 <!-- toc -->
 
+# Concepts
+
 ## Core Concepts
 
 ### What is Spring
@@ -42,3 +44,9 @@
 - It's a Java class
 - It's used to handle network requests
 - It runs on a Java-enabled server
+
+-----
+
+# Basic Practice
+
+> N/A
