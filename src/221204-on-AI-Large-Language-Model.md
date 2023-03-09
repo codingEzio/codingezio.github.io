@@ -65,7 +65,10 @@
 
 ### API
 
-- [OpenAI API](https://platform.openai.com/docs/quickstart/build-your-application)
+- OpenAI API
+  - [Quick Start](https://platform.openai.com/docs/quickstart/build-your-application)
+  - [Examples](https://platform.openai.com/examples)
+  - [Cookbook](https://github.com/openai/openai-cookbook)
 - [bytemate/chatapi-single: Simple and powerful ChatGPT-API-Server](https://github.com/bytemate/chatapi-single)
 - [LangChain 0.0.89](https://langchain.readthedocs.io/en/latest/getting_started/getting_started.html)
 - [LlamaIndex](https://gpt-index.readthedocs.io/en/latest/)

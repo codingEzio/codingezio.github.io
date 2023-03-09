@@ -135,6 +135,16 @@ sudo docker run hello-world
 
 ## Practical Usage
 
+### Build and Start Local `Dockerfile`
+
+> Credit to [unning a Docker file stored locally](https://stackoverflow.com/a/69961003/6273859)
+
+```bash
+docker build . --tag CONTAINER_NAME --file Dockerfile
+
+docker run -d CONTAINER_NAME
+```
+
 ### MySQL
 
 ```bash
