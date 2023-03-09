@@ -6,6 +6,7 @@
 
 # Content
 
+- [230309 AIGC on Poem](./230309-AIGC-on-Poem.md)
 - [230304 On Digital Immigration](./230304-on-Digital-Immigration.md)
 - [230302 Tools that were Probably of Use](./230302-Tools-that-were-Probably-of-Use.md)
 - [230301 Booknote on A Return to Love](./230301-booknote-on-A-Return-to-Love.md)

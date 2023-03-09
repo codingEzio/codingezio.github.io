@@ -213,6 +213,10 @@
 - [Infographics](https://old.reddit.com/r/Infographics/)
 - [Cool Guides](https://old.reddit.com/r/coolguides/)
 
+#### Misc
+
+- [Personal Finance](https://old.reddit.com/r/personalfinance/wiki/commontopics)
+
 ### for *Twitter*
 
 > A way to let me be more consuming the information actively by *unfollow* then *access them individually here*, instead of just browsing through the timelines mindlessly :)
