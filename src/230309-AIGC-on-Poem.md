@@ -6,6 +6,30 @@
 ### Prompt
 
 ```markdown
+Write a motivation for weight loss
+- in the style of  Dune fear mantra
+- in the form of Prose
+- appropriate emojis
+
+<!-- Normally it would generate sentences that were quite lengthy-->
+
+Shorter, like this
+And also
+- One emojis only per line
+- Emojis should be at the start of each sentence
+
+I will not flinch.
+Flinch is the goal-killer.
+I will face my flinch.
+I will let it pass through me.
+When the flinch has gone,
+there shall be nothing.
+Only I will remain.
+
+<!-- For different languages -->
+
+Same format and restriction.
+But in German language :)
 ```
 
 ### Result
@@ -21,15 +45,27 @@
 💪 Only my willpower will remain.
 ```
 
+#### in German
+
+```markdown
+💪 Ich werde nicht nachgeben.
+🍔 Nachgeben ist der Feind der Gewichtsabnahme.
+🥦 Ich werde mich meinen Gelüsten stellen.
+🙏 Ich werde sie durch mich hindurchgehen lassen.
+🚫 Wenn das Verlangen verschwunden ist, wird nichts mehr übrig sein.
+💪 Nur mein Durchhaltevermögen wird bleiben.
+```
+
 ## Mr. Robot
 
 ### Prompt
 
 ```markdown
 Do you know about Mr. Robot?
-If so, rewrote the introduction in the style of Chinese poem.
+If so, rewrite the introduction in the style of Chinese poem.
 
-<!-- ok -->
+<!-- For different languages -->
+Still poem, but in English
 ```
 
 ### Result
