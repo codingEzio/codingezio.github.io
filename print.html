@@ -9744,7 +9744,13 @@ Linear algebra, including vector spaces, linear transformations, and matrix oper
 <h2 id="make-full-use-of-it"><a class="header" href="#make-full-use-of-it">Make Full Use of It</a></h2>
 <h3 id="api-1"><a class="header" href="#api-1">API</a></h3>
 <ul>
-<li><a href="https://platform.openai.com/docs/quickstart/build-your-application">OpenAI API</a></li>
+<li>OpenAI API
+<ul>
+<li><a href="https://platform.openai.com/docs/quickstart/build-your-application">Quick Start</a></li>
+<li><a href="https://platform.openai.com/examples">Examples</a></li>
+<li><a href="https://github.com/openai/openai-cookbook">Cookbook</a></li>
+</ul>
+</li>
 <li><a href="https://github.com/bytemate/chatapi-single">bytemate/chatapi-single: Simple and powerful ChatGPT-API-Server</a></li>
 <li><a href="https://langchain.readthedocs.io/en/latest/getting_started/getting_started.html">LangChain 0.0.89</a></li>
 <li><a href="https://gpt-index.readthedocs.io/en/latest/">LlamaIndex</a></li>
@@ -10456,6 +10462,7 @@ vagrant snapshot delete  THE_SNAPSHOT_NAME
 </li>
 <li><a href="221127-toolset-Docker.html#practical-usage">Practical Usage</a>
 <ul>
+<li><a href="221127-toolset-Docker.html#build-and-start-local-dockerfile">Build and Start Local <code>Dockerfile</code></a></li>
 <li><a href="221127-toolset-Docker.html#mysql">MySQL</a></li>
 </ul>
 </li>
@@ -10587,6 +10594,14 @@ sudo systemctl enable docker
 sudo docker run hello-world
 </code></pre>
 <h2 id="practical-usage"><a class="header" href="#practical-usage">Practical Usage</a></h2>
+<h3 id="build-and-start-local-dockerfile"><a class="header" href="#build-and-start-local-dockerfile">Build and Start Local <code>Dockerfile</code></a></h3>
+<blockquote>
+<p>Credit to <a href="https://stackoverflow.com/a/69961003/6273859">unning a Docker file stored locally</a></p>
+</blockquote>
+<pre><code class="language-bash">docker build . --tag CONTAINER_NAME --file Dockerfile
+
+docker run -d CONTAINER_NAME
+</code></pre>
 <h3 id="mysql"><a class="header" href="#mysql">MySQL</a></h3>
 <pre><code class="language-bash"># The base to modify on
 sudo docker pull mysql:8.0
