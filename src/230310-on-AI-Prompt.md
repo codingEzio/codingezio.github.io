@@ -24,7 +24,7 @@
 > That you could guess what the prompts are underneath
 
 - [AI帮个忙](https://ai-toolbox.codefuture.top/)
-- [MidJourney with ChatGPT](https://okjike.com/originalPosts/63facfc19b6b80ed42178974?s=eyJ1IjoiNTg3YTQzMjY0Y2JkNTcwMDE1YTllNGJmIiwiZCI6Mn0%3D)
+- [MidJourney with ChatGPT](https://archive.md/7zVsk)
 
 ### Paid
 
