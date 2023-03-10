@@ -24,3 +24,4 @@
 
 - [2302.04761 Toolformer: Language Models Can Teach Themselves to Use Tools](https://arxiv.org/abs/2302.04761)
 - [2302.00923 Multimodal Chain-of-Thought Reasoning in Language Models](https://arxiv.org/abs/2302.00923)
+- [2303.04671 Visual ChatGPT: Talking, Drawing and Editing with Visual Foundation Models](https://arxiv.org/abs/2303.04671)

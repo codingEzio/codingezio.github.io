@@ -127,7 +127,7 @@
 - [221205 Microservice 00 Idea](./221205-Microservice-00-Idea.md)
 - [221204 On System Design](./221204-on-System-Design.md)
 - [221204 On Network Stack](./221204-on-Network-Stack.md)
-- [221204 On AI LLM](./221204-on-AI-Large-Language-Model.md)
+- [221204 On AI LLM](./221204-on-AI-LLM.md)
 - [221204 My Translation for Video 30~60 (min)](./221204-My-Translation-for-Video-030min-to-060min.md)
 - [221204 My Translation for Video 10~30 (min)](./221204-My-Translation-for-Video-010min-to-030min.md)
 - [221204 My Translation for Video 00~10 (min)](./221204-My-Translation-for-Video-000min-to-010min.md)
