@@ -1,7 +1,6 @@
 > My old notes ported from social media apps
 <!-- toc -->
 
-
 ## Snippets of My Own
 
 ### 0x01
@@ -28,4 +27,3 @@ Autopilot 无法被直接干预，但若有能力在 perceive 这个 process 结
 ### 0x04
 
 > "Labels are the opposite of understanding"
-

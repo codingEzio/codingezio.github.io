@@ -9,7 +9,7 @@
 > Until your *knees* finally *hit the floor*, you’re just playing at life, and on some level you’re scared because you know you’re just playing. The moment of **surrender** is not when **life** is over. It’s when it **begins**.
 
 > *You* spend your whole life *resisting* the notion that there’s *someone* out there *smarter than you* are, and **then** all of a sudden you’re so **relieved** to know **it’s true**. All of a sudden, you’re not too proud to ask for help.
-> 
+>
 > That’s what it means to **surrender** to *God*.
 
 > In order to *love* purely, we must **surrender** our **old ways of thinking**.
@@ -25,7 +25,7 @@
 > *Thoughts* are like data **programmed** into a computer, **registered** on the screen of your life. If you don’t like what you see on the screen, there’s no point in going up to the screen and trying to erase it. *Thought* is **Cause**; experience is Effect. If you *don’t like* the *effects* in your life, you have to **change** the **nature of** your **thinking**.
 
 > "There is only **one** begotten Son" doesn’t mean that someone else was it, and we’re not. It means **we’re all it**. There’s only **one** of **us** here.
-> 
+>
 > We’re like the spokes on a wheel, all radiating out from the same center. If you define us according to our position on the rim, we seem separate and distinct from one another. But if you *define* us according to our *starting point*, our *source*—the center of the wheel—**we’re a shared identity**. If you dig *deep enough* into your mind, and deep enough into mine, the picture is the same: at the *bottom* of it *all*, what we are is **love**.
 
 > *Fear* does *not* promote *learning*. It **warps** us. It **stunts** us. It makes us neurotic. And by the *time* we were *teenagers*, most of us were **severely cracked**.

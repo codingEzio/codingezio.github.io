@@ -22,7 +22,7 @@
 - [Ask HN: Honest thoughts on no-code or low-code solutions? | Hacker News](https://news.ycombinator.com/item?id=31508130)
 - [Ask HN: Experiences with low-code systems? | Hacker News](https://news.ycombinator.com/item?id=32106380)
 - [What do you think about low code platforms? : cscareerquestions](https://old.reddit.com/r/cscareerquestions/comments/xu3dfe/what_do_you_think_about_low_code_platforms/)
-- [Actionsflow – IFTTT/Zapier free alternative based on GitHub Actions(https://news.ycombinator.com/item?id=24648960)
+- [Actionsflow – IFTTT/Zapier free alternative based on GitHub Actions(<https://news.ycombinator.com/item?id=24648960>)
 
 -----
 

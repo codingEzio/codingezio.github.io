@@ -14,7 +14,8 @@
       "sup",
       "sub",
       "p",
-      "br"
+      "br",
+      "q"
     ]
   },
   "heading-style": {
