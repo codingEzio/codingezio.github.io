@@ -77,6 +77,12 @@
   <img src="./202302/20230225-sarcasm-wechat.jpg" alt="Illustration of a sarcasm about issues WeChat has" width="80%" height="70%" />
 </p>
 
+### pic006 What Comes After, Water or Ship?
+
+<p align="center">
+  <img src="./202303/20230311-what-comes-after-ship-or-water.jpeg" alt="Illustration of a sarcasm about the actual order of things like the precedence of water and ship" width="80%" height="70%" />
+</p>
+
 ## Wake-up Call
 
 ### pic001 最惨的噩梦

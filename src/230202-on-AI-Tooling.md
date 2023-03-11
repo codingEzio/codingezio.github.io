@@ -1,4 +1,4 @@
-> AI-powered tooling (not just LLMs but also other types of products)
+> Add additional notice: if particular post/topic has a really strong use case for it, it would NOT being listed in here.
 <!-- toc -->
 
 ## Resource Hub
@@ -10,6 +10,7 @@
 - [hades217/awesome-ai](https://github.com/hades217/awesome-ai)
 - [ChatGPT 使用资源聚合盘点 - 少数派](https://sspai.com/post/78399)
 - [AI 工具合辑盘点 - 少数派](https://sspai.com/post/78410)
+- [AI 工具 - 即刻](https://m.okjike.com/originalPosts/63f486401fecfe3745f4ece0?s=eyJ1IjoiNTg3YTQzMjY0Y2JkNTcwMDE1YTllNGJmIiwiZCI6M30%3D)
 
 ## Product
 

@@ -1,4 +1,4 @@
-> There's a sister post, I'll add the link in a moment.
+> There's a sister post titled as [*221204 About This Blog*](https://codingezio.github.io/)
 
 ## Resource
 
@@ -14,7 +14,9 @@
 
 #### Beyond
 
-- [LangChain 0.0.89](https://langchain.readthedocs.io/en/latest/getting_started/getting_started.html)
+- LangChain
+  - [Documentation](https://langchain.readthedocs.io/en/latest/getting_started/getting_started.html)
+  - [LangChain Tutorial](https://www.youtube.com/playlist?list=PLqZXAkvF1bPNQER9mLmDbntNfSpzdDIU5) by [*Data Independent*](https://www.youtube.com/@DataIndependent)
 - [LlamaIndex](https://gpt-index.readthedocs.io/en/latest/)
 - [microsoft/prompt-engine](https://github.com/microsoft/prompt-engine)
 - Official ChatGPT API! [*Introducing ChatGPT and Whisper APIs*](https://openai.com/blog/introducing-chatgpt-and-whisper-apis)
@@ -26,6 +28,7 @@
 - [Build AI chatbot with custom knowledge base using OpenAI API and GPT Index - YouTube](https://www.youtube.com/watch?v=vDZAZuaXf48)
 - [I Built a Lenny Chatbot using GPT-3. Here’s How to Build Your Own](https://www.lennysnewsletter.com/p/i-built-a-lenny-chatbot-using-gpt)
 - [madawei @madawei2699 - 智能读书助理](https://mobile.twitter.com/madawei2699/status/1632305397171367936)
+- [pandodao/i18n-cli: Translate JSON-based Locale Files](https://github.com/pandodao/i18n-cli)
 
 #### Cost
 
@@ -57,3 +60,7 @@
 
 - [fauxpilot/fauxpilot: FauxPilot - an open-source GitHub Copilot server](https://github.com/fauxpilot/fauxpilot/tree/main)
 - [CodedotAl/gpt-code-clippy: An open source version of GitHub Copilot](https://github.com/CodedotAl/gpt-code-clippy/tree/camera-ready)
+
+-----
+
+> [Chatcuts](https://www.chatcuts.app/)
