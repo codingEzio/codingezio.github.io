@@ -6,6 +6,7 @@
 
 # Content
 
+- [230311 On Startup](./230311-on-Startup.md)
 - [230310 On AI LLM Integration](./230310-on-AI-LLM-Integration.md)
 - [230310 On AI Prompt](./230310-on-AI-Prompt.md)
 - [230309 AIGC on Poem](./230309-AIGC-on-Poem.md)
