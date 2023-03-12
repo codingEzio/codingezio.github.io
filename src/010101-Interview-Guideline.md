@@ -56,6 +56,7 @@
 - [Java 全栈知识点问题汇总 (下)](https://pdai.tech/md/interview/x-interview-2.html)
 - [Frontend Interview - lgwebdream](https://github.com/lgwebdream/FE-Interview/)
 - [Frontend Interview - evestorm](https://github.com/evestorm/front-end-interview/)
+- [Frontend Interview - 台灣 Yahoo 前端面試經驗](https://github.com/flameddd/blog/blob/master/2022-11-04%EF%BC%9A%E5%8F%B0%E7%81%A3%20Yahoo%20%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%A9%A6%E7%B6%93%E9%A9%97.md)
 
 ## 算法
 
