@@ -4,6 +4,7 @@
 ## 零
 
 - [mukulpatnaik/researchgpt: An LLM-based Assistant that Helps You Read Papers](https://github.com/mukulpatnaik/researchgpt)
+- [ChatPDF - Chat with any PDF](https://www.chatpdf.com/)
 
 ## 一
 
