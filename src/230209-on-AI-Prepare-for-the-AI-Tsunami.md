@@ -9,6 +9,7 @@
 - [Dr Ray Kurzweil: 2022-2023 Updates](https://lifearchitect.ai/kurzweil/)
 - [OpenAI's Foundry leaked pricing says a lot – if you know how to read it](https://cognitiverevolution.substack.com/p/openais-foundry-leaked-pricing-says) <small>(context for future reference: 230302 with ChatGPT)</small>
 - [Fun with +12 OOMs of Compute](https://www.lesswrong.com/posts/rzqACeBGycZtqCfaX/fun-with-12-ooms-of-compute#OmegaStar_)
+- [[Telegram @LptTech - 关于 ChatGPT 的五个最重要问题]](https://t.me/LptTech/363)
 
 ### Ideas and Thoughts from *Twitter*
 
@@ -19,6 +20,7 @@
 - [Sterling Crispin: AI Model PaLM more powerful then OpenAI](https://twitter.com/sterlingcrispin/status/1606064292926615552)
 - [starzq.eth: ChatGPT 对人才需求带来的变化、应对措施和机会点](https://twitter.com/starzqeth/status/1622583053498585088)
 - [kevinzhow: 近乎无限的获得这种智力资源 / 人类是无法面对这次浪潮的](https://twitter.com/kevinzhow/status/1600029430562230272)
+- [Russell Kaplan @russelljkaplan - Second Order Effects of the Rise of Large Language Models](https://twitter.com/russelljkaplan/status/1513128005828165634)
 
 ### from *Reddit*
 

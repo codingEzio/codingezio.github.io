@@ -22,6 +22,7 @@
 | :--- | :--- |
 | [AIVA](https://www.aiva.ai/) | *compose emotional music* |
 | [ElevenLabs](https://beta.elevenlabs.io/) | *text to speech* |
+| [Wonder Dynamics](https://wonderdynamics.com/) | *automates CGI character integration into live-action scenes* |
 
 ### for *Designer*
 
@@ -37,9 +38,10 @@
 
 ### for *Developer*
 
-| PRODUCT | WHAT IT DOES |
-| :--- | :--- |
-| [Bink](https://usebink.com)|  text to SQL|
+| PRODUCT | WHAT IT DOES | / |
+| :--- | :--- | :--- |
+| [Bink](https://usebink.com) | text to SQL | / |
+| [DocsGPT](https://docsgpt.arc53.com/) | N/A | Still requires email after OAuth, fucking dogshit |
 
 ### for **the** *Data*
 

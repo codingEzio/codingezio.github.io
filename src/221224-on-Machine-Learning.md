@@ -10,6 +10,8 @@
 
 - [📚 动手学深度学习](https://zh.d2l.ai/)
 - [📚 Deep Learning 中文翻译](https://exacity.github.io/deeplearningbook-chinese/)
+- [Neural Networks: Zero to Hero](https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ)
+- [Deep Learning Do It Yourself](https://dataflowr.github.io/website/)
 
 #### AI Image Generation <small>(*text* to *image*)</small>
 

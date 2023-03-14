@@ -14,6 +14,7 @@
 - [OpenAI/ChatGPT Plus 信用卡绑定总结 - AI Explorer](https://blog.aiservices.tech/54.html)
 - [国内 Visa 卡如何购买 ChatGPT-3.5 API? - V2EX](https://www.v2ex.com/t/920701)
 - [madawei @madawei2699 - 如何给 chatGPT API 付费](https://twitter.com/madawei2699/status/1631105162738814978)
+- [如何开通 ChatGPT Plus](https://mobile.twitter.com/taresky/status/1623913355961593856)
 
 ### Around 虚拟信用卡
 

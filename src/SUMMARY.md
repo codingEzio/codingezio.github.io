@@ -93,7 +93,7 @@
 - [221226 On Extraterrestrial Life](./221226-on-Extraterrestrial-Life.md)
 - [221225 On Shehulk](./221225-on-Shehulk.md)
 - [221225 On Container Orchestration](./221225-on-Container-Orchestration.md)
-- [221224 Resources around Machine Learning](./221224-Resources-around-Machine-Learning.md)
+- [221224 On Machine Learning](./221224-on-Machine-Learning.md)
 - [221223 On Programming Language Reflection](./221223-on-Programming-Language-Reflection.md)
 - [221223 On Container](./221223-on-Container.md)
 - [221223 My Own Information Universe](./221223-My-Own-Information-Universe.md)

@@ -11,9 +11,20 @@
 
 ### The Future We Would Soon Have
 
+#### Probably A Magnificent Better
+
 - [Microsoft Designer](https://designer.microsoft.com/): *creating stunning designs in a flash that were powered by AI*
 - [Microsoft Create](https://create.microsoft.com/en-us): *finding free templates for various Office Suite related tools*
-- [Presentation Software | Basic to Beautiful in Minutes with Beautiful.ai](https://www.beautiful.ai/)
+
+#### Try to Use
+
+- [Beautiful.ai: Basic to Beautiful in Minutes](https://www.beautiful.ai/)
+- [ChatBA: Generative AI for Slides ✨](https://www.chatba.com/)
+- [MindShow: Make Slides Easy](https://www.mindshow.fun/#/home)
+
+#### Have No Idea What Is It
+
+- [Tome: The AI-powered Storytelling Format](https://beta.tome.app/)
 
 ### Thoughts
 
