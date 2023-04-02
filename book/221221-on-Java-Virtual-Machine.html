@@ -153,9 +153,7 @@
 </li>
 <li><a href="#concepts">Concepts</a>
 <ul>
-<li><a href="#structure">Structure</a></li>
-<li><a href="#jdk-jre-and-jvm">JDK, JRE and JVM</a></li>
-<li><a href="#preface-to-jvm">Preface to JVM</a>
+<li><a href="#structure">Structure</a>
 <ul>
 <li><a href="#the-process">The Process</a></li>
 <li><a href="#why-do-i-need-to-learn-about-this">Why Do I Need to Learn about This</a></li>
@@ -208,20 +206,6 @@
 <li>Standard library</li>
 <li>Third-party library</li>
 </ul>
-<h3 id="jdk-jre-and-jvm"><a class="header" href="#jdk-jre-and-jvm"><em>JDK</em>, <em>JRE</em> and <em>JVM</em></a></h3>
-<blockquote>
-<p>References: <a href="https://stackoverflow.com/a/21915034/6273859">#1</a>, <a href="https://stackoverflow.com/a/21914789/6273859">#2</a> || <small>(ref for ref)</small> <a href="https://stackoverflow.com/a/16568659/6273859">#3</a>, <a href="https://stackoverflow.com/a/56654154/6273859">#4</a></p>
-</blockquote>
-<blockquote>
-<p>Java API: the sweet source code you love to read like <code>java.util.concurrency</code></p>
-</blockquote>
-<div class="table-wrapper"><table><thead><tr><th style="text-align: center">TERM</th><th style="text-align: left">EXPLANATION</th></tr></thead><tbody>
-<tr><td style="text-align: center">JVM</td><td style="text-align: left">A complex <em>app</em> to do stuff with your code<br/>  👉 reads <code>.class</code> file and interprets the bytecode<br/>  👉 compiles <code>.class</code> to actual machine code and executes it</td></tr>
-<tr><td style="text-align: center">JRE</td><td style="text-align: left">Targeted at people who want to run Java applications<br/>A bundle of JVM impl, Java API and utilities<br/>  👉 OS-specific bundle<br/>  👉 OS-independent outer interface <small>(same code runs <em>everywhere</em>)</small></td></tr>
-<tr><td style="text-align: center">JDK</td><td style="text-align: left">Targeted at people who wants more than just running the applications<br/>A bundle of JRE, a compiler <small>(<code>.java</code> to <code>.class</code>)</small>and tools for development</td></tr>
-</tbody></table>
-</div>
-<h3 id="preface-to-jvm"><a class="header" href="#preface-to-jvm">Preface to <em>JVM</em></a></h3>
 <h4 id="the-process"><a class="header" href="#the-process">The Process</a></h4>
 <blockquote>
 <p>The code you wrote would be firstly transformed into the <code>.class</code> file, then the <em>JVM</em> would execute that code which has all the <code>0</code>s and <code>1</code>s in it, like it was an actual machine running the machine code.</p>

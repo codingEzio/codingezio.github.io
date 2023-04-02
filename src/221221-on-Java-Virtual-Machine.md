@@ -28,20 +28,6 @@
 - Standard library
 - Third-party library
 
-### *JDK*, *JRE* and *JVM*
-
-> References: [\#1](https://stackoverflow.com/a/21915034/6273859), [\#2](https://stackoverflow.com/a/21914789/6273859) || <small>(ref for ref)</small> [\#3](https://stackoverflow.com/a/16568659/6273859), [\#4](https://stackoverflow.com/a/56654154/6273859)
-
-> Java API: the sweet source code you love to read like `java.util.concurrency`
-
-| TERM | EXPLANATION |
-| :--: | :-- |
-| JVM | A complex *app* to do stuff with your code<br/>&nbsp;&nbsp;👉 reads `.class` file and interprets the bytecode<br/>&nbsp;&nbsp;👉 compiles `.class` to actual machine code and executes it |
-| JRE | Targeted at people who want to run Java applications<br/>A bundle of JVM impl, Java API and utilities<br/>&nbsp;&nbsp;👉 OS-specific bundle<br/>&nbsp;&nbsp;👉 OS-independent outer interface <small>(same code runs *everywhere*)</small> |
-| JDK | Targeted at people who wants more than just running the applications<br/>A bundle of JRE, a compiler <small>(`.java` to `.class`)</small>and tools for development |
-
-### Preface to *JVM*
-
 #### The Process
 
 > The code you wrote would be firstly transformed into the `.class` file, then the *JVM* would execute that code which has all the `0`s and `1`s in it, like it was an actual machine running the machine code.

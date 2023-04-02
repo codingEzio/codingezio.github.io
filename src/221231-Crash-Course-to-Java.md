@@ -8,19 +8,27 @@
 
 ## Basics
 
+### Snippet 00 *JDK*, *JRE* and *JVM*
+
+> References: [\#1](https://stackoverflow.com/a/21915034/6273859), [\#2](https://stackoverflow.com/a/21914789/6273859) || <small>(ref for ref)</small> [\#3](https://stackoverflow.com/a/16568659/6273859), [\#4](https://stackoverflow.com/a/56654154/6273859)
+
+| TERM | EXPLANATION |
+| :--: | :-- |
+| JVM | A complex *app* to do stuff with your code<br/>&nbsp;&nbsp;👉 reads `.class` file and interprets the bytecode<br/>&nbsp;&nbsp;👉 compiles `.class` to actual machine code and executes it |
+| JRE | Targeted at people who want to run Java applications<br/>A bundle of JVM impl, Java API and utilities<br/>&nbsp;&nbsp;👉 OS-specific bundle<br/>&nbsp;&nbsp;👉 OS-independent outer interface <small>(same code runs *everywhere*)</small> |
+| JDK | Targeted at people who wants more than just running the applications<br/>A bundle of JRE, a compiler <small>(`.java` to `.class`)</small>and tools for development |
+
 ### Snippet 01 `new`
 
-create an instance of a class
-the instance object was stored in the heap
-the instance object reference was stored in the stack
+#### create an instance of a class
 
-an object reference could reference 0 or 1 object
-multiple object references could reference to 1 object
-
-equality
-
-- object <> content in the memory
-- reference <> memory address
+- the instance object was stored in the heap
+- the instance object reference was stored in the stack
+  - an object reference could reference 0 or 1 object
+  - multiple object references could reference to 1 object
+- equality
+  - object <> content in the memory
+  - reference <> memory address
 
 ### Snippet 02 constructor
 
@@ -41,15 +49,19 @@ equality
 
 ### Snippet 03 OOP characteristics
 
-- *encapsulation*
-  - not expose internal obj/var like using `private`
-- *inheritance*
-  - access all prop/method from parent class except private ones
-  - child could have their own prop and method
-  - child could implement method from parent in their own way
-- *polymorphism*
+#### *encapsulation*
 
-  > you have more than one ways to achieve this, whether it's abstract class, interface or something else
+- not expose internal obj/var like using `private`
+
+#### *inheritance*
+
+- access all prop/method from parent class except private ones
+- child could have their own prop and method
+- child could implement method from parent in their own way
+
+#### *polymorphism*
+
+> you have more than one ways to achieve this, whether it's abstract class, interface or something else
 
 ### Snippet 04 Interface and Abstract Class
 

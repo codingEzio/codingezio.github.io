@@ -1,6 +1,7 @@
 > What this blog is really all about
->> Updated on February 26, 2023: I might nuke this blog in the near future (reduce post count by merging)<br/>
->> Updated on March 11, 2023: By the end of June 2023, all the posts here would be rewritten and re-organized
+>> Edit on February 26, 2023: I might nuke this blog in the near future (reduce post count by merging)<br/>
+>> Edited on March 11, 2023: By the end of June 2023, all the posts here would be rewritten and re-organized<br/>
+>> Edited on April 2, 2023: This blog is currently halted, no new posts would be published until further notice
 <!-- toc -->
 
 ## Why

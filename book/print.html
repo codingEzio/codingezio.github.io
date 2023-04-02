@@ -145,8 +145,9 @@
                         <blockquote>
 <p>What this blog is really all about</p>
 <blockquote>
-<p>Updated on February 26, 2023: I might nuke this blog in the near future (reduce post count by merging)<br/>
-Updated on March 11, 2023: By the end of June 2023, all the posts here would be rewritten and re-organized</p>
+<p>Edit on February 26, 2023: I might nuke this blog in the near future (reduce post count by merging)<br/>
+Edited on March 11, 2023: By the end of June 2023, all the posts here would be rewritten and re-organized<br/>
+Edited on April 2, 2023: This blog is currently halted, no new posts would be published until further notice</p>
 </blockquote>
 </blockquote>
 <ul>
@@ -324,10 +325,18 @@ Updated on March 11, 2023: By the end of June 2023, all the posts here would be 
 <h3 id="example"><a class="header" href="#example">Example</a></h3>
 <h4 id="do-x"><a class="header" href="#do-x">Do X</a></h4>
 <ul>
-<li><a href="https://www.youtube.com/watch?v=vDZAZuaXf48">Build AI chatbot with custom knowledge base using OpenAI API and GPT Index - YouTube</a></li>
-<li><a href="https://www.lennysnewsletter.com/p/i-built-a-lenny-chatbot-using-gpt">I Built a Lenny Chatbot using GPT-3. Here’s How to Build Your Own</a></li>
-<li><a href="https://mobile.twitter.com/madawei2699/status/1632305397171367936">madawei @madawei2699 - 智能读书助理</a></li>
-<li><a href="https://github.com/pandodao/i18n-cli">pandodao/i18n-cli: Translate JSON-based Locale Files</a></li>
+<li>
+<p><a href="https://www.youtube.com/watch?v=vDZAZuaXf48">Build AI chatbot with custom knowledge base using OpenAI API and GPT Index - YouTube</a></p>
+</li>
+<li>
+<p><a href="https://www.lennysnewsletter.com/p/i-built-a-lenny-chatbot-using-gpt">I Built a Lenny Chatbot using GPT-3. Here’s How to Build Your Own</a></p>
+</li>
+<li>
+<p><a href="https://mobile.twitter.com/madawei2699/status/1632305397171367936">madawei @madawei2699 - 智能读书助理</a></p>
+</li>
+<li>
+<p><a href="https://github.com/pandodao/i18n-cli">pandodao/i18n-cli: Translate JSON-based Locale Files</a></p>
+</li>
 <li></li>
 </ul>
 <h4 id="helper"><a class="header" href="#helper">Helper</a></h4>
@@ -4699,14 +4708,25 @@ identify INPUT.jpg | awk '{print $2}' # Resolution (AxB)
 <ul>
 <li><a href="221231-Crash-Course-to-Java.html#basics">Basics</a>
 <ul>
-<li><a href="221231-Crash-Course-to-Java.html#snippet-01-new">Snippet 01 <code>new</code></a></li>
+<li><a href="221231-Crash-Course-to-Java.html#snippet-00-jdk-jre-and-jvm">Snippet 00 JDK, JRE and JVM</a></li>
+<li><a href="221231-Crash-Course-to-Java.html#snippet-01-new">Snippet 01 <code>new</code></a>
+<ul>
+<li><a href="221231-Crash-Course-to-Java.html#create-an-instance-of-a-class">create an instance of a class</a></li>
+</ul>
+</li>
 <li><a href="221231-Crash-Course-to-Java.html#snippet-02-constructor">Snippet 02 constructor</a>
 <ul>
 <li><a href="221231-Crash-Course-to-Java.html#no-arg">no arg</a></li>
 <li><a href="221231-Crash-Course-to-Java.html#override">Override</a></li>
 </ul>
 </li>
-<li><a href="221231-Crash-Course-to-Java.html#snippet-03-oop-characteristics">Snippet 03 OOP characteristics</a></li>
+<li><a href="221231-Crash-Course-to-Java.html#snippet-03-oop-characteristics">Snippet 03 OOP characteristics</a>
+<ul>
+<li><a href="221231-Crash-Course-to-Java.html#encapsulation">encapsulation</a></li>
+<li><a href="221231-Crash-Course-to-Java.html#inheritance">inheritance</a></li>
+<li><a href="221231-Crash-Course-to-Java.html#polymorphism">polymorphism</a></li>
+</ul>
+</li>
 <li><a href="221231-Crash-Course-to-Java.html#snippet-04-interface-and-abstract-class">Snippet 04 Interface and Abstract Class</a>
 <ul>
 <li><a href="221231-Crash-Course-to-Java.html#interface">Interface</a></li>
@@ -4818,16 +4838,32 @@ identify INPUT.jpg | awk '{print $2}' # Resolution (AxB)
 <p>Do please also check out the references listed down below</p>
 </blockquote>
 <h2 id="basics-1"><a class="header" href="#basics-1">Basics</a></h2>
+<h3 id="snippet-00-jdk-jre-and-jvm"><a class="header" href="#snippet-00-jdk-jre-and-jvm">Snippet 00 <em>JDK</em>, <em>JRE</em> and <em>JVM</em></a></h3>
+<blockquote>
+<p>References: <a href="https://stackoverflow.com/a/21915034/6273859">#1</a>, <a href="https://stackoverflow.com/a/21914789/6273859">#2</a> || <small>(ref for ref)</small> <a href="https://stackoverflow.com/a/16568659/6273859">#3</a>, <a href="https://stackoverflow.com/a/56654154/6273859">#4</a></p>
+</blockquote>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">TERM</th><th style="text-align: left">EXPLANATION</th></tr></thead><tbody>
+<tr><td style="text-align: center">JVM</td><td style="text-align: left">A complex <em>app</em> to do stuff with your code<br/>  👉 reads <code>.class</code> file and interprets the bytecode<br/>  👉 compiles <code>.class</code> to actual machine code and executes it</td></tr>
+<tr><td style="text-align: center">JRE</td><td style="text-align: left">Targeted at people who want to run Java applications<br/>A bundle of JVM impl, Java API and utilities<br/>  👉 OS-specific bundle<br/>  👉 OS-independent outer interface <small>(same code runs <em>everywhere</em>)</small></td></tr>
+<tr><td style="text-align: center">JDK</td><td style="text-align: left">Targeted at people who wants more than just running the applications<br/>A bundle of JRE, a compiler <small>(<code>.java</code> to <code>.class</code>)</small>and tools for development</td></tr>
+</tbody></table>
+</div>
 <h3 id="snippet-01-new"><a class="header" href="#snippet-01-new">Snippet 01 <code>new</code></a></h3>
-<p>create an instance of a class
-the instance object was stored in the heap
-the instance object reference was stored in the stack</p>
-<p>an object reference could reference 0 or 1 object
-multiple object references could reference to 1 object</p>
-<p>equality</p>
+<h4 id="create-an-instance-of-a-class"><a class="header" href="#create-an-instance-of-a-class">create an instance of a class</a></h4>
+<ul>
+<li>the instance object was stored in the heap</li>
+<li>the instance object reference was stored in the stack
+<ul>
+<li>an object reference could reference 0 or 1 object</li>
+<li>multiple object references could reference to 1 object</li>
+</ul>
+</li>
+<li>equality
 <ul>
 <li>object &lt;&gt; content in the memory</li>
 <li>reference &lt;&gt; memory address</li>
+</ul>
+</li>
 </ul>
 <h3 id="snippet-02-constructor"><a class="header" href="#snippet-02-constructor">Snippet 02 constructor</a></h3>
 <h4 id="no-arg"><a class="header" href="#no-arg">no arg</a></h4>
@@ -4852,28 +4888,20 @@ multiple object references could reference to 1 object</p>
 </li>
 </ul>
 <h3 id="snippet-03-oop-characteristics"><a class="header" href="#snippet-03-oop-characteristics">Snippet 03 OOP characteristics</a></h3>
-<ul>
-<li>
-<p><em>encapsulation</em></p>
+<h4 id="encapsulation"><a class="header" href="#encapsulation"><em>encapsulation</em></a></h4>
 <ul>
 <li>not expose internal obj/var like using <code>private</code></li>
 </ul>
-</li>
-<li>
-<p><em>inheritance</em></p>
+<h4 id="inheritance"><a class="header" href="#inheritance"><em>inheritance</em></a></h4>
 <ul>
 <li>access all prop/method from parent class except private ones</li>
 <li>child could have their own prop and method</li>
 <li>child could implement method from parent in their own way</li>
 </ul>
-</li>
-<li>
-<p><em>polymorphism</em></p>
+<h4 id="polymorphism"><a class="header" href="#polymorphism"><em>polymorphism</em></a></h4>
 <blockquote>
 <p>you have more than one ways to achieve this, whether it's abstract class, interface or something else</p>
 </blockquote>
-</li>
-</ul>
 <h3 id="snippet-04-interface-and-abstract-class"><a class="header" href="#snippet-04-interface-and-abstract-class">Snippet 04 Interface and Abstract Class</a></h3>
 <h4 id="interface"><a class="header" href="#interface">Interface</a></h4>
 <ul>
@@ -6834,9 +6862,7 @@ TODO</li>
 </li>
 <li><a href="221221-on-Java-Virtual-Machine.html#concepts">Concepts</a>
 <ul>
-<li><a href="221221-on-Java-Virtual-Machine.html#structure">Structure</a></li>
-<li><a href="221221-on-Java-Virtual-Machine.html#jdk-jre-and-jvm">JDK, JRE and JVM</a></li>
-<li><a href="221221-on-Java-Virtual-Machine.html#preface-to-jvm">Preface to JVM</a>
+<li><a href="221221-on-Java-Virtual-Machine.html#structure">Structure</a>
 <ul>
 <li><a href="221221-on-Java-Virtual-Machine.html#the-process">The Process</a></li>
 <li><a href="221221-on-Java-Virtual-Machine.html#why-do-i-need-to-learn-about-this">Why Do I Need to Learn about This</a></li>
@@ -6889,20 +6915,6 @@ TODO</li>
 <li>Standard library</li>
 <li>Third-party library</li>
 </ul>
-<h3 id="jdk-jre-and-jvm"><a class="header" href="#jdk-jre-and-jvm"><em>JDK</em>, <em>JRE</em> and <em>JVM</em></a></h3>
-<blockquote>
-<p>References: <a href="https://stackoverflow.com/a/21915034/6273859">#1</a>, <a href="https://stackoverflow.com/a/21914789/6273859">#2</a> || <small>(ref for ref)</small> <a href="https://stackoverflow.com/a/16568659/6273859">#3</a>, <a href="https://stackoverflow.com/a/56654154/6273859">#4</a></p>
-</blockquote>
-<blockquote>
-<p>Java API: the sweet source code you love to read like <code>java.util.concurrency</code></p>
-</blockquote>
-<div class="table-wrapper"><table><thead><tr><th style="text-align: center">TERM</th><th style="text-align: left">EXPLANATION</th></tr></thead><tbody>
-<tr><td style="text-align: center">JVM</td><td style="text-align: left">A complex <em>app</em> to do stuff with your code<br/>  👉 reads <code>.class</code> file and interprets the bytecode<br/>  👉 compiles <code>.class</code> to actual machine code and executes it</td></tr>
-<tr><td style="text-align: center">JRE</td><td style="text-align: left">Targeted at people who want to run Java applications<br/>A bundle of JVM impl, Java API and utilities<br/>  👉 OS-specific bundle<br/>  👉 OS-independent outer interface <small>(same code runs <em>everywhere</em>)</small></td></tr>
-<tr><td style="text-align: center">JDK</td><td style="text-align: left">Targeted at people who wants more than just running the applications<br/>A bundle of JRE, a compiler <small>(<code>.java</code> to <code>.class</code>)</small>and tools for development</td></tr>
-</tbody></table>
-</div>
-<h3 id="preface-to-jvm"><a class="header" href="#preface-to-jvm">Preface to <em>JVM</em></a></h3>
 <h4 id="the-process"><a class="header" href="#the-process">The Process</a></h4>
 <blockquote>
 <p>The code you wrote would be firstly transformed into the <code>.class</code> file, then the <em>JVM</em> would execute that code which has all the <code>0</code>s and <code>1</code>s in it, like it was an actual machine running the machine code.</p>
