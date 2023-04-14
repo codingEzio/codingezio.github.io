@@ -272,3 +272,5 @@
 - [010102 Project Ideas](./010102-Project-Ideas.md)
 - [010101 Algorithm LeetCode Practice List](./010101-Algorithm-LeetCode-Practice-List.md)
 - [010101 Interview Guideline](./010101-Interview-Guideline.md)
+- [010101 Status Part & Sorted](./134.md)
+- [010101 Status Full](./blogtodo.md)
