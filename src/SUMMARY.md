@@ -1,6 +1,7 @@
 # Prologue
 
 - [221204 About This Blog](./221204-about-this-blog.md)
+- [230418 Migration Status](./230418-Migration-Status.md)
 - [220920 Why Write Blog](./220920-why-write-blog.md)
 - [230205 Navigating My Blog](./230205-Navigating-My-Blog.md)
 
@@ -272,5 +273,4 @@
 - [010102 Project Ideas](./010102-Project-Ideas.md)
 - [010101 Algorithm LeetCode Practice List](./010101-Algorithm-LeetCode-Practice-List.md)
 - [010101 Interview Guideline](./010101-Interview-Guideline.md)
-- [010101 Status Part & Sorted](./134.md)
 - [010101 Status Full](./blogtodo.md)
