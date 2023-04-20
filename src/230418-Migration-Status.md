@@ -2,15 +2,6 @@
 
 #### 1
 
-- [ ] [Toolset adb](./210418-toolset-adb.md)
-- [ ] [Toolset Docker](./221127-toolset-Docker.md)
-- [ ] [Thoughts on Thinking](./190118-thoughts-on-thinking.md)
-- [ ] [Thoughts on Depression](./190131-thoughts-on-depression.md)
-- [ ] [Thoughts on Books](./190219-thoughts-on-books.md)
-- [ ] [Read Essay on Identify Personal Strenth](./230123-Read-Essay-on-How-to-Identify-Personal-Strength.md)
-- [ ] [Read Essay on Four Thousand Weeks](./230123-Read-Essay-on-Four-Thousand-Weeks.md)
-- [ ] [Programming Language Proposals](./220702-programming-language-proposals.md)
-- [ ] [Only Utilize Never Indulge](./190118-only-utilize-never-indulge.md)
 - [ ] [On Web3](./230209-on-Web3.md)
 - [ ] [Common Sense for Me but Might Not Others](./230126-Common-Sense-for-Me-but-Might-Not-Others.md)
 - [ ] [On Programming Language Reflection](./221223-on-Programming-Language-Reflection.md)
