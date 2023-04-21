@@ -2,23 +2,19 @@
 
 #### 1
 
-- [ ] [On Web3](./230209-on-Web3.md)
-- [ ] [Common Sense for Me but Might Not Others](./230126-Common-Sense-for-Me-but-Might-Not-Others.md)
-- [ ] [On Programming Language Reflection](./221223-on-Programming-Language-Reflection.md)
-- [ ] [Issue node-sass Fail to Compile](./221010-issue-node-sass-fail-to-compile.md)
-- [ ] [Issue Downgrade Flutter](./221112-issue-downgrade-Flutter.md)
-- [ ] [Issue Docker Slow Download](./221118-issue-Docker-slow-download.md)
 - [ ] [On Diabetes](./230125-on-Diabetes.md)
-- [ ] [On Block](./230220-on-Block.md)
 - [ ] [On Alcoholic Beverage](./230125-on-Alcoholic-Beverage.md)
 - [ ] [On Housing](./230125-on-Housing.md)
 - [ ] [On Food Security](./221028-on-Food-Security.md)
 - [ ] [Find and Forge Identity](./190418-finding-and-forging-identity.md)
+- [ ] [On Office Suite](./230218-on-Office-Suite.md)
+- [ ] [Zero to One Flutter](./221112-zero-to-one-Flutter.md)
+- [ ] [On Container](./221223-on-Container.md)
+- [ ] [On Container Orchestration](./221225-on-Container-Orchestration.md)
 
 #### 2
 
 - [ ] [On Ecosystem Simulation](./221205-on-Ecosystem-Simulation.md)
-- [ ] [On Office Suite](./230218-on-Office-Suite.md)
 - [ ] [On Papers](./230219-on-Papers.md)
 - [ ] [On Machine Learning](./221224-on-Machine-Learning.md)
 - [ ] [On AI Tooling](./230202-on-AI-Tooling.md)
@@ -32,7 +28,6 @@
 - [ ] [Install PHP Dev Environment](./210522-Install-PHP-Dev-Environment-Manually.md)
 - [ ] [Curated Life Advice](./230202-Curated-Life-Advice.md)
 - [ ] [Crash Course to Java](./221231-Crash-Course-to-Java.md)
-- [ ] [Zero to One Flutter](./221112-zero-to-one-Flutter.md)
 - [ ] [Self-Hosted Blog for Zola](./221006-self-hosted-blog-for-zola.md)
 - [ ] [Self-Hosted Blog for Mdbook](./230131-self-hosted-blog-for-mdbook.md)
 
@@ -48,8 +43,6 @@
 - [ ] [My Own Information Universe](./221223-My-Own-Information-Universe.md)
 - [ ] [Learning Everything like Code](./230220-Learn-Everything-Code.md)
 - [ ] [Interview Guideline](./010101-Interview-Guideline.md)
-- [ ] [On Container](./221223-on-Container.md)
-- [ ] [On Container Orchestration](./221225-on-Container-Orchestration.md)
 - [ ] [On AI Preparation for the *AI* Tsunami](./230209-on-AI-Prepare-for-the-AI-Tsunami.md)
 - [ ] [On AI LLM Integration](./230310-on-AI-LLM-Integration.md)
 - [ ] [Random Pictures on the Internet](./230209-Random-Pictures-on-the-Internet.md)
