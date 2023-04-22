@@ -2,21 +2,13 @@
 
 #### 1
 
-- [ ] [On Office Suite](./230218-on-Office-Suite.md)
-- [ ] [Zero to One Flutter](./221112-zero-to-one-Flutter.md)
-- [ ] [On Container](./221223-on-Container.md)
-- [ ] [On Container Orchestration](./221225-on-Container-Orchestration.md)
 - [ ] [On Web Server](./221222-on-Web-Server.md)
 - [ ] [On Visualization](./230122-on-Visualization.md)
-- [ ] [On Presentation](./221202-on-Presentation.md)
 - [ ] [On Program Performance and Reliability](./230218-on-Program-Performance-and-Reliability.md)
 - [ ] [On JVM](./221221-on-Java-Virtual-Machine.md)
 - [ ] [About This Blog](./221204-about-this-blog.md)
 - [ ] [On Everything as Code](./230124-on-Everything-as-Code.md)
 - [ ] [My Own Information Universe](./221223-My-Own-Information-Universe.md)
-- [ ] [Learning Everything like Code](./230220-Learn-Everything-Code.md)
-- [ ] [Self-Hosted Blog for Zola](./221006-self-hosted-blog-for-zola.md)
-- [ ] [Self-Hosted Blog for Mdbook](./230131-self-hosted-blog-for-mdbook.md)
 
 #### 2
 

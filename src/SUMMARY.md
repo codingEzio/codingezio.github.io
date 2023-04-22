@@ -3,7 +3,6 @@
 - [221204 About This Blog](./221204-about-this-blog.md)
 - [230418 Migration Status](./230418-Migration-Status.md)
 - [220920 Why Write Blog](./220920-why-write-blog.md)
-- [230205 Navigating My Blog](./230205-Navigating-My-Blog.md)
 
 # Content
 
