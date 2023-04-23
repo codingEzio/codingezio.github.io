@@ -2,9 +2,6 @@
 
 #### 1
 
-- [ ] [On AI Tooling](./230202-on-AI-Tooling.md)
-- [ ] [On AI Preparation for the *AI* Tsunami](./230209-on-AI-Prepare-for-the-AI-Tsunami.md)
-- [ ] [On AI LLM Integration](./230310-on-AI-LLM-Integration.md)
 - [ ] [On Visualization](./230122-on-Visualization.md)
 - [ ] [On Program Performance and Reliability](./230218-on-Program-Performance-and-Reliability.md)
 - [ ] [Microservice 01 Concepts](./221205-Microservice-01-Concepts.md)

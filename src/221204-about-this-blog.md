@@ -2,6 +2,8 @@
 >> Edit on February 26, 2023: I might nuke this blog in the near future (reduce post count by merging)<br/>
 >> Edited on March 11, 2023: By the end of June 2023, all the posts here would be rewritten and re-organized<br/>
 >> Edited on April 2, 2023: This blog is currently halted, no new posts would be published until further notice
+>> Edited on April 23, 2023: Next version of this blog would be a combination of old-fashioned Markdown and a mindmap version which allows you to toggle on <small>(powered by [*markmap*](https://markmap.js.org/repl))</small>.
+>>> When I figure out how to embed images in the mindmap version <small>(modifying its source code)</small>, the Markdown version would be deprecated.
 <!-- toc -->
 
 ## Why
