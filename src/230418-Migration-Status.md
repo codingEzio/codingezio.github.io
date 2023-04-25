@@ -7,7 +7,6 @@
 - [ ] [Microservice 01 Concepts](./221205-Microservice-01-Concepts.md)
 - [ ] [Microservice 02 Tryout](./221205-Microservice-02-Tryout.md)
 - [ ] [Interview Guideline](./010101-Interview-Guideline.md)
-- [ ] [Random Pictures on the Internet](./230209-Random-Pictures-on-the-Internet.md)
 - [ ] [My Own Information Universe](./221223-My-Own-Information-Universe.md)
 - [ ] [Blog Post References](./230108-Blog-Post-References.md)
 - [ ] [Curated Life Advice](./230202-Curated-Life-Advice.md)
