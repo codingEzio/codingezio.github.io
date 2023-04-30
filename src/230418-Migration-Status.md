@@ -1,7 +1,5 @@
 ### Now
 
-#### 1
-- [ ] [Zero to One CSS](./221030-zero-to-one-CSS.md)
 - [ ] [Zero to One Database](./220718-zero-to-one-for-database.md)
 - [ ] [Zero to One SQL](./220731-zero-to-one-SQL.md)
 - [ ] [Zero to One OS](./221025-zero-to-one-Operating-System.md)
@@ -9,7 +7,7 @@
 - [ ] [On Ecosystem Simulation](./221205-on-Ecosystem-Simulation.md)
 - [ ] [On Program Performance and Reliability](./230218-on-Program-Performance-and-Reliability.md)
 
-#### 2
+### Later
 
 - [ ] [Project Ideas](./010102-Project-Ideas.md)
 - [ ] [Booknote on Picturing Womanchild](./220608-booknote-on-Picturing-the-WomanChild.md)
@@ -19,9 +17,7 @@
 - [ ] [Blog Post References](./230108-Blog-Post-References.md)
 - [ ] [Curated Life Advice](./230202-Curated-Life-Advice.md)
 
-### Later
-
-### Book
+### Wait
 
 - [ ] [Algorithm LeetCode for SQL Problems](./221207-Algorithm-LeetCode-for-SQL-Problems.md)
 - [ ] [Algorithm LeetCode for General Algorithms](./221207-Algorithm-LeetCode-for-General-Problems.md)
