@@ -2,10 +2,8 @@
 
 #### 1
 
-- [ ] [On Visualization](./230122-on-Visualization.md)
 - [ ] [On Program Performance and Reliability](./230218-on-Program-Performance-and-Reliability.md)
 - [ ] [Microservice 01 Concepts](./221205-Microservice-01-Concepts.md)
-- [ ] [Microservice 02 Tryout](./221205-Microservice-02-Tryout.md)
 - [ ] [Interview Guideline](./010101-Interview-Guideline.md)
 - [ ] [My Own Information Universe](./221223-My-Own-Information-Universe.md)
 - [ ] [Blog Post References](./230108-Blog-Post-References.md)
@@ -19,8 +17,6 @@
 #### 2
 
 - [ ] [On Ecosystem Simulation](./221205-on-Ecosystem-Simulation.md)
-- [ ] [On Papers](./230219-on-Papers.md)
-- [ ] [On Machine Learning](./221224-on-Machine-Learning.md)
 - [ ] [Install PHP Dev Environment](./210522-Install-PHP-Dev-Environment-Manually.md)
 - [ ] [Crash Course to Java](./221231-Crash-Course-to-Java.md)
 - [ ] [Project Ideas](./010102-Project-Ideas.md)
