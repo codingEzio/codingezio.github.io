@@ -1,7 +1,5 @@
 ### Now
 
-- [ ] [Zero to One OS](./221025-zero-to-one-Operating-System.md)
-- [ ] [Project Ideas](./010102-Project-Ideas.md)
 - [ ] [On Program Performance and Reliability](./230218-on-Program-Performance-and-Reliability.md)
 - [ ] [On Ecosystem Simulation](./221205-on-Ecosystem-Simulation.md)
 - [ ] [Zero to One Database](./220718-zero-to-one-for-database.md)
@@ -11,7 +9,6 @@
 
 - [ ] [Blog Post References](./230108-Blog-Post-References.md)
 - [ ] [Booknote on Picturing Womanchild](./220608-booknote-on-Picturing-the-WomanChild.md)
-- [ ] [Zero to One SQL](./220731-zero-to-one-SQL.md)
 - [ ] [My Own Information Universe](./221223-My-Own-Information-Universe.md)
 - [ ] [Microservice 01 Concepts](./221205-Microservice-01-Concepts.md)
 
