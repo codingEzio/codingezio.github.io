@@ -2,11 +2,7 @@
 
 - [ ] [On Program Performance and Reliability](./230218-on-Program-Performance-and-Reliability.md)
 - [ ] [On Ecosystem Simulation](./221205-on-Ecosystem-Simulation.md)
-- [ ] [Zero to One Database](./220718-zero-to-one-for-database.md)
 - [ ] [Interview Guideline](./010101-Interview-Guideline.md)
-
-### Later
-
 - [ ] [Blog Post References](./230108-Blog-Post-References.md)
 - [ ] [Booknote on Picturing Womanchild](./220608-booknote-on-Picturing-the-WomanChild.md)
 - [ ] [My Own Information Universe](./221223-My-Own-Information-Universe.md)
