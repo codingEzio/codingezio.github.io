@@ -1,12 +1,10 @@
 ### Now
 
-- [ ] [On Program Performance and Reliability](./230218-on-Program-Performance-and-Reliability.md)
 - [ ] [On Ecosystem Simulation](./221205-on-Ecosystem-Simulation.md)
 - [ ] [Interview Guideline](./010101-Interview-Guideline.md)
 - [ ] [Blog Post References](./230108-Blog-Post-References.md)
 - [ ] [Booknote on Picturing Womanchild](./220608-booknote-on-Picturing-the-WomanChild.md)
 - [ ] [My Own Information Universe](./221223-My-Own-Information-Universe.md)
-- [ ] [Microservice 01 Concepts](./221205-Microservice-01-Concepts.md)
 
 ### Wait
 
