@@ -1,6 +1,5 @@
 ### Now
 
-- [ ] [On Ecosystem Simulation](./221205-on-Ecosystem-Simulation.md)
 - [ ] [Interview Guideline](./010101-Interview-Guideline.md)
 - [ ] [Blog Post References](./230108-Blog-Post-References.md)
 - [ ] [Booknote on Picturing Womanchild](./220608-booknote-on-Picturing-the-WomanChild.md)
