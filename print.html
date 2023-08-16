@@ -89,11 +89,33 @@
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
                                 <div id="menu-bar-hover-placeholder"></div>
-                <div id="menu-bar" class="menu-bar sticky bordered">
+                <div id="menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
                         <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
                             <i class="fa fa-bars"></i>
@@ -153,7 +175,8 @@ Edited on March 11, 2023: By the end of June 2023, all the posts here would be r
 Edited on April 2, 2023: This blog is currently halted, no new posts would be published until further notice
 Edited on April 23, 2023: Next version of this blog would be a combination of old-fashioned Markdown and a mindmap version which allows you to toggle on <small>(powered by <a href="https://markmap.js.org/repl"><em>markmap</em></a>)</small>.</p>
 <blockquote>
-<p>When I figure out how to embed images in the mindmap version <small>(modifying its source code)</small>, the Markdown version would be deprecated.</p>
+<p>When I figure out how to embed images in the mindmap version <small>(modifying its source code)</small>, the Markdown version would be deprecated.
+Edited on August 16, 2023: Soon this will be deleted completely (archived locally on my machine) (I might not open source any content in the future, or not) (distillation is the key here).</p>
 </blockquote>
 </blockquote>
 </blockquote>
@@ -220,7 +243,7 @@ Edited on April 23, 2023: Next version of this blog would be a combination of ol
 <a href="./230108-Blog-Post-References.html">Blog Post References</a></li>
 <li><input disabled="" type="checkbox"/>
 <a href="./010101-Algorithm-LeetCode-Practice-List.html">Algorithm LeetCode Practice List</a></li>
-<li><input disabled="" type="checkbox"/>
+<li><input disabled="" type="checkbox" checked=""/>
 <a href="./221223-My-Own-Information-Universe.html">My Own Information Universe</a></li>
 </ul>
 <h3 id="hmm"><a class="header" href="#hmm">Hmm</a></h3>
@@ -20671,7 +20694,7 @@ Conceptually, 这是 &lt;师与官的分离&gt; ( 由此, “家” 代表的是
 <p>[例子 :: “这是桌子”]
 — “这” 会消亡, 可变(broken).
 — “桌子” 属抽象范畴, 即”名称”, 其不变.
-=&gt; “名”是绝对的 (~=宾语), “实”是相对的 (~=主语).</p>
+=&gt; “名”是绝对的 (<del>=宾语), “实”是相对的 (</del>=主语).</p>
 <p>[例子 extension]
 美 =&gt; 它是绝对的, 其为”名”
 美的事物 =&gt; 它是可变的 &amp; 相对的, 以致它只能够是 “相对美”.</p>
