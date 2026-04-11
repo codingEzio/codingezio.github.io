@@ -1,5 +1,6 @@
 # Blog Output
 build-output/
+blog-generator/output/
 
 # Python Virtual Environment
 .venv/
