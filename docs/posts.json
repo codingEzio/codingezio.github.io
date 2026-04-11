@@ -1,0 +1,53 @@
+[
+  {
+    "title": "Productivity Hacks for Developers",
+    "date": "2024-03-25",
+    "category": "Productivity",
+    "tags": [
+      "productivity",
+      "tips",
+      "workflow",
+      "efficiency"
+    ],
+    "excerpt": "Boost your coding efficiency with these proven productivity techniques and tools used by top developers.",
+    "url": "posts/productivity-hacks-for-developers.html"
+  },
+  {
+    "title": "Web Development Trends in 2024",
+    "date": "2024-03-20",
+    "category": "Web Development",
+    "tags": [
+      "javascript",
+      "frontend",
+      "trends",
+      "2024"
+    ],
+    "excerpt": "Explore the latest trends shaping web development this year, from AI integration to new frameworks.",
+    "url": "posts/web-development-trends-2024.html"
+  },
+  {
+    "title": "Getting Started with Python",
+    "date": "2024-03-15",
+    "category": "Programming",
+    "tags": [
+      "python",
+      "beginner",
+      "tutorial"
+    ],
+    "excerpt": "A beginner's guide to Python programming - learn the basics and start your coding journey today.",
+    "url": "posts/getting-started-with-python.html"
+  },
+  {
+    "title": "Mastering Essential Git Commands",
+    "date": "2024-03-10",
+    "category": "DevOps",
+    "tags": [
+      "git",
+      "version-control",
+      "commands",
+      "tutorial"
+    ],
+    "excerpt": "A comprehensive guide to Git commands that every developer should know, from basics to advanced workflows.",
+    "url": "posts/mastering-git-commands.html"
+  }
+]

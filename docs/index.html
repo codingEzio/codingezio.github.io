@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog - Home</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+    <div class="container header-content">
+        <a href="index.html" class="logo">📚 MyBlog</a>
+        <nav class="nav">
+            <a href="index.html" class="active">Home</a>
+            <a href="#posts">Posts</a>
+            <a href="#about">About</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h1>Welcome to My Blog</h1>
+        <p>Exploring ideas, sharing knowledge, and documenting the journey through code and creativity.</p>
+    </div>
+</section>
+
+<div class="container">
+    <div class="controls">
+        <div class="search-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            <input type="text" placeholder="Search posts... (Press / to focus)">
+        </div>
+        <div class="filter-tags">
+            <span class="tag active" data-category="all">All</span>
+            <span class="tag" data-category="DevOps">DevOps</span>
+            <span class="tag" data-category="Productivity">Productivity</span>
+            <span class="tag" data-category="Programming">Programming</span>
+            <span class="tag" data-category="Web Development">Web Development</span>
+        </div>
+    </div>
+    
+    <div class="blog-grid" id="posts">
+
+        <article class="blog-card" data-category="Productivity" onclick="window.location.href='posts/productivity-hacks-for-developers.html'">
+            <div class="blog-card-image">📝</div>
+            <div class="blog-card-content">
+                <div class="blog-card-meta">
+                    <span class="blog-card-category">Productivity</span>
+                    <span>2024-03-25</span>
+                </div>
+                <h3>Productivity Hacks for Developers</h3>
+                <p>Boost your coding efficiency with these proven productivity techniques and tools used by top developers.</p>
+            </div>
+        </article>
+
+        <article class="blog-card" data-category="Web Development" onclick="window.location.href='posts/web-development-trends-2024.html'">
+            <div class="blog-card-image">📝</div>
+            <div class="blog-card-content">
+                <div class="blog-card-meta">
+                    <span class="blog-card-category">Web Development</span>
+                    <span>2024-03-20</span>
+                </div>
+                <h3>Web Development Trends in 2024</h3>
+                <p>Explore the latest trends shaping web development this year, from AI integration to new frameworks.</p>
+            </div>
+        </article>
+
+        <article class="blog-card" data-category="Programming" onclick="window.location.href='posts/getting-started-with-python.html'">
+            <div class="blog-card-image">📝</div>
+            <div class="blog-card-content">
+                <div class="blog-card-meta">
+                    <span class="blog-card-category">Programming</span>
+                    <span>2024-03-15</span>
+                </div>
+                <h3>Getting Started with Python</h3>
+                <p>A beginner's guide to Python programming - learn the basics and start your coding journey today.</p>
+            </div>
+        </article>
+
+        <article class="blog-card" data-category="DevOps" onclick="window.location.href='posts/mastering-git-commands.html'">
+            <div class="blog-card-image">📝</div>
+            <div class="blog-card-content">
+                <div class="blog-card-meta">
+                    <span class="blog-card-category">DevOps</span>
+                    <span>2024-03-10</span>
+                </div>
+                <h3>Mastering Essential Git Commands</h3>
+                <p>A comprehensive guide to Git commands that every developer should know, from basics to advanced workflows.</p>
+            </div>
+        </article>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <p>Built with ❤️ using Markdown to HTML Generator</p>
+        <p>&copy; 2024 MyBlog. All rights reserved.</p>
+    </div>
+</footer>
+<script src="./assets/js/main.js"></script>
+</body>
+</html>
