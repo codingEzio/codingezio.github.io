@@ -199,7 +199,7 @@ class BlogGenerator:
     
     def generate_html_head(self, title: str, is_post: bool = False) -> str:
         """Generate HTML head section."""
-        base_path = '.' if is_post else '.'
+        base_path = '..' if is_post else '.'
         return f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -227,16 +227,17 @@ class BlogGenerator:
 </header>
 '''
     
-    def generate_footer(self) -> str:
+    def generate_footer(self, is_post: bool = False) -> str:
         """Generate site footer."""
-        return '''
+        base_path = '..' if is_post else '.'
+        return f'''
 <footer class="footer">
     <div class="container">
         <p>Built with ❤️ using Markdown to HTML Generator</p>
         <p>&copy; 2024 MyBlog. All rights reserved.</p>
     </div>
 </footer>
-<script src="./assets/js/main.js"></script>
+<script src="{base_path}/assets/js/main.js"></script>
 </body>
 </html>
 '''
@@ -302,7 +303,7 @@ class BlogGenerator:
 </div>
 '''
         
-        html += self.generate_footer()
+        html += self.generate_footer(is_post=False)
         return html
     
     def generate_post_page(self, post: Dict) -> str:
@@ -372,7 +373,7 @@ class BlogGenerator:
 </article>
 '''
         
-        html += self.generate_footer()
+        html += self.generate_footer(is_post=True)
         return html
     
     def copy_assets(self) -> None:
