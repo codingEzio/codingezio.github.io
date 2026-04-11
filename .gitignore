@@ -1,6 +1,11 @@
-
 # Blog Output
 build-output/
+
+# Python Virtual Environment
+.venv/
+venv/
+env/
+ENV/
 
 # Code Example
 **/.idea
