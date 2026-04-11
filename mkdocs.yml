@@ -1,9 +1,0 @@
-site_name: Human
-nav:
-  - Home: index.md
-plugins:
-  - search
-  - markmap:
-      base_path: docs
-      encoding: utf-8
-      file_extension: .mm.md
