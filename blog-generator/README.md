@@ -128,11 +128,52 @@ When viewing the blog:
 | `←` | Go to previous post |
 | `→` | Go to next post |
 
-## Deployment
+## GitHub Pages Deployment (Recommended)
 
-The `output/` folder contains a fully static website. You can deploy it to:
+The easiest way to deploy is using GitHub Pages:
 
-- **GitHub Pages** - Push the output folder to a `gh-pages` branch
+### Option 1: Using the deploy script
+
+```bash
+cd blog-generator
+./deploy.sh
+```
+
+This will:
+1. Generate the blog
+2. Copy files to `docs/` folder at repo root
+3. You can then commit and push
+
+Then in GitHub:
+1. Go to **Settings > Pages** in your repository
+2. Select **"Deploy from a branch"**
+3. Choose **"main"** branch and **"/docs"** folder
+4. Click **Save**
+
+Your blog will be live at: `https://yourusername.github.io/repo-name/`
+
+### Option 2: Manual deployment
+
+```bash
+# Generate the blog
+cd blog-generator
+source .venv/bin/activate
+python generate.py
+
+# Copy to docs folder
+cp -r output ../docs
+
+# Commit and push
+cd ..
+git add docs/
+git commit -m "Deploy blog"
+git push
+```
+
+## Other Deployment Options
+
+The `output/` folder contains a fully static website. You can also deploy to:
+
 - **Netlify** - Drag and drop the output folder
 - **Vercel** - Connect your repository
 - **Any static host** - Just upload the files
