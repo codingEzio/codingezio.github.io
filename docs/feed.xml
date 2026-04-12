@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
 <channel>
-  <title>Blog</title>
+  <title>Posts</title>
   <link>https://codingezio.github.io/</link>
-  <description>Published posts</description>
-  <lastBuildDate>Sun, 12 Apr 2026 11:14:12 GMT</lastBuildDate>
+  <description>Compact published notes.</description>
+  <lastBuildDate>Sun, 12 Apr 2026 12:03:39 GMT</lastBuildDate>
 <item>
   <title>Hermes Agent Cron 调度深潜</title>
   <link>https://codingezio.github.io/posts/hermes-agent-cron/</link>
@@ -20,18 +20,11 @@
   <description>常用外部依赖与复现线索</description>
 </item>
 <item>
-  <title>Hermes 模型降级记</title>
-  <link>https://codingezio.github.io/posts/hermes/</link>
-  <guid>https://codingezio.github.io/posts/hermes/</guid>
+  <title>Kimi for Coding：403 伪装与 fallback</title>
+  <link>https://codingezio.github.io/posts/hermes-with-kimi2dot5/</link>
+  <guid>https://codingezio.github.io/posts/hermes-with-kimi2dot5/</guid>
   <pubDate>Fri, 10 Apr 2026 16:00:00 GMT</pubDate>
-  <description>Kimi 403 修复与自动切换</description>
-</item>
-<item>
-  <title>Kimi for Coding：403 与冷启动</title>
-  <link>https://codingezio.github.io/posts/kimi-for-coding-403/</link>
-  <guid>https://codingezio.github.io/posts/kimi-for-coding-403/</guid>
-  <pubDate>Fri, 10 Apr 2026 16:00:00 GMT</pubDate>
-  <description>白名单限制与冷启动排查</description>
+  <description>把 User-Agent 与 fallback 链一次配好，Kimi 才能稳定接入。</description>
 </item>
 </channel>
 </rss>

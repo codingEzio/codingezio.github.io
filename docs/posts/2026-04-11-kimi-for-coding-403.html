@@ -3,18 +3,177 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kimi for Coding：403 与冷启动</title>
-  <meta name="description" content="白名单限制与冷启动排查">
-  <link rel="canonical" href="https://codingezio.github.io/posts/kimi-for-coding-403/">
-  <link rel="alternate" type="application/rss+xml" title="Kimi for Coding：403 与冷启动 RSS" href="/rss.xml">
-  <link rel="preload" href="/assets/blog.9fba116bf4.css" as="style">
-  <link rel="stylesheet" href="/assets/blog.9fba116bf4.css">
-  <meta http-equiv="refresh" content="0; url=/posts/kimi-for-coding-403/">
+  <title>Kimi for Coding：403 伪装与 fallback</title>
+  <meta name="description" content="把 User-Agent 与 fallback 链一次配好，Kimi 才能稳定接入。">
+  <meta name="theme-color" content="#f6efe4">
+  <meta property="og:title" content="Kimi for Coding：403 伪装与 fallback">
+  <meta property="og:description" content="把 User-Agent 与 fallback 链一次配好，Kimi 才能稳定接入。">
+  <meta property="og:type" content="article">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://codingezio.github.io/posts/hermes-with-kimi2dot5/">
+  <link rel="alternate" type="application/rss+xml" title="Kimi for Coding：403 伪装与 fallback RSS" href="/rss.xml">
+  <script>
+  const storedBlogAppearance = window.localStorage.getItem("blog-appearance-mode");
+  if (storedBlogAppearance) document.documentElement.dataset.appearance = storedBlogAppearance;
+  const storedBlogColorScheme = window.localStorage.getItem("blog-color-scheme");
+  if (storedBlogColorScheme && storedBlogColorScheme !== "auto") document.documentElement.dataset.colorScheme = storedBlogColorScheme;
+</script>
+  <link rel="preload" href="/assets/blog.02c8da217f.css" as="style">
+  <link rel="stylesheet" href="/assets/blog.02c8da217f.css">
+  <meta http-equiv="refresh" content="0; url=/posts/hermes-with-kimi2dot5/">
 </head>
 <body><main class="page-shell">
   <div class="redirect-shell">
-    <p>Redirecting to <a href="/posts/kimi-for-coding-403/">Kimi for Coding：403 与冷启动</a>.</p>
+    <p>Redirecting to <a href="/posts/hermes-with-kimi2dot5/">Kimi for Coding：403 伪装与 fallback</a>.</p>
   </div>
-  <script>window.location.replace("/posts/kimi-for-coding-403/");</script>
-</main></body>
+  <script>window.location.replace("/posts/hermes-with-kimi2dot5/");</script>
+</main><script>
+(() => {
+  const appearanceKey = "blog-appearance-mode";
+  const schemeKey = "blog-color-scheme";
+  const root = document.documentElement;
+  const doc = document;
+
+  const getOpenPopovers = () => Array.from(doc.querySelectorAll('[data-popover-root][data-open="true"]'));
+  const getPopoverParts = (rootElement) => ({
+    trigger: rootElement.querySelector('[data-popover-trigger]'),
+    panel: rootElement.querySelector('[data-popover-panel]'),
+  });
+
+  function updateThemeButtons() {
+    const activeAppearance = root.dataset.appearance || "paper";
+    const activeScheme = root.dataset.colorScheme || "auto";
+    doc.querySelectorAll('[data-theme-value]').forEach((button) => {
+      button.setAttribute('aria-pressed', String(button.getAttribute('data-theme-value') === activeAppearance));
+    });
+    doc.querySelectorAll('[data-scheme-value]').forEach((button) => {
+      button.setAttribute('aria-pressed', String(button.getAttribute('data-scheme-value') === activeScheme));
+    });
+    const activeThemeButton = doc.querySelector(`[data-theme-value="${activeAppearance}"]`);
+    doc.querySelectorAll('[data-theme-label]').forEach((label) => {
+      label.textContent = activeThemeButton?.getAttribute('data-theme-label') || '纸感';
+    });
+  }
+
+  function setAppearance(value) {
+    root.dataset.appearance = value;
+    window.localStorage.setItem(appearanceKey, value);
+    updateThemeButtons();
+  }
+
+  function setScheme(value) {
+    if (value === 'auto') {
+      delete root.dataset.colorScheme;
+      window.localStorage.removeItem(schemeKey);
+    } else {
+      root.dataset.colorScheme = value;
+      window.localStorage.setItem(schemeKey, value);
+    }
+    updateThemeButtons();
+  }
+
+  function closePopover(rootElement) {
+    if (!(rootElement instanceof HTMLElement)) return;
+    const { trigger, panel } = getPopoverParts(rootElement);
+    if (!(trigger instanceof HTMLElement) || !(panel instanceof HTMLElement)) return;
+    rootElement.dataset.open = 'false';
+    trigger.setAttribute('aria-expanded', 'false');
+    panel.hidden = true;
+  }
+
+  function positionPopover(rootElement) {
+    if (!(rootElement instanceof HTMLElement)) return;
+    const { trigger, panel } = getPopoverParts(rootElement);
+    if (!(trigger instanceof HTMLElement) || !(panel instanceof HTMLElement)) return;
+    panel.hidden = false;
+    const viewportPadding = 12;
+    const gap = 10;
+    const triggerRect = trigger.getBoundingClientRect();
+    const panelRect = panel.getBoundingClientRect();
+    let left = triggerRect.left;
+    if (left + panelRect.width > window.innerWidth - viewportPadding) {
+      left = window.innerWidth - viewportPadding - panelRect.width;
+    }
+    if (left < viewportPadding) {
+      left = viewportPadding;
+    }
+    let top = triggerRect.bottom + gap;
+    if (top + panelRect.height > window.innerHeight - viewportPadding) {
+      top = Math.max(viewportPadding, triggerRect.top - panelRect.height - gap);
+    }
+    panel.style.left = `${Math.round(left)}px`;
+    panel.style.top = `${Math.round(top)}px`;
+  }
+
+  function openPopover(rootElement) {
+    if (!(rootElement instanceof HTMLElement)) return;
+    getOpenPopovers().forEach((node) => {
+      if (node !== rootElement) closePopover(node);
+    });
+    const { trigger, panel } = getPopoverParts(rootElement);
+    if (!(trigger instanceof HTMLElement) || !(panel instanceof HTMLElement)) return;
+    rootElement.dataset.open = 'true';
+    trigger.setAttribute('aria-expanded', 'true');
+    panel.hidden = false;
+    positionPopover(rootElement);
+  }
+
+  doc.addEventListener('click', (event) => {
+    const target = event.target instanceof Element ? event.target : null;
+    if (!target) return;
+
+    const appearanceButton = target.closest('[data-theme-value]');
+    if (appearanceButton instanceof HTMLElement) {
+      event.preventDefault();
+      const value = appearanceButton.getAttribute('data-theme-value');
+      if (value) setAppearance(value);
+      return;
+    }
+
+    const schemeButton = target.closest('[data-scheme-value]');
+    if (schemeButton instanceof HTMLElement) {
+      event.preventDefault();
+      const value = schemeButton.getAttribute('data-scheme-value');
+      if (value) setScheme(value);
+      return;
+    }
+
+    const trigger = target.closest('[data-popover-trigger]');
+    if (trigger instanceof HTMLElement) {
+      event.preventDefault();
+      const rootElement = trigger.closest('[data-popover-root]');
+      if (!(rootElement instanceof HTMLElement)) return;
+      if (rootElement.dataset.open === 'true') {
+        closePopover(rootElement);
+      } else {
+        openPopover(rootElement);
+      }
+      return;
+    }
+
+    if (!target.closest('[data-popover-panel]')) {
+      getOpenPopovers().forEach((node) => closePopover(node));
+    }
+  });
+
+  doc.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      getOpenPopovers().forEach((node) => closePopover(node));
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    getOpenPopovers().forEach((node) => positionPopover(node));
+  }, { passive: true });
+
+  window.addEventListener('scroll', () => {
+    getOpenPopovers().forEach((node) => positionPopover(node));
+  }, { passive: true, capture: true });
+
+  if (!root.dataset.appearance) {
+    root.dataset.appearance = 'paper';
+  }
+  updateThemeButtons();
+})();
+</script></body>
 </html>
