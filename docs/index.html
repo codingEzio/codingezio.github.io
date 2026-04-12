@@ -1,142 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Blog</title>
   <meta name="description" content="Published posts">
-  <link rel="canonical" href="https://codingezio.github.io/index.html">
-  <style>:root {
-  color-scheme: light dark;
-  --blog-font-chrome: "Inter", "Segoe UI Variable Text", "Segoe UI", "SF Pro Text", "Helvetica Neue", "Arial", "Inter", "Segoe UI Variable Text", "Segoe UI", "SF Pro Text", "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
-  --blog-font-title: "Inter", "Segoe UI Variable Text", "Segoe UI", "SF Pro Text", "Helvetica Neue", "Arial", "Inter", "Segoe UI Variable Text", "Segoe UI", "SF Pro Text", "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
-  --blog-font-prose: "Inter", "Segoe UI Variable Text", "Segoe UI", "SF Pro Text", "Helvetica Neue", "Arial", "Inter", "Segoe UI Variable Text", "Segoe UI", "SF Pro Text", "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
-  --blog-font-mono: "Cascadia Mono", "Cascadia Code", "Consolas", "Menlo", "Monaco", monospace;
-  --bg: #f5f7fb;
-  --panel: rgba(255, 255, 255, 0.94);
-  --line: rgba(148, 163, 184, 0.24);
-  --line-strong: rgba(59, 130, 246, 0.2);
-  --text: #0f172a;
-  --muted: #475569;
-  --link: #2563eb;
-  --chip-bg: rgba(37, 99, 235, 0.08);
-  --chip-text: #1d4ed8;
-  --quote-bg: rgba(241, 245, 249, 0.92);
-  --code-inline-bg: rgba(226, 232, 240, 0.72);
-  --code-inline-text: #0f172a;
-  --code-shell: radial-gradient(circle at top left, rgba(37, 99, 235, 0.12), transparent 42%), linear-gradient(160deg, rgba(255, 255, 255, 0.98), rgba(241, 245, 249, 0.94));
-  --code-border: rgba(59, 130, 246, 0.18);
-  --shadow: 0 20px 54px rgba(15, 23, 42, 0.12);
-  --token-base: #0f172a;
-  --token-comment: #64748b;
-  --token-keyword: #1d4ed8;
-  --token-name: #0f172a;
-  --token-string: #15803d;
-  --token-number: #b45309;
-  --token-variable: #7c3aed;
-  --token-meta: #475569;
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #0b1120;
-    --panel: rgba(15, 23, 42, 0.88);
-    --line: rgba(148, 163, 184, 0.24);
-    --line-strong: rgba(125, 211, 252, 0.26);
-    --text: #e5eef9;
-    --muted: #cbd5e1;
-    --link: #93c5fd;
-    --chip-bg: rgba(147, 197, 253, 0.14);
-    --chip-text: #bfdbfe;
-    --quote-bg: rgba(30, 41, 59, 0.84);
-    --code-inline-bg: rgba(30, 41, 59, 0.88);
-    --code-inline-text: #e5eef9;
-    --code-shell: radial-gradient(circle at top left, rgba(125, 211, 252, 0.1), transparent 42%), linear-gradient(160deg, rgba(15, 23, 42, 0.98), rgba(30, 41, 59, 0.92));
-    --code-border: rgba(125, 211, 252, 0.18);
-    --shadow: 0 24px 60px rgba(2, 6, 23, 0.46);
-    --token-base: #e5eef9;
-    --token-comment: #94a3b8;
-    --token-keyword: #7dd3fc;
-    --token-name: #f8fafc;
-    --token-string: #86efac;
-    --token-number: #fbbf24;
-    --token-variable: #c4b5fd;
-    --token-meta: #cbd5e1;
-  }
-}
-* { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: var(--blog-font-chrome), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
-body { min-height: 100vh; }
-a { color: var(--link); text-decoration: none; }
-a:hover { text-decoration: underline; }
-.page-shell { width: min(100%, min(76rem, 78vw)); margin: 0 auto; padding: 1.5rem 1rem 4rem; }
-.site-nav { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; margin-bottom: 1.5rem; }
-.site-title { margin: 0; font-size: clamp(1.5rem, 2.6vw, 2rem); line-height: 1.1; font-family: var(--blog-font-title), var(--blog-font-chrome), sans-serif; }
-.site-links { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem; color: var(--muted); font-size: 0.95rem; }
-.post-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; }
-.post-card, .post-shell { border: 1px solid var(--line); background: var(--panel); border-radius: 1.5rem; box-shadow: var(--shadow); overflow: hidden; }
-.post-card { padding: 1rem; display: grid; gap: 0.85rem; }
-.post-header { padding: 1rem 1rem 0; display: grid; gap: 0.75rem; }
-.post-content { padding: 0 1rem 1rem; }
-.post-title { margin: 0; font-size: clamp(1.65rem, 3.2vw, 2.6rem); line-height: 1.08; font-family: var(--blog-font-title), var(--blog-font-chrome), sans-serif; }
-.card-title { margin: 0; font-size: clamp(1.15rem, 2vw, 1.35rem); line-height: 1.2; font-family: var(--blog-font-title), var(--blog-font-chrome), sans-serif; }
-.meta-bar { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 0.75rem; }
-.meta-stats { margin-left: auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 0.5rem; color: var(--muted); font-size: 0.78rem; line-height: 1.2; text-transform: uppercase; letter-spacing: 0.08em; }
-.status-chip { display: inline-flex; align-items: center; border-radius: 999px; padding: 0.22rem 0.6rem; border: 1px solid var(--line-strong); color: var(--text); }
-.meta-tag { min-width: 0; flex: 1 1 auto; }
-.tag-chip { display: inline-flex; align-items: center; border-radius: 999px; padding: 0.22rem 0.6rem; background: var(--chip-bg); color: var(--chip-text); font-size: 0.8rem; }
-.excerpt { margin: 0; color: var(--muted); line-height: 1.7; }
-.post-cover, .post-cover-picture img, .card-cover, .card-cover-picture img { width: 100%; height: auto; display: block; }
-.post-cover, .card-cover { border-radius: 1rem; border: 1px solid var(--line); background: rgba(148, 163, 184, 0.08); }
-.post-cover, .post-cover-picture img { max-height: min(42vh, 24rem); object-fit: contain; }
-.post-body { padding-top: 0.25rem; font-size: 1rem; line-height: 1.82; font-family: var(--blog-font-prose), sans-serif; }
-.post-body :where(h1, h2, h3, h4, h5, h6) { line-height: 1.2; margin: 1.5rem 0 0.65rem; font-family: var(--blog-font-title), var(--blog-font-chrome), sans-serif; }
-.post-body :where(p, ul, ol, blockquote, pre) { margin: 0 0 1rem; }
-.post-body :where(ul, ol) { padding-left: 1.35rem; }
-.post-body blockquote { border-left: 4px solid var(--line-strong); margin-left: 0; padding: 0.9rem 1rem; color: var(--muted); background: var(--quote-bg); border-radius: 1rem; }
-.post-body .table-wrap { margin: 0 0 1rem; overflow-x: auto; }
-.post-body table { width: 100%; border-collapse: collapse; overflow: hidden; border-radius: 0.9rem; border: 1px solid var(--line); }
-.post-body th, .post-body td { padding: 0.7rem 0.8rem; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
-.post-body tr:last-child td { border-bottom: 0; }
-.post-body th { background: color-mix(in srgb, var(--chip-bg) 42%, var(--panel)); }
-.post-body code { font-family: var(--blog-font-mono), 'SFMono-Regular', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.9em; }
-.post-body :not(pre) > code { padding: 0.12rem 0.35rem; border-radius: 0.4rem; background: var(--code-inline-bg); color: var(--code-inline-text); }
-.post-body pre { overflow-x: auto; padding: 1rem 1.05rem; border: 1px solid var(--code-border); border-radius: 1rem; background: var(--code-shell); box-shadow: var(--shadow); }
-.post-body pre code { color: inherit; }
-.post-body hr { border: 0; border-top: 1px solid var(--line); margin: 1.5rem 0; }
-.markdown-image { max-width: 100%; height: auto; border-radius: 1rem; border: 1px solid var(--line); display: block; box-shadow: var(--shadow); }
-.markdown-video, .markdown-iframe { width: 100%; display: block; border-radius: 1rem; border: 1px solid var(--line); background: rgba(148, 163, 184, 0.08); box-shadow: var(--shadow); }
-.markdown-iframe { min-height: 22rem; aspect-ratio: 16 / 9; }
-.markdown-audio { width: 100%; display: block; margin: 0 0 1rem; }
-.post-body .hljs { color: var(--token-base); background: transparent; }
-.post-body .hljs-comment, .post-body .hljs-quote { color: var(--token-comment); font-style: italic; }
-.post-body .hljs-keyword, .post-body .hljs-selector-tag, .post-body .hljs-literal, .post-body .hljs-doctag, .post-body .hljs-meta .hljs-keyword { color: var(--token-keyword); }
-.post-body .hljs-title, .post-body .hljs-section, .post-body .hljs-attr, .post-body .hljs-name, .post-body .hljs-selector-id, .post-body .hljs-selector-class { color: var(--token-name); }
-.post-body .hljs-string, .post-body .hljs-regexp, .post-body .hljs-symbol, .post-body .hljs-bullet, .post-body .hljs-template-string, .post-body .hljs-addition { color: var(--token-string); }
-.post-body .hljs-number, .post-body .hljs-built_in, .post-body .hljs-type, .post-body .hljs-class .hljs-title { color: var(--token-number); }
-.post-body .hljs-variable, .post-body .hljs-template-variable, .post-body .hljs-params, .post-body .hljs-property { color: var(--token-variable); }
-.post-body .hljs-meta, .post-body .hljs-link { color: var(--token-meta); }
-.empty-state { border: 1px dashed var(--line-strong); border-radius: 1.25rem; padding: 1rem; color: var(--muted); background: var(--panel); }
-.redirect-shell { width: min(100%, 36rem); margin: 5rem auto 0; padding: 1.25rem; border: 1px solid var(--line); border-radius: 1.25rem; background: var(--panel); box-shadow: var(--shadow); }
-@media (max-width: 1024px) {
-  .page-shell { width: 100%; padding-left: 0.85rem; padding-right: 0.85rem; }
-  .post-card { padding: 0.9rem; }
-  .post-shell { border: 0; border-radius: 0; background: transparent; box-shadow: none; overflow: visible; }
-  .post-header { padding-top: 0; padding-left: 0; padding-right: 0; }
-  .post-content { padding-left: 0; padding-right: 0; padding-bottom: 0; }
-  .post-card, .post-body pre, .markdown-image, .markdown-video, .markdown-iframe { box-shadow: none; }
-}
-@supports (content-visibility: auto) {
-  @media (max-width: 1024px) {
-    .post-body > * { content-visibility: auto; contain-intrinsic-size: auto 12rem; }
-  }
-}</style>
+  <link rel="canonical" href="https://codingezio.github.io/">
+  <link rel="alternate" type="application/rss+xml" title="Blog RSS" href="/rss.xml">
+  <link rel="preload" href="/assets/blog.9fba116bf4.css" as="style">
+  <link rel="stylesheet" href="/assets/blog.9fba116bf4.css">
 </head>
 <body><main class="page-shell">
   <header class="site-nav">
     <h1 class="site-title">Blog</h1>
     <div class="site-links">
-      <a href="feed.xml">RSS</a>
       <span>4 posts</span>
+      <a href="/rss.xml">RSS</a>
     </div>
   </header>
   <ol class="post-list"><li>
@@ -145,7 +24,7 @@ a:hover { text-decoration: underline; }
   <div class="meta-tag"><span class="tag-chip" title="#HermesAgent #Cron #AI #Scheduler">#HermesAgent +3</span></div>
   <div class="meta-stats"><span>Apr 11, 2026</span><span>615 words</span><span class="status-chip">published</span></div>
 </div>
-    <h2 class="card-title"><a href="posts/2026-04-11-hermes-agent-cron.html">Hermes Agent Cron 调度深潜</a></h2>
+    <h2 class="card-title"><a href="/posts/hermes-agent-cron/">Hermes Agent Cron 调度深潜</a></h2>
     <p class="excerpt">提醒机制的可靠性与边界</p>
   </article>
 </li>
@@ -155,7 +34,7 @@ a:hover { text-decoration: underline; }
   <div class="meta-tag"><span class="tag-chip" title="#HermesAgent #AI #Tools #Setup">#HermesAgent +3</span></div>
   <div class="meta-stats"><span>Apr 11, 2026</span><span>330 words</span><span class="status-chip">published</span></div>
 </div>
-    <h2 class="card-title"><a href="posts/2026-04-11-hermes-ai.html">Hermes AI 工具链配置指南</a></h2>
+    <h2 class="card-title"><a href="/posts/hermes-ai/">Hermes AI 工具链配置指南</a></h2>
     <p class="excerpt">常用外部依赖与复现线索</p>
   </article>
 </li>
@@ -165,7 +44,7 @@ a:hover { text-decoration: underline; }
   <div class="meta-tag"><span class="tag-chip" title="#HermesAgent #Kimi #Fallback #Configuration">#HermesAgent +3</span></div>
   <div class="meta-stats"><span>Apr 11, 2026</span><span>322 words</span><span class="status-chip">published</span></div>
 </div>
-    <h2 class="card-title"><a href="posts/2026-04-11-hermes.html">Hermes 模型降级记</a></h2>
+    <h2 class="card-title"><a href="/posts/hermes/">Hermes 模型降级记</a></h2>
     <p class="excerpt">Kimi 403 修复与自动切换</p>
   </article>
 </li>
@@ -175,7 +54,7 @@ a:hover { text-decoration: underline; }
   <div class="meta-tag"><span class="tag-chip" title="#Kimi #API #CodingAgent #Performance">#Kimi +3</span></div>
   <div class="meta-stats"><span>Apr 11, 2026</span><span>694 words</span><span class="status-chip">published</span></div>
 </div>
-    <h2 class="card-title"><a href="posts/2026-04-11-kimi-for-coding-403.html">Kimi for Coding：403 与冷启动</a></h2>
+    <h2 class="card-title"><a href="/posts/kimi-for-coding-403/">Kimi for Coding：403 与冷启动</a></h2>
     <p class="excerpt">白名单限制与冷启动排查</p>
   </article>
 </li></ol>

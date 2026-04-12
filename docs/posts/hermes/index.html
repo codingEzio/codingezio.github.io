@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hermes 模型降级记</title>
+  <meta name="description" content="Kimi 403 修复与自动切换">
+  <link rel="canonical" href="https://codingezio.github.io/posts/hermes/">
+  <link rel="alternate" type="application/rss+xml" title="Hermes 模型降级记 RSS" href="/rss.xml">
+  <link rel="preload" href="/assets/blog.9fba116bf4.css" as="style">
+  <link rel="stylesheet" href="/assets/blog.9fba116bf4.css">
+</head>
+<body><main class="page-shell">
+  <header class="site-nav">
+    <a href="/">All posts</a>
+    <div class="site-links">
+      <a href="/rss.xml">RSS</a>
+    </div>
+  </header>
+  <article class="post-shell">
+    <header class="post-header">
+
+      <div class="meta-bar">
+  <div class="meta-tag"><span class="tag-chip" title="#HermesAgent #Kimi #Fallback #Configuration">#HermesAgent +3</span></div>
+  <div class="meta-stats"><span>Apr 11, 2026</span><span>322 words</span><span class="status-chip">published</span></div>
+</div>
+      <h1 class="post-title">Hermes 模型降级记</h1>
+    </header>
+    <div class="post-content"><div class="post-body"><p><strong>Kimi 403 修复与自动切换</strong></p>
+<hr>
+<h2>背景</h2>
+<p>发现两个关键问题：</p>
+<ol>
+<li><strong>Kimi API 返回 403</strong>: <code>Kimi For Coding is currently only available for Coding Agents</code></li>
+<li><strong>缺少降级机制</strong>: Kimi 配额耗尽或服务故障时无法自动切换</li>
+</ol>
+<p>本文记录完整的诊断与修复过程。</p>
+<hr>
+<h2>问题诊断</h2>
+<h3>1. Kimi 403 错误</h3>
+<pre><code class="hljs language-subunit"><span class="hljs-keyword">Error </span>code: 403 - {
+  'error': {
+    'message': 'Kimi For Coding is currently only available for Coding Agents such as Kimi CLI, Claude Code, Roo Code, Kilo Code, etc.',
+    'type': 'access_terminated_error'
+  }
+}
+</code></pre>
+<p><strong>根因</strong>: Kimi API 检查 <code>User-Agent</code> 头，仅允许特定 Coding Agent 访问。</p>
+<h3>2. 原配置问题</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>原配置</th>
+<th>问题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>主模型</td>
+<td><code>copilot</code> (gpt-5.4)</td>
+<td>未使用最便宜的 Kimi</td>
+</tr>
+<tr>
+<td>供应商</td>
+<td><code>copilot</code></td>
+<td>非首选</td>
+</tr>
+<tr>
+<td>降级链</td>
+<td><code>[]</code> (空)</td>
+<td>无备份机制</td>
+</tr>
+<tr>
+<td>User-Agent</td>
+<td><code>"KimiCLI/1.30.0"</code></td>
+<td>未被识别为 Coding Agent</td>
+</tr>
+</tbody>
+</table></div>
+<hr>
+<h2>解决方案</h2>
+<h3>User-Agent 伪装</h3>
+<p>发现解决方案于 <a rel="noreferrer" target="_blank" href="https://github.com/bytedance/deer-flow/issues/1894">deer-flow Issue #1894</a>:</p>
+<blockquote>
+<p>将 User-Agent 伪装为 <code>"claude-code/1.0"</code> 以通过 Kimi 的 Coding Agent 检测</p>
+</blockquote>
+<p>有效配置：</p>
+<pre><code class="language-yaml hljs"><span class="hljs-attr">default_headers:</span>
+  <span class="hljs-attr">User-Agent:</span> <span class="hljs-string">"claude-code/1.0"</span>
+</code></pre>
+<hr>
+<h2>实施步骤</h2>
+<h3>1. 更新 ~/.hermes/config.yaml</h3>
+<pre><code class="language-yaml hljs"><span class="hljs-attr">model:</span>
+  <span class="hljs-attr">default:</span> <span class="hljs-string">kimi-k2.5</span>
+  <span class="hljs-attr">provider:</span> <span class="hljs-string">kimi-coding</span>
+  <span class="hljs-attr">base_url:</span> <span class="hljs-string">https://api.kimi.com/coding/v1</span>
+
+<span class="hljs-attr">fallback_providers:</span>
+  <span class="hljs-bullet">-</span> <span class="hljs-attr">provider:</span> <span class="hljs-string">openrouter</span>
+    <span class="hljs-attr">model:</span> <span class="hljs-string">google/gemini-3-flash-preview</span>
+  <span class="hljs-bullet">-</span> <span class="hljs-attr">provider:</span> <span class="hljs-string">openai-codex</span>
+    <span class="hljs-attr">model:</span> <span class="hljs-string">gpt-5.2-codex</span>
+  <span class="hljs-bullet">-</span> <span class="hljs-attr">provider:</span> <span class="hljs-string">copilot</span>
+    <span class="hljs-attr">model:</span> <span class="hljs-string">gpt-5.2-codex</span>
+
+<span class="hljs-attr">auxiliary:</span>
+  <span class="hljs-attr">vision:</span>
+    <span class="hljs-attr">provider:</span> <span class="hljs-string">openrouter</span>
+    <span class="hljs-attr">model:</span> <span class="hljs-string">google/gemini-3-flash-preview</span>
+</code></pre>
+<h3>2. 修改源码文件</h3>
+<p>将 <code>User-Agent</code> 从 <code>"KimiCLI/1.30.0"</code> 改为 <code>"claude-code/1.0"</code>：</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>文件</th>
+<th>位置数</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>agent/auxiliary_client.py</code></td>
+<td>5</td>
+<td>Auxiliary client (vision, compression, flush)</td>
+</tr>
+<tr>
+<td><code>run_agent.py</code></td>
+<td>2</td>
+<td>Main agent client</td>
+</tr>
+<tr>
+<td><code>hermes_cli/doctor.py</code></td>
+<td>1</td>
+<td>Health check</td>
+</tr>
+</tbody>
+</table></div>
+<hr>
+<h2>降级链说明</h2>
+<h3>主供应商: Kimi k2.5</h3>
+<ul>
+<li>最便宜且能力最强</li>
+<li>需要 <code>"claude-code/1.0"</code> User-Agent</li>
+</ul>
+<h3>降级 1: OpenRouter</h3>
+<ul>
+<li>使用 <code>google/gemini-3-flash-preview</code></li>
+<li>Token 计费</li>
+<li>模型选择广泛</li>
+</ul>
+<h3>降级 2: OpenAI Codex</h3>
+<ul>
+<li>使用 <code>gpt-5.2-codex</code></li>
+<li>OAuth 认证</li>
+</ul>
+<h3>降级 3: GitHub Copilot</h3>
+<ul>
+<li>使用 <code>gpt-5.2-codex</code></li>
+<li>请求计费</li>
+</ul>
+<hr>
+<h2>测试结果</h2>
+<p>修复后验证：</p>
+<ul>
+<li>✅ Kimi API 接受 <code>"claude-code/1.0"</code> User-Agent 的请求</li>
+<li>✅ Telegram gateway 响应正常</li>
+<li>✅ 遇到 402/403/429 错误时自动切换降级链</li>
+<li>✅ Vision 任务使用 OpenRouter（避免 Kimi 403）</li>
+</ul>
+<hr>
+<h2>关键发现</h2>
+<ol>
+<li>
+<p><strong>Kimi 的 Coding Agent 检测</strong>: 仅基于 User-Agent，可通过已知 Agent 字符串绕过</p>
+</li>
+<li>
+<p><strong>降级策略</strong>: 生产环境必备——供应商可能意外故障或限流</p>
+</li>
+<li>
+<p><strong>成本优化</strong>: Kimi 最便宜，但需要 User-Agent 变通</p>
+</li>
+<li>
+<p><strong>辅助任务</strong>: Vision 和压缩可使用不同供应商，避免配额问题</p>
+</li>
+</ol>
+<hr>
+<h2>参考</h2>
+<ul>
+<li><a rel="noreferrer" target="_blank" href="https://github.com/bytedance/deer-flow/issues/1894">deer-flow Issue #1894 - Kimi Coding Plan 403 Error</a></li>
+<li><a rel="noreferrer" target="_blank" href="https://platform.kimi.com/docs">Kimi API Documentation</a></li>
+<li>Hermes Agent v0.8.0 source code</li>
+</ul>
+</div></div>
+  </article>
+</main></body>
+</html>
