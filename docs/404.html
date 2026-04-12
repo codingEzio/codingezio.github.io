@@ -6,6 +6,9 @@
   <title>Posts · Not found</title>
   <meta name="description" content="Return to the published posts list.">
   <meta name="theme-color" content="#f6efe4">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Source+Serif+4:wght@400;500;600;700&display=swap">
   <meta property="og:title" content="Posts · Not found">
   <meta property="og:description" content="Return to the published posts list.">
   <meta property="og:type" content="article">
@@ -30,8 +33,8 @@
   }
 })();
 </script>
-  <link rel="preload" href="/assets/blog.ade89a59dd.css" as="style">
-  <link rel="stylesheet" href="/assets/blog.ade89a59dd.css">
+  <link rel="preload" href="/assets/blog.c1f48670cc.css" as="style">
+  <link rel="stylesheet" href="/assets/blog.c1f48670cc.css">
 </head>
 <body class="page page--not-found" data-page-kind="not-found"><main class="page-shell">
   <div class="redirect-shell">
@@ -64,9 +67,17 @@
   const aliases = { paper: 'poster', list: 'rail' };
   const allowed = new Set(['rail', 'poster', 'editorial', 'midnight']);
   const systemSchemeQuery = window.matchMedia('(prefers-color-scheme: dark)');
-  let themePulseTimer = 0;
+  const runViewTransition = (mutate) => {
+    if (typeof doc.startViewTransition === 'function') {
+      doc.startViewTransition(() => {
+        mutate();
+      });
+      return;
+    }
+    mutate();
+  };
 
-  const isMobileSheet = () => window.matchMedia('(max-width: 720px)').matches;
+  const isMobileSheet = () => window.matchMedia('(max-width: 860px)').matches;
   const getOpenPopovers = () => Array.from(doc.querySelectorAll('[data-popover-root][data-open="true"]'));
   const getPopoverParts = (rootElement) => {
     const owner = rootElement.dataset.popoverName || '';
@@ -105,41 +116,46 @@
       button.setAttribute('aria-pressed', String(button.getAttribute('data-scheme-value') === activeScheme));
     });
     const activeThemeButton = doc.querySelector('[data-theme-value="' + activeAppearance + '"]');
-    doc.querySelectorAll('[data-theme-label]').forEach((label) => {
+    doc.querySelectorAll('[data-active-theme-label]').forEach((label) => {
       label.textContent = activeThemeButton?.getAttribute('data-theme-label') || '轨道';
     });
   }
 
-  function pulseThemeShift() {
-    body.dataset.themeSwitch = 'true';
-    window.clearTimeout(themePulseTimer);
-    themePulseTimer = window.setTimeout(() => {
-      delete body.dataset.themeSwitch;
-    }, 260);
-  }
-
   function setAppearance(value) {
     const normalized = normalizeAppearance(value);
-    root.dataset.appearance = normalized;
-    window.localStorage.setItem(appearanceKey, normalized);
-    pulseThemeShift();
-    updateThemeButtons();
-    getOpenPopovers().forEach((node) => positionPopover(node));
+    if (normalized === normalizeAppearance(root.dataset.appearance)) {
+      closeAllPopovers();
+      updateThemeButtons();
+      return;
+    }
+    runViewTransition(() => {
+      root.dataset.appearance = normalized;
+      window.localStorage.setItem(appearanceKey, normalized);
+      closeAllPopovers();
+      updateThemeButtons();
+    });
   }
 
   function setScheme(value) {
-    if (value === 'auto') {
-      root.dataset.colorScheme = systemSchemeQuery.matches ? 'dark' : 'light';
-      root.dataset.colorSchemeMode = 'auto';
-      window.localStorage.removeItem(schemeKey);
-    } else {
-      root.dataset.colorScheme = value;
-      root.dataset.colorSchemeMode = value;
-      window.localStorage.setItem(schemeKey, value);
+    const nextMode = value === 'auto' ? 'auto' : value;
+    if ((root.dataset.colorSchemeMode || 'auto') === nextMode) {
+      closeAllPopovers();
+      updateThemeButtons();
+      return;
     }
-    pulseThemeShift();
-    updateThemeButtons();
-    getOpenPopovers().forEach((node) => positionPopover(node));
+    runViewTransition(() => {
+      if (value === 'auto') {
+        root.dataset.colorScheme = systemSchemeQuery.matches ? 'dark' : 'light';
+        root.dataset.colorSchemeMode = 'auto';
+        window.localStorage.removeItem(schemeKey);
+      } else {
+        root.dataset.colorScheme = value;
+        root.dataset.colorSchemeMode = value;
+        window.localStorage.setItem(schemeKey, value);
+      }
+      closeAllPopovers();
+      updateThemeButtons();
+    });
   }
 
   function clearPanelPosition(panel) {
@@ -196,7 +212,7 @@
     if (isMobileSheet()) {
       rootElement.dataset.mode = 'sheet';
       panel.dataset.popoverMode = 'sheet';
-      panel.style.maxHeight = Math.floor(window.innerHeight * 0.72) + 'px';
+      panel.style.maxHeight = Math.floor(window.innerHeight * 0.68) + 'px';
       syncOverlayState();
       return;
     }

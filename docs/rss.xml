@@ -4,27 +4,20 @@
   <title>Posts</title>
   <link>https://codingezio.github.io/</link>
   <description>Compact published notes.</description>
-  <lastBuildDate>Sun, 12 Apr 2026 13:45:58 GMT</lastBuildDate>
+  <lastBuildDate>Sun, 12 Apr 2026 17:23:51 GMT</lastBuildDate>
 <item>
-  <title>Hermes Agent Cron 调度深潜</title>
-  <link>https://codingezio.github.io/posts/hermes-agent-cron/</link>
-  <guid>https://codingezio.github.io/posts/hermes-agent-cron/</guid>
+  <title>Hermes tools</title>
+  <link>https://codingezio.github.io/posts/hermes-tools/</link>
+  <guid>https://codingezio.github.io/posts/hermes-tools/</guid>
   <pubDate>Fri, 10 Apr 2026 16:00:00 GMT</pubDate>
-  <description>提醒机制的可靠性与边界</description>
+  <description>只记会碰到的外部东西；常用工作台本就有，多半不用重装。</description>
 </item>
 <item>
-  <title>Hermes AI 工具链配置指南</title>
-  <link>https://codingezio.github.io/posts/hermes-ai/</link>
-  <guid>https://codingezio.github.io/posts/hermes-ai/</guid>
-  <pubDate>Fri, 10 Apr 2026 16:00:00 GMT</pubDate>
-  <description>常用外部依赖与复现线索</description>
-</item>
-<item>
-  <title>Kimi for Coding：403 伪装与 fallback</title>
+  <title>Kimi 403 与 fallback</title>
   <link>https://codingezio.github.io/posts/hermes-with-kimi2dot5/</link>
   <guid>https://codingezio.github.io/posts/hermes-with-kimi2dot5/</guid>
   <pubDate>Fri, 10 Apr 2026 16:00:00 GMT</pubDate>
-  <description>把 User-Agent 与 fallback 链一次配好，Kimi 才能稳定接入。</description>
+  <description>只记能稳定接上的那几项。</description>
 </item>
 </channel>
 </rss>
