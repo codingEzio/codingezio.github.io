@@ -13,28 +13,41 @@
   <link rel="canonical" href="https://codingezio.github.io/posts/hermes-agent-cron/">
   <link rel="alternate" type="application/rss+xml" title="Hermes Agent Cron 调度深潜 RSS" href="/rss.xml">
   <script>
-  const storedBlogAppearance = window.localStorage.getItem("blog-appearance-mode");
-  if (storedBlogAppearance) document.documentElement.dataset.appearance = storedBlogAppearance;
-  const storedBlogColorScheme = window.localStorage.getItem("blog-color-scheme");
-  if (storedBlogColorScheme && storedBlogColorScheme !== "auto") document.documentElement.dataset.colorScheme = storedBlogColorScheme;
+(() => {
+  const root = document.documentElement;
+  const aliases = { paper: 'poster', list: 'rail' };
+  const allowed = new Set(['rail', 'poster', 'editorial', 'midnight']);
+  const storedAppearance = window.localStorage.getItem('blog-appearance-mode');
+  const normalizedAppearance = aliases[storedAppearance ?? ''] ?? storedAppearance ?? root.dataset.appearance ?? 'rail';
+  root.dataset.appearance = allowed.has(normalizedAppearance) ? normalizedAppearance : 'rail';
+  const storedScheme = window.localStorage.getItem('blog-color-scheme');
+  if (storedScheme === 'light' || storedScheme === 'dark') {
+    root.dataset.colorScheme = storedScheme;
+    root.dataset.colorSchemeMode = storedScheme;
+  } else {
+    root.dataset.colorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    root.dataset.colorSchemeMode = 'auto';
+  }
+})();
 </script>
-  <link rel="preload" href="/assets/blog.02c8da217f.css" as="style">
-  <link rel="stylesheet" href="/assets/blog.02c8da217f.css">
+  <link rel="preload" href="/assets/blog.ade89a59dd.css" as="style">
+  <link rel="stylesheet" href="/assets/blog.ade89a59dd.css">
 </head>
-<body><main class="page-shell">
+<body class="page page--post" data-page-kind="post"><main class="page-shell page-shell--post">
   <header class="site-nav">
     <a class="site-title site-home-link" href="/">Posts</a>
-    <div class="site-links">
-      <div class="popover-root toolbar-popover" data-popover-root>
-  <button class="toolbar-button" type="button" data-popover-trigger aria-expanded="false" aria-haspopup="dialog">
-    <span data-theme-label>纸感</span>
+    <div class="site-tools">
+      <a class="toolbar-link" href="/rss.xml">RSS</a>
+      <div class="popover-root toolbar-popover" data-popover-root data-popover-name="theme">
+  <button class="toolbar-button" type="button" data-popover-trigger data-popover-target="theme" aria-expanded="false" aria-haspopup="dialog">
+    <span data-theme-label>轨道</span>
   </button>
   <div class="popover-panel theme-popover" data-popover-panel hidden>
     <div class="appearance-grid">
-      <button class="theme-option" type="button" data-theme-value="paper" data-theme-label="纸感" aria-pressed="false">纸感</button>
-      <button class="theme-option" type="button" data-theme-value="list" data-theme-label="清单" aria-pressed="false">清单</button>
+      <button class="theme-option" type="button" data-theme-value="rail" data-theme-label="轨道" aria-pressed="false">轨道</button>
+      <button class="theme-option" type="button" data-theme-value="poster" data-theme-label="海报" aria-pressed="false">海报</button>
       <button class="theme-option" type="button" data-theme-value="editorial" data-theme-label="杂志" aria-pressed="false">杂志</button>
-      <button class="theme-option" type="button" data-theme-value="midnight" data-theme-label="夜色" aria-pressed="false">夜色</button>
+      <button class="theme-option" type="button" data-theme-value="midnight" data-theme-label="夜游" aria-pressed="false">夜游</button>
     </div>
     <div class="scheme-grid">
       <button class="theme-option theme-option--scheme" type="button" data-scheme-value="auto" aria-pressed="false">自动</button>
@@ -43,24 +56,31 @@
     </div>
   </div>
 </div>
-      <a class="toolbar-link" href="/rss.xml">RSS</a>
     </div>
   </header>
   <article class="post-shell">
-    <header class="post-header">
-
-      <div class="meta-bar">
-  <div class="meta-tag"><div class="popover-root tag-menu" data-popover-root>
-  <button class="tag-chip tag-trigger" type="button" data-popover-trigger aria-expanded="false" aria-haspopup="dialog">#HermesAgent +3</button>
+    <header class="post-hero">
+      <div class="post-kicker-row">
+        <a class="post-home-link" href="/">Index</a>
+        <div class="post-mini-meta">
+  <span class="post-date">2026.04.11</span>
+  <div class="popover-root tag-menu" data-popover-root data-popover-name="tags">
+  <button class="tag-chip tag-trigger" type="button" data-popover-trigger data-popover-target="tags" aria-expanded="false" aria-haspopup="dialog">#HermesAgent +3</button>
   <div class="popover-panel tag-popover" data-popover-panel hidden>
     <div class="tag-list" aria-label="#HermesAgent #Cron #AI #Scheduler"><span class="tag-pill">#HermesAgent</span><span class="tag-pill">#Cron</span><span class="tag-pill">#AI</span><span class="tag-pill">#Scheduler</span></div>
   </div>
-</div></div>
-  <div class="meta-stats"><span>2026.04.11</span><span>615词</span></div>
 </div>
-      <h1 class="post-title">Hermes Agent Cron 调度深潜</h1>
+</div>
+      </div>
+      <div class="post-hero-copy">
+        <p class="post-order">01</p>
+        <h1 class="post-title">Hermes Agent Cron 调度深潜</h1>
+        <p class="post-deck">提醒机制的可靠性与边界</p>
+      </div>
+
     </header>
-    <div class="post-content"><div class="post-body"><p><strong>提醒机制的可靠性与边界</strong></p>
+    <div class="post-frame">
+      <div class="post-content"><div class="post-body"><p><strong>提醒机制的可靠性与边界</strong></p>
 <hr>
 <h2>背景</h2>
 <p>当 AI 助手声称"会提醒你"时，程序员的第一反应通常是：这东西靠谱吗？</p>
@@ -446,50 +466,132 @@ hermes cron create <span class="hljs-string">"0 8 * * *"</span> <span class="hlj
 </tbody>
 </table></div>
 </div></div>
+    </div>
   </article>
-</main><script>
+</main><div class="page-scrim" data-page-scrim hidden></div><script>
 (() => {
-  const appearanceKey = "blog-appearance-mode";
-  const schemeKey = "blog-color-scheme";
+  const appearanceKey = 'blog-appearance-mode';
+  const schemeKey = 'blog-color-scheme';
   const root = document.documentElement;
   const doc = document;
-
-  const getOpenPopovers = () => Array.from(doc.querySelectorAll('[data-popover-root][data-open="true"]'));
-  const getPopoverParts = (rootElement) => ({
-    trigger: rootElement.querySelector('[data-popover-trigger]'),
-    panel: rootElement.querySelector('[data-popover-panel]'),
+  const body = doc.body;
+  const scrim = doc.querySelector('[data-page-scrim]');
+  let portalLayer = doc.querySelector('[data-popover-layer]');
+  if (!(portalLayer instanceof HTMLElement)) {
+    portalLayer = doc.createElement('div');
+    portalLayer.className = 'popover-layer';
+    portalLayer.setAttribute('data-popover-layer', '');
+    body.appendChild(portalLayer);
+  }
+  doc.querySelectorAll('[data-popover-root]').forEach((rootElement) => {
+    if (!(rootElement instanceof HTMLElement)) return;
+    const panel = rootElement.querySelector('[data-popover-panel]');
+    const name = rootElement.dataset.popoverName || '';
+    if (panel instanceof HTMLElement && name) {
+      panel.dataset.popoverPanelOwner = name;
+    }
   });
+  const aliases = { paper: 'poster', list: 'rail' };
+  const allowed = new Set(['rail', 'poster', 'editorial', 'midnight']);
+  const systemSchemeQuery = window.matchMedia('(prefers-color-scheme: dark)');
+  let themePulseTimer = 0;
+
+  const isMobileSheet = () => window.matchMedia('(max-width: 720px)').matches;
+  const getOpenPopovers = () => Array.from(doc.querySelectorAll('[data-popover-root][data-open="true"]'));
+  const getPopoverParts = (rootElement) => {
+    const owner = rootElement.dataset.popoverName || '';
+    return {
+      trigger: rootElement.querySelector('[data-popover-trigger]'),
+      panel: owner
+        ? doc.querySelector('[data-popover-panel-owner="' + owner + '"]')
+        : rootElement.querySelector('[data-popover-panel]'),
+    };
+  };
+
+  function normalizeAppearance(value) {
+    const normalized = aliases[value ?? ''] ?? value ?? 'rail';
+    return allowed.has(normalized) ? normalized : 'rail';
+  }
+
+  function syncOverlayState() {
+    const active = isMobileSheet() && getOpenPopovers().length > 0;
+    if (active) {
+      body.dataset.overlayOpen = 'true';
+    } else {
+      delete body.dataset.overlayOpen;
+    }
+    if (scrim instanceof HTMLElement) {
+      scrim.hidden = !active;
+    }
+  }
 
   function updateThemeButtons() {
-    const activeAppearance = root.dataset.appearance || "paper";
-    const activeScheme = root.dataset.colorScheme || "auto";
+    const activeAppearance = normalizeAppearance(root.dataset.appearance);
+    const activeScheme = root.dataset.colorSchemeMode || 'auto';
     doc.querySelectorAll('[data-theme-value]').forEach((button) => {
       button.setAttribute('aria-pressed', String(button.getAttribute('data-theme-value') === activeAppearance));
     });
     doc.querySelectorAll('[data-scheme-value]').forEach((button) => {
       button.setAttribute('aria-pressed', String(button.getAttribute('data-scheme-value') === activeScheme));
     });
-    const activeThemeButton = doc.querySelector(`[data-theme-value="${activeAppearance}"]`);
+    const activeThemeButton = doc.querySelector('[data-theme-value="' + activeAppearance + '"]');
     doc.querySelectorAll('[data-theme-label]').forEach((label) => {
-      label.textContent = activeThemeButton?.getAttribute('data-theme-label') || '纸感';
+      label.textContent = activeThemeButton?.getAttribute('data-theme-label') || '轨道';
     });
   }
 
+  function pulseThemeShift() {
+    body.dataset.themeSwitch = 'true';
+    window.clearTimeout(themePulseTimer);
+    themePulseTimer = window.setTimeout(() => {
+      delete body.dataset.themeSwitch;
+    }, 260);
+  }
+
   function setAppearance(value) {
-    root.dataset.appearance = value;
-    window.localStorage.setItem(appearanceKey, value);
+    const normalized = normalizeAppearance(value);
+    root.dataset.appearance = normalized;
+    window.localStorage.setItem(appearanceKey, normalized);
+    pulseThemeShift();
     updateThemeButtons();
+    getOpenPopovers().forEach((node) => positionPopover(node));
   }
 
   function setScheme(value) {
     if (value === 'auto') {
-      delete root.dataset.colorScheme;
+      root.dataset.colorScheme = systemSchemeQuery.matches ? 'dark' : 'light';
+      root.dataset.colorSchemeMode = 'auto';
       window.localStorage.removeItem(schemeKey);
     } else {
       root.dataset.colorScheme = value;
+      root.dataset.colorSchemeMode = value;
       window.localStorage.setItem(schemeKey, value);
     }
+    pulseThemeShift();
     updateThemeButtons();
+    getOpenPopovers().forEach((node) => positionPopover(node));
+  }
+
+  function clearPanelPosition(panel) {
+    panel.style.left = '';
+    panel.style.top = '';
+    panel.style.right = '';
+    panel.style.bottom = '';
+    panel.style.maxHeight = '';
+  }
+
+  function movePanelIntoLayer(panel) {
+    if (portalLayer instanceof HTMLElement && panel.parentElement !== portalLayer) {
+      portalLayer.appendChild(panel);
+    }
+  }
+
+  function restorePanel(rootElement, panel) {
+    if (panel.parentElement !== rootElement) {
+      rootElement.appendChild(panel);
+    }
+    delete panel.dataset.open;
+    delete panel.dataset.popoverMode;
   }
 
   function closePopover(rootElement) {
@@ -497,50 +599,86 @@ hermes cron create <span class="hljs-string">"0 8 * * *"</span> <span class="hlj
     const { trigger, panel } = getPopoverParts(rootElement);
     if (!(trigger instanceof HTMLElement) || !(panel instanceof HTMLElement)) return;
     rootElement.dataset.open = 'false';
+    delete rootElement.dataset.mode;
     trigger.setAttribute('aria-expanded', 'false');
+    clearPanelPosition(panel);
     panel.hidden = true;
+    restorePanel(rootElement, panel);
+    syncOverlayState();
+  }
+
+  function closeAllPopovers(exceptElement) {
+    getOpenPopovers().forEach((node) => {
+      if (!exceptElement || node !== exceptElement) {
+        closePopover(node);
+      }
+    });
   }
 
   function positionPopover(rootElement) {
     if (!(rootElement instanceof HTMLElement)) return;
     const { trigger, panel } = getPopoverParts(rootElement);
     if (!(trigger instanceof HTMLElement) || !(panel instanceof HTMLElement)) return;
+    movePanelIntoLayer(panel);
     panel.hidden = false;
+    panel.dataset.open = 'true';
+    clearPanelPosition(panel);
+    if (isMobileSheet()) {
+      rootElement.dataset.mode = 'sheet';
+      panel.dataset.popoverMode = 'sheet';
+      panel.style.maxHeight = Math.floor(window.innerHeight * 0.72) + 'px';
+      syncOverlayState();
+      return;
+    }
+    rootElement.dataset.mode = 'popover';
+    panel.dataset.popoverMode = 'popover';
     const viewportPadding = 12;
     const gap = 10;
+    const maxHeight = Math.max(180, window.innerHeight - viewportPadding * 2);
+    panel.style.maxHeight = maxHeight + 'px';
     const triggerRect = trigger.getBoundingClientRect();
     const panelRect = panel.getBoundingClientRect();
+    const panelWidth = Math.max(panel.offsetWidth, panel.clientWidth, panelRect.width);
+    const panelHeight = Math.max(panel.offsetHeight, panel.clientHeight, panelRect.height);
     let left = triggerRect.left;
-    if (left + panelRect.width > window.innerWidth - viewportPadding) {
-      left = window.innerWidth - viewportPadding - panelRect.width;
+    if (left + panelWidth > window.innerWidth - viewportPadding) {
+      left = window.innerWidth - viewportPadding - panelWidth;
     }
     if (left < viewportPadding) {
       left = viewportPadding;
     }
     let top = triggerRect.bottom + gap;
-    if (top + panelRect.height > window.innerHeight - viewportPadding) {
-      top = Math.max(viewportPadding, triggerRect.top - panelRect.height - gap);
+    if (top + panelHeight > window.innerHeight - viewportPadding) {
+      top = Math.max(viewportPadding, triggerRect.top - panelHeight - gap);
     }
-    panel.style.left = `${Math.round(left)}px`;
-    panel.style.top = `${Math.round(top)}px`;
+    if (top < viewportPadding) {
+      top = viewportPadding;
+    }
+    panel.style.left = Math.round(left) + 'px';
+    panel.style.top = Math.round(top) + 'px';
+    syncOverlayState();
   }
 
   function openPopover(rootElement) {
     if (!(rootElement instanceof HTMLElement)) return;
-    getOpenPopovers().forEach((node) => {
-      if (node !== rootElement) closePopover(node);
-    });
     const { trigger, panel } = getPopoverParts(rootElement);
     if (!(trigger instanceof HTMLElement) || !(panel instanceof HTMLElement)) return;
+    closeAllPopovers(rootElement);
     rootElement.dataset.open = 'true';
     trigger.setAttribute('aria-expanded', 'true');
     panel.hidden = false;
     positionPopover(rootElement);
+    window.requestAnimationFrame(() => positionPopover(rootElement));
   }
 
   doc.addEventListener('click', (event) => {
     const target = event.target instanceof Element ? event.target : null;
     if (!target) return;
+
+    if (scrim instanceof HTMLElement && target === scrim) {
+      closeAllPopovers();
+      return;
+    }
 
     const appearanceButton = target.closest('[data-theme-value]');
     if (appearanceButton instanceof HTMLElement) {
@@ -572,28 +710,35 @@ hermes cron create <span class="hljs-string">"0 8 * * *"</span> <span class="hlj
     }
 
     if (!target.closest('[data-popover-panel]')) {
-      getOpenPopovers().forEach((node) => closePopover(node));
+      closeAllPopovers();
     }
   });
 
   doc.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') {
-      getOpenPopovers().forEach((node) => closePopover(node));
+      closeAllPopovers();
     }
   });
 
   window.addEventListener('resize', () => {
     getOpenPopovers().forEach((node) => positionPopover(node));
+    syncOverlayState();
   }, { passive: true });
 
   window.addEventListener('scroll', () => {
+    if (isMobileSheet()) return;
     getOpenPopovers().forEach((node) => positionPopover(node));
   }, { passive: true, capture: true });
 
-  if (!root.dataset.appearance) {
-    root.dataset.appearance = 'paper';
-  }
+  systemSchemeQuery.addEventListener('change', () => {
+    if ((root.dataset.colorSchemeMode || 'auto') !== 'auto') return;
+    root.dataset.colorScheme = systemSchemeQuery.matches ? 'dark' : 'light';
+    updateThemeButtons();
+  });
+
+  root.dataset.appearance = normalizeAppearance(root.dataset.appearance || window.localStorage.getItem(appearanceKey) || 'rail');
   updateThemeButtons();
+  syncOverlayState();
 })();
 </script></body>
 </html>
