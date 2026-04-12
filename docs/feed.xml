@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+  <title>Blog</title>
+  <link>https://codingezio.github.io/index.html</link>
+  <description>Published posts</description>
+  <lastBuildDate>Sun, 12 Apr 2026 09:17:33 GMT</lastBuildDate>
+<item>
+  <title>Hermes Agent Cron 调度深潜</title>
+  <link>https://codingezio.github.io/2026-04-11-hermes-agent-cron.html</link>
+  <guid>https://codingezio.github.io/2026-04-11-hermes-agent-cron.html</guid>
+  <pubDate>Fri, 10 Apr 2026 16:00:00 GMT</pubDate>
+  <description>提醒机制的可靠性与边界</description>
+</item>
+<item>
+  <title>Hermes AI 工具链配置指南</title>
+  <link>https://codingezio.github.io/2026-04-11-hermes-ai.html</link>
+  <guid>https://codingezio.github.io/2026-04-11-hermes-ai.html</guid>
+  <pubDate>Fri, 10 Apr 2026 16:00:00 GMT</pubDate>
+  <description>常用外部依赖与复现线索</description>
+</item>
+<item>
+  <title>Hermes 模型降级记</title>
+  <link>https://codingezio.github.io/2026-04-11-hermes.html</link>
+  <guid>https://codingezio.github.io/2026-04-11-hermes.html</guid>
+  <pubDate>Fri, 10 Apr 2026 16:00:00 GMT</pubDate>
+  <description>Kimi 403 修复与自动切换</description>
+</item>
+<item>
+  <title>Kimi for Coding：403 与冷启动</title>
+  <link>https://codingezio.github.io/2026-04-11-kimi-for-coding-403.html</link>
+  <guid>https://codingezio.github.io/2026-04-11-kimi-for-coding-403.html</guid>
+  <pubDate>Fri, 10 Apr 2026 16:00:00 GMT</pubDate>
+  <description>白名单限制与冷启动排查</description>
+</item>
+</channel>
+</rss>

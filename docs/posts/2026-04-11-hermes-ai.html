@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Blog</title>
-  <meta name="description" content="Published posts">
-  <link rel="canonical" href="https://codingezio.github.io/index.html">
+  <title>Hermes AI 工具链配置指南</title>
+  <meta name="description" content="常用外部依赖与复现线索">
+  <link rel="canonical" href="https://codingezio.github.io/2026-04-11-hermes-ai.html">
   <style>:root {
   color-scheme: light dark;
   --blog-font-chrome: "Inter", "Segoe UI Variable Text", "Segoe UI", "SF Pro Text", "Helvetica Neue", "Arial", "Inter", "Segoe UI Variable Text", "Segoe UI", "SF Pro Text", "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
@@ -133,51 +133,215 @@ a:hover { text-decoration: underline; }
 </head>
 <body><main class="page-shell">
   <header class="site-nav">
-    <h1 class="site-title">Blog</h1>
+    <a href="../index.html">Back</a>
     <div class="site-links">
-      <a href="feed.xml">RSS</a>
-      <span>4 posts</span>
+      <a href="../feed.xml">RSS</a>
+      <a href="../2026-04-11-hermes-ai.html">Alias</a>
     </div>
   </header>
-  <ol class="post-list"><li>
-  <article class="post-card">
-    <div class="meta-bar">
-  <div class="meta-tag"><span class="tag-chip" title="#HermesAgent #Cron #AI #Scheduler">#HermesAgent +3</span></div>
-  <div class="meta-stats"><span>Apr 11, 2026</span><span>615 words</span><span class="status-chip">published</span></div>
-</div>
-    <h2 class="card-title"><a href="posts/2026-04-11-hermes-agent-cron.html">Hermes Agent Cron 调度深潜</a></h2>
-    <p class="excerpt">提醒机制的可靠性与边界</p>
-  </article>
-</li>
-<li>
-  <article class="post-card">
-    <div class="meta-bar">
+  <article class="post-shell">
+    <header class="post-header">
+
+      <div class="meta-bar">
   <div class="meta-tag"><span class="tag-chip" title="#HermesAgent #AI #Tools #Setup">#HermesAgent +3</span></div>
   <div class="meta-stats"><span>Apr 11, 2026</span><span>330 words</span><span class="status-chip">published</span></div>
 </div>
-    <h2 class="card-title"><a href="posts/2026-04-11-hermes-ai.html">Hermes AI 工具链配置指南</a></h2>
-    <p class="excerpt">常用外部依赖与复现线索</p>
+      <h1 class="post-title">Hermes AI 工具链配置指南</h1>
+    </header>
+    <div class="post-content"><div class="post-body"><p><strong>常用外部依赖与复现线索</strong></p>
+<hr>
+<h2>背景</h2>
+<p>追踪让 Hermes Agent 在 macOS 上正常工作的所有外部依赖，方便新机器快速复现环境。</p>
+<hr>
+<h2>已安装组件</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>组件</th>
+<th>功用</th>
+<th>安装方法</th>
+<th>日期</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Kimi API</strong></td>
+<td>AI 模型访问</td>
+<td>Kimi For Coding App + User-Agent fix</td>
+<td>2026-04-11</td>
+</tr>
+<tr>
+<td><strong>Google Chrome</strong></td>
+<td>浏览器自动化</td>
+<td>官网下载</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>nowplaying-cli</strong></td>
+<td>全局媒体控制</td>
+<td><code>brew install nowplaying-cli</code></td>
+<td>2026-04-11</td>
+</tr>
+<tr>
+<td><strong>辅助功能权限</strong></td>
+<td>允许系统按键</td>
+<td>系统设置 → 隐私与安全</td>
+<td>2026-04-11</td>
+</tr>
+<tr>
+<td><strong>Fallback 配置</strong></td>
+<td>模型自动切换</td>
+<td>OpenRouter → Codex → Copilot</td>
+<td>2026-04-11</td>
+</tr>
+</tbody>
+</table></div>
+<hr>
+<h2>工具详解</h2>
+<h3>yt-dlp + ffmpeg</h3>
+<p><strong>yt-dlp 者，视频下载之利器也</strong>，支持 YouTube、Bilibili 等千余种站点。</p>
+<p><strong>常用场景</strong>：</p>
+<ul>
+<li><code>yt-dlp "URL"</code> → 下载视频</li>
+<li>自动调用 ffmpeg 合并音视频、转格式</li>
+<li>AI 场景：下载视频 → 转文字 → 总结内容</li>
+</ul>
+<pre><code class="language-bash hljs"><span class="hljs-comment"># 示例：下载并提取音频</span>
+yt-dlp -x --audio-format mp3 <span class="hljs-string">"URL"</span>
+</code></pre>
+<h3>imagemagick</h3>
+<p><strong>功用</strong>：</p>
+<ul>
+<li>批量压缩图片、转换格式（PNG ↔ JPG ↔ WebP）</li>
+<li>添加水印、调整尺寸</li>
+<li>AI 场景：批量处理截图，优化后上传</li>
+</ul>
+<pre><code class="language-bash hljs"><span class="hljs-comment"># 示例：压缩图片 50%</span>
+convert input.jpg -resize 50% output.jpg
+</code></pre>
+<h3>pandoc</h3>
+<p><strong>功用</strong>：</p>
+<ul>
+<li>Markdown ↔ Word ↔ PDF 互转</li>
+<li>博客导出成 DOCX 审阅</li>
+<li>AI 场景：多 Markdown 合并为 PDF 电子书</li>
+</ul>
+<pre><code class="language-bash hljs"><span class="hljs-comment"># 示例：Markdown 转 PDF</span>
+pandoc input.md -o output.pdf
+</code></pre>
+<h3>tree</h3>
+<p><strong>功用</strong>：</p>
+<ul>
+<li>生成目录结构图</li>
+<li>文档展示项目结构</li>
+<li>AI 场景：代码库分析，生成结构图</li>
+</ul>
+<pre><code class="language-bash hljs"><span class="hljs-comment"># 示例：生成前3层目录</span>
+tree -L 3 -I <span class="hljs-string">'node_modules|__pycache__'</span>
+</code></pre>
+<h3>jq</h3>
+<p><strong>功用</strong>：</p>
+<ul>
+<li>命令行处理 JSON</li>
+<li>从 API 响应提取信息</li>
+<li>AI 场景：API 数据 → 筛选 → 报告</li>
+</ul>
+<pre><code class="language-bash hljs"><span class="hljs-comment"># 示例：提取 JSON 中的 name 字段</span>
+<span class="hljs-built_in">cat</span> data.json | jq <span class="hljs-string">'.users[].name'</span>
+</code></pre>
+<hr>
+<h2>新机器快速配置</h2>
+<pre><code class="language-bash hljs"><span class="hljs-comment"># 1. Homebrew</span>
+/bin/bash -c <span class="hljs-string">"<span class="hljs-subst">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)</span>"</span>
+
+<span class="hljs-comment"># 2. 媒体控制</span>
+brew install nowplaying-cli
+
+<span class="hljs-comment"># 3. 媒体处理</span>
+brew install yt-dlp ffmpeg imagemagick
+
+<span class="hljs-comment"># 4. 文档/数据处理</span>
+brew install pandoc tree jq
+
+<span class="hljs-comment"># 5. Chrome + Kimi For Coding 手动安装</span>
+
+<span class="hljs-comment"># 6. 系统设置 → 隐私与安全 → 辅助功能 → 添加 Terminal</span>
+</code></pre>
+<hr>
+<h2>Hermes 配置</h2>
+<h3>关键配置项</h3>
+<p><strong>~/.hermes/config.yaml</strong></p>
+<pre><code class="language-yaml hljs"><span class="hljs-attr">model:</span>
+  <span class="hljs-attr">default:</span> <span class="hljs-string">kimi-k2.5</span>
+  <span class="hljs-attr">provider:</span> <span class="hljs-string">kimi-coding</span>
+  <span class="hljs-attr">base_url:</span> <span class="hljs-string">https://api.kimi.com/coding/v1</span>
+
+<span class="hljs-attr">fallback_providers:</span>
+  <span class="hljs-bullet">-</span> <span class="hljs-attr">provider:</span> <span class="hljs-string">openrouter</span>
+    <span class="hljs-attr">model:</span> <span class="hljs-string">google/gemini-3-flash-preview</span>
+  <span class="hljs-bullet">-</span> <span class="hljs-attr">provider:</span> <span class="hljs-string">openai-codex</span>
+    <span class="hljs-attr">model:</span> <span class="hljs-string">gpt-5.2-codex</span>
+  <span class="hljs-bullet">-</span> <span class="hljs-attr">provider:</span> <span class="hljs-string">copilot</span>
+    <span class="hljs-attr">model:</span> <span class="hljs-string">gpt-5.2-codex</span>
+</code></pre>
+<h3>源码修改（User-Agent 修复）</h3>
+<p>修复 Kimi 403 错误需修改以下文件：</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>文件</th>
+<th>修改位置数</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>agent/auxiliary_client.py</code></td>
+<td>5</td>
+<td>Auxiliary client (vision, compression, flush)</td>
+</tr>
+<tr>
+<td><code>run_agent.py</code></td>
+<td>2</td>
+<td>Main agent client</td>
+</tr>
+<tr>
+<td><code>hermes_cli/doctor.py</code></td>
+<td>1</td>
+<td>Health check diagnostics</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>修改内容</strong>：</p>
+<pre><code class="language-python hljs"><span class="hljs-comment"># Before</span>
+<span class="hljs-string">"User-Agent"</span>: <span class="hljs-string">"KimiCLI/1.30.0"</span>
+
+<span class="hljs-comment"># After</span>
+<span class="hljs-string">"User-Agent"</span>: <span class="hljs-string">"claude-code/1.0"</span>
+</code></pre>
+<h3>验证命令</h3>
+<pre><code class="language-bash hljs"><span class="hljs-comment"># 检查当前模型配置</span>
+hermes config show
+
+<span class="hljs-comment"># 检查 gateway 状态</span>
+hermes gateway status
+
+<span class="hljs-comment"># 重启 gateway</span>
+hermes gateway restart
+</code></pre>
+<hr>
+<h2>总结</h2>
+<p><strong>关键要点</strong>：</p>
+<ul>
+<li>Homebrew 为 macOS 包管理基础</li>
+<li>yt-dlp + ffmpeg 处理媒体下载与转码</li>
+<li>pandoc 实现文档格式转换</li>
+<li>jq 处理 JSON 数据</li>
+<li>User-Agent 修复解决 Kimi 403 错误</li>
+</ul>
+<p><strong>适用场景</strong>：macOS 上部署 Hermes Agent，需要媒体处理、文档转换能力</p>
+<p><strong>不适用场景</strong>：无需本地媒体处理，仅使用云端 API</p>
+</div></div>
   </article>
-</li>
-<li>
-  <article class="post-card">
-    <div class="meta-bar">
-  <div class="meta-tag"><span class="tag-chip" title="#HermesAgent #Kimi #Fallback #Configuration">#HermesAgent +3</span></div>
-  <div class="meta-stats"><span>Apr 11, 2026</span><span>322 words</span><span class="status-chip">published</span></div>
-</div>
-    <h2 class="card-title"><a href="posts/2026-04-11-hermes.html">Hermes 模型降级记</a></h2>
-    <p class="excerpt">Kimi 403 修复与自动切换</p>
-  </article>
-</li>
-<li>
-  <article class="post-card">
-    <div class="meta-bar">
-  <div class="meta-tag"><span class="tag-chip" title="#Kimi #API #CodingAgent #Performance">#Kimi +3</span></div>
-  <div class="meta-stats"><span>Apr 11, 2026</span><span>694 words</span><span class="status-chip">published</span></div>
-</div>
-    <h2 class="card-title"><a href="posts/2026-04-11-kimi-for-coding-403.html">Kimi for Coding：403 与冷启动</a></h2>
-    <p class="excerpt">白名单限制与冷启动排查</p>
-  </article>
-</li></ol>
 </main></body>
 </html>
