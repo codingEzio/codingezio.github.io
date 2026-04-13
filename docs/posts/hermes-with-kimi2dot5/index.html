@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kimi 403 与 fallback</title>
-  <meta name="description" content="只记能稳定接上的那几项。">
+  <title>Hermes with Kimi 2.5 (403 fix)</title>
+  <meta name="description" content="只记 Kimi 接到 Hermes 上真正要改的两处。">
   <meta name="theme-color" content="#f6efe4">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Source+Serif+4:wght@400;500;600;700&display=swap">
-  <meta property="og:title" content="Kimi 403 与 fallback">
-  <meta property="og:description" content="只记能稳定接上的那几项。">
+  <meta property="og:title" content="Hermes with Kimi 2.5 (403 fix)">
+  <meta property="og:description" content="只记 Kimi 接到 Hermes 上真正要改的两处。">
   <meta property="og:type" content="article">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://codingezio.github.io/posts/hermes-with-kimi2dot5/">
-  <link rel="alternate" type="application/rss+xml" title="Kimi 403 与 fallback RSS" href="/rss.xml">
+  <link rel="alternate" type="application/rss+xml" title="Hermes with Kimi 2.5 (403 fix) RSS" href="/rss.xml">
   <script>
 (() => {
   const root = document.documentElement;
@@ -33,8 +33,8 @@
   }
 })();
 </script>
-  <link rel="preload" href="/assets/blog.c1f48670cc.css" as="style">
-  <link rel="stylesheet" href="/assets/blog.c1f48670cc.css">
+  <link rel="preload" href="/assets/blog.dec68a477e.css" as="style">
+  <link rel="stylesheet" href="/assets/blog.dec68a477e.css">
 </head>
 <body class="page page--post" data-page-kind="post"><main class="page-shell page-shell--post">
   <header class="site-nav">
@@ -108,46 +108,29 @@
         <div class="post-mini-meta">
   <span class="post-date">2026.04.11</span>
   <div class="popover-root tag-menu" data-popover-root data-popover-name="tags">
-  <button class="tag-chip tag-trigger" type="button" data-popover-trigger data-popover-target="tags" aria-expanded="false" aria-haspopup="dialog">#4</button>
+  <button class="tag-chip tag-trigger" type="button" data-popover-trigger data-popover-target="tags" aria-expanded="false" aria-haspopup="dialog" aria-label="#HermesAgent #Kimi #Configuration">#HermesAgent +2</button>
   <div class="popover-panel tag-popover" data-popover-panel hidden>
-    <div class="tag-list" aria-label="#HermesAgent #Kimi #Fallback #Configuration"><span class="tag-pill">#HermesAgent</span><span class="tag-pill">#Kimi</span><span class="tag-pill">#Fallback</span><span class="tag-pill">#Configuration</span></div>
+    <div class="tag-list" aria-label="#HermesAgent #Kimi #Configuration"><span class="tag-pill">#HermesAgent</span><span class="tag-pill">#Kimi</span><span class="tag-pill">#Configuration</span></div>
   </div>
 </div>
 </div>
       </div>
       <div class="post-hero-copy">
-        <h1 class="post-title">Kimi 403 与 fallback</h1>
-        <p class="post-deck">只记能稳定接上的那几项。</p>
+        <h1 class="post-title">Hermes with Kimi 2.5 (403 fix)</h1>
+        <p class="post-deck">只记 Kimi 接到 Hermes 上真正要改的两处。</p>
       </div>
 
     </header>
     <div class="post-frame">
-      <div class="post-content"><div class="post-body"><p><strong>只记能稳定接上的那几项。</strong></p>
-<hr>
-<h2>背景</h2>
-<p>接 Kimi for Coding 时，最容易撞上的不是模型本身，而是这句：</p>
-<pre><code class="language-text hljs">Kimi For Coding is currently only available for Coding Agents
-</code></pre>
-<p>根因并不复杂：<strong>Kimi for Coding 会检查 <code>User-Agent</code></strong>。若请求头不像它认可的 Coding Agent，便直接回 403。</p>
-<p>所以真正要说清的只有两件事：</p>
-<ol>
-<li><strong>如何伪装成可接受的 Coding Agent</strong></li>
-<li><strong>Kimi 不可用时，fallback 链如何接手</strong></li>
-</ol>
-<hr>
-<h2>最短结论</h2>
-<p>若要让 Hermes 正常用上 Kimi for Coding，最短路径如下：</p>
+      <div class="post-content"><div class="post-body"><h2>先说结论</h2>
+<p>默认情况下，Kimi for Coding 不会把 Hermes 当成它认可的 Coding Agent。
+若直连，最常见的结果就是 403。</p>
+<p>要把它接上，真正关键的只有两处：</p>
 <ol>
 <li><code>base_url</code> 指向 <code>https://api.kimi.com/coding/v1</code></li>
-<li>请求头带上可接受的 <code>User-Agent</code></li>
-<li>同时配好 fallback，别把单一供应商当成永不失手</li>
+<li><code>default_headers</code> 里带上它能接受的 <code>User-Agent</code></li>
 </ol>
-<p>已验证可工作的请求头之一：</p>
-<pre><code class="language-yaml hljs"><span class="hljs-attr">default_headers:</span>
-  <span class="hljs-attr">User-Agent:</span> <span class="hljs-string">"claude-code/1.0"</span>
-</code></pre>
-<hr>
-<h2>配置范本</h2>
+<h2>最小配置</h2>
 <pre><code class="language-yaml hljs"><span class="hljs-attr">model:</span>
   <span class="hljs-attr">default:</span> <span class="hljs-string">kimi-k2.5</span>
   <span class="hljs-attr">provider:</span> <span class="hljs-string">kimi-coding</span>
@@ -155,96 +138,21 @@
 
 <span class="hljs-attr">default_headers:</span>
   <span class="hljs-attr">User-Agent:</span> <span class="hljs-string">"claude-code/1.0"</span>
-
-<span class="hljs-attr">fallback_providers:</span>
-  <span class="hljs-bullet">-</span> <span class="hljs-attr">provider:</span> <span class="hljs-string">openrouter</span>
-    <span class="hljs-attr">model:</span> <span class="hljs-string">google/gemini-3-flash-preview</span>
-  <span class="hljs-bullet">-</span> <span class="hljs-attr">provider:</span> <span class="hljs-string">openai-codex</span>
-    <span class="hljs-attr">model:</span> <span class="hljs-string">gpt-5.2-codex</span>
-  <span class="hljs-bullet">-</span> <span class="hljs-attr">provider:</span> <span class="hljs-string">copilot</span>
-    <span class="hljs-attr">model:</span> <span class="hljs-string">gpt-5.2-codex</span>
-
-<span class="hljs-attr">auxiliary:</span>
-  <span class="hljs-attr">vision:</span>
-    <span class="hljs-attr">provider:</span> <span class="hljs-string">openrouter</span>
-    <span class="hljs-attr">model:</span> <span class="hljs-string">google/gemini-3-flash-preview</span>
 </code></pre>
-<p>这里面真正关键者有三：</p>
-<ul>
-<li><strong>主模型</strong>：<code>kimi-k2.5</code></li>
-<li><strong>入口地址</strong>：<code>/coding/v1</code></li>
-<li><strong>请求头</strong>：<code>User-Agent: claude-code/1.0</code></li>
-</ul>
-<p>少了第三项，最容易直接 403。</p>
 <hr>
-<h2>若源码里写死了旧 User-Agent</h2>
-<p>若项目不是纯配置驱动，而是把请求头硬写在代码里，就要把旧值一起改掉。</p>
-<pre><code class="language-text hljs">Before: KimiCLI/1.30.0
-After:  claude-code/1.0
-</code></pre>
-<p>这一轮排查里，至少见过三类位置会写死它：</p>
-<div class="table-wrap"><table>
-<thead>
-<tr>
-<th>文件</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>agent/auxiliary_client.py</code></td>
-<td>vision、压缩、flush 等辅助请求</td>
-</tr>
-<tr>
-<td><code>run_agent.py</code></td>
-<td>主 Agent 请求</td>
-</tr>
-<tr>
-<td><code>hermes_cli/doctor.py</code></td>
-<td>健康检查</td>
-</tr>
-</tbody>
-</table></div>
-<hr>
-<h2>fallback 该怎么排</h2>
-<p>这条链不求花，只求稳：</p>
+<h2>这些改法是怎么知道的</h2>
+<p>线索其实来自两边：</p>
 <ol>
-<li><strong>Kimi</strong>：便宜，主打代码模型</li>
-<li><strong>OpenRouter</strong>：拿来兜底，也顺手承接 vision</li>
-<li><strong>OpenAI Codex</strong></li>
-<li><strong>GitHub Copilot</strong></li>
+<li><strong>Kimi 官方文档</strong>：能确认 Coding 接口入口就是 <code>/coding/v1</code></li>
+<li><strong>外部问题讨论</strong>：能看到 403 现象，以及 <code>User-Agent</code> 是否会影响放行</li>
 </ol>
-<p>这样配置的好处是：</p>
-<ul>
-<li>Kimi 可用时，优先吃最低成本主路</li>
-<li>Kimi 被 403、429、402 或临时抽风时，不会整条链一起断</li>
-<li>非文本任务可提前绕到别家，少踩 Kimi 的限制面</li>
-</ul>
-<hr>
-<h2>验证点</h2>
-<p>改完之后，至少看三件事：</p>
-<ol>
-<li>Kimi 请求不再报 403</li>
-<li>主链故障时，fallback 会继续出结果</li>
-<li>vision 请求没有继续误打到 Kimi 上</li>
-</ol>
-<hr>
-<h2>总结</h2>
-<p><strong>此事本质很简单</strong>：</p>
-<ul>
-<li>Kimi for Coding 不是随便一把 key 就能直连</li>
-<li><code>User-Agent</code> 过不了，便是 403</li>
-<li>伪装头配好后，还要把 fallback 一并配齐</li>
-</ul>
-<p>至于“冷启动”那一段，这里不再作为公开结论保留；眼下真正稳定可复用的，还是 <strong>403 伪装 + fallback 配置</strong> 这两件事。</p>
+<p>把这两边合起来看，就会知道这件事重点不在“模型名写没写对”，而在 <strong>入口地址 + 请求头</strong>。</p>
 <hr>
 <h2>参考</h2>
 <ul>
 <li><a rel="noreferrer" target="_blank" href="https://github.com/bytedance/deer-flow/issues/1894">deer-flow Issue #1894 - Kimi Coding Plan 403 Error</a></li>
 <li><a rel="noreferrer" target="_blank" href="https://platform.kimi.com/docs">Kimi API Documentation</a></li>
-<li>Hermes Agent v0.8.0 source code</li>
-</ul>
-</div></div>
+</ul></div></div>
     </div>
   </article>
 </main><div class="page-scrim" data-page-scrim hidden></div><script>

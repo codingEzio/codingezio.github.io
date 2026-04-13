@@ -4,20 +4,27 @@
   <title>Posts</title>
   <link>https://codingezio.github.io/</link>
   <description>Compact published notes.</description>
-  <lastBuildDate>Sun, 12 Apr 2026 17:23:51 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 13 Apr 2026 04:59:56 GMT</lastBuildDate>
 <item>
-  <title>Hermes tools</title>
+  <title>Hermes Agent: my fallback config</title>
+  <link>https://codingezio.github.io/posts/hermes-agent-my-fallback-config/</link>
+  <guid>https://codingezio.github.io/posts/hermes-agent-my-fallback-config/</guid>
+  <pubDate>Sun, 12 Apr 2026 16:00:00 GMT</pubDate>
+  <description>只记这套 fallback 是怎么接手主模型、备用模型与 vision 的。</description>
+</item>
+<item>
+  <title>Hermes tools I&apos;ve installed</title>
   <link>https://codingezio.github.io/posts/hermes-tools/</link>
   <guid>https://codingezio.github.io/posts/hermes-tools/</guid>
   <pubDate>Fri, 10 Apr 2026 16:00:00 GMT</pubDate>
-  <description>只记会碰到的外部东西；常用工作台本就有，多半不用重装。</description>
+  <description>现在真正会碰到的，只有 nowplaying-cli 与 macOS Accessibility。</description>
 </item>
 <item>
-  <title>Kimi 403 与 fallback</title>
+  <title>Hermes with Kimi 2.5 (403 fix)</title>
   <link>https://codingezio.github.io/posts/hermes-with-kimi2dot5/</link>
   <guid>https://codingezio.github.io/posts/hermes-with-kimi2dot5/</guid>
   <pubDate>Fri, 10 Apr 2026 16:00:00 GMT</pubDate>
-  <description>只记能稳定接上的那几项。</description>
+  <description>只记 Kimi 接到 Hermes 上真正要改的两处。</description>
 </item>
 </channel>
 </rss>
