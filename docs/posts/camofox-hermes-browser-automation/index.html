@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hermes: Fallback Models</title>
-  <meta name="description" content="只记这套 fallback 是怎么接手主模型、备用模型与 vision 的。">
+  <title>Hermes: Camofox Browser</title>
+  <meta name="description" content="一句话简介：Headless Chrome 总吃 429，云浏览器要么贵要么注册不上。Camofox 是一个免费的本地替代品，能让 Hermes Agent 像真人一样上网。">
   <meta name="theme-color" content="#f6efe4">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Source+Serif+4:wght@400;500;600;700&display=swap">
-  <meta property="og:title" content="Hermes: Fallback Models">
-  <meta property="og:description" content="只记这套 fallback 是怎么接手主模型、备用模型与 vision 的。">
+  <meta property="og:title" content="Hermes: Camofox Browser">
+  <meta property="og:description" content="一句话简介：Headless Chrome 总吃 429，云浏览器要么贵要么注册不上。Camofox 是一个免费的本地替代品，能让 Hermes Agent 像真人一样上网。">
   <meta property="og:type" content="article">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="canonical" href="https://codingezio.github.io/posts/hermes-agent-my-fallback-config/">
-  <link rel="alternate" type="application/rss+xml" title="Hermes: Fallback Models RSS" href="/rss.xml">
+  <link rel="canonical" href="https://codingezio.github.io/posts/camofox-hermes-browser-automation/">
+  <link rel="alternate" type="application/rss+xml" title="Hermes: Camofox Browser RSS" href="/rss.xml">
   <script>
 (() => {
   const root = document.documentElement;
@@ -106,70 +106,167 @@
     <header class="post-hero">
       <div class="post-kicker-row">
         <div class="post-mini-meta">
-  <span class="post-date">2026.04.13</span>
+  <span class="post-date">2026.04.15</span>
   <div class="popover-root tag-menu" data-popover-root data-popover-name="tags">
-  <button class="tag-chip tag-trigger" type="button" data-popover-trigger data-popover-target="tags" aria-expanded="false" aria-haspopup="dialog" aria-label="#HermesAgent #Fallback #Configuration">#HermesAgent +2</button>
+  <button class="tag-chip tag-trigger" type="button" data-popover-trigger data-popover-target="tags" aria-expanded="false" aria-haspopup="dialog" aria-label="#HermesAgent #Camofox #BrowserAutomation #WebScraping #AntiDetection">#HermesAgent +4</button>
   <div class="popover-panel tag-popover" data-popover-panel hidden>
-    <div class="tag-list" aria-label="#HermesAgent #Fallback #Configuration"><span class="tag-pill">#HermesAgent</span><span class="tag-pill">#Fallback</span><span class="tag-pill">#Configuration</span></div>
+    <div class="tag-list" aria-label="#HermesAgent #Camofox #BrowserAutomation #WebScraping #AntiDetection"><span class="tag-pill">#HermesAgent</span><span class="tag-pill">#Camofox</span><span class="tag-pill">#BrowserAutomation</span><span class="tag-pill">#WebScraping</span><span class="tag-pill">#AntiDetection</span></div>
   </div>
 </div>
 </div>
       </div>
       <div class="post-hero-copy">
-        <h1 class="post-title">Hermes: Fallback Models</h1>
-        <p class="post-deck">只记这套 fallback 是怎么接手主模型、备用模型与 vision 的。</p>
+        <h1 class="post-title">Hermes: Camofox Browser</h1>
+        <p class="post-deck">一句话简介：Headless Chrome 总吃 429，云浏览器要么贵要么注册不上。Camofox 是一个免费的本地替代品，能让 Hermes Agent 像真人一样上网。</p>
       </div>
 
     </header>
     <div class="post-frame">
-      <div class="post-content"><div class="post-body"><h2>它在做什么</h2>
-<p>fallback 的意思很简单：
-先走主模型；若主路失败，再按预先排好的备用顺序继续试。
-这样 403、429、5xx 或临时抽风，不至于把整次任务直接打断。</p>
-<h2>这几个键分别管什么</h2>
+      <div class="post-content"><div class="post-body"><h2>背景</h2>
+<p>AI Agent 要想真正「上网」，浏览器自动化是绕不开的环节。但市面上的主流方案各有缺点：</p>
 <ul>
-<li><code>default_headers</code>：给需要额外请求头的提供商补公共头，例如 <code>User-Agent</code></li>
-<li><code>fallback_providers</code>：主模型失手后，按顺序接手的备用 provider / model</li>
-<li><code>auxiliary.vision</code>：把 vision 这类辅助请求单独指去更合适的模型，不和主 coding 路混在一起</li>
+<li><strong>Headless Chrome / CDP</strong> —— 早就被 bot 检测厂商标记殆尽。<code>navigator.webdriver</code>、JA3 指纹、CDP 泄漏等信号一碰就封，429 和 WAF 挑战页接踵而至。</li>
+<li><strong>Browserbase</strong> —— 注册必须绑手机号，且不接受中国大陆号码，第一道门槛就把人挡在外面。</li>
+<li><strong>Browser Use</strong> —— 月费 $40 到 $100 不等，只想试试水的开发者得先交一笔不小的学费。</li>
+<li><strong>Firecrawl</strong> —— 擅长抓取页面和结构化提取，但点击、输入、滚动这类交互操作不是它的主场。</li>
 </ul>
-<h2>一个够用的例子</h2>
-<pre><code class="language-yaml hljs"><span class="hljs-attr">model:</span>
-  <span class="hljs-attr">default:</span> <span class="hljs-string">kimi-k2.5</span>
-  <span class="hljs-attr">provider:</span> <span class="hljs-string">kimi-coding</span>
-  <span class="hljs-attr">base_url:</span> <span class="hljs-string">https://api.kimi.com/coding/v1</span>
-
-<span class="hljs-attr">default_headers:</span>
-  <span class="hljs-attr">User-Agent:</span> <span class="hljs-string">"claude-code/1.0"</span>
-
-<span class="hljs-attr">fallback_providers:</span>
-  <span class="hljs-bullet">-</span> <span class="hljs-attr">provider:</span> <span class="hljs-string">openrouter</span>
-    <span class="hljs-attr">model:</span> <span class="hljs-string">google/gemini-3-flash-preview</span>
-  <span class="hljs-bullet">-</span> <span class="hljs-attr">provider:</span> <span class="hljs-string">openai-codex</span>
-    <span class="hljs-attr">model:</span> <span class="hljs-string">gpt-5.2-codex</span>
-  <span class="hljs-bullet">-</span> <span class="hljs-attr">provider:</span> <span class="hljs-string">copilot</span>
-    <span class="hljs-attr">model:</span> <span class="hljs-string">gpt-5.2-codex</span>
-
-<span class="hljs-attr">auxiliary:</span>
-  <span class="hljs-attr">vision:</span>
-    <span class="hljs-attr">provider:</span> <span class="hljs-string">openrouter</span>
-    <span class="hljs-attr">model:</span> <span class="hljs-string">google/gemini-3-flash-preview</span>
-</code></pre>
-<h2>实际上怎么接手</h2>
-<p>主模型先跑；若这一跳报错，Hermes 就继续试下一项 fallback。
-而 <code>auxiliary.vision</code> 这类辅助任务，会走它自己的那条路，不必继续撞主模型的限制面。</p>
-<p>所以这套配置的意义，不是“更花”，而是把三条路拆开：</p>
+<p>于是问题来了：有没有一种<strong>本地即可运行、无需订阅、又能过得去现代反 bot 检测</strong>的方案？</p>
+<h2>核心内容</h2>
+<h3>一、Headless Chrome 为何总吃 429</h3>
+<p>Chrome 的落败不是哪个单一漏洞，而是整套信号叠在一起被识别了：</p>
 <ol>
-<li>主路负责日常编码</li>
-<li>备路负责救场</li>
-<li>vision 负责非文本辅助请求</li>
+<li>
+<p><strong><code>navigator.webdriver</code> 强制暴露</strong><br>
+W3C WebDriver 规范要求自动化浏览器必须设置 <code>navigator.webdriver = true</code>，简直是主动亮身份。<a rel="noreferrer" target="_blank" href="https://w3c.github.io/webdriver/#navigator-webdriver-attribute">[1]</a></p>
+</li>
+<li>
+<p><strong>JavaScript 环境不对劲</strong><br>
+Headless Chromium 在 <code>plugins</code>、<code>permissions</code>、屏幕与视口对齐等细节上和真实浏览器有微妙差异，可被模板攻击精准识别。<a rel="noreferrer" target="_blank" href="https://antoinevastel.com/bot%20detection/2018/01/17/detect-chrome-headless-v2.html">[2]</a><a rel="noreferrer" target="_blank" href="https://www.usenix.org/conference/usenixsecurity19/presentation/schwarz">[3]</a></p>
+</li>
+<li>
+<p><strong>Stealth 插件的悖论</strong><br>
+<code>puppeteer-extra-plugin-stealth</code> 虽能补一些漏洞，但每次注入的补丁顺序和内容都一模一样，反 bot 系统已经把「这套补丁本身」当成了指纹。<a rel="noreferrer" target="_blank" href="https://github.com/jo-inc/camofox-browser">[4]</a></p>
+</li>
+<li>
+<p><strong>TLS / JA3 指纹锁定</strong><br>
+Chromium 用的是 BoringSSL，其 JA3 哈希在数据中心 IP 的加持下很容易被标记为自动化流量。<a rel="noreferrer" target="_blank" href="https://engineering.salesforce.com/tls-fingerprinting-with-ja3-and-jarm/">[5]</a></p>
+</li>
+<li>
+<p><strong>CDP 运行时泄漏</strong><br>
+远程调试端口 9222 的存在、以及 <code>chrome-extension://</code> 探针，都会让网页嗅出「这浏览器被远程控制了」。这些检测方法在实际项目中已被多个 bot 防御商业化应用。</p>
+</li>
 </ol>
+<p>一句话：<strong>没有修补的 Chromium 自动化，在现代 Web 面前几乎是透明的。</strong></p>
+<h3>二、Camoufox 为何难被识别</h3>
+<p>Camofox 不是在 Chrome 外面套一层 JavaScript shim，而是直接对 <strong>Firefox Gecko 引擎做 C++ 级修补</strong>：</p>
+<ul>
+<li><code>navigator.webdriver</code> 的移除发生在 <code>Navigator.cpp</code> 原生代码层，JavaScript 看不到任何重写痕迹。</li>
+<li><code>hardwareConcurrency</code>、WebGL vendor/renderer、<code>AudioContext</code> 采样率、屏幕几何信息、WebRTC 硬件枚举等，都从引擎内部直接 spoof。</li>
+<li>网络栈沿用 Mozilla NSS，TLS 指纹与成千上万普通 Firefox 用户没有区别。</li>
+<li>Playwright 只负责「启动」这个被修补过的 Firefox 二进制文件，而不是调用它自带的 Chromium。</li>
+</ul>
+<p>所以页面看到的，不是一个「被抹去自动化标记的浏览器」，而是一个指纹与真实用户难以区分的 Firefox 实体。<a rel="noreferrer" target="_blank" href="https://camoufox.com">[7]</a></p>
+<h3>三、本地免费，交互无阻</h3>
+<p>Camofox 以 REST API 形式跑在本地（默认 <code>http://localhost:9377</code>）。对于 Hermes Agent 用户来说，这是透明的：只要启用了 browser 工具集，<code>browser_navigate</code>、<code>browser_click</code>、<code>browser_type</code> 等操作会自动走这个本地端点，无需手写任何 <code>curl</code> 封装。</p>
+<p>除了底层的反检测能力，它还提供了 Agent 友好的功能：</p>
+<ul>
+<li><strong>Accessibility Snapshot</strong> —— 返回带稳定元素引用（<code>e1</code>, <code>e2</code>…）的页面结构，体积比原始 HTML 小约 90%。</li>
+<li><strong>点击与输入</strong> —— 通过元素引用直接操作，不用手写脆弱的 CSS selector。</li>
+<li><strong>搜索宏</strong> —— <code>@google_search</code>、<code>@youtube_search</code> 等快捷导航。</li>
+<li><strong>会话隔离</strong> —— 按 <code>userId</code> / <code>sessionKey</code> 分离 Cookie 与 Storage，避免状态串扰。</li>
+</ul>
+<p>最重要的是，它完全免费。一条 <code>npm install &amp;&amp; npm start</code> 就能跑起来。</p>
+<h2>实践验证</h2>
+<p>近日对 Camofox 进行了三项实测，结果如下：</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>测试项</th>
+<th>结果</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hacker News 首页抓取</td>
+<td>✅ 通过</td>
+<td>成功提取 Top 10 帖子标题、分数、评论数</td>
+</tr>
+<tr>
+<td>Aeon 长文阅读</td>
+<td>✅ 通过</td>
+<td>复杂 DOM 与订阅弹窗未造成阻塞，完整获取文章元数据</td>
+</tr>
+<tr>
+<td>图片 CDN 批量下载（10 张）</td>
+<td>✅ 通过</td>
+<td>snapshot 直接暴露 CDN 链接，curl 秒级下载完成</td>
+</tr>
+</tbody>
+</table></div>
+<p>对比之下，此前用 Headless Chrome 和远程 CDP 连接同一批站点时，几乎全是 429。Camofox 在零额外配置的情况下直接通过，差异很明显。</p>
+<h2>运维贴士：macOS 开机自启</h2>
+<p>对于 Hermes Agent 用户来说，最好让 Camofox 随系统启动而运行，省得每次手动开终端。macOS 下可通过 <code>LaunchAgent</code> 实现：</p>
+<pre><code class="language-xml hljs"><span class="hljs-comment">&lt;!-- ~/Library/LaunchAgents/ai.hermes.camofox.plist --&gt;</span>
+<span class="hljs-comment">&lt;!-- 请将 /Users/mac/camofox-browser 替换为你的实际路径 --&gt;</span>
+<span class="hljs-meta">&lt;?xml version=<span class="hljs-string">"1.0"</span> encoding=<span class="hljs-string">"UTF-8"</span>?&gt;</span>
+<span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">plist</span> <span class="hljs-keyword">PUBLIC</span> <span class="hljs-string">"-//Apple//DTD PLIST 1.0//EN"</span> ...&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">plist</span> <span class="hljs-attr">version</span>=<span class="hljs-string">"1.0"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">dict</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">key</span>&gt;</span>Label<span class="hljs-tag">&lt;/<span class="hljs-name">key</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">string</span>&gt;</span>ai.hermes.camofox<span class="hljs-tag">&lt;/<span class="hljs-name">string</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">key</span>&gt;</span>ProgramArguments<span class="hljs-tag">&lt;/<span class="hljs-name">key</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">array</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">string</span>&gt;</span>/opt/homebrew/bin/node<span class="hljs-tag">&lt;/<span class="hljs-name">string</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">string</span>&gt;</span>/Users/mac/camofox-browser/server.js<span class="hljs-tag">&lt;/<span class="hljs-name">string</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">array</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">key</span>&gt;</span>WorkingDirectory<span class="hljs-tag">&lt;/<span class="hljs-name">key</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">string</span>&gt;</span>/Users/mac/camofox-browser<span class="hljs-tag">&lt;/<span class="hljs-name">string</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">key</span>&gt;</span>RunAtLoad<span class="hljs-tag">&lt;/<span class="hljs-name">key</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">true</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">key</span>&gt;</span>KeepAlive<span class="hljs-tag">&lt;/<span class="hljs-name">key</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">true</span>/&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dict</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">plist</span>&gt;</span>
+</code></pre>
+<p>加载命令：</p>
+<pre><code class="language-bash hljs">launchctl load ~/Library/LaunchAgents/ai.hermes.camofox.plist
+</code></pre>
+<p>日常可配几个 Fish alias 以便查看状态：</p>
+<pre><code class="language-fish hljs language-jboss-cli"><span class="hljs-keyword">alias</span> camofox-status 'lsof -i tcp<span class="hljs-function">:9377</span> 2&gt;<span class="hljs-string">/dev/null</span> &amp;&amp; <span class="hljs-keyword">echo</span> <span class="hljs-string">"running"</span> || <span class="hljs-keyword">echo</span> <span class="hljs-string">"stopped"</span>'
+<span class="hljs-keyword">alias</span> camofox-logs   'tail -f ~<span class="hljs-string">/.hermes/logs/camofox.log</span>'
+<span class="hljs-keyword">alias</span> camofox-restart 'launchctl unload ~<span class="hljs-string">/Library/LaunchAgents/ai.hermes.camofox.plist</span>; sleep 1; launchctl load ~<span class="hljs-string">/Library/LaunchAgents/ai.hermes.camofox.plist</span>'
+</code></pre>
+<h2>总结</h2>
+<p><strong>关键要点：</strong></p>
+<ul>
+<li>Headless Chrome 的检测面太广，WAF 与 bot 防御系统已能轻易识别其自动化信号。</li>
+<li>Browserbase、Browser Use、Firecrawl 等云方案虽强，但或受注册限制、或价格不菲、或场景不符。</li>
+<li>Camoufox 以 C++ 级 Firefox 补丁实现了低检测率的自动化浏览，本地零成本即可运行。</li>
+<li>配合 LaunchAgent 可实现 macOS 开机自启，让 Hermes Agent 随时拥有可靠的浏览器能力。</li>
+</ul>
+<p><strong>适用场景：</strong></p>
+<ul>
+<li>需要频繁进行交互式网页操作的本地 Agent 工作流</li>
+<li>对订阅成本敏感、或无法注册海外云服务的开发者</li>
+<li>需要绕过中等强度反 bot 检测（Cloudflare、Fortuna 等）的自动化任务</li>
+</ul>
+<p><strong>不适用场景：</strong></p>
+<ul>
+<li>需要大规模分布式并发、或企业级 SLA 保障的生产环境（仍需评估云浏览器）</li>
+<li>目标站点采用高级行为生物识别（鼠标轨迹、按键动力学分析）的场景</li>
+</ul>
 <hr>
 <h2>参考</h2>
-<ul>
-<li><a rel="noreferrer" target="_blank" href="https://hermes-agent.nousresearch.com/docs/user-guide/features/fallback-providers/">Hermes Agent - Fallback Providers</a></li>
-<li><a rel="noreferrer" target="_blank" href="https://hermes-agent.nousresearch.com/docs/user-guide/configuration/">Hermes Agent - Configuration</a></li>
-<li><a rel="noreferrer" target="_blank" href="https://deepwiki.com/NousResearch/hermes-agent/4.4-auxiliary-client">Hermes Agent - Auxiliary Client</a></li>
-</ul></div></div>
+<ol>
+<li>W3C WebDriver Specification — Navigator WebDriver Attribute. <a rel="noreferrer" target="_blank" href="https://w3c.github.io/webdriver/#navigator-webdriver-attribute">https://w3c.github.io/webdriver/#navigator-webdriver-attribute</a></li>
+<li>Vastel, A. "Detecting Chrome Headless / new techniques." 2018. <a rel="noreferrer" target="_blank" href="https://antoinevastel.com/bot%20detection/2018/01/17/detect-chrome-headless-v2.html">https://antoinevastel.com/bot%20detection/2018/01/17/detect-chrome-headless-v2.html</a></li>
+<li>Schwarz et al. "JavaScript Template Attacks." <em>USENIX Security</em> 2019. <a rel="noreferrer" target="_blank" href="https://www.usenix.org/conference/usenixsecurity19/presentation/schwarz">https://www.usenix.org/conference/usenixsecurity19/presentation/schwarz</a></li>
+<li>camofox-browser README — "Stealth plugins become the fingerprint." <a rel="noreferrer" target="_blank" href="https://github.com/jo-inc/camofox-browser">https://github.com/jo-inc/camofox-browser</a></li>
+<li>Althouse et al. "TLS Fingerprinting with JA3 and JARM." Salesforce Engineering. <a rel="noreferrer" target="_blank" href="https://engineering.salesforce.com/tls-fingerprinting-with-ja3-and-jarm/">https://engineering.salesforce.com/tls-fingerprinting-with-ja3-and-jarm/</a></li>
+<li>实际项目中的 CDP 探针与远程调试端口检测实践。</li>
+<li>Camoufox Official Documentation. <a rel="noreferrer" target="_blank" href="https://camoufox.com">https://camoufox.com</a></li>
+</ol></div></div>
     </div>
   </article>
 </main><div class="page-scrim" data-page-scrim hidden></div><script>

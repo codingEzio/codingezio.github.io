@@ -4,27 +4,34 @@
   <title>Posts</title>
   <link>https://codingezio.github.io/</link>
   <description>Compact published notes.</description>
-  <lastBuildDate>Mon, 13 Apr 2026 04:59:56 GMT</lastBuildDate>
+  <lastBuildDate>Wed, 15 Apr 2026 16:37:29 GMT</lastBuildDate>
 <item>
-  <title>Hermes Agent: my fallback config</title>
+  <title>Hermes: Camofox Browser</title>
+  <link>https://codingezio.github.io/posts/camofox-hermes-browser-automation/</link>
+  <guid>https://codingezio.github.io/posts/camofox-hermes-browser-automation/</guid>
+  <pubDate>Tue, 14 Apr 2026 16:00:00 GMT</pubDate>
+  <description>一句话简介：Headless Chrome 总吃 429，云浏览器要么贵要么注册不上。Camofox 是一个免费的本地替代品，能让 Hermes Agent 像真人一样上网。</description>
+</item>
+<item>
+  <title>Hermes: Fallback Models</title>
   <link>https://codingezio.github.io/posts/hermes-agent-my-fallback-config/</link>
   <guid>https://codingezio.github.io/posts/hermes-agent-my-fallback-config/</guid>
   <pubDate>Sun, 12 Apr 2026 16:00:00 GMT</pubDate>
   <description>只记这套 fallback 是怎么接手主模型、备用模型与 vision 的。</description>
 </item>
 <item>
-  <title>Hermes tools I&apos;ve installed</title>
-  <link>https://codingezio.github.io/posts/hermes-tools/</link>
-  <guid>https://codingezio.github.io/posts/hermes-tools/</guid>
-  <pubDate>Fri, 10 Apr 2026 16:00:00 GMT</pubDate>
-  <description>现在真正会碰到的，只有 nowplaying-cli 与 macOS Accessibility。</description>
-</item>
-<item>
-  <title>Hermes with Kimi 2.5 (403 fix)</title>
+  <title>Hermes: Kimi 403 Fix</title>
   <link>https://codingezio.github.io/posts/hermes-with-kimi2dot5/</link>
   <guid>https://codingezio.github.io/posts/hermes-with-kimi2dot5/</guid>
   <pubDate>Fri, 10 Apr 2026 16:00:00 GMT</pubDate>
   <description>只记 Kimi 接到 Hermes 上真正要改的两处。</description>
+</item>
+<item>
+  <title>Hermes: Tools Installed</title>
+  <link>https://codingezio.github.io/posts/hermes-tools/</link>
+  <guid>https://codingezio.github.io/posts/hermes-tools/</guid>
+  <pubDate>Fri, 10 Apr 2026 16:00:00 GMT</pubDate>
+  <description>现在真正会碰到的，只有 nowplaying-cli 与 macOS Accessibility。</description>
 </item>
 </channel>
 </rss>

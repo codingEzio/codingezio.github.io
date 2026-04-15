@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hermes: Fallback Models</title>
-  <meta name="description" content="只记这套 fallback 是怎么接手主模型、备用模型与 vision 的。">
+  <title>Hermes: Camofox Browser</title>
+  <meta name="description" content="一句话简介：Headless Chrome 总吃 429，云浏览器要么贵要么注册不上。Camofox 是一个免费的本地替代品，能让 Hermes Agent 像真人一样上网。">
   <meta name="theme-color" content="#f6efe4">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Source+Serif+4:wght@400;500;600;700&display=swap">
-  <meta property="og:title" content="Hermes: Fallback Models">
-  <meta property="og:description" content="只记这套 fallback 是怎么接手主模型、备用模型与 vision 的。">
+  <meta property="og:title" content="Hermes: Camofox Browser">
+  <meta property="og:description" content="一句话简介：Headless Chrome 总吃 429，云浏览器要么贵要么注册不上。Camofox 是一个免费的本地替代品，能让 Hermes Agent 像真人一样上网。">
   <meta property="og:type" content="article">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="canonical" href="https://codingezio.github.io/posts/hermes-agent-my-fallback-config/">
-  <link rel="alternate" type="application/rss+xml" title="Hermes: Fallback Models RSS" href="/rss.xml">
+  <link rel="canonical" href="https://codingezio.github.io/posts/camofox-hermes-browser-automation/">
+  <link rel="alternate" type="application/rss+xml" title="Hermes: Camofox Browser RSS" href="/rss.xml">
   <script>
 (() => {
   const root = document.documentElement;
@@ -35,143 +35,13 @@
 </script>
   <link rel="preload" href="/assets/blog.dec68a477e.css" as="style">
   <link rel="stylesheet" href="/assets/blog.dec68a477e.css">
+  <meta http-equiv="refresh" content="0; url=/posts/camofox-hermes-browser-automation/">
 </head>
-<body class="page page--post" data-page-kind="post"><main class="page-shell page-shell--post">
-  <header class="site-nav">
-    <a class="site-title site-home-link" href="/">Index</a>
-    <div class="site-tools">
-      <a class="toolbar-link toolbar-link--feed" href="/rss.xml">RSS</a>
-      <div class="popover-root toolbar-popover" data-popover-root data-popover-name="theme">
-  <button class="toolbar-button toolbar-button--theme" type="button" data-popover-trigger data-popover-target="theme" aria-expanded="false" aria-haspopup="dialog">
-    <span class="theme-trigger__preview" aria-hidden="true"></span>
-    <span class="theme-trigger__label" data-active-theme-label>轨道</span>
-  </button>
-  <div class="popover-panel theme-popover" data-popover-panel hidden>
-    <div class="appearance-grid">
-      <button class="theme-option theme-option--appearance" type="button" data-theme-value="rail" data-theme-label="轨道" data-theme-note="单列轨道" aria-pressed="false">
-        <span class="theme-option__preview theme-option__preview--rail" aria-hidden="true">
-          <span class="theme-option__preview-block"></span>
-          <span class="theme-option__preview-block"></span>
-          <span class="theme-option__preview-block"></span>
-        </span>
-        <span class="theme-option__copy">
-          <span class="theme-option__title">轨道</span>
-          <span class="theme-option__note">单列轨道</span>
-        </span>
-      </button>
-      <button class="theme-option theme-option--appearance" type="button" data-theme-value="poster" data-theme-label="海报" data-theme-note="拼贴海报" aria-pressed="false">
-        <span class="theme-option__preview theme-option__preview--poster" aria-hidden="true">
-          <span class="theme-option__preview-block"></span>
-          <span class="theme-option__preview-block"></span>
-          <span class="theme-option__preview-block"></span>
-        </span>
-        <span class="theme-option__copy">
-          <span class="theme-option__title">海报</span>
-          <span class="theme-option__note">拼贴海报</span>
-        </span>
-      </button>
-      <button class="theme-option theme-option--appearance" type="button" data-theme-value="editorial" data-theme-label="杂志" data-theme-note="折页阅读" aria-pressed="false">
-        <span class="theme-option__preview theme-option__preview--editorial" aria-hidden="true">
-          <span class="theme-option__preview-block"></span>
-          <span class="theme-option__preview-block"></span>
-          <span class="theme-option__preview-block"></span>
-        </span>
-        <span class="theme-option__copy">
-          <span class="theme-option__title">杂志</span>
-          <span class="theme-option__note">折页阅读</span>
-        </span>
-      </button>
-      <button class="theme-option theme-option--appearance" type="button" data-theme-value="midnight" data-theme-label="夜游" data-theme-note="夜色舞台" aria-pressed="false">
-        <span class="theme-option__preview theme-option__preview--midnight" aria-hidden="true">
-          <span class="theme-option__preview-block"></span>
-          <span class="theme-option__preview-block"></span>
-          <span class="theme-option__preview-block"></span>
-        </span>
-        <span class="theme-option__copy">
-          <span class="theme-option__title">夜游</span>
-          <span class="theme-option__note">夜色舞台</span>
-        </span>
-      </button>
-    </div>
-    <div class="scheme-grid">
-      <button class="theme-option theme-option--scheme" type="button" data-scheme-value="auto" aria-pressed="false">自动</button>
-      <button class="theme-option theme-option--scheme" type="button" data-scheme-value="light" aria-pressed="false">浅</button>
-      <button class="theme-option theme-option--scheme" type="button" data-scheme-value="dark" aria-pressed="false">深</button>
-    </div>
+<body class="page page--redirect" data-page-kind="redirect"><main class="page-shell">
+  <div class="redirect-shell">
+    <p>Redirecting to <a href="/posts/camofox-hermes-browser-automation/">Hermes: Camofox Browser</a>.</p>
   </div>
-</div>
-    </div>
-  </header>
-  <article class="post-shell">
-    <header class="post-hero">
-      <div class="post-kicker-row">
-        <div class="post-mini-meta">
-  <span class="post-date">2026.04.13</span>
-  <div class="popover-root tag-menu" data-popover-root data-popover-name="tags">
-  <button class="tag-chip tag-trigger" type="button" data-popover-trigger data-popover-target="tags" aria-expanded="false" aria-haspopup="dialog" aria-label="#HermesAgent #Fallback #Configuration">#HermesAgent +2</button>
-  <div class="popover-panel tag-popover" data-popover-panel hidden>
-    <div class="tag-list" aria-label="#HermesAgent #Fallback #Configuration"><span class="tag-pill">#HermesAgent</span><span class="tag-pill">#Fallback</span><span class="tag-pill">#Configuration</span></div>
-  </div>
-</div>
-</div>
-      </div>
-      <div class="post-hero-copy">
-        <h1 class="post-title">Hermes: Fallback Models</h1>
-        <p class="post-deck">只记这套 fallback 是怎么接手主模型、备用模型与 vision 的。</p>
-      </div>
-
-    </header>
-    <div class="post-frame">
-      <div class="post-content"><div class="post-body"><h2>它在做什么</h2>
-<p>fallback 的意思很简单：
-先走主模型；若主路失败，再按预先排好的备用顺序继续试。
-这样 403、429、5xx 或临时抽风，不至于把整次任务直接打断。</p>
-<h2>这几个键分别管什么</h2>
-<ul>
-<li><code>default_headers</code>：给需要额外请求头的提供商补公共头，例如 <code>User-Agent</code></li>
-<li><code>fallback_providers</code>：主模型失手后，按顺序接手的备用 provider / model</li>
-<li><code>auxiliary.vision</code>：把 vision 这类辅助请求单独指去更合适的模型，不和主 coding 路混在一起</li>
-</ul>
-<h2>一个够用的例子</h2>
-<pre><code class="language-yaml hljs"><span class="hljs-attr">model:</span>
-  <span class="hljs-attr">default:</span> <span class="hljs-string">kimi-k2.5</span>
-  <span class="hljs-attr">provider:</span> <span class="hljs-string">kimi-coding</span>
-  <span class="hljs-attr">base_url:</span> <span class="hljs-string">https://api.kimi.com/coding/v1</span>
-
-<span class="hljs-attr">default_headers:</span>
-  <span class="hljs-attr">User-Agent:</span> <span class="hljs-string">"claude-code/1.0"</span>
-
-<span class="hljs-attr">fallback_providers:</span>
-  <span class="hljs-bullet">-</span> <span class="hljs-attr">provider:</span> <span class="hljs-string">openrouter</span>
-    <span class="hljs-attr">model:</span> <span class="hljs-string">google/gemini-3-flash-preview</span>
-  <span class="hljs-bullet">-</span> <span class="hljs-attr">provider:</span> <span class="hljs-string">openai-codex</span>
-    <span class="hljs-attr">model:</span> <span class="hljs-string">gpt-5.2-codex</span>
-  <span class="hljs-bullet">-</span> <span class="hljs-attr">provider:</span> <span class="hljs-string">copilot</span>
-    <span class="hljs-attr">model:</span> <span class="hljs-string">gpt-5.2-codex</span>
-
-<span class="hljs-attr">auxiliary:</span>
-  <span class="hljs-attr">vision:</span>
-    <span class="hljs-attr">provider:</span> <span class="hljs-string">openrouter</span>
-    <span class="hljs-attr">model:</span> <span class="hljs-string">google/gemini-3-flash-preview</span>
-</code></pre>
-<h2>实际上怎么接手</h2>
-<p>主模型先跑；若这一跳报错，Hermes 就继续试下一项 fallback。
-而 <code>auxiliary.vision</code> 这类辅助任务，会走它自己的那条路，不必继续撞主模型的限制面。</p>
-<p>所以这套配置的意义，不是“更花”，而是把三条路拆开：</p>
-<ol>
-<li>主路负责日常编码</li>
-<li>备路负责救场</li>
-<li>vision 负责非文本辅助请求</li>
-</ol>
-<hr>
-<h2>参考</h2>
-<ul>
-<li><a rel="noreferrer" target="_blank" href="https://hermes-agent.nousresearch.com/docs/user-guide/features/fallback-providers/">Hermes Agent - Fallback Providers</a></li>
-<li><a rel="noreferrer" target="_blank" href="https://hermes-agent.nousresearch.com/docs/user-guide/configuration/">Hermes Agent - Configuration</a></li>
-<li><a rel="noreferrer" target="_blank" href="https://deepwiki.com/NousResearch/hermes-agent/4.4-auxiliary-client">Hermes Agent - Auxiliary Client</a></li>
-</ul></div></div>
-    </div>
-  </article>
+  <script>window.location.replace("/posts/camofox-hermes-browser-automation/");</script>
 </main><div class="page-scrim" data-page-scrim hidden></div><script>
 (() => {
   const appearanceKey = 'blog-appearance-mode';
