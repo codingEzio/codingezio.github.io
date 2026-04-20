@@ -4,7 +4,14 @@
   <title>Posts</title>
   <link>https://codingezio.github.io/</link>
   <description>Compact published notes.</description>
-  <lastBuildDate>Wed, 15 Apr 2026 16:38:10 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 20 Apr 2026 14:52:17 GMT</lastBuildDate>
+<item>
+  <title>Hermes: 数据训练审计</title>
+  <link>https://codingezio.github.io/posts/llm-provider-data-training-policies/</link>
+  <guid>https://codingezio.github.io/posts/llm-provider-data-training-policies/</guid>
+  <pubDate>Sun, 19 Apr 2026 16:00:00 GMT</pubDate>
+  <description>一句话简介：你发给 AI 的每句话，provider 都能用来训练模型吗？逐个检查了主流 LLM 服务商的条款，结果出人意料。</description>
+</item>
 <item>
   <title>Hermes: Camofox Browser</title>
   <link>https://codingezio.github.io/posts/camofox-hermes-browser-automation/</link>

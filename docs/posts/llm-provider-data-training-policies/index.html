@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Posts</title>
-  <meta name="description" content="Compact published notes.">
+  <title>Hermes: 数据训练审计</title>
+  <meta name="description" content="一句话简介：你发给 AI 的每句话，provider 都能用来训练模型吗？逐个检查了主流 LLM 服务商的条款，结果出人意料。">
   <meta name="theme-color" content="#f6efe4">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Source+Serif+4:wght@400;500;600;700&display=swap">
-  <meta property="og:title" content="Posts">
-  <meta property="og:description" content="Compact published notes.">
+  <meta property="og:title" content="Hermes: 数据训练审计">
+  <meta property="og:description" content="一句话简介：你发给 AI 的每句话，provider 都能用来训练模型吗？逐个检查了主流 LLM 服务商的条款，结果出人意料。">
   <meta property="og:type" content="article">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="canonical" href="https://codingezio.github.io/">
-  <link rel="alternate" type="application/rss+xml" title="Posts RSS" href="/rss.xml">
+  <link rel="canonical" href="https://codingezio.github.io/posts/llm-provider-data-training-policies/">
+  <link rel="alternate" type="application/rss+xml" title="Hermes: 数据训练审计 RSS" href="/rss.xml">
   <script>
 (() => {
   const root = document.documentElement;
@@ -36,12 +36,11 @@
   <link rel="preload" href="/assets/blog.dec68a477e.css" as="style">
   <link rel="stylesheet" href="/assets/blog.dec68a477e.css">
 </head>
-<body class="page page--index" data-page-kind="index"><main class="page-shell page-shell--index">
+<body class="page page--post" data-page-kind="post"><main class="page-shell page-shell--post">
   <header class="site-nav">
-    <h1 class="site-title">Posts</h1>
+    <a class="site-title site-home-link" href="/">Index</a>
     <div class="site-tools">
-      <span class="post-count">5</span>
-      <a class="toolbar-link" href="/rss.xml">RSS</a>
+      <a class="toolbar-link toolbar-link--feed" href="/rss.xml">RSS</a>
       <div class="popover-root toolbar-popover" data-popover-root data-popover-name="theme">
   <button class="toolbar-button toolbar-button--theme" type="button" data-popover-trigger data-popover-target="theme" aria-expanded="false" aria-haspopup="dialog">
     <span class="theme-trigger__preview" aria-hidden="true"></span>
@@ -103,66 +102,189 @@
 </div>
     </div>
   </header>
-  <ol class="post-list"><li class="post-item" style="--post-order:1;">
-  <article class="post-card">
-    <a class="post-card-link" href="/posts/llm-provider-data-training-policies/">
-      <span class="card-index">01</span>
-      <span class="card-copy">
-        <span class="card-title">Hermes: 数据训练审计</span>
-        <span class="card-subtitle">一句话简介：你发给 AI 的每句话，provider 都能用来训练模型吗？逐个检查了主流 LLM 服务商的条款，结果出人意料。</span>
-      </span>
-      <span class="card-arrow" aria-hidden="true">↗</span>
-    </a>
+  <article class="post-shell">
+    <header class="post-hero">
+      <div class="post-kicker-row">
+        <div class="post-mini-meta">
+  <span class="post-date">2026.04.20</span>
+  <div class="popover-root tag-menu" data-popover-root data-popover-name="tags">
+  <button class="tag-chip tag-trigger" type="button" data-popover-trigger data-popover-target="tags" aria-expanded="false" aria-haspopup="dialog" aria-label="#HermesAgent #Privacy #LLM #DataPolicy #OpenRouter">#HermesAgent +4</button>
+  <div class="popover-panel tag-popover" data-popover-panel hidden>
+    <div class="tag-list" aria-label="#HermesAgent #Privacy #LLM #DataPolicy #OpenRouter"><span class="tag-pill">#HermesAgent</span><span class="tag-pill">#Privacy</span><span class="tag-pill">#LLM</span><span class="tag-pill">#DataPolicy</span><span class="tag-pill">#OpenRouter</span></div>
+  </div>
+</div>
+</div>
+      </div>
+      <div class="post-hero-copy">
+        <h1 class="post-title">Hermes: 数据训练审计</h1>
+        <p class="post-deck">一句话简介：你发给 AI 的每句话，provider 都能用来训练模型吗？逐个检查了主流 LLM 服务商的条款，结果出人意料。</p>
+      </div>
+
+    </header>
+    <div class="post-frame">
+      <div class="post-content"><div class="post-body"><h2>背景</h2>
+<p>使用 AI Agent 时，大量上下文会流经 provider 的 API — 对话、代码、配置、文件内容。一个问题随之而来：这些数据会被用来训练模型吗？</p>
+<p>调查范围覆盖了以下 provider 及其条款：</p>
+<ul>
+<li><strong>OpenAI</strong>（Codex / Copilot 底层）</li>
+<li><strong>Google</strong>（Gemini 系列）</li>
+<li><strong>Anthropic</strong>（Claude）</li>
+<li><strong>OpenRouter</strong>（多 provider 路由层）</li>
+<li><strong>Nous Research</strong>（Hermes Agent 的 subscription provider）</li>
+<li><strong>Moonshot AI / Kimi</strong>（国内主力 coding 模型）</li>
+</ul>
+<hr>
+<h2>核心发现</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Provider</th>
+<th>是否训练用户数据</th>
+<th>数据保留</th>
+<th>opt-out</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OpenAI (API)</td>
+<td>❌ 不训练</td>
+<td>未明确</td>
+<td>N/A（默认不训练）</td>
+</tr>
+<tr>
+<td>Google Gemini (API)</td>
+<td>❌ 不训练</td>
+<td>55 天</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Anthropic (API)</td>
+<td>❌ 不训练</td>
+<td>30 天</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>OpenRouter（中间层）</td>
+<td>❌ 不记录</td>
+<td>取决于下游</td>
+<td>✅ 账户设置可选</td>
+</tr>
+<tr>
+<td>Nous Research</td>
+<td>✅ 可能训练</td>
+<td>未明确</td>
+<td>❌ 无</td>
+</tr>
+<tr>
+<td>Kimi / Moonshot（直连 API）</td>
+<td>✅ 可能训练</td>
+<td>未明确</td>
+<td>⚠️ 发邮件，不保证</td>
+</tr>
+</tbody>
+</table></div>
+<p>一言以蔽之：大厂 API 默认不训练，小厂 / 新厂保留训练权利且 opt-out 机制薄弱。</p>
+<hr>
+<h2>逐个 provider 细说</h2>
+<h3>OpenAI：API 数据不训练</h3>
+<p>自 2023 年 3 月起，OpenAI 明确 API 调用的数据不用于训练模型。数据保留 30 天用于安全监控后删除。这是行业标杆级别的承诺。</p>
+<p>来源：OpenAI API Data Usage Policy（2023-03-01 起生效）</p>
+<h3>Google Gemini：同样不训练</h3>
+<p>Google AI Studio 的 API 数据"not used to train or fine-tune any AI/ML models besides those used specifically for policy enforcement"。措辞清晰，不留模糊空间。</p>
+<p>来源：Google AI Studio Usage Policies</p>
+<h3>Anthropic：API 不训练</h3>
+<p>Anthropic 对 API 用户的数据不用于训练。2025 年消费者端（claude.ai）的政策有变化（默认可用于训练，需手动 opt-out），但 API 通路保持不变。</p>
+<p>来源：Anthropic API Terms of Service</p>
+<h3>OpenRouter：中间层的隐私守门人</h3>
+<p>OpenRouter 本身不记录用户数据。两个关键功能：</p>
+<ol>
+<li><strong>Training opt-out</strong>：在账户设置中关闭后，OpenRouter 不会路由到可能训练数据的 provider。</li>
+<li><strong>Zero Data Retention (ZDR)</strong>：开启后只路由到支持零保留的 provider。</li>
+</ol>
+<p>实操路径：登录 openrouter.ai/settings/privacy，分别关闭付费模型和免费模型的 training 开关。</p>
+<p>来源：OpenRouter Provider Logging 文档</p>
+<h3>Nous Research：条款明确允许训练</h3>
+<p>两份文件口径一致：</p>
+<p><strong>ToS Section 12.3</strong>："Nous Research may use Client Data in an aggregated or anonymized format for research, educational and other similar purposes."</p>
+<p><strong>Privacy Policy</strong>："We use information... to Train and fine-tune models."</p>
+<p>关键问题：</p>
+<ul>
+<li>没有任何 opt-out 机制</li>
+<li>"aggregated or anonymized" 的标准未定义</li>
+<li>Privacy Policy 直接将 "Conversations with LLMs" 列为收集项</li>
+</ul>
+<p>来源：portal.nousresearch.com/terms，portal.nousresearch.com/privacy</p>
+<h3>Kimi / Moonshot AI：有 opt-out，但埋得很深</h3>
+<p><strong>ToS Section 4</strong>："We may use content to provide, maintain, develop, and improve the services."</p>
+<p><strong>Privacy Policy</strong>："We process this information... including training and optimizing our models."</p>
+<p>opt-out 存在但隐蔽：</p>
+<ul>
+<li>消费者端隐私政策提到可发邮件至 <a href="mailto:membership@moonshot.ai">membership@moonshot.ai</a> 申请 opt-out</li>
+<li>API 端隐私政策未提及此选项</li>
+<li>第三方分析标注："Opt-out is NOT guaranteed"</li>
+<li>社区反馈：名义存在，实际操作困难</li>
+</ul>
+<p><strong>重要区分</strong>：通过 OpenRouter 路由 Kimi 时，OpenRouter 标记 Moonshot AI 为"不训练 + 零保留"。但直连 Kimi API（api.kimi.com）适用 Kimi 自己的宽松条款。</p>
+<p>来源：platform.kimi.ai/docs/agreement/modeluse，platform.kimi.ai/docs/agreement/userprivacy</p>
+<hr>
+<h2>被训练了，实际影响有多大？</h2>
+<p>不需要恐慌，但需要知情。</p>
+<p><strong>不必过度担心的理由：</strong></p>
+<ul>
+<li>模型训练用的是 TB/PB 级数据，个人对话的占比约等于零</li>
+<li>模型学习的是语言统计模式，不是个人信息数据库</li>
+<li>API 调用中真正敏感的数据（密钥、密码）通常已被 redaction 机制过滤</li>
+<li>要从训练好的模型中提取特定用户信息，需要精心设计的攻击，对普通用户没有攻击价值</li>
+</ul>
+<p><strong>不可忽视的理由：</strong></p>
+<ul>
+<li>代码架构、项目结构、技术选型可能被学习</li>
+<li>对话模式和使用习惯可以构建用户画像</li>
+<li>一旦数据进入训练池，技术上几乎不可能精确移除</li>
+<li>核心问题不是数据敏感度，而是选择权 — Nous 和 Kimi 不给用户真正的选择</li>
+</ul>
+<hr>
+<h2>Actionable Steps</h2>
+<h3>1. 检查 OpenRouter 账户设置</h3>
+<p>登录 openrouter.ai/settings/privacy：</p>
+<ul>
+<li>关闭 "Allow training on prompts"（付费模型 + 免费模型都关）</li>
+<li>根据需要决定是否开启 ZDR（注意：开启后会排除部分 provider，如 Google AI Studio）</li>
+</ul>
+<h3>2. Kimi opt-out</h3>
+<p>发邮件至 <a href="mailto:membership@moonshot.ai">membership@moonshot.ai</a>：</p>
+<ul>
+<li>说明 API 账户信息</li>
+<li>明确要求 opt-out of training on prompts and generated content</li>
+<li>保留发送记录</li>
+</ul>
+<p>不能保证成功，但这是目前唯一的路径。</p>
+<h3>3. Nous Research</h3>
+<p>目前无操作路径。如果在意数据训练：</p>
+<ul>
+<li>将主模型从 Nous 直连切换到 OpenRouter 路由的 provider</li>
+<li>或接受这个风险（Nous 的免费额度确实有吸引力）</li>
+</ul>
+<h3>4. 通用原则</h3>
+<p>不要在任何 AI provider 上讨论不愿意被第三方看到的内容。即使 provider 声明不训练，数据保留期和安全漏洞始终存在。</p>
+<hr>
+<h2>总结</h2>
+<p>API 级别的数据训练政策差异巨大。OpenAI、Google、Anthropic 三家大厂默认不训练，是行业标杆。OpenRouter 作为中间层提供了有用的隐私控制。而 Nous Research 和 Kimi/Moonshot AI 的条款保留了训练权利，且 opt-out 机制要么不存在、要么形同虚设。</p>
+<p>没有完美的隐私方案，但知情本身就是第一步。</p>
+<hr>
+<h2>参考</h2>
+<ul>
+<li><a rel="noreferrer" target="_blank" href="https://openai.com/policies/api-data-usage-policies">OpenAI API Data Usage Policies</a></li>
+<li><a rel="noreferrer" target="_blank" href="https://ai.google.dev/gemini-api/docs/usage-policies">Google AI Studio Usage Policies</a></li>
+<li><a rel="noreferrer" target="_blank" href="https://openrouter.ai/docs/guides/privacy/provider-logging">OpenRouter Provider Logging</a></li>
+<li><a rel="noreferrer" target="_blank" href="https://openrouter.ai/docs/guides/features/zdr">OpenRouter ZDR</a></li>
+<li><a rel="noreferrer" target="_blank" href="https://portal.nousresearch.com/terms">Nous Research Terms of Service</a></li>
+<li><a rel="noreferrer" target="_blank" href="https://portal.nousresearch.com/privacy">Nous Research Privacy Policy</a></li>
+<li><a rel="noreferrer" target="_blank" href="https://platform.kimi.ai/docs/agreement/modeluse">Kimi OpenPlatform Terms of Service</a></li>
+<li><a rel="noreferrer" target="_blank" href="https://platform.kimi.ai/docs/agreement/userprivacy">Kimi OpenPlatform Privacy Policy</a></li>
+</ul></div></div>
+    </div>
   </article>
-</li>
-<li class="post-item" style="--post-order:2;">
-  <article class="post-card">
-    <a class="post-card-link" href="/posts/camofox-hermes-browser-automation/">
-      <span class="card-index">02</span>
-      <span class="card-copy">
-        <span class="card-title">Hermes: Camofox Browser</span>
-        <span class="card-subtitle">一句话简介：Headless Chrome 总吃 429，云浏览器要么贵要么注册不上。Camofox 是一个免费的本地替代品，能让 Hermes Agent 像真人一样上网。</span>
-      </span>
-      <span class="card-arrow" aria-hidden="true">↗</span>
-    </a>
-  </article>
-</li>
-<li class="post-item" style="--post-order:3;">
-  <article class="post-card">
-    <a class="post-card-link" href="/posts/hermes-agent-my-fallback-config/">
-      <span class="card-index">03</span>
-      <span class="card-copy">
-        <span class="card-title">Hermes: Fallback Models</span>
-        <span class="card-subtitle">只记这套 fallback 是怎么接手主模型、备用模型与 vision 的。</span>
-      </span>
-      <span class="card-arrow" aria-hidden="true">↗</span>
-    </a>
-  </article>
-</li>
-<li class="post-item" style="--post-order:4;">
-  <article class="post-card">
-    <a class="post-card-link" href="/posts/hermes-with-kimi2dot5/">
-      <span class="card-index">04</span>
-      <span class="card-copy">
-        <span class="card-title">Hermes: Kimi 403 Fix</span>
-        <span class="card-subtitle">只记 Kimi 接到 Hermes 上真正要改的两处。</span>
-      </span>
-      <span class="card-arrow" aria-hidden="true">↗</span>
-    </a>
-  </article>
-</li>
-<li class="post-item" style="--post-order:5;">
-  <article class="post-card">
-    <a class="post-card-link" href="/posts/hermes-tools/">
-      <span class="card-index">05</span>
-      <span class="card-copy">
-        <span class="card-title">Hermes: Tools Installed</span>
-        <span class="card-subtitle">现在真正会碰到的，只有 nowplaying-cli 与 macOS Accessibility。</span>
-      </span>
-      <span class="card-arrow" aria-hidden="true">↗</span>
-    </a>
-  </article>
-</li></ol>
 </main><div class="page-scrim" data-page-scrim hidden></div><script>
 (() => {
   const appearanceKey = 'blog-appearance-mode';
