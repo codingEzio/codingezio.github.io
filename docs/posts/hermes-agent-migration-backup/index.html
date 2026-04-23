@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Posts</title>
-  <meta name="description" content="Compact published notes.">
+  <title>Hermes: 备份与迁移</title>
+  <meta name="description" content="hermes backup 与 hermes import 覆盖数据与配置迁移，代码与系统依赖需另行处理。">
   <meta name="theme-color" content="#f6efe4">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Source+Serif+4:wght@400;500;600;700&display=swap">
-  <meta property="og:title" content="Posts">
-  <meta property="og:description" content="Compact published notes.">
+  <meta property="og:title" content="Hermes: 备份与迁移">
+  <meta property="og:description" content="hermes backup 与 hermes import 覆盖数据与配置迁移，代码与系统依赖需另行处理。">
   <meta property="og:type" content="article">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="canonical" href="https://codingezio.github.io/">
-  <link rel="alternate" type="application/rss+xml" title="Posts RSS" href="/rss.xml">
+  <link rel="canonical" href="https://codingezio.github.io/posts/hermes-agent-migration-backup/">
+  <link rel="alternate" type="application/rss+xml" title="Hermes: 备份与迁移 RSS" href="/rss.xml">
   <script>
 (() => {
   const root = document.documentElement;
@@ -36,12 +36,11 @@
   <link rel="preload" href="/assets/blog.dec68a477e.css" as="style">
   <link rel="stylesheet" href="/assets/blog.dec68a477e.css">
 </head>
-<body class="page page--index" data-page-kind="index"><main class="page-shell page-shell--index">
+<body class="page page--post" data-page-kind="post"><main class="page-shell page-shell--post">
   <header class="site-nav">
-    <h1 class="site-title">Posts</h1>
+    <a class="site-title site-home-link" href="/">Index</a>
     <div class="site-tools">
-      <span class="post-count">6</span>
-      <a class="toolbar-link" href="/rss.xml">RSS</a>
+      <a class="toolbar-link toolbar-link--feed" href="/rss.xml">RSS</a>
       <div class="popover-root toolbar-popover" data-popover-root data-popover-name="theme">
   <button class="toolbar-button toolbar-button--theme" type="button" data-popover-trigger data-popover-target="theme" aria-expanded="false" aria-haspopup="dialog">
     <span class="theme-trigger__preview" aria-hidden="true"></span>
@@ -103,78 +102,157 @@
 </div>
     </div>
   </header>
-  <ol class="post-list"><li class="post-item" style="--post-order:1;">
-  <article class="post-card">
-    <a class="post-card-link" href="/posts/hermes-agent-migration-backup/">
-      <span class="card-index">01</span>
-      <span class="card-copy">
-        <span class="card-title">Hermes: 备份与迁移</span>
-        <span class="card-subtitle">hermes backup 与 hermes import 覆盖数据与配置迁移，代码与系统依赖需另行处理。</span>
-      </span>
-      <span class="card-arrow" aria-hidden="true">↗</span>
-    </a>
+  <article class="post-shell">
+    <header class="post-hero">
+      <div class="post-kicker-row">
+        <div class="post-mini-meta">
+  <span class="post-date">2026.04.23</span>
+  <div class="popover-root tag-menu" data-popover-root data-popover-name="tags">
+  <button class="tag-chip tag-trigger" type="button" data-popover-trigger data-popover-target="tags" aria-expanded="false" aria-haspopup="dialog" aria-label="#hermes-agent #backup #devops">#hermes-agent +2</button>
+  <div class="popover-panel tag-popover" data-popover-panel hidden>
+    <div class="tag-list" aria-label="#hermes-agent #backup #devops"><span class="tag-pill">#hermes-agent</span><span class="tag-pill">#backup</span><span class="tag-pill">#devops</span></div>
+  </div>
+</div>
+</div>
+      </div>
+      <div class="post-hero-copy">
+        <h1 class="post-title">Hermes: 备份与迁移</h1>
+        <p class="post-deck">hermes backup 与 hermes import 覆盖数据与配置迁移，代码与系统依赖需另行处理。</p>
+      </div>
+
+    </header>
+    <div class="post-frame">
+      <div class="post-content"><div class="post-body"><h2>核心内容</h2>
+<h3>备份</h3>
+<p><code>hermes backup</code> 将 <code>~/.hermes</code> 打包为 zip：</p>
+<pre><code class="language-bash hljs">hermes backup                          <span class="hljs-comment"># 默认输出 ~/hermes-backup-&lt;timestamp&gt;.zip</span>
+hermes backup --output ~/backups/      <span class="hljs-comment"># 指定目录</span>
+hermes backup --quick                  <span class="hljs-comment"># 仅备份关键状态文件</span>
+</code></pre>
+<p><strong>包含</strong>：<code>config.yaml</code>、<code>.env</code>、<code>auth.json</code>、<code>state.db</code>、<code>memory_store.db</code>、<code>skills/</code>、<code>memories/</code>、<code>sessions/</code>、<code>cron/jobs.json</code>、<code>scripts/</code>、<code>plugins/</code></p>
+<p><strong>排除</strong>：<code>hermes-agent/</code>、<code>__pycache__</code>、<code>.git</code>、<code>node_modules</code>、<code>*.pyc</code>、<code>gateway.pid</code>、<code>cron.pid</code></p>
+<p>数据库采用 SQLite <code>backup()</code> API 安全拷贝，支持 WAL 模式。</p>
+<h3>恢复</h3>
+<p><code>hermes import</code> 将 zip 解压至 <code>~/.hermes</code>：</p>
+<pre><code class="language-bash hljs">hermes import hermes-backup-2026-04-23-080000.zip
+hermes import backup.zip --force       <span class="hljs-comment"># 覆盖现有文件，不确认</span>
+</code></pre>
+<p>导入前验证 zip 是否包含 <code>config.yaml</code>、<code>.env</code> 或 <code>state.db</code>。若检测到 <code>.hermes/</code> 前缀，自动剥离。</p>
+<h3>卸载</h3>
+<p><code>hermes uninstall</code> 提供两级清理：</p>
+<pre><code class="language-bash hljs">hermes uninstall                       <span class="hljs-comment"># 仅移除代码，保留 ~/.hermes 数据</span>
+hermes uninstall --full                <span class="hljs-comment"># 删除代码 + 数据 + 服务注册</span>
+</code></pre>
+<p>卸载流程：停止 gateway 进程、清理 <code>systemd</code>/<code>launchd</code> 服务、移除 shell <code>PATH</code> 配置、删除 wrapper 脚本、移除安装目录。</p>
+<h3>迁移流程</h3>
+<pre><code class="language-bash hljs"><span class="hljs-comment"># 旧机器</span>
+hermes backup --output ~/hermes-migration.zip
+
+<span class="hljs-comment"># 传输至新机器（scp / 移动硬盘 / 云盘）</span>
+
+<span class="hljs-comment"># 新机器</span>
+curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
+hermes import ~/hermes-migration.zip
+hermes update                          <span class="hljs-comment"># 确保代码仓库最新</span>
+</code></pre>
+<h3>不可默认迁移项</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>类别</th>
+<th>说明</th>
+<th>处理方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>代码修改</strong></td>
+<td><code>hermes-agent/</code> 被排除</td>
+<td>手动导出 <code>git diff</code> 或 <code>git bundle</code></td>
+</tr>
+<tr>
+<td><strong>系统依赖</strong></td>
+<td><code>ripgrep</code>、<code>ffmpeg</code>、<code>Node.js</code>、<code>Playwright</code></td>
+<td>新机器重新安装</td>
+</tr>
+<tr>
+<td><strong>服务注册</strong></td>
+<td><code>systemd</code>/<code>launchd</code> plist</td>
+<td>重新运行 <code>hermes gateway install</code></td>
+</tr>
+<tr>
+<td><strong>Shell PATH</strong></td>
+<td><code>~/.zshrc</code>、<code>~/.bashrc</code> 中的 <code>PATH</code> 行</td>
+<td><code>install.sh</code> 自动重新添加</td>
+</tr>
+<tr>
+<td><strong>绝对路径</strong></td>
+<td><code>config.yaml</code> 中硬编码的旧机器路径</td>
+<td>手动修正</td>
+</tr>
+</tbody>
+</table></div>
+<hr>
+<h2>实践验证</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>测试项</th>
+<th>结果</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>hermes backup</code> 生成 zip</td>
+<td>✅ 通过</td>
+<td>包含 600+ 文件，自动排除 <code>hermes-agent/</code></td>
+</tr>
+<tr>
+<td><code>hermes import</code> 恢复数据</td>
+<td>✅ 通过</td>
+<td>自动识别备份格式，恢复 <code>skills/</code>、<code>sessions/</code></td>
+</tr>
+<tr>
+<td><code>hermes uninstall --full</code> 清理</td>
+<td>✅ 通过</td>
+<td>删除代码、数据、服务、<code>PATH</code> 配置</td>
+</tr>
+<tr>
+<td>重装后 gateway 启动</td>
+<td>⚠️ 需补步</td>
+<td>需重新 <code>hermes gateway install</code> 注册服务</td>
+</tr>
+<tr>
+<td>代码修改保留</td>
+<td>❌ 不保留</td>
+<td>需手动导出 <code>git diff</code></td>
+</tr>
+</tbody>
+</table></div>
+<hr>
+<h2>总结</h2>
+<p><strong>关键要点：</strong></p>
+<ul>
+<li><code>hermes backup</code> + <code>hermes import</code> 覆盖 100% 数据与配置迁移</li>
+<li>代码仓库（<code>hermes-agent/</code>）被设计为排除项，应通过 <code>git</code> 重新 clone</li>
+<li>系统依赖（<code>ripgrep</code>、<code>ffmpeg</code>、<code>Node.js</code>）不在备份范围内</li>
+<li>服务注册与 Shell <code>PATH</code> 由 <code>install</code>/<code>uninstall</code> 脚本自动管理</li>
+<li>若修改过源码，迁移前务必手动导出 patch</li>
+</ul>
+<p><strong>适用场景：</strong> 换机、重装、VPS 部署、配置快照</p>
+<p><strong>不适用场景：</strong> 仅迁移代码修改（需 <code>git</code> 工具）、跨操作系统迁移（系统依赖不同）</p>
+<hr>
+<h2>参考</h2>
+<ul>
+<li><a rel="noreferrer" target="_blank" href="https://hermes-agent.nousresearch.com/docs/reference/cli-commands">CLI Commands Reference</a> — 官方 CLI 命令文档</li>
+<li><a rel="noreferrer" target="_blank" href="https://github.com/NousResearch/hermes-agent/blob/main/RELEASE_v0.9.0.md">Release v0.9.0 Notes</a> — <code>hermes backup</code> &amp; <code>hermes import</code> 功能发布说明（PR #7997）</li>
+<li><code>hermes backup --help</code> — 内置帮助：备份范围与排除项</li>
+<li><code>hermes import --help</code> — 内置帮助：恢复流程与验证机制</li>
+<li><code>hermes uninstall --help</code> — 内置帮助：卸载选项与服务清理</li>
+</ul></div></div>
+    </div>
   </article>
-</li>
-<li class="post-item" style="--post-order:2;">
-  <article class="post-card">
-    <a class="post-card-link" href="/posts/llm-provider-data-training-policies/">
-      <span class="card-index">02</span>
-      <span class="card-copy">
-        <span class="card-title">Hermes: 数据训练审计</span>
-        <span class="card-subtitle">一句话简介：你发给 AI 的每句话，provider 都能用来训练模型吗？逐个检查了主流 LLM 服务商的条款，结果出人意料。</span>
-      </span>
-      <span class="card-arrow" aria-hidden="true">↗</span>
-    </a>
-  </article>
-</li>
-<li class="post-item" style="--post-order:3;">
-  <article class="post-card">
-    <a class="post-card-link" href="/posts/camofox-hermes-browser-automation/">
-      <span class="card-index">03</span>
-      <span class="card-copy">
-        <span class="card-title">Hermes: Camofox Browser</span>
-        <span class="card-subtitle">一句话简介：Headless Chrome 总吃 429，云浏览器要么贵要么注册不上。Camofox 是一个免费的本地替代品，能让 Hermes Agent 像真人一样上网。</span>
-      </span>
-      <span class="card-arrow" aria-hidden="true">↗</span>
-    </a>
-  </article>
-</li>
-<li class="post-item" style="--post-order:4;">
-  <article class="post-card">
-    <a class="post-card-link" href="/posts/hermes-agent-my-fallback-config/">
-      <span class="card-index">04</span>
-      <span class="card-copy">
-        <span class="card-title">Hermes: Fallback Models</span>
-        <span class="card-subtitle">只记这套 fallback 是怎么接手主模型、备用模型与 vision 的。</span>
-      </span>
-      <span class="card-arrow" aria-hidden="true">↗</span>
-    </a>
-  </article>
-</li>
-<li class="post-item" style="--post-order:5;">
-  <article class="post-card">
-    <a class="post-card-link" href="/posts/hermes-with-kimi2dot5/">
-      <span class="card-index">05</span>
-      <span class="card-copy">
-        <span class="card-title">Hermes: Kimi 403 Fix</span>
-        <span class="card-subtitle">只记 Kimi 接到 Hermes 上真正要改的两处。</span>
-      </span>
-      <span class="card-arrow" aria-hidden="true">↗</span>
-    </a>
-  </article>
-</li>
-<li class="post-item" style="--post-order:6;">
-  <article class="post-card">
-    <a class="post-card-link" href="/posts/hermes-tools/">
-      <span class="card-index">06</span>
-      <span class="card-copy">
-        <span class="card-title">Hermes: Tools Installed</span>
-        <span class="card-subtitle">现在真正会碰到的，只有 nowplaying-cli 与 macOS Accessibility。</span>
-      </span>
-      <span class="card-arrow" aria-hidden="true">↗</span>
-    </a>
-  </article>
-</li></ol>
 </main><div class="page-scrim" data-page-scrim hidden></div><script>
 (() => {
   const appearanceKey = 'blog-appearance-mode';

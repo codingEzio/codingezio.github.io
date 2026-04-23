@@ -4,7 +4,14 @@
   <title>Posts</title>
   <link>https://codingezio.github.io/</link>
   <description>Compact published notes.</description>
-  <lastBuildDate>Mon, 20 Apr 2026 14:52:17 GMT</lastBuildDate>
+  <lastBuildDate>Thu, 23 Apr 2026 04:12:49 GMT</lastBuildDate>
+<item>
+  <title>Hermes: 备份与迁移</title>
+  <link>https://codingezio.github.io/posts/hermes-agent-migration-backup/</link>
+  <guid>https://codingezio.github.io/posts/hermes-agent-migration-backup/</guid>
+  <pubDate>Wed, 22 Apr 2026 16:00:00 GMT</pubDate>
+  <description>hermes backup 与 hermes import 覆盖数据与配置迁移，代码与系统依赖需另行处理。</description>
+</item>
 <item>
   <title>Hermes: 数据训练审计</title>
   <link>https://codingezio.github.io/posts/llm-provider-data-training-policies/</link>
