@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
@@ -14,626 +14,118 @@
   <meta property="og:type" content="article">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://codingezio.github.io/posts/camofox-hermes-browser-automation/">
-  <link rel="alternate" type="application/rss+xml" title="Hermes: Camofox Browser RSS" href="/rss.xml">
+  <link rel="alternate" type="application/rss+xml" title="Posts RSS" href="/rss.xml">
   <script>
 (() => {
   const root = document.documentElement;
-  const aliases = { paper: 'poster', list: 'rail' };
-  const allowed = new Set(['rail', 'poster', 'editorial', 'midnight']);
-  const storedAppearance = window.localStorage.getItem('blog-appearance-mode');
-  const normalizedAppearance = aliases[storedAppearance ?? ''] ?? storedAppearance ?? root.dataset.appearance ?? 'rail';
-  root.dataset.appearance = allowed.has(normalizedAppearance) ? normalizedAppearance : 'rail';
-  const storedScheme = window.localStorage.getItem('blog-color-scheme');
-  if (storedScheme === 'light' || storedScheme === 'dark') {
+  const aliases = { paper: "poster", list: "rail" };
+  const allowed = new Set(["rail", "poster", "editorial", "midnight"]);
+  const storedAppearance = window.localStorage.getItem("blog-appearance-mode");
+  const normalizedAppearance = aliases[storedAppearance ?? ""] ?? storedAppearance ?? root.dataset.appearance ?? "rail";
+  root.dataset.appearance = allowed.has(normalizedAppearance) ? normalizedAppearance : "rail";
+  const storedScheme = window.localStorage.getItem("blog-color-scheme");
+  if (storedScheme === "light" || storedScheme === "dark") {
     root.dataset.colorScheme = storedScheme;
     root.dataset.colorSchemeMode = storedScheme;
   } else {
-    root.dataset.colorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    root.dataset.colorSchemeMode = 'auto';
+    root.dataset.colorScheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    root.dataset.colorSchemeMode = "auto";
   }
 })();
-</script>
-  <link rel="preload" href="/assets/blog.12e7e71c89.css" as="style">
-  <link rel="stylesheet" href="/assets/blog.12e7e71c89.css">
+  </script>
+  
+  <link rel="preload" href="/assets/blog.531707a620.css" as="style">
+  <link rel="stylesheet" href="/assets/blog.531707a620.css">
 </head>
-<body class="page page--post" data-page-kind="post"><main class="page-shell page-shell--post">
-  <header class="site-nav">
-    <a class="site-title site-home-link" href="/">Index</a>
-    <div class="site-tools">
-      <a class="toolbar-link toolbar-link--feed" href="/rss.xml">RSS</a>
-      <div class="popover-root toolbar-popover" data-popover-root data-popover-name="theme">
-  <button class="toolbar-button toolbar-button--theme" type="button" data-popover-trigger data-popover-target="theme" aria-expanded="false" aria-haspopup="dialog">
-    <span class="theme-trigger__preview" aria-hidden="true"></span>
-    <span class="theme-trigger__label" data-active-theme-label>轨道</span>
-  </button>
-  <div class="popover-panel theme-popover" data-popover-panel hidden>
-    <div class="appearance-grid">
-      <button class="theme-option theme-option--appearance" type="button" data-theme-value="rail" data-theme-label="轨道" data-theme-note="单列轨道" aria-pressed="false">
-        <span class="theme-option__preview theme-option__preview--rail" aria-hidden="true">
-          <span class="theme-option__preview-block"></span>
-          <span class="theme-option__preview-block"></span>
-          <span class="theme-option__preview-block"></span>
-        </span>
-        <span class="theme-option__copy">
-          <span class="theme-option__title">轨道</span>
-          <span class="theme-option__note">单列轨道</span>
-        </span>
-      </button>
-      <button class="theme-option theme-option--appearance" type="button" data-theme-value="poster" data-theme-label="海报" data-theme-note="拼贴海报" aria-pressed="false">
-        <span class="theme-option__preview theme-option__preview--poster" aria-hidden="true">
-          <span class="theme-option__preview-block"></span>
-          <span class="theme-option__preview-block"></span>
-          <span class="theme-option__preview-block"></span>
-        </span>
-        <span class="theme-option__copy">
-          <span class="theme-option__title">海报</span>
-          <span class="theme-option__note">拼贴海报</span>
-        </span>
-      </button>
-      <button class="theme-option theme-option--appearance" type="button" data-theme-value="editorial" data-theme-label="杂志" data-theme-note="折页阅读" aria-pressed="false">
-        <span class="theme-option__preview theme-option__preview--editorial" aria-hidden="true">
-          <span class="theme-option__preview-block"></span>
-          <span class="theme-option__preview-block"></span>
-          <span class="theme-option__preview-block"></span>
-        </span>
-        <span class="theme-option__copy">
-          <span class="theme-option__title">杂志</span>
-          <span class="theme-option__note">折页阅读</span>
-        </span>
-      </button>
-      <button class="theme-option theme-option--appearance" type="button" data-theme-value="midnight" data-theme-label="夜游" data-theme-note="夜色舞台" aria-pressed="false">
-        <span class="theme-option__preview theme-option__preview--midnight" aria-hidden="true">
-          <span class="theme-option__preview-block"></span>
-          <span class="theme-option__preview-block"></span>
-          <span class="theme-option__preview-block"></span>
-        </span>
-        <span class="theme-option__copy">
-          <span class="theme-option__title">夜游</span>
-          <span class="theme-option__note">夜色舞台</span>
-        </span>
-      </button>
-    </div>
-    <div class="scheme-grid">
-      <button class="theme-option theme-option--scheme" type="button" data-scheme-value="auto" aria-pressed="false">自动</button>
-      <button class="theme-option theme-option--scheme" type="button" data-scheme-value="light" aria-pressed="false">浅</button>
-      <button class="theme-option theme-option--scheme" type="button" data-scheme-value="dark" aria-pressed="false">深</button>
-    </div>
-  </div>
-</div>
-    </div>
-  </header>
-  <article class="post-shell">
-    <header class="post-hero">
-      <div class="post-kicker-row">
-        <div class="post-mini-meta">
-  <span class="post-date">2026.04.15</span>
-  <div class="popover-root tag-menu" data-popover-root data-popover-name="tags">
-  <button class="tag-chip tag-trigger" type="button" data-popover-trigger data-popover-target="tags" aria-expanded="false" aria-haspopup="dialog" aria-label="#HermesAgent #Camofox #BrowserAutomation #WebScraping #AntiDetection">#HermesAgent +4</button>
-  <div class="popover-panel tag-popover" data-popover-panel hidden>
-    <div class="tag-list" aria-label="#HermesAgent #Camofox #BrowserAutomation #WebScraping #AntiDetection"><span class="tag-pill">#HermesAgent</span><span class="tag-pill">#Camofox</span><span class="tag-pill">#BrowserAutomation</span><span class="tag-pill">#WebScraping</span><span class="tag-pill">#AntiDetection</span></div>
-  </div>
-</div>
-</div>
+<body class="page page--post" data-page-kind="post">
+  <main class="page-shell page-shell--post">
+    <header class="site-nav">
+      <a class="site-title site-home-link" href="/">Index</a>
+      <div class="site-tools">
+        <a class="toolbar-link toolbar-link--feed" href="/rss.xml">RSS</a>
+        <div class="popover-root toolbar-popover" data-popover-root data-popover-name="theme"><button class="toolbar-button toolbar-button--theme" type="button" data-popover-trigger data-popover-target="theme" aria-expanded="false" aria-haspopup="dialog"><span class="theme-trigger__preview" aria-hidden="true"></span><span class="theme-trigger__label" data-active-theme-label>轨道</span></button><div class="popover-panel theme-popover" data-popover-panel hidden><div class="appearance-grid"><button class="theme-option theme-option--appearance" type="button" data-theme-value="rail" data-theme-label="轨道" data-theme-note="单列轨道" aria-pressed="false"><span class="theme-option__preview theme-option__preview--rail" aria-hidden="true"><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span></span><span class="theme-option__copy"><span class="theme-option__title">轨道</span><span class="theme-option__note">单列轨道</span></span></button><button class="theme-option theme-option--appearance" type="button" data-theme-value="poster" data-theme-label="海报" data-theme-note="拼贴海报" aria-pressed="false"><span class="theme-option__preview theme-option__preview--poster" aria-hidden="true"><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span></span><span class="theme-option__copy"><span class="theme-option__title">海报</span><span class="theme-option__note">拼贴海报</span></span></button><button class="theme-option theme-option--appearance" type="button" data-theme-value="editorial" data-theme-label="杂志" data-theme-note="折页阅读" aria-pressed="false"><span class="theme-option__preview theme-option__preview--editorial" aria-hidden="true"><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span></span><span class="theme-option__copy"><span class="theme-option__title">杂志</span><span class="theme-option__note">折页阅读</span></span></button><button class="theme-option theme-option--appearance" type="button" data-theme-value="midnight" data-theme-label="夜游" data-theme-note="夜色舞台" aria-pressed="false"><span class="theme-option__preview theme-option__preview--midnight" aria-hidden="true"><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span></span><span class="theme-option__copy"><span class="theme-option__title">夜游</span><span class="theme-option__note">夜色舞台</span></span></button></div><div class="scheme-grid"><button class="theme-option theme-option--scheme" type="button" data-scheme-value="auto" aria-pressed="false">自动</button><button class="theme-option theme-option--scheme" type="button" data-scheme-value="light" aria-pressed="false">浅</button><button class="theme-option theme-option--scheme" type="button" data-scheme-value="dark" aria-pressed="false">深</button></div></div></div>
       </div>
-      <div class="post-hero-copy">
-        <h1 class="post-title">Hermes: Camofox Browser</h1>
-        <p class="post-deck">Camofox 反检测浏览器本地配置</p>
-      </div>
-
     </header>
-    <div class="post-frame">
-      <div class="post-content"><div class="post-body"><h2>背景</h2>
+    <article class="post-shell">
+      <header class="post-hero">
+        <div class="post-kicker-row"><div class="post-mini-meta"><span class="post-date">2026.04.15</span><div class="popover-root tag-menu" data-popover-root data-popover-name="tags"><button class="tag-chip tag-trigger" type="button" data-popover-trigger data-popover-target="tags" aria-expanded="false" aria-haspopup="dialog" aria-label="#HermesAgent #Camofox #BrowserAutomation #WebScraping #AntiDetection">#HermesAgent +4</button><div class="popover-panel tag-popover" data-popover-panel hidden><div class="tag-list" aria-label="#HermesAgent #Camofox #BrowserAutomation #WebScraping #AntiDetection"><span class="tag-pill">#HermesAgent</span><span class="tag-pill">#Camofox</span><span class="tag-pill">#BrowserAutomation</span><span class="tag-pill">#WebScraping</span><span class="tag-pill">#AntiDetection</span></div></div></div></div></div>
+        <div class="post-hero-copy">
+          <h1 class="post-title">Hermes: Camofox Browser</h1>
+          <p class="post-deck">Camofox 反检测浏览器本地配置</p>
+        </div>
+        
+      </header>
+      <div class="post-frame"><div class="post-content"><div class="post-body"><h2>背景</h2>
 <p>AI Agent 要想真正「上网」，浏览器自动化是绕不开的环节。但市面上的主流方案各有缺点：</p>
-<ul>
-<li><strong>Headless Chrome / CDP</strong> —— 早就被 bot 检测厂商标记殆尽。<code>navigator.webdriver</code>、JA3 指纹、CDP 泄漏等信号一碰就封，429 和 WAF 挑战页接踵而至。</li>
-<li><strong>Browserbase</strong> —— 注册必须绑手机号，且不接受中国大陆号码，第一道门槛就把人挡在外面。</li>
-<li><strong>Browser Use</strong> —— 月费 $40 到 $100 不等，只想试试水的开发者得先交一笔不小的学费。</li>
-<li><strong>Firecrawl</strong> —— 擅长抓取页面和结构化提取，但点击、输入、滚动这类交互操作不是它的主场。</li>
-</ul>
+<ul><li><strong>Headless Chrome / CDP</strong> —— 早就被 bot 检测厂商标记殆尽。<code>navigator.webdriver</code>、JA3 指纹、CDP 泄漏等信号一碰就封，429 和 WAF 挑战页接踵而至。</li><li><strong>Browserbase</strong> —— 注册必须绑手机号，且不接受中国大陆号码，第一道门槛就把人挡在外面。</li><li><strong>Browser Use</strong> —— 月费 $40 到 $100 不等，只想试试水的开发者得先交一笔不小的学费。</li><li><strong>Firecrawl</strong> —— 擅长抓取页面和结构化提取，但点击、输入、滚动这类交互操作不是它的主场。</li></ul>
 <p>于是问题来了：有没有一种<strong>本地即可运行、无需订阅、又能过得去现代反 bot 检测</strong>的方案？</p>
 <h2>核心内容</h2>
 <h3>一、Headless Chrome 为何总吃 429</h3>
 <p>Chrome 的落败不是哪个单一漏洞，而是整套信号叠在一起被识别了：</p>
-<ol>
-<li>
-<p><strong><code>navigator.webdriver</code> 强制暴露</strong><br>
-W3C WebDriver 规范要求自动化浏览器必须设置 <code>navigator.webdriver = true</code>，简直是主动亮身份。<a rel="noreferrer" target="_blank" href="https://w3c.github.io/webdriver/#navigator-webdriver-attribute">[1]</a></p>
-</li>
-<li>
-<p><strong>JavaScript 环境不对劲</strong><br>
-Headless Chromium 在 <code>plugins</code>、<code>permissions</code>、屏幕与视口对齐等细节上和真实浏览器有微妙差异，可被模板攻击精准识别。<a rel="noreferrer" target="_blank" href="https://antoinevastel.com/bot%20detection/2018/01/17/detect-chrome-headless-v2.html">[2]</a><a rel="noreferrer" target="_blank" href="https://www.usenix.org/conference/usenixsecurity19/presentation/schwarz">[3]</a></p>
-</li>
-<li>
-<p><strong>Stealth 插件的悖论</strong><br>
-<code>puppeteer-extra-plugin-stealth</code> 虽能补一些漏洞，但每次注入的补丁顺序和内容都一模一样，反 bot 系统已经把「这套补丁本身」当成了指纹。<a rel="noreferrer" target="_blank" href="https://github.com/jo-inc/camofox-browser">[4]</a></p>
-</li>
-<li>
-<p><strong>TLS / JA3 指纹锁定</strong><br>
-Chromium 用的是 BoringSSL，其 JA3 哈希在数据中心 IP 的加持下很容易被标记为自动化流量。<a rel="noreferrer" target="_blank" href="https://engineering.salesforce.com/tls-fingerprinting-with-ja3-and-jarm/">[5]</a></p>
-</li>
-<li>
-<p><strong>CDP 运行时泄漏</strong><br>
-远程调试端口 9222 的存在、以及 <code>chrome-extension://</code> 探针，都会让网页嗅出「这浏览器被远程控制了」。这些检测方法在实际项目中已被多个 bot 防御商业化应用。</p>
-</li>
-</ol>
+<ol><li><strong><code>navigator.webdriver</code> 强制暴露</strong></li></ol>
+<p>W3C WebDriver 规范要求自动化浏览器必须设置 <code>navigator.webdriver = true</code>，简直是主动亮身份。[[1]](https://w3c.github.io/webdriver/#navigator-webdriver-attribute)</p>
+<ol><li><strong>JavaScript 环境不对劲</strong></li></ol>
+<p>Headless Chromium 在 <code>plugins</code>、<code>permissions</code>、屏幕与视口对齐等细节上和真实浏览器有微妙差异，可被模板攻击精准识别。[[2]](https://antoinevastel.com/bot%20detection/2018/01/17/detect-chrome-headless-v2.html)[[3]](https://www.usenix.org/conference/usenixsecurity19/presentation/schwarz)</p>
+<ol><li><strong>Stealth 插件的悖论</strong></li></ol>
+<p><code>puppeteer-extra-plugin-stealth</code> 虽能补一些漏洞，但每次注入的补丁顺序和内容都一模一样，反 bot 系统已经把「这套补丁本身」当成了指纹。[[4]](https://github.com/jo-inc/camofox-browser)</p>
+<ol><li><strong>TLS / JA3 指纹锁定</strong></li></ol>
+<p>Chromium 用的是 BoringSSL，其 JA3 哈希在数据中心 IP 的加持下很容易被标记为自动化流量。[[5]](https://engineering.salesforce.com/tls-fingerprinting-with-ja3-and-jarm/)</p>
+<ol><li><strong>CDP 运行时泄漏</strong></li></ol>
+<p>远程调试端口 9222 的存在、以及 <code>chrome-extension://</code> 探针，都会让网页嗅出「这浏览器被远程控制了」。这些检测方法在实际项目中已被多个 bot 防御商业化应用。</p>
 <p>一句话：<strong>没有修补的 Chromium 自动化，在现代 Web 面前几乎是透明的。</strong></p>
 <h3>二、Camoufox 为何难被识别</h3>
 <p>Camofox 不是在 Chrome 外面套一层 JavaScript shim，而是直接对 <strong>Firefox Gecko 引擎做 C++ 级修补</strong>：</p>
-<ul>
-<li><code>navigator.webdriver</code> 的移除发生在 <code>Navigator.cpp</code> 原生代码层，JavaScript 看不到任何重写痕迹。</li>
-<li><code>hardwareConcurrency</code>、WebGL vendor/renderer、<code>AudioContext</code> 采样率、屏幕几何信息、WebRTC 硬件枚举等，都从引擎内部直接 spoof。</li>
-<li>网络栈沿用 Mozilla NSS，TLS 指纹与成千上万普通 Firefox 用户没有区别。</li>
-<li>Playwright 只负责「启动」这个被修补过的 Firefox 二进制文件，而不是调用它自带的 Chromium。</li>
-</ul>
-<p>所以页面看到的，不是一个「被抹去自动化标记的浏览器」，而是一个指纹与真实用户难以区分的 Firefox 实体。<a rel="noreferrer" target="_blank" href="https://camoufox.com">[7]</a></p>
+<ul><li><code>navigator.webdriver</code> 的移除发生在 <code>Navigator.cpp</code> 原生代码层，JavaScript 看不到任何重写痕迹。</li><li><code>hardwareConcurrency</code>、WebGL vendor/renderer、<code>AudioContext</code> 采样率、屏幕几何信息、WebRTC 硬件枚举等，都从引擎内部直接 spoof。</li><li>网络栈沿用 Mozilla NSS，TLS 指纹与成千上万普通 Firefox 用户没有区别。</li><li>Playwright 只负责「启动」这个被修补过的 Firefox 二进制文件，而不是调用它自带的 Chromium。</li></ul>
+<p>所以页面看到的，不是一个「被抹去自动化标记的浏览器」，而是一个指纹与真实用户难以区分的 Firefox 实体。[[7]](https://camoufox.com)</p>
 <h3>三、本地免费，交互无阻</h3>
 <p>Camofox 以 REST API 形式跑在本地（默认 <code>http://localhost:9377</code>）。对于 Hermes Agent 用户来说，这是透明的：只要启用了 browser 工具集，<code>browser_navigate</code>、<code>browser_click</code>、<code>browser_type</code> 等操作会自动走这个本地端点，无需手写任何 <code>curl</code> 封装。</p>
 <p>除了底层的反检测能力，它还提供了 Agent 友好的功能：</p>
-<ul>
-<li><strong>Accessibility Snapshot</strong> —— 返回带稳定元素引用（<code>e1</code>, <code>e2</code>…）的页面结构，体积比原始 HTML 小约 90%。</li>
-<li><strong>点击与输入</strong> —— 通过元素引用直接操作，不用手写脆弱的 CSS selector。</li>
-<li><strong>搜索宏</strong> —— <code>@google_search</code>、<code>@youtube_search</code> 等快捷导航。</li>
-<li><strong>会话隔离</strong> —— 按 <code>userId</code> / <code>sessionKey</code> 分离 Cookie 与 Storage，避免状态串扰。</li>
-</ul>
+<ul><li><strong>Accessibility Snapshot</strong> —— 返回带稳定元素引用（<code>e1</code>, <code>e2</code>…）的页面结构，体积比原始 HTML 小约 90%。</li><li><strong>点击与输入</strong> —— 通过元素引用直接操作，不用手写脆弱的 CSS selector。</li><li><strong>搜索宏</strong> —— <code>@google_search</code>、<code>@youtube_search</code> 等快捷导航。</li><li><strong>会话隔离</strong> —— 按 <code>userId</code> / <code>sessionKey</code> 分离 Cookie 与 Storage，避免状态串扰。</li></ul>
 <p>最重要的是，它完全免费。一条 <code>npm install &amp;&amp; npm start</code> 就能跑起来。</p>
 <h2>实践验证</h2>
 <p>近日对 Camofox 进行了三项实测，结果如下：</p>
-<div class="table-wrap"><table>
-<thead>
-<tr>
-<th>测试项</th>
-<th>结果</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Hacker News 首页抓取</td>
-<td>✅ 通过</td>
-<td>成功提取 Top 10 帖子标题、分数、评论数</td>
-</tr>
-<tr>
-<td>Aeon 长文阅读</td>
-<td>✅ 通过</td>
-<td>复杂 DOM 与订阅弹窗未造成阻塞，完整获取文章元数据</td>
-</tr>
-<tr>
-<td>图片 CDN 批量下载（10 张）</td>
-<td>✅ 通过</td>
-<td>snapshot 直接暴露 CDN 链接，curl 秒级下载完成</td>
-</tr>
-</tbody>
-</table></div>
+<div class="table-wrap"><table><thead><tr><th>测试项</th><th>结果</th><th>说明</th></tr></thead><tbody><tr><td>Hacker News 首页抓取</td><td>✅ 通过</td><td>成功提取 Top 10 帖子标题、分数、评论数</td></tr><tr><td>Aeon 长文阅读</td><td>✅ 通过</td><td>复杂 DOM 与订阅弹窗未造成阻塞，完整获取文章元数据</td></tr><tr><td>图片 CDN 批量下载（10 张）</td><td>✅ 通过</td><td>snapshot 直接暴露 CDN 链接，curl 秒级下载完成</td></tr></tbody></table></div>
 <p>对比之下，此前用 Headless Chrome 和远程 CDP 连接同一批站点时，几乎全是 429。Camofox 在零额外配置的情况下直接通过，差异很明显。</p>
 <h2>运维贴士：macOS 开机自启</h2>
 <p>对于 Hermes Agent 用户来说，最好让 Camofox 随系统启动而运行，省得每次手动开终端。macOS 下可通过 <code>LaunchAgent</code> 实现：</p>
-<pre><code class="language-xml hljs"><span class="hljs-comment">&lt;!-- ~/Library/LaunchAgents/ai.hermes.camofox.plist --&gt;</span>
-<span class="hljs-comment">&lt;!-- 请将 /Users/mac/camofox-browser 替换为你的实际路径 --&gt;</span>
-<span class="hljs-meta">&lt;?xml version=<span class="hljs-string">"1.0"</span> encoding=<span class="hljs-string">"UTF-8"</span>?&gt;</span>
-<span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">plist</span> <span class="hljs-keyword">PUBLIC</span> <span class="hljs-string">"-//Apple//DTD PLIST 1.0//EN"</span> ...&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">plist</span> <span class="hljs-attr">version</span>=<span class="hljs-string">"1.0"</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">dict</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">key</span>&gt;</span>Label<span class="hljs-tag">&lt;/<span class="hljs-name">key</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">string</span>&gt;</span>ai.hermes.camofox<span class="hljs-tag">&lt;/<span class="hljs-name">string</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">key</span>&gt;</span>ProgramArguments<span class="hljs-tag">&lt;/<span class="hljs-name">key</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">array</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">string</span>&gt;</span>/opt/homebrew/bin/node<span class="hljs-tag">&lt;/<span class="hljs-name">string</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">string</span>&gt;</span>/Users/mac/camofox-browser/server.js<span class="hljs-tag">&lt;/<span class="hljs-name">string</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">array</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">key</span>&gt;</span>WorkingDirectory<span class="hljs-tag">&lt;/<span class="hljs-name">key</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">string</span>&gt;</span>/Users/mac/camofox-browser<span class="hljs-tag">&lt;/<span class="hljs-name">string</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">key</span>&gt;</span>RunAtLoad<span class="hljs-tag">&lt;/<span class="hljs-name">key</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">true</span>/&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">key</span>&gt;</span>KeepAlive<span class="hljs-tag">&lt;/<span class="hljs-name">key</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">true</span>/&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">dict</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">plist</span>&gt;</span>
-</code></pre>
+<pre><code>&lt;!-- ~/Library/LaunchAgents/ai.hermes.camofox.plist --&gt;
+&lt;!-- 请将 /Users/mac/camofox-browser 替换为你的实际路径 --&gt;
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE plist PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; ...&gt;
+&lt;plist version=&quot;1.0&quot;&gt;
+&lt;dict&gt;
+    &lt;key&gt;Label&lt;/key&gt;
+    &lt;string&gt;ai.hermes.camofox&lt;/string&gt;
+    &lt;key&gt;ProgramArguments&lt;/key&gt;
+    &lt;array&gt;
+        &lt;string&gt;/opt/homebrew/bin/node&lt;/string&gt;
+        &lt;string&gt;/Users/mac/camofox-browser/server.js&lt;/string&gt;
+    &lt;/array&gt;
+    &lt;key&gt;WorkingDirectory&lt;/key&gt;
+    &lt;string&gt;/Users/mac/camofox-browser&lt;/string&gt;
+    &lt;key&gt;RunAtLoad&lt;/key&gt;
+    &lt;true/&gt;
+    &lt;key&gt;KeepAlive&lt;/key&gt;
+    &lt;true/&gt;
+&lt;/dict&gt;
+&lt;/plist&gt;</code></pre>
 <p>加载命令：</p>
-<pre><code class="language-bash hljs">launchctl load ~/Library/LaunchAgents/ai.hermes.camofox.plist
-</code></pre>
+<pre><code>launchctl load ~/Library/LaunchAgents/ai.hermes.camofox.plist</code></pre>
 <p>日常可配几个 Fish alias 以便查看状态：</p>
-<pre><code class="language-fish hljs language-jboss-cli"><span class="hljs-keyword">alias</span> camofox-status 'lsof -i tcp<span class="hljs-function">:9377</span> 2&gt;<span class="hljs-string">/dev/null</span> &amp;&amp; <span class="hljs-keyword">echo</span> <span class="hljs-string">"running"</span> || <span class="hljs-keyword">echo</span> <span class="hljs-string">"stopped"</span>'
-<span class="hljs-keyword">alias</span> camofox-logs   'tail -f ~<span class="hljs-string">/.hermes/logs/camofox.log</span>'
-<span class="hljs-keyword">alias</span> camofox-restart 'launchctl unload ~<span class="hljs-string">/Library/LaunchAgents/ai.hermes.camofox.plist</span>; sleep 1; launchctl load ~<span class="hljs-string">/Library/LaunchAgents/ai.hermes.camofox.plist</span>'
-</code></pre>
+<pre><code>alias camofox-status &#x27;lsof -i tcp:9377 2&gt;/dev/null &amp;&amp; echo &quot;running&quot; || echo &quot;stopped&quot;&#x27;
+alias camofox-logs   &#x27;tail -f ~/.hermes/logs/camofox.log&#x27;
+alias camofox-restart &#x27;launchctl unload ~/Library/LaunchAgents/ai.hermes.camofox.plist; sleep 1; launchctl load ~/Library/LaunchAgents/ai.hermes.camofox.plist&#x27;</code></pre>
 <h2>总结</h2>
 <p><strong>关键要点：</strong></p>
-<ul>
-<li>Headless Chrome 的检测面太广，WAF 与 bot 防御系统已能轻易识别其自动化信号。</li>
-<li>Browserbase、Browser Use、Firecrawl 等云方案虽强，但或受注册限制、或价格不菲、或场景不符。</li>
-<li>Camoufox 以 C++ 级 Firefox 补丁实现了低检测率的自动化浏览，本地零成本即可运行。</li>
-<li>配合 LaunchAgent 可实现 macOS 开机自启，让 Hermes Agent 随时拥有可靠的浏览器能力。</li>
-</ul>
+<ul><li>Headless Chrome 的检测面太广，WAF 与 bot 防御系统已能轻易识别其自动化信号。</li><li>Browserbase、Browser Use、Firecrawl 等云方案虽强，但或受注册限制、或价格不菲、或场景不符。</li><li>Camoufox 以 C++ 级 Firefox 补丁实现了低检测率的自动化浏览，本地零成本即可运行。</li><li>配合 LaunchAgent 可实现 macOS 开机自启，让 Hermes Agent 随时拥有可靠的浏览器能力。</li></ul>
 <p><strong>适用场景：</strong></p>
-<ul>
-<li>需要频繁进行交互式网页操作的本地 Agent 工作流</li>
-<li>对订阅成本敏感、或无法注册海外云服务的开发者</li>
-<li>需要绕过中等强度反 bot 检测（Cloudflare、Fortuna 等）的自动化任务</li>
-</ul>
+<ul><li>需要频繁进行交互式网页操作的本地 Agent 工作流</li><li>对订阅成本敏感、或无法注册海外云服务的开发者</li><li>需要绕过中等强度反 bot 检测（Cloudflare、Fortuna 等）的自动化任务</li></ul>
 <p><strong>不适用场景：</strong></p>
-<ul>
-<li>需要大规模分布式并发、或企业级 SLA 保障的生产环境（仍需评估云浏览器）</li>
-<li>目标站点采用高级行为生物识别（鼠标轨迹、按键动力学分析）的场景</li>
-</ul>
+<ul><li>需要大规模分布式并发、或企业级 SLA 保障的生产环境（仍需评估云浏览器）</li><li>目标站点采用高级行为生物识别（鼠标轨迹、按键动力学分析）的场景</li></ul>
 <hr>
 <h2>参考</h2>
-<ul>
-<li><a rel="noreferrer" target="_blank" href="https://w3c.github.io/webdriver/#navigator-webdriver-attribute">W3C WebDriver Specification — Navigator WebDriver Attribute</a></li>
-<li><a rel="noreferrer" target="_blank" href="https://antoinevastel.com/bot%20detection/2018/01/17/detect-chrome-headless-v2.html">Vastel, A. "Detecting Chrome Headless / new techniques." (2018)</a></li>
-<li><a rel="noreferrer" target="_blank" href="https://www.usenix.org/conference/usenixsecurity19/presentation/schwarz">Schwarz et al. "JavaScript Template Attacks." USENIX Security 2019</a></li>
-<li><a rel="noreferrer" target="_blank" href="https://github.com/jo-inc/camofox-browser">camofox-browser README — "Stealth plugins become the fingerprint."</a></li>
-<li><a rel="noreferrer" target="_blank" href="https://engineering.salesforce.com/tls-fingerprinting-with-ja3-and-jarm/">Althouse et al. "TLS Fingerprinting with JA3 and JARM." Salesforce Engineering</a></li>
-<li>实际项目中的 CDP 探针与远程调试端口检测实践。</li>
-<li><a rel="noreferrer" target="_blank" href="https://camoufox.com">Camoufox Official Documentation</a></li>
-</ul></div></div>
-    </div>
-  </article>
-</main><div class="page-scrim" data-page-scrim hidden></div><script>
-(() => {
-  const appearanceKey = 'blog-appearance-mode';
-  const schemeKey = 'blog-color-scheme';
-  const root = document.documentElement;
-  const doc = document;
-  const body = doc.body;
-  const scrim = doc.querySelector('[data-page-scrim]');
-  let portalLayer = doc.querySelector('[data-popover-layer]');
-  if (!(portalLayer instanceof HTMLElement)) {
-    portalLayer = doc.createElement('div');
-    portalLayer.className = 'popover-layer';
-    portalLayer.setAttribute('data-popover-layer', '');
-    body.appendChild(portalLayer);
-  }
-  let lightboxRoot = doc.querySelector('[data-blog-image-lightbox]');
-  if (!(lightboxRoot instanceof HTMLElement)) {
-    lightboxRoot = doc.createElement('div');
-    lightboxRoot.className = 'blog-image-lightbox';
-    lightboxRoot.hidden = true;
-    lightboxRoot.setAttribute('data-blog-image-lightbox', '');
-    lightboxRoot.innerHTML = '<button type="button" class="blog-image-lightbox__scrim" data-blog-image-lightbox-close aria-label="Close image preview"></button><div class="blog-image-lightbox__panel" role="dialog" aria-modal="true" aria-label="Image preview"><div class="blog-image-lightbox__toolbar"><a class="markdown-media-action" href="" download data-blog-image-lightbox-download>download</a><a class="markdown-media-action" href="" target="_blank" rel="noreferrer" data-blog-image-lightbox-open>open</a><button type="button" class="markdown-media-action" data-blog-image-lightbox-close data-blog-image-lightbox-toolbar-close="true">close</button></div><img class="blog-image-lightbox__image" alt="" data-blog-image-lightbox-image><p class="blog-image-lightbox__caption" data-blog-image-lightbox-caption hidden></p></div>';
-    body.appendChild(lightboxRoot);
-  }
-  const lightboxImage = lightboxRoot.querySelector('[data-blog-image-lightbox-image]');
-  const lightboxCaption = lightboxRoot.querySelector('[data-blog-image-lightbox-caption]');
-  const lightboxDownload = lightboxRoot.querySelector('[data-blog-image-lightbox-download]');
-  const lightboxOpen = lightboxRoot.querySelector('[data-blog-image-lightbox-open]');
-  let bodyOverflowBeforeLightbox = '';
-  doc.querySelectorAll('[data-popover-root]').forEach((rootElement) => {
-    if (!(rootElement instanceof HTMLElement)) return;
-    const panel = rootElement.querySelector('[data-popover-panel]');
-    const name = rootElement.dataset.popoverName || '';
-    if (panel instanceof HTMLElement && name) {
-      panel.dataset.popoverPanelOwner = name;
-    }
-  });
-  const aliases = { paper: 'poster', list: 'rail' };
-  const allowed = new Set(['rail', 'poster', 'editorial', 'midnight']);
-  const systemSchemeQuery = window.matchMedia('(prefers-color-scheme: dark)');
-  const runViewTransition = (mutate) => {
-    if (typeof doc.startViewTransition === 'function') {
-      doc.startViewTransition(() => {
-        mutate();
-      });
-      return;
-    }
-    mutate();
-  };
-
-  const isMobileSheet = () => window.matchMedia('(max-width: 860px)').matches;
-  const getOpenPopovers = () => Array.from(doc.querySelectorAll('[data-popover-root][data-open="true"]'));
-  const getPopoverParts = (rootElement) => {
-    const owner = rootElement.dataset.popoverName || '';
-    return {
-      trigger: rootElement.querySelector('[data-popover-trigger]'),
-      panel: owner
-        ? doc.querySelector('[data-popover-panel-owner="' + owner + '"]')
-        : rootElement.querySelector('[data-popover-panel]'),
-    };
-  };
-
-  function normalizeAppearance(value) {
-    const normalized = aliases[value ?? ''] ?? value ?? 'rail';
-    return allowed.has(normalized) ? normalized : 'rail';
-  }
-
-  function syncOverlayState() {
-    const active = isMobileSheet() && getOpenPopovers().length > 0;
-    if (active) {
-      body.dataset.overlayOpen = 'true';
-    } else {
-      delete body.dataset.overlayOpen;
-    }
-    if (scrim instanceof HTMLElement) {
-      scrim.hidden = !active;
-    }
-  }
-
-  function updateThemeButtons() {
-    const activeAppearance = normalizeAppearance(root.dataset.appearance);
-    const activeScheme = root.dataset.colorSchemeMode || 'auto';
-    doc.querySelectorAll('[data-theme-value]').forEach((button) => {
-      button.setAttribute('aria-pressed', String(button.getAttribute('data-theme-value') === activeAppearance));
-    });
-    doc.querySelectorAll('[data-scheme-value]').forEach((button) => {
-      button.setAttribute('aria-pressed', String(button.getAttribute('data-scheme-value') === activeScheme));
-    });
-    const activeThemeButton = doc.querySelector('[data-theme-value="' + activeAppearance + '"]');
-    doc.querySelectorAll('[data-active-theme-label]').forEach((label) => {
-      label.textContent = activeThemeButton?.getAttribute('data-theme-label') || '轨道';
-    });
-  }
-
-  function closeLightbox() {
-    if (!(lightboxRoot instanceof HTMLElement)) return;
-    lightboxRoot.hidden = true;
-    delete body.dataset.imageLightboxOpen;
-    body.style.overflow = bodyOverflowBeforeLightbox;
-    if (lightboxImage instanceof HTMLImageElement) {
-      lightboxImage.removeAttribute('src');
-      lightboxImage.alt = '';
-    }
-    if (lightboxCaption instanceof HTMLElement) {
-      lightboxCaption.textContent = '';
-      lightboxCaption.hidden = true;
-    }
-    if (lightboxDownload instanceof HTMLAnchorElement) {
-      lightboxDownload.href = '';
-    }
-    if (lightboxOpen instanceof HTMLAnchorElement) {
-      lightboxOpen.href = '';
-    }
-  }
-
-  function openLightbox(trigger) {
-    if (!(lightboxRoot instanceof HTMLElement)) return;
-    const src = trigger.getAttribute('data-blog-image-src') || trigger.getAttribute('href') || '';
-    if (!src) return;
-    const alt = trigger.getAttribute('data-blog-image-alt') || '';
-    closeAllPopovers();
-    bodyOverflowBeforeLightbox = body.style.overflow;
-    body.style.overflow = 'hidden';
-    body.dataset.imageLightboxOpen = 'true';
-    if (lightboxImage instanceof HTMLImageElement) {
-      lightboxImage.src = src;
-      lightboxImage.alt = alt;
-    }
-    if (lightboxCaption instanceof HTMLElement) {
-      lightboxCaption.textContent = alt;
-      lightboxCaption.hidden = !alt;
-    }
-    if (lightboxDownload instanceof HTMLAnchorElement) {
-      lightboxDownload.href = src;
-    }
-    if (lightboxOpen instanceof HTMLAnchorElement) {
-      lightboxOpen.href = src;
-    }
-    lightboxRoot.hidden = false;
-  }
-
-  function setAppearance(value) {
-    const normalized = normalizeAppearance(value);
-    if (normalized === normalizeAppearance(root.dataset.appearance)) {
-      closeAllPopovers();
-      updateThemeButtons();
-      return;
-    }
-    runViewTransition(() => {
-      root.dataset.appearance = normalized;
-      window.localStorage.setItem(appearanceKey, normalized);
-      closeAllPopovers();
-      updateThemeButtons();
-    });
-  }
-
-  function setScheme(value) {
-    const nextMode = value === 'auto' ? 'auto' : value;
-    if ((root.dataset.colorSchemeMode || 'auto') === nextMode) {
-      closeAllPopovers();
-      updateThemeButtons();
-      return;
-    }
-    runViewTransition(() => {
-      if (value === 'auto') {
-        root.dataset.colorScheme = systemSchemeQuery.matches ? 'dark' : 'light';
-        root.dataset.colorSchemeMode = 'auto';
-        window.localStorage.removeItem(schemeKey);
-      } else {
-        root.dataset.colorScheme = value;
-        root.dataset.colorSchemeMode = value;
-        window.localStorage.setItem(schemeKey, value);
-      }
-      closeAllPopovers();
-      updateThemeButtons();
-    });
-  }
-
-  function clearPanelPosition(panel) {
-    panel.style.left = '';
-    panel.style.top = '';
-    panel.style.right = '';
-    panel.style.bottom = '';
-    panel.style.maxHeight = '';
-  }
-
-  function movePanelIntoLayer(panel) {
-    if (portalLayer instanceof HTMLElement && panel.parentElement !== portalLayer) {
-      portalLayer.appendChild(panel);
-    }
-  }
-
-  function restorePanel(rootElement, panel) {
-    if (panel.parentElement !== rootElement) {
-      rootElement.appendChild(panel);
-    }
-    delete panel.dataset.open;
-    delete panel.dataset.popoverMode;
-  }
-
-  function closePopover(rootElement) {
-    if (!(rootElement instanceof HTMLElement)) return;
-    const { trigger, panel } = getPopoverParts(rootElement);
-    if (!(trigger instanceof HTMLElement) || !(panel instanceof HTMLElement)) return;
-    rootElement.dataset.open = 'false';
-    delete rootElement.dataset.mode;
-    trigger.setAttribute('aria-expanded', 'false');
-    clearPanelPosition(panel);
-    panel.hidden = true;
-    restorePanel(rootElement, panel);
-    syncOverlayState();
-  }
-
-  function closeAllPopovers(exceptElement) {
-    getOpenPopovers().forEach((node) => {
-      if (!exceptElement || node !== exceptElement) {
-        closePopover(node);
-      }
-    });
-  }
-
-  function positionPopover(rootElement) {
-    if (!(rootElement instanceof HTMLElement)) return;
-    const { trigger, panel } = getPopoverParts(rootElement);
-    if (!(trigger instanceof HTMLElement) || !(panel instanceof HTMLElement)) return;
-    movePanelIntoLayer(panel);
-    panel.hidden = false;
-    panel.dataset.open = 'true';
-    clearPanelPosition(panel);
-    if (isMobileSheet()) {
-      rootElement.dataset.mode = 'sheet';
-      panel.dataset.popoverMode = 'sheet';
-      panel.style.maxHeight = Math.floor(window.innerHeight * 0.68) + 'px';
-      syncOverlayState();
-      return;
-    }
-    rootElement.dataset.mode = 'popover';
-    panel.dataset.popoverMode = 'popover';
-    const viewportPadding = 12;
-    const gap = 10;
-    const maxHeight = Math.max(180, window.innerHeight - viewportPadding * 2);
-    panel.style.maxHeight = maxHeight + 'px';
-    const triggerRect = trigger.getBoundingClientRect();
-    const panelRect = panel.getBoundingClientRect();
-    const panelWidth = Math.max(panel.offsetWidth, panel.clientWidth, panelRect.width);
-    const panelHeight = Math.max(panel.offsetHeight, panel.clientHeight, panelRect.height);
-    let left = triggerRect.left;
-    if (left + panelWidth > window.innerWidth - viewportPadding) {
-      left = window.innerWidth - viewportPadding - panelWidth;
-    }
-    if (left < viewportPadding) {
-      left = viewportPadding;
-    }
-    let top = triggerRect.bottom + gap;
-    if (top + panelHeight > window.innerHeight - viewportPadding) {
-      top = Math.max(viewportPadding, triggerRect.top - panelHeight - gap);
-    }
-    if (top < viewportPadding) {
-      top = viewportPadding;
-    }
-    panel.style.left = Math.round(left) + 'px';
-    panel.style.top = Math.round(top) + 'px';
-    syncOverlayState();
-  }
-
-  function openPopover(rootElement) {
-    if (!(rootElement instanceof HTMLElement)) return;
-    const { trigger, panel } = getPopoverParts(rootElement);
-    if (!(trigger instanceof HTMLElement) || !(panel instanceof HTMLElement)) return;
-    closeAllPopovers(rootElement);
-    rootElement.dataset.open = 'true';
-    trigger.setAttribute('aria-expanded', 'true');
-    panel.hidden = false;
-    positionPopover(rootElement);
-    window.requestAnimationFrame(() => positionPopover(rootElement));
-  }
-
-  doc.addEventListener('click', (event) => {
-    const target = event.target instanceof Element ? event.target : null;
-    if (!target) return;
-    const modifiedClick = event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0;
-
-    if (target.closest('[data-blog-image-lightbox-close]')) {
-      event.preventDefault();
-      closeLightbox();
-      return;
-    }
-
-    if (!modifiedClick && !target.closest('[data-blog-image-action]')) {
-      const imageTrigger = target.closest('[data-blog-image-lightbox-trigger="true"]');
-      if (imageTrigger instanceof HTMLElement) {
-        event.preventDefault();
-        openLightbox(imageTrigger);
-        return;
-      }
-    }
-
-    if (scrim instanceof HTMLElement && target === scrim) {
-      closeAllPopovers();
-      return;
-    }
-
-    const appearanceButton = target.closest('[data-theme-value]');
-    if (appearanceButton instanceof HTMLElement) {
-      event.preventDefault();
-      const value = appearanceButton.getAttribute('data-theme-value');
-      if (value) setAppearance(value);
-      return;
-    }
-
-    const schemeButton = target.closest('[data-scheme-value]');
-    if (schemeButton instanceof HTMLElement) {
-      event.preventDefault();
-      const value = schemeButton.getAttribute('data-scheme-value');
-      if (value) setScheme(value);
-      return;
-    }
-
-    const trigger = target.closest('[data-popover-trigger]');
-    if (trigger instanceof HTMLElement) {
-      event.preventDefault();
-      const rootElement = trigger.closest('[data-popover-root]');
-      if (!(rootElement instanceof HTMLElement)) return;
-      if (rootElement.dataset.open === 'true') {
-        closePopover(rootElement);
-      } else {
-        openPopover(rootElement);
-      }
-      return;
-    }
-
-    if (!target.closest('[data-popover-panel]')) {
-      closeAllPopovers();
-    }
-  });
-
-  doc.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') {
-      if (body.dataset.imageLightboxOpen === 'true') {
-        closeLightbox();
-        return;
-      }
-      closeAllPopovers();
-    }
-  });
-
-  window.addEventListener('resize', () => {
-    getOpenPopovers().forEach((node) => positionPopover(node));
-    syncOverlayState();
-  }, { passive: true });
-
-  window.addEventListener('scroll', () => {
-    if (isMobileSheet()) return;
-    getOpenPopovers().forEach((node) => positionPopover(node));
-  }, { passive: true, capture: true });
-
-  systemSchemeQuery.addEventListener('change', () => {
-    if ((root.dataset.colorSchemeMode || 'auto') !== 'auto') return;
-    root.dataset.colorScheme = systemSchemeQuery.matches ? 'dark' : 'light';
-    updateThemeButtons();
-  });
-
-  root.dataset.appearance = normalizeAppearance(root.dataset.appearance || window.localStorage.getItem(appearanceKey) || 'rail');
-  updateThemeButtons();
-  syncOverlayState();
-})();
-</script></body>
+<ul><li><a href="https://w3c.github.io/webdriver/#navigator-webdriver-attribute">W3C WebDriver Specification — Navigator WebDriver Attribute</a></li><li><a href="https://antoinevastel.com/bot%20detection/2018/01/17/detect-chrome-headless-v2.html">Vastel, A. &quot;Detecting Chrome Headless / new techniques.&quot; (2018)</a></li><li><a href="https://www.usenix.org/conference/usenixsecurity19/presentation/schwarz">Schwarz et al. &quot;JavaScript Template Attacks.&quot; USENIX Security 2019</a></li><li><a href="https://github.com/jo-inc/camofox-browser">camofox-browser README — &quot;Stealth plugins become the fingerprint.&quot;</a></li><li><a href="https://engineering.salesforce.com/tls-fingerprinting-with-ja3-and-jarm/">Althouse et al. &quot;TLS Fingerprinting with JA3 and JARM.&quot; Salesforce Engineering</a></li><li>实际项目中的 CDP 探针与远程调试端口检测实践。</li><li><a href="https://camoufox.com">Camoufox Official Documentation</a></li></ul></div></div></div>
+    </article>
+  </main><div class="page-scrim" data-page-scrim hidden></div><script src="/assets/blog.3f4505d6ae.js" defer></script>
+</body>
 </html>

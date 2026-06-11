@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
@@ -6,547 +6,148 @@
   <title>Hermes AI 工具链配置指南</title>
   <meta name="description" content="常用外部依赖与复现线索">
   <meta name="theme-color" content="#f6efe4">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Source+Serif+4:wght@400;500;600;700&display=swap">
   <meta property="og:title" content="Hermes AI 工具链配置指南">
   <meta property="og:description" content="常用外部依赖与复现线索">
   <meta property="og:type" content="article">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://codingezio.github.io/posts/hermes-ai/">
-  <link rel="alternate" type="application/rss+xml" title="Hermes AI 工具链配置指南 RSS" href="/rss.xml">
+  <link rel="alternate" type="application/rss+xml" title="Posts RSS" href="/rss.xml">
   <script>
 (() => {
   const root = document.documentElement;
-  const aliases = { paper: 'poster', list: 'rail' };
-  const allowed = new Set(['rail', 'poster', 'editorial', 'midnight']);
-  const storedAppearance = window.localStorage.getItem('blog-appearance-mode');
-  const normalizedAppearance = aliases[storedAppearance ?? ''] ?? storedAppearance ?? root.dataset.appearance ?? 'rail';
-  root.dataset.appearance = allowed.has(normalizedAppearance) ? normalizedAppearance : 'rail';
-  const storedScheme = window.localStorage.getItem('blog-color-scheme');
-  if (storedScheme === 'light' || storedScheme === 'dark') {
+  const aliases = { paper: "poster", list: "rail" };
+  const allowed = new Set(["rail", "poster", "editorial", "midnight"]);
+  const storedAppearance = window.localStorage.getItem("blog-appearance-mode");
+  const normalizedAppearance = aliases[storedAppearance ?? ""] ?? storedAppearance ?? root.dataset.appearance ?? "rail";
+  root.dataset.appearance = allowed.has(normalizedAppearance) ? normalizedAppearance : "rail";
+  const storedScheme = window.localStorage.getItem("blog-color-scheme");
+  if (storedScheme === "light" || storedScheme === "dark") {
     root.dataset.colorScheme = storedScheme;
     root.dataset.colorSchemeMode = storedScheme;
   } else {
-    root.dataset.colorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    root.dataset.colorSchemeMode = 'auto';
+    root.dataset.colorScheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    root.dataset.colorSchemeMode = "auto";
   }
 })();
-</script>
-  <link rel="preload" href="/assets/blog.ade89a59dd.css" as="style">
-  <link rel="stylesheet" href="/assets/blog.ade89a59dd.css">
+  </script>
+  
+  <link rel="preload" href="/assets/blog.531707a620.css" as="style">
+  <link rel="stylesheet" href="/assets/blog.531707a620.css">
 </head>
-<body class="page page--post" data-page-kind="post"><main class="page-shell page-shell--post">
-  <header class="site-nav">
-    <a class="site-title site-home-link" href="/">Posts</a>
-    <div class="site-tools">
-      <a class="toolbar-link" href="/rss.xml">RSS</a>
-      <div class="popover-root toolbar-popover" data-popover-root data-popover-name="theme">
-  <button class="toolbar-button" type="button" data-popover-trigger data-popover-target="theme" aria-expanded="false" aria-haspopup="dialog">
-    <span data-theme-label>轨道</span>
-  </button>
-  <div class="popover-panel theme-popover" data-popover-panel hidden>
-    <div class="appearance-grid">
-      <button class="theme-option" type="button" data-theme-value="rail" data-theme-label="轨道" aria-pressed="false">轨道</button>
-      <button class="theme-option" type="button" data-theme-value="poster" data-theme-label="海报" aria-pressed="false">海报</button>
-      <button class="theme-option" type="button" data-theme-value="editorial" data-theme-label="杂志" aria-pressed="false">杂志</button>
-      <button class="theme-option" type="button" data-theme-value="midnight" data-theme-label="夜游" aria-pressed="false">夜游</button>
-    </div>
-    <div class="scheme-grid">
-      <button class="theme-option theme-option--scheme" type="button" data-scheme-value="auto" aria-pressed="false">自动</button>
-      <button class="theme-option theme-option--scheme" type="button" data-scheme-value="light" aria-pressed="false">浅</button>
-      <button class="theme-option theme-option--scheme" type="button" data-scheme-value="dark" aria-pressed="false">深</button>
-    </div>
-  </div>
-</div>
-    </div>
-  </header>
-  <article class="post-shell">
-    <header class="post-hero">
-      <div class="post-kicker-row">
-        <a class="post-home-link" href="/">Index</a>
-        <div class="post-mini-meta">
-  <span class="post-date">2026.04.11</span>
-  <div class="popover-root tag-menu" data-popover-root data-popover-name="tags">
-  <button class="tag-chip tag-trigger" type="button" data-popover-trigger data-popover-target="tags" aria-expanded="false" aria-haspopup="dialog">#HermesAgent +3</button>
-  <div class="popover-panel tag-popover" data-popover-panel hidden>
-    <div class="tag-list" aria-label="#HermesAgent #AI #Tools #Setup"><span class="tag-pill">#HermesAgent</span><span class="tag-pill">#AI</span><span class="tag-pill">#Tools</span><span class="tag-pill">#Setup</span></div>
-  </div>
-</div>
-</div>
+<body class="page page--post" data-page-kind="post">
+  <main class="page-shell page-shell--post">
+    <header class="site-nav">
+      <a class="site-title site-home-link" href="/">Index</a>
+      <div class="site-tools">
+        <a class="toolbar-link toolbar-link--feed" href="/rss.xml">RSS</a>
+        <div class="popover-root toolbar-popover" data-popover-root data-popover-name="theme"><button class="toolbar-button toolbar-button--theme" type="button" data-popover-trigger data-popover-target="theme" aria-expanded="false" aria-haspopup="dialog"><span class="theme-trigger__preview" aria-hidden="true"></span><span class="theme-trigger__label" data-active-theme-label>轨道</span></button><div class="popover-panel theme-popover" data-popover-panel hidden><div class="appearance-grid"><button class="theme-option theme-option--appearance" type="button" data-theme-value="rail" data-theme-label="轨道" data-theme-note="单列轨道" aria-pressed="false"><span class="theme-option__preview theme-option__preview--rail" aria-hidden="true"><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span></span><span class="theme-option__copy"><span class="theme-option__title">轨道</span><span class="theme-option__note">单列轨道</span></span></button><button class="theme-option theme-option--appearance" type="button" data-theme-value="poster" data-theme-label="海报" data-theme-note="拼贴海报" aria-pressed="false"><span class="theme-option__preview theme-option__preview--poster" aria-hidden="true"><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span></span><span class="theme-option__copy"><span class="theme-option__title">海报</span><span class="theme-option__note">拼贴海报</span></span></button><button class="theme-option theme-option--appearance" type="button" data-theme-value="editorial" data-theme-label="杂志" data-theme-note="折页阅读" aria-pressed="false"><span class="theme-option__preview theme-option__preview--editorial" aria-hidden="true"><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span></span><span class="theme-option__copy"><span class="theme-option__title">杂志</span><span class="theme-option__note">折页阅读</span></span></button><button class="theme-option theme-option--appearance" type="button" data-theme-value="midnight" data-theme-label="夜游" data-theme-note="夜色舞台" aria-pressed="false"><span class="theme-option__preview theme-option__preview--midnight" aria-hidden="true"><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span></span><span class="theme-option__copy"><span class="theme-option__title">夜游</span><span class="theme-option__note">夜色舞台</span></span></button></div><div class="scheme-grid"><button class="theme-option theme-option--scheme" type="button" data-scheme-value="auto" aria-pressed="false">自动</button><button class="theme-option theme-option--scheme" type="button" data-scheme-value="light" aria-pressed="false">浅</button><button class="theme-option theme-option--scheme" type="button" data-scheme-value="dark" aria-pressed="false">深</button></div></div></div>
       </div>
-      <div class="post-hero-copy">
-        <p class="post-order">02</p>
-        <h1 class="post-title">Hermes AI 工具链配置指南</h1>
-        <p class="post-deck">常用外部依赖与复现线索</p>
-      </div>
-
     </header>
-    <div class="post-frame">
-      <div class="post-content"><div class="post-body"><p><strong>常用外部依赖与复现线索</strong></p>
-<hr>
-<h2>背景</h2>
+    <article class="post-shell">
+      <header class="post-hero">
+        <div class="post-kicker-row"><div class="post-mini-meta"><span class="post-date">2026.04.11</span><div class="popover-root tag-menu" data-popover-root data-popover-name="tags"><button class="tag-chip tag-trigger" type="button" data-popover-trigger data-popover-target="tags" aria-expanded="false" aria-haspopup="dialog" aria-label="#HermesAgent #AI #Tools #Setup">#HermesAgent +3</button><div class="popover-panel tag-popover" data-popover-panel hidden><div class="tag-list" aria-label="#HermesAgent #AI #Tools #Setup"><span class="tag-pill">#HermesAgent</span><span class="tag-pill">#AI</span><span class="tag-pill">#Tools</span><span class="tag-pill">#Setup</span></div></div></div></div></div>
+        <div class="post-hero-copy">
+          <h1 class="post-title">Hermes AI 工具链配置指南</h1>
+          <p class="post-deck">常用外部依赖与复现线索</p>
+        </div>
+        
+      </header>
+      <div class="post-frame"><div class="post-content"><div class="post-body"><h2>背景</h2>
 <p>追踪让 Hermes Agent 在 macOS 上正常工作的所有外部依赖，方便新机器快速复现环境。</p>
 <hr>
 <h2>已安装组件</h2>
-<div class="table-wrap"><table>
-<thead>
-<tr>
-<th>组件</th>
-<th>功用</th>
-<th>安装方法</th>
-<th>日期</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Kimi API</strong></td>
-<td>AI 模型访问</td>
-<td>Kimi For Coding App + User-Agent fix</td>
-<td>2026-04-11</td>
-</tr>
-<tr>
-<td><strong>Google Chrome</strong></td>
-<td>浏览器自动化</td>
-<td>官网下载</td>
-<td>-</td>
-</tr>
-<tr>
-<td><strong>nowplaying-cli</strong></td>
-<td>全局媒体控制</td>
-<td><code>brew install nowplaying-cli</code></td>
-<td>2026-04-11</td>
-</tr>
-<tr>
-<td><strong>辅助功能权限</strong></td>
-<td>允许系统按键</td>
-<td>系统设置 → 隐私与安全</td>
-<td>2026-04-11</td>
-</tr>
-<tr>
-<td><strong>Fallback 配置</strong></td>
-<td>模型自动切换</td>
-<td>OpenRouter → Codex → Copilot</td>
-<td>2026-04-11</td>
-</tr>
-</tbody>
-</table></div>
+<div class="table-wrap"><table><thead><tr><th>组件</th><th>功用</th><th>安装方法</th><th>日期</th></tr></thead><tbody><tr><td><strong>Kimi API</strong></td><td>AI 模型访问</td><td>Kimi For Coding App + User-Agent fix</td><td>2026-04-11</td></tr><tr><td><strong>Google Chrome</strong></td><td>浏览器自动化</td><td>官网下载</td><td>-</td></tr><tr><td><strong>nowplaying-cli</strong></td><td>全局媒体控制</td><td><code>brew install nowplaying-cli</code></td><td>2026-04-11</td></tr><tr><td><strong>辅助功能权限</strong></td><td>允许系统按键</td><td>系统设置 -&gt; 隐私与安全</td><td>2026-04-11</td></tr><tr><td><strong>Fallback 配置</strong></td><td>模型自动切换</td><td>OpenRouter -&gt; Codex -&gt; Copilot</td><td>2026-04-11</td></tr></tbody></table></div>
 <hr>
 <h2>工具详解</h2>
 <h3>yt-dlp + ffmpeg</h3>
 <p><strong>yt-dlp 者，视频下载之利器也</strong>，支持 YouTube、Bilibili 等千余种站点。</p>
 <p><strong>常用场景</strong>：</p>
-<ul>
-<li><code>yt-dlp "URL"</code> → 下载视频</li>
-<li>自动调用 ffmpeg 合并音视频、转格式</li>
-<li>AI 场景：下载视频 → 转文字 → 总结内容</li>
-</ul>
-<pre><code class="language-bash hljs"><span class="hljs-comment"># 示例：下载并提取音频</span>
-yt-dlp -x --audio-format mp3 <span class="hljs-string">"URL"</span>
-</code></pre>
+<ul><li><code>yt-dlp &quot;URL&quot;</code> -&gt; 下载视频</li><li>自动调用 ffmpeg 合并音视频、转格式</li><li>AI 场景：下载视频 -&gt; 转文字 -&gt; 总结内容</li></ul>
+<pre><code># 示例：下载并提取音频
+yt-dlp -x --audio-format mp3 &quot;URL&quot;</code></pre>
 <h3>imagemagick</h3>
 <p><strong>功用</strong>：</p>
-<ul>
-<li>批量压缩图片、转换格式（PNG ↔ JPG ↔ WebP）</li>
-<li>添加水印、调整尺寸</li>
-<li>AI 场景：批量处理截图，优化后上传</li>
-</ul>
-<pre><code class="language-bash hljs"><span class="hljs-comment"># 示例：压缩图片 50%</span>
-convert input.jpg -resize 50% output.jpg
-</code></pre>
+<ul><li>批量压缩图片、转换格式（PNG -&gt; JPG -&gt; WebP）</li><li>添加水印、调整尺寸</li><li>AI 场景：批量处理截图，优化后上传</li></ul>
+<pre><code># 示例：压缩图片 50%
+convert input.jpg -resize 50% output.jpg</code></pre>
 <h3>pandoc</h3>
 <p><strong>功用</strong>：</p>
-<ul>
-<li>Markdown ↔ Word ↔ PDF 互转</li>
-<li>博客导出成 DOCX 审阅</li>
-<li>AI 场景：多 Markdown 合并为 PDF 电子书</li>
-</ul>
-<pre><code class="language-bash hljs"><span class="hljs-comment"># 示例：Markdown 转 PDF</span>
-pandoc input.md -o output.pdf
-</code></pre>
+<ul><li>Markdown -&gt; Word -&gt; PDF 互转</li><li>博客导出成 DOCX 审阅</li><li>AI 场景：多 Markdown 合并为 PDF 电子书</li></ul>
+<pre><code># 示例：Markdown 转 PDF
+pandoc input.md -o output.pdf</code></pre>
 <h3>tree</h3>
 <p><strong>功用</strong>：</p>
-<ul>
-<li>生成目录结构图</li>
-<li>文档展示项目结构</li>
-<li>AI 场景：代码库分析，生成结构图</li>
-</ul>
-<pre><code class="language-bash hljs"><span class="hljs-comment"># 示例：生成前3层目录</span>
-tree -L 3 -I <span class="hljs-string">'node_modules|__pycache__'</span>
-</code></pre>
+<ul><li>生成目录结构图</li><li>文档展示项目结构</li><li>AI 场景：代码库分析，生成结构图</li></ul>
+<pre><code># 示例：生成前3层目录
+tree -L 3 -I &#x27;node_modules|__pycache__&#x27;</code></pre>
 <h3>jq</h3>
 <p><strong>功用</strong>：</p>
-<ul>
-<li>命令行处理 JSON</li>
-<li>从 API 响应提取信息</li>
-<li>AI 场景：API 数据 → 筛选 → 报告</li>
-</ul>
-<pre><code class="language-bash hljs"><span class="hljs-comment"># 示例：提取 JSON 中的 name 字段</span>
-<span class="hljs-built_in">cat</span> data.json | jq <span class="hljs-string">'.users[].name'</span>
-</code></pre>
+<ul><li>命令行处理 JSON</li><li>从 API 响应提取信息</li><li>AI 场景：API 数据 -&gt; 筛选 -&gt; 报告</li></ul>
+<pre><code># 示例：提取 JSON 中的 name 字段
+cat data.json | jq &#x27;.users[].name&#x27;</code></pre>
 <hr>
 <h2>新机器快速配置</h2>
-<pre><code class="language-bash hljs"><span class="hljs-comment"># 1. Homebrew</span>
-/bin/bash -c <span class="hljs-string">"<span class="hljs-subst">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)</span>"</span>
+<pre><code># 1. Homebrew
+/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
 
-<span class="hljs-comment"># 2. 媒体控制</span>
+# 2. 媒体控制
 brew install nowplaying-cli
 
-<span class="hljs-comment"># 3. 媒体处理</span>
+# 3. 媒体处理
 brew install yt-dlp ffmpeg imagemagick
 
-<span class="hljs-comment"># 4. 文档/数据处理</span>
+# 4. 文档/数据处理
 brew install pandoc tree jq
 
-<span class="hljs-comment"># 5. Chrome + Kimi For Coding 手动安装</span>
+# 5. Chrome + Kimi For Coding 手动安装
 
-<span class="hljs-comment"># 6. 系统设置 → 隐私与安全 → 辅助功能 → 添加 Terminal</span>
-</code></pre>
+# 6. 系统设置 -&gt; 隐私与安全 -&gt; 辅助功能 -&gt; 添加 Terminal</code></pre>
 <hr>
 <h2>Hermes 配置</h2>
 <h3>关键配置项</h3>
 <p><strong>~/.hermes/config.yaml</strong></p>
-<pre><code class="language-yaml hljs"><span class="hljs-attr">model:</span>
-  <span class="hljs-attr">default:</span> <span class="hljs-string">kimi-k2.5</span>
-  <span class="hljs-attr">provider:</span> <span class="hljs-string">kimi-coding</span>
-  <span class="hljs-attr">base_url:</span> <span class="hljs-string">https://api.kimi.com/coding/v1</span>
+<pre><code>model:
+  default: kimi-k2.5
+  provider: kimi-coding
+  base_url: https://api.kimi.com/coding/v1
 
-<span class="hljs-attr">fallback_providers:</span>
-  <span class="hljs-bullet">-</span> <span class="hljs-attr">provider:</span> <span class="hljs-string">openrouter</span>
-    <span class="hljs-attr">model:</span> <span class="hljs-string">google/gemini-3-flash-preview</span>
-  <span class="hljs-bullet">-</span> <span class="hljs-attr">provider:</span> <span class="hljs-string">openai-codex</span>
-    <span class="hljs-attr">model:</span> <span class="hljs-string">gpt-5.2-codex</span>
-  <span class="hljs-bullet">-</span> <span class="hljs-attr">provider:</span> <span class="hljs-string">copilot</span>
-    <span class="hljs-attr">model:</span> <span class="hljs-string">gpt-5.2-codex</span>
-</code></pre>
+fallback_providers:
+  - provider: openrouter
+    model: google/gemini-3-flash-preview
+  - provider: openai-codex
+    model: gpt-5.2-codex
+  - provider: copilot
+    model: gpt-5.2-codex</code></pre>
 <h3>源码修改（User-Agent 修复）</h3>
 <p>修复 Kimi 403 错误需修改以下文件：</p>
-<div class="table-wrap"><table>
-<thead>
-<tr>
-<th>文件</th>
-<th>修改位置数</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>agent/auxiliary_client.py</code></td>
-<td>5</td>
-<td>Auxiliary client (vision, compression, flush)</td>
-</tr>
-<tr>
-<td><code>run_agent.py</code></td>
-<td>2</td>
-<td>Main agent client</td>
-</tr>
-<tr>
-<td><code>hermes_cli/doctor.py</code></td>
-<td>1</td>
-<td>Health check diagnostics</td>
-</tr>
-</tbody>
-</table></div>
+<div class="table-wrap"><table><thead><tr><th>文件</th><th>修改位置数</th><th>作用</th></tr></thead><tbody><tr><td><code>agent/auxiliary_client.py</code></td><td>5</td><td>Auxiliary client (vision, compression, flush)</td></tr><tr><td><code>run_agent.py</code></td><td>2</td><td>Main agent client</td></tr><tr><td><code>hermes_cli/doctor.py</code></td><td>1</td><td>Health check diagnostics</td></tr></tbody></table></div>
 <p><strong>修改内容</strong>：</p>
-<pre><code class="language-python hljs"><span class="hljs-comment"># Before</span>
-<span class="hljs-string">"User-Agent"</span>: <span class="hljs-string">"KimiCLI/1.30.0"</span>
+<pre><code># Before
+&quot;User-Agent&quot;: &quot;KimiCLI/1.30.0&quot;
 
-<span class="hljs-comment"># After</span>
-<span class="hljs-string">"User-Agent"</span>: <span class="hljs-string">"claude-code/1.0"</span>
-</code></pre>
+# After
+&quot;User-Agent&quot;: &quot;claude-code/1.0&quot;</code></pre>
 <h3>验证命令</h3>
-<pre><code class="language-bash hljs"><span class="hljs-comment"># 检查当前模型配置</span>
+<pre><code># 检查当前模型配置
 hermes config show
 
-<span class="hljs-comment"># 检查 gateway 状态</span>
+# 检查 gateway 状态
 hermes gateway status
 
-<span class="hljs-comment"># 重启 gateway</span>
-hermes gateway restart
-</code></pre>
+# 重启 gateway
+hermes gateway restart</code></pre>
 <hr>
 <h2>总结</h2>
 <p><strong>关键要点</strong>：</p>
-<ul>
-<li>Homebrew 为 macOS 包管理基础</li>
-<li>yt-dlp + ffmpeg 处理媒体下载与转码</li>
-<li>pandoc 实现文档格式转换</li>
-<li>jq 处理 JSON 数据</li>
-<li>User-Agent 修复解决 Kimi 403 错误</li>
-</ul>
+<ul><li>Homebrew 为 macOS 包管理基础</li><li>yt-dlp + ffmpeg 处理媒体下载与转码</li><li>pandoc 实现文档格式转换</li><li>jq 处理 JSON 数据</li><li>User-Agent 修复解决 Kimi 403 错误</li></ul>
 <p><strong>适用场景</strong>：macOS 上部署 Hermes Agent，需要媒体处理、文档转换能力</p>
 <p><strong>不适用场景</strong>：无需本地媒体处理，仅使用云端 API</p>
-</div></div>
-    </div>
-  </article>
-</main><div class="page-scrim" data-page-scrim hidden></div><script>
-(() => {
-  const appearanceKey = 'blog-appearance-mode';
-  const schemeKey = 'blog-color-scheme';
-  const root = document.documentElement;
-  const doc = document;
-  const body = doc.body;
-  const scrim = doc.querySelector('[data-page-scrim]');
-  let portalLayer = doc.querySelector('[data-popover-layer]');
-  if (!(portalLayer instanceof HTMLElement)) {
-    portalLayer = doc.createElement('div');
-    portalLayer.className = 'popover-layer';
-    portalLayer.setAttribute('data-popover-layer', '');
-    body.appendChild(portalLayer);
-  }
-  doc.querySelectorAll('[data-popover-root]').forEach((rootElement) => {
-    if (!(rootElement instanceof HTMLElement)) return;
-    const panel = rootElement.querySelector('[data-popover-panel]');
-    const name = rootElement.dataset.popoverName || '';
-    if (panel instanceof HTMLElement && name) {
-      panel.dataset.popoverPanelOwner = name;
-    }
-  });
-  const aliases = { paper: 'poster', list: 'rail' };
-  const allowed = new Set(['rail', 'poster', 'editorial', 'midnight']);
-  const systemSchemeQuery = window.matchMedia('(prefers-color-scheme: dark)');
-  let themePulseTimer = 0;
-
-  const isMobileSheet = () => window.matchMedia('(max-width: 720px)').matches;
-  const getOpenPopovers = () => Array.from(doc.querySelectorAll('[data-popover-root][data-open="true"]'));
-  const getPopoverParts = (rootElement) => {
-    const owner = rootElement.dataset.popoverName || '';
-    return {
-      trigger: rootElement.querySelector('[data-popover-trigger]'),
-      panel: owner
-        ? doc.querySelector('[data-popover-panel-owner="' + owner + '"]')
-        : rootElement.querySelector('[data-popover-panel]'),
-    };
-  };
-
-  function normalizeAppearance(value) {
-    const normalized = aliases[value ?? ''] ?? value ?? 'rail';
-    return allowed.has(normalized) ? normalized : 'rail';
-  }
-
-  function syncOverlayState() {
-    const active = isMobileSheet() && getOpenPopovers().length > 0;
-    if (active) {
-      body.dataset.overlayOpen = 'true';
-    } else {
-      delete body.dataset.overlayOpen;
-    }
-    if (scrim instanceof HTMLElement) {
-      scrim.hidden = !active;
-    }
-  }
-
-  function updateThemeButtons() {
-    const activeAppearance = normalizeAppearance(root.dataset.appearance);
-    const activeScheme = root.dataset.colorSchemeMode || 'auto';
-    doc.querySelectorAll('[data-theme-value]').forEach((button) => {
-      button.setAttribute('aria-pressed', String(button.getAttribute('data-theme-value') === activeAppearance));
-    });
-    doc.querySelectorAll('[data-scheme-value]').forEach((button) => {
-      button.setAttribute('aria-pressed', String(button.getAttribute('data-scheme-value') === activeScheme));
-    });
-    const activeThemeButton = doc.querySelector('[data-theme-value="' + activeAppearance + '"]');
-    doc.querySelectorAll('[data-theme-label]').forEach((label) => {
-      label.textContent = activeThemeButton?.getAttribute('data-theme-label') || '轨道';
-    });
-  }
-
-  function pulseThemeShift() {
-    body.dataset.themeSwitch = 'true';
-    window.clearTimeout(themePulseTimer);
-    themePulseTimer = window.setTimeout(() => {
-      delete body.dataset.themeSwitch;
-    }, 260);
-  }
-
-  function setAppearance(value) {
-    const normalized = normalizeAppearance(value);
-    root.dataset.appearance = normalized;
-    window.localStorage.setItem(appearanceKey, normalized);
-    pulseThemeShift();
-    updateThemeButtons();
-    getOpenPopovers().forEach((node) => positionPopover(node));
-  }
-
-  function setScheme(value) {
-    if (value === 'auto') {
-      root.dataset.colorScheme = systemSchemeQuery.matches ? 'dark' : 'light';
-      root.dataset.colorSchemeMode = 'auto';
-      window.localStorage.removeItem(schemeKey);
-    } else {
-      root.dataset.colorScheme = value;
-      root.dataset.colorSchemeMode = value;
-      window.localStorage.setItem(schemeKey, value);
-    }
-    pulseThemeShift();
-    updateThemeButtons();
-    getOpenPopovers().forEach((node) => positionPopover(node));
-  }
-
-  function clearPanelPosition(panel) {
-    panel.style.left = '';
-    panel.style.top = '';
-    panel.style.right = '';
-    panel.style.bottom = '';
-    panel.style.maxHeight = '';
-  }
-
-  function movePanelIntoLayer(panel) {
-    if (portalLayer instanceof HTMLElement && panel.parentElement !== portalLayer) {
-      portalLayer.appendChild(panel);
-    }
-  }
-
-  function restorePanel(rootElement, panel) {
-    if (panel.parentElement !== rootElement) {
-      rootElement.appendChild(panel);
-    }
-    delete panel.dataset.open;
-    delete panel.dataset.popoverMode;
-  }
-
-  function closePopover(rootElement) {
-    if (!(rootElement instanceof HTMLElement)) return;
-    const { trigger, panel } = getPopoverParts(rootElement);
-    if (!(trigger instanceof HTMLElement) || !(panel instanceof HTMLElement)) return;
-    rootElement.dataset.open = 'false';
-    delete rootElement.dataset.mode;
-    trigger.setAttribute('aria-expanded', 'false');
-    clearPanelPosition(panel);
-    panel.hidden = true;
-    restorePanel(rootElement, panel);
-    syncOverlayState();
-  }
-
-  function closeAllPopovers(exceptElement) {
-    getOpenPopovers().forEach((node) => {
-      if (!exceptElement || node !== exceptElement) {
-        closePopover(node);
-      }
-    });
-  }
-
-  function positionPopover(rootElement) {
-    if (!(rootElement instanceof HTMLElement)) return;
-    const { trigger, panel } = getPopoverParts(rootElement);
-    if (!(trigger instanceof HTMLElement) || !(panel instanceof HTMLElement)) return;
-    movePanelIntoLayer(panel);
-    panel.hidden = false;
-    panel.dataset.open = 'true';
-    clearPanelPosition(panel);
-    if (isMobileSheet()) {
-      rootElement.dataset.mode = 'sheet';
-      panel.dataset.popoverMode = 'sheet';
-      panel.style.maxHeight = Math.floor(window.innerHeight * 0.72) + 'px';
-      syncOverlayState();
-      return;
-    }
-    rootElement.dataset.mode = 'popover';
-    panel.dataset.popoverMode = 'popover';
-    const viewportPadding = 12;
-    const gap = 10;
-    const maxHeight = Math.max(180, window.innerHeight - viewportPadding * 2);
-    panel.style.maxHeight = maxHeight + 'px';
-    const triggerRect = trigger.getBoundingClientRect();
-    const panelRect = panel.getBoundingClientRect();
-    const panelWidth = Math.max(panel.offsetWidth, panel.clientWidth, panelRect.width);
-    const panelHeight = Math.max(panel.offsetHeight, panel.clientHeight, panelRect.height);
-    let left = triggerRect.left;
-    if (left + panelWidth > window.innerWidth - viewportPadding) {
-      left = window.innerWidth - viewportPadding - panelWidth;
-    }
-    if (left < viewportPadding) {
-      left = viewportPadding;
-    }
-    let top = triggerRect.bottom + gap;
-    if (top + panelHeight > window.innerHeight - viewportPadding) {
-      top = Math.max(viewportPadding, triggerRect.top - panelHeight - gap);
-    }
-    if (top < viewportPadding) {
-      top = viewportPadding;
-    }
-    panel.style.left = Math.round(left) + 'px';
-    panel.style.top = Math.round(top) + 'px';
-    syncOverlayState();
-  }
-
-  function openPopover(rootElement) {
-    if (!(rootElement instanceof HTMLElement)) return;
-    const { trigger, panel } = getPopoverParts(rootElement);
-    if (!(trigger instanceof HTMLElement) || !(panel instanceof HTMLElement)) return;
-    closeAllPopovers(rootElement);
-    rootElement.dataset.open = 'true';
-    trigger.setAttribute('aria-expanded', 'true');
-    panel.hidden = false;
-    positionPopover(rootElement);
-    window.requestAnimationFrame(() => positionPopover(rootElement));
-  }
-
-  doc.addEventListener('click', (event) => {
-    const target = event.target instanceof Element ? event.target : null;
-    if (!target) return;
-
-    if (scrim instanceof HTMLElement && target === scrim) {
-      closeAllPopovers();
-      return;
-    }
-
-    const appearanceButton = target.closest('[data-theme-value]');
-    if (appearanceButton instanceof HTMLElement) {
-      event.preventDefault();
-      const value = appearanceButton.getAttribute('data-theme-value');
-      if (value) setAppearance(value);
-      return;
-    }
-
-    const schemeButton = target.closest('[data-scheme-value]');
-    if (schemeButton instanceof HTMLElement) {
-      event.preventDefault();
-      const value = schemeButton.getAttribute('data-scheme-value');
-      if (value) setScheme(value);
-      return;
-    }
-
-    const trigger = target.closest('[data-popover-trigger]');
-    if (trigger instanceof HTMLElement) {
-      event.preventDefault();
-      const rootElement = trigger.closest('[data-popover-root]');
-      if (!(rootElement instanceof HTMLElement)) return;
-      if (rootElement.dataset.open === 'true') {
-        closePopover(rootElement);
-      } else {
-        openPopover(rootElement);
-      }
-      return;
-    }
-
-    if (!target.closest('[data-popover-panel]')) {
-      closeAllPopovers();
-    }
-  });
-
-  doc.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') {
-      closeAllPopovers();
-    }
-  });
-
-  window.addEventListener('resize', () => {
-    getOpenPopovers().forEach((node) => positionPopover(node));
-    syncOverlayState();
-  }, { passive: true });
-
-  window.addEventListener('scroll', () => {
-    if (isMobileSheet()) return;
-    getOpenPopovers().forEach((node) => positionPopover(node));
-  }, { passive: true, capture: true });
-
-  systemSchemeQuery.addEventListener('change', () => {
-    if ((root.dataset.colorSchemeMode || 'auto') !== 'auto') return;
-    root.dataset.colorScheme = systemSchemeQuery.matches ? 'dark' : 'light';
-    updateThemeButtons();
-  });
-
-  root.dataset.appearance = normalizeAppearance(root.dataset.appearance || window.localStorage.getItem(appearanceKey) || 'rail');
-  updateThemeButtons();
-  syncOverlayState();
-})();
-</script></body>
+<h2>参考</h2>
+<ul><li>旧 GitHub Pages 已发布页面内容迁回 source post。</li></ul></div></div></div>
+    </article>
+  </main><div class="page-scrim" data-page-scrim hidden></div><script src="/assets/blog.3f4505d6ae.js" defer></script>
+</body>
 </html>

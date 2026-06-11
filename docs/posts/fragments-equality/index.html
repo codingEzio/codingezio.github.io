@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
@@ -14,515 +14,50 @@
   <meta property="og:type" content="article">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://codingezio.github.io/posts/fragments-equality/">
-  <link rel="alternate" type="application/rss+xml" title="碎片: Equality RSS" href="/rss.xml">
+  <link rel="alternate" type="application/rss+xml" title="Posts RSS" href="/rss.xml">
   <script>
 (() => {
   const root = document.documentElement;
-  const aliases = { paper: 'poster', list: 'rail' };
-  const allowed = new Set(['rail', 'poster', 'editorial', 'midnight']);
-  const storedAppearance = window.localStorage.getItem('blog-appearance-mode');
-  const normalizedAppearance = aliases[storedAppearance ?? ''] ?? storedAppearance ?? root.dataset.appearance ?? 'rail';
-  root.dataset.appearance = allowed.has(normalizedAppearance) ? normalizedAppearance : 'rail';
-  const storedScheme = window.localStorage.getItem('blog-color-scheme');
-  if (storedScheme === 'light' || storedScheme === 'dark') {
+  const aliases = { paper: "poster", list: "rail" };
+  const allowed = new Set(["rail", "poster", "editorial", "midnight"]);
+  const storedAppearance = window.localStorage.getItem("blog-appearance-mode");
+  const normalizedAppearance = aliases[storedAppearance ?? ""] ?? storedAppearance ?? root.dataset.appearance ?? "rail";
+  root.dataset.appearance = allowed.has(normalizedAppearance) ? normalizedAppearance : "rail";
+  const storedScheme = window.localStorage.getItem("blog-color-scheme");
+  if (storedScheme === "light" || storedScheme === "dark") {
     root.dataset.colorScheme = storedScheme;
     root.dataset.colorSchemeMode = storedScheme;
   } else {
-    root.dataset.colorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    root.dataset.colorSchemeMode = 'auto';
+    root.dataset.colorScheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    root.dataset.colorSchemeMode = "auto";
   }
 })();
-</script>
-  <link rel="preload" href="/assets/blog.12e7e71c89.css" as="style">
-  <link rel="stylesheet" href="/assets/blog.12e7e71c89.css">
+  </script>
+  
+  <link rel="preload" href="/assets/blog.531707a620.css" as="style">
+  <link rel="stylesheet" href="/assets/blog.531707a620.css">
 </head>
-<body class="page page--post" data-page-kind="post"><main class="page-shell page-shell--post">
-  <header class="site-nav">
-    <a class="site-title site-home-link" href="/">Index</a>
-    <div class="site-tools">
-      <a class="toolbar-link toolbar-link--feed" href="/rss.xml">RSS</a>
-      <div class="popover-root toolbar-popover" data-popover-root data-popover-name="theme">
-  <button class="toolbar-button toolbar-button--theme" type="button" data-popover-trigger data-popover-target="theme" aria-expanded="false" aria-haspopup="dialog">
-    <span class="theme-trigger__preview" aria-hidden="true"></span>
-    <span class="theme-trigger__label" data-active-theme-label>轨道</span>
-  </button>
-  <div class="popover-panel theme-popover" data-popover-panel hidden>
-    <div class="appearance-grid">
-      <button class="theme-option theme-option--appearance" type="button" data-theme-value="rail" data-theme-label="轨道" data-theme-note="单列轨道" aria-pressed="false">
-        <span class="theme-option__preview theme-option__preview--rail" aria-hidden="true">
-          <span class="theme-option__preview-block"></span>
-          <span class="theme-option__preview-block"></span>
-          <span class="theme-option__preview-block"></span>
-        </span>
-        <span class="theme-option__copy">
-          <span class="theme-option__title">轨道</span>
-          <span class="theme-option__note">单列轨道</span>
-        </span>
-      </button>
-      <button class="theme-option theme-option--appearance" type="button" data-theme-value="poster" data-theme-label="海报" data-theme-note="拼贴海报" aria-pressed="false">
-        <span class="theme-option__preview theme-option__preview--poster" aria-hidden="true">
-          <span class="theme-option__preview-block"></span>
-          <span class="theme-option__preview-block"></span>
-          <span class="theme-option__preview-block"></span>
-        </span>
-        <span class="theme-option__copy">
-          <span class="theme-option__title">海报</span>
-          <span class="theme-option__note">拼贴海报</span>
-        </span>
-      </button>
-      <button class="theme-option theme-option--appearance" type="button" data-theme-value="editorial" data-theme-label="杂志" data-theme-note="折页阅读" aria-pressed="false">
-        <span class="theme-option__preview theme-option__preview--editorial" aria-hidden="true">
-          <span class="theme-option__preview-block"></span>
-          <span class="theme-option__preview-block"></span>
-          <span class="theme-option__preview-block"></span>
-        </span>
-        <span class="theme-option__copy">
-          <span class="theme-option__title">杂志</span>
-          <span class="theme-option__note">折页阅读</span>
-        </span>
-      </button>
-      <button class="theme-option theme-option--appearance" type="button" data-theme-value="midnight" data-theme-label="夜游" data-theme-note="夜色舞台" aria-pressed="false">
-        <span class="theme-option__preview theme-option__preview--midnight" aria-hidden="true">
-          <span class="theme-option__preview-block"></span>
-          <span class="theme-option__preview-block"></span>
-          <span class="theme-option__preview-block"></span>
-        </span>
-        <span class="theme-option__copy">
-          <span class="theme-option__title">夜游</span>
-          <span class="theme-option__note">夜色舞台</span>
-        </span>
-      </button>
-    </div>
-    <div class="scheme-grid">
-      <button class="theme-option theme-option--scheme" type="button" data-scheme-value="auto" aria-pressed="false">自动</button>
-      <button class="theme-option theme-option--scheme" type="button" data-scheme-value="light" aria-pressed="false">浅</button>
-      <button class="theme-option theme-option--scheme" type="button" data-scheme-value="dark" aria-pressed="false">深</button>
-    </div>
-  </div>
-</div>
-    </div>
-  </header>
-  <article class="post-shell">
-    <header class="post-hero">
-      <div class="post-kicker-row">
-        <div class="post-mini-meta">
-  <span class="post-date">2026.05.06</span>
-  <div class="popover-root tag-menu" data-popover-root data-popover-name="tags">
-  <button class="tag-chip tag-trigger" type="button" data-popover-trigger data-popover-target="tags" aria-expanded="false" aria-haspopup="dialog" aria-label="#Fragments #Equality #Society">#Fragments +2</button>
-  <div class="popover-panel tag-popover" data-popover-panel hidden>
-    <div class="tag-list" aria-label="#Fragments #Equality #Society"><span class="tag-pill">#Fragments</span><span class="tag-pill">#Equality</span><span class="tag-pill">#Society</span></div>
-  </div>
-</div>
-</div>
+<body class="page page--post" data-page-kind="post">
+  <main class="page-shell page-shell--post">
+    <header class="site-nav">
+      <a class="site-title site-home-link" href="/">Index</a>
+      <div class="site-tools">
+        <a class="toolbar-link toolbar-link--feed" href="/rss.xml">RSS</a>
+        <div class="popover-root toolbar-popover" data-popover-root data-popover-name="theme"><button class="toolbar-button toolbar-button--theme" type="button" data-popover-trigger data-popover-target="theme" aria-expanded="false" aria-haspopup="dialog"><span class="theme-trigger__preview" aria-hidden="true"></span><span class="theme-trigger__label" data-active-theme-label>轨道</span></button><div class="popover-panel theme-popover" data-popover-panel hidden><div class="appearance-grid"><button class="theme-option theme-option--appearance" type="button" data-theme-value="rail" data-theme-label="轨道" data-theme-note="单列轨道" aria-pressed="false"><span class="theme-option__preview theme-option__preview--rail" aria-hidden="true"><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span></span><span class="theme-option__copy"><span class="theme-option__title">轨道</span><span class="theme-option__note">单列轨道</span></span></button><button class="theme-option theme-option--appearance" type="button" data-theme-value="poster" data-theme-label="海报" data-theme-note="拼贴海报" aria-pressed="false"><span class="theme-option__preview theme-option__preview--poster" aria-hidden="true"><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span></span><span class="theme-option__copy"><span class="theme-option__title">海报</span><span class="theme-option__note">拼贴海报</span></span></button><button class="theme-option theme-option--appearance" type="button" data-theme-value="editorial" data-theme-label="杂志" data-theme-note="折页阅读" aria-pressed="false"><span class="theme-option__preview theme-option__preview--editorial" aria-hidden="true"><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span></span><span class="theme-option__copy"><span class="theme-option__title">杂志</span><span class="theme-option__note">折页阅读</span></span></button><button class="theme-option theme-option--appearance" type="button" data-theme-value="midnight" data-theme-label="夜游" data-theme-note="夜色舞台" aria-pressed="false"><span class="theme-option__preview theme-option__preview--midnight" aria-hidden="true"><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span></span><span class="theme-option__copy"><span class="theme-option__title">夜游</span><span class="theme-option__note">夜色舞台</span></span></button></div><div class="scheme-grid"><button class="theme-option theme-option--scheme" type="button" data-scheme-value="auto" aria-pressed="false">自动</button><button class="theme-option theme-option--scheme" type="button" data-scheme-value="light" aria-pressed="false">浅</button><button class="theme-option theme-option--scheme" type="button" data-scheme-value="dark" aria-pressed="false">深</button></div></div></div>
       </div>
-      <div class="post-hero-copy">
-        <h1 class="post-title">碎片: Equality</h1>
-        <p class="post-deck">关于平等、身份与社会的摘录</p>
-      </div>
-
     </header>
-    <div class="post-frame">
-      <div class="post-content"><div class="post-body"><h2>Collection</h2>
-<ul>
-<li>Labels are the opposite of understanding</li>
-<li>人是土地的附庸，还是人是生活在土地上的主体，这两个立场观点想不清楚，也不用来讨论族群问题了。</li>
-<li>權力、政府、主流不需要你支持，你的稅金和生活本身就已經是。需要理解同情和支持的是弱勢和小眾，永遠站在後者的對面，那就是權力和主流的幫凶。</li>
-<li>当我们设计一个为所有人服务的世界时，我们需要女性在场。如果那些对我们所有人产生影响的决定，都是出自身体健全的白人男性（九成来自美国），那也会形成数据缺口——就像在医学研究中不收集女性身体信息会形成数据缺口一样。</li>
-<li>普世价值
-<ul>
-<li>我们追求普世价值，是因为普世价值是好的，是对的，只要你是人类，你就应该拥有他。如果有人不幸失去，那么就应该帮助他。</li>
-<li>令人难过的是，由于一系列客观条件，一部分人无法对此感同身受。普世价值和民族无关，和国籍无关，它属于全人类。一旦能意识到一点，那么这些人就很容易能识破一些延用了近半个世纪的可笑的借口和谎言，他们的被害妄想症也理应会被治愈。</li>
-<li>很遗憾，我得不到它，我本应该能为此不断地写，不断地写，但我不能。这让我难过了很多年，一直到现在。愿不在意的人能一直不在意，以免遭受这种难过。</li>
-</ul>
-</li>
-<li>人是一个多么喜欢而且习惯于分类的动物
-<ul>
-<li>对于自己所在的同类里受到的苦难，要放大到群体，时间上追溯五千年，然后觉得自己也在受苦</li>
-<li>对其他人受到的苦难，要具化到个人，时间上限制在具体的事件，然后觉得对方无法代表整体</li>
-<li>基于这种思维逻辑，构建自己的行为模式，主动获取符合自己观点的信息……唉。</li>
-</ul>
-</li>
-<li>On Image Generation and Political Correctness
-<ul>
-<li>I'm really shocked at the number of people on here who turn into crybabies the moment an unwanted Asian shows up in their image generation results.</li>
-<li>Like, we live in a society that's built on generations of racial oppression that has caused immense harm to real people and you're mad because you had to look at an image of a black person?</li>
-<li>Some people just love to play the victim. Put on your big boy pants and rewrite your prompt. It's not hard.</li>
-</ul>
-</li>
-<li><a rel="noreferrer" target="_blank" href="https://www.bilibili.com/video/BV1W7wezdEAW/">为什么要叫女权运动而不是平权运动？是谁起的名字？ - bilibili</a></li>
-<li>什么是交叉性 (Intersectionality)
-<ul>
-<li>The concept of intersectionality describes how overlapping social identities (race, gender, class, etc.) create unique experiences of discrimination and privilege.</li>
-</ul>
-</li>
-</ul></div></div>
-    </div>
-  </article>
-</main><div class="page-scrim" data-page-scrim hidden></div><script>
-(() => {
-  const appearanceKey = 'blog-appearance-mode';
-  const schemeKey = 'blog-color-scheme';
-  const root = document.documentElement;
-  const doc = document;
-  const body = doc.body;
-  const scrim = doc.querySelector('[data-page-scrim]');
-  let portalLayer = doc.querySelector('[data-popover-layer]');
-  if (!(portalLayer instanceof HTMLElement)) {
-    portalLayer = doc.createElement('div');
-    portalLayer.className = 'popover-layer';
-    portalLayer.setAttribute('data-popover-layer', '');
-    body.appendChild(portalLayer);
-  }
-  let lightboxRoot = doc.querySelector('[data-blog-image-lightbox]');
-  if (!(lightboxRoot instanceof HTMLElement)) {
-    lightboxRoot = doc.createElement('div');
-    lightboxRoot.className = 'blog-image-lightbox';
-    lightboxRoot.hidden = true;
-    lightboxRoot.setAttribute('data-blog-image-lightbox', '');
-    lightboxRoot.innerHTML = '<button type="button" class="blog-image-lightbox__scrim" data-blog-image-lightbox-close aria-label="Close image preview"></button><div class="blog-image-lightbox__panel" role="dialog" aria-modal="true" aria-label="Image preview"><div class="blog-image-lightbox__toolbar"><a class="markdown-media-action" href="" download data-blog-image-lightbox-download>download</a><a class="markdown-media-action" href="" target="_blank" rel="noreferrer" data-blog-image-lightbox-open>open</a><button type="button" class="markdown-media-action" data-blog-image-lightbox-close data-blog-image-lightbox-toolbar-close="true">close</button></div><img class="blog-image-lightbox__image" alt="" data-blog-image-lightbox-image><p class="blog-image-lightbox__caption" data-blog-image-lightbox-caption hidden></p></div>';
-    body.appendChild(lightboxRoot);
-  }
-  const lightboxImage = lightboxRoot.querySelector('[data-blog-image-lightbox-image]');
-  const lightboxCaption = lightboxRoot.querySelector('[data-blog-image-lightbox-caption]');
-  const lightboxDownload = lightboxRoot.querySelector('[data-blog-image-lightbox-download]');
-  const lightboxOpen = lightboxRoot.querySelector('[data-blog-image-lightbox-open]');
-  let bodyOverflowBeforeLightbox = '';
-  doc.querySelectorAll('[data-popover-root]').forEach((rootElement) => {
-    if (!(rootElement instanceof HTMLElement)) return;
-    const panel = rootElement.querySelector('[data-popover-panel]');
-    const name = rootElement.dataset.popoverName || '';
-    if (panel instanceof HTMLElement && name) {
-      panel.dataset.popoverPanelOwner = name;
-    }
-  });
-  const aliases = { paper: 'poster', list: 'rail' };
-  const allowed = new Set(['rail', 'poster', 'editorial', 'midnight']);
-  const systemSchemeQuery = window.matchMedia('(prefers-color-scheme: dark)');
-  const runViewTransition = (mutate) => {
-    if (typeof doc.startViewTransition === 'function') {
-      doc.startViewTransition(() => {
-        mutate();
-      });
-      return;
-    }
-    mutate();
-  };
-
-  const isMobileSheet = () => window.matchMedia('(max-width: 860px)').matches;
-  const getOpenPopovers = () => Array.from(doc.querySelectorAll('[data-popover-root][data-open="true"]'));
-  const getPopoverParts = (rootElement) => {
-    const owner = rootElement.dataset.popoverName || '';
-    return {
-      trigger: rootElement.querySelector('[data-popover-trigger]'),
-      panel: owner
-        ? doc.querySelector('[data-popover-panel-owner="' + owner + '"]')
-        : rootElement.querySelector('[data-popover-panel]'),
-    };
-  };
-
-  function normalizeAppearance(value) {
-    const normalized = aliases[value ?? ''] ?? value ?? 'rail';
-    return allowed.has(normalized) ? normalized : 'rail';
-  }
-
-  function syncOverlayState() {
-    const active = isMobileSheet() && getOpenPopovers().length > 0;
-    if (active) {
-      body.dataset.overlayOpen = 'true';
-    } else {
-      delete body.dataset.overlayOpen;
-    }
-    if (scrim instanceof HTMLElement) {
-      scrim.hidden = !active;
-    }
-  }
-
-  function updateThemeButtons() {
-    const activeAppearance = normalizeAppearance(root.dataset.appearance);
-    const activeScheme = root.dataset.colorSchemeMode || 'auto';
-    doc.querySelectorAll('[data-theme-value]').forEach((button) => {
-      button.setAttribute('aria-pressed', String(button.getAttribute('data-theme-value') === activeAppearance));
-    });
-    doc.querySelectorAll('[data-scheme-value]').forEach((button) => {
-      button.setAttribute('aria-pressed', String(button.getAttribute('data-scheme-value') === activeScheme));
-    });
-    const activeThemeButton = doc.querySelector('[data-theme-value="' + activeAppearance + '"]');
-    doc.querySelectorAll('[data-active-theme-label]').forEach((label) => {
-      label.textContent = activeThemeButton?.getAttribute('data-theme-label') || '轨道';
-    });
-  }
-
-  function closeLightbox() {
-    if (!(lightboxRoot instanceof HTMLElement)) return;
-    lightboxRoot.hidden = true;
-    delete body.dataset.imageLightboxOpen;
-    body.style.overflow = bodyOverflowBeforeLightbox;
-    if (lightboxImage instanceof HTMLImageElement) {
-      lightboxImage.removeAttribute('src');
-      lightboxImage.alt = '';
-    }
-    if (lightboxCaption instanceof HTMLElement) {
-      lightboxCaption.textContent = '';
-      lightboxCaption.hidden = true;
-    }
-    if (lightboxDownload instanceof HTMLAnchorElement) {
-      lightboxDownload.href = '';
-    }
-    if (lightboxOpen instanceof HTMLAnchorElement) {
-      lightboxOpen.href = '';
-    }
-  }
-
-  function openLightbox(trigger) {
-    if (!(lightboxRoot instanceof HTMLElement)) return;
-    const src = trigger.getAttribute('data-blog-image-src') || trigger.getAttribute('href') || '';
-    if (!src) return;
-    const alt = trigger.getAttribute('data-blog-image-alt') || '';
-    closeAllPopovers();
-    bodyOverflowBeforeLightbox = body.style.overflow;
-    body.style.overflow = 'hidden';
-    body.dataset.imageLightboxOpen = 'true';
-    if (lightboxImage instanceof HTMLImageElement) {
-      lightboxImage.src = src;
-      lightboxImage.alt = alt;
-    }
-    if (lightboxCaption instanceof HTMLElement) {
-      lightboxCaption.textContent = alt;
-      lightboxCaption.hidden = !alt;
-    }
-    if (lightboxDownload instanceof HTMLAnchorElement) {
-      lightboxDownload.href = src;
-    }
-    if (lightboxOpen instanceof HTMLAnchorElement) {
-      lightboxOpen.href = src;
-    }
-    lightboxRoot.hidden = false;
-  }
-
-  function setAppearance(value) {
-    const normalized = normalizeAppearance(value);
-    if (normalized === normalizeAppearance(root.dataset.appearance)) {
-      closeAllPopovers();
-      updateThemeButtons();
-      return;
-    }
-    runViewTransition(() => {
-      root.dataset.appearance = normalized;
-      window.localStorage.setItem(appearanceKey, normalized);
-      closeAllPopovers();
-      updateThemeButtons();
-    });
-  }
-
-  function setScheme(value) {
-    const nextMode = value === 'auto' ? 'auto' : value;
-    if ((root.dataset.colorSchemeMode || 'auto') === nextMode) {
-      closeAllPopovers();
-      updateThemeButtons();
-      return;
-    }
-    runViewTransition(() => {
-      if (value === 'auto') {
-        root.dataset.colorScheme = systemSchemeQuery.matches ? 'dark' : 'light';
-        root.dataset.colorSchemeMode = 'auto';
-        window.localStorage.removeItem(schemeKey);
-      } else {
-        root.dataset.colorScheme = value;
-        root.dataset.colorSchemeMode = value;
-        window.localStorage.setItem(schemeKey, value);
-      }
-      closeAllPopovers();
-      updateThemeButtons();
-    });
-  }
-
-  function clearPanelPosition(panel) {
-    panel.style.left = '';
-    panel.style.top = '';
-    panel.style.right = '';
-    panel.style.bottom = '';
-    panel.style.maxHeight = '';
-  }
-
-  function movePanelIntoLayer(panel) {
-    if (portalLayer instanceof HTMLElement && panel.parentElement !== portalLayer) {
-      portalLayer.appendChild(panel);
-    }
-  }
-
-  function restorePanel(rootElement, panel) {
-    if (panel.parentElement !== rootElement) {
-      rootElement.appendChild(panel);
-    }
-    delete panel.dataset.open;
-    delete panel.dataset.popoverMode;
-  }
-
-  function closePopover(rootElement) {
-    if (!(rootElement instanceof HTMLElement)) return;
-    const { trigger, panel } = getPopoverParts(rootElement);
-    if (!(trigger instanceof HTMLElement) || !(panel instanceof HTMLElement)) return;
-    rootElement.dataset.open = 'false';
-    delete rootElement.dataset.mode;
-    trigger.setAttribute('aria-expanded', 'false');
-    clearPanelPosition(panel);
-    panel.hidden = true;
-    restorePanel(rootElement, panel);
-    syncOverlayState();
-  }
-
-  function closeAllPopovers(exceptElement) {
-    getOpenPopovers().forEach((node) => {
-      if (!exceptElement || node !== exceptElement) {
-        closePopover(node);
-      }
-    });
-  }
-
-  function positionPopover(rootElement) {
-    if (!(rootElement instanceof HTMLElement)) return;
-    const { trigger, panel } = getPopoverParts(rootElement);
-    if (!(trigger instanceof HTMLElement) || !(panel instanceof HTMLElement)) return;
-    movePanelIntoLayer(panel);
-    panel.hidden = false;
-    panel.dataset.open = 'true';
-    clearPanelPosition(panel);
-    if (isMobileSheet()) {
-      rootElement.dataset.mode = 'sheet';
-      panel.dataset.popoverMode = 'sheet';
-      panel.style.maxHeight = Math.floor(window.innerHeight * 0.68) + 'px';
-      syncOverlayState();
-      return;
-    }
-    rootElement.dataset.mode = 'popover';
-    panel.dataset.popoverMode = 'popover';
-    const viewportPadding = 12;
-    const gap = 10;
-    const maxHeight = Math.max(180, window.innerHeight - viewportPadding * 2);
-    panel.style.maxHeight = maxHeight + 'px';
-    const triggerRect = trigger.getBoundingClientRect();
-    const panelRect = panel.getBoundingClientRect();
-    const panelWidth = Math.max(panel.offsetWidth, panel.clientWidth, panelRect.width);
-    const panelHeight = Math.max(panel.offsetHeight, panel.clientHeight, panelRect.height);
-    let left = triggerRect.left;
-    if (left + panelWidth > window.innerWidth - viewportPadding) {
-      left = window.innerWidth - viewportPadding - panelWidth;
-    }
-    if (left < viewportPadding) {
-      left = viewportPadding;
-    }
-    let top = triggerRect.bottom + gap;
-    if (top + panelHeight > window.innerHeight - viewportPadding) {
-      top = Math.max(viewportPadding, triggerRect.top - panelHeight - gap);
-    }
-    if (top < viewportPadding) {
-      top = viewportPadding;
-    }
-    panel.style.left = Math.round(left) + 'px';
-    panel.style.top = Math.round(top) + 'px';
-    syncOverlayState();
-  }
-
-  function openPopover(rootElement) {
-    if (!(rootElement instanceof HTMLElement)) return;
-    const { trigger, panel } = getPopoverParts(rootElement);
-    if (!(trigger instanceof HTMLElement) || !(panel instanceof HTMLElement)) return;
-    closeAllPopovers(rootElement);
-    rootElement.dataset.open = 'true';
-    trigger.setAttribute('aria-expanded', 'true');
-    panel.hidden = false;
-    positionPopover(rootElement);
-    window.requestAnimationFrame(() => positionPopover(rootElement));
-  }
-
-  doc.addEventListener('click', (event) => {
-    const target = event.target instanceof Element ? event.target : null;
-    if (!target) return;
-    const modifiedClick = event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0;
-
-    if (target.closest('[data-blog-image-lightbox-close]')) {
-      event.preventDefault();
-      closeLightbox();
-      return;
-    }
-
-    if (!modifiedClick && !target.closest('[data-blog-image-action]')) {
-      const imageTrigger = target.closest('[data-blog-image-lightbox-trigger="true"]');
-      if (imageTrigger instanceof HTMLElement) {
-        event.preventDefault();
-        openLightbox(imageTrigger);
-        return;
-      }
-    }
-
-    if (scrim instanceof HTMLElement && target === scrim) {
-      closeAllPopovers();
-      return;
-    }
-
-    const appearanceButton = target.closest('[data-theme-value]');
-    if (appearanceButton instanceof HTMLElement) {
-      event.preventDefault();
-      const value = appearanceButton.getAttribute('data-theme-value');
-      if (value) setAppearance(value);
-      return;
-    }
-
-    const schemeButton = target.closest('[data-scheme-value]');
-    if (schemeButton instanceof HTMLElement) {
-      event.preventDefault();
-      const value = schemeButton.getAttribute('data-scheme-value');
-      if (value) setScheme(value);
-      return;
-    }
-
-    const trigger = target.closest('[data-popover-trigger]');
-    if (trigger instanceof HTMLElement) {
-      event.preventDefault();
-      const rootElement = trigger.closest('[data-popover-root]');
-      if (!(rootElement instanceof HTMLElement)) return;
-      if (rootElement.dataset.open === 'true') {
-        closePopover(rootElement);
-      } else {
-        openPopover(rootElement);
-      }
-      return;
-    }
-
-    if (!target.closest('[data-popover-panel]')) {
-      closeAllPopovers();
-    }
-  });
-
-  doc.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') {
-      if (body.dataset.imageLightboxOpen === 'true') {
-        closeLightbox();
-        return;
-      }
-      closeAllPopovers();
-    }
-  });
-
-  window.addEventListener('resize', () => {
-    getOpenPopovers().forEach((node) => positionPopover(node));
-    syncOverlayState();
-  }, { passive: true });
-
-  window.addEventListener('scroll', () => {
-    if (isMobileSheet()) return;
-    getOpenPopovers().forEach((node) => positionPopover(node));
-  }, { passive: true, capture: true });
-
-  systemSchemeQuery.addEventListener('change', () => {
-    if ((root.dataset.colorSchemeMode || 'auto') !== 'auto') return;
-    root.dataset.colorScheme = systemSchemeQuery.matches ? 'dark' : 'light';
-    updateThemeButtons();
-  });
-
-  root.dataset.appearance = normalizeAppearance(root.dataset.appearance || window.localStorage.getItem(appearanceKey) || 'rail');
-  updateThemeButtons();
-  syncOverlayState();
-})();
-</script></body>
+    <article class="post-shell">
+      <header class="post-hero">
+        <div class="post-kicker-row"><div class="post-mini-meta"><span class="post-date">2026.05.06</span><div class="popover-root tag-menu" data-popover-root data-popover-name="tags"><button class="tag-chip tag-trigger" type="button" data-popover-trigger data-popover-target="tags" aria-expanded="false" aria-haspopup="dialog" aria-label="#Fragments #Equality #Society">#Fragments +2</button><div class="popover-panel tag-popover" data-popover-panel hidden><div class="tag-list" aria-label="#Fragments #Equality #Society"><span class="tag-pill">#Fragments</span><span class="tag-pill">#Equality</span><span class="tag-pill">#Society</span></div></div></div></div></div>
+        <div class="post-hero-copy">
+          <h1 class="post-title">碎片: Equality</h1>
+          <p class="post-deck">关于平等、身份与社会的摘录</p>
+        </div>
+        
+      </header>
+      <div class="post-frame"><div class="post-content"><div class="post-body"><h2>Collection</h2>
+<ul><li>Labels are the opposite of understanding</li><li>人是土地的附庸，还是人是生活在土地上的主体，这两个立场观点想不清楚，也不用来讨论族群问题了。</li><li>權力、政府、主流不需要你支持，你的稅金和生活本身就已經是。需要理解同情和支持的是弱勢和小眾，永遠站在後者的對面，那就是權力和主流的幫凶。</li><li>当我们设计一个为所有人服务的世界时，我们需要女性在场。如果那些对我们所有人产生影响的决定，都是出自身体健全的白人男性（九成来自美国），那也会形成数据缺口——就像在医学研究中不收集女性身体信息会形成数据缺口一样。</li><li>普世价值</li><li>我们追求普世价值，是因为普世价值是好的，是对的，只要你是人类，你就应该拥有他。如果有人不幸失去，那么就应该帮助他。</li><li>令人难过的是，由于一系列客观条件，一部分人无法对此感同身受。普世价值和民族无关，和国籍无关，它属于全人类。一旦能意识到一点，那么这些人就很容易能识破一些延用了近半个世纪的可笑的借口和谎言，他们的被害妄想症也理应会被治愈。</li><li>很遗憾，我得不到它，我本应该能为此不断地写，不断地写，但我不能。这让我难过了很多年，一直到现在。愿不在意的人能一直不在意，以免遭受这种难过。</li><li>人是一个多么喜欢而且习惯于分类的动物</li><li>对于自己所在的同类里受到的苦难，要放大到群体，时间上追溯五千年，然后觉得自己也在受苦</li><li>对其他人受到的苦难，要具化到个人，时间上限制在具体的事件，然后觉得对方无法代表整体</li><li>基于这种思维逻辑，构建自己的行为模式，主动获取符合自己观点的信息……唉。</li><li>On Image Generation and Political Correctness</li><li>I&#x27;m really shocked at the number of people on here who turn into crybabies the moment an unwanted Asian shows up in their image generation results.</li><li>Like, we live in a society that&#x27;s built on generations of racial oppression that has caused immense harm to real people and you&#x27;re mad because you had to look at an image of a black person?</li><li>Some people just love to play the victim. Put on your big boy pants and rewrite your prompt. It&#x27;s not hard.</li><li><a href="https://www.bilibili.com/video/BV1W7wezdEAW/">为什么要叫女权运动而不是平权运动？是谁起的名字？ - bilibili</a></li><li>什么是交叉性 (Intersectionality)</li><li>The concept of intersectionality describes how overlapping social identities (race, gender, class, etc.) create unique experiences of discrimination and privilege.</li></ul></div></div></div>
+    </article>
+  </main><div class="page-scrim" data-page-scrim hidden></div><script src="/assets/blog.3f4505d6ae.js" defer></script>
+</body>
 </html>

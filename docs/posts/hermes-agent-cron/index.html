@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
@@ -6,219 +6,140 @@
   <title>Hermes Agent Cron 调度深潜</title>
   <meta name="description" content="提醒机制的可靠性与边界">
   <meta name="theme-color" content="#f6efe4">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Source+Serif+4:wght@400;500;600;700&display=swap">
   <meta property="og:title" content="Hermes Agent Cron 调度深潜">
   <meta property="og:description" content="提醒机制的可靠性与边界">
   <meta property="og:type" content="article">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://codingezio.github.io/posts/hermes-agent-cron/">
-  <link rel="alternate" type="application/rss+xml" title="Hermes Agent Cron 调度深潜 RSS" href="/rss.xml">
+  <link rel="alternate" type="application/rss+xml" title="Posts RSS" href="/rss.xml">
   <script>
 (() => {
   const root = document.documentElement;
-  const aliases = { paper: 'poster', list: 'rail' };
-  const allowed = new Set(['rail', 'poster', 'editorial', 'midnight']);
-  const storedAppearance = window.localStorage.getItem('blog-appearance-mode');
-  const normalizedAppearance = aliases[storedAppearance ?? ''] ?? storedAppearance ?? root.dataset.appearance ?? 'rail';
-  root.dataset.appearance = allowed.has(normalizedAppearance) ? normalizedAppearance : 'rail';
-  const storedScheme = window.localStorage.getItem('blog-color-scheme');
-  if (storedScheme === 'light' || storedScheme === 'dark') {
+  const aliases = { paper: "poster", list: "rail" };
+  const allowed = new Set(["rail", "poster", "editorial", "midnight"]);
+  const storedAppearance = window.localStorage.getItem("blog-appearance-mode");
+  const normalizedAppearance = aliases[storedAppearance ?? ""] ?? storedAppearance ?? root.dataset.appearance ?? "rail";
+  root.dataset.appearance = allowed.has(normalizedAppearance) ? normalizedAppearance : "rail";
+  const storedScheme = window.localStorage.getItem("blog-color-scheme");
+  if (storedScheme === "light" || storedScheme === "dark") {
     root.dataset.colorScheme = storedScheme;
     root.dataset.colorSchemeMode = storedScheme;
   } else {
-    root.dataset.colorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    root.dataset.colorSchemeMode = 'auto';
+    root.dataset.colorScheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    root.dataset.colorSchemeMode = "auto";
   }
 })();
-</script>
-  <link rel="preload" href="/assets/blog.ade89a59dd.css" as="style">
-  <link rel="stylesheet" href="/assets/blog.ade89a59dd.css">
+  </script>
+  
+  <link rel="preload" href="/assets/blog.531707a620.css" as="style">
+  <link rel="stylesheet" href="/assets/blog.531707a620.css">
 </head>
-<body class="page page--post" data-page-kind="post"><main class="page-shell page-shell--post">
-  <header class="site-nav">
-    <a class="site-title site-home-link" href="/">Posts</a>
-    <div class="site-tools">
-      <a class="toolbar-link" href="/rss.xml">RSS</a>
-      <div class="popover-root toolbar-popover" data-popover-root data-popover-name="theme">
-  <button class="toolbar-button" type="button" data-popover-trigger data-popover-target="theme" aria-expanded="false" aria-haspopup="dialog">
-    <span data-theme-label>轨道</span>
-  </button>
-  <div class="popover-panel theme-popover" data-popover-panel hidden>
-    <div class="appearance-grid">
-      <button class="theme-option" type="button" data-theme-value="rail" data-theme-label="轨道" aria-pressed="false">轨道</button>
-      <button class="theme-option" type="button" data-theme-value="poster" data-theme-label="海报" aria-pressed="false">海报</button>
-      <button class="theme-option" type="button" data-theme-value="editorial" data-theme-label="杂志" aria-pressed="false">杂志</button>
-      <button class="theme-option" type="button" data-theme-value="midnight" data-theme-label="夜游" aria-pressed="false">夜游</button>
-    </div>
-    <div class="scheme-grid">
-      <button class="theme-option theme-option--scheme" type="button" data-scheme-value="auto" aria-pressed="false">自动</button>
-      <button class="theme-option theme-option--scheme" type="button" data-scheme-value="light" aria-pressed="false">浅</button>
-      <button class="theme-option theme-option--scheme" type="button" data-scheme-value="dark" aria-pressed="false">深</button>
-    </div>
-  </div>
-</div>
-    </div>
-  </header>
-  <article class="post-shell">
-    <header class="post-hero">
-      <div class="post-kicker-row">
-        <a class="post-home-link" href="/">Index</a>
-        <div class="post-mini-meta">
-  <span class="post-date">2026.04.11</span>
-  <div class="popover-root tag-menu" data-popover-root data-popover-name="tags">
-  <button class="tag-chip tag-trigger" type="button" data-popover-trigger data-popover-target="tags" aria-expanded="false" aria-haspopup="dialog">#HermesAgent +3</button>
-  <div class="popover-panel tag-popover" data-popover-panel hidden>
-    <div class="tag-list" aria-label="#HermesAgent #Cron #AI #Scheduler"><span class="tag-pill">#HermesAgent</span><span class="tag-pill">#Cron</span><span class="tag-pill">#AI</span><span class="tag-pill">#Scheduler</span></div>
-  </div>
-</div>
-</div>
+<body class="page page--post" data-page-kind="post">
+  <main class="page-shell page-shell--post">
+    <header class="site-nav">
+      <a class="site-title site-home-link" href="/">Index</a>
+      <div class="site-tools">
+        <a class="toolbar-link toolbar-link--feed" href="/rss.xml">RSS</a>
+        <div class="popover-root toolbar-popover" data-popover-root data-popover-name="theme"><button class="toolbar-button toolbar-button--theme" type="button" data-popover-trigger data-popover-target="theme" aria-expanded="false" aria-haspopup="dialog"><span class="theme-trigger__preview" aria-hidden="true"></span><span class="theme-trigger__label" data-active-theme-label>轨道</span></button><div class="popover-panel theme-popover" data-popover-panel hidden><div class="appearance-grid"><button class="theme-option theme-option--appearance" type="button" data-theme-value="rail" data-theme-label="轨道" data-theme-note="单列轨道" aria-pressed="false"><span class="theme-option__preview theme-option__preview--rail" aria-hidden="true"><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span></span><span class="theme-option__copy"><span class="theme-option__title">轨道</span><span class="theme-option__note">单列轨道</span></span></button><button class="theme-option theme-option--appearance" type="button" data-theme-value="poster" data-theme-label="海报" data-theme-note="拼贴海报" aria-pressed="false"><span class="theme-option__preview theme-option__preview--poster" aria-hidden="true"><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span></span><span class="theme-option__copy"><span class="theme-option__title">海报</span><span class="theme-option__note">拼贴海报</span></span></button><button class="theme-option theme-option--appearance" type="button" data-theme-value="editorial" data-theme-label="杂志" data-theme-note="折页阅读" aria-pressed="false"><span class="theme-option__preview theme-option__preview--editorial" aria-hidden="true"><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span></span><span class="theme-option__copy"><span class="theme-option__title">杂志</span><span class="theme-option__note">折页阅读</span></span></button><button class="theme-option theme-option--appearance" type="button" data-theme-value="midnight" data-theme-label="夜游" data-theme-note="夜色舞台" aria-pressed="false"><span class="theme-option__preview theme-option__preview--midnight" aria-hidden="true"><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span></span><span class="theme-option__copy"><span class="theme-option__title">夜游</span><span class="theme-option__note">夜色舞台</span></span></button></div><div class="scheme-grid"><button class="theme-option theme-option--scheme" type="button" data-scheme-value="auto" aria-pressed="false">自动</button><button class="theme-option theme-option--scheme" type="button" data-scheme-value="light" aria-pressed="false">浅</button><button class="theme-option theme-option--scheme" type="button" data-scheme-value="dark" aria-pressed="false">深</button></div></div></div>
       </div>
-      <div class="post-hero-copy">
-        <p class="post-order">01</p>
-        <h1 class="post-title">Hermes Agent Cron 调度深潜</h1>
-        <p class="post-deck">提醒机制的可靠性与边界</p>
-      </div>
-
     </header>
-    <div class="post-frame">
-      <div class="post-content"><div class="post-body"><p><strong>提醒机制的可靠性与边界</strong></p>
-<hr>
-<h2>背景</h2>
-<p>当 AI 助手声称"会提醒你"时，程序员的第一反应通常是：这东西靠谱吗？</p>
+    <article class="post-shell">
+      <header class="post-hero">
+        <div class="post-kicker-row"><div class="post-mini-meta"><span class="post-date">2026.04.11</span><div class="popover-root tag-menu" data-popover-root data-popover-name="tags"><button class="tag-chip tag-trigger" type="button" data-popover-trigger data-popover-target="tags" aria-expanded="false" aria-haspopup="dialog" aria-label="#HermesAgent #Cron #AI #Scheduler">#HermesAgent +3</button><div class="popover-panel tag-popover" data-popover-panel hidden><div class="tag-list" aria-label="#HermesAgent #Cron #AI #Scheduler"><span class="tag-pill">#HermesAgent</span><span class="tag-pill">#Cron</span><span class="tag-pill">#AI</span><span class="tag-pill">#Scheduler</span></div></div></div></div></div>
+        <div class="post-hero-copy">
+          <h1 class="post-title">Hermes Agent Cron 调度深潜</h1>
+          <p class="post-deck">提醒机制的可靠性与边界</p>
+        </div>
+        
+      </header>
+      <div class="post-frame"><div class="post-content"><div class="post-body"><h2>背景</h2>
+<p>当 AI 助手声称&quot;会提醒你&quot;时，程序员的第一反应通常是：这东西靠谱吗？</p>
 <p>本文基于使用 Hermes Agent 设置剧集提醒的实际经历，深入解析其 Cron 调度系统的技术实现、可靠性边界及适用场景。</p>
 <p><strong>需求场景</strong>: 追踪剧集更新，共 8 集，每周固定时间发布。</p>
 <p><strong>要求</strong>:</p>
-<ul>
-<li>官方发布后延迟提醒（等资源上线）</li>
-<li>每周固定时间推送</li>
-<li>通过 Telegram 接收通知</li>
-</ul>
+<ul><li>官方发布后延迟提醒（等资源上线）</li><li>每周固定时间推送</li><li>通过 Telegram 接收通知</li></ul>
 <p><strong>技术挑战</strong>:</p>
-<ul>
-<li>跨月度持续运行</li>
-<li>处理系统重启/崩溃恢复</li>
-<li>分钟级时间精度</li>
-</ul>
+<ul><li>跨月度持续运行</li><li>处理系统重启/崩溃恢复</li><li>分钟级时间精度</li></ul>
 <hr>
 <h2>架构概览</h2>
 <h3>核心组件</h3>
-<pre><code class="hljs language-pgsql">┌─────────────────────────────────────────────────────────────┐
-│                    Hermes Agent <span class="hljs-keyword">System</span>                       │
+<pre><code>┌─────────────────────────────────────────────────────────────┐
+│                    Hermes Agent System                       │
 │                                                              │
 │  ┌──────────────┐    ┌──────────────┐    ┌─────────────┐  │
 │  │   Cron Tool  │───▶│  Scheduler   │───▶│   Runner    │  │
 │  │  (API 接口)  │    │  (定时检查)   │    │ (隔离执行)  │  │
 │  └──────────────┘    └──────────────┘    └─────────────┘  │
 │                                                              │
-│  <span class="hljs-keyword">Storage</span>: ~/.hermes/cron/jobs.json                          │
-│  Output: ~/.hermes/cron/output/{job_id}/{<span class="hljs-type">timestamp</span>}.md      │
-└─────────────────────────────────────────────────────────────┘
-</code></pre>
+│  Storage: ~/.hermes/cron/jobs.json                          │
+│  Output: ~/.hermes/cron/output/{job_id}/{timestamp}.md      │
+└─────────────────────────────────────────────────────────────┘</code></pre>
 <p>Hermes 采用 <strong>Gateway Scheduler</strong> 模式，与消息平台深度集成，支持多平台投递。</p>
 <hr>
 <h2>存储机制详解</h2>
 <h3>1. 任务持久化</h3>
 <p><strong>文件位置</strong>: <code>~/.hermes/cron/jobs.json</code></p>
 <p><strong>关键特性</strong>: <strong>原子写入 (Atomic Write)</strong></p>
-<pre><code class="language-python hljs"><span class="hljs-keyword">def</span> <span class="hljs-title function_">atomic_write</span>(<span class="hljs-params">filepath, data</span>):
-    <span class="hljs-string">"""确保写入操作要么完全成功，要么完全不写入"""</span>
+<pre><code>def atomic_write(filepath, data):
+    &quot;&quot;&quot;确保写入操作要么完全成功，要么完全不写入&quot;&quot;&quot;
     fd, temp_path = tempfile.mkstemp(
-        <span class="hljs-built_in">dir</span>=os.path.dirname(filepath), suffix=<span class="hljs-string">'.tmp'</span>
+        dir=os.path.dirname(filepath), suffix=&#x27;.tmp&#x27;
     )
-    <span class="hljs-keyword">try</span>:
-        <span class="hljs-keyword">with</span> os.fdopen(fd, <span class="hljs-string">'w'</span>) <span class="hljs-keyword">as</span> f:
+    try:
+        with os.fdopen(fd, &#x27;w&#x27;) as f:
             json.dump(data, f)
             f.flush()
-            os.fsync(f.fileno())  <span class="hljs-comment"># 强制同步到磁盘</span>
-        os.rename(temp_path, filepath)  <span class="hljs-comment"># 原子替换</span>
-    <span class="hljs-keyword">except</span> Exception:
+            os.fsync(f.fileno())  # 强制同步到磁盘
+        os.rename(temp_path, filepath)  # 原子替换
+    except Exception:
         os.unlink(temp_path)
-        <span class="hljs-keyword">raise</span>
-</code></pre>
+        raise</code></pre>
 <p><strong>保证</strong>: 即使系统崩溃，也不会出现半写文件或 JSON 损坏。</p>
 <h3>2. 实际任务数据结构</h3>
-<pre><code class="language-json hljs"><span class="hljs-punctuation">{</span>
-  <span class="hljs-attr">"id"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"e804371d723e"</span><span class="hljs-punctuation">,</span>
-  <span class="hljs-attr">"name"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"剧集提醒 S5E1-E2"</span><span class="hljs-punctuation">,</span>
-  <span class="hljs-attr">"prompt"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"提醒：新一集已发布..."</span><span class="hljs-punctuation">,</span>
-  <span class="hljs-attr">"schedule"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
-    <span class="hljs-attr">"kind"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"cron"</span><span class="hljs-punctuation">,</span>
-    <span class="hljs-attr">"expr"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"0 8 9 4 *"</span>
-  <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
-  <span class="hljs-attr">"repeat"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span> <span class="hljs-attr">"times"</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">null</span></span><span class="hljs-punctuation">,</span> <span class="hljs-attr">"completed"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">0</span> <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
-  <span class="hljs-attr">"enabled"</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span><span class="hljs-punctuation">,</span>
-  <span class="hljs-attr">"state"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"scheduled"</span><span class="hljs-punctuation">,</span>
-  <span class="hljs-attr">"next_run_at"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"2026-04-09T08:00:00+08:00"</span><span class="hljs-punctuation">,</span>
-  <span class="hljs-attr">"deliver"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"telegram"</span>
-<span class="hljs-punctuation">}</span>
-</code></pre>
+<pre><code>{
+  &quot;id&quot;: &quot;e804371d723e&quot;,
+  &quot;name&quot;: &quot;剧集提醒 S5E1-E2&quot;,
+  &quot;prompt&quot;: &quot;提醒：新一集已发布...&quot;,
+  &quot;schedule&quot;: {
+    &quot;kind&quot;: &quot;cron&quot;,
+    &quot;expr&quot;: &quot;0 8 9 4 *&quot;
+  },
+  &quot;repeat&quot;: { &quot;times&quot;: null, &quot;completed&quot;: 0 },
+  &quot;enabled&quot;: true,
+  &quot;state&quot;: &quot;scheduled&quot;,
+  &quot;next_run_at&quot;: &quot;2026-04-09T08:00:00+08:00&quot;,
+  &quot;deliver&quot;: &quot;telegram&quot;
+}</code></pre>
 <p>关键字段解析：</p>
-<ul>
-<li><code>schedule.expr</code>: 标准 Cron 表达式</li>
-<li><code>state</code>: 当前状态（scheduled/running/paused）</li>
-<li><code>repeat.times: null</code>: 无限重复</li>
-<li><code>deliver</code>: 投递目标</li>
-</ul>
+<ul><li><code>schedule.expr</code>: 标准 Cron 表达式</li><li><code>state</code>: 当前状态（scheduled/running/paused）</li><li><code>repeat.times: null</code>: 无限重复</li><li><code>deliver</code>: 投递目标</li></ul>
 <hr>
 <h2>调度系统实现</h2>
 <h3>Cron 表达式</h3>
 <p>示例：<code>0 8 9 4 *</code></p>
-<pre><code class="hljs language-scss">│ │ │ │ │
-│ │ │ │ └─── 星期 (<span class="hljs-number">0</span>-<span class="hljs-number">7</span>, * = 每天)
-│ │ │ └───── 月份 (<span class="hljs-number">1</span>-<span class="hljs-number">12</span>)
-│ │ └─────── 日期 (<span class="hljs-number">1</span>-<span class="hljs-number">31</span>)
-│ └───────── 小时 (<span class="hljs-number">0</span>-<span class="hljs-number">23</span>)
-└─────────── 分钟 (<span class="hljs-number">0</span>-<span class="hljs-number">59</span>)
-</code></pre>
+<pre><code>│ │ │ │ │
+│ │ │ │ └─── 星期 (0-7, * = 每天)
+│ │ │ └───── 月份 (1-12)
+│ │ └─────── 日期 (1-31)
+│ └───────── 小时 (0-23)
+└─────────── 分钟 (0-59)</code></pre>
 <h3>调度精度</h3>
-<div class="table-wrap"><table>
-<thead>
-<tr>
-<th>格式</th>
-<th>精度</th>
-<th>适用场景</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>相对延迟 <code>30m</code></td>
-<td>分钟级</td>
-<td>一次性任务</td>
-</tr>
-<tr>
-<td>间隔 <code>every 2h</code></td>
-<td>分钟级</td>
-<td>周期性检查</td>
-</tr>
-<tr>
-<td>Cron <code>0 8 * * *</code></td>
-<td>分钟级</td>
-<td>定时提醒 ✅</td>
-</tr>
-<tr>
-<td>ISO 时间戳</td>
-<td>秒级</td>
-<td>精确任务</td>
-</tr>
-</tbody>
-</table></div>
+<div class="table-wrap"><table><thead><tr><th>格式</th><th>精度</th><th>适用场景</th></tr></thead><tbody><tr><td>相对延迟 <code>30m</code></td><td>分钟级</td><td>一次性任务</td></tr><tr><td>间隔 <code>every 2h</code></td><td>分钟级</td><td>周期性检查</td></tr><tr><td>Cron <code>0 8 * * *</code></td><td>分钟级</td><td>定时提醒</td></tr><tr><td>ISO 时间戳</td><td>秒级</td><td>精确任务</td></tr></tbody></table></div>
 <p><strong>注意</strong>: Hermes 是分钟级精度，不保证秒级准时。</p>
 <hr>
 <h2>执行环境：Fresh Agent Session</h2>
 <h3>隔离性设计</h3>
 <p>每个任务在<strong>完全独立的会话</strong>中运行：</p>
-<ul>
-<li>✅ <strong>独立上下文</strong> - 任务之间互不干扰</li>
-<li>✅ <strong>独立工具集</strong> - 静态工具列表，可控</li>
-<li>✅ <strong>防循环</strong> - 禁止 Cron 会话创建新 Cron</li>
-<li>✅ <strong>资源控制</strong> - 独立的 token 预算</li>
-</ul>
+<ul><li><strong>独立上下文</strong> - 任务之间互不干扰</li><li><strong>独立工具集</strong> - 静态工具列表，可控</li><li><strong>防循环</strong> - 禁止 Cron 会话创建新 Cron</li><li><strong>资源控制</strong> - 独立的 token 预算</li></ul>
 <h3>执行流程</h3>
-<pre><code class="hljs language-pgsql">Scheduler 检查 jobs.json
+<pre><code>Scheduler 检查 jobs.json
         │
         ▼
 触发时间到达?
         │
-        ├── Yes ──▶ 创建 Fresh <span class="hljs-keyword">Session</span>
+        ├── Yes ──▶ 创建 Fresh Session
         │                │
         │                ▼
         │           执行提示词
@@ -229,516 +150,61 @@
         │                ▼
         │           更新状态 &amp; 计算下次执行时间
         │
-        └── <span class="hljs-keyword">No</span> ───▶ 继续等待
-</code></pre>
+        └── No ───▶ 继续等待</code></pre>
 <hr>
 <h2>可靠性分析</h2>
-<h3>1. 数据持久化 ✅</h3>
-<div class="table-wrap"><table>
-<thead>
-<tr>
-<th>场景</th>
-<th>行为</th>
-<th>可靠性</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>系统崩溃</td>
-<td>jobs.json 已原子写入</td>
-<td>高</td>
-</tr>
-<tr>
-<td>Gateway 重启</td>
-<td>从文件恢复</td>
-<td>高</td>
-</tr>
-<tr>
-<td>磁盘损坏</td>
-<td>无副本机制</td>
-<td>低</td>
-</tr>
-</tbody>
-</table></div>
+<h3>1. 数据持久化</h3>
+<div class="table-wrap"><table><thead><tr><th>场景</th><th>行为</th><th>可靠性</th></tr></thead><tbody><tr><td>系统崩溃</td><td>jobs.json 已原子写入</td><td>高</td></tr><tr><td>Gateway 重启</td><td>从文件恢复</td><td>高</td></tr><tr><td>磁盘损坏</td><td>无副本机制</td><td>低</td></tr></tbody></table></div>
 <p><strong>建议</strong>: 定期备份 <code>~/.hermes/cron/jobs.json</code></p>
-<h3>2. 执行可靠性 ⚠️</h3>
-<div class="table-wrap"><table>
-<thead>
-<tr>
-<th>故障场景</th>
-<th>处理方式</th>
-<th>结果</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>执行超时 (&gt;300s)</td>
-<td>标记失败，下次重试</td>
-<td>可能延迟</td>
-</tr>
-<tr>
-<td>AI 服务不可用</td>
-<td>自动切换 Provider</td>
-<td>有容错</td>
-</tr>
-<tr>
-<td>投递失败</td>
-<td>记录错误</td>
-<td>可能丢失</td>
-</tr>
-<tr>
-<td>系统关机</td>
-<td>错过执行窗口</td>
-<td>无法恢复</td>
-</tr>
-</tbody>
-</table></div>
+<h3>2. 执行可靠性</h3>
+<div class="table-wrap"><table><thead><tr><th>故障场景</th><th>处理方式</th><th>结果</th></tr></thead><tbody><tr><td>执行超时 (&gt;300s)</td><td>标记失败，下次重试</td><td>可能延迟</td></tr><tr><td>AI 服务不可用</td><td>自动切换 Provider</td><td>有容错</td></tr><tr><td>投递失败</td><td>记录错误</td><td>可能丢失</td></tr><tr><td>系统关机</td><td>错过执行窗口</td><td>无法恢复</td></tr></tbody></table></div>
 <p><strong>关键限制</strong>: 如果系统关机或 Gateway 停止，错过的任务不会补执行。</p>
-<h3>3. 时间精度 ⚠️</h3>
-<ul>
-<li><strong>设计精度</strong>: 分钟级</li>
-<li><strong>实际观察</strong>: 通常在整点 ±30 秒内触发</li>
-<li><strong>适用</strong>: 提醒、报告（允许延迟）</li>
-<li><strong>不适用</strong>: 金融交易、医疗警报（需秒级精度）</li>
-</ul>
+<h3>3. 时间精度</h3>
+<ul><li><strong>设计精度</strong>: 分钟级</li><li><strong>实际观察</strong>: 通常在整点 ±30 秒内触发</li><li><strong>适用</strong>: 提醒、报告（允许延迟）</li><li><strong>不适用</strong>: 金融交易、医疗警报（需秒级精度）</li></ul>
 <hr>
 <h2>与其他系统对比</h2>
-<div class="table-wrap"><table>
-<thead>
-<tr>
-<th>特性</th>
-<th>Hermes Cron</th>
-<th>Linux Cron</th>
-<th>GitHub Actions</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>存储</strong></td>
-<td>JSON 文件</td>
-<td>crontab</td>
-<td>GitHub 云端</td>
-</tr>
-<tr>
-<td><strong>AI 能力</strong></td>
-<td>✅ 内置</td>
-<td>❌ 需脚本</td>
-<td>❌ 需配置</td>
-</tr>
-<tr>
-<td><strong>消息投递</strong></td>
-<td>✅ 多平台</td>
-<td>❌ 需实现</td>
-<td>⚠️ 有限</td>
-</tr>
-<tr>
-<td><strong>可靠性</strong></td>
-<td>⚠️ 单机</td>
-<td>✅ 系统级</td>
-<td>✅ 企业级</td>
-</tr>
-<tr>
-<td><strong>适用场景</strong></td>
-<td>个人 AI 助手</td>
-<td>系统任务</td>
-<td>CI/CD</td>
-</tr>
-</tbody>
-</table></div>
+<div class="table-wrap"><table><thead><tr><th>特性</th><th>Hermes Cron</th><th>Linux Cron</th><th>GitHub Actions</th></tr></thead><tbody><tr><td><strong>存储</strong></td><td>JSON 文件</td><td>crontab</td><td>GitHub 云端</td></tr><tr><td><strong>AI 能力</strong></td><td>内置</td><td>需脚本</td><td>需配置</td></tr><tr><td><strong>消息投递</strong></td><td>多平台</td><td>需实现</td><td>有限</td></tr><tr><td><strong>可靠性</strong></td><td>单机</td><td>系统级</td><td>企业级</td></tr><tr><td><strong>适用场景</strong></td><td>个人 AI 助手</td><td>系统任务</td><td>CI/CD</td></tr></tbody></table></div>
 <hr>
 <h2>实践建议</h2>
 <h3>1. 确保 Gateway 持续运行</h3>
-<pre><code class="language-bash hljs"><span class="hljs-comment"># 安装为系统服务（开机自启）</span>
+<pre><code># 安装为系统服务（开机自启）
 hermes gateway install
 
-<span class="hljs-comment"># 检查状态</span>
-hermes gateway status
-</code></pre>
+# 检查状态
+hermes gateway status</code></pre>
 <h3>2. 监控任务状态</h3>
-<pre><code class="language-bash hljs"><span class="hljs-comment"># 查看所有任务</span>
+<pre><code># 查看所有任务
 hermes cron list
 
-<span class="hljs-comment"># 查看执行历史</span>
-<span class="hljs-built_in">ls</span> ~/.hermes/cron/output/{job_id}/
-</code></pre>
+# 查看执行历史
+ls ~/.hermes/cron/output/{job_id}/</code></pre>
 <h3>3. 关键任务的双重保险</h3>
 <p>对于重要提醒，建议同时使用系统 Cron：</p>
-<pre><code class="language-bash hljs"><span class="hljs-comment"># 主提醒 (Hermes)</span>
-hermes cron create <span class="hljs-string">"0 8 * * *"</span> <span class="hljs-string">"提醒内容"</span>
+<pre><code># 主提醒 (Hermes)
+hermes cron create &quot;0 8 * * *&quot; &quot;提醒内容&quot;
 
-<span class="hljs-comment"># 备份提醒 (系统 Cron)</span>
-<span class="hljs-built_in">echo</span> <span class="hljs-string">"0 8 * * * /usr/local/bin/notify-send '提醒'"</span> | crontab
-</code></pre>
+# 备份提醒 (系统 Cron)
+echo &quot;0 8 * * * /usr/local/bin/notify-send &#x27;提醒&#x27;&quot; | crontab</code></pre>
 <hr>
 <h2>安全性设计</h2>
 <h3>1. 提示词扫描</h3>
 <p>创建任务时检查危险模式：</p>
-<ul>
-<li>SSH 连接尝试</li>
-<li>凭证泄露</li>
-<li>不可见 Unicode 字符</li>
-</ul>
+<ul><li>SSH 连接尝试</li><li>凭证泄露</li><li>不可见 Unicode 字符</li></ul>
 <h3>2. 沙箱执行</h3>
-<ul>
-<li>限制文件系统访问路径</li>
-<li>限制网络访问白名单</li>
-<li>超时控制（默认 300 秒）</li>
-</ul>
+<ul><li>限制文件系统访问路径</li><li>限制网络访问白名单</li><li>超时控制（默认 300 秒）</li></ul>
 <hr>
 <h2>结论：可信度评估</h2>
-<h3>剧集提醒场景 ✅</h3>
-<div class="table-wrap"><table>
-<thead>
-<tr>
-<th>维度</th>
-<th>评分</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>可靠性</strong></td>
-<td>⭐⭐⭐⭐</td>
-<td>允许几分钟延迟</td>
-</tr>
-<tr>
-<td><strong>持久化</strong></td>
-<td>⭐⭐⭐⭐⭐</td>
-<td>JSON 文件本地存储</td>
-</tr>
-<tr>
-<td><strong>恢复能力</strong></td>
-<td>⭐⭐⭐⭐</td>
-<td>重启后自动恢复</td>
-</tr>
-<tr>
-<td><strong>精度</strong></td>
-<td>⭐⭐⭐</td>
-<td>分钟级足够</td>
-</tr>
-</tbody>
-</table></div>
+<h3>剧集提醒场景</h3>
+<div class="table-wrap"><table><thead><tr><th>维度</th><th>评分</th><th>说明</th></tr></thead><tbody><tr><td><strong>可靠性</strong></td><td>4/5</td><td>允许几分钟延迟</td></tr><tr><td><strong>持久化</strong></td><td>5/5</td><td>JSON 文件本地存储</td></tr><tr><td><strong>恢复能力</strong></td><td>4/5</td><td>重启后自动恢复</td></tr><tr><td><strong>精度</strong></td><td>3/5</td><td>分钟级足够</td></tr></tbody></table></div>
 <p><strong>结论</strong>: 完全适合此场景。</p>
-<h3>不推荐场景 ❌</h3>
-<ul>
-<li><strong>金融交易</strong>: 需要秒级精度和事务保证</li>
-<li><strong>医疗警报</strong>: 生命安全相关</li>
-<li><strong>高频任务</strong>: 每秒执行多次</li>
-</ul>
+<h3>不推荐场景</h3>
+<ul><li><strong>金融交易</strong>: 需要秒级精度和事务保证</li><li><strong>医疗警报</strong>: 生命安全相关</li><li><strong>高频任务</strong>: 每秒执行多次</li></ul>
 <hr>
 <h2>技术规格速查</h2>
-<div class="table-wrap"><table>
-<thead>
-<tr>
-<th>属性</th>
-<th>值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>存储格式</td>
-<td>JSON</td>
-</tr>
-<tr>
-<td>存储位置</td>
-<td><code>~/.hermes/cron/jobs.json</code></td>
-</tr>
-<tr>
-<td>写入方式</td>
-<td>原子写入</td>
-</tr>
-<tr>
-<td>调度精度</td>
-<td>分钟级</td>
-</tr>
-<tr>
-<td>执行超时</td>
-<td>300 秒</td>
-</tr>
-<tr>
-<td>Provider 容错</td>
-<td>自动切换</td>
-</tr>
-<tr>
-<td>递归 Cron</td>
-<td>❌ 禁止</td>
-</tr>
-</tbody>
-</table></div>
-</div></div>
-    </div>
-  </article>
-</main><div class="page-scrim" data-page-scrim hidden></div><script>
-(() => {
-  const appearanceKey = 'blog-appearance-mode';
-  const schemeKey = 'blog-color-scheme';
-  const root = document.documentElement;
-  const doc = document;
-  const body = doc.body;
-  const scrim = doc.querySelector('[data-page-scrim]');
-  let portalLayer = doc.querySelector('[data-popover-layer]');
-  if (!(portalLayer instanceof HTMLElement)) {
-    portalLayer = doc.createElement('div');
-    portalLayer.className = 'popover-layer';
-    portalLayer.setAttribute('data-popover-layer', '');
-    body.appendChild(portalLayer);
-  }
-  doc.querySelectorAll('[data-popover-root]').forEach((rootElement) => {
-    if (!(rootElement instanceof HTMLElement)) return;
-    const panel = rootElement.querySelector('[data-popover-panel]');
-    const name = rootElement.dataset.popoverName || '';
-    if (panel instanceof HTMLElement && name) {
-      panel.dataset.popoverPanelOwner = name;
-    }
-  });
-  const aliases = { paper: 'poster', list: 'rail' };
-  const allowed = new Set(['rail', 'poster', 'editorial', 'midnight']);
-  const systemSchemeQuery = window.matchMedia('(prefers-color-scheme: dark)');
-  let themePulseTimer = 0;
-
-  const isMobileSheet = () => window.matchMedia('(max-width: 720px)').matches;
-  const getOpenPopovers = () => Array.from(doc.querySelectorAll('[data-popover-root][data-open="true"]'));
-  const getPopoverParts = (rootElement) => {
-    const owner = rootElement.dataset.popoverName || '';
-    return {
-      trigger: rootElement.querySelector('[data-popover-trigger]'),
-      panel: owner
-        ? doc.querySelector('[data-popover-panel-owner="' + owner + '"]')
-        : rootElement.querySelector('[data-popover-panel]'),
-    };
-  };
-
-  function normalizeAppearance(value) {
-    const normalized = aliases[value ?? ''] ?? value ?? 'rail';
-    return allowed.has(normalized) ? normalized : 'rail';
-  }
-
-  function syncOverlayState() {
-    const active = isMobileSheet() && getOpenPopovers().length > 0;
-    if (active) {
-      body.dataset.overlayOpen = 'true';
-    } else {
-      delete body.dataset.overlayOpen;
-    }
-    if (scrim instanceof HTMLElement) {
-      scrim.hidden = !active;
-    }
-  }
-
-  function updateThemeButtons() {
-    const activeAppearance = normalizeAppearance(root.dataset.appearance);
-    const activeScheme = root.dataset.colorSchemeMode || 'auto';
-    doc.querySelectorAll('[data-theme-value]').forEach((button) => {
-      button.setAttribute('aria-pressed', String(button.getAttribute('data-theme-value') === activeAppearance));
-    });
-    doc.querySelectorAll('[data-scheme-value]').forEach((button) => {
-      button.setAttribute('aria-pressed', String(button.getAttribute('data-scheme-value') === activeScheme));
-    });
-    const activeThemeButton = doc.querySelector('[data-theme-value="' + activeAppearance + '"]');
-    doc.querySelectorAll('[data-theme-label]').forEach((label) => {
-      label.textContent = activeThemeButton?.getAttribute('data-theme-label') || '轨道';
-    });
-  }
-
-  function pulseThemeShift() {
-    body.dataset.themeSwitch = 'true';
-    window.clearTimeout(themePulseTimer);
-    themePulseTimer = window.setTimeout(() => {
-      delete body.dataset.themeSwitch;
-    }, 260);
-  }
-
-  function setAppearance(value) {
-    const normalized = normalizeAppearance(value);
-    root.dataset.appearance = normalized;
-    window.localStorage.setItem(appearanceKey, normalized);
-    pulseThemeShift();
-    updateThemeButtons();
-    getOpenPopovers().forEach((node) => positionPopover(node));
-  }
-
-  function setScheme(value) {
-    if (value === 'auto') {
-      root.dataset.colorScheme = systemSchemeQuery.matches ? 'dark' : 'light';
-      root.dataset.colorSchemeMode = 'auto';
-      window.localStorage.removeItem(schemeKey);
-    } else {
-      root.dataset.colorScheme = value;
-      root.dataset.colorSchemeMode = value;
-      window.localStorage.setItem(schemeKey, value);
-    }
-    pulseThemeShift();
-    updateThemeButtons();
-    getOpenPopovers().forEach((node) => positionPopover(node));
-  }
-
-  function clearPanelPosition(panel) {
-    panel.style.left = '';
-    panel.style.top = '';
-    panel.style.right = '';
-    panel.style.bottom = '';
-    panel.style.maxHeight = '';
-  }
-
-  function movePanelIntoLayer(panel) {
-    if (portalLayer instanceof HTMLElement && panel.parentElement !== portalLayer) {
-      portalLayer.appendChild(panel);
-    }
-  }
-
-  function restorePanel(rootElement, panel) {
-    if (panel.parentElement !== rootElement) {
-      rootElement.appendChild(panel);
-    }
-    delete panel.dataset.open;
-    delete panel.dataset.popoverMode;
-  }
-
-  function closePopover(rootElement) {
-    if (!(rootElement instanceof HTMLElement)) return;
-    const { trigger, panel } = getPopoverParts(rootElement);
-    if (!(trigger instanceof HTMLElement) || !(panel instanceof HTMLElement)) return;
-    rootElement.dataset.open = 'false';
-    delete rootElement.dataset.mode;
-    trigger.setAttribute('aria-expanded', 'false');
-    clearPanelPosition(panel);
-    panel.hidden = true;
-    restorePanel(rootElement, panel);
-    syncOverlayState();
-  }
-
-  function closeAllPopovers(exceptElement) {
-    getOpenPopovers().forEach((node) => {
-      if (!exceptElement || node !== exceptElement) {
-        closePopover(node);
-      }
-    });
-  }
-
-  function positionPopover(rootElement) {
-    if (!(rootElement instanceof HTMLElement)) return;
-    const { trigger, panel } = getPopoverParts(rootElement);
-    if (!(trigger instanceof HTMLElement) || !(panel instanceof HTMLElement)) return;
-    movePanelIntoLayer(panel);
-    panel.hidden = false;
-    panel.dataset.open = 'true';
-    clearPanelPosition(panel);
-    if (isMobileSheet()) {
-      rootElement.dataset.mode = 'sheet';
-      panel.dataset.popoverMode = 'sheet';
-      panel.style.maxHeight = Math.floor(window.innerHeight * 0.72) + 'px';
-      syncOverlayState();
-      return;
-    }
-    rootElement.dataset.mode = 'popover';
-    panel.dataset.popoverMode = 'popover';
-    const viewportPadding = 12;
-    const gap = 10;
-    const maxHeight = Math.max(180, window.innerHeight - viewportPadding * 2);
-    panel.style.maxHeight = maxHeight + 'px';
-    const triggerRect = trigger.getBoundingClientRect();
-    const panelRect = panel.getBoundingClientRect();
-    const panelWidth = Math.max(panel.offsetWidth, panel.clientWidth, panelRect.width);
-    const panelHeight = Math.max(panel.offsetHeight, panel.clientHeight, panelRect.height);
-    let left = triggerRect.left;
-    if (left + panelWidth > window.innerWidth - viewportPadding) {
-      left = window.innerWidth - viewportPadding - panelWidth;
-    }
-    if (left < viewportPadding) {
-      left = viewportPadding;
-    }
-    let top = triggerRect.bottom + gap;
-    if (top + panelHeight > window.innerHeight - viewportPadding) {
-      top = Math.max(viewportPadding, triggerRect.top - panelHeight - gap);
-    }
-    if (top < viewportPadding) {
-      top = viewportPadding;
-    }
-    panel.style.left = Math.round(left) + 'px';
-    panel.style.top = Math.round(top) + 'px';
-    syncOverlayState();
-  }
-
-  function openPopover(rootElement) {
-    if (!(rootElement instanceof HTMLElement)) return;
-    const { trigger, panel } = getPopoverParts(rootElement);
-    if (!(trigger instanceof HTMLElement) || !(panel instanceof HTMLElement)) return;
-    closeAllPopovers(rootElement);
-    rootElement.dataset.open = 'true';
-    trigger.setAttribute('aria-expanded', 'true');
-    panel.hidden = false;
-    positionPopover(rootElement);
-    window.requestAnimationFrame(() => positionPopover(rootElement));
-  }
-
-  doc.addEventListener('click', (event) => {
-    const target = event.target instanceof Element ? event.target : null;
-    if (!target) return;
-
-    if (scrim instanceof HTMLElement && target === scrim) {
-      closeAllPopovers();
-      return;
-    }
-
-    const appearanceButton = target.closest('[data-theme-value]');
-    if (appearanceButton instanceof HTMLElement) {
-      event.preventDefault();
-      const value = appearanceButton.getAttribute('data-theme-value');
-      if (value) setAppearance(value);
-      return;
-    }
-
-    const schemeButton = target.closest('[data-scheme-value]');
-    if (schemeButton instanceof HTMLElement) {
-      event.preventDefault();
-      const value = schemeButton.getAttribute('data-scheme-value');
-      if (value) setScheme(value);
-      return;
-    }
-
-    const trigger = target.closest('[data-popover-trigger]');
-    if (trigger instanceof HTMLElement) {
-      event.preventDefault();
-      const rootElement = trigger.closest('[data-popover-root]');
-      if (!(rootElement instanceof HTMLElement)) return;
-      if (rootElement.dataset.open === 'true') {
-        closePopover(rootElement);
-      } else {
-        openPopover(rootElement);
-      }
-      return;
-    }
-
-    if (!target.closest('[data-popover-panel]')) {
-      closeAllPopovers();
-    }
-  });
-
-  doc.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') {
-      closeAllPopovers();
-    }
-  });
-
-  window.addEventListener('resize', () => {
-    getOpenPopovers().forEach((node) => positionPopover(node));
-    syncOverlayState();
-  }, { passive: true });
-
-  window.addEventListener('scroll', () => {
-    if (isMobileSheet()) return;
-    getOpenPopovers().forEach((node) => positionPopover(node));
-  }, { passive: true, capture: true });
-
-  systemSchemeQuery.addEventListener('change', () => {
-    if ((root.dataset.colorSchemeMode || 'auto') !== 'auto') return;
-    root.dataset.colorScheme = systemSchemeQuery.matches ? 'dark' : 'light';
-    updateThemeButtons();
-  });
-
-  root.dataset.appearance = normalizeAppearance(root.dataset.appearance || window.localStorage.getItem(appearanceKey) || 'rail');
-  updateThemeButtons();
-  syncOverlayState();
-})();
-</script></body>
+<div class="table-wrap"><table><thead><tr><th>属性</th><th>值</th></tr></thead><tbody><tr><td>存储格式</td><td>JSON</td></tr><tr><td>存储位置</td><td><code>~/.hermes/cron/jobs.json</code></td></tr><tr><td>写入方式</td><td>原子写入</td></tr><tr><td>调度精度</td><td>分钟级</td></tr><tr><td>执行超时</td><td>300 秒</td></tr><tr><td>Provider 容错</td><td>自动切换</td></tr><tr><td>递归 Cron</td><td>禁止</td></tr></tbody></table></div>
+<h2>参考</h2>
+<ul><li>旧 GitHub Pages 已发布页面内容迁回 source post。</li></ul></div></div></div>
+    </article>
+  </main><div class="page-scrim" data-page-scrim hidden></div><script src="/assets/blog.3f4505d6ae.js" defer></script>
+</body>
 </html>

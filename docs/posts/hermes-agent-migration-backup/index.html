@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
@@ -14,610 +14,91 @@
   <meta property="og:type" content="article">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://codingezio.github.io/posts/hermes-agent-migration-backup/">
-  <link rel="alternate" type="application/rss+xml" title="Hermes: 备份与迁移 RSS" href="/rss.xml">
+  <link rel="alternate" type="application/rss+xml" title="Posts RSS" href="/rss.xml">
   <script>
 (() => {
   const root = document.documentElement;
-  const aliases = { paper: 'poster', list: 'rail' };
-  const allowed = new Set(['rail', 'poster', 'editorial', 'midnight']);
-  const storedAppearance = window.localStorage.getItem('blog-appearance-mode');
-  const normalizedAppearance = aliases[storedAppearance ?? ''] ?? storedAppearance ?? root.dataset.appearance ?? 'rail';
-  root.dataset.appearance = allowed.has(normalizedAppearance) ? normalizedAppearance : 'rail';
-  const storedScheme = window.localStorage.getItem('blog-color-scheme');
-  if (storedScheme === 'light' || storedScheme === 'dark') {
+  const aliases = { paper: "poster", list: "rail" };
+  const allowed = new Set(["rail", "poster", "editorial", "midnight"]);
+  const storedAppearance = window.localStorage.getItem("blog-appearance-mode");
+  const normalizedAppearance = aliases[storedAppearance ?? ""] ?? storedAppearance ?? root.dataset.appearance ?? "rail";
+  root.dataset.appearance = allowed.has(normalizedAppearance) ? normalizedAppearance : "rail";
+  const storedScheme = window.localStorage.getItem("blog-color-scheme");
+  if (storedScheme === "light" || storedScheme === "dark") {
     root.dataset.colorScheme = storedScheme;
     root.dataset.colorSchemeMode = storedScheme;
   } else {
-    root.dataset.colorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    root.dataset.colorSchemeMode = 'auto';
+    root.dataset.colorScheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    root.dataset.colorSchemeMode = "auto";
   }
 })();
-</script>
-  <link rel="preload" href="/assets/blog.12e7e71c89.css" as="style">
-  <link rel="stylesheet" href="/assets/blog.12e7e71c89.css">
+  </script>
+  
+  <link rel="preload" href="/assets/blog.531707a620.css" as="style">
+  <link rel="stylesheet" href="/assets/blog.531707a620.css">
 </head>
-<body class="page page--post" data-page-kind="post"><main class="page-shell page-shell--post">
-  <header class="site-nav">
-    <a class="site-title site-home-link" href="/">Index</a>
-    <div class="site-tools">
-      <a class="toolbar-link toolbar-link--feed" href="/rss.xml">RSS</a>
-      <div class="popover-root toolbar-popover" data-popover-root data-popover-name="theme">
-  <button class="toolbar-button toolbar-button--theme" type="button" data-popover-trigger data-popover-target="theme" aria-expanded="false" aria-haspopup="dialog">
-    <span class="theme-trigger__preview" aria-hidden="true"></span>
-    <span class="theme-trigger__label" data-active-theme-label>轨道</span>
-  </button>
-  <div class="popover-panel theme-popover" data-popover-panel hidden>
-    <div class="appearance-grid">
-      <button class="theme-option theme-option--appearance" type="button" data-theme-value="rail" data-theme-label="轨道" data-theme-note="单列轨道" aria-pressed="false">
-        <span class="theme-option__preview theme-option__preview--rail" aria-hidden="true">
-          <span class="theme-option__preview-block"></span>
-          <span class="theme-option__preview-block"></span>
-          <span class="theme-option__preview-block"></span>
-        </span>
-        <span class="theme-option__copy">
-          <span class="theme-option__title">轨道</span>
-          <span class="theme-option__note">单列轨道</span>
-        </span>
-      </button>
-      <button class="theme-option theme-option--appearance" type="button" data-theme-value="poster" data-theme-label="海报" data-theme-note="拼贴海报" aria-pressed="false">
-        <span class="theme-option__preview theme-option__preview--poster" aria-hidden="true">
-          <span class="theme-option__preview-block"></span>
-          <span class="theme-option__preview-block"></span>
-          <span class="theme-option__preview-block"></span>
-        </span>
-        <span class="theme-option__copy">
-          <span class="theme-option__title">海报</span>
-          <span class="theme-option__note">拼贴海报</span>
-        </span>
-      </button>
-      <button class="theme-option theme-option--appearance" type="button" data-theme-value="editorial" data-theme-label="杂志" data-theme-note="折页阅读" aria-pressed="false">
-        <span class="theme-option__preview theme-option__preview--editorial" aria-hidden="true">
-          <span class="theme-option__preview-block"></span>
-          <span class="theme-option__preview-block"></span>
-          <span class="theme-option__preview-block"></span>
-        </span>
-        <span class="theme-option__copy">
-          <span class="theme-option__title">杂志</span>
-          <span class="theme-option__note">折页阅读</span>
-        </span>
-      </button>
-      <button class="theme-option theme-option--appearance" type="button" data-theme-value="midnight" data-theme-label="夜游" data-theme-note="夜色舞台" aria-pressed="false">
-        <span class="theme-option__preview theme-option__preview--midnight" aria-hidden="true">
-          <span class="theme-option__preview-block"></span>
-          <span class="theme-option__preview-block"></span>
-          <span class="theme-option__preview-block"></span>
-        </span>
-        <span class="theme-option__copy">
-          <span class="theme-option__title">夜游</span>
-          <span class="theme-option__note">夜色舞台</span>
-        </span>
-      </button>
-    </div>
-    <div class="scheme-grid">
-      <button class="theme-option theme-option--scheme" type="button" data-scheme-value="auto" aria-pressed="false">自动</button>
-      <button class="theme-option theme-option--scheme" type="button" data-scheme-value="light" aria-pressed="false">浅</button>
-      <button class="theme-option theme-option--scheme" type="button" data-scheme-value="dark" aria-pressed="false">深</button>
-    </div>
-  </div>
-</div>
-    </div>
-  </header>
-  <article class="post-shell">
-    <header class="post-hero">
-      <div class="post-kicker-row">
-        <div class="post-mini-meta">
-  <span class="post-date">2026.04.23</span>
-  <div class="popover-root tag-menu" data-popover-root data-popover-name="tags">
-  <button class="tag-chip tag-trigger" type="button" data-popover-trigger data-popover-target="tags" aria-expanded="false" aria-haspopup="dialog" aria-label="#hermes-agent #backup #devops">#hermes-agent +2</button>
-  <div class="popover-panel tag-popover" data-popover-panel hidden>
-    <div class="tag-list" aria-label="#hermes-agent #backup #devops"><span class="tag-pill">#hermes-agent</span><span class="tag-pill">#backup</span><span class="tag-pill">#devops</span></div>
-  </div>
-</div>
-</div>
+<body class="page page--post" data-page-kind="post">
+  <main class="page-shell page-shell--post">
+    <header class="site-nav">
+      <a class="site-title site-home-link" href="/">Index</a>
+      <div class="site-tools">
+        <a class="toolbar-link toolbar-link--feed" href="/rss.xml">RSS</a>
+        <div class="popover-root toolbar-popover" data-popover-root data-popover-name="theme"><button class="toolbar-button toolbar-button--theme" type="button" data-popover-trigger data-popover-target="theme" aria-expanded="false" aria-haspopup="dialog"><span class="theme-trigger__preview" aria-hidden="true"></span><span class="theme-trigger__label" data-active-theme-label>轨道</span></button><div class="popover-panel theme-popover" data-popover-panel hidden><div class="appearance-grid"><button class="theme-option theme-option--appearance" type="button" data-theme-value="rail" data-theme-label="轨道" data-theme-note="单列轨道" aria-pressed="false"><span class="theme-option__preview theme-option__preview--rail" aria-hidden="true"><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span></span><span class="theme-option__copy"><span class="theme-option__title">轨道</span><span class="theme-option__note">单列轨道</span></span></button><button class="theme-option theme-option--appearance" type="button" data-theme-value="poster" data-theme-label="海报" data-theme-note="拼贴海报" aria-pressed="false"><span class="theme-option__preview theme-option__preview--poster" aria-hidden="true"><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span></span><span class="theme-option__copy"><span class="theme-option__title">海报</span><span class="theme-option__note">拼贴海报</span></span></button><button class="theme-option theme-option--appearance" type="button" data-theme-value="editorial" data-theme-label="杂志" data-theme-note="折页阅读" aria-pressed="false"><span class="theme-option__preview theme-option__preview--editorial" aria-hidden="true"><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span></span><span class="theme-option__copy"><span class="theme-option__title">杂志</span><span class="theme-option__note">折页阅读</span></span></button><button class="theme-option theme-option--appearance" type="button" data-theme-value="midnight" data-theme-label="夜游" data-theme-note="夜色舞台" aria-pressed="false"><span class="theme-option__preview theme-option__preview--midnight" aria-hidden="true"><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span></span><span class="theme-option__copy"><span class="theme-option__title">夜游</span><span class="theme-option__note">夜色舞台</span></span></button></div><div class="scheme-grid"><button class="theme-option theme-option--scheme" type="button" data-scheme-value="auto" aria-pressed="false">自动</button><button class="theme-option theme-option--scheme" type="button" data-scheme-value="light" aria-pressed="false">浅</button><button class="theme-option theme-option--scheme" type="button" data-scheme-value="dark" aria-pressed="false">深</button></div></div></div>
       </div>
-      <div class="post-hero-copy">
-        <h1 class="post-title">Hermes: 备份与迁移</h1>
-        <p class="post-deck">hermes backup 与 import 速览</p>
-      </div>
-
     </header>
-    <div class="post-frame">
-      <div class="post-content"><div class="post-body"><h2>核心内容</h2>
+    <article class="post-shell">
+      <header class="post-hero">
+        <div class="post-kicker-row"><div class="post-mini-meta"><span class="post-date">2026.04.23</span><div class="popover-root tag-menu" data-popover-root data-popover-name="tags"><button class="tag-chip tag-trigger" type="button" data-popover-trigger data-popover-target="tags" aria-expanded="false" aria-haspopup="dialog" aria-label="#hermes-agent #backup #devops">#hermes-agent +2</button><div class="popover-panel tag-popover" data-popover-panel hidden><div class="tag-list" aria-label="#hermes-agent #backup #devops"><span class="tag-pill">#hermes-agent</span><span class="tag-pill">#backup</span><span class="tag-pill">#devops</span></div></div></div></div></div>
+        <div class="post-hero-copy">
+          <h1 class="post-title">Hermes: 备份与迁移</h1>
+          <p class="post-deck">hermes backup 与 import 速览</p>
+        </div>
+        
+      </header>
+      <div class="post-frame"><div class="post-content"><div class="post-body"><h2>核心内容</h2>
 <h3>备份</h3>
 <p><code>hermes backup</code> 将 <code>~/.hermes</code> 打包为 zip：</p>
-<pre><code class="language-bash hljs">hermes backup                          <span class="hljs-comment"># 默认输出 ~/hermes-backup-&lt;timestamp&gt;.zip</span>
-hermes backup --output ~/backups/      <span class="hljs-comment"># 指定目录</span>
-hermes backup --quick                  <span class="hljs-comment"># 仅备份关键状态文件</span>
-</code></pre>
+<pre><code>hermes backup                          # 默认输出 ~/hermes-backup-&lt;timestamp&gt;.zip
+hermes backup --output ~/backups/      # 指定目录
+hermes backup --quick                  # 仅备份关键状态文件</code></pre>
 <p><strong>包含</strong>：<code>config.yaml</code>、<code>.env</code>、<code>auth.json</code>、<code>state.db</code>、<code>memory_store.db</code>、<code>skills/</code>、<code>memories/</code>、<code>sessions/</code>、<code>cron/jobs.json</code>、<code>scripts/</code>、<code>plugins/</code></p>
 <p><strong>排除</strong>：<code>hermes-agent/</code>、<code>__pycache__</code>、<code>.git</code>、<code>node_modules</code>、<code>*.pyc</code>、<code>gateway.pid</code>、<code>cron.pid</code></p>
 <p>数据库采用 SQLite <code>backup()</code> API 安全拷贝，支持 WAL 模式。</p>
 <h3>恢复</h3>
 <p><code>hermes import</code> 将 zip 解压至 <code>~/.hermes</code>：</p>
-<pre><code class="language-bash hljs">hermes import hermes-backup-2026-04-23-080000.zip
-hermes import backup.zip --force       <span class="hljs-comment"># 覆盖现有文件，不确认</span>
-</code></pre>
+<pre><code>hermes import hermes-backup-2026-04-23-080000.zip
+hermes import backup.zip --force       # 覆盖现有文件，不确认</code></pre>
 <p>导入前验证 zip 是否包含 <code>config.yaml</code>、<code>.env</code> 或 <code>state.db</code>。若检测到 <code>.hermes/</code> 前缀，自动剥离。</p>
 <h3>卸载</h3>
 <p><code>hermes uninstall</code> 提供两级清理：</p>
-<pre><code class="language-bash hljs">hermes uninstall                       <span class="hljs-comment"># 仅移除代码，保留 ~/.hermes 数据</span>
-hermes uninstall --full                <span class="hljs-comment"># 删除代码 + 数据 + 服务注册</span>
-</code></pre>
+<pre><code>hermes uninstall                       # 仅移除代码，保留 ~/.hermes 数据
+hermes uninstall --full                # 删除代码 + 数据 + 服务注册</code></pre>
 <p>卸载流程：停止 gateway 进程、清理 <code>systemd</code>/<code>launchd</code> 服务、移除 shell <code>PATH</code> 配置、删除 wrapper 脚本、移除安装目录。</p>
 <h3>迁移流程</h3>
-<pre><code class="language-bash hljs"><span class="hljs-comment"># 旧机器</span>
+<pre><code># 旧机器
 hermes backup --output ~/hermes-migration.zip
 
-<span class="hljs-comment"># 传输至新机器（scp / 移动硬盘 / 云盘）</span>
+# 传输至新机器（scp / 移动硬盘 / 云盘）
 
-<span class="hljs-comment"># 新机器</span>
+# 新机器
 curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
 hermes import ~/hermes-migration.zip
-hermes update                          <span class="hljs-comment"># 确保代码仓库最新</span>
-</code></pre>
+hermes update                          # 确保代码仓库最新</code></pre>
 <h3>不可默认迁移项</h3>
-<div class="table-wrap"><table>
-<thead>
-<tr>
-<th>类别</th>
-<th>说明</th>
-<th>处理方式</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>代码修改</strong></td>
-<td><code>hermes-agent/</code> 被排除</td>
-<td>手动导出 <code>git diff</code> 或 <code>git bundle</code></td>
-</tr>
-<tr>
-<td><strong>系统依赖</strong></td>
-<td><code>ripgrep</code>、<code>ffmpeg</code>、<code>Node.js</code>、<code>Playwright</code></td>
-<td>新机器重新安装</td>
-</tr>
-<tr>
-<td><strong>服务注册</strong></td>
-<td><code>systemd</code>/<code>launchd</code> plist</td>
-<td>重新运行 <code>hermes gateway install</code></td>
-</tr>
-<tr>
-<td><strong>Shell PATH</strong></td>
-<td><code>~/.zshrc</code>、<code>~/.bashrc</code> 中的 <code>PATH</code> 行</td>
-<td><code>install.sh</code> 自动重新添加</td>
-</tr>
-<tr>
-<td><strong>绝对路径</strong></td>
-<td><code>config.yaml</code> 中硬编码的旧机器路径</td>
-<td>手动修正</td>
-</tr>
-</tbody>
-</table></div>
+<div class="table-wrap"><table><thead><tr><th>类别</th><th>说明</th><th>处理方式</th></tr></thead><tbody><tr><td><strong>代码修改</strong></td><td><code>hermes-agent/</code> 被排除</td><td>手动导出 <code>git diff</code> 或 <code>git bundle</code></td></tr><tr><td><strong>系统依赖</strong></td><td><code>ripgrep</code>、<code>ffmpeg</code>、<code>Node.js</code>、<code>Playwright</code></td><td>新机器重新安装</td></tr><tr><td><strong>服务注册</strong></td><td><code>systemd</code>/<code>launchd</code> plist</td><td>重新运行 <code>hermes gateway install</code></td></tr><tr><td><strong>Shell PATH</strong></td><td><code>~/.zshrc</code>、<code>~/.bashrc</code> 中的 <code>PATH</code> 行</td><td><code>install.sh</code> 自动重新添加</td></tr><tr><td><strong>绝对路径</strong></td><td><code>config.yaml</code> 中硬编码的旧机器路径</td><td>手动修正</td></tr></tbody></table></div>
 <hr>
 <h2>实践验证</h2>
-<div class="table-wrap"><table>
-<thead>
-<tr>
-<th>测试项</th>
-<th>结果</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>hermes backup</code> 生成 zip</td>
-<td>✅ 通过</td>
-<td>包含 600+ 文件，自动排除 <code>hermes-agent/</code></td>
-</tr>
-<tr>
-<td><code>hermes import</code> 恢复数据</td>
-<td>✅ 通过</td>
-<td>自动识别备份格式，恢复 <code>skills/</code>、<code>sessions/</code></td>
-</tr>
-<tr>
-<td><code>hermes uninstall --full</code> 清理</td>
-<td>✅ 通过</td>
-<td>删除代码、数据、服务、<code>PATH</code> 配置</td>
-</tr>
-<tr>
-<td>重装后 gateway 启动</td>
-<td>⚠️ 需补步</td>
-<td>需重新 <code>hermes gateway install</code> 注册服务</td>
-</tr>
-<tr>
-<td>代码修改保留</td>
-<td>❌ 不保留</td>
-<td>需手动导出 <code>git diff</code></td>
-</tr>
-</tbody>
-</table></div>
+<div class="table-wrap"><table><thead><tr><th>测试项</th><th>结果</th><th>说明</th></tr></thead><tbody><tr><td><code>hermes backup</code> 生成 zip</td><td>✅ 通过</td><td>包含 600+ 文件，自动排除 <code>hermes-agent/</code></td></tr><tr><td><code>hermes import</code> 恢复数据</td><td>✅ 通过</td><td>自动识别备份格式，恢复 <code>skills/</code>、<code>sessions/</code></td></tr><tr><td><code>hermes uninstall --full</code> 清理</td><td>✅ 通过</td><td>删除代码、数据、服务、<code>PATH</code> 配置</td></tr><tr><td>重装后 gateway 启动</td><td>⚠️ 需补步</td><td>需重新 <code>hermes gateway install</code> 注册服务</td></tr><tr><td>代码修改保留</td><td>❌ 不保留</td><td>需手动导出 <code>git diff</code></td></tr></tbody></table></div>
 <hr>
 <h2>总结</h2>
 <p><strong>关键要点：</strong></p>
-<ul>
-<li><code>hermes backup</code> + <code>hermes import</code> 覆盖 100% 数据与配置迁移</li>
-<li>代码仓库（<code>hermes-agent/</code>）被设计为排除项，应通过 <code>git</code> 重新 clone</li>
-<li>系统依赖（<code>ripgrep</code>、<code>ffmpeg</code>、<code>Node.js</code>）不在备份范围内</li>
-<li>服务注册与 Shell <code>PATH</code> 由 <code>install</code>/<code>uninstall</code> 脚本自动管理</li>
-<li>若修改过源码，迁移前务必手动导出 patch</li>
-</ul>
+<ul><li><code>hermes backup</code> + <code>hermes import</code> 覆盖 100% 数据与配置迁移</li><li>代码仓库（<code>hermes-agent/</code>）被设计为排除项，应通过 <code>git</code> 重新 clone</li><li>系统依赖（<code>ripgrep</code>、<code>ffmpeg</code>、<code>Node.js</code>）不在备份范围内</li><li>服务注册与 Shell <code>PATH</code> 由 <code>install</code>/<code>uninstall</code> 脚本自动管理</li><li>若修改过源码，迁移前务必手动导出 patch</li></ul>
 <p><strong>适用场景：</strong> 换机、重装、VPS 部署、配置快照</p>
 <p><strong>不适用场景：</strong> 仅迁移代码修改（需 <code>git</code> 工具）、跨操作系统迁移（系统依赖不同）</p>
 <hr>
 <h2>参考</h2>
-<ul>
-<li><a rel="noreferrer" target="_blank" href="https://hermes-agent.nousresearch.com/docs/reference/cli-commands">CLI Commands Reference</a> — 官方 CLI 命令文档</li>
-<li><a rel="noreferrer" target="_blank" href="https://github.com/NousResearch/hermes-agent/blob/main/RELEASE_v0.9.0.md">Release v0.9.0 Notes</a> — <code>hermes backup</code> &amp; <code>hermes import</code> 功能发布说明（PR #7997）</li>
-<li><code>hermes backup --help</code> — 内置帮助：备份范围与排除项</li>
-<li><code>hermes import --help</code> — 内置帮助：恢复流程与验证机制</li>
-<li><code>hermes uninstall --help</code> — 内置帮助：卸载选项与服务清理</li>
-</ul></div></div>
-    </div>
-  </article>
-</main><div class="page-scrim" data-page-scrim hidden></div><script>
-(() => {
-  const appearanceKey = 'blog-appearance-mode';
-  const schemeKey = 'blog-color-scheme';
-  const root = document.documentElement;
-  const doc = document;
-  const body = doc.body;
-  const scrim = doc.querySelector('[data-page-scrim]');
-  let portalLayer = doc.querySelector('[data-popover-layer]');
-  if (!(portalLayer instanceof HTMLElement)) {
-    portalLayer = doc.createElement('div');
-    portalLayer.className = 'popover-layer';
-    portalLayer.setAttribute('data-popover-layer', '');
-    body.appendChild(portalLayer);
-  }
-  let lightboxRoot = doc.querySelector('[data-blog-image-lightbox]');
-  if (!(lightboxRoot instanceof HTMLElement)) {
-    lightboxRoot = doc.createElement('div');
-    lightboxRoot.className = 'blog-image-lightbox';
-    lightboxRoot.hidden = true;
-    lightboxRoot.setAttribute('data-blog-image-lightbox', '');
-    lightboxRoot.innerHTML = '<button type="button" class="blog-image-lightbox__scrim" data-blog-image-lightbox-close aria-label="Close image preview"></button><div class="blog-image-lightbox__panel" role="dialog" aria-modal="true" aria-label="Image preview"><div class="blog-image-lightbox__toolbar"><a class="markdown-media-action" href="" download data-blog-image-lightbox-download>download</a><a class="markdown-media-action" href="" target="_blank" rel="noreferrer" data-blog-image-lightbox-open>open</a><button type="button" class="markdown-media-action" data-blog-image-lightbox-close data-blog-image-lightbox-toolbar-close="true">close</button></div><img class="blog-image-lightbox__image" alt="" data-blog-image-lightbox-image><p class="blog-image-lightbox__caption" data-blog-image-lightbox-caption hidden></p></div>';
-    body.appendChild(lightboxRoot);
-  }
-  const lightboxImage = lightboxRoot.querySelector('[data-blog-image-lightbox-image]');
-  const lightboxCaption = lightboxRoot.querySelector('[data-blog-image-lightbox-caption]');
-  const lightboxDownload = lightboxRoot.querySelector('[data-blog-image-lightbox-download]');
-  const lightboxOpen = lightboxRoot.querySelector('[data-blog-image-lightbox-open]');
-  let bodyOverflowBeforeLightbox = '';
-  doc.querySelectorAll('[data-popover-root]').forEach((rootElement) => {
-    if (!(rootElement instanceof HTMLElement)) return;
-    const panel = rootElement.querySelector('[data-popover-panel]');
-    const name = rootElement.dataset.popoverName || '';
-    if (panel instanceof HTMLElement && name) {
-      panel.dataset.popoverPanelOwner = name;
-    }
-  });
-  const aliases = { paper: 'poster', list: 'rail' };
-  const allowed = new Set(['rail', 'poster', 'editorial', 'midnight']);
-  const systemSchemeQuery = window.matchMedia('(prefers-color-scheme: dark)');
-  const runViewTransition = (mutate) => {
-    if (typeof doc.startViewTransition === 'function') {
-      doc.startViewTransition(() => {
-        mutate();
-      });
-      return;
-    }
-    mutate();
-  };
-
-  const isMobileSheet = () => window.matchMedia('(max-width: 860px)').matches;
-  const getOpenPopovers = () => Array.from(doc.querySelectorAll('[data-popover-root][data-open="true"]'));
-  const getPopoverParts = (rootElement) => {
-    const owner = rootElement.dataset.popoverName || '';
-    return {
-      trigger: rootElement.querySelector('[data-popover-trigger]'),
-      panel: owner
-        ? doc.querySelector('[data-popover-panel-owner="' + owner + '"]')
-        : rootElement.querySelector('[data-popover-panel]'),
-    };
-  };
-
-  function normalizeAppearance(value) {
-    const normalized = aliases[value ?? ''] ?? value ?? 'rail';
-    return allowed.has(normalized) ? normalized : 'rail';
-  }
-
-  function syncOverlayState() {
-    const active = isMobileSheet() && getOpenPopovers().length > 0;
-    if (active) {
-      body.dataset.overlayOpen = 'true';
-    } else {
-      delete body.dataset.overlayOpen;
-    }
-    if (scrim instanceof HTMLElement) {
-      scrim.hidden = !active;
-    }
-  }
-
-  function updateThemeButtons() {
-    const activeAppearance = normalizeAppearance(root.dataset.appearance);
-    const activeScheme = root.dataset.colorSchemeMode || 'auto';
-    doc.querySelectorAll('[data-theme-value]').forEach((button) => {
-      button.setAttribute('aria-pressed', String(button.getAttribute('data-theme-value') === activeAppearance));
-    });
-    doc.querySelectorAll('[data-scheme-value]').forEach((button) => {
-      button.setAttribute('aria-pressed', String(button.getAttribute('data-scheme-value') === activeScheme));
-    });
-    const activeThemeButton = doc.querySelector('[data-theme-value="' + activeAppearance + '"]');
-    doc.querySelectorAll('[data-active-theme-label]').forEach((label) => {
-      label.textContent = activeThemeButton?.getAttribute('data-theme-label') || '轨道';
-    });
-  }
-
-  function closeLightbox() {
-    if (!(lightboxRoot instanceof HTMLElement)) return;
-    lightboxRoot.hidden = true;
-    delete body.dataset.imageLightboxOpen;
-    body.style.overflow = bodyOverflowBeforeLightbox;
-    if (lightboxImage instanceof HTMLImageElement) {
-      lightboxImage.removeAttribute('src');
-      lightboxImage.alt = '';
-    }
-    if (lightboxCaption instanceof HTMLElement) {
-      lightboxCaption.textContent = '';
-      lightboxCaption.hidden = true;
-    }
-    if (lightboxDownload instanceof HTMLAnchorElement) {
-      lightboxDownload.href = '';
-    }
-    if (lightboxOpen instanceof HTMLAnchorElement) {
-      lightboxOpen.href = '';
-    }
-  }
-
-  function openLightbox(trigger) {
-    if (!(lightboxRoot instanceof HTMLElement)) return;
-    const src = trigger.getAttribute('data-blog-image-src') || trigger.getAttribute('href') || '';
-    if (!src) return;
-    const alt = trigger.getAttribute('data-blog-image-alt') || '';
-    closeAllPopovers();
-    bodyOverflowBeforeLightbox = body.style.overflow;
-    body.style.overflow = 'hidden';
-    body.dataset.imageLightboxOpen = 'true';
-    if (lightboxImage instanceof HTMLImageElement) {
-      lightboxImage.src = src;
-      lightboxImage.alt = alt;
-    }
-    if (lightboxCaption instanceof HTMLElement) {
-      lightboxCaption.textContent = alt;
-      lightboxCaption.hidden = !alt;
-    }
-    if (lightboxDownload instanceof HTMLAnchorElement) {
-      lightboxDownload.href = src;
-    }
-    if (lightboxOpen instanceof HTMLAnchorElement) {
-      lightboxOpen.href = src;
-    }
-    lightboxRoot.hidden = false;
-  }
-
-  function setAppearance(value) {
-    const normalized = normalizeAppearance(value);
-    if (normalized === normalizeAppearance(root.dataset.appearance)) {
-      closeAllPopovers();
-      updateThemeButtons();
-      return;
-    }
-    runViewTransition(() => {
-      root.dataset.appearance = normalized;
-      window.localStorage.setItem(appearanceKey, normalized);
-      closeAllPopovers();
-      updateThemeButtons();
-    });
-  }
-
-  function setScheme(value) {
-    const nextMode = value === 'auto' ? 'auto' : value;
-    if ((root.dataset.colorSchemeMode || 'auto') === nextMode) {
-      closeAllPopovers();
-      updateThemeButtons();
-      return;
-    }
-    runViewTransition(() => {
-      if (value === 'auto') {
-        root.dataset.colorScheme = systemSchemeQuery.matches ? 'dark' : 'light';
-        root.dataset.colorSchemeMode = 'auto';
-        window.localStorage.removeItem(schemeKey);
-      } else {
-        root.dataset.colorScheme = value;
-        root.dataset.colorSchemeMode = value;
-        window.localStorage.setItem(schemeKey, value);
-      }
-      closeAllPopovers();
-      updateThemeButtons();
-    });
-  }
-
-  function clearPanelPosition(panel) {
-    panel.style.left = '';
-    panel.style.top = '';
-    panel.style.right = '';
-    panel.style.bottom = '';
-    panel.style.maxHeight = '';
-  }
-
-  function movePanelIntoLayer(panel) {
-    if (portalLayer instanceof HTMLElement && panel.parentElement !== portalLayer) {
-      portalLayer.appendChild(panel);
-    }
-  }
-
-  function restorePanel(rootElement, panel) {
-    if (panel.parentElement !== rootElement) {
-      rootElement.appendChild(panel);
-    }
-    delete panel.dataset.open;
-    delete panel.dataset.popoverMode;
-  }
-
-  function closePopover(rootElement) {
-    if (!(rootElement instanceof HTMLElement)) return;
-    const { trigger, panel } = getPopoverParts(rootElement);
-    if (!(trigger instanceof HTMLElement) || !(panel instanceof HTMLElement)) return;
-    rootElement.dataset.open = 'false';
-    delete rootElement.dataset.mode;
-    trigger.setAttribute('aria-expanded', 'false');
-    clearPanelPosition(panel);
-    panel.hidden = true;
-    restorePanel(rootElement, panel);
-    syncOverlayState();
-  }
-
-  function closeAllPopovers(exceptElement) {
-    getOpenPopovers().forEach((node) => {
-      if (!exceptElement || node !== exceptElement) {
-        closePopover(node);
-      }
-    });
-  }
-
-  function positionPopover(rootElement) {
-    if (!(rootElement instanceof HTMLElement)) return;
-    const { trigger, panel } = getPopoverParts(rootElement);
-    if (!(trigger instanceof HTMLElement) || !(panel instanceof HTMLElement)) return;
-    movePanelIntoLayer(panel);
-    panel.hidden = false;
-    panel.dataset.open = 'true';
-    clearPanelPosition(panel);
-    if (isMobileSheet()) {
-      rootElement.dataset.mode = 'sheet';
-      panel.dataset.popoverMode = 'sheet';
-      panel.style.maxHeight = Math.floor(window.innerHeight * 0.68) + 'px';
-      syncOverlayState();
-      return;
-    }
-    rootElement.dataset.mode = 'popover';
-    panel.dataset.popoverMode = 'popover';
-    const viewportPadding = 12;
-    const gap = 10;
-    const maxHeight = Math.max(180, window.innerHeight - viewportPadding * 2);
-    panel.style.maxHeight = maxHeight + 'px';
-    const triggerRect = trigger.getBoundingClientRect();
-    const panelRect = panel.getBoundingClientRect();
-    const panelWidth = Math.max(panel.offsetWidth, panel.clientWidth, panelRect.width);
-    const panelHeight = Math.max(panel.offsetHeight, panel.clientHeight, panelRect.height);
-    let left = triggerRect.left;
-    if (left + panelWidth > window.innerWidth - viewportPadding) {
-      left = window.innerWidth - viewportPadding - panelWidth;
-    }
-    if (left < viewportPadding) {
-      left = viewportPadding;
-    }
-    let top = triggerRect.bottom + gap;
-    if (top + panelHeight > window.innerHeight - viewportPadding) {
-      top = Math.max(viewportPadding, triggerRect.top - panelHeight - gap);
-    }
-    if (top < viewportPadding) {
-      top = viewportPadding;
-    }
-    panel.style.left = Math.round(left) + 'px';
-    panel.style.top = Math.round(top) + 'px';
-    syncOverlayState();
-  }
-
-  function openPopover(rootElement) {
-    if (!(rootElement instanceof HTMLElement)) return;
-    const { trigger, panel } = getPopoverParts(rootElement);
-    if (!(trigger instanceof HTMLElement) || !(panel instanceof HTMLElement)) return;
-    closeAllPopovers(rootElement);
-    rootElement.dataset.open = 'true';
-    trigger.setAttribute('aria-expanded', 'true');
-    panel.hidden = false;
-    positionPopover(rootElement);
-    window.requestAnimationFrame(() => positionPopover(rootElement));
-  }
-
-  doc.addEventListener('click', (event) => {
-    const target = event.target instanceof Element ? event.target : null;
-    if (!target) return;
-    const modifiedClick = event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0;
-
-    if (target.closest('[data-blog-image-lightbox-close]')) {
-      event.preventDefault();
-      closeLightbox();
-      return;
-    }
-
-    if (!modifiedClick && !target.closest('[data-blog-image-action]')) {
-      const imageTrigger = target.closest('[data-blog-image-lightbox-trigger="true"]');
-      if (imageTrigger instanceof HTMLElement) {
-        event.preventDefault();
-        openLightbox(imageTrigger);
-        return;
-      }
-    }
-
-    if (scrim instanceof HTMLElement && target === scrim) {
-      closeAllPopovers();
-      return;
-    }
-
-    const appearanceButton = target.closest('[data-theme-value]');
-    if (appearanceButton instanceof HTMLElement) {
-      event.preventDefault();
-      const value = appearanceButton.getAttribute('data-theme-value');
-      if (value) setAppearance(value);
-      return;
-    }
-
-    const schemeButton = target.closest('[data-scheme-value]');
-    if (schemeButton instanceof HTMLElement) {
-      event.preventDefault();
-      const value = schemeButton.getAttribute('data-scheme-value');
-      if (value) setScheme(value);
-      return;
-    }
-
-    const trigger = target.closest('[data-popover-trigger]');
-    if (trigger instanceof HTMLElement) {
-      event.preventDefault();
-      const rootElement = trigger.closest('[data-popover-root]');
-      if (!(rootElement instanceof HTMLElement)) return;
-      if (rootElement.dataset.open === 'true') {
-        closePopover(rootElement);
-      } else {
-        openPopover(rootElement);
-      }
-      return;
-    }
-
-    if (!target.closest('[data-popover-panel]')) {
-      closeAllPopovers();
-    }
-  });
-
-  doc.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') {
-      if (body.dataset.imageLightboxOpen === 'true') {
-        closeLightbox();
-        return;
-      }
-      closeAllPopovers();
-    }
-  });
-
-  window.addEventListener('resize', () => {
-    getOpenPopovers().forEach((node) => positionPopover(node));
-    syncOverlayState();
-  }, { passive: true });
-
-  window.addEventListener('scroll', () => {
-    if (isMobileSheet()) return;
-    getOpenPopovers().forEach((node) => positionPopover(node));
-  }, { passive: true, capture: true });
-
-  systemSchemeQuery.addEventListener('change', () => {
-    if ((root.dataset.colorSchemeMode || 'auto') !== 'auto') return;
-    root.dataset.colorScheme = systemSchemeQuery.matches ? 'dark' : 'light';
-    updateThemeButtons();
-  });
-
-  root.dataset.appearance = normalizeAppearance(root.dataset.appearance || window.localStorage.getItem(appearanceKey) || 'rail');
-  updateThemeButtons();
-  syncOverlayState();
-})();
-</script></body>
+<ul><li><a href="https://hermes-agent.nousresearch.com/docs/reference/cli-commands">CLI Commands Reference</a> — 官方 CLI 命令文档</li><li><a href="https://github.com/NousResearch/hermes-agent/blob/main/RELEASE_v0.9.0.md">Release v0.9.0 Notes</a> — <code>hermes backup</code> &amp; <code>hermes import</code> 功能发布说明（PR #7997）</li><li><code>hermes backup --help</code> — 内置帮助：备份范围与排除项</li><li><code>hermes import --help</code> — 内置帮助：恢复流程与验证机制</li><li><code>hermes uninstall --help</code> — 内置帮助：卸载选项与服务清理</li></ul></div></div></div>
+    </article>
+  </main><div class="page-scrim" data-page-scrim hidden></div><script src="/assets/blog.3f4505d6ae.js" defer></script>
+</body>
 </html>
