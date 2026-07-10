@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DriveDockOSS: 弹出磁盘之前，先看清楚是谁还在用它</title>
+  <meta name="description" content="一个为了“弹出前再确认一次”而做的原生 macOS 工具。">
+  <meta name="theme-color" content="#f6efe4">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Source+Serif+4:wght@400;500;600;700&display=swap">
+  <meta property="og:title" content="DriveDockOSS: 弹出磁盘之前，先看清楚是谁还在用它">
+  <meta property="og:description" content="一个为了“弹出前再确认一次”而做的原生 macOS 工具。">
+  <meta property="og:type" content="article">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://codingezio.github.io/posts/drivedockoss/">
+  <link rel="alternate" type="application/rss+xml" title="Posts RSS" href="/rss.xml">
+  <script>
+(() => {
+  const root = document.documentElement;
+  const aliases = { paper: "poster", list: "rail" };
+  const allowed = new Set(["rail", "poster", "editorial", "midnight"]);
+  const storedAppearance = window.localStorage.getItem("blog-appearance-mode");
+  const normalizedAppearance = aliases[storedAppearance ?? ""] ?? storedAppearance ?? root.dataset.appearance ?? "rail";
+  root.dataset.appearance = allowed.has(normalizedAppearance) ? normalizedAppearance : "rail";
+  const storedScheme = window.localStorage.getItem("blog-color-scheme");
+  if (storedScheme === "light" || storedScheme === "dark") {
+    root.dataset.colorScheme = storedScheme;
+    root.dataset.colorSchemeMode = storedScheme;
+  } else {
+    root.dataset.colorScheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    root.dataset.colorSchemeMode = "auto";
+  }
+})();
+  </script>
+
+  <link rel="preload" href="/assets/blog.531707a620.css" as="style">
+  <link rel="stylesheet" href="/assets/blog.531707a620.css">
+</head>
+<body class="page page--post" data-page-kind="post">
+  <main class="page-shell page-shell--post">
+    <header class="site-nav">
+      <a class="site-title site-home-link" href="/">Index</a>
+      <div class="site-tools">
+        <a class="toolbar-link toolbar-link--feed" href="/rss.xml">RSS</a>
+        <div class="popover-root toolbar-popover" data-popover-root data-popover-name="theme"><button class="toolbar-button toolbar-button--theme" type="button" data-popover-trigger data-popover-target="theme" aria-expanded="false" aria-haspopup="dialog"><span class="theme-trigger__preview" aria-hidden="true"></span><span class="theme-trigger__label" data-active-theme-label>轨道</span></button><div class="popover-panel theme-popover" data-popover-panel hidden><div class="appearance-grid"><button class="theme-option theme-option--appearance" type="button" data-theme-value="rail" data-theme-label="轨道" data-theme-note="单列轨道" aria-pressed="false"><span class="theme-option__preview theme-option__preview--rail" aria-hidden="true"><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span></span><span class="theme-option__copy"><span class="theme-option__title">轨道</span><span class="theme-option__note">单列轨道</span></span></button><button class="theme-option theme-option--appearance" type="button" data-theme-value="poster" data-theme-label="海报" data-theme-note="拼贴海报" aria-pressed="false"><span class="theme-option__preview theme-option__preview--poster" aria-hidden="true"><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span></span><span class="theme-option__copy"><span class="theme-option__title">海报</span><span class="theme-option__note">拼贴海报</span></span></button><button class="theme-option theme-option--appearance" type="button" data-theme-value="editorial" data-theme-label="杂志" data-theme-note="折页阅读" aria-pressed="false"><span class="theme-option__preview theme-option__preview--editorial" aria-hidden="true"><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span></span><span class="theme-option__copy"><span class="theme-option__title">杂志</span><span class="theme-option__note">折页阅读</span></span></button><button class="theme-option theme-option--appearance" type="button" data-theme-value="midnight" data-theme-label="夜游" data-theme-note="夜色舞台" aria-pressed="false"><span class="theme-option__preview theme-option__preview--midnight" aria-hidden="true"><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span></span><span class="theme-option__copy"><span class="theme-option__title">夜游</span><span class="theme-option__note">夜色舞台</span></span></button></div><div class="scheme-grid"><button class="theme-option theme-option--scheme" type="button" data-scheme-value="auto" aria-pressed="false">自动</button><button class="theme-option theme-option--scheme" type="button" data-scheme-value="light" aria-pressed="false">浅</button><button class="theme-option theme-option--scheme" type="button" data-scheme-value="dark" aria-pressed="false">深</button></div></div></div>
+      </div>
+    </header>
+    <article class="post-shell">
+      <header class="post-hero">
+        <div class="post-kicker-row"><div class="post-mini-meta"><span class="post-date">2026.07.10</span><div class="popover-root tag-menu" data-popover-root data-popover-name="tags"><button class="tag-chip tag-trigger" type="button" data-popover-trigger data-popover-target="tags" aria-expanded="false" aria-haspopup="dialog" aria-label="#macOS #open-source #Swift #DriveDockOSS">#macOS +3</button><div class="popover-panel tag-popover" data-popover-panel hidden><div class="tag-list" aria-label="#macOS #open-source #Swift #DriveDockOSS"><span class="tag-pill">#macOS</span><span class="tag-pill">#open-source</span><span class="tag-pill">#Swift</span><span class="tag-pill">#DriveDockOSS</span></div></div></div></div></div>
+        <div class="post-hero-copy">
+          <h1 class="post-title">DriveDockOSS: 弹出磁盘之前，先看清楚是谁还在用它</h1>
+          <p class="post-deck">一个为了“弹出前再确认一次”而做的原生 macOS 工具。</p>
+        </div>
+        <div class="post-cover-wrap"><picture class="post-cover-picture"><source type="image/avif" srcset="/images/20260710-drivedockoss-settings.avif"><source type="image/webp" srcset="/images/20260710-drivedockoss-settings.webp"><img class="post-cover" src="/images/20260710-drivedockoss-settings.jpg" alt="DriveDockOSS: 弹出磁盘之前，先看清楚是谁还在用它" loading="lazy" decoding="async"></picture></div>
+      </header>
+      <div class="post-frame"><div class="post-content"><div class="post-body"><h2>从一个私人工具开始</h2>
+<p>外接磁盘无法弹出时，macOS 往往只告诉你它“正在使用中”。真正需要回答的问题却更具体：是哪个 app、哪个进程、哪条路径，还是 Time Machine 仍在写入？</p>
+<p>DriveDock 最初只是我给自己做的小工具。它逐渐能显示磁盘容量、设备信息、打开的文件句柄和 Time Machine 状态，也能在确认后请求 macOS 正常弹出磁盘。功能稳定之后，我决定保留原来的私人项目，同时整理出独立的开源版本：<a href="https://github.com/codingEzio/DriveDockOSS">DriveDockOSS</a>。</p>
+<figure data-blog-image-src="/images/20260710-drivedockoss-icon.svg" data-blog-image-figure="true" class="markdown-media-figure"><a aria-label="Open image: DriveDockOSS icon" data-blog-image-alt="DriveDockOSS icon" data-blog-image-src="/images/20260710-drivedockoss-icon.svg" data-blog-image-lightbox-trigger="true" rel="noreferrer" target="_blank" href="/images/20260710-drivedockoss-icon.svg" class="markdown-media-frame"><picture class="markdown-picture"><img class="markdown-image" decoding="async" loading="lazy" src="/images/20260710-drivedockoss-icon.svg" alt="DriveDockOSS icon"></picture></a><div class="markdown-media-actions"><a download title="download" aria-label="Download image" href="/images/20260710-drivedockoss-icon.svg" data-blog-image-action="download" class="markdown-media-action">download</a><a rel="noreferrer" target="_blank" title="open" aria-label="Open image in a new page" href="/images/20260710-drivedockoss-icon.svg" data-blog-image-action="open" class="markdown-media-action">open</a></div></figure>
+<h2>它具体做什么</h2>
+<p>DriveDockOSS 同时提供 menu bar popover 和可调整大小的桌面窗口。一次扫描会汇总：</p>
+<ul><li>已挂载的内置与外接磁盘；</li><li>可用容量、设备型号、连接协议与 SMART 状态；</li><li><code>lsof</code> 可见的进程、PID、访问模式与路径；</li><li>Time Machine destination 与当前备份状态；</li><li>单盘与批量弹出的风险提示。</li></ul>
+<p>它也可以向普通 GUI app 发送 macOS 的正常退出请求，但不会 force quit。VM 与 container host 有自己的关机语义，因此仍然要求用户回到对应 app 手动处理。</p>
+<h2>安全模型比“更强硬”重要</h2>
+<p>DriveDockOSS 的目标不是绕过 macOS，而是把弹出之前的信息补全。</p>
+<p>扫描使用只读系统命令。内置磁盘始终只监控；弹出必须经过确认，并且最终只调用正常的 <code>diskutil eject</code>。如果 Time Machine 正在使用目标磁盘，app 会先询问是否停止备份、等待它进入 idle，再请求 macOS 弹出。</p>
+<p>这里没有 force-eject 路径。<code>lsof</code> 在普通用户权限下也只能提供 best-effort 结果，所以 UI 会明确说明：没有看到句柄，不等于系统保证没有活动。</p>
+<h2>为开源重新整理</h2>
+<p>这次不是把私人 repo 原样公开。我创建了独立的 <code>DriveDockOSS</code> 项目，并重新检查了文件边界与 Git 历史。</p>
+<p>公开 repo 使用 default-deny <code>.gitignore</code>：源文件、测试、默认配置、README、license、contribution guide、icon 和经过检查的截图需要被明确允许。agent 指令、本地签名配置、build output、日志、用户路径和机器状态不会进入公开历史。</p>
+<p>公开历史从一个干净的 root commit 开始，作者使用 GitHub noreply 地址。项目也带有 tracked <code>commit-msg</code> hook；贡献者运行 <code>make setup-hooks</code> 后，本地 Git 与 GitHub Desktop 都会检查 Conventional Commits 格式。</p>
+<h2>UI 不应该要求猜缩写</h2>
+<p>早期界面为了节省空间使用过 <code>H</code>、<code>R</code>、<code>W</code>、<code>P</code> 一类指标缩写。它们对作者也许熟悉，对第一次使用的人却意味着额外猜测和 hover。</p>
+<p>现在对应指标直接显示为 <code>Handles</code>、<code>Read</code>、<code>Write</code> 和 <code>Processes</code>。popover 的宽度、高度比例与上下限也都进入配置，不再只适合某一台机器的窗口尺寸。</p>
+<figure data-blog-image-src="/images/20260710-drivedockoss-settings.jpg" data-blog-image-figure="true" class="markdown-media-figure"><a aria-label="Open image: DriveDockOSS Settings" data-blog-image-alt="DriveDockOSS Settings" data-blog-image-src="/images/20260710-drivedockoss-settings.jpg" data-blog-image-lightbox-trigger="true" rel="noreferrer" target="_blank" href="/images/20260710-drivedockoss-settings.jpg" class="markdown-media-frame"><picture class="markdown-picture"><source type="image/avif" srcset="/images/20260710-drivedockoss-settings.avif"><source type="image/webp" srcset="/images/20260710-drivedockoss-settings.webp"><img class="markdown-image" decoding="async" loading="lazy" src="/images/20260710-drivedockoss-settings.jpg" alt="DriveDockOSS Settings"></picture></a><div class="markdown-media-actions"><a download title="download" aria-label="Download image" href="/images/20260710-drivedockoss-settings.jpg" data-blog-image-action="download" class="markdown-media-action">download</a><a rel="noreferrer" target="_blank" title="open" aria-label="Open image in a new page" href="/images/20260710-drivedockoss-settings.jpg" data-blog-image-action="open" class="markdown-media-action">open</a></div></figure>
+<p>设置页还支持 English、简体中文、繁体中文、韩语与日语。语言和 tone 分开建模，因此标准文案之外也可以选择 Gen Z tone，而不需要复制整套产品逻辑。</p>
+<h2>macOS 兼容与发布现实</h2>
+<p>当前 release 面向 Apple silicon，deployment target 是 macOS 15.6，并已在 macOS 15.6.1 VM 中运行验证。macOS 26 可以使用 Liquid Glass；较旧系统使用原生 material fallback。</p>
+<p>我目前没有 Apple Developer Program membership，因此 GitHub Release 中的 app 是 ad-hoc signed、未 notarize 的 build。macOS 可能要求用户在第一次运行时手动批准。源码与 build scripts 都在 repo 中，也可以按照 README 本地构建。</p>
+<p>首个版本是 <a href="https://github.com/codingEzio/DriveDockOSS/releases/tag/v0.1.0">v0.1.0</a>。</p>
+<h2>下一步</h2>
+<p>接下来会继续观察真实磁盘、Time Machine 与不同外接盒场景，补充更适合公开展示的假数据截图，并在条件允许时加入 Developer ID signing 与 notarization。</p>
+<p>这次开源真正想保留的不是“一个能弹盘的按钮”，而是一条简单边界：先让风险变得可见，再让用户决定是否继续。</p>
+<h2>参考</h2>
+<ul><li><a href="https://github.com/codingEzio/DriveDockOSS">DriveDockOSS source</a></li><li><a href="https://github.com/codingEzio/DriveDockOSS/releases/tag/v0.1.0">DriveDockOSS v0.1.0</a></li><li><a href="https://github.com/codingEzio/DriveDockOSS/blob/main/LICENSE">MIT License</a></li></ul></div></div></div>
+    </article>
+  </main><div class="page-scrim" data-page-scrim hidden></div><script src="/assets/blog.3f4505d6ae.js" defer></script>
+</body>
+</html>
