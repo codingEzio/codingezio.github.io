@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IINA-DanmakuCosmos-Patch: 把一次手改，变成可重复的补丁</title>
+  <meta name="description" content="一个很小的构建器：下载并验证 Danmaku Cosmos，在临时目录中应用偏好设置，再输出可安装的 IINA 插件包。">
+  <meta name="theme-color" content="#f6efe4">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Source+Serif+4:wght@400;500;600;700&display=swap">
+  <meta property="og:title" content="IINA-DanmakuCosmos-Patch: 把一次手改，变成可重复的补丁">
+  <meta property="og:description" content="一个很小的构建器：下载并验证 Danmaku Cosmos，在临时目录中应用偏好设置，再输出可安装的 IINA 插件包。">
+  <meta property="og:type" content="article">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://codingezio.github.io/posts/iina-danmaku-cosmos-patch/">
+  <link rel="alternate" type="application/rss+xml" title="Posts RSS" href="/rss.xml">
+  <script>
+(() => {
+  const root = document.documentElement;
+  const aliases = { paper: "poster", list: "rail" };
+  const allowed = new Set(["rail", "poster", "editorial", "midnight"]);
+  const storedAppearance = window.localStorage.getItem("blog-appearance-mode");
+  const normalizedAppearance = aliases[storedAppearance ?? ""] ?? storedAppearance ?? root.dataset.appearance ?? "rail";
+  root.dataset.appearance = allowed.has(normalizedAppearance) ? normalizedAppearance : "rail";
+  const storedScheme = window.localStorage.getItem("blog-color-scheme");
+  if (storedScheme === "light" || storedScheme === "dark") {
+    root.dataset.colorScheme = storedScheme;
+    root.dataset.colorSchemeMode = storedScheme;
+  } else {
+    root.dataset.colorScheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    root.dataset.colorSchemeMode = "auto";
+  }
+})();
+  </script>
+
+  <link rel="preload" href="/assets/blog.531707a620.css" as="style">
+  <link rel="stylesheet" href="/assets/blog.531707a620.css">
+</head>
+<body class="page page--post" data-page-kind="post">
+  <main class="page-shell page-shell--post">
+    <header class="site-nav">
+      <a class="site-title site-home-link" href="/">Index</a>
+      <div class="site-tools">
+        <a class="toolbar-link toolbar-link--feed" href="/rss.xml">RSS</a>
+        <div class="popover-root toolbar-popover" data-popover-root data-popover-name="theme"><button class="toolbar-button toolbar-button--theme" type="button" data-popover-trigger data-popover-target="theme" aria-expanded="false" aria-haspopup="dialog"><span class="theme-trigger__preview" aria-hidden="true"></span><span class="theme-trigger__label" data-active-theme-label>轨道</span></button><div class="popover-panel theme-popover" data-popover-panel hidden><div class="appearance-grid"><button class="theme-option theme-option--appearance" type="button" data-theme-value="rail" data-theme-label="轨道" data-theme-note="单列轨道" aria-pressed="false"><span class="theme-option__preview theme-option__preview--rail" aria-hidden="true"><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span></span><span class="theme-option__copy"><span class="theme-option__title">轨道</span><span class="theme-option__note">单列轨道</span></span></button><button class="theme-option theme-option--appearance" type="button" data-theme-value="poster" data-theme-label="海报" data-theme-note="拼贴海报" aria-pressed="false"><span class="theme-option__preview theme-option__preview--poster" aria-hidden="true"><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span></span><span class="theme-option__copy"><span class="theme-option__title">海报</span><span class="theme-option__note">拼贴海报</span></span></button><button class="theme-option theme-option--appearance" type="button" data-theme-value="editorial" data-theme-label="杂志" data-theme-note="折页阅读" aria-pressed="false"><span class="theme-option__preview theme-option__preview--editorial" aria-hidden="true"><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span></span><span class="theme-option__copy"><span class="theme-option__title">杂志</span><span class="theme-option__note">折页阅读</span></span></button><button class="theme-option theme-option--appearance" type="button" data-theme-value="midnight" data-theme-label="夜游" data-theme-note="夜色舞台" aria-pressed="false"><span class="theme-option__preview theme-option__preview--midnight" aria-hidden="true"><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span><span class="theme-option__preview-block"></span></span><span class="theme-option__copy"><span class="theme-option__title">夜游</span><span class="theme-option__note">夜色舞台</span></span></button></div><div class="scheme-grid"><button class="theme-option theme-option--scheme" type="button" data-scheme-value="auto" aria-pressed="false">自动</button><button class="theme-option theme-option--scheme" type="button" data-scheme-value="light" aria-pressed="false">浅</button><button class="theme-option theme-option--scheme" type="button" data-scheme-value="dark" aria-pressed="false">深</button></div></div></div>
+      </div>
+    </header>
+    <article class="post-shell">
+      <header class="post-hero">
+        <div class="post-kicker-row"><div class="post-mini-meta"><span class="post-date">2026.07.13</span><div class="popover-root tag-menu" data-popover-root data-popover-name="tags"><button class="tag-chip tag-trigger" type="button" data-popover-trigger data-popover-target="tags" aria-expanded="false" aria-haspopup="dialog" aria-label="#IINA #open-source #Python #DanmakuCosmos">#IINA +3</button><div class="popover-panel tag-popover" data-popover-panel hidden><div class="tag-list" aria-label="#IINA #open-source #Python #DanmakuCosmos"><span class="tag-pill">#IINA</span><span class="tag-pill">#open-source</span><span class="tag-pill">#Python</span><span class="tag-pill">#DanmakuCosmos</span></div></div></div></div></div>
+        <div class="post-hero-copy">
+          <h1 class="post-title">IINA-DanmakuCosmos-Patch: 把一次手改，变成可重复的补丁</h1>
+          <p class="post-deck">一个很小的构建器：下载并验证 Danmaku Cosmos，在临时目录中应用偏好设置，再输出可安装的 IINA 插件包。</p>
+        </div>
+      </header>
+      <div class="post-frame"><div class="post-content"><div class="post-body"><p><a href="https://github.com/codingEzio/IINA-DanmakuCosmos-PatchOSS">IINA-DanmakuCosmos-Patch</a> 是一个很小、也很明确的一次性工具：把我原本会手动改进插件源码的几项偏好，整理成可检查、可重复执行的构建流程。</p>
+<h2>它建立在什么之上</h2>
+<p>真正提供 IINA 弹幕体验的是 <a href="https://github.com/karappo-yu/iina-plugin-danmaku-cosmos">karappo-yu 与贡献者们开发的 Danmaku Cosmos</a>。这个 patcher 不重新实现播放器插件，也不替代原项目；没有 Danmaku Cosmos，就没有这里要修改的对象。</p>
+<p>它做的事情可以缩成一条式子：</p>
+<p><code>经过校验的上游插件 + profile = 新的可安装 .iinaplgz</code></p>
+<h2>为什么不直接改已安装插件</h2>
+<p>直接进入 IINA 的插件目录改 JavaScript 和 HTML，短期很快，但下次更新后很难记得改过什么，也很难判断上游代码是否已经变化。这个构建器会下载或接收一份干净的上游包，验证 SHA-256 和精确的代码锚点，在临时目录中应用全部变更，最后才原子化输出新包。</p>
+<p>如果上游不再匹配，它会停止并指出受影响的文件，不猜测替换，也不会碰当前安装在 IINA 中的插件。</p>
+<h2>可以改什么</h2>
+<p>Profile 目前覆盖弹幕透明度、字号、描边、滚动速度、renderer、DandanPlay 自动联网、默认启用状态与评论数量限制。仓库自带一个较紧凑、滚动较慢的 profile，也可以复制默认 profile 做自己的版本。</p>
+<h2>它为什么开源</h2>
+<p>这个项目不复杂，甚至很可能只需要用一次。正因为如此，把它公开的价值不在于建立一个庞大产品，而在于留下一个可读的做法：下载、校验、patch、style customization，各自有清楚边界；以后上游变化时，要么明确更新兼容规则，要么安全失败。</p>
+<p>源码使用 Python 标准库，测试使用合成的最小插件 fixture；上游插件包、生成结果和本地 profile 都不会进入 Git。</p>
+<h2>参考与致谢</h2>
+<ul><li><a href="https://github.com/karappo-yu/iina-plugin-danmaku-cosmos">Danmaku Cosmos 原项目</a></li><li><a href="https://github.com/karappo-yu/iina-plugin-danmaku-cosmos/graphs/contributors">Danmaku Cosmos 贡献者</a></li><li><a href="https://github.com/codingEzio/IINA-DanmakuCosmos-PatchOSS">IINA-DanmakuCosmos-Patch 源码与多语言 README</a></li><li><a href="https://github.com/codingEzio/IINA-DanmakuCosmos-PatchOSS/blob/main/LICENSE">MIT License</a></li></ul></div></div></div>
+    </article>
+  </main><div class="page-scrim" data-page-scrim hidden></div><script src="/assets/blog.3f4505d6ae.js" defer></script>
+</body>
+</html>
